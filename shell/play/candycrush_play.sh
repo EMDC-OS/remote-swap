@@ -1,4 +1,4 @@
-adb shell input tap 700 1800
+adb shell input tap 700 1100
 sleep 5
 adb shell input tap 850 1800
 sleep 5
