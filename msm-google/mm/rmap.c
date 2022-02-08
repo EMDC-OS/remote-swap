@@ -1561,10 +1561,12 @@ static bool try_to_unmap_one(struct page *page, struct vm_area_struct *vma,
 			swp_entry_t entry = { .val = page_private(subpage) };
 			pte_t swp_pte;
 #ifdef CONFIG_APP_AWARE
-			task1=mm->owner;
-			if(swapin_vma_tracking && (task1->cred->uid.val==foreground_uid && address))
-				printk(KERN_CRIT"swapout tgid %d pid %d name \"%s\" vma %lx\n",task1->tgid,task1->pid,task1->comm,address);
 
+			if(mm){
+				task1=mm->owner;
+				if(task1 && task1->cred && swapin_vma_tracking && (task1->cred->uid.val==foreground_uid && address))
+					printk(KERN_CRIT"swapout tgid %d pid %d name \"%s\" vma %lx\n",task1->tgid,task1->pid,task1->comm,address);
+			}
 #endif
 			/*
 			 * Store the swap location in the pte.

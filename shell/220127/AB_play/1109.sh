@@ -25,4 +25,11 @@ adb shell "echo 0 > /proc/sys/kernel/swapin_vma_tracking"
 ./test1.sh 8 > 8.txt
 ./test1.sh 9 > 9.txt
 
+
+adb root
+sleep 5
+
+adb pull /sys/fs/pstore/
+sleep 5
+
 adb shell reboot

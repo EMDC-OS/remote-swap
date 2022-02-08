@@ -12,35 +12,27 @@ num=${1}
 	STR9=`adb shell ps -ef | grep com.supercell.clashroyale |awk 'NR == 1 { print $2; exit }'`
 
 
-	echo $STR0 -n
-	echo "  " -n
-	echo $STR1 -n
-	echo "  " -n
+	echo -n $STR0 " "
+	echo -n $STR1 " "
 	adb shell ps -ef | grep android.apps.maps |awk 'NR == 1 { print $8; exit }'
-	echo $STR2 -n
-	echo "  " -n
+	echo -n $STR2 " "
 	adb shell ps -ef | grep com.google.android.youtube |awk 'NR == 1 { print $8; exit }'
-	echo $STR3 -n
-	echo "  " -n
+	echo -n $STR3 " "
 	adb shell ps -ef | grep com.king.candycrushsaga |awk 'NR == 1 { print $8; exit }'
-	echo $STR4 -n
-	echo "  " -n
+	echo -n $STR4 " "
 	adb shell ps -ef | grep com.android.chrome |awk 'NR == 1 { print $8; exit }'
-	echo $STR5 -n
-	echo "  " -n
+	echo -n $STR5 " "
 	adb shell ps -ef | grep com.twitter.android |awk 'NR == 1 { print $8; exit }'
-	echo $STR6 -n
-	echo "  " -n
+	echo -n $STR6 " "
 	adb shell ps -ef | grep rovio.baba |awk 'NR == 1 { print $8; exit }'
-	echo $STR7 -n
-	echo "  " -n
+	echo -n $STR7 " "
 	adb shell ps -ef | grep com.google.android.gm |awk 'NR == 1 { print $8; exit }'
-	echo $STR8 -n
-	echo "  " -n
+	echo -n $STR8 " "
 	adb shell ps -ef | grep com.instagram.android | grep -v mqtt |awk 'NR == 1 { print $8; exit }'
-	echo $STR9 -n
-	echo "  " -n
+	echo -n $STR9 " "
 	adb shell ps -ef | grep com.supercell.clashroyale |awk 'NR == 1 { print $8; exit }'
+
+
 
 	
 	adb shell ps -ef > ps_${num}.txt
@@ -211,13 +203,14 @@ sleep 10
 adb shell pmap -x $STR6 > AB_pmap_${num}.txt
 sleep 10
 adb shell dmesg > AB_dmesgb_${num}.txt
-sleep 30
+sleep 5
+adb shell dmesg -C
+sleep 5
 cat AB_dmesgb_${num}.txt | grep vma | grep "swapin tgid" > cut_AB_dmesgb_${num}.txt
 sleep 10
 cat AB_dmesgb_${num}.txt | grep vma | grep "swapout tgid" > out_b_${num}.txt
 sleep 10
 sleep 10
-adb shell dmesg -C
 
 
 sleep 10
@@ -237,14 +230,15 @@ adb shell cat /proc/vmstat | grep pswp
 
 sleep 10
 adb shell dmesg > AB_dmesga_${num}.txt
-sleep 30
+sleep 5
+adb shell dmesg -C
+sleep 5
 
 cat AB_dmesga_${num}.txt | grep vma | grep "swapin tgid" > cut_AB_dmesga_${num}.txt
 sleep 10
 cat AB_dmesga_${num}.txt | grep vma | grep "swapout tgid" > out_a_${num}.txt
 sleep 10
 
-adb shell dmesg -C
 
 
 
