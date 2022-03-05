@@ -3,7 +3,9 @@ app=${1}
 adb reboot
 sleep 30
 adb root
-sleep 1
+sleep 5
+adb shell cd /data/launch/
+sleep 5
 adb shell /data/launch/force_stop_apps.sh
 sleep 1
 adb shell /data/dropcache.sh
@@ -21,6 +23,8 @@ adb shell cat /proc/$STR1/status | grep VmSwap
 echo ===========================
 
 
+adb shell /data/screen_unlock.sh
+sleep 20
 
 
 	adb shell /data/launch/launch_app.sh ${app}
@@ -61,6 +65,9 @@ adb shell cat /proc/$STR0/status | grep RSS
 adb shell cat /proc/$STR0/status | grep VmSwap
 echo ===========================
 
+echo ===========================
+adb shell dumpsys meminfo $STR0 -d
+echo ===========================
 
 
 if [ "${app}" = "angrybirds" ]; then
@@ -102,3 +109,6 @@ adb shell cat /proc/$STR0/status | grep RSS
 adb shell cat /proc/$STR0/status | grep VmSwap
 echo ===========================
 
+echo ===========================
+adb shell dumpsys meminfo $STR0 -d
+echo ===========================
