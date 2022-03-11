@@ -4,7 +4,7 @@ adb shell input tap 900 100
 sleep 20
 adb shell input tap 700 300
 sleep 20
-adb shell input tap 700 300
+adb shell input tap 700 1500
 sleep 600
 
 adb shell input swipe 100 100 100 1450 200

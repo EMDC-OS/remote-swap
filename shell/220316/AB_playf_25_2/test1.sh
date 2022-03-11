@@ -41,6 +41,7 @@ adb shell /data/screen_unlock.sh
 adb shell cd /data/launch/
 adb shell /data/launch/launch_app.sh googlemaps
 sleep 20
+/home/user/swipe100times.sh
 adb shell free -m
 
 
@@ -68,6 +69,18 @@ adb shell cat /proc/$STR7/status | grep RssFile
 adb shell cat /proc/$STR8/status | grep RssFile
 adb shell cat /proc/$STR9/status | grep RssFile
 echo ===========================
+echo ===========================
+adb shell cat /proc/$STR0/status | grep VmSwap
+adb shell cat /proc/$STR1/status | grep VmSwap
+adb shell cat /proc/$STR2/status | grep VmSwap
+adb shell cat /proc/$STR3/status | grep VmSwap
+adb shell cat /proc/$STR4/status | grep VmSwap
+adb shell cat /proc/$STR5/status | grep VmSwap
+adb shell cat /proc/$STR6/status | grep VmSwap
+adb shell cat /proc/$STR7/status | grep VmSwap
+adb shell cat /proc/$STR8/status | grep VmSwap
+adb shell cat /proc/$STR9/status | grep VmSwap
+echo ===========================
 
 echo ===========================
 adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
@@ -85,10 +98,13 @@ echo ===========================
 echo ===========================
 adb shell cat /proc/meminfo | grep Mem
 adb shell cat /proc/meminfo | grep Cached
+adb shell cat /proc/meminfo | grep "(anon)"
+adb shell cat /proc/meminfo | grep "(file)"
 echo ===========================
 
 adb shell /data/launch/launch_app.sh youtube
 sleep 20
+/home/user/hdd/kernel_flame/private/shell/play/youtube_play10minutes.sh
 adb shell free -m
 
 
@@ -116,6 +132,18 @@ adb shell cat /proc/$STR7/status | grep RssFile
 adb shell cat /proc/$STR8/status | grep RssFile
 adb shell cat /proc/$STR9/status | grep RssFile
 echo ===========================
+echo ===========================
+adb shell cat /proc/$STR0/status | grep VmSwap
+adb shell cat /proc/$STR1/status | grep VmSwap
+adb shell cat /proc/$STR2/status | grep VmSwap
+adb shell cat /proc/$STR3/status | grep VmSwap
+adb shell cat /proc/$STR4/status | grep VmSwap
+adb shell cat /proc/$STR5/status | grep VmSwap
+adb shell cat /proc/$STR6/status | grep VmSwap
+adb shell cat /proc/$STR7/status | grep VmSwap
+adb shell cat /proc/$STR8/status | grep VmSwap
+adb shell cat /proc/$STR9/status | grep VmSwap
+echo ===========================
 
 echo ===========================
 adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
@@ -132,10 +160,13 @@ echo ===========================
 echo ===========================
 adb shell cat /proc/meminfo | grep Mem
 adb shell cat /proc/meminfo | grep Cached
+adb shell cat /proc/meminfo | grep "(anon)"
+adb shell cat /proc/meminfo | grep "(file)"
 echo ===========================
 
 adb shell /data/launch/launch_app.sh candycrush
 sleep 60
+/home/user/hdd/kernel_flame/private/shell/play/candycrush_play.sh
 
 adb shell free -m
 
@@ -164,6 +195,18 @@ adb shell cat /proc/$STR8/status | grep RssFile
 adb shell cat /proc/$STR9/status | grep RssFile
 echo ===========================
 echo ===========================
+adb shell cat /proc/$STR0/status | grep VmSwap
+adb shell cat /proc/$STR1/status | grep VmSwap
+adb shell cat /proc/$STR2/status | grep VmSwap
+adb shell cat /proc/$STR3/status | grep VmSwap
+adb shell cat /proc/$STR4/status | grep VmSwap
+adb shell cat /proc/$STR5/status | grep VmSwap
+adb shell cat /proc/$STR6/status | grep VmSwap
+adb shell cat /proc/$STR7/status | grep VmSwap
+adb shell cat /proc/$STR8/status | grep VmSwap
+adb shell cat /proc/$STR9/status | grep VmSwap
+echo ===========================
+echo ===========================
 adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR1 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR2 | grep TOTAL | grep -v SWAP
@@ -178,10 +221,13 @@ echo ===========================
 echo ===========================
 adb shell cat /proc/meminfo | grep Mem
 adb shell cat /proc/meminfo | grep Cached
+adb shell cat /proc/meminfo | grep "(anon)"
+adb shell cat /proc/meminfo | grep "(file)"
 echo ===========================
 
 	adb shell /data/launch/launch_app.sh chrome
 sleep 20
+/home/user/chrome_swipe100times.sh
 adb shell free -m
 
 
@@ -210,6 +256,18 @@ adb shell cat /proc/$STR8/status | grep RssFile
 adb shell cat /proc/$STR9/status | grep RssFile
 echo ===========================
 echo ===========================
+adb shell cat /proc/$STR0/status | grep VmSwap
+adb shell cat /proc/$STR1/status | grep VmSwap
+adb shell cat /proc/$STR2/status | grep VmSwap
+adb shell cat /proc/$STR3/status | grep VmSwap
+adb shell cat /proc/$STR4/status | grep VmSwap
+adb shell cat /proc/$STR5/status | grep VmSwap
+adb shell cat /proc/$STR6/status | grep VmSwap
+adb shell cat /proc/$STR7/status | grep VmSwap
+adb shell cat /proc/$STR8/status | grep VmSwap
+adb shell cat /proc/$STR9/status | grep VmSwap
+echo ===========================
+echo ===========================
 adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR1 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR2 | grep TOTAL | grep -v SWAP
@@ -224,6 +282,8 @@ echo ===========================
 echo ===========================
 adb shell cat /proc/meminfo | grep Mem
 adb shell cat /proc/meminfo | grep Cached
+adb shell cat /proc/meminfo | grep "(anon)"
+adb shell cat /proc/meminfo | grep "(file)"
 echo ===========================
 
 adb shell /data/launch/launch_app.sh twitter
@@ -257,6 +317,18 @@ adb shell cat /proc/$STR8/status | grep RssFile
 adb shell cat /proc/$STR9/status | grep RssFile
 echo ===========================
 echo ===========================
+adb shell cat /proc/$STR0/status | grep VmSwap
+adb shell cat /proc/$STR1/status | grep VmSwap
+adb shell cat /proc/$STR2/status | grep VmSwap
+adb shell cat /proc/$STR3/status | grep VmSwap
+adb shell cat /proc/$STR4/status | grep VmSwap
+adb shell cat /proc/$STR5/status | grep VmSwap
+adb shell cat /proc/$STR6/status | grep VmSwap
+adb shell cat /proc/$STR7/status | grep VmSwap
+adb shell cat /proc/$STR8/status | grep VmSwap
+adb shell cat /proc/$STR9/status | grep VmSwap
+echo ===========================
+echo ===========================
 adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR1 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR2 | grep TOTAL | grep -v SWAP
@@ -271,6 +343,8 @@ echo ===========================
 echo ===========================
 adb shell cat /proc/meminfo | grep Mem
 adb shell cat /proc/meminfo | grep Cached
+adb shell cat /proc/meminfo | grep "(anon)"
+adb shell cat /proc/meminfo | grep "(file)"
 echo ===========================
 
 sleep 2
@@ -297,6 +371,7 @@ adb shell cat /proc/vmstat | grep pswp
 
 adb shell /data/launch/launch_app_track_switch.sh angrybirds
 sleep 60
+/home/user/hdd/kernel_flame/private/shell/play/angrybirds_play.sh
 
 adb shell free -m
 	
@@ -343,6 +418,18 @@ adb shell cat /proc/$STR8/status | grep RssFile
 adb shell cat /proc/$STR9/status | grep RssFile
 echo ===========================
 echo ===========================
+adb shell cat /proc/$STR0/status | grep VmSwap
+adb shell cat /proc/$STR1/status | grep VmSwap
+adb shell cat /proc/$STR2/status | grep VmSwap
+adb shell cat /proc/$STR3/status | grep VmSwap
+adb shell cat /proc/$STR4/status | grep VmSwap
+adb shell cat /proc/$STR5/status | grep VmSwap
+adb shell cat /proc/$STR6/status | grep VmSwap
+adb shell cat /proc/$STR7/status | grep VmSwap
+adb shell cat /proc/$STR8/status | grep VmSwap
+adb shell cat /proc/$STR9/status | grep VmSwap
+echo ===========================
+echo ===========================
 adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR1 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR2 | grep TOTAL | grep -v SWAP
@@ -357,6 +444,8 @@ echo ===========================
 echo ===========================
 adb shell cat /proc/meminfo | grep Mem
 adb shell cat /proc/meminfo | grep Cached
+adb shell cat /proc/meminfo | grep "(anon)"
+adb shell cat /proc/meminfo | grep "(file)"
 echo ===========================
 
 
@@ -390,6 +479,18 @@ adb shell cat /proc/$STR8/status | grep RssFile
 adb shell cat /proc/$STR9/status | grep RssFile
 echo ===========================
 echo ===========================
+adb shell cat /proc/$STR0/status | grep VmSwap
+adb shell cat /proc/$STR1/status | grep VmSwap
+adb shell cat /proc/$STR2/status | grep VmSwap
+adb shell cat /proc/$STR3/status | grep VmSwap
+adb shell cat /proc/$STR4/status | grep VmSwap
+adb shell cat /proc/$STR5/status | grep VmSwap
+adb shell cat /proc/$STR6/status | grep VmSwap
+adb shell cat /proc/$STR7/status | grep VmSwap
+adb shell cat /proc/$STR8/status | grep VmSwap
+adb shell cat /proc/$STR9/status | grep VmSwap
+echo ===========================
+echo ===========================
 adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR1 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR2 | grep TOTAL | grep -v SWAP
@@ -404,11 +505,14 @@ echo ===========================
 echo ===========================
 adb shell cat /proc/meminfo | grep Mem
 adb shell cat /proc/meminfo | grep Cached
+adb shell cat /proc/meminfo | grep "(anon)"
+adb shell cat /proc/meminfo | grep "(file)"
 echo ===========================
 
 
 	adb shell /data/launch/launch_app.sh instagram
 sleep 20
+/home/user/swipe100times.sh
 sleep 20
 adb shell free -m
 
@@ -439,6 +543,18 @@ adb shell cat /proc/$STR8/status | grep RssFile
 adb shell cat /proc/$STR9/status | grep RssFile
 echo ===========================
 echo ===========================
+adb shell cat /proc/$STR0/status | grep VmSwap
+adb shell cat /proc/$STR1/status | grep VmSwap
+adb shell cat /proc/$STR2/status | grep VmSwap
+adb shell cat /proc/$STR3/status | grep VmSwap
+adb shell cat /proc/$STR4/status | grep VmSwap
+adb shell cat /proc/$STR5/status | grep VmSwap
+adb shell cat /proc/$STR6/status | grep VmSwap
+adb shell cat /proc/$STR7/status | grep VmSwap
+adb shell cat /proc/$STR8/status | grep VmSwap
+adb shell cat /proc/$STR9/status | grep VmSwap
+echo ===========================
+echo ===========================
 adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR1 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR2 | grep TOTAL | grep -v SWAP
@@ -453,10 +569,13 @@ echo ===========================
 echo ===========================
 adb shell cat /proc/meminfo | grep Mem
 adb shell cat /proc/meminfo | grep Cached
+adb shell cat /proc/meminfo | grep "(anon)"
+adb shell cat /proc/meminfo | grep "(file)"
 echo ===========================
 
 	adb shell /data/launch/launch_app_track_switch.sh clashroyale
 	sleep 50
+/home/user/hdd/kernel_flame/private/shell/play/clash_play.sh
 #sleep 100
 adb shell free -m
 
@@ -486,6 +605,18 @@ adb shell cat /proc/$STR8/status | grep RssFile
 adb shell cat /proc/$STR9/status | grep RssFile
 echo ===========================
 echo ===========================
+adb shell cat /proc/$STR0/status | grep VmSwap
+adb shell cat /proc/$STR1/status | grep VmSwap
+adb shell cat /proc/$STR2/status | grep VmSwap
+adb shell cat /proc/$STR3/status | grep VmSwap
+adb shell cat /proc/$STR4/status | grep VmSwap
+adb shell cat /proc/$STR5/status | grep VmSwap
+adb shell cat /proc/$STR6/status | grep VmSwap
+adb shell cat /proc/$STR7/status | grep VmSwap
+adb shell cat /proc/$STR8/status | grep VmSwap
+adb shell cat /proc/$STR9/status | grep VmSwap
+echo ===========================
+echo ===========================
 adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR1 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR2 | grep TOTAL | grep -v SWAP
@@ -500,6 +631,8 @@ echo ===========================
 echo ===========================
 adb shell cat /proc/meminfo | grep Mem
 adb shell cat /proc/meminfo | grep Cached
+adb shell cat /proc/meminfo | grep "(anon)"
+adb shell cat /proc/meminfo | grep "(file)"
 echo ===========================
 
 
