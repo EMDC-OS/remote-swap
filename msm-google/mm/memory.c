@@ -2911,11 +2911,17 @@ int do_swap_page(struct vm_fault *vmf)
 	bool vma_readahead = swap_use_vma_readahead();
 
 #ifdef CONFIG_APP_AWARE
+	
+	/*
 	if(swapin_vma_tracking==1 && foreground_uid==current->cred->uid.val)
 		printk(KERN_CRIT"before: swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
 	else if(swapin_vma_tracking==2 && foreground_uid==current->cred->uid.val)
-		printk(KERN_CRIT"after: swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
+		printk(KERN_CRIT"after: swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);	
+	*/
 	
+	
+	if(swapin_vma_tracking!=0 && current->cred->uid.val!=10135 && current->cred->uid.val!=10126 && current->cred->uid.val!=10127 && current->cred->uid.val!=10133 && current->cred->uid.val!=10128 && current->cred->uid.val!=10122 && current->cred->uid.val!=10159 && current->cred->uid.val!=10136 && current->cred->uid.val!=10124)
+		printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
 #endif
 	
 	if (vma_readahead)
