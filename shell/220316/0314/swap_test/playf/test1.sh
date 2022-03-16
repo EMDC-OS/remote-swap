@@ -41,6 +41,7 @@ adb shell /data/screen_unlock.sh
 adb shell cd /data/launch/
 adb shell /data/launch/launch_app.sh googlemaps
 sleep 20
+/home/user/swipe100times.sh
 adb shell free -m
 
 
@@ -93,6 +94,7 @@ sleep 30
 
 adb shell /data/launch/launch_app.sh youtube
 sleep 20
+/home/user/hdd/kernel_flame/private/shell/play/youtube_play10minutes.sh
 adb shell free -m
 
 
@@ -145,6 +147,7 @@ sleep 30
 
 adb shell /data/launch/launch_app.sh candycrush
 sleep 60
+/home/user/hdd/kernel_flame/private/shell/play/candycrush_play.sh
 
 adb shell free -m
 
@@ -196,6 +199,7 @@ sleep 30
 
 	adb shell /data/launch/launch_app.sh chrome
 sleep 20
+/home/user/chrome_swipe100times.sh
 adb shell free -m
 
 
@@ -321,6 +325,7 @@ adb shell cat /proc/vmstat | grep pswp
 
 adb shell /data/launch/launch_app.sh angrybirds
 sleep 60
+/home/user/hdd/kernel_flame/private/shell/play/angrybirds_play.sh
 
 adb shell free -m
 	
@@ -443,6 +448,8 @@ sleep 30
 
 	adb shell /data/launch/launch_app.sh instagram
 sleep 20
+/home/user/swipe100times.sh
+sleep 20
 adb shell free -m
 
 sleep 5
@@ -495,6 +502,8 @@ sleep 30
 
 	adb shell /data/launch/launch_app_track_switch.sh clashroyale
 	sleep 50
+/home/user/hdd/kernel_flame/private/shell/play/clash_play.sh
+#sleep 100
 adb shell free -m
 
 
