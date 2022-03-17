@@ -2920,9 +2920,20 @@ int do_swap_page(struct vm_fault *vmf)
 		printk(KERN_CRIT"after: swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);	
 	*/
 	
-	
+
+
+
+
 	if(swapin_vma_tracking!=0 && current->cred->uid.val!=10135 && current->cred->uid.val!=10126 && current->cred->uid.val!=10127 && current->cred->uid.val!=10133 && current->cred->uid.val!=10128 && current->cred->uid.val!=10122 && current->cred->uid.val!=10159 && current->cred->uid.val!=10136 && current->cred->uid.val!=10124)
 		trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
+
+
+
+	/*
+	if(swapin_vma_tracking!=0 && (current->cred->uid.val==10135 || current->cred->uid.val==10126 || current->cred->uid.val==10127 || current->cred->uid.val==10133 || current->cred->uid.val==10128|| current->cred->uid.val==10122 || current->cred->uid.val==10159 || current->cred->uid.val==10136 || current->cred->uid.val==10124))
+		trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
+*/
+
 #endif
 	
 	if (vma_readahead)
@@ -2960,6 +2971,9 @@ int do_swap_page(struct vm_fault *vmf)
 	if (!page)
 		page = lookup_swap_cache(entry, vma_readahead ? vma : NULL,
 					 vmf->address);
+	
+	
+	
 	if (!page) {
 		if (vma_readahead)
 			page = do_swap_page_readahead(entry,
@@ -2994,6 +3008,8 @@ int do_swap_page(struct vm_fault *vmf)
 		swapcache = page;
 		goto out_release;
 	}
+
+
 
 	swapcache = page;
 	locked = lock_page_or_retry(page, vma->vm_mm, vmf->flags);
