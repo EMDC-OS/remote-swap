@@ -1,0 +1,37 @@
+fio_test_file: (g=0): rw=randwrite, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=libaio, iodepth=16
+...
+fio-3.27-16-gdd46-dirty
+Starting 4 processes
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+
+fio_test_file: (groupid=0, jobs=4): err= 0: pid=6739: Mon Jun 28 17:39:37 2021
+  write: IOPS=255, BW=63.9MiB/s (67.0MB/s)(1024MiB/16024msec); 0 zone resets
+    slat (usec): min=38, max=298350, avg=1387.30, stdev=14210.32
+    clat (usec): min=373, max=1852.2k, avg=244025.38, stdev=147810.25
+     lat (msec): min=16, max=1852, avg=245.41, stdev=147.29
+    clat percentiles (msec):
+     |  1.00th=[   24],  5.00th=[   51], 10.00th=[   74], 20.00th=[  108],
+     | 30.00th=[  150], 40.00th=[  197], 50.00th=[  236], 60.00th=[  275],
+     | 70.00th=[  317], 80.00th=[  355], 90.00th=[  401], 95.00th=[  443],
+     | 99.00th=[  768], 99.50th=[  885], 99.90th=[ 1183], 99.95th=[ 1200],
+     | 99.99th=[ 1854]
+   bw (  KiB/s): min=31730, max=101842, per=100.00%, avg=65638.04, stdev=3707.77, samples=123
+   iops        : min=  123, max=  397, avg=255.89, stdev=14.49, samples=123
+  lat (usec)   : 500=0.02%
+  lat (msec)   : 2=0.12%, 4=0.15%, 20=0.37%, 50=4.37%, 100=12.70%
+  lat (msec)   : 250=35.79%, 500=43.33%, 750=2.08%, 1000=0.76%, 2000=0.32%
+  cpu          : usr=0.35%, sys=0.68%, ctx=4569, majf=2, minf=101
+  IO depths    : 1=0.1%, 2=0.2%, 4=0.4%, 8=0.8%, 16=98.5%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.9%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,4096,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=63.9MiB/s (67.0MB/s), 63.9MiB/s-63.9MiB/s (67.0MB/s-67.0MB/s), io=1024MiB (1074MB), run=16024-16024msec
+
+Disk stats (read/write):
+  nbd0: ios=8/8083, merge=0/52, ticks=304/1902373, in_queue=298214, util=99.42%

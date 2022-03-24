@@ -1,0 +1,37 @@
+sysbench:  multi-threaded system evaluation benchmark
+
+WARNING: None of valloc(), memalign() and posix_memalign() is available, doing unaligned IO!
+Running the test with following options:
+Number of threads: 1
+Random number generator seed is 0 and will be ignored
+
+
+Extra file open flags: 3
+1 files, 1Gb each
+1Gb total file size
+Block size 4Kb
+Number of IO requests: 105
+Read/Write ratio for combined random IO test: 1.50
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random write test
+Threads started!
+
+Operations performed:  0 reads, 105 writes, 1 Other = 106 Total
+Read 0b  Written 420Kb  Total transferred 420Kb  (12.229Mb/sec)
+ 3130.59 Requests/sec executed
+
+General statistics:
+    total time:                          0.0335s
+    total number of events:              105
+    total time taken by event execution: 0.0289s
+    response time:
+         min:                                  0.09ms
+         avg:                                  0.28ms
+         max:                                 15.91ms
+         approx.  95 percentile:               0.14ms
+
+Threads fairness:
+    events (avg/stddev):           105.0000/0.00
+    execution time (avg/stddev):   0.0289/0.00
+

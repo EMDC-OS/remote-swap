@@ -1,0 +1,36 @@
+fio_test_file: (g=0): rw=randwrite, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=libaio, iodepth=128
+...
+fio-3.27-16-gdd46-dirty
+Starting 4 processes
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+
+fio_test_file: (groupid=0, jobs=4): err= 0: pid=7198: Tue Jun 29 00:15:22 2021
+  write: IOPS=1060, BW=66.3MiB/s (69.5MB/s)(1024MiB/15445msec); 0 zone resets
+    slat (usec): min=10, max=478205, avg=3537.92, stdev=15859.55
+    clat (msec): min=7, max=3179, avg=462.16, stdev=269.14
+     lat (msec): min=7, max=3179, avg=465.70, stdev=269.77
+    clat percentiles (msec):
+     |  1.00th=[   56],  5.00th=[  153], 10.00th=[  213], 20.00th=[  284],
+     | 30.00th=[  334], 40.00th=[  380], 50.00th=[  430], 60.00th=[  477],
+     | 70.00th=[  531], 80.00th=[  592], 90.00th=[  701], 95.00th=[  844],
+     | 99.00th=[ 1519], 99.50th=[ 2005], 99.90th=[ 2836], 99.95th=[ 3037],
+     | 99.99th=[ 3171]
+   bw (  KiB/s): min=14976, max=124609, per=100.00%, avg=68240.93, stdev=5666.91, samples=117
+   iops        : min=  234, max= 1946, avg=1065.84, stdev=88.53, samples=117
+  lat (msec)   : 10=0.03%, 20=0.18%, 50=0.62%, 100=1.42%, 250=12.59%
+  lat (msec)   : 500=49.68%, 750=27.98%, 1000=4.72%, 2000=2.28%, >=2000=0.50%
+  cpu          : usr=0.53%, sys=1.67%, ctx=5609, majf=1, minf=96
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.2%, 16=0.4%, 32=0.8%, >=64=98.5%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=0,16384,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+  WRITE: bw=66.3MiB/s (69.5MB/s), 66.3MiB/s-66.3MiB/s (69.5MB/s-69.5MB/s), io=1024MiB (1074MB), run=15445-15445msec
+
+Disk stats (read/write):
+  nbd0: ios=6/15854, merge=0/679, ticks=150/3524046, in_queue=573857, util=99.39%

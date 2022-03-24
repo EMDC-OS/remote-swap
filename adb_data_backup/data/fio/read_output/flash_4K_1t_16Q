@@ -1,0 +1,33 @@
+fio_test_file: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=16
+fio-3.27-16-gdd46-dirty
+Starting 1 process
+fio_test_file: Laying out IO file (1 file / 1024MiB)
+
+fio_test_file: (groupid=0, jobs=1): err= 0: pid=18853: Tue Jun 22 11:26:56 2021
+  read: IOPS=35.3k, BW=138MiB/s (145MB/s)(1024MiB/7430msec)
+    slat (usec): min=6, max=843, avg=17.85, stdev=16.44
+    clat (usec): min=160, max=2121, avg=433.62, stdev=101.91
+     lat (usec): min=186, max=2180, avg=451.71, stdev=101.06
+    clat percentiles (usec):
+     |  1.00th=[  253],  5.00th=[  302], 10.00th=[  326], 20.00th=[  359],
+     | 30.00th=[  383], 40.00th=[  404], 50.00th=[  420], 60.00th=[  441],
+     | 70.00th=[  461], 80.00th=[  494], 90.00th=[  545], 95.00th=[  611],
+     | 99.00th=[  816], 99.50th=[  873], 99.90th=[  996], 99.95th=[ 1090],
+     | 99.99th=[ 1418]
+   bw (  KiB/s): min=109672, max=144456, per=100.00%, avg=141143.14, stdev=9071.99, samples=14
+   iops        : min=27418, max=36114, avg=35285.71, stdev=2267.99, samples=14
+  lat (usec)   : 250=0.91%, 500=81.22%, 750=16.11%, 1000=1.67%
+  lat (msec)   : 2=0.10%, 4=0.01%
+  cpu          : usr=7.70%, sys=58.35%, ctx=60914, majf=1, minf=37
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=262144,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=138MiB/s (145MB/s), 138MiB/s-138MiB/s (145MB/s-145MB/s), io=1024MiB (1074MB), run=7430-7430msec
+
+Disk stats (read/write):
+    dm-5: ios=254155/0, merge=0/0, ticks=100800/0, in_queue=100827, util=98.82%, aggrios=262149/0, aggrmerge=0/0, aggrticks=103894/0, aggrin_queue=103857, aggrutil=98.46%
+  sda: ios=262149/0, merge=0/0, ticks=103894/0, in_queue=103857, util=98.46%

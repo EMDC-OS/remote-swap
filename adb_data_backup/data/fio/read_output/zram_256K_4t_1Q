@@ -1,0 +1,30 @@
+fio_test_file: (g=0): rw=randread, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=libaio, iodepth=1
+...
+fio-3.27-16-gdd46-dirty
+Starting 4 processes
+
+fio_test_file: (groupid=0, jobs=4): err= 0: pid=7801: Wed Jun 30 12:21:53 2021
+  read: IOPS=3167, BW=792MiB/s (830MB/s)(1024MiB/1293msec)
+    slat (usec): min=24, max=611, avg=181.85, stdev=51.54
+    clat (nsec): min=260, max=7292, avg=533.71, stdev=303.70
+     lat (usec): min=25, max=629, avg=182.66, stdev=51.75
+    clat percentiles (nsec):
+     |  1.00th=[  314],  5.00th=[  314], 10.00th=[  366], 20.00th=[  366],
+     | 30.00th=[  418], 40.00th=[  470], 50.00th=[  470], 60.00th=[  524],
+     | 70.00th=[  524], 80.00th=[  572], 90.00th=[  676], 95.00th=[  884],
+     | 99.00th=[ 1976], 99.50th=[ 2224], 99.90th=[ 3024], 99.95th=[ 4576],
+     | 99.99th=[ 7264]
+  lat (nsec)   : 500=57.45%, 750=36.30%, 1000=2.20%
+  lat (usec)   : 2=3.10%, 4=0.88%, 10=0.07%
+  cpu          : usr=0.40%, sys=73.31%, ctx=2330, majf=1, minf=347
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=4096,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=792MiB/s (830MB/s), 792MiB/s-792MiB/s (830MB/s-830MB/s), io=1024MiB (1074MB), run=1293-1293msec
+
+Disk stats (read/write):
+  zram0: ios=196610/79558, merge=0/0, ticks=497/1237, in_queue=1756, util=89.79%

@@ -1,0 +1,33 @@
+fio_test_file: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+fio-3.27-16-gdd46-dirty
+Starting 1 process
+fio_test_file: Laying out IO file (1 file / 1024MiB)
+
+fio_test_file: (groupid=0, jobs=1): err= 0: pid=5403: Thu Jul  8 14:28:32 2021
+  read: IOPS=202k, BW=788MiB/s (827MB/s)(1024MiB/1299msec)
+    slat (nsec): min=1458, max=929063, avg=3607.77, stdev=3393.41
+    clat (nsec): min=1979, max=5493.9k, avg=621102.51, stdev=451220.55
+     lat (usec): min=4, max=5919, avg=624.86, stdev=453.85
+    clat percentiles (usec):
+     |  1.00th=[  474],  5.00th=[  482], 10.00th=[  486], 20.00th=[  490],
+     | 30.00th=[  494], 40.00th=[  498], 50.00th=[  502], 60.00th=[  506],
+     | 70.00th=[  515], 80.00th=[  529], 90.00th=[  717], 95.00th=[ 1172],
+     | 99.00th=[ 2737], 99.50th=[ 2900], 99.90th=[ 4621], 99.95th=[ 4752],
+     | 99.99th=[ 5276]
+   bw (  KiB/s): min=472239, max=1019216, per=92.38%, avg=745727.50, stdev=386771.15, samples=2
+   iops        : min=118061, max=254806, avg=186433.50, stdev=96693.32, samples=2
+  lat (usec)   : 2=0.01%, 10=0.01%, 20=0.01%, 50=0.01%, 100=0.01%
+  lat (usec)   : 250=0.01%, 500=45.11%, 750=45.44%, 1000=3.22%
+  lat (msec)   : 2=2.66%, 4=3.16%, 10=0.38%
+  cpu          : usr=26.27%, sys=71.96%, ctx=30, majf=1, minf=150
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=262144,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=788MiB/s (827MB/s), 788MiB/s-788MiB/s (827MB/s-827MB/s), io=1024MiB (1074MB), run=1299-1299msec
+
+Disk stats (read/write):
+  zram0: ios=204485/0, merge=0/0, ticks=390/0, in_queue=390, util=32.88%

@@ -1,0 +1,37 @@
+fio_test_file: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=16
+...
+fio-3.27-16-gdd46-dirty
+Starting 4 processes
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+
+fio_test_file: (groupid=0, jobs=4): err= 0: pid=6102: Mon Jun 28 17:24:00 2021
+  write: IOPS=7023, BW=27.4MiB/s (28.8MB/s)(1024MiB/37323msec); 0 zone resets
+    slat (usec): min=4, max=36906, avg=184.94, stdev=501.30
+    clat (usec): min=416, max=63438, avg=8883.67, stdev=2808.46
+     lat (usec): min=1873, max=63494, avg=9069.96, stdev=2807.95
+    clat percentiles (usec):
+     |  1.00th=[ 4293],  5.00th=[ 5407], 10.00th=[ 5997], 20.00th=[ 6718],
+     | 30.00th=[ 7373], 40.00th=[ 7963], 50.00th=[ 8586], 60.00th=[ 9110],
+     | 70.00th=[ 9765], 80.00th=[10683], 90.00th=[12125], 95.00th=[13566],
+     | 99.00th=[16909], 99.50th=[18744], 99.90th=[34866], 99.95th=[41157],
+     | 99.99th=[45351]
+   bw (  KiB/s): min=22552, max=30944, per=100.00%, avg=28148.59, stdev=360.40, samples=296
+   iops        : min= 5638, max= 7736, avg=7037.03, stdev=90.10, samples=296
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.02%, 4=0.60%, 10=71.70%, 20=27.32%, 50=0.35%
+  lat (msec)   : 100=0.01%
+  cpu          : usr=1.69%, sys=9.32%, ctx=193714, majf=1, minf=95
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,262144,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=27.4MiB/s (28.8MB/s), 27.4MiB/s-27.4MiB/s (28.8MB/s-28.8MB/s), io=1024MiB (1074MB), run=37323-37323msec
+
+Disk stats (read/write):
+  nbd0: ios=8/261089, merge=0/2435, ticks=40/1946296, in_queue=1876546, util=99.89%

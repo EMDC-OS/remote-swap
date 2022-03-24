@@ -1,0 +1,37 @@
+fio_test_file: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=16
+...
+fio-3.27-16-gdd46-dirty
+Starting 4 processes
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+fio_test_file: Laying out IO file (1 file / 256MiB)
+
+fio_test_file: (groupid=0, jobs=4): err= 0: pid=5452: Tue Jun 29 12:27:36 2021
+  read: IOPS=6764, BW=26.4MiB/s (27.7MB/s)(1024MiB/38753msec)
+    slat (usec): min=2, max=12948, avg=118.66, stdev=293.23
+    clat (usec): min=244, max=80709, avg=9305.26, stdev=4395.07
+     lat (usec): min=1707, max=80719, avg=9425.45, stdev=4392.21
+    clat percentiles (usec):
+     |  1.00th=[ 4424],  5.00th=[ 5407], 10.00th=[ 5997], 20.00th=[ 6718],
+     | 30.00th=[ 7242], 40.00th=[ 7767], 50.00th=[ 8291], 60.00th=[ 8848],
+     | 70.00th=[ 9634], 80.00th=[10814], 90.00th=[13304], 95.00th=[16909],
+     | 99.00th=[26608], 99.50th=[32637], 99.90th=[50070], 99.95th=[55313],
+     | 99.99th=[73925]
+   bw (  KiB/s): min=15024, max=33552, per=100.00%, avg=27092.04, stdev=866.96, samples=308
+   iops        : min= 3756, max= 8388, avg=6772.83, stdev=216.77, samples=308
+  lat (usec)   : 250=0.01%, 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.03%, 4=0.43%, 10=73.43%, 20=23.06%, 50=2.94%
+  lat (msec)   : 100=0.10%
+  cpu          : usr=1.51%, sys=4.43%, ctx=292132, majf=2, minf=157
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=262144,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=26.4MiB/s (27.7MB/s), 26.4MiB/s-26.4MiB/s (27.7MB/s-27.7MB/s), io=1024MiB (1074MB), run=38753-38753msec
+
+Disk stats (read/write):
+  nbd0: ios=260729/8, merge=8/8, ticks=2237144/124, in_queue=2188087, util=99.91%

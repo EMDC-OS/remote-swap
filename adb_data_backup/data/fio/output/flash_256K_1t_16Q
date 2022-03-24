@@ -1,0 +1,32 @@
+fio_test_file: (g=0): rw=randwrite, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=libaio, iodepth=16
+fio-3.27-16-gdd46-dirty
+Starting 1 process
+fio_test_file: Laying out IO file (1 file / 1024MiB)
+
+fio_test_file: (groupid=0, jobs=1): err= 0: pid=5827: Wed Jun 23 21:28:31 2021
+  write: IOPS=283, BW=70.9MiB/s (74.4MB/s)(7098MiB/100066msec); 0 zone resets
+    slat (usec): min=94, max=55900, avg=421.55, stdev=465.65
+    clat (msec): min=7, max=173, avg=55.93, stdev=24.36
+     lat (msec): min=7, max=173, avg=56.35, stdev=24.33
+    clat percentiles (msec):
+     |  1.00th=[   13],  5.00th=[   14], 10.00th=[   16], 20.00th=[   43],
+     | 30.00th=[   55], 40.00th=[   58], 50.00th=[   61], 60.00th=[   63],
+     | 70.00th=[   65], 80.00th=[   67], 90.00th=[   71], 95.00th=[   83],
+     | 99.00th=[  142], 99.50th=[  146], 99.90th=[  157], 99.95th=[  163],
+     | 99.99th=[  171]
+   bw (  KiB/s): min=27648, max=247808, per=100.00%, avg=72749.82, stdev=37090.61, samples=199
+   iops        : min=  108, max=  968, avg=283.95, stdev=144.92, samples=199
+  lat (msec)   : 10=0.30%, 20=13.64%, 50=6.76%, 100=75.85%, 250=3.44%
+  cpu          : usr=2.08%, sys=10.74%, ctx=27163, majf=1, minf=21
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=99.9%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,28390,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+  WRITE: bw=70.9MiB/s (74.4MB/s), 70.9MiB/s-70.9MiB/s (74.4MB/s-74.4MB/s), io=7098MiB (7442MB), run=100066-100066msec
+
+Disk stats (read/write):
+    dm-5: ios=25/28349, merge=0/0, ticks=100/1584096, in_queue=1584773, util=100.00%, aggrios=34/28396, aggrmerge=0/0, aggrticks=127/1588117, aggrin_queue=1588160, aggrutil=100.00%
+  sda: ios=34/28396, merge=0/0, ticks=127/1588117, in_queue=1588160, util=100.00%

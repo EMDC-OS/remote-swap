@@ -1,0 +1,42 @@
+fio_test_file: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=16
+...
+fio-3.27-16-gdd46-dirty
+Starting 8 processes
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+
+fio_test_file: (groupid=0, jobs=8): err= 0: pid=18944: Tue Jun 22 11:32:54 2021
+  read: IOPS=27.1k, BW=106MiB/s (111MB/s)(1024MiB/9690msec)
+    slat (usec): min=8, max=11718, avg=21.73, stdev=40.79
+    clat (usec): min=148, max=348257, avg=4212.29, stdev=21930.11
+     lat (usec): min=177, max=348302, avg=4234.86, stdev=21933.88
+    clat percentiles (usec):
+     |  1.00th=[   237],  5.00th=[   285], 10.00th=[   326], 20.00th=[   388],
+     | 30.00th=[   445], 40.00th=[   498], 50.00th=[   553], 60.00th=[   619],
+     | 70.00th=[   685], 80.00th=[   783], 90.00th=[   963], 95.00th=[  1237],
+     | 99.00th=[132645], 99.50th=[175113], 99.90th=[231736], 99.95th=[242222],
+     | 99.99th=[278922]
+   bw (  KiB/s): min=11660, max=254706, per=100.00%, avg=118242.62, stdev=8165.00, samples=136
+   iops        : min= 2913, max=63676, avg=29559.41, stdev=2041.25, samples=136
+  lat (usec)   : 250=1.75%, 500=38.44%, 750=36.96%, 1000=14.07%
+  lat (msec)   : 2=5.16%, 4=0.08%, 10=0.05%, 20=0.13%, 50=0.48%
+  lat (msec)   : 100=1.19%, 250=1.65%, 500=0.04%
+  cpu          : usr=2.71%, sys=8.65%, ctx=77422, majf=1, minf=327
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=100.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.1%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=262144,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=16
+
+Run status group 0 (all jobs):
+   READ: bw=106MiB/s (111MB/s), 106MiB/s-106MiB/s (111MB/s-111MB/s), io=1024MiB (1074MB), run=9690-9690msec
+
+Disk stats (read/write):
+    dm-5: ios=258979/0, merge=0/0, ticks=1091074/0, in_queue=1091607, util=99.05%, aggrios=262105/0, aggrmerge=18/0, aggrticks=1092530/0, aggrin_queue=1094006, aggrutil=98.77%
+  sda: ios=262105/0, merge=18/0, ticks=1092530/0, in_queue=1094006, util=98.77%

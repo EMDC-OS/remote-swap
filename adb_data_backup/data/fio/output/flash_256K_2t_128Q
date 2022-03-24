@@ -1,0 +1,35 @@
+fio_test_file: (g=0): rw=randwrite, bs=(R) 256KiB-256KiB, (W) 256KiB-256KiB, (T) 256KiB-256KiB, ioengine=libaio, iodepth=128
+...
+fio-3.27-16-gdd46-dirty
+Starting 2 processes
+fio_test_file: Laying out IO file (1 file / 512MiB)
+fio_test_file: Laying out IO file (1 file / 512MiB)
+
+fio_test_file: (groupid=0, jobs=2): err= 0: pid=6272: Wed Jun 23 21:39:08 2021
+  write: IOPS=125, BW=31.3MiB/s (32.9MB/s)(3146MiB/100388msec); 0 zone resets
+    slat (usec): min=60, max=1026.8k, avg=15882.96, stdev=52975.94
+    clat (msec): min=10, max=4550, avg=1980.15, stdev=668.33
+     lat (msec): min=72, max=4550, avg=1996.04, stdev=670.89
+    clat percentiles (msec):
+     |  1.00th=[  186],  5.00th=[  877], 10.00th=[ 1036], 20.00th=[ 1418],
+     | 30.00th=[ 1670], 40.00th=[ 1871], 50.00th=[ 2039], 60.00th=[ 2198],
+     | 70.00th=[ 2366], 80.00th=[ 2534], 90.00th=[ 2735], 95.00th=[ 2970],
+     | 99.00th=[ 3608], 99.50th=[ 4010], 99.90th=[ 4463], 99.95th=[ 4463],
+     | 99.99th=[ 4530]
+   bw (  KiB/s): min= 1022, max=148992, per=100.00%, avg=32540.74, stdev=10014.39, samples=388
+   iops        : min=    3, max=  582, avg=126.85, stdev=39.10, samples=388
+  lat (msec)   : 20=0.01%, 100=0.50%, 250=0.53%, 500=0.41%, 750=1.48%
+  lat (msec)   : 1000=5.63%, 2000=39.62%, >=2000=51.83%
+  cpu          : usr=0.55%, sys=3.35%, ctx=5475, majf=1, minf=46
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.3%, 32=0.5%, >=64=99.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=0,12582,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+  WRITE: bw=31.3MiB/s (32.9MB/s), 31.3MiB/s-31.3MiB/s (32.9MB/s-32.9MB/s), io=3146MiB (3298MB), run=100388-100388msec
+
+Disk stats (read/write):
+    dm-5: ios=21/83671, merge=0/0, ticks=3776/15429850, in_queue=15438140, util=100.00%, aggrios=25/82157, aggrmerge=0/1198, aggrticks=3146/14873037, aggrin_queue=14876340, aggrutil=100.00%
+  sda: ios=25/82157, merge=0/1198, ticks=3146/14873037, in_queue=14876340, util=100.00%

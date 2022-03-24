@@ -1,0 +1,40 @@
+fio_test_file: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=1
+...
+fio-3.27-16-gdd46-dirty
+Starting 8 processes
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+
+fio_test_file: (groupid=0, jobs=8): err= 0: pid=5475: Thu Jul  8 14:29:53 2021
+  read: IOPS=523k, BW=2044MiB/s (2143MB/s)(1024MiB/501msec)
+    slat (nsec): min=1407, max=22893k, avg=9000.28, stdev=160091.64
+    clat (nsec): min=208, max=20067k, avg=1449.76, stdev=81583.05
+     lat (nsec): min=1771, max=22904k, avg=10897.86, stdev=182108.72
+    clat percentiles (nsec):
+     |  1.00th=[  262],  5.00th=[  262], 10.00th=[  314], 20.00th=[  314],
+     | 30.00th=[  366], 40.00th=[  470], 50.00th=[  572], 60.00th=[  676],
+     | 70.00th=[ 1352], 80.00th=[ 1400], 90.00th=[ 1512], 95.00th=[ 1768],
+     | 99.00th=[ 2352], 99.50th=[ 2864], 99.90th=[ 3696], 99.95th=[ 7520],
+     | 99.99th=[82432]
+  lat (nsec)   : 250=0.01%, 500=45.03%, 750=16.88%, 1000=4.24%
+  lat (usec)   : 2=30.48%, 4=3.28%, 10=0.05%, 20=0.01%, 50=0.02%
+  lat (usec)   : 100=0.01%, 250=0.01%, 500=0.01%
+  lat (msec)   : 4=0.01%, 10=0.01%, 20=0.01%, 50=0.01%
+  cpu          : usr=19.59%, sys=46.76%, ctx=277, majf=1, minf=215
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=262144,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=2044MiB/s (2143MB/s), 2044MiB/s-2044MiB/s (2143MB/s-2143MB/s), io=1024MiB (1074MB), run=501-501msec
+
+Disk stats (read/write):
+  zram0: ios=195628/0, merge=0/0, ticks=923/0, in_queue=966, util=68.39%
