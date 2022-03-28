@@ -2,8 +2,10 @@ adb reboot
 sleep 30
 adb root
 sleep 1
-adb shell /data/nbdroid/initialize_zram_launch.sh
-sleep 1
+adb shell /data/nbdroid/initialize_nbd_launch.sh
+sleep 10
+adb shell "/data/blktrace/blktrace -d /dev/nbd0 -o - | /data/blktrace/blkparse -i - -o /data/blktrace/nbd_blktrace_1 " &
+sleep 10
 adb shell /data/dropcache.sh
 sleep 1
 adb shell /data/lock_mem/lock_memory &
@@ -21,12 +23,6 @@ rm proc_info.txt
 ./test1.sh 2 > 2.txt
 ./test1.sh 3 > 3.txt
 ./test1.sh 4 > 4.txt
-./test1.sh 5 > 5.txt
-./test1.sh 6 > 6.txt
-./test1.sh 7 > 7.txt
-./test1.sh 8 > 8.txt
-./test1.sh 9 > 9.txt
-
 
 adb root
 sleep 5
