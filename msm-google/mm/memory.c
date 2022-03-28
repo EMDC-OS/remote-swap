@@ -2922,12 +2922,15 @@ int do_swap_page(struct vm_fault *vmf)
 	
 
 
+	if(swapin_vma_tracking!=0)
+		trace_printk("swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
 
+	/*
 
 	if(swapin_vma_tracking!=0 && current->cred->uid.val!=10135 && current->cred->uid.val!=10126 && current->cred->uid.val!=10127 && current->cred->uid.val!=10133 && current->cred->uid.val!=10128 && current->cred->uid.val!=10122 && current->cred->uid.val!=10159 && current->cred->uid.val!=10136 && current->cred->uid.val!=10124)
 		trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
 
-
+*/
 
 	/*
 	if(swapin_vma_tracking!=0 && (current->cred->uid.val==10135 || current->cred->uid.val==10126 || current->cred->uid.val==10127 || current->cred->uid.val==10133 || current->cred->uid.val==10128|| current->cred->uid.val==10122 || current->cred->uid.val==10159 || current->cred->uid.val==10136 || current->cred->uid.val==10124))

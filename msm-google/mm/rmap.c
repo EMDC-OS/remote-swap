@@ -1575,10 +1575,17 @@ static bool try_to_unmap_one(struct page *page, struct vm_area_struct *vma,
 
 			if(mm){
 				task1=mm->owner;
+				if(task1 && task1->cred && swapin_vma_tracking !=0  && address )
+					trace_printk("swapout tgid %d pid %d name \"%s\" vma %lx\n",task1->tgid,task1->pid,task1->comm,address);
+			}
+
+			/*
+			if(mm){
+				task1=mm->owner;
 				if(task1 && task1->cred && swapin_vma_tracking !=0 && task1->cred->uid.val!=10135 && task1->cred->uid.val!=10126 && task1->cred->uid.val!=10127 && task1->cred->uid.val!=10133 && task1->cred->uid.val!=10128 && task1->cred->uid.val!=10122 && task1->cred->uid.val!=10159 && task1->cred->uid.val!=10136 && task1->cred->uid.val!=10124 && address )
 					trace_printk(KERN_CRIT"swapout tgid %d pid %d name \"%s\" vma %lx\n",task1->tgid,task1->pid,task1->comm,address);
 			}
-
+*/
 			/*
 			if(mm){
 				task1=mm->owner;

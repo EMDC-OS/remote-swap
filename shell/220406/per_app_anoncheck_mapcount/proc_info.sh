@@ -5,7 +5,6 @@ echo "PID TGID CMD TOTAL SWAP NUM"
 
 
 
-adb shell ps -ef > ./ps/ps_$num.txt
 for var in `adb shell ps -ef |awk '{print $2}'`
 
 do
