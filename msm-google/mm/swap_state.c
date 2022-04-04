@@ -266,6 +266,20 @@ int add_to_swap(struct page *page)
 	int err;
 /*
 #ifdef CONFIG_APP_AWARE
+		struct anon_vma *anon_vma;
+		struct anon_vma_chain *avc;
+        pgd_t *pgd;
+        pud_t *pud;
+        pmd_t *pmd;
+        pte_t *pte;
+		unsigned long address;
+		struct vm_area_struct *vma1;
+		struct task_struct *task1;
+#endif
+*/
+	
+/*
+#ifdef CONFIG_APP_AWARE
 	struct anon_vma *anon_vma;
 	struct anon_vma_chain *avc;
 	struct vm_area_struct *vma1;
@@ -315,12 +329,14 @@ int add_to_swap(struct page *page)
 	 * the problem.
 	 */
 	set_page_dirty(page);
-/*
+
+	/*
 #ifdef CONFIG_APP_AWARE
 	if(swapin_vma_tracking!=0){
+					printk(KERN_CRIT"==============");
 
 		anon_vma=page_anon_vma(page);
-												
+
 		if(anon_vma){
 				anon_vma_lock_read(anon_vma);
 				anon_vma_interval_tree_foreach(avc, &anon_vma->rb_root,
@@ -329,14 +345,24 @@ int add_to_swap(struct page *page)
 					task1=vma1->vm_mm->owner;
 					if(task1->cred->uid.val!=foreground_uid)
 						continue;
+
 					address = vma_address(page, vma1);
+					pgd = pgd_offset(vma1->vm_mm, address);
+                    if (pgd_none(*pgd)) continue;
+                    pud = pud_offset(pgd, address);
+                    if (pud_none(*pud)) continue;
+                    pmd = pmd_offset(pud, address);
+                    if (pmd_none(*pmd)) continue;
+                    pte = pte_offset_kernel(pmd, address);
+
 					if(!address) continue;
-					printk(KERN_CRIT"swapout tgid %d pid %d name \"%s\" vma %lx\n",task1->tgid,task1->pid,task1->comm,address);
+					printk(KERN_CRIT"swapout name \"%s\" pte_present %d pte %lx\n ",task1->comm,pte_present(*pte),address);
 				}
 				anon_vma_unlock_read(anon_vma);
 		}
 
 	
+					printk(KERN_CRIT"==============");
 	}
 #endif
 */

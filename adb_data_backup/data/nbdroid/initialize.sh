@@ -46,3 +46,5 @@ mount -r -w -t ext4 /dev/block/zram0 /data/nbdroid/zram-mount/
 sleep 1
 
 echo "--zram0mount finished--"
+echo 0 > /sys/module/lowmemorykiller/parameters/enable_lmk
+echo "--lowmemorykiller driver disabled--"
