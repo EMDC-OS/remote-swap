@@ -1307,6 +1307,11 @@ int copy_page_range(struct mm_struct *dst_mm, struct mm_struct *src_mm,
 	return ret;
 }
 
+#ifdef CONFIG_APP_AWARE
+int swapin_vma_tracking;
+int foreground_pid;
+#endif
+
 static unsigned long zap_pte_range(struct mmu_gather *tlb,
 				struct vm_area_struct *vma, pmd_t *pmd,
 				unsigned long addr, unsigned long end,
@@ -1417,6 +1422,19 @@ again:
 			page = migration_entry_to_page(entry);
 			rss[mm_counter(page)]--;
 		}
+		
+	
+#ifdef CONFIG_APP_AWARE
+		if(swapin_vma_tracking!=0 && mm && mm->owner)
+			trace_printk("unmap tgid %d pid %d name \"%s\" vma %lx\n",mm->owner->tgid,mm->owner->pid,mm->owner->comm,addr);
+		else{
+			if(!mm)
+				trace_printk("unmap else mm %s \n",current->comm);
+			else
+				trace_printk("unmap else owner %s \n",current->comm);
+		}
+
+#endif
 		if (unlikely(!free_swap_and_cache(entry)))
 			print_bad_pte(vma, addr, ptent, NULL);
 		pte_clear_not_present_full(mm, addr, pte, tlb->fullmm);
@@ -2893,10 +2911,6 @@ EXPORT_SYMBOL(unmap_mapping_range);
  * as does filemap_fault().
  */
 
-#ifdef CONFIG_APP_AWARE
-int swapin_vma_tracking;
-int foreground_pid;
-#endif
 
 int do_swap_page(struct vm_fault *vmf)
 {
