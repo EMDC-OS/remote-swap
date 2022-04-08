@@ -1424,19 +1424,14 @@ again:
 		}
 		
 	
-#ifdef CONFIG_APP_AWARE
-		if(swapin_vma_tracking!=0 && mm && mm->owner)
-			trace_printk("unmap tgid %d pid %d name \"%s\" vma %lx\n",mm->owner->tgid,mm->owner->pid,mm->owner->comm,addr);
-		else{
-			if(!mm)
-				trace_printk("unmap else mm %s \n",current->comm);
-			else
-				trace_printk("unmap else owner %s \n",current->comm);
-		}
-
-#endif
 		if (unlikely(!free_swap_and_cache(entry)))
 			print_bad_pte(vma, addr, ptent, NULL);
+		else{
+#ifdef CONFIG_APP_AWARE
+		if(swapin_vma_tracking!=0 && mm && !non_swap_entry(entry) && swp_swapcount(entry)==0)
+			trace_printk("unmap vma %lx %lx %d\n",addr,swp_offset(entry),swp_swapcount(entry));
+#endif
+		}
 		pte_clear_not_present_full(mm, addr, pte, tlb->fullmm);
 	} while (pte++, addr += PAGE_SIZE, addr != end);
 
@@ -2925,7 +2920,7 @@ int do_swap_page(struct vm_fault *vmf)
 	int ret = 0;
 	bool vma_readahead = swap_use_vma_readahead();
 
-#ifdef CONFIG_APP_AWARE
+
 	
 	/*
 	if(swapin_vma_tracking==1 && foreground_uid==current->cred->uid.val)
@@ -2934,11 +2929,6 @@ int do_swap_page(struct vm_fault *vmf)
 		printk(KERN_CRIT"after: swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);	
 	*/
 	
-
-
-	if(swapin_vma_tracking!=0)
-		trace_printk("swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
-
 	/*
 
 	if(swapin_vma_tracking!=0 && current->cred->uid.val!=10135 && current->cred->uid.val!=10126 && current->cred->uid.val!=10127 && current->cred->uid.val!=10133 && current->cred->uid.val!=10128 && current->cred->uid.val!=10122 && current->cred->uid.val!=10159 && current->cred->uid.val!=10136 && current->cred->uid.val!=10124)
@@ -2951,8 +2941,7 @@ int do_swap_page(struct vm_fault *vmf)
 		trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
 */
 
-#endif
-	
+
 	if (vma_readahead)
 		page = swap_readahead_detect(vmf, &swap_ra);
 	if (!pte_unmap_same(vma->vm_mm, vmf->pmd, vmf->pte, vmf->orig_pte)) {
@@ -2988,7 +2977,17 @@ int do_swap_page(struct vm_fault *vmf)
 	if (!page)
 		page = lookup_swap_cache(entry, vma_readahead ? vma : NULL,
 					 vmf->address);
+	#ifdef CONFIG_APP_AWARE
+	if(swapin_vma_tracking!=0){
+
+			if (!non_swap_entry(entry)) 
+				trace_printk("swapin tgid %d %d \"%s\" %lx %lx %d %d\n",current->tgid,current->pid,current->comm,vmf->address,swp_offset(entry),!!page,swp_swapcount(entry));
+	}
+	// tgid pid name vma offset swapcache? count
+
+#endif
 	
+
 	
 	
 	if (!page) {

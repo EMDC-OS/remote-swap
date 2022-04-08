@@ -33,6 +33,11 @@
 #include <linux/vmalloc.h>
 #include <linux/mutex.h>
 #include <linux/mm.h>
+#ifdef CONFIG_APP_AWARE
+#include <linux/kernel.h>
+#include <linux/swapops.h>
+#include <linux/app_aware.h>
+#endif
 
 #ifdef CONFIG_SWAP
 
@@ -294,10 +299,18 @@ int free_swap_slot(swp_entry_t entry)
 			swapcache_free_entries(cache->slots_ret, cache->n_ret);
 			cache->n_ret = 0;
 		}
+#ifdef CONFIG_APP_AWARE
+		if(swapin_vma_tracking!=0)
+			trace_printk("swapfree cache %lx\n",swp_offset(entry));
+#endif
 		cache->slots_ret[cache->n_ret++] = entry;
 		spin_unlock_irq(&cache->free_lock);
 	} else {
 direct_free:
+#ifdef CONFIG_APP_AWARE
+		if(swapin_vma_tracking!=0)
+			trace_printk("swapfree direct %lx\n",swp_offset(entry));
+#endif
 		swapcache_free_entries(&entry, 1);
 	}
 
@@ -343,11 +356,21 @@ repeat:
 			}
 		}
 		mutex_unlock(&cache->alloc_lock);
-		if (entry.val)
+		if (entry.val){
+		
+			if(swapin_vma_tracking!=0)
+				trace_printk("swapalloc cache %lx\n",swp_offset(entry));
+			
 			return entry;
+		}
 	}
 
 	get_swap_pages(1, false, &entry);
+
+#ifdef CONFIG_APP_AWARE
+		if(swapin_vma_tracking!=0)
+			trace_printk("swapalloc direct %lx\n",swp_offset(entry));
+#endif
 
 	return entry;
 }

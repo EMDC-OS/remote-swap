@@ -1576,8 +1576,10 @@ static bool try_to_unmap_one(struct page *page, struct vm_area_struct *vma,
 			if(mm){
 				task1=mm->owner;
 				if(task1 && task1->cred && swapin_vma_tracking !=0  && address )
-					trace_printk("swapout tgid %d pid %d name \"%s\" vma %lx\n",task1->tgid,task1->pid,task1->comm,address);
+					trace_printk("swapout tgid %d %d \"%s\" %lx %lx\n",task1->tgid,task1->pid,task1->comm,address,swp_offset(entry));
 			}
+	
+			// tgid pid name vma offset 
 
 			/*
 			if(mm){
