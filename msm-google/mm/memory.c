@@ -1429,7 +1429,7 @@ again:
 		else{
 #ifdef CONFIG_APP_AWARE
 		if(swapin_vma_tracking!=0 && mm && !non_swap_entry(entry) && swp_swapcount(entry)==0)
-			trace_printk("unmap vma %lx %lx %d\n",addr,swp_offset(entry),swp_swapcount(entry));
+			trace_printk("unmap va %lx %lx %d\n",addr,swp_offset(entry),swp_swapcount(entry));
 #endif
 		}
 		pte_clear_not_present_full(mm, addr, pte, tlb->fullmm);
@@ -2924,21 +2924,21 @@ int do_swap_page(struct vm_fault *vmf)
 	
 	/*
 	if(swapin_vma_tracking==1 && foreground_uid==current->cred->uid.val)
-		printk(KERN_CRIT"before: swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
+		printk(KERN_CRIT"before: swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);
 	else if(swapin_vma_tracking==2 && foreground_uid==current->cred->uid.val)
-		printk(KERN_CRIT"after: swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);	
+		printk(KERN_CRIT"after: swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);	
 	*/
 	
 	/*
 
 	if(swapin_vma_tracking!=0 && current->cred->uid.val!=10135 && current->cred->uid.val!=10126 && current->cred->uid.val!=10127 && current->cred->uid.val!=10133 && current->cred->uid.val!=10128 && current->cred->uid.val!=10122 && current->cred->uid.val!=10159 && current->cred->uid.val!=10136 && current->cred->uid.val!=10124)
-		trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
+		trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);
 
 */
 
 	/*
 	if(swapin_vma_tracking!=0 && (current->cred->uid.val==10135 || current->cred->uid.val==10126 || current->cred->uid.val==10127 || current->cred->uid.val==10133 || current->cred->uid.val==10128|| current->cred->uid.val==10122 || current->cred->uid.val==10159 || current->cred->uid.val==10136 || current->cred->uid.val==10124))
-		trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" vma %lx\n",current->tgid,current->pid,current->comm,vmf->address);
+		trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);
 */
 
 
@@ -2983,7 +2983,7 @@ int do_swap_page(struct vm_fault *vmf)
 			if (!non_swap_entry(entry)) 
 				trace_printk("swapin tgid %d %d \"%s\" %lx %lx %d %d\n",current->tgid,current->pid,current->comm,vmf->address,swp_offset(entry),!!page,swp_swapcount(entry));
 	}
-	// tgid pid name vma offset swapcache? count
+	// tgid pid name va offset has_swapcache? count
 
 #endif
 	
@@ -3331,7 +3331,7 @@ static int pmd_devmap_trans_unstable(pmd_t *pmd)
 
 static int pte_alloc_one_map(struct vm_fault *vmf)
 {
-	struct vm_area_struct *vma = vmf->vma;
+	struct vm_area_struct vma = vmf->vma;
 
 	if (!pmd_none(*vmf->pmd))
 		goto map_pte;

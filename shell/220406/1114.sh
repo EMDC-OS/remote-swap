@@ -2,7 +2,7 @@ adb reboot
 
 sleep 600
 
-cd /home/user/hdd/kernel_flame/private/shell/220406/per_app_anoncheck/
+cd /home/user/hdd/kernel_flame/private/shell/220406/app_play_anontrace_0420
 
 sleep 2
 
@@ -11,10 +11,11 @@ sleep 2
 
 sleep 600
 
-echo flashfin
+adb reboot
 
+sleep 600
 
-cd /home/user/hdd/kernel_flame/private/shell/220406/per_app_anoncheck_nbd/
+cd /home/user/hdd/kernel_flame/private/shell/220406/app_anontrace_0420
 
 sleep 2
 
@@ -23,5 +24,17 @@ sleep 2
 
 sleep 600
 
-echo nbdfin
+adb reboot
+
+sleep 600
+
+cd /home/user/hdd/kernel_flame/private/shell/220406/app_anontrace_0420_2
+
+sleep 2
+
+./0318.sh
+
+
+sleep 600
+
 
