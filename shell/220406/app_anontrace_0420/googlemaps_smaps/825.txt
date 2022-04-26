@@ -1,14 +1,14 @@
-5555555000-555555a000 r--p 00000000 fd:02 187                            /vendor/bin/hw/vendor.google.wireless_charger@1.1-service-vendor
-Size:                 20 kB
+5555555000-5555563000 r--p 00000000 fd:02 185                            /vendor/bin/hw/vendor.google.airbrush@1.0-service
+Size:                 56 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                  20 kB
-Pss:                  20 kB
+Rss:                  56 kB
+Pss:                  56 kB
 Shared_Clean:          0 kB
 Shared_Dirty:          0 kB
-Private_Clean:        20 kB
+Private_Clean:        56 kB
 Private_Dirty:         0 kB
-Referenced:           16 kB
+Referenced:           44 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -19,17 +19,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me dw 
-555555a000-555555e000 --xp 00005000 fd:02 187                            /vendor/bin/hw/vendor.google.wireless_charger@1.1-service-vendor
-Size:                 16 kB
+5555563000-555557c000 --xp 0000e000 fd:02 185                            /vendor/bin/hw/vendor.google.airbrush@1.0-service
+Size:                100 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                  16 kB
-Pss:                  16 kB
+Rss:                 100 kB
+Pss:                 100 kB
 Shared_Clean:          0 kB
 Shared_Dirty:          0 kB
-Private_Clean:        16 kB
+Private_Clean:       100 kB
 Private_Dirty:         0 kB
-Referenced:           12 kB
+Referenced:           92 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -40,7 +40,28 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: ex mr mw me dw 
-555555e000-555555f000 r--p 00009000 fd:02 187                            /vendor/bin/hw/vendor.google.wireless_charger@1.1-service-vendor
+555557c000-5555580000 r--p 00027000 fd:02 185                            /vendor/bin/hw/vendor.google.airbrush@1.0-service
+Size:                 16 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  16 kB
+Pss:                  16 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        16 kB
+Referenced:           16 kB
+Anonymous:            16 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me dw ac 
+5555580000-5555581000 rw-p 00000000 00:00 0                              [heap]
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -60,32 +81,9 @@ Private_Hugetlb:       0 kB
 Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
-VmFlags: rd mr mw me dw ac 
-7fbb800000-7fbbc00000 rw-p 00000000 00:00 0                              [anon:libc_malloc]
-Name:           [anon:libc_malloc]
-Name:           [anon:libc_malloc]
-Size:               4096 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                 116 kB
-Pss:                 116 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:       116 kB
-Referenced:          116 kB
-Anonymous:           116 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbbd03000-7fbc602000 ---p 00000000 00:00 0 
-Size:               9212 kB
+7fb7000000-7fb7a26000 ---p 00000000 00:00 0 
+Size:              10392 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
 Rss:                   0 kB
@@ -105,7 +103,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: mr mw me 
-7fbc602000-7fbc604000 rw-p 00000000 00:00 0 
+7fb7a26000-7fb7a28000 rw-p 00000000 00:00 0 
 Size:                  8 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -126,8 +124,8 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbc604000-7fbcd03000 ---p 00000000 00:00 0 
-Size:               7164 kB
+7fb7a28000-7fb8000000 ---p 00000000 00:00 0 
+Size:               5984 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
 Rss:                   0 kB
@@ -147,7 +145,30 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: mr mw me 
-7fbcd03000-7fbcd04000 ---p 00000000 00:00 0 
+7fb8000000-7fb8400000 rw-p 00000000 00:00 0                              [anon:libc_malloc]
+Name:           [anon:libc_malloc]
+Name:           [anon:libc_malloc]
+Size:               4096 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 136 kB
+Pss:                 136 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       136 kB
+Referenced:          136 kB
+Anonymous:           136 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fb8410000-7fb8411000 ---p 00000000 00:00 0 
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -168,7 +189,133 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: mr mw me nr 
-7fbcd04000-7fbcdff000 rw-p 00000000 00:00 0 
+7fb8411000-7fb850c000 rw-p 00000000 00:00 0 
+Size:               1004 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  12 kB
+Pss:                  12 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        12 kB
+Referenced:           12 kB
+Anonymous:            12 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me nr 
+7fb850c000-7fb850d000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me nr 
+7fb850d000-7fb9352000 ---p 00000000 00:00 0 
+Size:              14612 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me 
+7fb9352000-7fb9354000 rw-p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fb9354000-7fb950d000 ---p 00000000 00:00 0 
+Size:               1764 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me 
+7fb950d000-7fb950e000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me nr 
+7fb950e000-7fb9609000 rw-p 00000000 00:00 0 
 Size:               1004 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -189,7 +336,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me nr 
-7fbcdff000-7fbce00000 ---p 00000000 00:00 0 
+7fb9609000-7fb960a000 ---p 00000000 00:00 0 
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -210,20 +357,39 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: mr mw me nr 
-7fbce00000-7fbd600000 rw-p 00000000 00:00 0                              [anon:libc_malloc]
-Name:           [anon:libc_malloc]
-Name:           [anon:libc_malloc]
-Size:               8192 kB
+7fb960a000-7fb968a000 ---p 00000000 00:00 0 
+Size:                512 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                 164 kB
-Pss:                 164 kB
+Rss:                   0 kB
+Pss:                   0 kB
 Shared_Clean:          0 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
-Private_Dirty:       164 kB
-Referenced:          164 kB
-Anonymous:           164 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me 
+7fb968a000-7fb968c000 rw-p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
 ShmemPmdMapped:        0 kB
@@ -233,7 +399,112 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbd6a4000-7fbd7a2000 r--p 00000000 00:12 20123                          /dev/hwbinder
+7fb968c000-7fba60a000 ---p 00000000 00:00 0 
+Size:              15864 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me 
+7fba60a000-7fba60b000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me nr 
+7fba60b000-7fba706000 rw-p 00000000 00:00 0 
+Size:               1004 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  12 kB
+Pss:                  12 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        12 kB
+Referenced:           12 kB
+Anonymous:            12 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me nr 
+7fba706000-7fba707000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me nr 
+7fba707000-7fba805000 r--p 00000000 00:12 27718                          /dev/vndbinder
+Size:               1016 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         4 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr me dc nr mm 
+7fba805000-7fba903000 r--p 00000000 00:12 21220                          /dev/hwbinder
 Size:               1016 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -254,17 +525,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr me dc nr mm 
-7fbd7a2000-7fbd7a4000 r--p 00000000 fd:00 2525                           /system/lib64/libnetd_client.so
-Size:                  8 kB
+7fba903000-7fbb190000 ---p 00000000 00:00 0 
+Size:               8756 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                   8 kB
+Rss:                   0 kB
 Pss:                   0 kB
-Shared_Clean:          8 kB
+Shared_Clean:          0 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:            8 kB
+Referenced:            0 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -274,18 +545,18 @@ Private_Hugetlb:       0 kB
 Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbd7a4000-7fbd7a6000 --xp 00002000 fd:00 2525                           /system/lib64/libnetd_client.so
+VmFlags: mr mw me 
+7fbb190000-7fbb192000 rw-p 00000000 00:00 0 
 Size:                  8 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                   8 kB
+Rss:                   0 kB
 Pss:                   0 kB
-Shared_Clean:          8 kB
+Shared_Clean:          0 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:            8 kB
+Referenced:            0 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -295,19 +566,40 @@ Private_Hugetlb:       0 kB
 Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbd7a6000-7fbd7a7000 rw-p 00004000 fd:00 2525                           /system/lib64/libnetd_client.so
-Size:                  4 kB
+VmFlags: rd wr mr mw me ac 
+7fbb192000-7fbc09c000 ---p 00000000 00:00 0 
+Size:              15400 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
+Rss:                   0 kB
+Pss:                   0 kB
 Shared_Clean:          0 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me 
+7fbc09c000-7fbc09e000 rw-p 00000000 00:00 0 
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
 ShmemPmdMapped:        0 kB
@@ -317,18 +609,18 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbd7a7000-7fbd7a8000 r--p 00005000 fd:00 2525                           /system/lib64/libnetd_client.so
-Size:                  4 kB
+7fbc09e000-7fbc903000 ---p 00000000 00:00 0 
+Size:               8596 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
+Rss:                   0 kB
+Pss:                   0 kB
 Shared_Clean:          0 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
 ShmemPmdMapped:        0 kB
@@ -337,21 +629,84 @@ Private_Hugetlb:       0 kB
 Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbd7a8000-7fbd7a9000 rw-p 00000000 00:00 0                              [anon:.bss]
-Name:           [anon:.bss]
-Name:           [anon:.bss]
+VmFlags: mr mw me 
+7fbc903000-7fbc904000 ---p 00000000 00:00 0 
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
+Rss:                   0 kB
+Pss:                   0 kB
 Shared_Clean:          0 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me nr 
+7fbc904000-7fbc9ff000 rw-p 00000000 00:00 0 
+Size:               1004 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me nr 
+7fbc9ff000-7fbca00000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me nr 
+7fbca00000-7fbd200000 rw-p 00000000 00:00 0                              [anon:libc_malloc]
+Name:           [anon:libc_malloc]
+Name:           [anon:libc_malloc]
+Size:               8192 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 220 kB
+Pss:                 220 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:       220 kB
+Referenced:          220 kB
+Anonymous:           220 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
 ShmemPmdMapped:        0 kB
@@ -361,7 +716,70 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbd7d5000-7fbd839000 rw-p 00000000 00:00 0                              [anon:linker_alloc]
+7fbd2a1000-7fbd2a2000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me nr 
+7fbd2a2000-7fbd39d000 rw-p 00000000 00:00 0 
+Size:               1004 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me nr 
+7fbd39d000-7fbd39e000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me nr 
+7fbd39e000-7fbd402000 rw-p 00000000 00:00 0                              [anon:linker_alloc]
 Name:           [anon:linker_alloc]
 Name:           [anon:linker_alloc]
 Size:                400 kB
@@ -384,17 +802,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbd839000-7fbd83a000 r--p 00000000 07:02 108                            /apex/com.android.runtime/lib64/bionic/libdl.so
-Size:                  4 kB
+7fbd402000-7fbd418000 r--p 00000000 fd:00 2887                           /system/lib64/vndk-sp-29/libprocessgroup.so
+Size:                 88 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   0 kB
-Shared_Clean:          4 kB
+Rss:                  88 kB
+Pss:                   1 kB
+Shared_Clean:         88 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:            4 kB
+Referenced:           72 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -405,103 +823,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me 
-7fbd83a000-7fbd83b000 --xp 00001000 07:02 108                            /apex/com.android.runtime/lib64/bionic/libdl.so
-Size:                  4 kB
+7fbd418000-7fbd43c000 --xp 00016000 fd:00 2887                           /system/lib64/vndk-sp-29/libprocessgroup.so
+Size:                144 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   0 kB
-Shared_Clean:          4 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            4 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbd83b000-7fbd83c000 r--p 00002000 07:02 108                            /apex/com.android.runtime/lib64/bionic/libdl.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
+Rss:                 144 kB
 Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbd83c000-7fbd83d000 rw-p 00000000 00:00 0                              [anon:.bss]
-Name:           [anon:.bss]
-Name:           [anon:.bss]
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   0 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
+Shared_Clean:        144 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:            0 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbd85c000-7fbd85d000 r--p 00000000 fd:00 2881                           /system/lib64/vndk-sp-29/libhidltransport.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   0 kB
-Shared_Clean:          4 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            4 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbd85d000-7fbd85e000 --xp 00001000 fd:00 2881                           /system/lib64/vndk-sp-29/libhidltransport.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   0 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            0 kB
+Referenced:           88 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -512,7 +844,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: ex mr mw me 
-7fbd85e000-7fbd85f000 rw-p 00002000 fd:00 2881                           /system/lib64/vndk-sp-29/libhidltransport.so
+7fbd43c000-7fbd43d000 rw-p 0003a000 fd:00 2887                           /system/lib64/vndk-sp-29/libprocessgroup.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -533,91 +865,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbd85f000-7fbd860000 r--p 00003000 fd:00 2881                           /system/lib64/vndk-sp-29/libhidltransport.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbd898000-7fbd89f000 r--p 00000000 fd:00 2877                           /system/lib64/vndk-sp-29/libcutils.so
-Size:                 28 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  28 kB
-Pss:                   0 kB
-Shared_Clean:         28 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:           24 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbd89f000-7fbd8a7000 --xp 00007000 fd:00 2877                           /system/lib64/vndk-sp-29/libcutils.so
-Size:                 32 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  28 kB
-Pss:                   0 kB
-Shared_Clean:         28 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:           24 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbd8a7000-7fbd8a8000 rw-p 0000f000 fd:00 2877                           /system/lib64/vndk-sp-29/libcutils.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbd8a8000-7fbd8aa000 r--p 00010000 fd:00 2877                           /system/lib64/vndk-sp-29/libcutils.so
+7fbd43d000-7fbd43f000 r--p 0003b000 fd:00 2887                           /system/lib64/vndk-sp-29/libprocessgroup.so
 Size:                  8 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -638,7 +886,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me ac 
-7fbd8aa000-7fbd8ab000 rw-p 00000000 00:00 0                              [anon:.bss]
+7fbd43f000-7fbd440000 rw-p 00000000 00:00 0                              [anon:.bss]
 Name:           [anon:.bss]
 Name:           [anon:.bss]
 Size:                  4 kB
@@ -661,7 +909,1178 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbd8c0000-7fbd8c9000 r--p 00000000 fd:00 2351                           /system/lib64/libbase.so
+7fbd474000-7fbd493000 r--p 00000000 fd:00 2831                           /system/lib64/vndk-29/libprotobuf-cpp-lite.so
+Size:                124 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 112 kB
+Pss:                   8 kB
+Shared_Clean:        112 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           92 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd493000-7fbd4b5000 --xp 0001f000 fd:00 2831                           /system/lib64/vndk-29/libprotobuf-cpp-lite.so
+Size:                136 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  84 kB
+Pss:                   6 kB
+Shared_Clean:         84 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           32 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd4b5000-7fbd4b6000 rw-p 00041000 fd:00 2831                           /system/lib64/vndk-29/libprotobuf-cpp-lite.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd4b6000-7fbd4b8000 r--p 00042000 fd:00 2831                           /system/lib64/vndk-29/libprotobuf-cpp-lite.so
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd4b8000-7fbd4b9000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd4d2000-7fbd4e0000 r--p 00000000 fd:00 2889                           /system/lib64/vndk-sp-29/libutils.so
+Size:                 56 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  56 kB
+Pss:                   0 kB
+Shared_Clean:         56 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           44 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd4e0000-7fbd4ec000 --xp 0000e000 fd:00 2889                           /system/lib64/vndk-sp-29/libutils.so
+Size:                 48 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  48 kB
+Pss:                   0 kB
+Shared_Clean:         48 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           36 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd4ec000-7fbd4ed000 rw-p 0001a000 fd:00 2889                           /system/lib64/vndk-sp-29/libutils.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd4ed000-7fbd4ee000 r--p 0001b000 fd:00 2889                           /system/lib64/vndk-sp-29/libutils.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd4ee000-7fbd4ef000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd504000-7fbd53e000 r--p 00000000 fd:00 2790                           /system/lib64/vndk-29/libbinder.so
+Size:                232 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 232 kB
+Pss:                   7 kB
+Shared_Clean:        232 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          192 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd53e000-7fbd573000 --xp 0003a000 fd:00 2790                           /system/lib64/vndk-29/libbinder.so
+Size:                212 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 212 kB
+Pss:                   7 kB
+Shared_Clean:        212 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          148 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd573000-7fbd574000 rw-p 0006f000 fd:00 2790                           /system/lib64/vndk-29/libbinder.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd574000-7fbd57d000 r--p 00070000 fd:00 2790                           /system/lib64/vndk-29/libbinder.so
+Size:                 36 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  36 kB
+Pss:                  36 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        36 kB
+Referenced:           36 kB
+Anonymous:            36 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd57d000-7fbd57e000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd583000-7fbd595000 r--p 00000000 07:02 109                            /apex/com.android.runtime/lib64/bionic/libm.so
+Size:                 72 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  60 kB
+Pss:                   0 kB
+Shared_Clean:         60 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           60 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd595000-7fbd5b9000 --xp 00012000 07:02 109                            /apex/com.android.runtime/lib64/bionic/libm.so
+Size:                144 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd5b9000-7fbd5ba000 rw-p 00036000 07:02 109                            /apex/com.android.runtime/lib64/bionic/libm.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd5ba000-7fbd5bb000 r--p 00037000 07:02 109                            /apex/com.android.runtime/lib64/bionic/libm.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd5bb000-7fbd5bc000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd5c7000-7fbd5cd000 r--p 00000000 fd:00 2485                           /system/lib64/liblog.so
+Size:                 24 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  20 kB
+Pss:                   0 kB
+Shared_Clean:         20 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           20 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd5cd000-7fbd5db000 --xp 00006000 fd:00 2485                           /system/lib64/liblog.so
+Size:                 56 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  56 kB
+Pss:                   0 kB
+Shared_Clean:         56 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           56 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd5db000-7fbd5dc000 rw-p 00014000 fd:00 2485                           /system/lib64/liblog.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd5dc000-7fbd5dd000 r--p 00015000 fd:00 2485                           /system/lib64/liblog.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd5dd000-7fbd5de000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd60b000-7fbd618000 r--p 00000000 fd:00 2644                           /system/lib64/vndk-29/android.frameworks.stats@1.0.so
+Size:                 52 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  52 kB
+Pss:                   4 kB
+Shared_Clean:         52 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           40 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd618000-7fbd629000 --xp 0000d000 fd:00 2644                           /system/lib64/vndk-29/android.frameworks.stats@1.0.so
+Size:                 68 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  68 kB
+Pss:                   5 kB
+Shared_Clean:         68 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           36 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd629000-7fbd62a000 rw-p 0001e000 fd:00 2644                           /system/lib64/vndk-29/android.frameworks.stats@1.0.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd62a000-7fbd62c000 r--p 0001f000 fd:00 2644                           /system/lib64/vndk-29/android.frameworks.stats@1.0.so
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd64e000-7fbd64f000 r--p 00000000 fd:00 2882                           /system/lib64/vndk-sp-29/libhwbinder.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd64f000-7fbd650000 --xp 00001000 fd:00 2882                           /system/lib64/vndk-sp-29/libhwbinder.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd650000-7fbd651000 rw-p 00002000 fd:00 2882                           /system/lib64/vndk-sp-29/libhwbinder.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd651000-7fbd652000 r--p 00003000 fd:00 2882                           /system/lib64/vndk-sp-29/libhwbinder.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd6a7000-7fbd6a9000 r--p 00000000 fd:00 2873                           /system/lib64/vndk-sp-29/libbinderthreadstate.so
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd6a9000-7fbd6ab000 --xp 00002000 fd:00 2873                           /system/lib64/vndk-sp-29/libbinderthreadstate.so
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   0 kB
+Shared_Clean:          8 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            8 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd6ab000-7fbd6ac000 rw-p 00004000 fd:00 2873                           /system/lib64/vndk-sp-29/libbinderthreadstate.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd6ac000-7fbd6ad000 r--p 00005000 fd:00 2873                           /system/lib64/vndk-sp-29/libbinderthreadstate.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd6ad000-7fbd6ae000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd6c8000-7fbd6db000 r--p 00000000 fd:02 2319                           /vendor/lib64/vendor.google.airbrush.manager@1.0.so
+Size:                 76 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  64 kB
+Pss:                  21 kB
+Shared_Clean:         64 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           60 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd6db000-7fbd6f4000 --xp 00013000 fd:02 2319                           /vendor/lib64/vendor.google.airbrush.manager@1.0.so
+Size:                100 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 100 kB
+Pss:                  33 kB
+Shared_Clean:        100 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           44 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd6f4000-7fbd6f5000 rw-p 0002c000 fd:02 2319                           /vendor/lib64/vendor.google.airbrush.manager@1.0.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd6f5000-7fbd6f9000 r--p 0002d000 fd:02 2319                           /vendor/lib64/vendor.google.airbrush.manager@1.0.so
+Size:                 16 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  16 kB
+Pss:                  16 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        16 kB
+Referenced:           16 kB
+Anonymous:            16 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd70d000-7fbd70e000 r--p 00000000 fd:00 2881                           /system/lib64/vndk-sp-29/libhidltransport.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd70e000-7fbd70f000 --xp 00001000 fd:00 2881                           /system/lib64/vndk-sp-29/libhidltransport.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd70f000-7fbd710000 rw-p 00002000 fd:00 2881                           /system/lib64/vndk-sp-29/libhidltransport.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd710000-7fbd711000 r--p 00003000 fd:00 2881                           /system/lib64/vndk-sp-29/libhidltransport.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd768000-7fbd7b8000 r--p 00000000 fd:00 2373                           /system/lib64/libc++.so
+Size:                320 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 224 kB
+Pss:                   1 kB
+Shared_Clean:        224 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          224 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd7b8000-7fbd82a000 --xp 00050000 fd:00 2373                           /system/lib64/libc++.so
+Size:                456 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 412 kB
+Pss:                   3 kB
+Shared_Clean:        412 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          392 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd82a000-7fbd82b000 rw-p 000c2000 fd:00 2373                           /system/lib64/libc++.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd82b000-7fbd833000 r--p 000c3000 fd:00 2373                           /system/lib64/libc++.so
+Size:                 32 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  32 kB
+Pss:                  32 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        32 kB
+Referenced:           32 kB
+Anonymous:            32 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd833000-7fbd837000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                 16 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  16 kB
+Pss:                  16 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        16 kB
+Referenced:           16 kB
+Anonymous:            16 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd840000-7fbd841000 r--p 00000000 07:02 108                            /apex/com.android.runtime/lib64/bionic/libdl.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd841000-7fbd842000 --xp 00001000 07:02 108                            /apex/com.android.runtime/lib64/bionic/libdl.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd842000-7fbd843000 r--p 00002000 07:02 108                            /apex/com.android.runtime/lib64/bionic/libdl.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd843000-7fbd844000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd885000-7fbd88e000 r--p 00000000 fd:00 2351                           /system/lib64/libbase.so
 Size:                 36 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -682,7 +2101,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me 
-7fbd8c9000-7fbd8d2000 --xp 00009000 fd:00 2351                           /system/lib64/libbase.so
+7fbd88e000-7fbd897000 --xp 00009000 fd:00 2351                           /system/lib64/libbase.so
 Size:                 36 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -703,7 +2122,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: ex mr mw me 
-7fbd8d2000-7fbd8d3000 rw-p 00012000 fd:00 2351                           /system/lib64/libbase.so
+7fbd897000-7fbd898000 rw-p 00012000 fd:00 2351                           /system/lib64/libbase.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -724,7 +2143,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbd8d3000-7fbd8d4000 r--p 00013000 fd:00 2351                           /system/lib64/libbase.so
+7fbd898000-7fbd899000 r--p 00013000 fd:00 2351                           /system/lib64/libbase.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -745,7 +2164,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me ac 
-7fbd8d4000-7fbd8d5000 rw-p 00000000 00:00 0                              [anon:.bss]
+7fbd899000-7fbd89a000 rw-p 00000000 00:00 0                              [anon:.bss]
 Name:           [anon:.bss]
 Name:           [anon:.bss]
 Size:                  4 kB
@@ -768,17 +2187,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbd914000-7fbd954000 r--p 00000000 07:02 107                            /apex/com.android.runtime/lib64/bionic/libc.so
-Size:                256 kB
+7fbd8d7000-7fbd8de000 r--p 00000000 fd:00 2877                           /system/lib64/vndk-sp-29/libcutils.so
+Size:                 28 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                 176 kB
-Pss:                   1 kB
-Shared_Clean:        176 kB
+Rss:                  28 kB
+Pss:                   0 kB
+Shared_Clean:         28 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:          176 kB
+Referenced:           24 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -789,17 +2208,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me 
-7fbd954000-7fbd9fb000 --xp 00040000 07:02 107                            /apex/com.android.runtime/lib64/bionic/libc.so
-Size:                668 kB
+7fbd8de000-7fbd8e6000 --xp 00007000 fd:00 2877                           /system/lib64/vndk-sp-29/libcutils.so
+Size:                 32 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                 592 kB
-Pss:                   4 kB
-Shared_Clean:        592 kB
+Rss:                  24 kB
+Pss:                   0 kB
+Shared_Clean:         24 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:          592 kB
+Referenced:           16 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -810,7 +2229,649 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: ex mr mw me 
-7fbd9fb000-7fbd9fe000 rw-p 000e7000 07:02 107                            /apex/com.android.runtime/lib64/bionic/libc.so
+7fbd8e6000-7fbd8e7000 rw-p 0000f000 fd:00 2877                           /system/lib64/vndk-sp-29/libcutils.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd8e7000-7fbd8e9000 r--p 00010000 fd:00 2877                           /system/lib64/vndk-sp-29/libcutils.so
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd8e9000-7fbd8ea000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd905000-7fbd955000 r--p 00000000 fd:00 2875                           /system/lib64/vndk-sp-29/libc++.so
+Size:                320 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 236 kB
+Pss:                   2 kB
+Shared_Clean:        236 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          220 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbd955000-7fbd9c7000 --xp 00050000 fd:00 2875                           /system/lib64/vndk-sp-29/libc++.so
+Size:                456 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 412 kB
+Pss:                   5 kB
+Shared_Clean:        412 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          200 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbd9c7000-7fbd9c8000 rw-p 000c2000 fd:00 2875                           /system/lib64/vndk-sp-29/libc++.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbd9c8000-7fbd9d0000 r--p 000c3000 fd:00 2875                           /system/lib64/vndk-sp-29/libc++.so
+Size:                 32 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  32 kB
+Pss:                  32 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        32 kB
+Referenced:           32 kB
+Anonymous:            32 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbd9d0000-7fbd9d4000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                 16 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  16 kB
+Pss:                  16 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        16 kB
+Referenced:           16 kB
+Anonymous:            16 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbda05000-7fbda4a000 r--p 00000000 fd:00 2879                           /system/lib64/vndk-sp-29/libhidlbase.so
+Size:                276 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 236 kB
+Pss:                   4 kB
+Shared_Clean:        236 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          212 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbda4a000-7fbdab2000 --xp 00045000 fd:00 2879                           /system/lib64/vndk-sp-29/libhidlbase.so
+Size:                416 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 416 kB
+Pss:                   7 kB
+Shared_Clean:        416 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          308 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbdab2000-7fbdab3000 rw-p 000ad000 fd:00 2879                           /system/lib64/vndk-sp-29/libhidlbase.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbdab3000-7fbdabe000 r--p 000ae000 fd:00 2879                           /system/lib64/vndk-sp-29/libhidlbase.so
+Size:                 44 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  44 kB
+Pss:                  44 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        44 kB
+Referenced:           44 kB
+Anonymous:            44 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbdabe000-7fbdabf000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbdaf1000-7fbdb18000 r--p 00000000 fd:02 2310                           /vendor/lib64/vendor-pixelatoms-cpp.so
+Size:                156 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 156 kB
+Pss:                  15 kB
+Shared_Clean:        156 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          144 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbdb18000-7fbdb36000 --xp 00027000 fd:02 2310                           /vendor/lib64/vendor-pixelatoms-cpp.so
+Size:                120 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  88 kB
+Pss:                   9 kB
+Shared_Clean:         88 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           12 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbdb36000-7fbdb37000 rw-p 00045000 fd:02 2310                           /vendor/lib64/vendor-pixelatoms-cpp.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbdb37000-7fbdb39000 r--p 00046000 fd:02 2310                           /vendor/lib64/vendor-pixelatoms-cpp.so
+Size:                  8 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   8 kB
+Pss:                   8 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         8 kB
+Referenced:            8 kB
+Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbdb39000-7fbdb3a000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbdb64000-7fbdb6d000 r--p 00000000 fd:00 2871                           /system/lib64/vndk-sp-29/libbase.so
+Size:                 36 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  36 kB
+Pss:                   0 kB
+Shared_Clean:         36 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           36 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbdb6d000-7fbdb76000 --xp 00009000 fd:00 2871                           /system/lib64/vndk-sp-29/libbase.so
+Size:                 36 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  36 kB
+Pss:                   0 kB
+Shared_Clean:         36 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           36 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbdb76000-7fbdb77000 rw-p 00012000 fd:00 2871                           /system/lib64/vndk-sp-29/libbase.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbdb77000-7fbdb78000 r--p 00013000 fd:00 2871                           /system/lib64/vndk-sp-29/libbase.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbdb78000-7fbdb79000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbdb9b000-7fbdb9c000 r--p 00000000 fd:00 2615                           /system/lib64/libvndksupport.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          4 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbdb9c000-7fbdb9d000 --xp 00001000 fd:00 2615                           /system/lib64/libvndksupport.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbdb9d000-7fbdb9e000 rw-p 00002000 fd:00 2615                           /system/lib64/libvndksupport.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbdb9e000-7fbdb9f000 r--p 00003000 fd:00 2615                           /system/lib64/libvndksupport.so
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbdb9f000-7fbdba0000 rw-p 00000000 00:00 0                              [anon:.bss]
+Name:           [anon:.bss]
+Name:           [anon:.bss]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbdbe7000-7fbdc27000 r--p 00000000 07:02 107                            /apex/com.android.runtime/lib64/bionic/libc.so
+Size:                256 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 164 kB
+Pss:                   1 kB
+Shared_Clean:        164 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          164 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me 
+7fbdc27000-7fbdcce000 --xp 00040000 07:02 107                            /apex/com.android.runtime/lib64/bionic/libc.so
+Size:                668 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                 588 kB
+Pss:                   4 kB
+Shared_Clean:        588 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:          556 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: ex mr mw me 
+7fbdcce000-7fbdcd1000 rw-p 000e7000 07:02 107                            /apex/com.android.runtime/lib64/bionic/libc.so
 Size:                 12 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -831,7 +2892,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbd9fe000-7fbda05000 r--p 000ea000 07:02 107                            /apex/com.android.runtime/lib64/bionic/libc.so
+7fbdcd1000-7fbdcd8000 r--p 000ea000 07:02 107                            /apex/com.android.runtime/lib64/bionic/libc.so
 Size:                 28 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -852,7 +2913,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me ac 
-7fbda05000-7fbda09000 rw-p 00000000 00:00 0                              [anon:.bss]
+7fbdcd8000-7fbdcdc000 rw-p 00000000 00:00 0                              [anon:.bss]
 Name:           [anon:.bss]
 Name:           [anon:.bss]
 Size:                 16 kB
@@ -875,7 +2936,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbda09000-7fbda0a000 r--p 00000000 00:00 0                              [anon:.bss]
+7fbdcdc000-7fbdcdd000 r--p 00000000 00:00 0                              [anon:.bss]
 Name:           [anon:.bss]
 Name:           [anon:.bss]
 Size:                  4 kB
@@ -898,7 +2959,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me ac 
-7fbda0a000-7fbdc1c000 rw-p 00000000 00:00 0                              [anon:.bss]
+7fbdcdd000-7fbdeef000 rw-p 00000000 00:00 0                              [anon:.bss]
 Name:           [anon:.bss]
 Name:           [anon:.bss]
 Size:               2120 kB
@@ -921,17 +2982,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbdc5a000-7fbdc60000 r--p 00000000 fd:00 2485                           /system/lib64/liblog.so
-Size:                 24 kB
+7fbdf12000-7fbdf14000 r--p 00000000 fd:00 2383                           /system/lib64/libcgrouprc.so
+Size:                  8 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                  20 kB
+Rss:                   4 kB
 Pss:                   0 kB
-Shared_Clean:         20 kB
+Shared_Clean:          4 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:           20 kB
+Referenced:            4 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -942,17 +3003,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me 
-7fbdc60000-7fbdc6e000 --xp 00006000 fd:00 2485                           /system/lib64/liblog.so
-Size:                 56 kB
+7fbdf14000-7fbdf15000 --xp 00002000 fd:00 2383                           /system/lib64/libcgrouprc.so
+Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                  56 kB
+Rss:                   4 kB
 Pss:                   0 kB
-Shared_Clean:         56 kB
+Shared_Clean:          4 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:           56 kB
+Referenced:            4 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -963,7 +3024,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: ex mr mw me 
-7fbdc6e000-7fbdc6f000 rw-p 00014000 fd:00 2485                           /system/lib64/liblog.so
+7fbdf15000-7fbdf16000 rw-p 00003000 fd:00 2383                           /system/lib64/libcgrouprc.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -984,7 +3045,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbdc6f000-7fbdc70000 r--p 00015000 fd:00 2485                           /system/lib64/liblog.so
+7fbdf16000-7fbdf17000 r--p 00004000 fd:00 2383                           /system/lib64/libcgrouprc.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -1005,7 +3066,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me ac 
-7fbdc70000-7fbdc71000 rw-p 00000000 00:00 0                              [anon:.bss]
+7fbdf17000-7fbdf18000 rw-p 00000000 00:00 0                              [anon:.bss]
 Name:           [anon:.bss]
 Name:           [anon:.bss]
 Size:                  4 kB
@@ -1028,17 +3089,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbdc83000-7fbdc91000 r--p 00000000 fd:00 2889                           /system/lib64/vndk-sp-29/libutils.so
-Size:                 56 kB
+7fbdf64000-7fbe01d000 r--p 00000000 fd:00 2830                           /system/lib64/vndk-29/libprotobuf-cpp-full.so
+Size:                740 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                  56 kB
-Pss:                   0 kB
-Shared_Clean:         56 kB
+Rss:                 624 kB
+Pss:                  43 kB
+Shared_Clean:        624 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:           48 kB
+Referenced:          580 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -1049,17 +3110,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me 
-7fbdc91000-7fbdc9d000 --xp 0000e000 fd:00 2889                           /system/lib64/vndk-sp-29/libutils.so
-Size:                 48 kB
+7fbe01d000-7fbe127000 --xp 000b9000 fd:00 2830                           /system/lib64/vndk-29/libprotobuf-cpp-full.so
+Size:               1064 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                  48 kB
-Pss:                   0 kB
-Shared_Clean:         48 kB
+Rss:                 808 kB
+Pss:                  57 kB
+Shared_Clean:        808 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:           44 kB
+Referenced:          400 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -1070,7 +3131,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: ex mr mw me 
-7fbdc9d000-7fbdc9e000 rw-p 0001a000 fd:00 2889                           /system/lib64/vndk-sp-29/libutils.so
+7fbe127000-7fbe128000 rw-p 001c3000 fd:00 2830                           /system/lib64/vndk-29/libprotobuf-cpp-full.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -1091,18 +3152,18 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbdc9e000-7fbdc9f000 r--p 0001b000 fd:00 2889                           /system/lib64/vndk-sp-29/libutils.so
-Size:                  4 kB
+7fbe128000-7fbe132000 r--p 001c4000 fd:00 2830                           /system/lib64/vndk-29/libprotobuf-cpp-full.so
+Size:                 40 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
+Rss:                  40 kB
+Pss:                  40 kB
 Shared_Clean:          0 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
+Private_Dirty:        40 kB
+Referenced:           40 kB
+Anonymous:            40 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
 ShmemPmdMapped:        0 kB
@@ -1112,7 +3173,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me ac 
-7fbdc9f000-7fbdca0000 rw-p 00000000 00:00 0                              [anon:.bss]
+7fbe132000-7fbe133000 rw-p 00000000 00:00 0                              [anon:.bss]
 Name:           [anon:.bss]
 Name:           [anon:.bss]
 Size:                  4 kB
@@ -1135,17 +3196,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbdcc0000-7fbdcd6000 r--p 00000000 fd:00 2887                           /system/lib64/vndk-sp-29/libprocessgroup.so
-Size:                 88 kB
+7fbe154000-7fbe15c000 r--p 00000000 fd:00 2891                           /system/lib64/vndk-sp-29/libz.so
+Size:                 32 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                  88 kB
+Rss:                  32 kB
 Pss:                   1 kB
-Shared_Clean:         88 kB
+Shared_Clean:         32 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:           72 kB
+Referenced:           24 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -1156,17 +3217,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me 
-7fbdcd6000-7fbdcfa000 --xp 00016000 fd:00 2887                           /system/lib64/vndk-sp-29/libprocessgroup.so
-Size:                144 kB
+7fbe15c000-7fbe16b000 --xp 00008000 fd:00 2891                           /system/lib64/vndk-sp-29/libz.so
+Size:                 60 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                 144 kB
-Pss:                   4 kB
-Shared_Clean:        144 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:           92 kB
+Referenced:            0 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -1177,7 +3238,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: ex mr mw me 
-7fbdcfa000-7fbdcfb000 rw-p 0003a000 fd:00 2887                           /system/lib64/vndk-sp-29/libprocessgroup.so
+7fbe16b000-7fbe16c000 rw-p 00017000 fd:00 2891                           /system/lib64/vndk-sp-29/libz.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -1198,18 +3259,18 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbdcfb000-7fbdcfd000 r--p 0003b000 fd:00 2887                           /system/lib64/vndk-sp-29/libprocessgroup.so
-Size:                  8 kB
+7fbe16c000-7fbe16d000 r--p 00018000 fd:00 2891                           /system/lib64/vndk-sp-29/libz.so
+Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                   8 kB
-Pss:                   8 kB
+Rss:                   4 kB
+Pss:                   4 kB
 Shared_Clean:          0 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
-Private_Dirty:         8 kB
-Referenced:            8 kB
-Anonymous:             8 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
 ShmemPmdMapped:        0 kB
@@ -1219,114 +3280,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me ac 
-7fbdcfd000-7fbdcfe000 rw-p 00000000 00:00 0                              [anon:.bss]
-Name:           [anon:.bss]
-Name:           [anon:.bss]
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbdd0c000-7fbdd1a000 r--p 00000000 fd:02 2322                           /vendor/lib64/vendor.google.wireless_charger@1.0.so
-Size:                 56 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  56 kB
-Pss:                  56 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:        56 kB
-Private_Dirty:         0 kB
-Referenced:           52 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbdd1a000-7fbdd2d000 --xp 0000e000 fd:02 2322                           /vendor/lib64/vendor.google.wireless_charger@1.0.so
-Size:                 76 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  76 kB
-Pss:                  76 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:        76 kB
-Private_Dirty:         0 kB
-Referenced:           20 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbdd2d000-7fbdd2e000 rw-p 00021000 fd:02 2322                           /vendor/lib64/vendor.google.wireless_charger@1.0.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbdd2e000-7fbdd30000 r--p 00022000 fd:02 2322                           /vendor/lib64/vendor.google.wireless_charger@1.0.so
-Size:                  8 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   8 kB
-Pss:                   8 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         8 kB
-Referenced:            8 kB
-Anonymous:             8 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbdd5b000-7fbdd5c000 r--p 00000000 fd:00 2408                           /system/lib64/libdl_android.so
+7fbe19f000-7fbe1a0000 r--p 00000000 fd:00 2408                           /system/lib64/libdl_android.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -1347,7 +3301,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me 
-7fbdd5c000-7fbdd5d000 --xp 00001000 fd:00 2408                           /system/lib64/libdl_android.so
+7fbe1a0000-7fbe1a1000 --xp 00001000 fd:00 2408                           /system/lib64/libdl_android.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -1368,7 +3322,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: ex mr mw me 
-7fbdd5d000-7fbdd5e000 r--p 00002000 fd:00 2408                           /system/lib64/libdl_android.so
+7fbe1a1000-7fbe1a2000 r--p 00002000 fd:00 2408                           /system/lib64/libdl_android.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -1389,231 +3343,17 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me ac 
-7fbdd92000-7fbdde2000 r--p 00000000 fd:00 2875                           /system/lib64/vndk-sp-29/libc++.so
-Size:                320 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                 244 kB
-Pss:                   2 kB
-Shared_Clean:        244 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:          224 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbdde2000-7fbde54000 --xp 00050000 fd:00 2875                           /system/lib64/vndk-sp-29/libc++.so
-Size:                456 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                 400 kB
-Pss:                   5 kB
-Shared_Clean:        400 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:          216 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbde54000-7fbde55000 rw-p 000c2000 fd:00 2875                           /system/lib64/vndk-sp-29/libc++.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbde55000-7fbde5d000 r--p 000c3000 fd:00 2875                           /system/lib64/vndk-sp-29/libc++.so
-Size:                 32 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  32 kB
-Pss:                  32 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:        32 kB
-Referenced:           32 kB
-Anonymous:            32 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbde5d000-7fbde61000 rw-p 00000000 00:00 0                              [anon:.bss]
-Name:           [anon:.bss]
-Name:           [anon:.bss]
-Size:                 16 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  16 kB
-Pss:                  16 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:        16 kB
-Referenced:           16 kB
-Anonymous:            16 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbde97000-7fbdea0000 r--p 00000000 fd:00 2871                           /system/lib64/vndk-sp-29/libbase.so
-Size:                 36 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  36 kB
-Pss:                   0 kB
-Shared_Clean:         36 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:           36 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbdea0000-7fbdea9000 --xp 00009000 fd:00 2871                           /system/lib64/vndk-sp-29/libbase.so
-Size:                 36 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  36 kB
-Pss:                   0 kB
-Shared_Clean:         36 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:           36 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbdea9000-7fbdeaa000 rw-p 00012000 fd:00 2871                           /system/lib64/vndk-sp-29/libbase.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbdeaa000-7fbdeab000 r--p 00013000 fd:00 2871                           /system/lib64/vndk-sp-29/libbase.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbdeab000-7fbdeac000 rw-p 00000000 00:00 0                              [anon:.bss]
-Name:           [anon:.bss]
-Name:           [anon:.bss]
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbdef1000-7fbdef3000 r--p 00000000 fd:00 2873                           /system/lib64/vndk-sp-29/libbinderthreadstate.so
+7fbe1d2000-7fbe1d4000 r--p 00000000 fd:00 2525                           /system/lib64/libnetd_client.so
 Size:                  8 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
-Rss:                   4 kB
+Rss:                   8 kB
 Pss:                   0 kB
-Shared_Clean:          4 kB
+Shared_Clean:          8 kB
 Shared_Dirty:          0 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:            4 kB
+Referenced:            8 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -1624,7 +3364,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me 
-7fbdef3000-7fbdef5000 --xp 00002000 fd:00 2873                           /system/lib64/vndk-sp-29/libbinderthreadstate.so
+7fbe1d4000-7fbe1d6000 --xp 00002000 fd:00 2525                           /system/lib64/libnetd_client.so
 Size:                  8 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -1645,7 +3385,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: ex mr mw me 
-7fbdef5000-7fbdef6000 rw-p 00004000 fd:00 2873                           /system/lib64/vndk-sp-29/libbinderthreadstate.so
+7fbe1d6000-7fbe1d7000 rw-p 00004000 fd:00 2525                           /system/lib64/libnetd_client.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -1666,7 +3406,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbdef6000-7fbdef7000 r--p 00005000 fd:00 2873                           /system/lib64/vndk-sp-29/libbinderthreadstate.so
+7fbe1d7000-7fbe1d8000 r--p 00005000 fd:00 2525                           /system/lib64/libnetd_client.so
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -1687,7 +3427,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me ac 
-7fbdef7000-7fbdef8000 rw-p 00000000 00:00 0                              [anon:.bss]
+7fbe1d8000-7fbe1d9000 rw-p 00000000 00:00 0                              [anon:.bss]
 Name:           [anon:.bss]
 Name:           [anon:.bss]
 Size:                  4 kB
@@ -1710,880 +3450,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbdf04000-7fbdf16000 r--p 00000000 07:02 109                            /apex/com.android.runtime/lib64/bionic/libm.so
-Size:                 72 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  60 kB
-Pss:                   0 kB
-Shared_Clean:         60 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:           60 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbdf16000-7fbdf3a000 --xp 00012000 07:02 109                            /apex/com.android.runtime/lib64/bionic/libm.so
-Size:                144 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   0 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            0 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbdf3a000-7fbdf3b000 rw-p 00036000 07:02 109                            /apex/com.android.runtime/lib64/bionic/libm.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbdf3b000-7fbdf3c000 r--p 00037000 07:02 109                            /apex/com.android.runtime/lib64/bionic/libm.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbdf3c000-7fbdf3d000 rw-p 00000000 00:00 0                              [anon:.bss]
-Name:           [anon:.bss]
-Name:           [anon:.bss]
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   0 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            0 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbdf72000-7fbdf73000 r--p 00000000 fd:00 2882                           /system/lib64/vndk-sp-29/libhwbinder.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   0 kB
-Shared_Clean:          4 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            4 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbdf73000-7fbdf74000 --xp 00001000 fd:00 2882                           /system/lib64/vndk-sp-29/libhwbinder.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   0 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            0 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbdf74000-7fbdf75000 rw-p 00002000 fd:00 2882                           /system/lib64/vndk-sp-29/libhwbinder.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbdf75000-7fbdf76000 r--p 00003000 fd:00 2882                           /system/lib64/vndk-sp-29/libhwbinder.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbdf9f000-7fbdfa1000 r--p 00000000 fd:00 2383                           /system/lib64/libcgrouprc.so
-Size:                  8 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   0 kB
-Shared_Clean:          4 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            4 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbdfa1000-7fbdfa2000 --xp 00002000 fd:00 2383                           /system/lib64/libcgrouprc.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   0 kB
-Shared_Clean:          4 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            4 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbdfa2000-7fbdfa3000 rw-p 00003000 fd:00 2383                           /system/lib64/libcgrouprc.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbdfa3000-7fbdfa4000 r--p 00004000 fd:00 2383                           /system/lib64/libcgrouprc.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbdfa4000-7fbdfa5000 rw-p 00000000 00:00 0                              [anon:.bss]
-Name:           [anon:.bss]
-Name:           [anon:.bss]
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbdfea000-7fbe03a000 r--p 00000000 fd:00 2373                           /system/lib64/libc++.so
-Size:                320 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                 216 kB
-Pss:                   1 kB
-Shared_Clean:        216 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:          216 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbe03a000-7fbe0ac000 --xp 00050000 fd:00 2373                           /system/lib64/libc++.so
-Size:                456 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                 356 kB
-Pss:                   3 kB
-Shared_Clean:        356 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:          336 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbe0ac000-7fbe0ad000 rw-p 000c2000 fd:00 2373                           /system/lib64/libc++.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbe0ad000-7fbe0b5000 r--p 000c3000 fd:00 2373                           /system/lib64/libc++.so
-Size:                 32 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  32 kB
-Pss:                  32 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:        32 kB
-Referenced:           32 kB
-Anonymous:            32 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbe0b5000-7fbe0b9000 rw-p 00000000 00:00 0                              [anon:.bss]
-Name:           [anon:.bss]
-Name:           [anon:.bss]
-Size:                 16 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  16 kB
-Pss:                  16 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:        16 kB
-Referenced:           16 kB
-Anonymous:            16 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbe0f3000-7fbe0f5000 r--p 00000000 fd:02 2266                           /vendor/lib64/libwlcproto.so
-Size:                  8 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         4 kB
-Private_Dirty:         0 kB
-Referenced:            4 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbe0f5000-7fbe0f7000 --xp 00002000 fd:02 2266                           /vendor/lib64/libwlcproto.so
-Size:                  8 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   8 kB
-Pss:                   8 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         8 kB
-Private_Dirty:         0 kB
-Referenced:            8 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbe0f7000-7fbe0f8000 rw-p 00004000 fd:02 2266                           /vendor/lib64/libwlcproto.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbe0f8000-7fbe0f9000 r--p 00005000 fd:02 2266                           /vendor/lib64/libwlcproto.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbe0f9000-7fbe0fa000 rw-p 00000000 00:00 0                              [anon:.bss]
-Name:           [anon:.bss]
-Name:           [anon:.bss]
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbe10c000-7fbe11e000 r--p 00000000 fd:02 2323                           /vendor/lib64/vendor.google.wireless_charger@1.1.so
-Size:                 72 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  64 kB
-Pss:                  64 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:        64 kB
-Private_Dirty:         0 kB
-Referenced:           60 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbe11e000-7fbe132000 --xp 00012000 fd:02 2323                           /vendor/lib64/vendor.google.wireless_charger@1.1.so
-Size:                 80 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  72 kB
-Pss:                  72 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:        72 kB
-Private_Dirty:         0 kB
-Referenced:           36 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbe132000-7fbe133000 rw-p 00026000 fd:02 2323                           /vendor/lib64/vendor.google.wireless_charger@1.1.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbe133000-7fbe137000 r--p 00027000 fd:02 2323                           /vendor/lib64/vendor.google.wireless_charger@1.1.so
-Size:                 16 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  16 kB
-Pss:                  16 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:        16 kB
-Referenced:           16 kB
-Anonymous:            16 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbe165000-7fbe166000 r--p 00000000 fd:00 2615                           /system/lib64/libvndksupport.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   0 kB
-Shared_Clean:          4 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            4 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbe166000-7fbe167000 --xp 00001000 fd:00 2615                           /system/lib64/libvndksupport.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   0 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            0 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbe167000-7fbe168000 rw-p 00002000 fd:00 2615                           /system/lib64/libvndksupport.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbe168000-7fbe169000 r--p 00003000 fd:00 2615                           /system/lib64/libvndksupport.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbe169000-7fbe16a000 rw-p 00000000 00:00 0                              [anon:.bss]
-Name:           [anon:.bss]
-Name:           [anon:.bss]
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   0 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            0 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbe180000-7fbe1c5000 r--p 00000000 fd:00 2879                           /system/lib64/vndk-sp-29/libhidlbase.so
-Size:                276 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                 256 kB
-Pss:                   5 kB
-Shared_Clean:        256 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:          212 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me 
-7fbe1c5000-7fbe22d000 --xp 00045000 fd:00 2879                           /system/lib64/vndk-sp-29/libhidlbase.so
-Size:                416 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                 416 kB
-Pss:                   7 kB
-Shared_Clean:        416 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:          316 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: ex mr mw me 
-7fbe22d000-7fbe22e000 rw-p 000ad000 fd:00 2879                           /system/lib64/vndk-sp-29/libhidlbase.so
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbe22e000-7fbe239000 r--p 000ae000 fd:00 2879                           /system/lib64/vndk-sp-29/libhidlbase.so
-Size:                 44 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  44 kB
-Pss:                  44 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:        44 kB
-Referenced:           44 kB
-Anonymous:            44 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbe239000-7fbe23a000 rw-p 00000000 00:00 0                              [anon:.bss]
-Name:           [anon:.bss]
-Name:           [anon:.bss]
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbe25b000-7fbe27b000 r--s 00000000 00:12 19799                          /dev/__properties__/u:object_r:exported_default_prop:s0
-Size:                128 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  12 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
-Shared_Dirty:         12 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:           12 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr me ms 
-7fbe27b000-7fbe29b000 r--s 00000000 00:12 19818                          /dev/__properties__/u:object_r:hwservicemanager_prop:s0
-Size:                128 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          4 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            4 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr me ms 
-7fbe29b000-7fbe2bb000 r--s 00000000 00:12 19817                          /dev/__properties__/u:object_r:heapprofd_prop:s0
-Size:                128 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          4 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            4 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr me ms 
-7fbe2bb000-7fbe2bc000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
+7fbe238000-7fbe239000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
 Name:           [anon:bionic_alloc_small_objects]
 Name:           [anon:bionic_alloc_small_objects]
 Size:                  4 kB
@@ -2606,7 +3473,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbe2d2000-7fbe2d3000 ---p 00000000 00:00 0 
+7fbe24f000-7fbe250000 ---p 00000000 00:00 0 
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -2627,7 +3494,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: mr mw me ac 
-7fbe2d3000-7fbe2db000 rw-p 00000000 00:00 0                              [anon:thread signal stack]
+7fbe250000-7fbe258000 rw-p 00000000 00:00 0                              [anon:thread signal stack]
 Name:           [anon:thread signal stack]
 Name:           [anon:thread signal stack]
 Size:                 32 kB
@@ -2650,7 +3517,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbe2db000-7fbe2fb000 r--s 00000000 00:12 19788                          /dev/__properties__/u:object_r:exported2_default_prop:s0
+7fbe258000-7fbe278000 r--s 00000000 00:12 2837                           /dev/__properties__/u:object_r:exported_default_prop:s0
 Size:                128 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -2671,7 +3538,28 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr me ms 
-7fbe2fb000-7fbe2fc000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
+7fbe278000-7fbe298000 r--s 00000000 00:12 2856                           /dev/__properties__/u:object_r:hwservicemanager_prop:s0
+Size:                128 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          4 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr me ms 
+7fbe298000-7fbe299000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
 Name:           [anon:bionic_alloc_small_objects]
 Name:           [anon:bionic_alloc_small_objects]
 Size:                  4 kB
@@ -2694,7 +3582,183 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbe302000-7fbe322000 r--s 00000000 00:12 19770                          /dev/__properties__/u:object_r:debug_prop:s0
+7fbe29e000-7fbe29f000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me ac 
+7fbe29f000-7fbe2a7000 rw-p 00000000 00:00 0                              [anon:thread signal stack]
+Name:           [anon:thread signal stack]
+Name:           [anon:thread signal stack]
+Size:                 32 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbe2a7000-7fbe2a8000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me ac 
+7fbe2a8000-7fbe2b0000 rw-p 00000000 00:00 0                              [anon:thread signal stack]
+Name:           [anon:thread signal stack]
+Name:           [anon:thread signal stack]
+Size:                 32 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbe2b0000-7fbe2b1000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me ac 
+7fbe2b1000-7fbe2b9000 rw-p 00000000 00:00 0                              [anon:thread signal stack]
+Name:           [anon:thread signal stack]
+Name:           [anon:thread signal stack]
+Size:                 32 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbe2b9000-7fbe2ba000 ---p 00000000 00:00 0 
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: mr mw me ac 
+7fbe2ba000-7fbe2c2000 rw-p 00000000 00:00 0                              [anon:thread signal stack]
+Name:           [anon:thread signal stack]
+Name:           [anon:thread signal stack]
+Size:                 32 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   0 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            0 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbe2c2000-7fbe2e2000 r--s 00000000 00:12 2855                           /dev/__properties__/u:object_r:heapprofd_prop:s0
 Size:                128 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -2715,7 +3779,28 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr me ms 
-7fbe322000-7fbe342000 r--s 00000000 00:12 19890                          /dev/__properties__/properties_serial
+7fbe2e2000-7fbe302000 r--s 00000000 00:12 2826                           /dev/__properties__/u:object_r:exported2_default_prop:s0
+Size:                128 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  12 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:         12 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:           12 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr me ms 
+7fbe302000-7fbe322000 r--s 00000000 00:12 2808                           /dev/__properties__/u:object_r:debug_prop:s0
 Size:                128 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -2736,7 +3821,28 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr me ms 
-7fbe342000-7fbe34d000 r--s 00000000 00:12 19736                          /dev/__properties__/property_info
+7fbe322000-7fbe342000 r--s 00000000 00:12 2928                           /dev/__properties__/properties_serial
+Size:                128 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          4 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr me ms 
+7fbe342000-7fbe34d000 r--s 00000000 00:12 2774                           /dev/__properties__/property_info
 Size:                 44 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -2757,7 +3863,49 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr me ms 
-7fbe351000-7fbe371000 r--s 00000000 00:12 19866                          /dev/__properties__/u:object_r:vendor_default_prop:s0
+7fbe351000-7fbe371000 r--s 00000000 00:12 2860                           /dev/__properties__/u:object_r:log_tag_prop:s0
+Size:                128 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          4 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr me ms 
+7fbe371000-7fbe391000 r--s 00000000 00:12 2861                           /dev/__properties__/u:object_r:logd_prop:s0
+Size:                128 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   0 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          4 kB
+Private_Clean:         0 kB
+Private_Dirty:         0 kB
+Referenced:            4 kB
+Anonymous:             0 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr me ms 
+7fbe391000-7fbe3b1000 r--s 00000000 00:12 2904                           /dev/__properties__/u:object_r:vendor_default_prop:s0
 Size:                128 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -2767,49 +3915,7 @@ Shared_Clean:          0 kB
 Shared_Dirty:         28 kB
 Private_Clean:         0 kB
 Private_Dirty:         0 kB
-Referenced:           28 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr me ms 
-7fbe371000-7fbe391000 r--s 00000000 00:12 19822                          /dev/__properties__/u:object_r:log_tag_prop:s0
-Size:                128 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          4 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            4 kB
-Anonymous:             0 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr me ms 
-7fbe391000-7fbe3b1000 r--s 00000000 00:12 19823                          /dev/__properties__/u:object_r:logd_prop:s0
-Size:                128 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   0 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          4 kB
-Private_Clean:         0 kB
-Private_Dirty:         0 kB
-Referenced:            4 kB
+Referenced:           24 kB
 Anonymous:             0 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
@@ -2843,30 +3949,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me ac 
-7fbe415000-7fbe416000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
-Name:           [anon:bionic_alloc_small_objects]
-Name:           [anon:bionic_alloc_small_objects]
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbe417000-7fbe419000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
+7fbe415000-7fbe417000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
 Name:           [anon:bionic_alloc_small_objects]
 Name:           [anon:bionic_alloc_small_objects]
 Size:                  8 kB
@@ -2880,6 +3963,29 @@ Private_Clean:         0 kB
 Private_Dirty:         8 kB
 Referenced:            8 kB
 Anonymous:             8 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbe418000-7fbe419000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
+Name:           [anon:bionic_alloc_small_objects]
+Name:           [anon:bionic_alloc_small_objects]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
 LazyFree:              0 kB
 AnonHugePages:         0 kB
 ShmemPmdMapped:        0 kB
@@ -3021,7 +4127,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbe491000-7fbe492000 r--s 00000000 00:12 20055                          /dev/cgroup_info/cgroup.rc
+7fbe491000-7fbe492000 r--s 00000000 00:12 21149                          /dev/cgroup_info/cgroup.rc
 Size:                  4 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -3157,7 +4263,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbe49b000-7fbe4bb000 r--s 00000000 00:12 19799                          /dev/__properties__/u:object_r:exported_default_prop:s0
+7fbe49b000-7fbe4bb000 r--s 00000000 00:12 2837                           /dev/__properties__/u:object_r:exported_default_prop:s0
 Size:                128 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -3178,53 +4284,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr me ms 
-7fbe4bb000-7fbe4bc000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
-Name:           [anon:bionic_alloc_small_objects]
-Name:           [anon:bionic_alloc_small_objects]
-Size:                  4 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                   4 kB
-Pss:                   4 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:         4 kB
-Referenced:            4 kB
-Anonymous:             4 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd wr mr mw me ac 
-7fbe4bc000-7fbe520000 r--p 00000000 00:00 0                              [anon:linker_alloc]
-Name:           [anon:linker_alloc]
-Name:           [anon:linker_alloc]
-Size:                400 kB
-KernelPageSize:        4 kB
-MMUPageSize:           4 kB
-Rss:                  16 kB
-Pss:                  16 kB
-Shared_Clean:          0 kB
-Shared_Dirty:          0 kB
-Private_Clean:         0 kB
-Private_Dirty:        16 kB
-Referenced:           16 kB
-Anonymous:            16 kB
-LazyFree:              0 kB
-AnonHugePages:         0 kB
-ShmemPmdMapped:        0 kB
-Shared_Hugetlb:        0 kB
-Private_Hugetlb:       0 kB
-Swap:                  0 kB
-SwapPss:               0 kB
-Locked:                0 kB
-VmFlags: rd mr mw me ac 
-7fbe520000-7fbe522000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
+7fbe4bb000-7fbe4bd000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
 Name:           [anon:bionic_alloc_small_objects]
 Name:           [anon:bionic_alloc_small_objects]
 Size:                  8 kB
@@ -3247,7 +4307,53 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbe522000-7fbe542000 r--s 00000000 00:12 19770                          /dev/__properties__/u:object_r:debug_prop:s0
+7fbe4bd000-7fbe521000 r--p 00000000 00:00 0                              [anon:linker_alloc]
+Name:           [anon:linker_alloc]
+Name:           [anon:linker_alloc]
+Size:                400 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                  20 kB
+Pss:                  20 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:        20 kB
+Referenced:           20 kB
+Anonymous:            20 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd mr mw me ac 
+7fbe521000-7fbe522000 rw-p 00000000 00:00 0                              [anon:bionic_alloc_small_objects]
+Name:           [anon:bionic_alloc_small_objects]
+Name:           [anon:bionic_alloc_small_objects]
+Size:                  4 kB
+KernelPageSize:        4 kB
+MMUPageSize:           4 kB
+Rss:                   4 kB
+Pss:                   4 kB
+Shared_Clean:          0 kB
+Shared_Dirty:          0 kB
+Private_Clean:         0 kB
+Private_Dirty:         4 kB
+Referenced:            4 kB
+Anonymous:             4 kB
+LazyFree:              0 kB
+AnonHugePages:         0 kB
+ShmemPmdMapped:        0 kB
+Shared_Hugetlb:        0 kB
+Private_Hugetlb:       0 kB
+Swap:                  0 kB
+SwapPss:               0 kB
+Locked:                0 kB
+VmFlags: rd wr mr mw me ac 
+7fbe522000-7fbe542000 r--s 00000000 00:12 2808                           /dev/__properties__/u:object_r:debug_prop:s0
 Size:                128 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -3331,7 +4437,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: mr mw me 
-7fbe545000-7fbe565000 r--s 00000000 00:12 19890                          /dev/__properties__/properties_serial
+7fbe545000-7fbe565000 r--s 00000000 00:12 2928                           /dev/__properties__/properties_serial
 Size:                128 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -3375,7 +4481,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbe567000-7fbe572000 r--s 00000000 00:12 19736                          /dev/__properties__/property_info
+7fbe567000-7fbe572000 r--s 00000000 00:12 2774                           /dev/__properties__/property_info
 Size:                 44 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -3465,8 +4571,8 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd mr mw me ac 
-7fbe5d9000-7fbea10000 ---p 00000000 00:00 0 
-Size:               4316 kB
+7fbe5d9000-7fbed82000 ---p 00000000 00:00 0 
+Size:               7844 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
 Rss:                   0 kB
@@ -3486,7 +4592,7 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: mr mw me 
-7fbea10000-7fbea12000 rw-p 00000000 00:00 0 
+7fbed82000-7fbed84000 rw-p 00000000 00:00 0 
 Size:                  8 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
@@ -3507,8 +4613,8 @@ Swap:                  0 kB
 SwapPss:               0 kB
 Locked:                0 kB
 VmFlags: rd wr mr mw me ac 
-7fbea12000-7fbf5d9000 ---p 00000000 00:00 0 
-Size:              12060 kB
+7fbed84000-7fbf5d9000 ---p 00000000 00:00 0 
+Size:               8532 kB
 KernelPageSize:        4 kB
 MMUPageSize:           4 kB
 Rss:                   0 kB

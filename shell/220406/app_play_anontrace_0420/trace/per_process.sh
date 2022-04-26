@@ -22,7 +22,7 @@ rm temp3
 
 while read tgid
 do
-	tgidname=`cat ../${app}.txt | awk -v str=$tgid '{if($8!=""&&$2==str)print $0}' | awk '{print $2 " " $8}'`
+	tgidname=`cat ../ps_${app}.txt | awk -v str=$tgid '{if($8!=""&&$2==str)print $0}' | awk '{print $2 " " $8}'`
 		
 
 	if [ "$tgidname" != "" ] ; then
