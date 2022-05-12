@@ -239,10 +239,19 @@ bad_bmap:
 	goto out;
 }
 
+
+
+
+
 /*
  * We may have stale swap cache pages in memory: notice
  * them here and get rid of the unnecessary final write.
  */
+
+
+int ksg__swap_writepage(struct page *page, struct writeback_control *wbc,
+		bio_end_io_t end_write_func);
+
 int swap_writepage(struct page *page, struct writeback_control *wbc)
 {
 	int ret = 0;
@@ -257,6 +266,12 @@ int swap_writepage(struct page *page, struct writeback_control *wbc)
 		end_page_writeback(page);
 		goto out;
 	}
+	if(wbc->for_reclaim==0){
+		ret=ksg__swap_writepage(page,wbc,end_swap_bio_write);
+		goto out;
+	}
+
+	
 	ret = __swap_writepage(page, wbc, end_swap_bio_write);
 out:
 	return ret;
@@ -275,6 +290,7 @@ static inline void count_swpout_vm_event(struct page *page)
 #endif
 	count_vm_events(PSWPOUT, hpage_nr_pages(page));
 }
+
 
 int __swap_writepage(struct page *page, struct writeback_control *wbc,
 		bio_end_io_t end_write_func)
@@ -347,6 +363,10 @@ int __swap_writepage(struct page *page, struct writeback_control *wbc,
 out:
 	return ret;
 }
+
+
+
+
 
 int swap_readpage(struct page *page, bool do_poll)
 {
@@ -432,3 +452,156 @@ int swap_set_page_dirty(struct page *page)
 		return __set_page_dirty_no_writeback(page);
 	}
 }
+
+
+
+
+
+
+
+
+
+int ksg__swap_writepage(struct page *page, struct writeback_control *wbc,
+		bio_end_io_t end_write_func)
+{
+	struct bio *bio;
+	int ret;
+	struct swap_info_struct *sis = page_swap_info(page);
+
+	VM_BUG_ON_PAGE(!PageSwapCache(page), page);
+	if (sis->flags & SWP_FILE) {
+		struct kiocb kiocb;
+		struct file *swap_file = sis->swap_file;
+		struct address_space *mapping = swap_file->f_mapping;
+		struct bio_vec bv = {
+			.bv_page = page,
+			.bv_len  = PAGE_SIZE,
+			.bv_offset = 0
+		};
+		struct iov_iter from;
+
+		iov_iter_bvec(&from, ITER_BVEC | WRITE, &bv, 1, PAGE_SIZE);
+		init_sync_kiocb(&kiocb, swap_file);
+		kiocb.ki_pos = page_file_offset(page);
+
+		set_page_writeback(page);
+		//unlock_page(page);
+		ret = mapping->a_ops->direct_IO(&kiocb, &from);
+		if (ret == PAGE_SIZE) {
+			count_vm_event(PSWPOUT);
+			ret = 0;
+		} else {
+			/*
+			 * In the case of swap-over-nfs, this can be a
+			 * temporary failure if the system has limited
+			 * memory for allocating transmit buffers.
+			 * Mark the page dirty and avoid
+			 * rotate_reclaimable_page but rate-limit the
+			 * messages but do not flag PageError like
+			 * the normal direct-to-bio case as it could
+			 * be temporary.
+			 */
+			set_page_dirty(page);
+			ClearPageReclaim(page);
+			pr_err_ratelimited("Write error on dio swapfile (%llu)\n",
+					   page_file_offset(page));
+		}
+		end_page_writeback(page);
+		return ret;
+	}
+
+	ret = bdev_write_page(sis->bdev, swap_page_sector(page), page, wbc);
+	if (!ret) {
+		count_swpout_vm_event(page);
+		return 0;
+	}
+
+	ret = 0;
+	bio = get_swap_bio(GFP_NOIO, page, end_write_func);
+	if (bio == NULL) {
+		set_page_dirty(page);
+		unlock_page(page);
+		ret = -ENOMEM;
+		goto out;
+	}
+	bio->bi_opf = REQ_OP_WRITE | wbc_to_write_flags(wbc);
+	count_swpout_vm_event(page);
+	set_page_writeback(page);
+	//unlock_page(page);
+	submit_bio(bio);
+out:
+	return ret;
+}
+
+int ksg_swap_readpage(struct page *page, bool do_poll)
+{
+	struct bio *bio;
+	int ret = 0;
+	struct swap_info_struct *sis = page_swap_info(page);
+	blk_qc_t qc;
+	struct gendisk *disk;
+
+	VM_BUG_ON_PAGE(!PageSwapCache(page), page);
+	VM_BUG_ON_PAGE(!PageLocked(page), page);
+	VM_BUG_ON_PAGE(PageUptodate(page), page);
+	if (frontswap_load(page) == 0) {
+		SetPageUptodate(page);
+		//unlock_page(page);
+		goto out;
+	}
+
+	if (sis->flags & SWP_FILE) {
+		struct file *swap_file = sis->swap_file;
+		struct address_space *mapping = swap_file->f_mapping;
+
+		ret = mapping->a_ops->readpage(swap_file, page);
+		if (!ret)
+			count_vm_event(PSWPIN);
+		return ret;
+	}
+
+	ret = bdev_read_page(sis->bdev, swap_page_sector(page), page);
+	if (!ret) {
+		if (trylock_page(page)) {
+			swap_slot_free_notify(page);
+			//unlock_page(page);
+		}
+
+		count_vm_event(PSWPIN);
+		return 0;
+	}
+
+	ret = 0;
+	bio = get_swap_bio(GFP_KERNEL, page, end_swap_bio_read);
+	if (bio == NULL) {
+		//unlock_page(page);
+		ret = -ENOMEM;
+		goto out;
+	}
+	disk = bio->bi_disk;
+	/*
+	 * Keep this task valid during swap readpage because the oom killer may
+	 * attempt to access it in the page fault retry time check.
+	 */
+	get_task_struct(current);
+	bio->bi_private = current;
+	bio_set_op_attrs(bio, REQ_OP_READ, 0);
+	count_vm_event(PSWPIN);
+	bio_get(bio);
+	qc = submit_bio(bio);
+	while (do_poll) {
+		set_current_state(TASK_UNINTERRUPTIBLE);
+		if (!READ_ONCE(bio->bi_private))
+			break;
+
+		if (!blk_mq_poll(disk->queue, qc))
+			break;
+	}
+	__set_current_state(TASK_RUNNING);
+	bio_put(bio);
+
+out:
+	return ret;
+}
+
+

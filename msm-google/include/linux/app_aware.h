@@ -28,7 +28,20 @@ extern int lru_scan;
 extern int lru_scan_handler(struct ctl_table *table, int write,
                  void __user *buffer, size_t *length, loff_t *ppos);
 
+extern int background_swapout;
+extern int background_swapout_handler(struct ctl_table *table, int write,
+                 void __user *buffer, size_t *length, loff_t *ppos);
+
+
+extern int ksg_pid;
+extern int ksg_handler(struct ctl_table *table, int write,
+                 void __user *buffer, size_t *length, loff_t *ppos);
+
+
 extern int foreground_uid;
 extern int foreground_pid;
 extern int swapin_vma_tracking;
+extern int swapin_anon_tracking;
+
+
 #endif /* _LINUX_APP_AWARE_H */

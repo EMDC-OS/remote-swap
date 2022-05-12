@@ -680,6 +680,10 @@ struct page *swapin_readahead(swp_entry_t entry, gfp_t gfp_mask,
 	bool do_poll = true, page_allocated;
 
 	mask = swapin_nr_pages(offset) - 1;
+
+#ifdef CONFIG_NO_READAHEAD
+	mask = 0;
+#endif
 	if (!mask)
 		goto skip;
 
@@ -780,6 +784,9 @@ struct page *swap_readahead_detect(struct vm_fault *vmf,
 
 	max_win = 1 << min_t(unsigned int, READ_ONCE(page_cluster),
 			     SWAP_RA_ORDER_CEILING);
+#ifdef CONFIG_NO_READAHEAD
+	max_win=1;
+#endif
 	if (max_win == 1) {
 		swap_ra->win = 1;
 		return NULL;
@@ -842,6 +849,8 @@ struct page *do_swap_page_readahead(swp_entry_t fentry, gfp_t gfp_mask,
 	swp_entry_t entry;
 	unsigned int i;
 	bool page_allocated;
+
+
 
 	if (swap_ra->win == 1)
 		goto skip;

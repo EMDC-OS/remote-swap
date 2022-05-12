@@ -4737,7 +4737,7 @@ EXPORT_SYMBOL(lru_scan_handler);
 int lru_scan_private;
 
 int lru_scan_private_handler(struct ctl_table *table, int write,
-			   void __user *buffer, size_t *length, loff_t *ppos)
+                 void __user *buffer, size_t *length, loff_t *ppos)
 {
 
 
@@ -4751,7 +4751,7 @@ int lru_scan_private_handler(struct ctl_table *table, int write,
 		if(write){
 			int cnt;
 			int total_cnt=0;
-				pid_t pid = (pid_t)lru_scan_private;
+				pid_t pid = (pid_t)background_swapout;
        	 		struct task_struct *task = find_task_by_vpid(pid);
         if (!task) {
                 printk("task %d not found", pid);
@@ -4910,8 +4910,6 @@ int lru_scan_private_handler(struct ctl_table *table, int write,
         }
 
 
-		//printk(KERN_CRIT"appaware pid %d : file_cnt_9 %d",pid,file_cnt_9);
-
 		}
 
 	return 0;
@@ -4920,8 +4918,10 @@ int lru_scan_private_handler(struct ctl_table *table, int write,
 }
 
 
-EXPORT_SYMBOL(lru_scan_private_handler);
 
+
+
+EXPORT_SYMBOL(lru_scan_private_handler);
 
 
 

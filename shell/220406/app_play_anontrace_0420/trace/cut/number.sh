@@ -7,7 +7,7 @@ app=${1}
 for num in {0..9}
 do
 
-	awk '!x[$0]++ {print $0}' cut_${app}_${num}.txt > temp3
+	awk '!x[$2$4]++ {print $0}' cut_${app}_${num}.txt > temp3
 	total=`cat temp3 | wc -l`
 
 

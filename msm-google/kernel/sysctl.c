@@ -387,6 +387,28 @@ static struct ctl_table kern_table[] = {
 		.mode			= 0644,
 		.proc_handler	= proc_dointvec,
 	},
+	{
+		.procname		= "swapin_anon_tracking",
+		.data			= &swapin_anon_tracking,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= proc_dointvec,
+	},
+	{
+		.procname		= "background_swapout",
+		.data			= &background_swapout,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= background_swapout_handler,
+	},
+	{
+		.procname		= "ksg_pid",
+		.data			= &ksg_pid,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= ksg_handler,
+	},
+
 
 #endif
 #if defined(CONFIG_PREEMPT_TRACER) || defined(CONFIG_DEBUG_PREEMPT)

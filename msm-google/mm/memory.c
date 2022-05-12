@@ -3155,6 +3155,11 @@ out_release:
  * but allow concurrent faults), and pte mapped but not yet locked.
  * We return with mmap_sem still held, but pte unmapped and unlocked.
  */
+
+#ifdef CONFIG_APP_AWARE
+int swapin_anon_tracking;
+#endif
+
 static int do_anonymous_page(struct vm_fault *vmf)
 {
 	struct vm_area_struct *vma = vmf->vma;
@@ -3167,6 +3172,11 @@ static int do_anonymous_page(struct vm_fault *vmf)
 	if (vma->vm_flags & VM_SHARED)
 		return VM_FAULT_SIGBUS;
 
+	#ifdef CONFIG_APP_AWARE
+	if(swapin_anon_tracking!=0){
+				trace_printk("anonymous tgid %d %d \"%s\" %lx\n",current->tgid,current->pid,current->comm,vmf->address);
+	}
+#endif
 	/*
 	 * Use pte_alloc() instead of pte_alloc_map().  We can't run
 	 * pte_offset_map() on pmds where a huge pmd might be created
@@ -3331,7 +3341,7 @@ static int pmd_devmap_trans_unstable(pmd_t *pmd)
 
 static int pte_alloc_one_map(struct vm_fault *vmf)
 {
-	struct vm_area_struct vma = vmf->vma;
+	struct vm_area_struct *vma = vmf->vma;
 
 	if (!pmd_none(*vmf->pmd))
 		goto map_pte;

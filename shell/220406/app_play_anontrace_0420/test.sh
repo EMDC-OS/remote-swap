@@ -13,7 +13,7 @@ sleep 1
 
 adb shell "echo 0 > /proc/sys/kernel/swapin_vma_tracking"
 adb shell "echo 1 > /sys/kernel/debug/tracing/tracing_on"
-adb shell "echo 5000 > /sys/kernel/debug/tracing/buffer_size_kb"
+adb shell "echo 30000 > /sys/kernel/debug/tracing/buffer_size_kb"
 
 
 adb shell free -m
