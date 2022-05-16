@@ -51,7 +51,7 @@
 
 #define ZRAM_TYPE   0
 #define NBD_TYPE    1
-
+#define COLD_PAGE_THRESHOLD 5
 
 
 int background_swapout;
@@ -207,12 +207,9 @@ int ksg_handler(struct ctl_table *table, int write,
                         swp_entry_t entry = pte_to_swp_entry(*pte); // target swap entry
                         if(non_swap_entry(entry))
                         {
-                            //pte_unmap_unlock(pte, ptl);
                             continue;
                         }
                         if(swp_swapcount(entry) != 1) {
-                            //printk("ksg: swp_swapcount(entry) = %d",swp_swapcount(entry));
-                            //pte_unmap_unlock(pte, ptl);
                             continue;
                         }
                         else                    // page is swapped and swap entry.
@@ -326,9 +323,336 @@ EXPORT_SYMBOL(ksg_handler);
 
 
 
+/*
+ * Send Cold Pages to NBD
+ *
+ */
+int cold_page_sender(struct task_struct *task)
+{
+
+	struct vm_area_struct   *vma;
+	unsigned long           vpage;
+    struct page *page;   
+
+	if(!task)       // can't get target process's task_struct
+    {
+        return 0;
+    }
+    
+        
+	page = alloc_pages(GFP_KERNEL, 0);
+	SetPageUnevictable(page);
+	if(task->mm && task->mm->mmap) 
+    {
+		for(vma = task->mm->mmap; vma; vma = vma->vm_next) 
+		{
+			int idx = 0;
+			for(vpage = vma->vm_start, idx = 0; vpage < vma->vm_end; vpage += PAGE_SIZE, idx ++)
+			{
+                    // walk page table start
+				pgd_t *pgd;
+				pud_t *pud;
+				pmd_t *pmd;
+				pte_t *pte;
+				pte_t *orig_pte;
+				spinlock_t *ptl;
+				u64 counter;
+				struct mm_struct *mm = task->mm;
+				struct page *cache_page;
+				pgd = pgd_offset(mm, vpage);
+				if(pgd_none(*pgd))
+					continue;
+				pud = pud_offset(pgd, vpage);
+				if(pud_none(*pud))
+					continue;
+				pmd = pmd_offset(pud, vpage);
+				if(pmd_none(*pmd))
+					continue;
+				pte = pte_offset_kernel(pmd, vpage);
+				if(!pte || pte_none(*pte))
+				{
+					continue;
+				}
+				// walk page table end
+                
+				if(is_swap_pte(*pte))       // if the pte is swapped (swp_entry)
+				{
+					swp_entry_t entry = pte_to_swp_entry(*pte);
+					counter = pte_to_swp_counter(*pte);
+					if(non_swap_entry(entry))
+					{
+						continue;
+					}
+					
+					if(swp_swapcount(entry) != 1 || counter <= COLD_PAGE_THRESHOLD) {
+						continue;
+					}
+					else                    // page is swapped and swap entry.
+					{
+
+						struct address_space *mapping;
+						swp_entry_t temp_entry;
+						swp_entry_t new_entry;
+						pte_t new_pte;
+						int ret;
+						cache_page = find_get_page(swap_address_space(entry), swp_offset(entry));
+						if(cache_page){
+							/*
+							 * Continue for now, but should delete swap cache and resume
+							 *
+							 */
+							continue;
+						}
+						new_entry = get_swap_page_of_type(NBD_TYPE);
+                        new_pte = swp_entry_to_pte(new_entry);
+						orig_pte=pte_offset_map_lock(mm,pmd,vpage,&ptl);
+
+
+						
+						lock_page(page);
+						__SetPageSwapBacked(page);
+						ClearPageUptodate(page);
+						
+						set_page_private(page, entry.val);
+					
+						ksg_swap_readpage(page, true);
+						ret=add_to_swap_cache(page, new_entry,
+								__GFP_HIGH|__GFP_NOMEMALLOC|__GFP_NOWARN);
+						
+						temp_entry.val=page_private(page);
+						set_page_dirty(page);
+						mapping = page_mapping(page);
+						page->mapping = mapping;
+						
+						write_one_page(page);
+						temp_entry.val=page_private(page);
+						__delete_from_swap_cache(page);
+						//if(!is_swap_pte(*orig_pte))
+						//	printk("ksg: already swapin not swap entry");
+						set_pte(orig_pte, new_pte);
+						unlock_page(page);
+						pte_unmap_unlock(orig_pte, ptl);
+
+					}
+				}
+			}
+		}
+	}
+
+    
+	free_pages((unsigned long)(page_address(page)), 0);
+	return 0;
+}
+
+
+/*
+ *  Increase counters of whole swap entries.
+ *	An argument is *task.
+ *
+ *
+ */
+int task_swap_counter_inc(struct task_struct *task)
+{
+
+
+	struct vm_area_struct   *vma;
+	unsigned long           vpage;
+        
+	if(!task)       // can't get target process's task_struct
+    {
+        return 0;
+    }
+    
+	if(task->mm && task->mm->mmap)  // if target_proc is well mmaped
+    {
+		for(vma = task->mm->mmap; vma; vma = vma->vm_next)  //
+		{
+			int idx = 0;
+			for(vpage = vma->vm_start, idx = 0; vpage < vma->vm_end; vpage += PAGE_SIZE, idx ++)
+			{
+                    // walk page table start
+				pgd_t *pgd;
+				pud_t *pud;
+				pmd_t *pmd;
+				pte_t *pte;
+				pte_t *orig_pte;
+				spinlock_t *ptl;
+				struct mm_struct *mm = task->mm;
+				pgd = pgd_offset(mm, vpage);
+				if(pgd_none(*pgd))
+					continue;
+				pud = pud_offset(pgd, vpage);
+				if(pud_none(*pud))
+					continue;
+				pmd = pmd_offset(pud, vpage);
+				if(pmd_none(*pmd))
+					continue;
+				pte = pte_offset_kernel(pmd, vpage);
+				if(!pte || pte_none(*pte))
+				{
+					continue;
+				}
+				// walk page table end
+                
+				if(is_swap_pte(*pte))       // if the pte is swapped (swp_entry)
+				{
+					swp_entry_t entry = pte_to_swp_entry(*pte);
+					if(non_swap_entry(entry))
+					{
+						//pte_unmap_unlock(pte, ptl);
+						continue;
+					}
+					
+					if(swp_swapcount(entry) != 1) {
+						continue;
+					}
+					else                    // page is swapped and swap entry.
+					{
+						pte_t new_pte;
+						u64 counter;
+						orig_pte=pte_offset_map_lock(mm,pmd,vpage,&ptl);
+						counter=pte_to_swp_counter(*pte);
+						
+						counter++;
+
+						new_pte = swp_entry_and_counter_to_pte(entry,counter);
+						set_pte(orig_pte, new_pte);
+						pte_unmap_unlock(orig_pte, ptl);
+
+					}
+				}
+			}
+		}
+	}
+
+	return 0;
+}
+
+
+
+
+int backgrounded_uid;
+
+int backgrounded_uid_handler(struct ctl_table *table, int write,
+			   void __user *buffer, size_t *length, loff_t *ppos)
+{
+
+	
+	struct task_struct *p;
+	int rc = proc_dointvec_minmax(table,write,buffer,length,ppos);
+	if(rc)
+		return rc;
+	if(write){
+		rcu_read_lock();
+		for_each_process(p){
+
+			if(!p)
+				continue;
+
+			if(p->cred->uid.val==backgrounded_uid){
+				task_swap_counter_inc(p);
+				cold_page_sender(p);
+			}
+
+
+		}
+		rcu_read_unlock();
+	}
+
+	return 0;
+}
+
+int swap_counter_dump;
+int swap_counter_dump_handler(struct ctl_table *table, int write,
+			   void __user *buffer, size_t *length, loff_t *ppos)
+
+{
+
+	int rc = proc_dointvec_minmax(table,write,buffer,length,ppos);
+	int num[7]={0};
+	if(rc)
+		return rc;
+	if(write){
+	struct vm_area_struct   *vma;
+	unsigned long           vpage;
+	pid_t                   pid = (pid_t)swap_counter_dump;
+    struct task_struct      *task = find_task_by_vpid(pid);
+	if(!task)       // can't get target process's task_struct
+    {
+        return 0;
+    }
+    
+	if(task->mm && task->mm->mmap)  // if target_proc is well mmaped
+    {
+		for(vma = task->mm->mmap; vma; vma = vma->vm_next)  //
+		{
+			int idx = 0;
+			for(vpage = vma->vm_start, idx = 0; vpage < vma->vm_end; vpage += PAGE_SIZE, idx ++)
+			{
+                    // walk page table start
+				pgd_t *pgd;
+				pud_t *pud;
+				pmd_t *pmd;
+				pte_t *pte;
+				struct mm_struct *mm = task->mm;
+				pgd = pgd_offset(mm, vpage);
+				if(pgd_none(*pgd))
+					continue;
+				pud = pud_offset(pgd, vpage);
+				if(pud_none(*pud))
+					continue;
+				pmd = pmd_offset(pud, vpage);
+				if(pmd_none(*pmd))
+					continue;
+				pte = pte_offset_kernel(pmd, vpage);
+				if(!pte || pte_none(*pte))
+				{
+					continue;
+				}
+				// walk page table end
+                
+				if(is_swap_pte(*pte))       // if the pte is swapped (swp_entry)
+				{
+					swp_entry_t entry = pte_to_swp_entry(*pte);
+					if(non_swap_entry(entry))
+					{
+						//pte_unmap_unlock(pte, ptl);
+						continue;
+					}
+					
+					if(swp_swapcount(entry) != 1) {
+						continue;
+					}
+					else                    // page is swapped and swap entry.
+					{
+						u64 counter;
+						counter=pte_to_swp_counter(*pte);
+
+						if(counter<6){
+							num[counter]++;
+						}
+						else
+							num[6]++;
+					}
+				}
+			}
+		}
+	}
+
+	printk("pid %d: counter 0 = %d",pid,num[0]);
+	printk("pid %d: counter 1 = %d",pid,num[1]);
+	printk("pid %d: counter 2 = %d",pid,num[2]);
+	printk("pid %d: counter 3 = %d",pid,num[3]);
+	printk("pid %d: counter 4 = %d",pid,num[4]);
+	printk("pid %d: counter 5 = %d",pid,num[5]);
+	printk("pid %d: counter >5 = %d",pid,num[6]);
+
+	}
+	return 0;
+}
+
+
 
 
 #endif
-
-
 

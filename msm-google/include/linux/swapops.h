@@ -85,6 +85,9 @@ static inline pte_t swp_entry_to_pte(swp_entry_t entry)
 	return __swp_entry_to_pte(arch_entry);
 }
 
+
+
+
 static inline swp_entry_t radix_to_swp_entry(void *arg)
 {
 	swp_entry_t entry;
@@ -388,5 +391,29 @@ static inline int non_swap_entry(swp_entry_t entry)
 	return 0;
 }
 #endif
+
+#ifdef CONFIG_APP_AWARE
+
+static inline u64 pte_to_swp_counter(pte_t pte)
+{
+	swp_entry_t arch_entry;
+	arch_entry = __pte_to_swp_entry(pte);
+	return __swp_counter(arch_entry);
+}
+
+static inline pte_t swp_entry_and_counter_to_pte(swp_entry_t entry, u64 counter)
+{
+	swp_entry_t arch_entry;
+
+	arch_entry = __swp_entry_with_counter(swp_type(entry), swp_offset(entry), counter);
+	return __swp_entry_to_pte(arch_entry);
+}
+
+
+#endif
+
+
+
+
 
 #endif /* _LINUX_SWAPOPS_H */

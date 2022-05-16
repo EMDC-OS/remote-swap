@@ -37,6 +37,14 @@ extern int ksg_pid;
 extern int ksg_handler(struct ctl_table *table, int write,
                  void __user *buffer, size_t *length, loff_t *ppos);
 
+extern int backgrounded_uid;
+extern int backgrounded_uid_handler(struct ctl_table *table, int write,
+                 void __user *buffer, size_t *length, loff_t *ppos);
+
+extern int swap_counter_dump;
+extern int swap_counter_dump_handler(struct ctl_table *table, int write,
+                 void __user *buffer, size_t *length, loff_t *ppos);
+
 
 extern int foreground_uid;
 extern int foreground_pid;

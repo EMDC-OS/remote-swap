@@ -717,6 +717,7 @@ extern pgd_t tramp_pg_dir[PTRS_PER_PGD];
  *	bits 2-7:	swap type
  *	bits 8-57:	swap offset
  *	bit  58:	PTE_PROT_NONE (must be zero)
+ *	bits 59-63: swap counter
  */
 #define __SWP_TYPE_SHIFT	2
 #define __SWP_TYPE_BITS		6
@@ -731,6 +732,12 @@ extern pgd_t tramp_pg_dir[PTRS_PER_PGD];
 
 #define __pte_to_swp_entry(pte)	((swp_entry_t) { pte_val(pte) })
 #define __swp_entry_to_pte(swp)	((pte_t) { (swp).val })
+
+#define __SWP_COUNTER_BITS 5
+#define __SWP_COUNTER_SHIFT	(__SWP_OFFSET_BITS + __SWP_OFFSET_SHIFT + 1)
+#define __SWP_COUNTER_MASK	((1UL << __SWP_COUNTER_BITS) - 1)
+#define __swp_counter(x)	(((x).val >> __SWP_COUNTER_SHIFT) & __SWP_COUNTER_MASK)
+#define __swp_entry_with_counter(type,offset,counter) ((swp_entry_t) { ((type) << __SWP_TYPE_SHIFT) | ((offset) << __SWP_OFFSET_SHIFT) |  ((counter) << __SWP_COUNTER_SHIFT)})
 
 /*
  * Ensure that there are not more swap files than can be encoded in the kernel

@@ -408,8 +408,20 @@ static struct ctl_table kern_table[] = {
 		.mode			= 0644,
 		.proc_handler	= ksg_handler,
 	},
-
-
+	{
+		.procname		= "backgrounded_uid",
+		.data			= &backgrounded_uid,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= backgrounded_uid_handler,
+	},
+	{
+		.procname		= "swap_counter_dump",
+		.data			= &swap_counter_dump,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= swap_counter_dump_handler,
+	},
 #endif
 #if defined(CONFIG_PREEMPT_TRACER) || defined(CONFIG_DEBUG_PREEMPT)
 	{
