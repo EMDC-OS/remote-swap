@@ -497,7 +497,7 @@ int task_swap_counter_inc(struct task_struct *task)
 				if(is_swap_pte(*pte))       // if the pte is swapped (swp_entry)
 				{
 					swp_entry_t entry = pte_to_swp_entry(*pte);
-					if(non_swap_entry(entry))
+					if(non_swap_entry(entry) || swp_type(entry) == NBD_TYPE)
 					{
 						//pte_unmap_unlock(pte, ptl);
 						continue;
