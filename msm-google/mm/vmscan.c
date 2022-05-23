@@ -4751,7 +4751,7 @@ int lru_scan_private_handler(struct ctl_table *table, int write,
 		if(write){
 			int cnt;
 			int total_cnt=0;
-				pid_t pid = (pid_t)background_swapout;
+				pid_t pid = (pid_t)lru_scan_private;
        	 		struct task_struct *task = find_task_by_vpid(pid);
         if (!task) {
                 printk("task %d not found", pid);

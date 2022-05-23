@@ -2921,6 +2921,14 @@ int do_swap_page(struct vm_fault *vmf)
 	bool vma_readahead = swap_use_vma_readahead();
 
 
+#ifdef CONFIG_APP_AWARE
+
+	int idx;
+	atomic_t *st_idx_ptr;
+	struct swap_trace_entry *swap_trace_table;
+
+#endif
+
 	
 	/*
 	if(swapin_vma_tracking==1 && foreground_uid==current->cred->uid.val)
@@ -3080,6 +3088,40 @@ int do_swap_page(struct vm_fault *vmf)
 	 * before page_add_anon_rmap() and swap_free(); try_to_free_swap()
 	 * must be called after the swap_free(), or it will never succeed.
 	 */
+
+
+#ifdef CONFIG_APP_AWARE
+
+	if(switch_start){
+
+		if(which_table){
+			st_idx_ptr = &st_index1;
+			swap_trace_table = swap_trace_table1;
+		}
+		else{
+			st_idx_ptr = &st_index0;
+			swap_trace_table = swap_trace_table0;
+		}
+
+		idx = atomic_inc_return(st_idx_ptr);
+		swap_trace_table[idx].tgid = current->tgid;
+		swap_trace_table[idx].va = vmf->address;
+		swap_trace_table[idx].to_nbd = 0;
+		trace_printk("table %d || %d: %d %llx\n", which_table, idx, current->tgid, vmf->address);
+
+	}
+	
+
+	/*
+	 * For cold page dump
+	 */
+	if (swp_type(entry) == NBD_TYPE && pte_to_swp_counter(vmf->orig_pte))
+		atomic_inc(&faulted_cold_page);
+			
+
+
+#endif
+
 
 	inc_mm_counter_fast(vma->vm_mm, MM_ANONPAGES);
 	dec_mm_counter_fast(vma->vm_mm, MM_SWAPENTS);

@@ -1,0 +1,21 @@
+echo $UID > foreground_uid
+echo 1 > /proc/sys/kernel/app_switch_start
+am start app
+echo 1 > /proc/sys/kernel/app_switch_fin
+play app ~~
+
+
+**You should handle foreground==0 after real workload
+
+
+
+
+// Optimization plan
+
+PTE walk (cold page sender)
+send to nbd right after it is COUNTER>THRESHOLD ==> Pte walk 1/2
+
+
+// Implementation idea
+
+flag off after it is sent

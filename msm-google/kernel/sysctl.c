@@ -395,13 +395,6 @@ static struct ctl_table kern_table[] = {
 		.proc_handler	= proc_dointvec,
 	},
 	{
-		.procname		= "background_swapout",
-		.data			= &background_swapout,
-		.maxlen			= sizeof(unsigned int),
-		.mode			= 0644,
-		.proc_handler	= background_swapout_handler,
-	},
-	{
 		.procname		= "ksg_pid",
 		.data			= &ksg_pid,
 		.maxlen			= sizeof(unsigned int),
@@ -409,18 +402,25 @@ static struct ctl_table kern_table[] = {
 		.proc_handler	= ksg_handler,
 	},
 	{
-		.procname		= "backgrounded_uid",
-		.data			= &backgrounded_uid,
-		.maxlen			= sizeof(unsigned int),
-		.mode			= 0644,
-		.proc_handler	= backgrounded_uid_handler,
-	},
-	{
 		.procname		= "swap_counter_dump",
 		.data			= &swap_counter_dump,
 		.maxlen			= sizeof(unsigned int),
 		.mode			= 0644,
 		.proc_handler	= swap_counter_dump_handler,
+	},
+	{
+		.procname		= "app_switch_start",
+		.data			= &app_switch_start,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= app_switch_start_handler,
+	},
+	{
+		.procname		= "app_switch_fin",
+		.data			= &app_switch_fin,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= app_switch_fin_handler,
 	},
 #endif
 #if defined(CONFIG_PREEMPT_TRACER) || defined(CONFIG_DEBUG_PREEMPT)
