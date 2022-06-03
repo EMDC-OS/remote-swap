@@ -3107,6 +3107,7 @@ int do_swap_page(struct vm_fault *vmf)
 		swap_trace_table[idx].tgid = current->tgid;
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
+		swap_trace_table[idx].swapped = 0;
 		trace_printk("table %d || %d: %d %llx\n", which_table, idx, current->tgid, vmf->address);
 
 	}

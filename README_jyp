@@ -12,10 +12,14 @@ play app ~~
 
 // Optimization plan
 
-PTE walk (cold page sender)
+- PTE walk (cold page sender)
 send to nbd right after it is COUNTER>THRESHOLD ==> Pte walk 1/2
 
+- PTE walk (send_target_page)  DONE!
+add one bit in the entry, and set if the page is swapped (very cheap operation) 
 
 // Implementation idea
+
+Should handle if the process exit
 
 flag off after it is sent

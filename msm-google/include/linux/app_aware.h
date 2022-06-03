@@ -15,6 +15,7 @@ struct swap_trace_entry {
         pid_t tgid; 
         unsigned long va;
 		bool to_nbd;
+		bool swapped;
 };
 
 extern bool which_table;

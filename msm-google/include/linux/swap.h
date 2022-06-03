@@ -202,6 +202,9 @@ struct swap_cluster_info {
 				 * elements correspond to the swap
 				 * cluster
 				 */
+#ifdef CONFIG_APP_AWARE
+	unsigned int id;
+#endif
 	unsigned int data:24;
 	unsigned int flags:8;
 };

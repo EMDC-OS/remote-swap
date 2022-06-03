@@ -1,0 +1,1040 @@
+[    2.464466] init: SVC_EXEC service 'exec 11 (/system/bin/flags_health_check BOOT_FAILURE)' pid 760 (uid 1000 gid 1000+0 context default) started; waiting...
+[    2.467563] logd.daemon: reinit
+[    2.473595] iaxxx-spi spi5.0: iaxxx_event_isr: IRQ 297
+[    2.474444] iaxxx-spi spi5.0: iaxxx_fw_bootup_regmap_init: done
+[    2.475207] init: Service 'logd-reinit' (pid 759) exited with status 0
+[    2.475598] init: Service 'exec 11 (/system/bin/flags_health_check BOOT_FAILURE)' (pid 760) exited with status 0 waiting took 0.011000 seconds
+[    2.475645] init: processing action (load_persist_props_action) from (/system/etc/init/logcatd.rc:31)
+[    2.475954] init: Service 'vendor.ramdump_auto' (pid 758) exited with status 255
+[    2.476055] init: processing action (ro.crypto.state=encrypted && ro.crypto.type=file && zygote-start) from (/init.rc:642)
+[    2.476239] init: starting service 'update_verifier_nonencrypted'...
+[    2.476913] init: SVC_EXEC service 'update_verifier_nonencrypted' pid 761 (uid 0 gid 2001+1 context default) started; waiting...
+[    2.477087] iaxxx-spi spi5.0: FW boot complete event iaxxx_event_handler: src:0x2610
+[    2.491298] update_verifier: Started with arg 1: nonencrypted
+[    2.492612] update_verifier: Booting slot 0: isSlotMarkedSuccessful=1
+[    2.492624] update_verifier: Leaving update_verifier.
+[    2.493257] init: Service 'update_verifier_nonencrypted' (pid 761) exited with status 0 waiting took 0.016000 seconds
+[    2.493573] init: starting service 'netd'...
+[    2.494306] init: starting service 'zygote'...
+[    2.494907] init: starting service 'zygote_secondary'...
+[    2.495001] init: Created socket '/dev/socket/zygote', mode 660, user 0, group 1000
+[    2.495098] init: Created socket '/dev/socket/dnsproxyd', mode 660, user 0, group 3003
+[    2.495129] init: Created socket '/dev/socket/usap_pool_primary', mode 660, user 0, group 1000
+[    2.495458] init: processing action (zygote-start) from (/vendor/etc/init/hw/init.sm8150.rc:284)
+[    2.495544] init: Created socket '/dev/socket/zygote_secondary', mode 660, user 0, group 1000
+[    2.495661] init: Created socket '/dev/socket/mdns', mode 660, user 0, group 1000
+[    2.495662] init: Created socket '/dev/socket/usap_pool_secondary', mode 660, user 0, group 1000
+[    2.496170] init: Created socket '/dev/socket/fwmarkd', mode 660, user 0, group 3003
+[    2.511713] init: processing action (zygote-start) from (/system/etc/init/bootstat.rc:72)
+[    2.511872] init: starting service 'exec 12 (/system/bin/bootstat --set_system_boot_reason)'...
+[    2.512369] init: processing action (firmware_mounts_complete) from (/init.rc:311)
+[    2.512401] init: processing action (early-boot) from (/vendor/etc/init/hw/init.sm8150.rc:336)
+[    2.522212] init: Service 'exec 12 (/system/bin/bootstat --set_system_boot_reason)' (pid 765) exited with status 0
+[    2.522746] init: start_waiting_for_property("vendor.all.modules.ready", "1"): already set
+[    2.523541] init: start_waiting_for_property("vendor.all.devices.ready", "1"): already set
+[    2.531690] init: processing action (early-boot) from (/vendor/etc/init/hw/init.sm8150.usb.rc:17)
+[    2.535393] file system registered
+[    2.537064] f_cdev_alloc: port_name:at_usb0 (0000000000000000) portno:(0)
+[    2.537744] f_cdev_alloc: port_name:at_usb1 (0000000000000000) portno:(1)
+[    2.543379] init: processing action (early-boot) from (/system/etc/init/installd.rc:5)
+[    2.550790] init: processing action (boot) from (/init.rc:649)
+[    2.553465] init: starting service 'hidl_memory'...
+[    2.554234] init: starting service 'system_suspend'...
+[    2.554888] init: starting service 'vendor.audio-hal-2-0'...
+[    2.555568] init: starting service 'vendor.authsecret_hal'...
+[    2.556254] init: starting service 'vendor.bluetooth-1-0'...
+[    2.556984] init: starting service 'vendor.camera-provider-2-4-google'...
+[    2.557589] init: starting service 'vendor.cas-hal-1-1'...
+[    2.558183] init: starting service 'confirmationui-1-0'...
+[    2.558850] init: starting service 'vendor.contexthub-hal-1-0'...
+[    2.559490] init: starting service 'vendor.drm-hal-1-0'...
+[    2.560477] init: starting service 'vendor.drm-clearkey-hal-1-2'...
+[    2.561174] init: starting service 'vendor.drm-widevine-hal-1-2'...
+[    2.561844] init: starting service 'gnss_service'...
+[    2.562476] init: starting service 'vendor.health-hal-2-0'...
+[    2.563027] init: Opened file '/dev/kmsg', flags 1
+[    2.563149] init: starting service 'vendor.memtrack-hal-1-0'...
+[    2.563818] init: starting service 'hal_neuralnetworks_darwinn'...
+[    2.564482] init: starting service 'neuralnetworks_hal_service'...
+[    2.565170] init: starting service 'nfc_hal_service'...
+[    2.565901] init: starting service 'vendor.oemlock_hal'...
+[    2.566618] init: starting service 'vendor.power.stats-hal-1-0'...
+[    2.567442] init: starting service 'vendor.power-hal-1-3'...
+[    2.568228] init: starting service 'secure_element_hal_service'...
+[    2.569009] init: starting service 'vendor.sensors-hal-2-0'...
+[    2.569714] init: starting service 'vendor.thermal-hal-2-0'...
+[    2.570536] init: starting service 'vendor.usb-hal-1-2'...
+[    2.571271] init: starting service 'vendor.vibrator-1-3'...
+[    2.571909] init: starting service 'vendor.weaver_hal'...
+[    2.572529] init: starting service 'vendor.pixelstats_vendor'...
+[    2.573271] init: starting service 'rlsservice'...
+[    2.574054] init: starting service 'airbrush'...
+[    2.574768] init: starting service 'vendor.wifi_hal_legacy'...
+[    2.575425] init: starting service 'wireless_charger'...
+[    2.576060] init: starting service 'qteeconnector-hal-1-0'...
+[    2.576782] init: starting service 'tui_comm-1-0'...
+[    2.577459] init: starting service 'vendor-qti-media-c2-hal-1-0'...
+[    2.578158] init: starting service 'sensors.qti'...
+[    2.578798] init: starting service 'vendor.sscrpcd'...
+[    2.579375] init: starting service 'vendor.lowi'...
+[    2.580053] init: starting service 'vendor.qrtr-ns'...
+[    2.580885] init: starting service 'irsc_util'...
+[    2.581575] init: starting service 'rmt_storage'...
+[    2.582249] init: starting service 'tftp_server'...
+[    2.582816] init: Could not start service 'modem_svc' as part of class 'core': Cannot find '/vendor/bin/modem_svc': No such file or directory
+[    2.582980] init: starting service 'vendor.msm_irqbalance'...
+[    2.583705] init: Created socket '/dev/socket/msm_irqbalance', mode 660, user 0, group 1000
+[    2.583778] init: starting service 'pd_mapper'...
+[    2.584545] init: starting service 'ashmemd'...
+[    2.585256] init: starting service 'audioserver'...
+[    2.586443] init: starting service 'gpu'...
+[    2.587227] init: starting service 'lmkd'...
+[    2.587659] init: processing action (boot) from (/init.usb.rc:21)
+[    2.587738] init: processing action (persist.sys.usb.config=* && boot) from (/init.usb.rc:102)
+[    2.587756] init: processing action (boot) from (/vendor/etc/init/hw/init.sm8150.rc:502)
+[    2.588185] init: Created socket '/dev/socket/lmkd', mode 660, user 1000, group 1000
+[    2.588234] init: Command 'start rfs_access' action=boot (/vendor/etc/init/hw/init.sm8150.rc:513) took 0ms and failed: service rfs_access not found
+[    2.588349] init: processing action (boot) from (/vendor/etc/init/hw/init.sm8150.usb.rc:64)
+[    2.588442] init: processing action (persist.vendor.sys.modem.diag.mdlog=* && boot) from (/vendor/etc/init/hw/init.sm8150.diag.rc:44)
+[    2.588587] init: processing action (boot) from (/vendor/etc/init/hw/init.sm8150.power.rc:128)
+[    2.588835] init: processing action (boot) from (/system/etc/init/bootstat.rc:63)
+[    2.588862] init: processing action (boot) from (/system/etc/init/dumpstate.rc:1)
+[    2.588899] init: processing action (boot) from (/system/etc/init/gsid.rc:14)
+[    2.589023] init: starting service 'exec 13 (/system/bin/gsid run-startup-tasks)'...
+[    2.589516] init: processing action (boot) from (/vendor/etc/init/android.hardware.dumpstate@1.0-service.coral.rc:9)
+[    2.589608] init: processing action (boot) from (/vendor/etc/init/android.hardware.neuralnetworks@1.2-service-noronha.rc:9)
+[    2.591377] init: processing action (boot) from (/vendor/etc/init/android.hardware.usb@1.2-service.coral.rc:6)
+[    2.591717] init: processing action (boot) from (/vendor/etc/init/init-ramoops.rc:16)
+[    2.592267] init: processing action (boot) from (/vendor/etc/init/netmgrd.rc:6)
+[    2.608517] capability: warning: `msm_irqbalance' uses 32-bit capabilities (legacy support in use)
+[    2.612658] rmt_storage:INFO:main: Done with init now waiting for messages!
+[    2.615806] init: processing action (enable_property_trigger) from (<Builtin Action>:0)
+[    2.615965] init: processing action (security.perf_harden=1) from (/init.rc:825)
+[    2.616193] init: processing action (ro.debuggable=1) from (/init.rc:849)
+[    2.616300] init: Command 'start console' action=ro.debuggable=1 (/init.rc:855) took 0ms and failed: Could not start service: Couldn't open console '/dev/console': No such device
+[    2.616307] init: processing action (vendor.all.modules.ready=1) from (/vendor/etc/init/hw/init.flame.rc:19)
+[    2.619337] sysmon-qmi: ssctl_new_server: Connection established between QMI handle and slpi's SSCTL service
+[    2.619346] sysmon-qmi: ssctl_new_server: Connection established between QMI handle and cdsp's SSCTL service
+[    2.620735] init: processing action (persist.vendor.modem.esim.reset=done && persist.vendor.se.pixel_aram=removed) from (/vendor/etc/init/hw/init.sm8150.rc:655)
+[    2.621038] init: starting service 'vendor.per_mgr'...
+[    2.621740] init: processing action (persist.vendor.sys.ssr.restart_level=*) from (/vendor/etc/init/hw/init.sm8150.rc:814)
+[    2.622100] init: starting service 'vendor.ssr_setup'...
+[    2.622428] diag: In diag_send_feature_mask_update, control channel is not open, p: 5, 0000000000000000
+[    2.622449] diag: In diag_send_feature_mask_update, control channel is not open, p: 3, 0000000000000000
+[    2.622603] diag: In diag_send_peripheral_buffering_mode, buffering flag not set for 3
+[    2.622770] init: processing action (init.svc.vendor.hwcomposer-2-3=running) from (/vendor/etc/init/hw/init.sm8150.rc:847)
+[    2.623027] init: Command 'start ppd' action=init.svc.vendor.hwcomposer-2-3=running (/vendor/etc/init/hw/init.sm8150.rc:848) took 0ms and failed: service ppd not found
+[    2.623044] init: processing action (vendor.all.modules.ready=1) from (/vendor/etc/init/hw/init.sm8150.rc:881)
+[    2.623162] init: processing action (persist.sys.theme=1) from (/vendor/etc/init/hw/init.sm8150.rc:968)
+[    2.623235] diag: In diag_send_peripheral_buffering_mode, buffering flag not set for 5
+[    2.623488] init: starting service 'vendor.theme_clear'...
+[    2.624119] init: processing action (vendor.sys.modem.diag.mdlog=true) from (/vendor/etc/init/hw/init.sm8150.diag.rc:48)
+[    2.624358] init: starting service 'diag_mdlog_start'...
+[    2.625277] init: processing action (persist.vendor.usb.usbradio.config=*) from (/vendor/etc/init/hw/init.sm8150.diag.rc:110)
+[    2.625313] init: Created socket '/dev/socket/diag_router', mode 666, user 1000, group 1000
+[    2.625540] init: starting service 'usbd'...
+[    2.626168] init: processing action (vendor.display.enable_kernel_idle_timer=true) from (/vendor/etc/init/hw/init.sm8150.power.rc:17)
+[    2.626440] init: processing action (ro.iorapd.enable=false) from (/system/etc/init/iorapd.rc:24)
+[    2.626515] init: processing action (ro.debuggable=1) from (/system/etc/init/llkd-debuggable.rc:1)
+[    2.626677] init: processing action (ro.debuggable=*) from (/system/etc/init/llkd.rc:2)
+[    2.626796] init: processing action (logd.logpersistd=logcatd && logd.logpersistd.enable=true) from (/system/etc/init/logcatd.rc:34)
+[    2.628215] init: Service 'irsc_util' (pid 811) exited with status 0
+[    2.628466] init: starting service 'logcatd'...
+[    2.629068] init: processing action (persist.traced.enable=1) from (/system/etc/init/perfetto.rc:50)
+[    2.629560] init: starting service 'traced'...
+[    2.630253] init: starting service 'traced_probes'...
+[    2.630684] init: processing action (ro.boot.slot_suffix=*) from (/system/etc/init/update_engine.rc:8)
+[    2.630705] init: processing action (init.svc.vendor.citadeld=running) from (/vendor/etc/init/citadel_provision.rc:2)
+[    2.631068] init: Created socket '/dev/socket/traced_consumer', mode 666, user 0, group 0
+[    2.631173] init: Created socket '/dev/socket/traced_producer', mode 666, user 0, group 0
+[    2.631343] init: Opened file '/dev/kmsg', flags 1
+[    2.632863] init: starting service 'vendor.citadel_provision'...
+[    2.633457] init: processing action (init.svc.vendor.citadeld=running) from (/vendor/etc/init/init_citadel.rc:2)
+[    2.633761] init: starting service 'vendor.init_citadel'...
+[    2.634241] init: processing action (persist.vendor.data.mode=concurrent) from (/vendor/etc/init/netmgrd.rc:31)
+[    2.634505] init: starting service 'vendor.netmgrd'...
+[    2.634975] init: processing action (persist.vendor.data.mode=concurrent) from (/vendor/etc/init/port-bridge.rc:23)
+[    2.635213] init: starting service 'vendor.port-bridge'...
+[    2.635728] init: processing action (nonencrypted) from (/init.rc:763)
+[    2.635771] init: Could not start service 'flash_recovery' as part of class 'main': Cannot find '/system/bin/install-recovery.sh': No such file or directory
+[    2.635930] init: starting service 'vendor.thermal-engine'...
+[    2.636566] init: starting service 'vendor.adsprpcd'...
+[    2.636987] type=1400 audit(1451750.510:9): avc: denied { module_request } for comm="time_daemon" kmod="crypto-cts(cbc(aes))-all" scontext=u:r:time_daemon:s0 tcontext=u:r:kernel:s0 tclass=system permissive=0
+[    2.637002] type=1400 audit(1653633586.696:10): avc: denied { create } for comm="init" name="thermal-send-client" scontext=u:r:init:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=0 b/132412558
+[    2.637111] init: Failed to bind socket 'thermal-send-client': Permission denied
+[    2.637240] init: starting service 'vendor.adsprpcd_audiopd'...
+[    2.637331] type=1400 audit(1653633586.696:10): avc: denied { create } for comm="init" name="thermal-send-client" scontext=u:r:init:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=0 b/132412558
+[    2.637341] type=1400 audit(1653633586.696:11): avc: denied { create } for comm="init" name="thermal-recv-client" scontext=u:r:init:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=0 b/132412558
+[    2.637394] init: Failed to bind socket 'thermal-recv-client': Permission denied
+[    2.637607] type=1400 audit(1653633586.696:11): avc: denied { create } for comm="init" name="thermal-recv-client" scontext=u:r:init:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=0 b/132412558
+[    2.637617] type=1400 audit(1653633586.696:12): avc: denied { create } for comm="init" name="thermal-recv-passive-client" scontext=u:r:init:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=0 b/132412558
+[    2.637678] init: Failed to bind socket 'thermal-recv-passive-client': Permission denied
+[    2.637867] type=1400 audit(1653633586.696:12): avc: denied { create } for comm="init" name="thermal-recv-passive-client" scontext=u:r:init:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=0 b/132412558
+[    2.637876] type=1400 audit(1653633586.696:13): avc: denied { create } for comm="init" name="thermal-send-rule" scontext=u:r:init:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=0 b/132412558
+[    2.637926] init: Failed to bind socket 'thermal-send-rule': Permission denied
+[    2.638012] init: starting service 'vendor.cdsprpcd'...
+[    2.638870] init: starting service 'vendor.imsqmidaemon'...
+[    2.639720] init: starting service 'vendor.imsrcsservice'...
+[    2.640458] init: Created socket '/dev/socket/ims_qmid', mode 660, user 1000, group 1001
+[    2.640857] init: starting service 'vendor.ims_rtp_daemon'...
+[    2.643008] init: starting service 'cnd'...
+[    2.645980] init: starting service 'bpfloader'...
+[    2.649996] init: starting service 'cameraserver'...
+[    2.655551] abc,airbrush-sm soc:abc-sm: AB version is B0
+[    2.656017] type=1400 audit(1653633586.696:13): avc: denied { create } for comm="init" name="thermal-send-rule" scontext=u:r:init:s0 tcontext=u:object_r:socket_device:s0 tclass=sock_file permissive=0 b/132412558
+[    2.656035] type=1400 audit(1653633586.713:14): avc: denied { search } for comm="pd-mapper" name="esoc" dev="sysfs" ino=51087 scontext=u:r:vendor_pd_mapper:s0 tcontext=u:object_r:sysfs_esoc:s0 tclass=dir permissive=0 b/129744410
+[    2.656047] init: starting service 'drm'...
+[    2.656103] type=1400 audit(1653633586.713:14): avc: denied { search } for comm="pd-mapper" name="esoc" dev="sysfs" ino=51087 scontext=u:r:vendor_pd_mapper:s0 tcontext=u:object_r:sysfs_esoc:s0 tclass=dir permissive=0 b/129744410
+[    2.656110] type=1400 audit(1653633586.713:15): avc: denied { search } for comm="pd-mapper" name="msm_subsys" dev="sysfs" ino=30390 scontext=u:r:vendor_pd_mapper:s0 tcontext=u:object_r:sysfs_msm_subsys:s0 tclass=dir permissive=0 b/129744410
+[    2.656875] init: starting service 'idmap2d'...
+[    2.657541] init: starting service 'incidentd'...
+[    2.658203] init: starting service 'installd'...
+[    2.658875] init: starting service 'keystore'...
+[    2.659622] init: starting service 'mediadrm'...
+[    2.660630] init: starting service 'mediaextractor'...
+[    2.661345] init: starting service 'mediametrics'...
+[    2.662519] init: starting service 'media'...
+[    2.664356] init: starting service 'statsd'...
+[    2.664773] msm_pcie_enable: PCIe RC1 PHY is ready!
+[    2.665208] init: starting service 'storaged'...
+[    2.665796] msm_pcie_enable: PCIe: RC1: enable equalization
+[    2.665989] init: starting service 'wificond'...
+[    2.666679] init: starting service 'vendor.media.omx'...
+[    2.666721] init: Created socket '/dev/socket/statsdw', mode 222, user 1066, group 1066
+[    2.668468] init: Failed to open file '/d/mmc0/mmc0:0001/ext_csd': No such file or directory
+[    2.672735] init: starting service 'vendor.ipacm'...
+[    2.679588] init: starting service 'vendor.qcrild'...
+[    2.681162] msm_pcie_enable: PCIe RC1 link initialized
+[    2.681283] OF: PCI: host bridge /soc/qcom,pcie@1c08000 ranges:
+[    2.681291] OF: PCI:   No bus range found for /soc/qcom,pcie@1c08000, using [bus 00-ff]
+[    2.681299] OF: PCI:    IO 0x40200000..0x402fffff -> 0x40200000
+[    2.681302] OF: PCI:   MEM 0x40300000..0x5fffffff -> 0x40300000
+[    2.681345] pci-msm 1c08000.qcom,pcie: MSI: qgic controller is present
+[    2.681794] pci-msm 1c08000.qcom,pcie: PCI host bridge to bus 0001:00
+[    2.681799] pci_bus 0001:00: root bus resource [bus 00-ff]
+[    2.681803] pci_bus 0001:00: root bus resource [io  0x0000-0xfffff] (bus address [0x40200000-0x402fffff])
+[    2.681806] pci_bus 0001:00: root bus resource [mem 0x40300000-0x5fffffff]
+[    2.681826] pci 0001:00:00.0: [17cb:0108] type 01 class 0x060400
+[    2.681855] pci 0001:00:00.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+[    2.681918] pci 0001:00:00.0: PME# supported from D0 D3hot D3cold
+[    2.682056] pci 0001:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    2.682142] pci 0001:01:00.0: [1ae0:abcd] type 00 class 0x048000
+[    2.682205] pci 0001:01:00.0: reg 0x10: [mem 0x00000000-0x00ffffff 64bit]
+[    2.682233] pci 0001:01:00.0: reg 0x18: [mem 0x00000000-0x007fffff 64bit]
+[    2.682260] pci 0001:01:00.0: reg 0x20: [mem 0x00000000-0x001fffff 64bit]
+[    2.682277] pci 0001:01:00.0: reg 0x30: [mem 0x00000000-0x0000ffff pref]
+[    2.682379] pci 0001:01:00.0: supports D1
+[    2.682380] pci 0001:01:00.0: PME# supported from D0 D1 D3hot
+[    2.682437] pci_bus 0001:01: busn_res: [bus 01-ff] end is updated to 01
+[    2.682454] pci 0001:00:00.0: bridge window [io  0x1000-0x0fff] to [bus 01] add_size 1000
+[    2.682456] pci 0001:00:00.0: bridge window [mem 0x00100000-0x000fffff 64bit pref] to [bus 01] add_size 200000 add_align 100000
+[    2.682457] pci 0001:00:00.0: bridge window [mem 0x00400000-0x01ffffff] to [bus 01] add_size 400000 add_align 400000
+[    2.682460] pci 0001:00:00.0: BAR 8: assigned [mem 0x40400000-0x423fffff]
+[    2.682464] pci 0001:00:00.0: BAR 9: assigned [mem 0x42400000-0x425fffff 64bit pref]
+[    2.682467] pci 0001:00:00.0: BAR 0: assigned [mem 0x40300000-0x40300fff 64bit]
+[    2.682478] pci 0001:00:00.0: BAR 7: assigned [io  0x1000-0x1fff]
+[    2.682482] pci 0001:01:00.0: BAR 0: assigned [mem 0x41000000-0x41ffffff 64bit]
+[    2.682501] pci 0001:01:00.0: BAR 2: assigned [mem 0x40800000-0x40ffffff 64bit]
+[    2.682520] pci 0001:01:00.0: BAR 4: assigned [mem 0x40400000-0x405fffff 64bit]
+[    2.682539] pci 0001:01:00.0: BAR 6: assigned [mem 0x40600000-0x4060ffff pref]
+[    2.682541] pci 0001:00:00.0: PCI bridge to [bus 01]
+[    2.682545] pci 0001:00:00.0:   bridge window [io  0x1000-0x1fff]
+[    2.682551] pci 0001:00:00.0:   bridge window [mem 0x40400000-0x423fffff]
+[    2.682556] pci 0001:00:00.0:   bridge window [mem 0x42400000-0x425fffff 64bit pref]
+[    2.682605] iommu: Adding device 0001:00:00.0 to group 52
+[    2.682674] iommu: Adding device 0001:01:00.0 to group 52
+[    2.686998] init: starting service 'media.swcodec'...
+[    2.687726] init: Command 'class_start main' action=nonencrypted (/init.rc:764) took 51ms and succeeded
+[    2.688109] init: starting service 'init-radio-sh'...
+[    2.688912] init: starting service 'vendor.chre'...
+[    2.689750] init: starting service 'cnss-daemon'...
+[    2.694545] init: Created socket '/dev/socket/chre', mode 660, user 0, group 1000
+[    2.704771] init: starting service 'loc_launcher'...
+[    2.705850] init: starting service 'gatekeeperd'...
+[    2.706849] init: starting service 'tombstoned'...
+[    2.707716] init: starting service 'update_engine'...
+[    2.709275] init: Created socket '/dev/socket/tombstoned_crash', mode 666, user 1000, group 1000
+[    2.709570] ipa ipa3_uc_state_check:286 uC is not loaded
+[    2.709586] init: starting service 'vendor.face-hal-1-0'...
+[    2.709800] init: Created socket '/dev/socket/tombstoned_intercept', mode 666, user 1000, group 1000
+[    2.710280] init: Created socket '/dev/socket/tombstoned_java_trace', mode 666, user 1000, group 1000
+[    2.710516] type=1400 audit(1653633586.713:15): avc: denied { search } for comm="pd-mapper" name="msm_subsys" dev="sysfs" ino=30390 scontext=u:r:vendor_pd_mapper:s0 tcontext=u:object_r:sysfs_msm_subsys:s0 tclass=dir permissive=0 b/129744410
+[    2.710529] type=1400 audit(1653633586.769:16): avc: denied { search } for comm="imsqmidaemon" name="soc:qcom,faceauth_fws_b" dev="sysfs" ino=42445 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.710555] init: Service 'exec 13 (/system/bin/gsid run-startup-tasks)' (pid 822) exited with status 0
+[    2.710744] init: Service 'vendor.ssr_setup' (pid 831) exited with status 0
+[    2.710825] init: Service 'vendor.theme_clear' (pid 833) exited with status 0
+[    2.710887] type=1400 audit(1653633586.769:16): avc: denied { search } for comm="imsqmidaemon" name="soc:qcom,faceauth_fws_b" dev="sysfs" ino=42445 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.710895] type=1400 audit(1653633586.769:17): avc: denied { search } for comm="imsqmidaemon" name="soc:qcom,faceauth_fws" dev="sysfs" ino=42432 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.711026] init: processing action (init.svc.vendor.per_mgr=running) from (/vendor/etc/init/hw/init.sm8150.rc:667)
+[    2.711319] init: starting service 'per_proxy'...
+[    2.711418] pci-msm-rc 0001:00:00.0: enabling device (0000 -> 0003)
+[    2.712092] MSI Irq number is : 7
+[    2.713738] init: processing action (llk.enable=1) from (/system/etc/init/llkd.rc:9)
+[    2.714052] init: processing action (khungtask.enable=1) from (/system/etc/init/llkd.rc:18)
+[    2.714724] init: processing action (llk.enable=0) from (/system/etc/init/llkd.rc:12)
+[    2.714875] init: Received control message 'interface_start' for 'android.hardware.usb.gadget@1.0::IUsbGadget/default' from pid: 559 (/system/bin/hwservicemanager)
+[    2.714895] init: Could not find 'android.hardware.usb.gadget@1.0::IUsbGadget/default' for ctl.interface_start
+[    2.715109] init: processing action (khungtask.enable=0) from (/system/etc/init/llkd.rc:21)
+[    2.715204] init: Received control message 'interface_start' for 'android.hardware.usb.gadget@1.0::IUsbGadget/default' from pid: 559 (/system/bin/hwservicemanager)
+[    2.715215] init: Could not find 'android.hardware.usb.gadget@1.0::IUsbGadget/default' for ctl.interface_start
+[    2.718370] init: processing action (init.svc.mediadrm=running) from (/vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc:1)
+[    2.718626] ipa ipa3_uc_state_check:286 uC is not loaded
+[    2.722961] init: processing action (llk.enable=true) from (/system/etc/init/llkd.rc:34)
+[    2.723203] init: starting service 'llkd-1'...
+[    2.723961] init: Service 'bpfloader' (pid 856) exited with status 0
+[    2.724226] init: processing action (khungtask.enable=true) from (/system/etc/init/llkd.rc:25)
+[    2.724720] init: Opened file '/dev/kmsg', flags 1
+[    2.724786] init: Opened file '/proc/sysrq-trigger', flags 1
+[    2.725388] init: processing action (khungtask.enable=false) from (/system/etc/init/llkd.rc:31)
+[    2.725973] init: processing action (vendor.ims.QMI_DAEMON_STATUS=1) from (/vendor/etc/init/hw/init.sm8150.rc:746)
+[    2.726191] init: starting service 'vendor.imsdatadaemon'...
+[    2.727282] init: Created socket '/dev/socket/ims_datad', mode 660, user 1000, group 1001
+[    2.727447] type=1400 audit(1653633586.769:17): avc: denied { search } for comm="imsqmidaemon" name="soc:qcom,faceauth_fws" dev="sysfs" ino=42432 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.727473] type=1400 audit(1653633586.779:18): avc: denied { search } for comm="CitadelProvisio" name="esoc" dev="sysfs" ino=51087 scontext=u:r:citadel_provision:s0 tcontext=u:object_r:sysfs_esoc:s0 tclass=dir permissive=0
+[    2.727931] type=1400 audit(1653633586.779:18): avc: denied { search } for comm="CitadelProvisio" name="esoc" dev="sysfs" ino=51087 scontext=u:r:citadel_provision:s0 tcontext=u:object_r:sysfs_esoc:s0 tclass=dir permissive=0
+[    2.727950] type=1400 audit(1653633586.779:19): avc: denied { search } for comm="CitadelProvisio" name="msm_subsys" dev="sysfs" ino=30390 scontext=u:r:citadel_provision:s0 tcontext=u:object_r:sysfs_msm_subsys:s0 tclass=dir permissive=0
+[    2.734160] init: Service 'vendor.citadel_provision' (pid 842) exited with status 0
+[    2.741963] ueventd: firmware: loading 'paintbox-jqs.fw' for '/devices/platform/soc/1c08000.qcom,pcie/pci0001:00/0001:00:00.0/0001:01:00.0/abc-pcie-ipu/firmware/paintbox-jqs.fw'
+[    2.746710] subsys-restart: __subsystem_get(): Changing subsys fw_name to modem
+[    2.747506] ipa-wan ipa3_lcl_mdm_ssr_notifier_cb:2963 IPA received MPSS BEFORE_POWERUP
+[    2.747516] ipa-wan ipa3_lcl_mdm_ssr_notifier_cb:2972 IPA BEFORE_POWERUP handling is complete
+[    2.748746] ueventd: firmware: loading 'modem.mdt' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.mdt'
+[    2.750621] healthd: Unknown power supply type 'BMS'
+[    2.750901] healthd: Unknown power supply type 'Main'
+[    2.755763] ueventd: loading /devices/platform/soc/1c08000.qcom,pcie/pci0001:00/0001:00:00.0/0001:01:00.0/abc-pcie-ipu/firmware/paintbox-jqs.fw took 13ms
+[    2.756226] iommu: Adding device ipu-iommu to group 53
+[    2.756387] iommu: Adding device paintbox-ipu to group 53
+[    2.757616] airbrush-ddr airbrush-ddr: Airbrush Revision: B0
+[    2.757698] ab-ddr: freq: 0, sram_train_base: 0x20820
+[    2.760039] init: processing action (persist.vendor.modem.esim.reset=done && persist.vendor.se.pixel_aram=removed) from (/vendor/etc/init/hw/init.sm8150.rc:655)
+[    2.760821] abc,airbrush-sm soc:abc-sm: asv_ver:2, ipu_ro:7918 ipu_uv:700000, tpu_ro:6091 tpu_uv:743750, final_uv:743750
+[    2.761706] MSI Irq number is : 7
+[    2.762105] subsys-pil-tz 4080000.qcom,mss: modem: loading from 0x000000008dc00000 to 0x0000000099000000
+[    2.762262] abc,airbrush-sm soc:abc-sm: AB state changed to 409
+[    2.762418] abc-pcie-ipu abc-pcie-ipu: DRAM data will be lost; please free ringbuffer
+[    2.762430] abc-pcie-ipu abc-pcie-ipu: DRAM data is lost; suggest double check whether ringbuffer has been freed
+[    2.763129] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.mdt took 14ms
+[    2.763956] servloc: service_locator_new_server: Connection established with the Service locator
+[    2.763967] servloc: init_service_locator: Service locator initialized
+[    2.767619] healthd: battery l=99 v=4352 t=28.2 h=2 st=4 c=-1 fc=2719000 cc=12 chg=
+[    2.768425] ADSPRPC: audio_pdr_adsprpc is uninitialzed
+[    2.787359] abc,airbrush-sm soc:abc-sm: AB state changed to 0
+[    2.789918] ueventd: firmware: loading 'modem.b02' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b02'
+[    2.797173] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b02 took 7ms
+[    2.797971] ueventd: firmware: loading 'modem.b03' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b03'
+[    2.825969] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b03 took 28ms
+[    2.827285] ueventd: firmware: loading 'modem.b04' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b04'
+[    2.827568] google,overheat_mitigation soc:google,overheat_mitigation: Update USB port temp:287
+[    2.827583] google,overheat_mitigation soc:google,overheat_mitigation: USB is connected
+[    2.857764] type=1400 audit(1653633586.779:19): avc: denied { search } for comm="CitadelProvisio" name="msm_subsys" dev="sysfs" ino=30390 scontext=u:r:citadel_provision:s0 tcontext=u:object_r:sysfs_msm_subsys:s0 tclass=dir permissive=0
+[    2.857781] type=1400 audit(1653633586.916:20): avc: denied { search } for comm="thermal-engine" name="esoc" dev="sysfs" ino=51087 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_esoc:s0 tclass=dir permissive=0 b/124250714
+[    2.857878] type=1400 audit(1653633586.916:20): avc: denied { search } for comm="thermal-engine" name="esoc" dev="sysfs" ino=51087 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_esoc:s0 tclass=dir permissive=0 b/124250714
+[    2.857885] type=1400 audit(1653633586.916:21): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56555 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.857949] type=1400 audit(1653633586.916:21): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56555 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.857955] type=1400 audit(1653633586.916:22): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56433 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858019] type=1400 audit(1653633586.916:22): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56433 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858024] type=1400 audit(1653633586.916:23): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56281 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858099] type=1400 audit(1653633586.916:23): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56281 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858105] type=1400 audit(1653633586.916:24): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56137 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858230] type=1400 audit(1653633586.916:24): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56137 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858235] type=1400 audit(1653633586.916:25): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=55946 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858395] type=1400 audit(1653633586.916:25): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=55946 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858401] type=1400 audit(1653633586.916:26): avc: denied { search } for comm="thermal-engine" name="soc:qcom,faceauth_fws_b" dev="sysfs" ino=42445 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0
+[    2.858468] type=1400 audit(1653633586.916:26): avc: denied { search } for comm="thermal-engine" name="soc:qcom,faceauth_fws_b" dev="sysfs" ino=42445 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0
+[    2.858474] type=1400 audit(1653633586.916:27): avc: denied { search } for comm="thermal-engine" name="soc:qcom,faceauth_fws" dev="sysfs" ino=42432 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0
+[    2.858530] type=1400 audit(1653633586.916:27): avc: denied { search } for comm="thermal-engine" name="soc:qcom,faceauth_fws" dev="sysfs" ino=42432 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0
+[    2.858536] type=1400 audit(1653633586.916:28): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56494 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858589] type=1400 audit(1653633586.916:28): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56494 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858594] type=1400 audit(1653633586.916:29): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56350 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858656] type=1400 audit(1653633586.916:29): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56350 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858660] type=1400 audit(1653633586.916:30): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56220 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858794] type=1400 audit(1653633586.916:30): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56220 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.858799] type=1400 audit(1653633586.916:31): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56046 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.859610] type=1400 audit(1653633586.916:31): avc: denied { read } for comm="thermal-engine" name="name" dev="sysfs" ino=56046 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_ssr:s0 tclass=file permissive=0 b/124250714
+[    2.859615] type=1400 audit(1653633586.916:32): avc: denied { read } for comm="thermal-engine" name="kgsl" dev="sysfs" ino=57312 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 b/124250714
+[    2.859705] type=1400 audit(1653633586.916:32): avc: denied { read } for comm="thermal-engine" name="kgsl" dev="sysfs" ino=57312 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 b/124250714
+[    2.859709] type=1400 audit(1653633586.916:33): avc: denied { read } for comm="thermal-engine" name="devfreq" dev="sysfs" ino=51048 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 b/124250714
+[    2.860268] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b04 took 33ms
+[    2.860358] dsi_backlight_update_status:443: req:98 bl:1569 state:0x0
+[    2.865567] ueventd: firmware: loading 'modem.b05' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b05'
+[    2.874044] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b05 took 8ms
+[    2.875485] ueventd: firmware: loading 'modem.b06' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b06'
+[    2.893914] logd: logdr: UID=1036 GID=1007 PID=838 b tail=0 logMask=ff pid=0 start=1653633565756752000ns timeout=0ns
+[    2.899935] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b06 took 24ms
+[    2.901400] ueventd: firmware: loading 'modem.b07' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b07'
+[    2.904848] google_charger: usbchg=USB typec=C usbv=4651 usbc=718 usbMv=5000 usbMc=500
+[    2.904933] sm8150_bms: MSC_PCS chg_state=fbb01030001 [0x1:1:3:4027:0] chg= 
+[    2.904946] google_battery: MSC_DIN chg_state=fbb01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4027 icl=0
+[    2.907256] google_battery: MSC_LAST vbatt=4352031 ibatt=-1562 fv_uv=4400000
+[    2.907271] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[    2.907278] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[    2.907305] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 2000 ms (0)
+[    2.908396] type=1400 audit(1653633586.916:33): avc: denied { read } for comm="thermal-engine" name="devfreq" dev="sysfs" ino=51048 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 b/124250714
+[    2.908421] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b07 took 7ms
+[    2.908428] type=1400 audit(1653633586.963:34): avc: denied { search } for comm="thermal-engine" name="leds" dev="sysfs" ino=50663 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_leds:s0 tclass=dir permissive=0 b/124250714
+[    2.908581] type=1400 audit(1653633586.963:34): avc: denied { search } for comm="thermal-engine" name="leds" dev="sysfs" ino=50663 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_leds:s0 tclass=dir permissive=0 b/124250714
+[    2.908606] type=1400 audit(1653633586.963:35): avc: denied { search } for comm="thermal-engine" name="battery" dev="sysfs" ino=72214 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_batteryinfo:s0 tclass=dir permissive=0 b/124250714
+[    2.908838] google_charger: usbchg=USB typec=C usbv=4650 usbc=1144 usbMv=5000 usbMc=500
+[    2.908914] sm8150_bms: MSC_PCS chg_state=fbb01030001 [0x1:1:3:4027:0] chg= 
+[    2.908921] google_battery: MSC_DIN chg_state=fbb01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4027 icl=0
+[    2.909591] type=1400 audit(1653633586.963:35): avc: denied { search } for comm="thermal-engine" name="battery" dev="sysfs" ino=72214 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_batteryinfo:s0 tclass=dir permissive=0 b/124250714
+[    2.909617] type=1400 audit(1653633586.966:36): avc: denied { read } for comm="thermal-engine" name="virtual" dev="sysfs" ino=29988 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 b/124250714
+[    2.910104] ueventd: firmware: loading 'modem.b08' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b08'
+[    2.911176] google_battery: MSC_LAST vbatt=4352031 ibatt=-1562 fv_uv=4400000
+[    2.911183] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[    2.911186] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[    2.911198] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 2000 ms (0)
+[    2.929384] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b08 took 19ms
+[    2.939497] ueventd: firmware: loading 'modem.b09' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b09'
+[    2.942409] init: Received control message 'interface_start' for 'android.frameworks.sensorservice@1.0::ISensorManager/default' from pid: 559 (/system/bin/hwservicemanager)
+[    2.942432] init: Could not find 'android.frameworks.sensorservice@1.0::ISensorManager/default' for ctl.interface_start
+[    2.942483] init: Received control message 'interface_start' for 'android.frameworks.sensorservice@1.0::ISensorManager/default' from pid: 559 (/system/bin/hwservicemanager)
+[    2.942490] init: Could not find 'android.frameworks.sensorservice@1.0::ISensorManager/default' for ctl.interface_start
+[    2.945966] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b09 took 6ms
+[    2.946331] type=1400 audit(1653633587.003:76): avc: denied { read } for comm="thermal-engine" name="virtual" dev="sysfs" ino=29988 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 b/124250714 duplicate messages suppressed
+[    2.946345] type=1400 audit(1653633587.003:77): avc: denied { search } for comm="thermal-engine" name="soc0" dev="sysfs" ino=72658 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_soc:s0 tclass=dir permissive=0 b/124250714
+[    2.948637] type=1400 audit(1653633587.003:77): avc: denied { search } for comm="thermal-engine" name="soc0" dev="sysfs" ino=72658 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:sysfs_soc:s0 tclass=dir permissive=0 b/124250714
+[    2.948819] type=1400 audit(1653633587.006:78): avc: denied { search } for comm="imsdatadaemon" name="soc:qcom,faceauth_fws_b" dev="sysfs" ino=42445 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.948962] type=1400 audit(1653633587.006:78): avc: denied { search } for comm="imsdatadaemon" name="soc:qcom,faceauth_fws_b" dev="sysfs" ino=42445 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.948971] type=1400 audit(1653633587.006:79): avc: denied { search } for comm="imsdatadaemon" name="soc:qcom,faceauth_fws" dev="sysfs" ino=42432 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.950920] ueventd: firmware: loading 'modem.b10' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b10'
+[    2.951866] type=1400 audit(1653633587.006:79): avc: denied { search } for comm="imsdatadaemon" name="soc:qcom,faceauth_fws" dev="sysfs" ino=42432 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.951879] type=1400 audit(1653633587.009:80): avc: denied { search } for comm="imsdatadaemon" name="soc:qcom,faceauth_fws_b" dev="sysfs" ino=42445 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.951946] type=1400 audit(1653633587.009:80): avc: denied { search } for comm="imsdatadaemon" name="soc:qcom,faceauth_fws_b" dev="sysfs" ino=42445 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.951953] type=1400 audit(1653633587.009:81): avc: denied { search } for comm="imsdatadaemon" name="soc:qcom,faceauth_fws" dev="sysfs" ino=42432 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.959019] type=1400 audit(1653633587.009:81): avc: denied { search } for comm="imsdatadaemon" name="soc:qcom,faceauth_fws" dev="sysfs" ino=42432 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    2.959036] type=1400 audit(1653633587.016:82): avc: denied { write } for comm="thermal-engine" name="socket" dev="tmpfs" ino=3654 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:socket_device:s0 tclass=dir permissive=0 b/124250714
+[    2.971714] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b10 took 20ms
+[    2.984950] ueventd: firmware: loading 'modem.b11' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b11'
+[    2.990916] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b11 took 6ms
+[    2.992689] ueventd: firmware: loading 'modem.b12' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b12'
+[    3.000568] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b12 took 7ms
+[    3.002265] ueventd: firmware: loading 'modem.b13' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b13'
+[    3.009437] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b13 took 7ms
+[    3.011830] ueventd: firmware: loading 'modem.b14' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b14'
+[    3.018691] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b14 took 6ms
+[    3.019926] ueventd: firmware: loading 'modem.b15' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b15'
+[    3.024547] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b15 took 4ms
+[    3.027685] ueventd: firmware: loading 'modem.b16' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b16'
+[    3.039968] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b16 took 12ms
+[    3.040006] init: Service 'init-radio-sh' (pid 888) exited with status 0
+[    3.040757] QSEECOM: qseecom_load_app: App (haventkn) does'nt exist, loading apps for first time
+[    3.040991] ueventd: firmware: loading 'modem.b18' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b18'
+[    3.048610] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b18 took 7ms
+[    3.049471] ueventd: firmware: loading 'modem.b19' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b19'
+[    3.059029] QSEECOM: qseecom_load_app: App with id 3 (haventkn) now loaded
+[    3.059479] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b19 took 10ms
+[    3.060242] ueventd: firmware: loading 'modem.b20' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b20'
+[    3.065080] QSEECOM: qseecom_load_app: App (seccamdemo64) does'nt exist, loading apps for first time
+[    3.086002] QSEECOM: qseecom_load_app: App with id 4 (seccamdemo64) now loaded
+[    3.086509] type=1400 audit(1653633587.016:82): avc: denied { write } for comm="thermal-engine" name="socket" dev="tmpfs" ino=3654 scontext=u:r:thermal-engine:s0 tcontext=u:object_r:socket_device:s0 tclass=dir permissive=0 b/124250714
+[    3.086525] type=1400 audit(1653633587.143:83): avc: denied { read } for comm="android.hardwar" name="u:object_r:config_prop:s0" dev="tmpfs" ino=3844 scontext=u:r:hal_face_default:s0 tcontext=u:object_r:config_prop:s0 tclass=file permissive=0 b/134894179
+[    3.087337] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 559 (/system/bin/hwservicemanager)
+[    3.087357] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    3.087761] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 559 (/system/bin/hwservicemanager)
+[    3.087773] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    3.098096] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.100753] subsys-restart: __subsystem_get(): Changing subsys fw_name to venus
+[    3.103025] ueventd: firmware: loading 'venus.mdt' for '/devices/platform/soc/aae0000.qcom,venus/firmware/venus.mdt'
+[    3.109797] subsys-pil-tz aae0000.qcom,venus: venus: loading from 0x0000000099000000 to 0x0000000099500000
+[    3.110225] ueventd: loading /devices/platform/soc/aae0000.qcom,venus/firmware/venus.mdt took 7ms
+[    3.124321] ueventd: firmware: loading 'venus.b02' for '/devices/platform/soc/aae0000.qcom,venus/firmware/venus.b02'
+[    3.141342] ueventd: loading /devices/platform/soc/aae0000.qcom,venus/firmware/venus.b02 took 17ms
+[    3.143105] ueventd: firmware: loading 'venus.b03' for '/devices/platform/soc/aae0000.qcom,venus/firmware/venus.b03'
+[    3.145930] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b20 took 85ms
+[    3.146899] ueventd: loading /devices/platform/soc/aae0000.qcom,venus/firmware/venus.b03 took 3ms
+[    3.150911] init: Service 'vendor.init_citadel' (pid 843) exited with status 0
+[    3.151950] ueventd: firmware: loading 'modem.b21' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b21'
+[    3.152900] ueventd: firmware: loading 'venus.b04' for '/devices/platform/soc/aae0000.qcom,venus/firmware/venus.b04'
+[    3.154438] type=1400 audit(1653633587.143:83): avc: denied { read } for comm="android.hardwar" name="u:object_r:config_prop:s0" dev="tmpfs" ino=3844 scontext=u:r:hal_face_default:s0 tcontext=u:object_r:config_prop:s0 tclass=file permissive=0 b/134894179
+[    3.154456] type=1400 audit(1653633587.213:84): avc: denied { read } for comm="audio@2.0-servi" name="u:object_r:default_prop:s0" dev="tmpfs" ino=3868 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+[    3.158105] ueventd: loading /devices/platform/soc/aae0000.qcom,venus/firmware/venus.b04 took 5ms
+[    3.167134] subsys-pil-tz aae0000.qcom,venus: venus: Brought out of reset
+[    3.172941] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b21 took 21ms
+[    3.181288] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.181291] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.181299] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.181301] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.184054] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.184061] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.184079] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.184082] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.184132] msm_vidc:  err: This control 980928 is not supported yet
+[    3.185578] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.185664] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.188200] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.188207] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.188223] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.188226] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.188273] msm_vidc:  err: This control 980928 is not supported yet
+[    3.189481] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.189570] msm_vidc: info: Opening video instance: 0000000000000000, 0
+[    3.190429] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.190434] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.190448] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.190451] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.190848] msm_vidc:  err: This control 980927 is not supported yet
+[    3.191780] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.191859] msm_vidc: info: Opening video instance: 0000000000000000, 0
+[    3.192550] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.192554] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.192569] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.192572] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.192785] msm_vidc:  err: This control 980927 is not supported yet
+[    3.193660] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.193734] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.195315] ueventd: firmware: loading 'modem.b23' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b23'
+[    3.195980] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.195985] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.195999] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.196003] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.196054] msm_vidc:  err: This control 980928 is not supported yet
+[    3.197207] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.197292] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.197580] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b23 took 2ms
+[    3.200135] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.200138] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.200146] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.200148] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.200180] msm_vidc:  err: This control 980928 is not supported yet
+[    3.201305] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.201395] msm_vidc: info: Opening video instance: 0000000000000000, 0
+[    3.201783] ueventd: firmware: loading 'modem.b24' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b24'
+[    3.202249] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.202252] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.202259] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.202261] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.202573] msm_vidc:  err: This control 980927 is not supported yet
+[    3.203246] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.203317] msm_vidc: info: Opening video instance: 0000000000000000, 0
+[    3.204014] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.204017] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.204024] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.204026] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.204231] msm_vidc:  err: This control 980927 is not supported yet
+[    3.205113] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.205199] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.206098] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.206100] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.206106] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.206107] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.206135] msm_vidc:  err: This control 980928 is not supported yet
+[    3.206891] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.206962] msm_vidc: info: Opening video instance: 0000000000000000, 0
+[    3.207570] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.207573] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.207579] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.207580] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.208498] msm_vidc:  err: This control 980927 is not supported yet
+[    3.208743] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 559 (/system/bin/hwservicemanager)
+[    3.208782] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    3.208994] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 559 (/system/bin/hwservicemanager)
+[    3.209005] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    3.209135] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.209215] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.210045] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.210047] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.210053] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.210055] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.210079] msm_vidc:  err: This control 980928 is not supported yet
+[    3.216500] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.216590] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.217535] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.217538] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.217546] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.217548] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.217570] msm_vidc:  err: This control 980928 is not supported yet
+[    3.218317] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.292636] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b24 took 91ms
+[    3.293575] ueventd: firmware: loading 'modem.b25' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b25'
+[    3.298891] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b25 took 5ms
+[    3.299956] ueventd: firmware: loading 'modem.b26' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b26'
+[    3.302108] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b26 took 2ms
+[    3.302882] ueventd: firmware: loading 'modem.b27' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b27'
+[    3.322017] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b27 took 19ms
+[    3.324095] ueventd: firmware: loading 'modem.b28' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b28'
+[    3.342284] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b28 took 18ms
+[    3.342654] ueventd: firmware: loading 'modem.b29' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b29'
+[    3.347427] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b29 took 5ms
+[    3.347819] ueventd: firmware: loading 'modem.b30' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b30'
+[    3.351096] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b30 took 3ms
+[    3.351318] ueventd: firmware: loading 'modem.b31' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b31'
+[    3.353079] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[19][icp][0] comp[40000000], comp_ab[40000000], uncomp[40000000]
+[    3.353796] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[18][bps][0] comp[1024], comp_ab[40000000], uncomp[1024]
+[    3.354255] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[14][ipe][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    3.354938] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[15][ipe][1] comp[1024], comp_ab[1024], uncomp[1024]
+[    3.356740] ueventd: firmware: loading 'CAMERA_ICP.elf' for '/devices/platform/soc/ac00000.qcom,a5/firmware/CAMERA_ICP.elf'
+[    3.357053] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b31 took 5ms
+[    3.369483] ueventd: loading /devices/platform/soc/ac00000.qcom,a5/firmware/CAMERA_ICP.elf took 12ms
+[    3.379972] CAM_INFO: CAM-ICP: cam_icp_mgr_process_dbg_buf: 1922 FW_DBG:CICP_FW_E : HFI  :QC_IMAGE_VERSION_STRING=CICP.FW.1.0-00064,OEM_IMAGE_VERSION_STRING=CRM,BUILD_TIME: Feb  5 2019 21:45:06,CACHE_ENABLED at icphostinterface.c:636
+[    3.379973] CAM_INFO: CAM-ICP: cam_icp_mgr_hw_open: 3091 FW download done successfully
+[    3.379982] CAM_INFO: CAM-ICP: cam_icp_mgr_process_dbg_buf: 1922 FW_DBG:CICP_FW_E : HFI  :ELF variant: CACHE-ENABLED:API_V1::USE_CDM_1_0: , API version: 0x100002e at icphostinterface.c:637
+[    3.497012] iaxxx-dev iaxxx_misc: action 1
+[    3.497667] iaxxx-odsp-celldrv iaxxx-odsp-celldrv: Enter :iaxxx_odsp_dev_probe
+[    3.497986] iaxxx-odsp-celldrv iaxxx-odsp-celldrv: ODSP device cdev initialized.
+[    3.503360] iaxxx : producer_thread:722, producer_thread: producer thread wait for start\x0a
+[    3.504616] iaxxx-spi spi5.0: Efuse Boot0 Val 0xd2020101
+[    3.504622] iaxxx-spi spi5.0: Int OSC TRIM programmed: 1, osc calibration val: 0x69
+[    3.504626] iaxxx-spi spi5.0: iaxxx_get_efuse_boot_values() chip Layout Rev(B)
+[    3.504629] iaxxx-spi spi5.0: iaxxx_get_efuse_boot_values: cannot recognize revision
+[    3.504698] iaxxx-spi spi5.0: Efuse Boot1 Val 0x89
+[    3.504701] iaxxx-spi spi5.0: LDO_BG_TRIM: 1, LDO_BG_TRIM_DATA val: 0x09
+[    3.504703] iaxxx-spi spi5.0: LDO_0_TRIM: 0, LDO_1_TRIM: 0
+[    3.616905] iaxxx-spi spi5.0: addr 0x58018bb0 size 0x15e0
+[    3.616920] iaxxx-spi spi5.0: addr 0x5801c220 size 0x15e0
+[    3.616927] iaxxx-spi spi5.0: addr 0x5801a760 size 0x15e0
+[    3.616934] iaxxx-spi spi5.0: addr 0x5801a1a8 size 0x4b0
+[    3.616940] iaxxx-spi spi5.0: addr 0x5801d818 size 0x4b0
+[    3.616946] iaxxx-spi spi5.0: addr 0x5801bd58 size 0x4b0
+[    3.616953] iaxxx-spi spi5.0: addr 0x0 size 0x8000
+[    3.616959] iaxxx-spi spi5.0: addr 0x8000 size 0x8000
+[    3.616966] iaxxx-spi spi5.0: addr 0x10000 size 0x2000
+[    3.616972] iaxxx-spi spi5.0: addr 0x0 size 0xff
+[    3.616978] iaxxx-spi spi5.0: iaxxx_fw_update_work: done
+[    3.617161] iaxxx-spi spi5.0: IAXXX_AO_OSC_CTRL_ADDR: 0x169
+[    3.619187] iaxxx-dev iaxxx_misc: action 2
+[    3.626723] faceauth: Successfully register link listener for faceauth driver
+[    3.692703] subsys-pil-tz 4080000.qcom,mss: modem: Brought out of reset
+[    3.694231] init: Received control message 'start' for 'adbd' from pid: 836 (/system/bin/usbd)
+[    3.694345] init: starting service 'adbd'...
+[    3.695246] init: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[    3.696084] init: Service 'usbd' (pid 836) exited with status 0
+[    3.696754] binder: undelivered transaction 812, process died.
+[    3.739697] subsys-pil-tz 4080000.qcom,mss: Subsystem error monitoring/handling services are up
+[    3.739737] subsys-pil-tz 4080000.qcom,mss: modem: Power/Clock ready interrupt received
+[    3.739837] qcom,rpmh-regulator soc:rpmh-regulator-msslvl: TCS Busy, retrying RPMH message send
+[    3.740757] ipa-wan ipa3_lcl_mdm_ssr_notifier_cb:2975 IPA received MPSS AFTER_POWERUP
+[    3.740764] ipa ipa3_odl_pipe_open:334 adpl pipe not configured
+[    3.740766] ipa-wan ipa3_lcl_mdm_ssr_notifier_cb:2980 IPA AFTER_POWERUP handling is complete
+[    3.744051] rmt_storage:INFO:rmt_storage_open_cb: Processing: Open Request for /boot/modem_fs1!
+[    3.744789] rmt_storage:INFO:rmt_storage_open_cb: Processing: Open Request for /boot/modem_fs2!
+[    3.744953] rmt_storage:INFO:rmt_storage_open_cb: Processing: Open Request for /boot/modem_fsg!
+[    3.745106] rmt_storage:INFO:rmt_storage_open_cb: Processing: Open Request for /boot/modem_fsc!
+[    3.746314] rmt_storage:ERR:rmt_storage_alloc_buff_cb: elapsed time(ms) is 3746 < 5000
+[    3.746319] rmt_storage:INFO:kmsg_disable: Disabling KMSG-LOGS!
+[    3.751236] service-notifier: service_notifier_new_server: Connection established between QMI handle and 180 service
+[    3.751302] sysmon-qmi: ssctl_new_server: Connection established between QMI handle and modem's SSCTL service
+[    3.753043] read descriptors
+[    3.753074] read strings
+[    3.887760] diag: In diag_send_feature_mask_update, control channel is not open, p: 0, 0000000000000000
+[    3.942311] init: Received control message 'interface_start' for 'android.frameworks.sensorservice@1.0::ISensorManager/default' from pid: 559 (/system/bin/hwservicemanager)
+[    3.942493] init: Could not find 'android.frameworks.sensorservice@1.0::ISensorManager/default' for ctl.interface_start
+[    4.088675] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 559 (/system/bin/hwservicemanager)
+[    4.088697] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    4.090252] diag: In diag_send_peripheral_buffering_mode, buffering flag not set for 0
+[    4.099845] Sending QMI_IPA_INIT_MODEM_DRIVER_REQ_V01
+[    4.122196] ipa-wan ipa3_handle_indication_req:117 not send indication
+[    4.126144] ipa ipa3_uc_wdi_event_log_info_handler:375 WDI stats ofst=0x47150
+[    4.126185] ipa ipa3_uc_ntn_event_log_info_handler:40 NTN stats ofst=0x470e0
+[    4.128871] QMI_IPA_INIT_MODEM_DRIVER_REQ_V01 response received
+[    4.129522] ipa ipa3_uc_send_cmd_64b_param:679 Recevied status 0, Expected status 2
+[    4.209346] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 559 (/system/bin/hwservicemanager)
+[    4.209400] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    4.301983] diag: In diag_ioctl_set_buffering_mode, peripheral 1 doesn't support buffering
+[    4.304830] android_work: did not send uevent (0 0 0000000000000000)
+[    4.487989] google_charger: usbchg=USB typec=C usbv=4648 usbc=578 usbMv=5000 usbMc=500
+[    4.488094] sm8150_bms: MSC_PCS chg_state=fc501030001 [0x1:1:3:4037:0] chg= 
+[    4.488121] google_battery: MSC_DIN chg_state=fc501030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4037 icl=0
+[    4.494057] google_battery: MSC_DSG vbatt_idx:2->0 vbatt=4023437 ibatt=1232500 fv_uv=4400000 cv_cnt=3 ov_cnt=0
+[    4.494089] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:0->0, fv=4200000->4200000, cc_max=2825000
+[    4.494108] google_battery: MSC_VOTE fv_uv=4200000 cc_max=2825000 update_interval=30000
+[    4.494187] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=2730000, val=54 pause=0 (0)
+[    4.494221] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4200000, val=60 (0)
+[    4.494239] google_charger: MSC_CHG fv_uv=4400000->4200000 cc_max=1400000->2800000 rc=0
+[    4.494263] google_charger: MSC_CHG fv_uv=4200000, cc_max=2800000, rerun in 2000 ms (0)
+[    4.496341] healthd: battery l=99 v=4023 t=28.2 h=2 st=4 c=1232 fc=2719000 cc=12 chg=
+[    4.773619] msm-dwc3 a600000.ssusb: Avail curr from USB = 100
+[    4.852809] android_work: sent uevent USB_STATE=CONNECTED
+[    4.856545] android_work: sent uevent USB_STATE=DISCONNECTED
+[    4.942764] init: Received control message 'interface_start' for 'android.frameworks.sensorservice@1.0::ISensorManager/default' from pid: 559 (/system/bin/hwservicemanager)
+[    4.942809] init: Could not find 'android.frameworks.sensorservice@1.0::ISensorManager/default' for ctl.interface_start
+[    4.960509] android_work: sent uevent USB_STATE=CONNECTED
+[    4.962216] configfs-gadget gadget: high-speed config #1: b
+[    4.962310] msm-dwc3 a600000.ssusb: Avail curr from USB = 500
+[    4.962623] android_work: sent uevent USB_STATE=CONFIGURED
+[    5.008730] healthd: battery l=99 v=4023 t=28.2 h=2 st=4 c=1232 fc=2719000 cc=12 chg=u
+[    5.089310] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 559 (/system/bin/hwservicemanager)
+[    5.089361] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    5.210554] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 559 (/system/bin/hwservicemanager)
+[    5.210608] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    5.394313] google_charger: usbchg=USB typec=C usbv=4877 usbc=486 usbMv=5000 usbMc=500
+[    5.394515] sm8150_bms: MSC_PCS chg_state=1f40fdb01030011 [0x11:1:3:4059:500] chg=u
+[    5.394532] google_battery: MSC_DIN chg_state=1f40fdb01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4059 icl=500
+[    5.397596] google_battery: MSC_DSG vbatt_idx:0->0 vbatt=4023437 ibatt=1232500 fv_uv=4200000 cv_cnt=3 ov_cnt=0
+[    5.398141] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:0->0, fv=4200000->4200000, cc_max=2825000
+[    5.398155] google_battery: MSC_VOTE fv_uv=4200000 cc_max=2825000 update_interval=30000
+[    5.398201] google_charger: MSC_CHG fv_uv=4200000, cc_max=2800000, rerun in 2000 ms (0)
+[    5.409785] sm8150_bms: MSC_PCS chg_state=1f40fdb03010005 [0x5:3:1:4059:500] chg=u
+[    5.411177] healthd: battery l=99 v=4023 t=28.2 h=2 st=4 c=1232 fc=2719000 cc=12 chg=u
+[    5.411946] google_charger: usbchg=USB typec=C usbv=4879 usbc=488 usbMv=5000 usbMc=500
+[    5.412045] sm8150_bms: MSC_PCS chg_state=1f40fdb03010005 [0x5:3:1:4059:500] chg=u
+[    5.412060] google_battery: MSC_DIN chg_state=1f40fdb03010005 f=0x5 chg_s=Charging chg_t=Fast vchg=4059 icl=500
+[    5.416992] google_battery: MSC_DSG vbatt_idx:0->0 vbatt=4023437 ibatt=1232500 fv_uv=4200000 cv_cnt=3 ov_cnt=0
+[    5.417023] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:0->0, fv=4200000->4200000, cc_max=2825000
+[    5.417033] google_battery: MSC_VOTE fv_uv=4200000 cc_max=2825000 update_interval=30000
+[    5.417120] google_charger: MSC_CHG fv_uv=4200000, cc_max=2800000, rerun in 30000 ms (0)
+[    5.422525] healthd: battery l=99 v=4023 t=28.2 h=2 st=4 c=1232 fc=2719000 cc=12 chg=u
+[    5.442820] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[5][cci][1] comp[1024], comp_ab[1024], uncomp[1024]
+[    5.443243] CAM_INFO: CAM-SENSOR: cam_sensor_driver_cmd: 1032 Probe success,slot:0,slave_addr:0x20,sensor_id:0x363
+[    5.443364] CAM_INFO: CAM-SENSOR: getFWVersion: 380 ois_fwver=0x27, vcm_fwver=0x27\x0a
+[    5.468494] init: Received control message 'start' for 'idmap2d' from pid: 1301 (system_server)
+[    5.507868] healthd: battery l=99 v=4023 t=28.2 h=2 st=4 c=1232 fc=2719000 cc=12 chg=u
+[    5.512806] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    5.513314] CAM_INFO: CAM-SENSOR: cam_sensor_driver_cmd: 1032 Probe success,slot:2,slave_addr:0x20,sensor_id:0x520
+[    5.564893] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[5][cci][1] comp[1024], comp_ab[1024], uncomp[1024]
+[    5.566049] CAM_INFO: CAM-SENSOR: cam_sensor_driver_cmd: 1032 Probe success,slot:1,slave_addr:0x34,sensor_id:0x481
+[    5.566168] CAM_INFO: CAM-SENSOR: getFWVersion: 380 ois_fwver=0x27, vcm_fwver=0x27\x0a
+[    5.574268] healthd: battery l=99 v=4023 t=28.2 h=2 st=4 c=1232 fc=2719000 cc=12 chg=u
+[    5.583637] healthd: battery l=99 v=4023 t=28.2 h=2 st=4 c=1232 fc=2719000 cc=12 chg=u
+[    5.617998] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    5.618686] CAM_INFO: CAM-SENSOR: cam_sensor_driver_cmd: 1032 Probe success,slot:3,slave_addr:0xe4,sensor_id:0x7750
+[    5.654900] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    5.655600] CAM_INFO: CAM-SENSOR: cam_sensor_driver_cmd: 1032 Probe success,slot:4,slave_addr:0xe0,sensor_id:0x7750
+[    5.667335] init: Received control message 'interface_start' for 'android.hardware.input.classifier@1.0::IInputClassifier/default' from pid: 559 (/system/bin/hwservicemanager)
+[    5.667671] init: starting service 'vendor.input.classifier-1-0'...
+[    5.668573] init: Received control message 'interface_start' for 'android.hardware.input.classifier@1.0::IInputClassifier/default' from pid: 559 (/system/bin/hwservicemanager)
+[    5.680311] init: processing action (sys.sysctl.extra_free_kbytes=*) from (/init.rc:812)
+[    5.954803] ip_local_port_range: prefer different parity for start/end values.
+[    5.964037] init: processing action (vendor.ims.DATA_DAEMON_STATUS=1) from (/vendor/etc/init/hw/init.sm8150.rc:773)
+[    5.964252] init: Sending signal 9 to service 'vendor.ims_rtp_daemon' (pid 854) process group...
+[    5.969489] libprocessgroup: Successfully killed process cgroup uid 1001 pid 854 in 5ms
+[    5.969622] init: Service 'vendor.ims_rtp_daemon' (pid 854) received signal 9
+[    5.989656] init: Received control message 'stop' for 'vendor.imsrcsservice' from pid: 920 (/system/vendor/bin/imsdatadaemon)
+[    5.989670] init: Sending signal 9 to service 'vendor.imsrcsservice' (pid 851) process group...
+[    5.994871] libprocessgroup: Successfully killed process cgroup uid 1001 pid 851 in 5ms
+[    5.995398] init: Service 'vendor.imsrcsservice' (pid 851) received signal 9
+[    5.996995] init: Received control message 'start' for 'vendor.imsrcsservice' from pid: 920 (/system/vendor/bin/imsdatadaemon)
+[    5.997152] init: starting service 'vendor.imsrcsservice'...
+[    6.016655] init: Received control message 'stop' for 'vendor.imsrcsservice' from pid: 920 (/system/vendor/bin/imsdatadaemon)
+[    6.016671] init: Sending signal 9 to service 'vendor.imsrcsservice' (pid 1487) process group...
+[    6.021962] libprocessgroup: Successfully killed process cgroup uid 1001 pid 1487 in 5ms
+[    6.022257] init: Received control message 'start' for 'vendor.imsrcsservice' from pid: 920 (/system/vendor/bin/imsdatadaemon)
+[    6.022302] init: Service 'vendor.imsrcsservice' (pid 1487) received signal 9
+[    6.053527] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[5][cci][1] comp[1024], comp_ab[1024], uncomp[1024]
+[    6.089641] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 559 (/system/bin/hwservicemanager)
+[    6.089662] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    6.120875] service-notifier: root_service_service_ind_cb: Indication received from msm/modem/wlan_pd, state: 0x1fffffff, trans-id: 1
+[    6.121002] service-notifier: send_ind_ack: Indication ACKed for transid 1, service msm/modem/wlan_pd, instance 180!
+[    6.122339] icnss_qmi: QMI Server Connected: state: 0x980
+[    6.210596] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 559 (/system/bin/hwservicemanager)
+[    6.210629] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    6.269642] ipa-wan ipa3_wwan_ioctl:1856 dev(rmnet_data0) register to IPA
+[    6.727708] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    6.997562] Connection established with the WDA Service
+[    6.997665] Connection established with the DFC Service
+[    7.090141] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 559 (/system/bin/hwservicemanager)
+[    7.090173] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    7.120288] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[5][cci][1] comp[1024], comp_ab[1024], uncomp[1024]
+[    7.185510] sm8150_bms: MSC_PCS chg_state=1f4106704010009 [0x9:4:1:4199:500] chg=u
+[    7.190066] google_charger: usbchg=USB typec=C usbv=4966 usbc=247 usbMv=5000 usbMc=500
+[    7.190199] sm8150_bms: MSC_PCS chg_state=1f4106704010009 [0x9:4:1:4199:500] chg=u
+[    7.190224] google_battery: MSC_DIN chg_state=1f4106704010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4199 icl=500
+[    7.195501] google_battery: MSC_DSG vbatt_idx:0->0 vbatt=4023437 ibatt=1232500 fv_uv=4200000 cv_cnt=3 ov_cnt=0
+[    7.195518] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:0->0, fv=4200000->4200000, cc_max=2825000
+[    7.195539] google_battery: MSC_VOTE fv_uv=4200000 cc_max=2825000 update_interval=30000
+[    7.195583] google_charger: MSC_CHG fv_uv=4200000, cc_max=2800000, rerun in 30000 ms (0)
+[    7.198083] healthd: battery l=99 v=4023 t=28.2 h=2 st=4 c=1232 fc=2719000 cc=12 chg=u
+[    7.211228] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 559 (/system/bin/hwservicemanager)
+[    7.211252] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    7.643102] init: starting service 'vendor.ims_rtp_daemon'...
+[    7.681745] type=1400 audit(1653633587.213:84): avc: denied { read } for comm="audio@2.0-servi" name="u:object_r:default_prop:s0" dev="tmpfs" ino=3868 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+[    7.681761] type=1400 audit(1653633591.739:85): avc: denied { search } for comm="ims_rtp_daemon" name="soc0" dev="sysfs" ino=72658 scontext=u:r:hal_imsrtp:s0 tcontext=u:object_r:sysfs_soc:s0 tclass=dir permissive=0
+[    8.091062] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 559 (/system/bin/hwservicemanager)
+[    8.091101] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    8.102602] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    8.212761] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 559 (/system/bin/hwservicemanager)
+[    8.212783] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    8.228872] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    8.360387] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    8.370951] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: enable safety ic funciton, safety_ic_owner 0
+[    8.371447] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: laser driver mode has been set to 0x2
+[    8.371592] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: Silego status: 0xc0
+[    8.376599] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: Silego under fault condition, irq: 299
+[    8.376641] CAM_INFO: CAM-CRM: cam_req_mgr_update_safety_ic_status: 639 change laser status from 0 to 2
+[    8.383955] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: disable safety ic function, safety_ic_owner: 0
+[    8.389368] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: silego self test result: 1
+[    8.398013] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    8.407444] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: enable safety ic funciton, safety_ic_owner 1
+[    8.407934] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: laser driver mode has been set to 0x2
+[    8.408076] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: Silego status: 0xc0
+[    8.413096] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: Silego under fault condition, irq: 299
+[    8.416779] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: disable safety ic function, safety_ic_owner: 1
+[    8.422969] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: silego self test result: 1
+[    8.978222] icnss: WLAN FW is ready: 0xd87
+[    8.978385] qcom,rpmh-regulator soc:rpmh-regulator-ldoa1: TCS Busy, retrying RPMH message send
+[    9.109321] QSEECOM: qseecom_load_app: App (autocal) does'nt exist, loading apps for first time
+[    9.139219] QSEECOM: qseecom_load_app: App with id 5 (autocal) now loaded
+[   11.000418] init: starting service 'vendor.imsrcsservice'...
+[   15.573513] init: Received control message 'stop' for 'idmap2d' from pid: 1301 (system_server)
+[   15.573554] init: Sending signal 9 to service 'idmap2d' (pid 864) process group...
+[   15.578898] libprocessgroup: Successfully killed process cgroup uid 1000 pid 864 in 5ms
+[   15.579492] init: Service 'idmap2d' (pid 864) received signal 9
+[   37.199422] google_charger: usbchg=USB typec=C usbv=5059 usbc=0 usbMv=5000 usbMc=500
+[   37.199595] sm8150_bms: MSC_PCS chg_state=1f410a404010009 [0x9:4:1:4260:500] chg=u
+[   37.199645] google_battery: MSC_DIN chg_state=1f410a404010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4260 icl=500
+[   37.203740] google_battery: MSC_DSG vbatt_idx:0->2 vbatt=4259531 ibatt=223125 fv_uv=4200000 cv_cnt=3 ov_cnt=0
+[   37.203796] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   37.203833] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   37.203948] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1365000, val=27 pause=0 (0)
+[   37.204000] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4400000, val=80 (0)
+[   37.204035] google_charger: MSC_CHG fv_uv=4200000->4400000 cc_max=2800000->1400000 rc=0
+[   37.204078] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   37.288781] sm8150_bms: MSC_PCS chg_state=1f410a403010015 [0x15:3:1:4260:500] chg=u
+[   37.294255] google_charger: usbchg=USB typec=C usbv=4871 usbc=488 usbMv=5000 usbMc=500
+[   37.294358] sm8150_bms: MSC_PCS chg_state=1f410a403010015 [0x15:3:1:4260:500] chg=u
+[   37.294376] google_battery: MSC_DIN chg_state=1f410a403010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4260 icl=500
+[   37.297159] healthd: battery l=99 v=4259 t=28.5 h=2 st=4 c=223 fc=2719000 cc=12 chg=u
+[   37.299056] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4259531 ibatt=223125 fv_uv=4400000 cv_cnt=3 ov_cnt=0
+[   37.299073] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   37.299086] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   37.299117] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   43.525721] read descriptors
+[   43.525775] read strings
+[   43.525812] read descriptors
+[   43.525854] read strings
+[   43.532245] acc_open
+[   43.532256] acc_release
+[   44.253472] binder: unexpected work type, 4, not freed
+[   44.253479] binder: undelivered TRANSACTION_COMPLETE
+[   44.253483] binder: undelivered transaction 10655, process died.
+[   44.255612] init: processing action (persist.sys.theme=1) from (/vendor/etc/init/hw/init.sm8150.rc:968)
+[   44.256929] init: starting service 'vendor.theme_clear'...
+[   44.269200] init: Service 'vendor.theme_clear' (pid 1924) exited with status 0
+[   44.273469] type=1400 audit(1653633591.739:85): avc: denied { search } for comm="ims_rtp_daemon" name="soc0" dev="sysfs" ino=72658 scontext=u:r:hal_imsrtp:s0 tcontext=u:object_r:sysfs_soc:s0 tclass=dir permissive=0
+[   44.273486] type=1400 audit(1653633628.329:86): avc: denied { read } for comm="face@1.0-servic" name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=3965 scontext=u:r:hal_face_default:s0 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 b/134894179
+[   45.046919] init: Service 'bootanim' (pid 603) exited with status 0
+[   45.252032] dsi_backlight_update_status:443: req:97 bl:1553 state:0x0
+[   45.257806] sdcardfs version 2.0
+[   45.257813] sdcardfs: dev_name -> /data/media
+[   45.257816] sdcardfs: options -> fsuid=1023,fsgid=1023,multiuser,derive_gid,default_normal,unshared_obb,mask=6,userid=0,gid=1015
+[   45.257820] sdcardfs: mnt -> 0000000000000000
+[   45.257842] sdcardfs: mounted on top of /data/media type f2fs
+[   45.258073] init: processing action (sys.boot_completed=1) from (/init.rc:803)
+[   45.258146] Remount options were mask=23,gid=9997 for vfsmnt 0000000000000000.
+[   45.258152] sdcardfs : options - debug:1
+[   45.258154] sdcardfs : options - gid:9997
+[   45.258156] sdcardfs : options - mask:23
+[   45.258215] Remount options were mask=7,gid=9997 for vfsmnt 0000000000000000.
+[   45.258218] sdcardfs : options - debug:1
+[   45.258220] sdcardfs : options - gid:9997
+[   45.258221] sdcardfs : options - mask:7
+[   45.258255] Remount options were mask=7,gid=9997 for vfsmnt 0000000000000000.
+[   45.258257] sdcardfs : options - debug:1
+[   45.258259] sdcardfs : options - gid:9997
+[   45.258261] sdcardfs : options - mask:7
+[   45.258704] init: starting service 'exec 14 (/bin/rm -rf /data/per_boot)'...
+[   45.259231] init: SVC_EXEC service 'exec 14 (/bin/rm -rf /data/per_boot)' pid 2281 (uid 1000 gid 1000+0 context default) started; waiting...
+[   45.262997] dsi_backlight_update_status:443: req:95 bl:1521 state:0x0
+[   45.272468] init: Service 'exec 14 (/bin/rm -rf /data/per_boot)' (pid 2281) exited with status 0 waiting took 0.013000 seconds
+[   45.272885] init: Setting per_boot key on /data/per_boot
+[   45.272917] init: Setting policy on /data/per_boot
+[   45.272944] init: Policy for /data/per_boot set to d8b10e85539a2f75 modes 127/4
+[   45.272958] init: processing action (sys.boot_completed=1) from (/vendor/etc/init/hw/init.sm8150.rc:545)
+[   45.276103] dsi_backlight_update_status:443: req:93 bl:1489 state:0x0
+[   45.285488] dsi_backlight_update_status:443: req:91 bl:1457 state:0x0
+[   45.296087] dsi_backlight_update_status:443: req:89 bl:1425 state:0x0
+[   45.307954] dsi_backlight_update_status:443: req:87 bl:1393 state:0x0
+[   45.318483] dsi_backlight_update_status:443: req:85 bl:1361 state:0x0
+[   45.326887] zram: setup backing device /dev/block/loop9
+[   45.326919] init: [libfs_mgr]Success to set /dev/block/loop9 to /sys/block/zram0/backing_dev
+[   45.329719] dsi_backlight_update_status:443: req:83 bl:1329 state:0x0
+[   45.330485] zram0: detected capacity change from 0 to 2147483648
+[   45.337379] mkswap: Swapspace size: 2097148k, UUID=4ae888ff-7ed4-4026-8ced-de876ce9b9e2
+[   45.337995] Adding 2097148k swap on /dev/block/zram0.  Priority:-2 extents:1 across:2097148k SS
+[   45.338202] init: Command 'swapon_all /vendor/etc/fstab.${ro.boot.hardware.platform}' action=sys.boot_completed=1 (/vendor/etc/init/hw/init.sm8150.rc:580) took 59ms and succeeded
+[   45.341105] dsi_backlight_update_status:443: req:81 bl:1297 state:0x0
+[   45.344729] selinux: SELinux: Skipping restorecon on directory(/data/system_ce/0)\x0a
+[   45.346948] init: Async property child exited with status 0
+[   45.348249] selinux: SELinux: Skipping restorecon on directory(/data/vendor_ce/0)\x0a
+[   45.348888] init: Async property child exited with status 0
+[   45.349984] selinux: SELinux: Skipping restorecon on directory(/data/misc_ce/0)\x0a
+[   45.355643] dsi_backlight_update_status:443: req:79 bl:1265 state:0x0
+[   45.363756] dsi_backlight_update_status:443: req:76 bl:1217 state:0x0
+[   45.366022] init: Async property child exited with status 0
+[   45.367512] init: processing action (sys.boot_completed=1) from (/vendor/etc/init/hw/init.sm8150.rc:664)
+[   45.367569] init: processing action (sys.boot_completed=1 && sys.logbootcomplete=1) from (/system/etc/init/bootstat.rc:78)
+[   45.367802] init: starting service 'exec 15 (/system/bin/bootstat --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)'...
+[   45.368323] init: processing action (sys.boot_completed=1) from (/system/etc/init/flags_health_check.rc:7)
+[   45.368862] init: processing action (sys.boot_completed=1) from (/system/etc/init/logd.rc:32)
+[   45.369148] init: starting service 'logd-auditctl'...
+[   45.369657] init: processing action (sys.boot_completed=1 && sys.wifitracing.started=0) from (/system/etc/init/wifi-events.rc:20)
+[   45.375468] dsi_backlight_update_status:443: req:74 bl:1185 state:0x0
+[   45.385642] init: Service 'exec 15 (/system/bin/bootstat --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)' (pid 2319) exited with status 0
+[   45.385720] init: Service 'logd-auditctl' (pid 2320) exited with status 0
+[   45.386436] dsi_backlight_update_status:443: req:72 bl:1153 state:0x0
+[   45.392601] init: processing action (sys.boot_completed=1) from (/vendor/etc/init/init.sm8150.userdebug.rc:17)
+[   45.392817] init: processing action (sys.boot_completed=1) from (/vendor/etc/init/init_dp.rc:1)
+[   45.393153] init: starting service 'init_dp'...
+[   45.394018] init: processing action (vendor.setup.power=1) from (/vendor/etc/init/hw/init.sm8150.power.rc:25)
+[   45.397605] dsi_backlight_update_status:443: req:70 bl:1121 state:0x0
+[   45.407641] devfreq-simple-dev soc:qcom,cdsp-cdsp-l3-lat: Successfully started CDSP L3 governor
+[   45.408841] dsi_backlight_update_status:443: req:68 bl:1089 state:0x0
+[   45.412685] init: processing action (sys.user.0.ce_available=true) from (/vendor/etc/init/init-ramoops.rc:1)
+[   45.413919] init: starting service 'vendor.ramoops_sh'...
+[   45.421013] dsi_backlight_update_status:443: req:66 bl:1057 state:0x0
+[   45.431209] dsi_backlight_update_status:443: req:64 bl:1025 state:0x0
+[   45.442619] dsi_backlight_update_status:443: req:62 bl:993 state:0x0
+[   45.442991] ramoops: Failed to decrypt -74
+[   45.448275] init: processing action (vendor.ramoops.decrypted=true) from (/vendor/etc/init/init-ramoops.rc:6)
+[   45.453996] dsi_backlight_update_status:443: req:60 bl:961 state:0x0
+[   45.454778] init: Service 'vendor.ramoops_sh' (pid 2331) exited with status 0
+[   45.468262] dsi_backlight_update_status:443: req:58 bl:929 state:0x0
+[   45.476866] dsi_backlight_update_status:443: req:56 bl:897 state:0x0
+[   45.488198] dsi_backlight_update_status:443: req:54 bl:865 state:0x0
+[   45.498514] dsi_backlight_update_status:443: req:52 bl:833 state:0x0
+[   45.511227] dsi_backlight_update_status:443: req:50 bl:801 state:0x0
+[   45.522863] dsi_backlight_update_status:443: req:48 bl:769 state:0x0
+[   45.531266] init: Service 'init_dp' (pid 2321) exited with status 0
+[   45.533073] dsi_backlight_update_status:443: req:46 bl:737 state:0x0
+[   45.543090] dsi_backlight_update_status:443: req:44 bl:705 state:0x0
+[   45.555984] dsi_backlight_update_status:443: req:42 bl:674 state:0x0
+[   45.566357] dsi_backlight_update_status:443: req:40 bl:642 state:0x0
+[   45.578336] dsi_backlight_update_status:443: req:38 bl:610 state:0x0
+[   45.588857] dsi_backlight_update_status:443: req:36 bl:578 state:0x0
+[   45.601392] dsi_backlight_update_status:443: req:34 bl:546 state:0x0
+[   45.611768] dsi_backlight_update_status:443: req:32 bl:514 state:0x0
+[   45.622717] dsi_backlight_update_status:443: req:30 bl:482 state:0x0
+[   45.633882] dsi_backlight_update_status:443: req:28 bl:450 state:0x0
+[   45.645337] dsi_backlight_update_status:443: req:26 bl:418 state:0x0
+[   45.656192] dsi_backlight_update_status:443: req:24 bl:386 state:0x0
+[   45.938309] st54j_se spi3.0: st54j_se_open: device_open = 1
+[   45.938320] st54j_se spi3.0: st54j_se_ioctl  Reset Request received!!
+[   45.943872] st54j_se spi3.0: st54j_se_ioctl sent Reset request on eSE
+[   45.994105] spi_geni a80000.spi: proto 1
+[   45.994516] spi_geni a80000.spi: tx_fifo 16 rx_fifo 16 tx_width 32
+[   46.034272] ### ST21NFC_SET_POLARITY_HIGH ###
+[   46.086730] init: Received control message 'interface_start' for 'android.hardware.secure_element@1.0::ISecureElement/SIM2' from pid: 559 (/system/bin/hwservicemanager)
+[   46.086763] init: Could not find 'android.hardware.secure_element@1.0::ISecureElement/SIM2' for ctl.interface_start
+[   47.520369] init: Service 'adbd' (pid 1233) exited with status 1
+[   47.520394] init: Sending signal 9 to service 'adbd' (pid 1233) process group...
+[   47.520561] libprocessgroup: Successfully killed process cgroup uid 0 pid 1233 in 0ms
+[   47.521224] init: starting service 'adbd'...
+[   47.523111] init: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[   47.533608] read descriptors
+[   47.533655] read strings
+[   47.705602] type=1400 audit(1653633628.329:86): avc: denied { read } for comm="face@1.0-servic" name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=3965 scontext=u:r:hal_face_default:s0 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 b/134894179
+[   47.706316] type=1400 audit(1653633631.763:87): avc: denied { read } for comm="facebook.katana" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   47.871229] type=1400 audit(1653633631.763:87): avc: denied { read } for comm="facebook.katana" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   47.872228] type=1400 audit(1653633631.929:88): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_cppdistract_cppdistract.so" dev="dm-5" ino=200531 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.876896] type=1400 audit(1653633631.929:88): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_cppdistract_cppdistract.so" dev="dm-5" ino=200531 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.877693] type=1400 audit(1653633631.936:89): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_museum_museum.so" dev="dm-5" ino=189856 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.881596] type=1400 audit(1653633631.936:89): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_museum_museum.so" dev="dm-5" ino=189856 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.882245] type=1400 audit(1653633631.939:90): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_sigmuxutils_sigmuxutils.so" dev="dm-5" ino=135743 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.890377] type=1400 audit(1653633631.939:90): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_sigmuxutils_sigmuxutils.so" dev="dm-5" ino=135743 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.893237] type=1400 audit(1653633631.949:91): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libbreakpad.so" dev="dm-5" ino=126826 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.897232] type=1400 audit(1653633631.949:91): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libbreakpad.so" dev="dm-5" ino=126826 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.897928] type=1400 audit(1653633631.956:92): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libglog.so" dev="dm-5" ino=1597007 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.910992] type=1400 audit(1653633631.956:92): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libglog.so" dev="dm-5" ino=1597007 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.911676] type=1400 audit(1653633631.969:93): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libdexload.so" dev="dm-5" ino=189657 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.935721] type=1400 audit(1653633631.969:93): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libdexload.so" dev="dm-5" ino=189657 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.938505] type=1400 audit(1653633631.993:94): avc: granted { execute } for comm="AppInit8" path="/data/data/com.facebook.katana/lib-compressed/liblive-query-jni.so" dev="dm-5" ino=189947 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.971151] type=1400 audit(1653633631.993:94): avc: granted { execute } for comm="AppInit8" path="/data/data/com.facebook.katana/lib-compressed/liblive-query-jni.so" dev="dm-5" ino=189947 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.971828] type=1400 audit(1653633632.026:95): avc: granted { execute } for comm="AppInit7" path="/data/data/com.facebook.katana/lib-compressed/libpreconnector.so" dev="dm-5" ino=189819 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   47.981878] audit: audit_lost=1 audit_rate_limit=5 audit_backlog_limit=64
+[   47.981896] audit: rate limit exceeded
+[   48.040611] android_work: sent uevent USB_STATE=DISCONNECTED
+[   48.292190] msm-dwc3 a600000.ssusb: Avail curr from USB = 100
+[   48.292455] android_work: did not send uevent (0 0 0000000000000000)
+[   48.374399] android_work: sent uevent USB_STATE=CONNECTED
+[   48.378564] android_work: sent uevent USB_STATE=DISCONNECTED
+[   48.480536] android_work: sent uevent USB_STATE=CONNECTED
+[   48.482079] configfs-gadget gadget: high-speed config #1: b
+[   48.482258] msm-dwc3 a600000.ssusb: Avail curr from USB = 500
+[   48.483234] android_work: sent uevent USB_STATE=CONFIGURED
+[   48.536772] healthd: battery l=99 v=4310 t=28.5 h=2 st=4 c=120 fc=2719000 cc=12 chg=u
+[   49.128531] type=1400 audit(1653633632.026:95): avc: granted { execute } for comm="AppInit7" path="/data/data/com.facebook.katana/lib-compressed/libpreconnector.so" dev="dm-5" ino=189819 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   49.129507] type=1400 audit(1653633633.186:138): avc: granted { execute } for comm="Thread-5" path="/data/data/com.facebook.katana/lib-compressed/libdistractutil.so" dev="dm-5" ino=1509944 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   49.159145] type=1400 audit(1653633633.186:138): avc: granted { execute } for comm="Thread-5" path="/data/data/com.facebook.katana/lib-compressed/libdistractutil.so" dev="dm-5" ino=1509944 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   49.159808] type=1400 audit(1653633633.216:139): avc: granted { execute } for comm="Thread-5" path="/data/data/com.facebook.katana/lib-compressed/libsigquit.so" dev="dm-5" ino=198920 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   49.245842] type=1400 audit(1653633633.216:139): avc: granted { execute } for comm="Thread-5" path="/data/data/com.facebook.katana/lib-compressed/libsigquit.so" dev="dm-5" ino=198920 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   49.246511] type=1400 audit(1653633633.303:140): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0 app=com.facebook.katana
+[   49.279167] type=1400 audit(1653633633.303:140): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0 app=com.facebook.katana
+[   49.280263] type=1400 audit(1653633633.336:141): avc: granted { execute } for comm="AppInit1" path="/data/data/com.facebook.katana/lib-compressed/libreliabilitymerged.so" dev="dm-5" ino=146772 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   49.357990] type=1400 audit(1653633633.336:141): avc: granted { execute } for comm="AppInit1" path="/data/data/com.facebook.katana/lib-compressed/libreliabilitymerged.so" dev="dm-5" ino=146772 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   49.358647] type=1400 audit(1653633633.416:142): avc: granted { execute } for comm="AppInit1" path="/data/data/com.facebook.katana/lib-compressed/libunwindstack_stream.so" dev="dm-5" ino=189816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   49.612758] audit: audit_lost=43 audit_rate_limit=5 audit_backlog_limit=64
+[   49.612779] audit: rate limit exceeded
+[   50.641111] type=1400 audit(1653633633.416:142): avc: granted { execute } for comm="AppInit1" path="/data/data/com.facebook.katana/lib-compressed/libunwindstack_stream.so" dev="dm-5" ino=189816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   50.642029] type=1400 audit(1653633634.699:152): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libard-upload.so" dev="dm-5" ino=189834 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   50.710726] type=1400 audit(1653633634.699:152): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libard-upload.so" dev="dm-5" ino=189834 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   50.714026] type=1400 audit(1653633634.769:153): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libIGL.so" dev="dm-5" ino=189700 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   50.719820] type=1400 audit(1653633634.769:153): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libIGL.so" dev="dm-5" ino=189700 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   50.720644] type=1400 audit(1653633634.776:154): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libard-shader-models-android.so" dev="dm-5" ino=169939 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   50.832247] type=1400 audit(1653633634.776:154): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libard-shader-models-android.so" dev="dm-5" ino=169939 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   50.832893] type=1400 audit(1653633634.889:155): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   50.924948] sh (3271): drop_caches: 3
+[   51.442765] dsi_backlight_update_status:443: req:23 bl:370 state:0x0
+[   51.451172] dsi_backlight_update_status:443: req:21 bl:338 state:0x0
+[   51.467779] dsi_backlight_update_status:443: req:18 bl:290 state:0x0
+[   51.478834] dsi_backlight_update_status:443: req:16 bl:258 state:0x0
+[   51.489596] dsi_backlight_update_status:443: req:14 bl:226 state:0x0
+[   51.500882] dsi_backlight_update_status:443: req:12 bl:194 state:0x0
+[   51.512494] dsi_backlight_update_status:443: req:10 bl:162 state:0x0
+[   51.523817] dsi_backlight_update_status:443: req:8 bl:130 state:0x0
+[   51.534292] dsi_backlight_update_status:443: req:6 bl:98 state:0x0
+[   53.368595] dsi_backlight_update_status:443: req:0 bl:0 state:0x0
+[   53.407022] dsi_backlight_early_dpms:778: power_mode:5 state:0x0
+[   53.513158] nbd: disagrees about version of symbol kmem_cache_alloc_trace
+[   53.513169] nbd: Unknown symbol kmem_cache_alloc_trace (err -22)
+[   53.513259] nbd: disagrees about version of symbol fput
+[   53.513262] nbd: Unknown symbol fput (err -22)
+[   53.513282] nbd: disagrees about version of symbol blk_cleanup_queue
+[   53.513285] nbd: Unknown symbol blk_cleanup_queue (err -22)
+[   53.513330] nbd: disagrees about version of symbol bd_set_size
+[   53.513333] nbd: Unknown symbol bd_set_size (err -22)
+[   53.513337] nbd: disagrees about version of symbol set_blocksize
+[   53.513364] nbd: Unknown symbol set_blocksize (err -22)
+[   53.513368] nbd: disagrees about version of symbol bdput
+[   53.513371] nbd: Unknown symbol bdput (err -22)
+[   53.513416] nbd: disagrees about version of symbol __invalidate_device
+[   53.513428] nbd: Unknown symbol __invalidate_device (err -22)
+[   53.618053] i2c_geni a84000.i2c: i2c error :-107
+[   53.618079] st21nfc_dev_write : i2c_master_send returned -107
+[   55.546724] type=1400 audit(1653633638.953:159): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana duplicate messages suppressed
+[   55.546772] type=1404 audit(1653633639.603:160): enforcing=0 old_enforcing=1 auid=4294967295 ses=4294967295
+[   55.922226] type=1404 audit(1653633639.603:160): enforcing=0 old_enforcing=1 auid=4294967295 ses=4294967295
+[   55.925220] type=1400 audit(1653633639.979:161): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[   55.925393] type=1400 audit(1653633639.979:161): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[   55.925983] type=1400 audit(1653633639.979:162): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[   56.225433] apexd: Found bundled key in package /system/apex/com.android.apex.cts.shim.apex
+[   56.226854] apexd: Found bundled key in package /system/apex/com.android.conscrypt.apex
+[   56.228353] apexd: Found bundled key in package /system/apex/com.android.media.apex
+[   56.229716] apexd: Found bundled key in package /system/apex/com.android.media.swcodec.apex
+[   56.231320] apexd: Found bundled key in package /system/apex/com.android.resolv.apex
+[   56.234312] apexd: Found bundled key in package /system/apex/com.android.runtime.debug.apex
+[   56.236880] apexd: Found bundled key in package /system/apex/com.android.tzdata.apex
+[   56.237635] apexd: Found bundled key in package /system/apex/com.android.runtime.debug.apex
+[   56.237884] apexd: Found bundled key in package /system/apex/com.android.media.swcodec.apex
+[   56.238100] apexd: Found bundled key in package /system/apex/com.android.apex.cts.shim.apex
+[   56.238309] apexd: Found bundled key in package /system/apex/com.android.media.apex
+[   56.238503] apexd: Found bundled key in package /system/apex/com.android.resolv.apex
+[   56.238703] apexd: Found bundled key in package /system/apex/com.android.tzdata.apex
+[   56.238913] apexd: Found bundled key in package /system/apex/com.android.conscrypt.apex
+[   56.239060] apexd: Can't open /product/apex for reading : No such file or directory
+[   57.083200] type=1400 audit(1653633639.979:162): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[   57.088031] type=1400 audit(1653633641.139:163): avc: granted { execute } for comm="Analytics-Micro" path="/data/data/com.facebook.katana/lib-compressed/libchipsetmerged.so" dev="dm-5" ino=198932 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   58.261577] type=1400 audit(1653633641.139:163): avc: granted { execute } for comm="Analytics-Micro" path="/data/data/com.facebook.katana/lib-compressed/libchipsetmerged.so" dev="dm-5" ino=198932 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   58.262431] type=1400 audit(1653633642.319:164): avc: granted { execute } for comm="CombinedTP6" path="/data/data/com.facebook.katana/lib-compressed/libreliablemediamonitor.so" dev="dm-5" ino=165218 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   58.268517] type=1400 audit(1653633642.319:164): avc: granted { execute } for comm="CombinedTP6" path="/data/data/com.facebook.katana/lib-compressed/libreliablemediamonitor.so" dev="dm-5" ino=165218 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   58.269352] type=1400 audit(1653633642.326:165): avc: granted { execute } for comm="CombinedTP6" path="/data/data/com.facebook.katana/lib-compressed/libtigonnativeauthedservice.so" dev="dm-5" ino=135809 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   58.330923] type=1400 audit(1653633642.326:165): avc: granted { execute } for comm="CombinedTP6" path="/data/data/com.facebook.katana/lib-compressed/libtigonnativeauthedservice.so" dev="dm-5" ino=135809 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   58.332440] type=1400 audit(1653633642.386:166): avc: granted { execute } for comm="CombinedTP3" path="/data/data/com.facebook.katana/lib-compressed/libmediacodechooks_jni.so" dev="dm-5" ino=200339 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   58.977260] type=1400 audit(1653633642.386:166): avc: granted { execute } for comm="CombinedTP3" path="/data/data/com.facebook.katana/lib-compressed/libmediacodechooks_jni.so" dev="dm-5" ino=200339 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   58.977989] type=1400 audit(1653633643.036:167): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[   58.978100] type=1400 audit(1653633643.036:167): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[   58.979207] type=1400 audit(1653633643.036:168): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[   59.255815] type=1400 audit(1653633643.036:168): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[   59.256513] type=1400 audit(1653633643.313:169): avc: denied { call } for comm="pool-21-thread-" scontext=u:r:untrusted_app:s0:c161,c256,c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=tv.twitch.android.app
+[   59.401431] selinux: avc:  received setenforce notice (enforcing=0)\x0a
+[   59.401703] init: Received control message 'start' for 'gsid' from pid: 1301 (system_server)
+[   59.402330] init: starting service 'gsid'...
+[   59.475871] init: Received control message 'stop' for 'gsid' from pid: 1301 (system_server)
+[   59.475949] init: Sending signal 9 to service 'gsid' (pid 3685) process group...
+[   59.483982] libprocessgroup: Successfully killed process cgroup uid 0 pid 3685 in 7ms
+[   59.485005] init: Service 'gsid' (pid 3685) received signal 9
+[   60.004011] type=1400 audit(1653633643.313:169): avc: denied { call } for comm="pool-21-thread-" scontext=u:r:untrusted_app:s0:c161,c256,c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=tv.twitch.android.app
+[   60.004740] type=1400 audit(1653633644.063:170): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[   60.004897] type=1400 audit(1653633644.063:170): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[   60.005768] type=1400 audit(1653633644.063:171): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[   60.008608] binder: undelivered TRANSACTION_COMPLETE
+[   60.008619] binder: undelivered transaction 61478, process died.
