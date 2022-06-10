@@ -1,0 +1,876 @@
+[   16.623810] type=1400 audit(1654588728.668:156): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   16.623852] type=1400 audit(1654588729.235:157): avc: denied { read } for comm="face@1.0-servic" name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=5336 scontext=u:r:hal_face_default:s0 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 b/134894179
+[   17.032825] type=1400 audit(1654588729.235:157): avc: denied { read } for comm="face@1.0-servic" name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=5336 scontext=u:r:hal_face_default:s0 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 b/134894179
+[   17.034537] type=1400 audit(1654588729.645:158): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libard-upload.so" dev="dm-5" ino=189834 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.058766] type=1400 audit(1654588729.645:158): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libard-upload.so" dev="dm-5" ino=189834 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.065294] type=1400 audit(1654588729.668:159): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libIGL.so" dev="dm-5" ino=189700 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.070949] type=1400 audit(1654588729.668:159): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libIGL.so" dev="dm-5" ino=189700 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.072449] type=1400 audit(1654588729.682:160): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libard-shader-models-android.so" dev="dm-5" ino=169939 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.088470] type=1400 audit(1654588729.682:160): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libard-shader-models-android.so" dev="dm-5" ino=169939 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.093496] type=1400 audit(1654588729.702:161): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   17.132642] dsi_backlight_update_status:443: req:0 bl:0 state:0x0
+[   17.164549] [ FTS ] fts_mode_handler: Sense OFF!
+[   17.164554] dsi_backlight_early_dpms:778: power_mode:5 state:0x0
+[   17.164911] [ FTS ] System resetting...
+[   17.196830] [ FTS ] READ EVENT = 43 13 00 00 00 00 00 02 
+[   17.196927] [ FTS ] READ EVENT = 43 0A 02 00 00 00 00 01 
+[   17.197024] [ FTS ] READ EVENT = 03 00 00 00 00 00 00 00 
+[   17.197032] [ FTS ] FOUND EVENT = 03 00 00 00 00 00 00 00 
+[   17.197040] [ FTS ] writeSysCmd: Command = A4 00 01 
+[   17.197045] [ FTS ] writeSysCmd: Writing Sys command...
+[   17.197202] [ FTS ] READ EVENT = 43 01 A4 00 01 00 00 00 
+[   17.197209] [ FTS ] FOUND EVENT = 43 01 A4 00 01 00 00 00 
+[   17.197214] [ FTS ] ECHO OK!
+[   17.197219] [ FTS ] writeSysCmd: FINISHED!
+[   17.197223] [ FTS ] FIFO flushed!
+[   17.197405] fts spi1.0: kernel releasing bus access from SLPI
+[   17.197711] init: Received control message 'stop' for 'idmap2d' from pid: 1337 (system_server)
+[   17.197726] init: Sending signal 9 to service 'idmap2d' (pid 925) process group...
+[   17.202974] libprocessgroup: Successfully killed process cgroup uid 1000 pid 925 in 5ms
+[   17.203340] init: Service 'idmap2d' (pid 925) received signal 9
+[   17.400449] i2c_geni a84000.i2c: i2c error :-107
+[   17.400463] st21nfc_dev_write : i2c_master_send returned -107
+[   17.412437] apexd: Found bundled key in package /system/apex/com.android.apex.cts.shim.apex
+[   17.412670] apexd: Found bundled key in package /system/apex/com.android.conscrypt.apex
+[   17.412840] apexd: Found bundled key in package /system/apex/com.android.media.apex
+[   17.412997] apexd: Found bundled key in package /system/apex/com.android.media.swcodec.apex
+[   17.413148] apexd: Found bundled key in package /system/apex/com.android.resolv.apex
+[   17.413298] apexd: Found bundled key in package /system/apex/com.android.runtime.debug.apex
+[   17.413490] apexd: Found bundled key in package /system/apex/com.android.tzdata.apex
+[   17.413701] apexd: Found bundled key in package /system/apex/com.android.runtime.debug.apex
+[   17.420638] apexd: Found bundled key in package /system/apex/com.android.media.swcodec.apex
+[   17.420907] apexd: Found bundled key in package /system/apex/com.android.apex.cts.shim.apex
+[   17.421058] apexd: Found bundled key in package /system/apex/com.android.media.apex
+[   17.421199] apexd: Found bundled key in package /system/apex/com.android.resolv.apex
+[   17.421343] apexd: Found bundled key in package /system/apex/com.android.tzdata.apex
+[   17.421470] apexd: Found bundled key in package /system/apex/com.android.conscrypt.apex
+[   17.421535] apexd: Can't open /product/apex for reading : No such file or directory
+[   19.589349] type=1400 audit(1654588731.718:163): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana duplicate messages suppressed
+[   19.590204] type=1400 audit(1654588732.202:164): avc: granted { execute } for comm="Analytics-Micro" path="/data/data/com.facebook.katana/lib-compressed/libchipsetmerged.so" dev="dm-5" ino=198932 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   20.133169] type=1400 audit(1654588732.202:164): avc: granted { execute } for comm="Analytics-Micro" path="/data/data/com.facebook.katana/lib-compressed/libchipsetmerged.so" dev="dm-5" ino=198932 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   20.134848] type=1400 audit(1654588732.745:165): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   20.226418] type=1400 audit(1654588732.745:165): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   20.227377] type=1400 audit(1654588732.838:166): avc: denied { read } for comm="Analytics-Micro" name="u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=5333 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=0 app=com.facebook.katana
+[   20.310694] init: Received control message 'start' for 'gsid' from pid: 1337 (system_server)
+[   20.311031] init: starting service 'gsid'...
+[   20.312470] type=1400 audit(1654588732.838:166): avc: denied { read } for comm="Analytics-Micro" name="u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=5333 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=0 app=com.facebook.katana
+[   20.313279] type=1400 audit(1654588732.925:167): avc: denied { search } for comm="Analytics-Micro" name="soc0" dev="sysfs" ino=72658 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:sysfs_soc:s0 tclass=dir permissive=0 app=com.facebook.katana
+[   20.313697] audit: audit_lost=50 audit_rate_limit=5 audit_backlog_limit=64
+[   20.313710] audit: rate limit exceeded
+[   20.378713] init: Received control message 'stop' for 'gsid' from pid: 1337 (system_server)
+[   20.378736] init: Sending signal 9 to service 'gsid' (pid 3927) process group...
+[   20.384051] libprocessgroup: Successfully killed process cgroup uid 0 pid 3927 in 5ms
+[   20.384979] init: Service 'gsid' (pid 3927) received signal 9
+[   20.987009] binder: undelivered TRANSACTION_COMPLETE
+[   20.987032] binder: undelivered transaction 72730, process died.
+[   22.173925] type=1400 audit(1654588732.928:172): avc: denied { search } for comm="Analytics-Micro" name="soc0" dev="sysfs" ino=72658 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:sysfs_soc:s0 tclass=dir permissive=0 app=com.facebook.katana duplicate messages suppressed
+[   22.175047] type=1400 audit(1654588734.788:181): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   22.661292] type=1400 audit(1654588734.788:181): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   22.662220] type=1400 audit(1654588735.275:182): avc: granted { execute } for comm="CombinedTP7" path="/data/data/com.facebook.katana/lib-compressed/libreliablemediamonitor.so" dev="dm-5" ino=165218 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   22.673651] type=1400 audit(1654588735.275:182): avc: granted { execute } for comm="CombinedTP7" path="/data/data/com.facebook.katana/lib-compressed/libreliablemediamonitor.so" dev="dm-5" ino=165218 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   22.674574] type=1400 audit(1654588735.288:183): avc: granted { execute } for comm="CombinedTP7" path="/data/data/com.facebook.katana/lib-compressed/libtigonnativeauthedservice.so" dev="dm-5" ino=135809 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   22.725231] type=1400 audit(1654588735.288:183): avc: granted { execute } for comm="CombinedTP7" path="/data/data/com.facebook.katana/lib-compressed/libtigonnativeauthedservice.so" dev="dm-5" ino=135809 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   22.726127] type=1400 audit(1654588735.338:184): avc: granted { execute } for comm="CombinedTP3" path="/data/data/com.facebook.katana/lib-compressed/libmediacodechooks_jni.so" dev="dm-5" ino=200339 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   23.184030] type=1400 audit(1654588735.338:184): avc: granted { execute } for comm="CombinedTP3" path="/data/data/com.facebook.katana/lib-compressed/libmediacodechooks_jni.so" dev="dm-5" ino=200339 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   23.184863] type=1400 audit(1654588735.798:185): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   23.903235] type=1400 audit(1654588735.798:185): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   23.904040] type=1400 audit(1654588736.515:186): avc: denied { read } for comm="ana:fwkstartlog" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   23.945021] type=1400 audit(1654588736.515:186): avc: denied { read } for comm="ana:fwkstartlog" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   23.945905] type=1400 audit(1654588736.558:187): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_cppdistract_cppdistract.so" dev="dm-5" ino=200531 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   23.946772] type=1400 audit(1654588736.558:187): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_cppdistract_cppdistract.so" dev="dm-5" ino=200531 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   23.954539] audit: audit_lost=58 audit_rate_limit=5 audit_backlog_limit=64
+[   23.954553] audit: rate limit exceeded
+[   23.960239] type=1400 audit(1654588736.558:188): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_museum_museum.so" dev="dm-5" ino=189856 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   23.960518] type=1400 audit(1654588736.558:188): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_museum_museum.so" dev="dm-5" ino=189856 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   23.971236] type=1400 audit(1654588736.562:189): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_sigmuxutils_sigmuxutils.so" dev="dm-5" ino=135743 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   23.971393] type=1400 audit(1654588736.562:189): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_sigmuxutils_sigmuxutils.so" dev="dm-5" ino=135743 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   23.983724] type=1400 audit(1654588736.562:190): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libbreakpad.so" dev="dm-5" ino=126826 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   28.170132] binder_alloc: 2272: binder_alloc_buf size 1056768 failed, no address space
+[   28.170152] binder_alloc: allocated: 21712 (num: 22 largest: 6032), free: 1018672 (num: 8 largest: 1014192)
+[   28.170162] binder: 2566:4997 transaction failed 29201/-28, size 1056768-0 line 3274
+[   28.175185] logd: logdr: UID=10052 GID=10052 PID=2566 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   29.608502] type=1400 audit(1654588736.562:190): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libbreakpad.so" dev="dm-5" ino=126826 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   29.609083] type=1400 audit(1654588742.222:213): avc: denied { search } for comm="IntentService[D" name="vendor" dev="tmpfs" ino=2262 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:mnt_vendor_file:s0 tclass=dir permissive=0 app=com.google.android.gms
+[   29.631077] type=1400 audit(1654588742.222:213): avc: denied { search } for comm="IntentService[D" name="vendor" dev="tmpfs" ino=2262 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:mnt_vendor_file:s0 tclass=dir permissive=0 app=com.google.android.gms
+[   29.631649] type=1400 audit(1654588742.245:214): avc: denied { getattr } for comm="IntentService[D" name="/" dev="sda8" ino=1 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:firmware_file:s0 tclass=filesystem permissive=0 app=com.google.android.gms
+[   29.831387] type=1400 audit(1654588742.245:214): avc: denied { getattr } for comm="IntentService[D" name="/" dev="sda8" ino=1 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:firmware_file:s0 tclass=filesystem permissive=0 app=com.google.android.gms
+[   29.834463] type=1400 audit(1654588742.445:215): avc: denied { read } for comm="pool-10-thread-" name="version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=0 app=com.kakao.talk
+[   29.870118] type=1400 audit(1654588742.445:215): avc: denied { read } for comm="pool-10-thread-" name="version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=0 app=com.kakao.talk
+[   29.871014] type=1400 audit(1654588742.478:216): avc: denied { read } for comm=".BOOT_COMPLETED" name="u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=5333 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+[   30.083474] type=1400 audit(1654588742.478:216): avc: denied { read } for comm=".BOOT_COMPLETED" name="u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=5333 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+[   30.084231] type=1400 audit(1654588742.695:217): avc: denied { read } for comm="DefaultDispatch" name="version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=0 app=com.kakao.talk
+[   30.146560] audit: audit_lost=80 audit_rate_limit=5 audit_backlog_limit=64
+[   30.146581] audit: rate limit exceeded
+[   31.150451] type=1400 audit(1654588742.695:217): avc: denied { read } for comm="DefaultDispatch" name="version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=0 app=com.kakao.talk
+[   31.151311] type=1400 audit(1654588743.765:220): avc: denied { read } for comm="com.kakao.talk" name="somaxconn" dev="proc" ino=80288 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_net:s0 tclass=file permissive=0 app=com.kakao.talk
+[   31.530688] logd: logdr: UID=10052 GID=10052 PID=2272 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   31.646618] logd: logdr: UID=10052 GID=10052 PID=2272 n tail=0 logMask=4 pid=0 start=1654588729931000000ns timeout=1654595944257245889ns
+[   32.928348] type=1400 audit(1654588743.765:220): avc: denied { read } for comm="com.kakao.talk" name="somaxconn" dev="proc" ino=80288 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_net:s0 tclass=file permissive=0 app=com.kakao.talk
+[   32.929026] type=1400 audit(1654588745.542:221): avc: denied { search } for comm="Binder:5105_2" name="vendor" dev="tmpfs" ino=2262 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:mnt_vendor_file:s0 tclass=dir permissive=0 app=com.google.android.gms
+[   32.933106] type=1400 audit(1654588745.542:221): avc: denied { search } for comm="Binder:5105_2" name="vendor" dev="tmpfs" ino=2262 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:mnt_vendor_file:s0 tclass=dir permissive=0 app=com.google.android.gms
+[   32.933781] type=1400 audit(1654588745.545:222): avc: denied { getattr } for comm="Binder:5105_2" name="/" dev="sda8" ino=1 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:firmware_file:s0 tclass=filesystem permissive=0 app=com.google.android.gms
+[   33.262193] binder: undelivered transaction 145681, process died.
+[   33.262210] binder: undelivered transaction 145682, process died.
+[   33.262269] binder: undelivered transaction 145679, process died.
+[   33.739193] logd: logdr: UID=10052 GID=10052 PID=2272 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   33.796295] dsi-ctrl:[_dsi_ctrl_setup_isr] [DSI_0] IRQ 541 registered
+[   33.798948] dsi_backlight_early_dpms:778: power_mode:0 state:0x2
+[   33.947864] dsi_backlight_update_status:443: req:0 bl:0 state:0x0
+[   33.958970] fts spi1.0: kernel requesting bus access from SLPI
+[   33.965788] [ FTS ] System resetting...
+[   33.969174] dsi_backlight_update_status:443: req:24 bl:386 state:0x0
+[   33.996827] [ FTS ] READ EVENT = 43 13 00 00 00 00 00 02 
+[   33.996929] [ FTS ] READ EVENT = 43 0A 02 00 00 00 00 01 
+[   33.997107] [ FTS ] READ EVENT = 03 00 00 00 00 00 00 00 
+[   33.997115] [ FTS ] FOUND EVENT = 03 00 00 00 00 00 00 00 
+[   33.997147] [ FTS ] fts_mode_handler: Sense ON!
+[   33.997217] [ FTS ] heatmap_enable
+[   33.997592] [ FTS ] fts_status_event_handler: Sense on Force cal = 01 00 00 00 00 01
+[   34.009448] [ FTS ] fts_status_event_handler: Received unknown status event = 43 13 00 00 00 00 00 00
+[   34.912760] binder: 2272:2821 transaction failed 29189/-22, size 164-0 line 3128
+[   35.183486] binder: 2272:2821 transaction failed 29189/-22, size 164-0 line 3128
+[   35.190902] binder: 2272:2796 transaction failed 29189/-22, size 164-0 line 3128
+[   35.399869] google_charger: usbchg=USB typec=C usbv=4920 usbc=381 usbMv=5000 usbMc=500
+[   35.399970] sm8150_bms: MSC_PCS chg_state=1f4106503010005 [0x5:3:1:4197:500] chg=u
+[   35.399982] google_battery: MSC_DIN chg_state=1f4106503010005 f=0x5 chg_s=Charging chg_t=Fast vchg=4197 icl=500
+[   35.402812] google_battery: MSC_DSG vbatt_idx:0->1 vbatt=4198906 ibatt=65625 fv_uv=4200000 cv_cnt=3 ov_cnt=0
+[   35.402824] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   35.402833] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+[   35.402872] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   35.402888] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+[   35.402895] google_charger: MSC_CHG fv_uv=4200000->4300000 cc_max=2800000->1975000 rc=0
+[   35.402906] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 30000 ms (0)
+[   35.517653] binder: 2272:5286 transaction failed 29189/-22, size 172-0 line 3128
+[   35.724765] binder: 2272:2821 transaction failed 29189/-22, size 164-0 line 3128
+[   35.931304] binder: 2272:2821 transaction failed 29189/-22, size 164-0 line 3128
+[   35.964867] binder: 2272:2796 transaction failed 29189/-22, size 164-0 line 3128
+[   36.015000] binder: 2272:2796 transaction failed 29189/-22, size 164-0 line 3128
+[   36.156244] binder: 2272:2821 transaction failed 29189/-22, size 164-0 line 3128
+[   39.162497] logd: logdr: UID=10052 GID=10052 PID=2272 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   39.836234] sm8150_bms: MSC_PCS chg_state=1f410c504010009 [0x9:4:1:4293:500] chg=u
+[   39.839641] google_charger: usbchg=USB typec=C usbv=4875 usbc=476 usbMv=5000 usbMc=500
+[   39.839760] sm8150_bms: MSC_PCS chg_state=1f410c504010009 [0x9:4:1:4293:500] chg=u
+[   39.839784] google_battery: MSC_DIN chg_state=1f410c504010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4293 icl=500
+[   39.845892] google_battery: MSC_ROUND: fv_uv=4325000 vtier=4300000 fv_uv_max=4386000 -> 4325000
+[   39.845910] google_battery: MSC_RAISE vt=4300000 vb=4288593 fv_uv=4300000->4325000
+[   39.845931] google_battery: MSC_WAIT vt=4300000 vb=4288593 fv_uv=4325000 ibatt=-268125 cv_cnt=2 ov_cnt=0
+[   39.847187] google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4325000->4325000, cc_max=1975000
+[   39.847206] google_battery: MSC_VOTE fv_uv=4325000 cc_max=1975000 update_interval=2000
+[   39.847296] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   39.847325] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4325000, val=72 (0)
+[   39.847339] google_charger: MSC_CHG fv_uv=4300000->4325000 cc_max=1975000->1975000 rc=0
+[   39.847365] google_charger: MSC_CHG fv_uv=4325000, cc_max=1975000, rerun in 2000 ms (0)
+[   39.850627] healthd: battery l=92 v=4288 t=28.1 h=2 st=4 c=-268 fc=2711000 cc=13 chg=u
+[   39.936202] sm8150_bms: MSC_PCS chg_state=1f410c503010015 [0x15:3:1:4293:500] chg=u
+[   39.941043] google_charger: usbchg=USB typec=C usbv=4877 usbc=487 usbMv=5000 usbMc=500
+[   39.941156] sm8150_bms: MSC_PCS chg_state=1f410c503010015 [0x15:3:1:4293:500] chg=u
+[   39.941174] google_battery: MSC_DIN chg_state=1f410c503010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4293 icl=500
+[   39.945201] healthd: battery l=92 v=4288 t=28.1 h=2 st=4 c=-268 fc=2711000 cc=13 chg=u
+[   39.945675] google_battery: MSC_ROUND: fv_uv=4304407 vtier=4300000 fv_uv_max=4386000 -> 4300000
+[   39.945686] google_battery: MSC_FAST vt=4300000 vb=4288593 fv_uv=4325000->4300000 vchrg=4293 cv_cnt=2
+[   39.945697] google_battery: MSC_WAIT vt=4300000 vb=4288593 fv_uv=4300000 ibatt=-268125 cv_cnt=1 ov_cnt=0
+[   39.945710] google_battery: MSC_LOGIC cv_cnt=1 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   39.945719] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+[   39.945771] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   39.945789] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+[   39.945797] google_charger: MSC_CHG fv_uv=4325000->4300000 cc_max=1975000->1975000 rc=0
+[   39.945809] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 30000 ms (0)
+[   40.356503] sm8150_bms: MSC_PCS chg_state=1f410c504010009 [0x9:4:1:4293:500] chg=u
+[   40.366666] google_charger: usbchg=USB typec=C usbv=4902 usbc=416 usbMv=5000 usbMc=500
+[   40.366911] sm8150_bms: MSC_PCS chg_state=1f410c504010009 [0x9:4:1:4293:500] chg=u
+[   40.366946] google_battery: MSC_DIN chg_state=1f410c504010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4293 icl=500
+[   40.368894] healthd: battery l=92 v=4284 t=28.1 h=2 st=4 c=-277 fc=2711000 cc=13 chg=u
+[   40.370100] google_battery: MSC_ROUND: fv_uv=4325000 vtier=4300000 fv_uv_max=4386000 -> 4325000
+[   40.370122] google_battery: MSC_RAISE vt=4300000 vb=4284375 fv_uv=4300000->4325000
+[   40.370142] google_battery: MSC_WAIT vt=4300000 vb=4284375 fv_uv=4325000 ibatt=-277500 cv_cnt=2 ov_cnt=0
+[   40.370165] google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4325000->4325000, cc_max=1975000
+[   40.370183] google_battery: MSC_VOTE fv_uv=4325000 cc_max=1975000 update_interval=2000
+[   40.370264] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   40.370301] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4325000, val=72 (0)
+[   40.370319] google_charger: MSC_CHG fv_uv=4300000->4325000 cc_max=1975000->1975000 rc=0
+[   40.370346] google_charger: MSC_CHG fv_uv=4325000, cc_max=1975000, rerun in 2000 ms (0)
+[   40.457156] sm8150_bms: MSC_PCS chg_state=1f410c503010015 [0x15:3:1:4293:500] chg=u
+[   40.463867] google_charger: usbchg=USB typec=C usbv=4885 usbc=488 usbMv=5000 usbMc=500
+[   40.464011] sm8150_bms: MSC_PCS chg_state=1f410c503010015 [0x15:3:1:4293:500] chg=u
+[   40.464053] google_battery: MSC_DIN chg_state=1f410c503010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4293 icl=500
+[   40.469922] google_battery: MSC_ROUND: fv_uv=4301750 vtier=4300000 fv_uv_max=4386000 -> 4300000
+[   40.469944] healthd: battery l=92 v=4291 t=28.1 h=2 st=4 c=-276 fc=2711000 cc=13 chg=u
+[   40.469967] google_battery: MSC_FAST vt=4300000 vb=4291250 fv_uv=4325000->4300000 vchrg=4293 cv_cnt=2
+[   40.469990] google_battery: MSC_WAIT vt=4300000 vb=4291250 fv_uv=4300000 ibatt=-276250 cv_cnt=1 ov_cnt=0
+[   40.470102] google_battery: MSC_LOGIC cv_cnt=1 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   40.470125] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+[   40.470343] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   40.470380] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+[   40.470634] google_charger: MSC_CHG fv_uv=4325000->4300000 cc_max=1975000->1975000 rc=0
+[   40.470666] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 30000 ms (0)
+[   40.824904] sm8150_bms: MSC_PCS chg_state=1f410c804010009 [0x9:4:1:4296:500] chg=u
+[   40.827779] google_charger: usbchg=USB typec=C usbv=4886 usbc=447 usbMv=5000 usbMc=500
+[   40.827898] sm8150_bms: MSC_PCS chg_state=1f410c804010009 [0x9:4:1:4296:500] chg=u
+[   40.827928] google_battery: MSC_DIN chg_state=1f410c804010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4296 icl=500
+[   40.834109] google_battery: MSC_ROUND: fv_uv=4325000 vtier=4300000 fv_uv_max=4386000 -> 4325000
+[   40.834127] google_battery: MSC_RAISE vt=4300000 vb=4290000 fv_uv=4300000->4325000
+[   40.834144] google_battery: MSC_WAIT vt=4300000 vb=4290000 fv_uv=4325000 ibatt=-301250 cv_cnt=2 ov_cnt=0
+[   40.834165] google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4325000->4325000, cc_max=1975000
+[   40.834180] google_battery: MSC_VOTE fv_uv=4325000 cc_max=1975000 update_interval=2000
+[   40.834259] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   40.834286] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4325000, val=72 (0)
+[   40.834300] google_charger: MSC_CHG fv_uv=4300000->4325000 cc_max=1975000->1975000 rc=0
+[   40.834322] google_charger: MSC_CHG fv_uv=4325000, cc_max=1975000, rerun in 2000 ms (0)
+[   40.838147] healthd: battery l=92 v=4290 t=28.1 h=2 st=4 c=-301 fc=2711000 cc=13 chg=u
+[   40.926567] sm8150_bms: MSC_PCS chg_state=1f410c803010015 [0x15:3:1:4296:500] chg=u
+[   40.932426] google_charger: usbchg=USB typec=C usbv=4870 usbc=487 usbMv=5000 usbMc=500
+[   40.932551] sm8150_bms: MSC_PCS chg_state=1f410c803010015 [0x15:3:1:4296:500] chg=u
+[   40.932579] google_battery: MSC_DIN chg_state=1f410c803010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4296 icl=500
+[   40.937700] google_battery: MSC_ROUND: fv_uv=4306000 vtier=4300000 fv_uv_max=4386000 -> 4300000
+[   40.937718] google_battery: MSC_FAST vt=4300000 vb=4290000 fv_uv=4325000->4300000 vchrg=4296 cv_cnt=2
+[   40.937734] google_battery: MSC_WAIT vt=4300000 vb=4290000 fv_uv=4300000 ibatt=-301250 cv_cnt=1 ov_cnt=0
+[   40.937751] google_battery: MSC_LOGIC cv_cnt=1 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   40.937764] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+[   40.937832] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   40.937856] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+[   40.937869] google_charger: MSC_CHG fv_uv=4325000->4300000 cc_max=1975000->1975000 rc=0
+[   40.937889] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 30000 ms (0)
+[   40.937897] healthd: battery l=92 v=4290 t=28.1 h=2 st=4 c=-301 fc=2711000 cc=13 chg=u
+[   41.120733] sm8150_bms: MSC_PCS chg_state=1f410c804010009 [0x9:4:1:4296:500] chg=u
+[   41.123623] google_charger: usbchg=USB typec=C usbv=4881 usbc=457 usbMv=5000 usbMc=500
+[   41.123776] sm8150_bms: MSC_PCS chg_state=1f410c804010009 [0x9:4:1:4296:500] chg=u
+[   41.123803] google_battery: MSC_DIN chg_state=1f410c804010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4296 icl=500
+[   41.131200] google_battery: MSC_STEADY vt=4300000 vb=4292500 fv_uv=4300000 margin=10000
+[   41.131224] google_battery: MSC_WAIT vt=4300000 vb=4292500 fv_uv=4300000 ibatt=-293125 cv_cnt=0 ov_cnt=0
+[   41.131262] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   41.131280] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+[   41.131350] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 2000 ms (0)
+[   41.133474] healthd: battery l=92 v=4292 t=28.1 h=2 st=4 c=-293 fc=2711000 cc=13 chg=u
+[   41.640500] sm8150_bms: MSC_PCS chg_state=1f410cb03010015 [0x15:3:1:4299:500] chg=u
+[   41.643106] google_charger: usbchg=USB typec=C usbv=4882 usbc=488 usbMv=5000 usbMc=500
+[   41.643247] sm8150_bms: MSC_PCS chg_state=1f410cb03010015 [0x15:3:1:4299:500] chg=u
+[   41.643265] google_battery: MSC_DIN chg_state=1f410cb03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4299 icl=500
+[   41.646995] healthd: battery l=92 v=4290 t=28.1 h=2 st=4 c=-275 fc=2711000 cc=13 chg=u
+[   41.651126] google_battery: MSC_ROUND: fv_uv=4309000 vtier=4300000 fv_uv_max=4386000 -> 4300000
+[   41.651137] google_battery: MSC_FAST vt=4300000 vb=4290000 fv_uv=4300000->4300000 vchrg=4299 cv_cnt=1
+[   41.651148] google_battery: MSC_WAIT vt=4300000 vb=4290000 fv_uv=4300000 ibatt=-275000 cv_cnt=0 ov_cnt=0
+[   41.651160] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   41.651168] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+[   41.651205] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 30000 ms (0)
+[   42.110844] sm8150_bms: MSC_PCS chg_state=1f410cb04010009 [0x9:4:1:4299:500] chg=u
+[   42.113726] google_charger: usbchg=USB typec=C usbv=4895 usbc=446 usbMv=5000 usbMc=500
+[   42.113848] sm8150_bms: MSC_PCS chg_state=1f410cb04010009 [0x9:4:1:4299:500] chg=u
+[   42.113877] google_battery: MSC_DIN chg_state=1f410cb04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4299 icl=500
+[   42.120606] google_battery: MSC_ROUND: fv_uv=4325000 vtier=4300000 fv_uv_max=4386000 -> 4325000
+[   42.120627] google_battery: MSC_RAISE vt=4300000 vb=4259062 fv_uv=4300000->4325000
+[   42.120646] google_battery: MSC_WAIT vt=4300000 vb=4259062 fv_uv=4325000 ibatt=-288125 cv_cnt=2 ov_cnt=0
+[   42.120668] google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4325000->4325000, cc_max=1975000
+[   42.120685] google_battery: MSC_VOTE fv_uv=4325000 cc_max=1975000 update_interval=2000
+[   42.120828] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   42.120857] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4325000, val=72 (0)
+[   42.120872] google_charger: MSC_CHG fv_uv=4300000->4325000 cc_max=1975000->1975000 rc=0
+[   42.120896] google_charger: MSC_CHG fv_uv=4325000, cc_max=1975000, rerun in 2000 ms (0)
+[   42.125496] healthd: battery l=92 v=4259 t=28.1 h=2 st=4 c=-288 fc=2711000 cc=13 chg=u
+[   42.212208] sm8150_bms: MSC_PCS chg_state=1f410cb03010015 [0x15:3:1:4299:500] chg=u
+[   42.219810] google_charger: usbchg=USB typec=C usbv=4879 usbc=488 usbMv=5000 usbMc=500
+[   42.219967] sm8150_bms: MSC_PCS chg_state=1f410cb03010015 [0x15:3:1:4299:500] chg=u
+[   42.220099] google_battery: MSC_DIN chg_state=1f410cb03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4299 icl=500
+[   42.221374] healthd: battery l=92 v=4292 t=28.1 h=2 st=4 c=-288 fc=2711000 cc=13 chg=u
+[   42.222922] google_battery: MSC_ROUND: fv_uv=4306344 vtier=4300000 fv_uv_max=4386000 -> 4300000
+[   42.222940] google_battery: MSC_FAST vt=4300000 vb=4292656 fv_uv=4325000->4300000 vchrg=4299 cv_cnt=2
+[   42.222959] google_battery: MSC_WAIT vt=4300000 vb=4292656 fv_uv=4300000 ibatt=-288125 cv_cnt=1 ov_cnt=0
+[   42.222976] google_battery: MSC_LOGIC cv_cnt=1 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   42.222990] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+[   42.223061] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   42.223085] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+[   42.223098] google_charger: MSC_CHG fv_uv=4325000->4300000 cc_max=1975000->1975000 rc=0
+[   42.223121] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 30000 ms (0)
+[   42.520290] sm8150_bms: MSC_PCS chg_state=1f410cd04010009 [0x9:4:1:4301:500] chg=u
+[   42.523591] google_charger: usbchg=USB typec=C usbv=4873 usbc=452 usbMv=5000 usbMc=500
+[   42.523752] sm8150_bms: MSC_PCS chg_state=1f410cd04010009 [0x9:4:1:4301:500] chg=u
+[   42.523787] google_battery: MSC_DIN chg_state=1f410cd04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4301 icl=500
+[   42.530507] google_battery: MSC_STEADY vt=4300000 vb=4292031 fv_uv=4300000 margin=10000
+[   42.530534] google_battery: MSC_WAIT vt=4300000 vb=4292031 fv_uv=4300000 ibatt=-279062 cv_cnt=0 ov_cnt=0
+[   42.530603] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   42.530651] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+[   42.530755] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 2000 ms (0)
+[   42.534133] healthd: battery l=92 v=4292 t=28.1 h=2 st=4 c=-279 fc=2711000 cc=13 chg=u
+[   44.532645] google_charger: usbchg=USB typec=C usbv=4890 usbc=492 usbMv=5000 usbMc=500
+[   44.533075] sm8150_bms: MSC_PCS chg_state=1f410cd04010009 [0x9:4:1:4301:500] chg=u
+[   44.533098] google_battery: MSC_DIN chg_state=1f410cd04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4301 icl=500
+[   44.538824] google_battery: MSC_STEADY vt=4300000 vb=4292031 fv_uv=4300000 margin=10000
+[   44.538852] google_battery: MSC_NYET ibatt=-284687 cc_next_max=1400000 t_cnt=1
+[   44.538877] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   44.538898] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+[   44.538965] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 2000 ms (0)
+[   46.541143] google_charger: usbchg=USB typec=C usbv=4906 usbc=405 usbMv=5000 usbMc=500
+[   46.541329] sm8150_bms: MSC_PCS chg_state=1f410cd04010009 [0x9:4:1:4301:500] chg=u
+[   46.541368] google_battery: MSC_DIN chg_state=1f410cd04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4301 icl=500
+[   46.545828] google_battery: MSC_ROUND: fv_uv=4325000 vtier=4300000 fv_uv_max=4386000 -> 4325000
+[   46.545856] google_battery: MSC_RAISE vt=4300000 vb=4288906 fv_uv=4300000->4325000
+[   46.545882] google_battery: MSC_WAIT vt=4300000 vb=4288906 fv_uv=4325000 ibatt=-262187 cv_cnt=2 ov_cnt=0
+[   46.545912] google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4325000->4325000, cc_max=1975000
+[   46.545934] google_battery: MSC_VOTE fv_uv=4325000 cc_max=1975000 update_interval=2000
+[   46.546036] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   46.546073] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4325000, val=72 (0)
+[   46.546094] google_charger: MSC_CHG fv_uv=4300000->4325000 cc_max=1975000->1975000 rc=0
+[   46.546125] google_charger: MSC_CHG fv_uv=4325000, cc_max=1975000, rerun in 2000 ms (0)
+[   46.713553] sm8150_bms: MSC_PCS chg_state=1f410cd03010015 [0x15:3:1:4301:500] chg=u
+[   46.720169] google_charger: usbchg=USB typec=C usbv=4879 usbc=487 usbMv=5000 usbMc=500
+[   46.720283] sm8150_bms: MSC_PCS chg_state=1f410cd03010015 [0x15:3:1:4301:500] chg=u
+[   46.720314] google_battery: MSC_DIN chg_state=1f410cd03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4301 icl=500
+[   46.724250] healthd: battery l=92 v=4292 t=28.1 h=2 st=4 c=-249 fc=2711000 cc=13 chg=u
+[   46.724373] google_battery: MSC_ROUND: fv_uv=4308969 vtier=4300000 fv_uv_max=4386000 -> 4300000
+[   46.724393] google_battery: MSC_FAST vt=4300000 vb=4292031 fv_uv=4325000->4300000 vchrg=4301 cv_cnt=2
+[   46.724412] google_battery: MSC_WAIT vt=4300000 vb=4292031 fv_uv=4300000 ibatt=-249687 cv_cnt=1 ov_cnt=0
+[   46.724431] google_battery: MSC_LOGIC cv_cnt=1 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   46.724447] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+[   46.724521] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   46.724547] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+[   46.724560] google_charger: MSC_CHG fv_uv=4325000->4300000 cc_max=1975000->1975000 rc=0
+[   46.724583] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 30000 ms (0)
+[   46.948296] sm8150_bms: MSC_PCS chg_state=1f410cd04010009 [0x9:4:1:4301:500] chg=u
+[   46.953893] google_charger: usbchg=USB typec=C usbv=4898 usbc=407 usbMv=5000 usbMc=500
+[   46.954021] sm8150_bms: MSC_PCS chg_state=1f410cd04010009 [0x9:4:1:4301:500] chg=u
+[   46.954055] google_battery: MSC_DIN chg_state=1f410cd04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4301 icl=500
+[   46.959342] google_battery: MSC_STEADY vt=4300000 vb=4292031 fv_uv=4300000 margin=10000
+[   46.959365] google_battery: MSC_WAIT vt=4300000 vb=4292031 fv_uv=4300000 ibatt=-249687 cv_cnt=0 ov_cnt=0
+[   46.959386] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   46.959401] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+[   46.959450] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 2000 ms (0)
+[   46.959454] healthd: battery l=92 v=4292 t=28.1 h=2 st=4 c=-249 fc=2711000 cc=13 chg=u
+[   48.961710] google_charger: usbchg=USB typec=C usbv=4886 usbc=450 usbMv=5000 usbMc=500
+[   48.961877] sm8150_bms: MSC_PCS chg_state=1f410cd04010009 [0x9:4:1:4301:500] chg=u
+[   48.961912] google_battery: MSC_DIN chg_state=1f410cd04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4301 icl=500
+[   48.966020] google_battery: MSC_STEADY vt=4300000 vb=4292031 fv_uv=4300000 margin=10000
+[   48.966049] google_battery: MSC_NYET ibatt=-268437 cc_next_max=1400000 t_cnt=2
+[   48.966075] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   48.966095] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+[   48.966149] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 2000 ms (0)
+[   50.018308] dsi_backlight_update_status:443: req:0 bl:0 state:0x0
+[   50.062023] dsi_backlight_early_dpms:778: power_mode:5 state:0x0
+[   50.062309] [ FTS ] fts_mode_handler: Sense OFF!
+[   50.062742] [ FTS ] System resetting...
+[   50.093514] [ FTS ] READ EVENT = 43 13 00 00 00 00 00 02 
+[   50.093664] [ FTS ] READ EVENT = 43 0A 02 00 00 00 00 01 
+[   50.093795] [ FTS ] READ EVENT = 03 00 00 00 00 00 00 00 
+[   50.093807] [ FTS ] FOUND EVENT = 03 00 00 00 00 00 00 00 
+[   50.093818] [ FTS ] writeSysCmd: Command = A4 00 01 
+[   50.093824] [ FTS ] writeSysCmd: Writing Sys command...
+[   50.094037] [ FTS ] READ EVENT = 43 01 A4 00 01 00 00 00 
+[   50.094047] [ FTS ] FOUND EVENT = 43 01 A4 00 01 00 00 00 
+[   50.094054] [ FTS ] ECHO OK!
+[   50.094061] [ FTS ] writeSysCmd: FINISHED!
+[   50.094069] [ FTS ] FIFO flushed!
+[   50.094260] fts spi1.0: kernel releasing bus access from SLPI
+[   50.970869] google_charger: usbchg=USB typec=C usbv=4913 usbc=376 usbMv=5000 usbMc=500
+[   50.971013] sm8150_bms: MSC_PCS chg_state=1f410cd04010009 [0x9:4:1:4301:500] chg=u
+[   50.971037] google_battery: MSC_DIN chg_state=1f410cd04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4301 icl=500
+[   50.974740] google_battery: MSC_STEADY vt=4300000 vb=4291250 fv_uv=4300000 margin=10000
+[   50.974761] google_battery: MSC_NYET ibatt=-255000 cc_next_max=1400000 t_cnt=3
+[   50.974776] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   50.974788] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+[   50.974837] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 2000 ms (0)
+[   50.995338] binder: undelivered transaction 175765, process died.
+[   52.976868] google_charger: usbchg=USB typec=C usbv=4927 usbc=339 usbMv=5000 usbMc=500
+[   52.977048] sm8150_bms: MSC_PCS chg_state=1f410cd04010009 [0x9:4:1:4301:500] chg=u
+[   52.977088] google_battery: MSC_DIN chg_state=1f410cd04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4301 icl=500
+[   52.981013] google_battery: MSC_STEADY vt=4300000 vb=4291406 fv_uv=4300000 margin=10000
+[   52.981046] google_battery: MSC_NEXT tier vb=4291406 ibatt=-264687 vbatt_idx=1->2
+[   52.981080] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   52.981104] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=2000
+[   52.981202] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1365000, val=27 pause=0 (0)
+[   52.981238] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4400000, val=80 (0)
+[   52.981260] google_charger: MSC_CHG fv_uv=4300000->4400000 cc_max=1975000->1400000 rc=0
+[   52.981292] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 2000 ms (0)
+[   53.071719] sm8150_bms: MSC_PCS chg_state=1f410cd03010015 [0x15:3:1:4301:500] chg=u
+[   53.079009] google_charger: usbchg=USB typec=C usbv=4884 usbc=487 usbMv=5000 usbMc=500
+[   53.079143] sm8150_bms: MSC_PCS chg_state=1f410cd03010015 [0x15:3:1:4301:500] chg=u
+[   53.079176] google_battery: MSC_DIN chg_state=1f410cd03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4301 icl=500
+[   53.083323] healthd: battery l=92 v=4290 t=28.1 h=2 st=4 c=-241 fc=2711000 cc=13 chg=u
+[   53.083942] google_battery: MSC_LAST vbatt=4290000 ibatt=-241562 fv_uv=4400000
+[   53.084627] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   53.084652] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   53.084703] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   55.068210] init: Untracked pid 3483 received signal 9
+[   64.134132] healthd: battery l=92 v=4332 t=28.1 h=2 st=4 c=-466 fc=2711000 cc=13 chg=u
+[   83.088174] google_charger: usbchg=USB typec=C usbv=4870 usbc=488 usbMv=5000 usbMc=500
+[   83.088357] sm8150_bms: MSC_PCS chg_state=1f410f703010015 [0x15:3:1:4343:500] chg=u
+[   83.088398] google_battery: MSC_DIN chg_state=1f410f703010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4343 icl=500
+[   83.092870] google_battery: MSC_LAST vbatt=4338125 ibatt=-457500 fv_uv=4400000
+[   83.092907] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   83.092933] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   83.093006] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   95.140267] rmt_storage:INFO:kmsg_enable: Enabling KMSG-LOGS!
+[   95.140393] rmt_storage:INFO:rmt_storage_rw_iovec_cb: Write iovec request received for /boot/modem_fs1
+[   95.141128] rmt_storage:INFO:rmt_storage_client_thread: Calling Write [offset=0, size=2097152]for /boot/modem_fs1!
+[   95.263846] rmt_storage:INFO:rmt_storage_client_thread: Done Write (bytes = 2097152) for /boot/modem_fs1!
+[  113.095243] google_charger: usbchg=USB typec=C usbv=4883 usbc=487 usbMv=5000 usbMc=500
+[  113.095427] sm8150_bms: MSC_PCS chg_state=1f4110503010015 [0x15:3:1:4357:500] chg=u
+[  113.095467] google_battery: MSC_DIN chg_state=1f4110503010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4357 icl=500
+[  113.099842] google_battery: MSC_LAST vbatt=4344375 ibatt=-450000 fv_uv=4400000
+[  113.099880] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  113.099904] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  113.099975] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  115.854574] google,overheat_mitigation soc:google,overheat_mitigation: Update USB port temp:294
+[  115.856052] google_charger: usbchg=USB typec=C usbv=4876 usbc=488 usbMv=5000 usbMc=500
+[  115.856165] sm8150_bms: MSC_PCS chg_state=1f4110603010015 [0x15:3:1:4358:500] chg=u
+[  115.856179] google_battery: MSC_DIN chg_state=1f4110603010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4358 icl=500
+[  115.863359] google_battery: MSC_LAST vbatt=4347031 ibatt=-455000 fv_uv=4400000
+[  115.863376] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  115.863386] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  115.863412] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  115.865130] healthd: battery l=92 v=4347 t=28.3 h=2 st=4 c=-455 fc=2711000 cc=13 chg=u
+[  115.896489] healthd: battery l=92 v=4347 t=28.3 h=2 st=4 c=-455 fc=2711000 cc=13 chg=u
+[  124.135231] healthd: battery l=92 v=4347 t=28.4 h=2 st=4 c=-457 fc=2711000 cc=13 chg=u
+[  145.866066] google_charger: usbchg=USB typec=C usbv=4882 usbc=488 usbMv=5000 usbMc=500
+[  145.866181] sm8150_bms: MSC_PCS chg_state=1f410fc03010015 [0x15:3:1:4348:500] chg=u
+[  145.866199] google_battery: MSC_DIN chg_state=1f410fc03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4348 icl=500
+[  145.869701] google_battery: MSC_LAST vbatt=4336093 ibatt=-397812 fv_uv=4400000
+[  145.869717] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  145.869728] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  145.869755] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  150.851145] type=1400 audit(1654588745.545:222): avc: denied { getattr } for comm="Binder:5105_2" name="/" dev="sda8" ino=1 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:firmware_file:s0 tclass=filesystem permissive=0 app=com.google.android.gms
+[  150.851996] type=1400 audit(1654588863.465:223): avc: denied { read } for comm=4173796E635461736B202331 name="u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=5333 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=0 app=com.google.android.apps.turbo
+[  167.950575] max1720x_battery: max17x0x_reg_dump  8E:0043 8F:003C B2:0167 B4:0054 C4:0053 C5:0068 CD:007C CE:009E D7:0114 DF:0E3C
+[  167.963974] google_charger: usbchg=USB typec=C usbv=4882 usbc=488 usbMv=5000 usbMc=500
+[  167.964122] sm8150_bms: MSC_PCS chg_state=1f4110c03010015 [0x15:3:1:4364:500] chg=u
+[  167.964157] google_battery: MSC_DIN chg_state=1f4110c03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4364 icl=500
+[  167.964411] healthd: battery l=93 v=4352 t=28.4 h=2 st=4 c=-466 fc=2711000 cc=13 chg=u
+[  167.968264] google_battery: MSC_LAST vbatt=4352031 ibatt=-466562 fv_uv=4400000
+[  167.968299] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  167.968322] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  167.968408] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  167.992744] healthd: battery l=93 v=4352 t=28.4 h=2 st=4 c=-466 fc=2711000 cc=13 chg=u
+[  168.027619] iaxxx-spi spi5.0: iaxxx_ext_clk_ctl: mclk_en 1, cancel 0
+[  168.128473] iaxxx-spi spi5.0: Timeout for wakeup event rc :0 wake flag :0
+[  168.166991] iaxxx-spi spi5.0: iaxxx_wakeup_chip set to normal power mode done
+[  168.167050] iaxxx-spi spi5.0: iaxxx_wakeup_chip() Success
+[  171.433698] iaxxx-spi spi5.0: iaxxx_ext_clk_ctl: mclk_en 1, cancel 0
+[  171.433760] iaxxx-spi spi5.0: iaxxx_suspend_chip() chip put into sleep power mode
+[  171.433781] iaxxx-spi spi5.0: iaxxx_suspend_chip() Success
+[  174.562788] iaxxx-spi spi5.0: iaxxx_ext_clk_off_work mclk_en 0 is off
+[  184.135208] healthd: battery l=93 v=4352 t=28.4 h=2 st=4 c=-458 fc=2711000 cc=13 chg=u
+[  197.973406] google_charger: usbchg=USB typec=C usbv=4882 usbc=488 usbMv=5000 usbMc=500
+[  197.973570] sm8150_bms: MSC_PCS chg_state=1f4110103010015 [0x15:3:1:4353:500] chg=u
+[  197.973610] google_battery: MSC_DIN chg_state=1f4110103010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4353 icl=500
+[  197.976087] max1720x 2-0036: s=4->1 c=-393125 avg_c=-147500 ichgt=140000 vfsoc=90 soc=93 fullsocthr=90
+[  197.977281] google_battery: MSC_LAST vbatt=4340937 ibatt=-393125 fv_uv=4400000
+[  197.977324] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  197.977345] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  197.977404] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  199.318205] google_charger: usbchg=USB typec=C usbv=4880 usbc=489 usbMv=5000 usbMc=500
+[  199.318381] sm8150_bms: MSC_PCS chg_state=1f4111003010015 [0x15:3:1:4368:500] chg=u
+[  199.318419] google_battery: MSC_DIN chg_state=1f4111003010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4368 icl=500
+[  199.322230] google_battery: MSC_LAST vbatt=4354062 ibatt=-460312 fv_uv=4400000
+[  199.322264] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  199.322289] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  199.322376] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  199.340084] healthd: battery l=93 v=4354 t=28.4 h=2 st=2 c=-460 fc=2711000 cc=13 chg=u
+[  201.300254] init: Service 'adbd' (pid 962) exited with status 1
+[  201.300319] init: Sending signal 9 to service 'adbd' (pid 962) process group...
+[  201.300698] libprocessgroup: Successfully killed process cgroup uid 0 pid 962 in 0ms
+[  201.302034] init: starting service 'adbd'...
+[  201.306029] init: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[  201.319049] read descriptors
+[  201.319115] read strings
+[  201.829726] android_work: sent uevent USB_STATE=DISCONNECTED
+[  202.266903] msm-dwc3 a600000.ssusb: Avail curr from USB = 100
+[  202.267312] android_work: did not send uevent (0 0 0000000000000000)
+[  202.349455] android_work: sent uevent USB_STATE=CONNECTED
+[  202.352691] android_work: sent uevent USB_STATE=DISCONNECTED
+[  202.455099] android_work: sent uevent USB_STATE=CONNECTED
+[  202.458433] configfs-gadget gadget: high-speed config #1: b
+[  202.459047] msm-dwc3 a600000.ssusb: Avail curr from USB = 500
+[  202.459809] android_work: sent uevent USB_STATE=CONFIGURED
+[  202.510586] max1720x 2-0036: s=1->2 c=58750 avg_c=-151250 ichgt=140000 vfsoc=91 soc=93 fullsocthr=90
+[  202.513679] healthd: battery l=93 v=4279 t=28.4 h=2 st=4 c=58 fc=2711000 cc=13 chg=u
+[  223.140464] type=1400 audit(1654588863.465:223): avc: denied { read } for comm=4173796E635461736B202331 name="u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=5333 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=0 app=com.google.android.apps.turbo
+[  223.140563] type=1404 audit(1654588935.755:224): enforcing=0 old_enforcing=1 auid=4294967295 ses=4294967295
+[  224.204579] type=1404 audit(1654588935.755:224): enforcing=0 old_enforcing=1 auid=4294967295 ses=4294967295
+[  224.204652] type=1400 audit(1654588936.815:225): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.5 lport=43846 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[  224.303644] type=1400 audit(1654588936.815:225): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.5 lport=43846 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[  224.303800] type=1400 audit(1654588936.915:226): avc: denied { write } for comm="kworker/4:1H" laddr=192.168.0.5 lport=43846 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[  226.486467] Adding 314572796k swap on /dev/nbd0.  Priority:-3 extents:1 across:314572796k SS
+[  229.325865] google_charger: usbchg=USB typec=C usbv=4886 usbc=488 usbMv=5000 usbMc=500
+[  229.326050] sm8150_bms: MSC_PCS chg_state=1f4111303010015 [0x15:3:1:4371:500] chg=u
+[  229.326091] google_battery: MSC_DIN chg_state=1f4111303010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4371 icl=500
+[  229.329371] max1720x 2-0036: Capacity primed to 2502 on Charging
+[  229.329862] max1720x 2-0036: QH primed to 1514 on Charging
+[  229.329895] max1720x 2-0036: s=2->1 c=-444687 avg_c=-170937 ichgt=140000 vfsoc=91 soc=93 fullsocthr=90
+[  229.331094] google_battery: MSC_LAST vbatt=4356875 ibatt=-444687 fv_uv=4400000
+[  229.331131] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  229.331155] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  229.331225] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  244.134275] healthd: battery l=93 v=4358 t=28.4 h=2 st=2 c=-460 fc=2711000 cc=13 chg=u
+[  259.333300] google_charger: usbchg=USB typec=C usbv=4882 usbc=489 usbMv=5000 usbMc=500
+[  259.333556] sm8150_bms: MSC_PCS chg_state=1f4110903010015 [0x15:3:1:4361:500] chg=u
+[  259.333597] google_battery: MSC_DIN chg_state=1f4110903010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4361 icl=500
+[  259.337133] google_battery: MSC_LAST vbatt=4343437 ibatt=-380312 fv_uv=4400000
+[  259.337167] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  259.337188] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  259.337246] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  271.977926] dsi-ctrl:[_dsi_ctrl_setup_isr] [DSI_0] IRQ 541 registered
+[  271.980305] dsi_backlight_early_dpms:778: power_mode:0 state:0x2
+[  272.025524] i2c_geni a84000.i2c: i2c error :-107
+[  272.025551] st21nfc_dev_write : i2c_master_send returned -107
+[  272.129092] dsi_backlight_update_status:443: req:0 bl:0 state:0x0
+[  272.141925] fts spi1.0: kernel requesting bus access from SLPI
+[  272.142742] [ FTS ] System resetting...
+[  272.146928] dsi_backlight_update_status:443: req:24 bl:386 state:0x0
+[  272.170211] selinux: avc:  received setenforce notice (enforcing=0)\x0a
+[  272.174093] [ FTS ] READ EVENT = 43 13 00 00 00 00 00 02 
+[  272.174229] [ FTS ] READ EVENT = 43 0A 02 00 00 00 00 01 
+[  272.174352] [ FTS ] READ EVENT = 03 00 00 00 00 00 00 00 
+[  272.174361] [ FTS ] FOUND EVENT = 03 00 00 00 00 00 00 00 
+[  272.174406] [ FTS ] fts_mode_handler: Sense ON!
+[  272.174500] [ FTS ] heatmap_enable
+[  272.174864] [ FTS ] fts_status_event_handler: Sense on Force cal = 01 00 00 00 00 01
+[  272.185016] bt_ioctl: BT_CMD_PWR_CTRL pwr_cntrl:0
+[  272.185031] bt_ioctl: BT chip state is already :0 no change d\x0a
+[  272.185081] bt_ioctl: BT_CMD_PWR_CTRL pwr_cntrl:1
+[  272.185206] bt_power vendor:bt_wcn3990: vendor:bt_wcn3990 supply qca,bt-vdd-vl not found, using dummy regulator
+[  272.185384] bt_power vendor:bt_wcn3990: vendor:bt_wcn3990 supply qca,bt-vdd-vm not found, using dummy regulator
+[  272.185463] bt_power vendor:bt_wcn3990: vendor:bt_wcn3990 supply qca,bt-vdd-5c not found, using dummy regulator
+[  272.185548] bt_power vendor:bt_wcn3990: vendor:bt_wcn3990 supply qca,bt-vdd-vh not found, using dummy regulator
+[  272.185725] bt_power vendor:bt_wcn3990: vendor:bt_wcn3990 supply qca,bt-vdd-io not found, using dummy regulator
+[  272.185803] bt_power vendor:bt_wcn3990: vendor:bt_wcn3990 supply qca,bt-vdd-xtal not found, using dummy regulator
+[  272.186157] bt_power vendor:bt_wcn3990: vendor:bt_wcn3990 supply qca,bt-chip-pwd not found, using dummy regulator
+[  272.186902] [ FTS ] fts_status_event_handler: Received unknown status event = 43 13 00 00 00 00 00 01
+[  272.436115] bt_ioctl: BT_CMD_CHIP_VERS soc_version:40010224
+[  273.898821] type=1400 audit(1654588936.915:226): avc: denied { write } for comm="kworker/4:1H" laddr=192.168.0.5 lport=43846 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[  273.899769] type=1400 audit(1654588986.512:227): avc: denied { read } for comm="facebook.katana" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  273.899922] type=1400 audit(1654588986.512:227): avc: denied { read } for comm="facebook.katana" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  273.900531] type=1400 audit(1654588986.512:228): avc: denied { open } for comm="facebook.katana" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  273.900631] type=1400 audit(1654588986.512:228): avc: denied { open } for comm="facebook.katana" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  273.901239] type=1400 audit(1654588986.512:229): avc: denied { getattr } for comm="facebook.katana" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  273.912186] type=1400 audit(1654588986.512:229): avc: denied { getattr } for comm="facebook.katana" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  273.912837] type=1400 audit(1654588986.525:230): avc: denied { open } for comm="AppInit6" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.facebook.katana
+[  273.916059] type=1400 audit(1654588986.525:230): avc: denied { open } for comm="AppInit6" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.facebook.katana
+[  273.917821] type=1400 audit(1654588986.528:231): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_cppdistract_cppdistract.so" dev="dm-5" ino=200531 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  273.918004] type=1400 audit(1654588986.528:231): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_cppdistract_cppdistract.so" dev="dm-5" ino=200531 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  273.918067] audit: audit_lost=82 audit_rate_limit=5 audit_backlog_limit=64
+[  273.918071] audit: rate limit exceeded
+[  273.918910] type=1400 audit(1654588986.528:232): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_museum_museum.so" dev="dm-5" ino=189856 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  273.919002] type=1400 audit(1654588986.528:232): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_museum_museum.so" dev="dm-5" ino=189856 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  273.919676] type=1400 audit(1654588986.528:233): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_sigmuxutils_sigmuxutils.so" dev="dm-5" ino=135743 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  273.919761] type=1400 audit(1654588986.528:233): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_sigmuxutils_sigmuxutils.so" dev="dm-5" ino=135743 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  273.920882] type=1400 audit(1654588986.532:234): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libbreakpad.so" dev="dm-5" ino=126826 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  275.248189] type=1400 audit(1654588986.532:234): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libbreakpad.so" dev="dm-5" ino=126826 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  275.249166] type=1400 audit(1654588987.862:283): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  275.249340] type=1400 audit(1654588987.862:283): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  275.250266] type=1400 audit(1654588987.862:284): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  279.298085] type=1400 audit(1654588987.862:284): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  279.298837] type=1400 audit(1654588991.908:285): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libxplat_structuredlogger_events_GraphqlLiveQueryEventEventAndroid.so" dev="dm-5" ino=1510784 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.301487] type=1400 audit(1654588991.908:285): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libxplat_structuredlogger_events_GraphqlLiveQueryEventEventAndroid.so" dev="dm-5" ino=1510784 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.302167] type=1400 audit(1654588991.915:286): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libxplat_structuredlogger_events_GraphqlSubscriptionsReceiveForceLogEventAndroid.so" dev="dm-5" ino=189866 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.305254] type=1400 audit(1654588991.915:286): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libxplat_structuredlogger_events_GraphqlSubscriptionsReceiveForceLogEventAndroid.so" dev="dm-5" ino=189866 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.305905] type=1400 audit(1654588991.918:287): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libxplat_structuredlogger_events_GraphqlSubscriptionsSubscribeForceLogEventAndroid.so" dev="dm-5" ino=189847 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.306835] type=1400 audit(1654588991.918:287): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libxplat_structuredlogger_events_GraphqlSubscriptionsSubscribeForceLogEventAndroid.so" dev="dm-5" ino=189847 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.307507] type=1400 audit(1654588991.922:288): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libxplat_structuredlogger_events_GraphqlSubscriptionsUnsubscribeForceLogEventAndroid.so" dev="dm-5" ino=200211 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.309953] type=1400 audit(1654588991.922:288): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libxplat_structuredlogger_events_GraphqlSubscriptionsUnsubscribeForceLogEventAndroid.so" dev="dm-5" ino=200211 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.310713] type=1400 audit(1654588991.922:289): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libthird-party_md5_md5Android.so" dev="dm-5" ino=189828 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.311739] type=1400 audit(1654588991.922:289): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libthird-party_md5_md5Android.so" dev="dm-5" ino=189828 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.312458] type=1400 audit(1654588991.925:290): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libxplat_perflogger_base_generated_Modules_QPLLithiumModuleAndroid.so" dev="dm-5" ino=189958 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.314119] type=1400 audit(1654588991.925:290): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/libxplat_perflogger_base_generated_Modules_QPLLithiumModuleAndroid.so" dev="dm-5" ino=189958 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.314715] type=1400 audit(1654588991.928:291): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/librtimerged.so" dev="dm-5" ino=146826 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.499487] type=1400 audit(1654588991.928:291): avc: granted { execute } for comm="MqttHandler" path="/data/data/com.facebook.katana/lib-compressed/librtimerged.so" dev="dm-5" ino=146826 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.500245] type=1400 audit(1654588992.112:292): avc: granted { execute } for comm="Analytics-Micro" path="/data/data/com.facebook.katana/lib-compressed/libchipsetmerged.so" dev="dm-5" ino=198932 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  279.761549] audit: audit_lost=130 audit_rate_limit=5 audit_backlog_limit=64
+[  279.761564] audit: rate limit exceeded
+[  288.362438] type=1400 audit(1654588992.112:292): avc: granted { execute } for comm="Analytics-Micro" path="/data/data/com.facebook.katana/lib-compressed/libchipsetmerged.so" dev="dm-5" ino=198932 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[  288.363676] type=1400 audit(1654589000.975:306): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  288.363920] type=1400 audit(1654589000.975:306): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  288.365736] type=1400 audit(1654589000.975:307): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  288.365899] type=1400 audit(1654589000.975:307): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  288.366905] type=1400 audit(1654589000.975:308): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  288.504152] type=1400 audit(1654589000.975:308): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  288.504938] type=1400 audit(1654589001.118:309): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  288.505126] type=1400 audit(1654589001.118:309): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  288.505781] type=1400 audit(1654589001.118:310): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  289.262688] audit: audit_lost=143 audit_rate_limit=5 audit_backlog_limit=64
+[  289.262695] audit: rate limit exceeded
+[  289.338975] google_charger: usbchg=USB typec=C usbv=4881 usbc=488 usbMv=5000 usbMc=500
+[  289.339088] sm8150_bms: MSC_PCS chg_state=1f4109903010015 [0x15:3:1:4249:500] chg=u
+[  289.339104] google_battery: MSC_DIN chg_state=1f4109903010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4249 icl=500
+[  289.341307] max1720x 2-0036: s=1->2 c=-56562 avg_c=-198125 ichgt=140000 vfsoc=91 soc=93 fullsocthr=90
+[  289.342188] google_battery: MSC_LAST vbatt=4247343 ibatt=-56562 fv_uv=4400000
+[  289.342202] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  289.342211] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  289.342243] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  291.014806] afe_tdm_port_start: top_id:10001ccc acdb_id:512 port_id:0x9021
+[  291.042501] afe_tdm_port_start: top_id:10000ccc acdb_id:513 port_id:0x9020
+[  291.047786] port = 0x9020 module = 0x10027053 param = 0x10002001 length = 4
+[  291.048125] port = 0x9021 module = 0x10027053 param = 0x10002001 length = 4
+[  291.048457] port = 0x9021 module = 0x10027053 param = 0xa1bf0a length = 4
+[  291.049002] port = 0x9020 module = 0x10027053 param = 0xa1af02 length = 32
+[  291.052784] port = 0x9021 module = 0x10027053 param = 0xa1bf0a length = 4
+[  291.053237] port = 0x9020 module = 0x10027053 param = 0xa1af02 length = 32
+[  291.056964] send config with module_id = 10027053, string length = 1700
+[  291.059794] port = 0x9021 module = 0x10027053 param = 0xa1bf0a length = 4
+[  291.060230] port = 0x9020 module = 0x10027053 param = 0xa1af02 length = 32
+[  291.064016] port = 0x9021 module = 0x10027053 param = 0xa1bf0a length = 4
+[  291.064514] port = 0x9020 module = 0x10027053 param = 0xa1af02 length = 32
+[  291.068281] send config with module_id = 10027053, string length = 2356
+[  291.074739] port = 0x9021 module = 0x10027053 param = 0xa1bf0a length = 4
+[  291.075186] port = 0x9020 module = 0x10027053 param = 0xa1af02 length = 32
+[  291.476525] google_charger: usbchg=USB typec=C usbv=4872 usbc=487 usbMv=5000 usbMc=500
+[  291.476858] sm8150_bms: MSC_PCS chg_state=1f410bd03010015 [0x15:3:1:4285:500] chg=u
+[  291.476892] google_battery: MSC_DIN chg_state=1f410bd03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4285 icl=500
+[  291.482106] google_battery: MSC_LAST vbatt=4281406 ibatt=-52500 fv_uv=4400000
+[  291.482146] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  291.482169] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  291.482256] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  291.501695] healthd: battery l=93 v=4281 t=28.3 h=2 st=4 c=-52 fc=2711000 cc=13 chg=u
+[  293.277219] type=1400 audit(1654589001.118:310): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  293.278751] type=1400 audit(1654589005.892:313): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  293.278940] type=1400 audit(1654589005.892:313): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  293.280016] type=1400 audit(1654589005.892:314): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  293.549834] type=1400 audit(1654589005.892:314): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  293.551897] type=1400 audit(1654589006.162:315): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  293.552293] type=1400 audit(1654589006.162:315): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  293.554650] type=1400 audit(1654589006.162:316): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  294.434763] type=1400 audit(1654589006.162:316): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  294.436484] type=1400 audit(1654589007.048:317): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  294.436980] type=1400 audit(1654589007.048:317): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  294.439137] type=1400 audit(1654589007.048:318): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  294.439337] type=1400 audit(1654589007.048:318): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  294.441309] type=1400 audit(1654589007.048:319): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  294.896920] type=1400 audit(1654589007.048:319): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  294.898651] type=1400 audit(1654589007.508:320): avc: granted { execute } for comm="AdWorker(Defaul" path="/data/data/com.king.candycrushsaga/app_pccache/5/A9AE20A814F420FD77104D5DCB6A7CB2D401A195/oat/arm64/pcam.odex" dev="dm-5" ino=2425408 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c128,c256,c512,c768 tclass=file app=com.king.candycrushsaga
+[  294.913380] type=1400 audit(1654589007.508:320): avc: granted { execute } for comm="AdWorker(Defaul" path="/data/data/com.king.candycrushsaga/app_pccache/5/A9AE20A814F420FD77104D5DCB6A7CB2D401A195/oat/arm64/pcam.odex" dev="dm-5" ino=2425408 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c128,c256,c512,c768 tclass=file app=com.king.candycrushsaga
+[  294.914204] type=1400 audit(1654589007.525:321): avc: granted { execute } for comm="AdWorker(Defaul" path="/data/data/com.king.candycrushsaga/app_pccache/5/A9AE20A814F420FD77104D5DCB6A7CB2D401A195/pcam.jar" dev="dm-5" ino=2400146 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c128,c256,c512,c768 tclass=file app=com.king.candycrushsaga
+[  295.503147] backgrounded_uid 10128
+[  295.580167] type=1400 audit(1654589007.525:321): avc: granted { execute } for comm="AdWorker(Defaul" path="/data/data/com.king.candycrushsaga/app_pccache/5/A9AE20A814F420FD77104D5DCB6A7CB2D401A195/pcam.jar" dev="dm-5" ino=2400146 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c128,c256,c512,c768 tclass=file app=com.king.candycrushsaga
+[  295.581121] type=1400 audit(1654589008.192:322): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  295.581251] type=1400 audit(1654589008.192:322): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  295.582412] type=1400 audit(1654589008.192:323): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  296.476494] type=1400 audit(1654589008.192:323): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  296.478885] type=1400 audit(1654589009.088:324): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  296.479238] type=1400 audit(1654589009.088:324): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  296.481640] type=1400 audit(1654589009.088:325): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  296.481935] type=1400 audit(1654589009.088:325): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  296.484191] type=1400 audit(1654589009.088:326): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  296.632579] type=1400 audit(1654589009.088:326): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  296.636542] type=1400 audit(1654589009.245:327): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  296.637162] type=1400 audit(1654589009.245:327): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  296.639469] type=1400 audit(1654589009.245:328): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  298.482175] msm_crus_store_imped: left impedance 7.64528114 ohms
+[  298.484284] msm_crus_store_imped: right impedance 6.77086060 ohms
+[  298.626198] afe_close: port_id = 0x9020
+[  298.635197] afe_close: port_id = 0x9021
+[  304.131213] max1720x 2-0036: Capacity primed to 2509 on Charging
+[  304.131750] max1720x 2-0036: QH primed to 1521 on Charging
+[  304.131783] max1720x 2-0036: s=2->1 c=-330937 avg_c=-194687 ichgt=140000 vfsoc=91 soc=93 fullsocthr=90
+[  304.136893] healthd: battery l=93 v=4337 t=28.3 h=2 st=2 c=-330 fc=2711000 cc=13 chg=u
+[  309.412300] type=1400 audit(1654589009.245:328): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  309.420712] type=1400 audit(1654589022.025:329): avc: denied { getattr } for comm="liblmkd_detecto" path="/postinstall" dev="dm-0" ino=48 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:postinstall_mnt_dir:s0 tclass=dir permissive=1 app=com.facebook.katana
+[  310.229205] type=1400 audit(1654589022.025:329): avc: denied { getattr } for comm="liblmkd_detecto" path="/postinstall" dev="dm-0" ino=48 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:postinstall_mnt_dir:s0 tclass=dir permissive=1 app=com.facebook.katana
+[  310.229979] type=1400 audit(1654589022.842:330): avc: denied { call } for comm="Thread-49" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[  310.602420] type=1400 audit(1654589022.842:330): avc: denied { call } for comm="Thread-49" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[  310.604834] type=1400 audit(1654589023.215:331): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  310.605213] type=1400 audit(1654589023.215:331): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  310.607395] type=1400 audit(1654589023.215:332): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  310.607638] type=1400 audit(1654589023.215:332): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  310.609421] type=1400 audit(1654589023.215:333): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  321.486024] google_charger: usbchg=USB typec=C usbv=4875 usbc=489 usbMv=5000 usbMc=500
+[  321.486210] sm8150_bms: MSC_PCS chg_state=1f4110003010015 [0x15:3:1:4352:500] chg=u
+[  321.486249] google_battery: MSC_DIN chg_state=1f4110003010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4352 icl=500
+[  321.490424] google_battery: MSC_LAST vbatt=4343437 ibatt=-381562 fv_uv=4400000
+[  321.490460] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  321.490485] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  321.490554] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  322.195470] google_charger: usbchg=USB typec=C usbv=4876 usbc=488 usbMv=5000 usbMc=500
+[  322.195622] sm8150_bms: MSC_PCS chg_state=1f4110303010015 [0x15:3:1:4355:500] chg=u
+[  322.195643] google_battery: MSC_DIN chg_state=1f4110303010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4355 icl=500
+[  322.198473] google_battery: MSC_LAST vbatt=4343125 ibatt=-364687 fv_uv=4400000
+[  322.198492] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  322.198505] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  322.198563] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  322.214141] healthd: battery l=93 v=4343 t=28.4 h=2 st=2 c=-364 fc=2711000 cc=13 chg=u
+[  329.378739] max1720x_battery: max17x0x_reg_dump  8E:0043 8F:003C B2:0167 B4:0054 C4:0053 C5:0068 CD:007C CE:009E D7:0114 DF:0E3D
+[  329.389937] google_charger: usbchg=USB typec=C usbv=4890 usbc=488 usbMv=5000 usbMc=500
+[  329.390130] sm8150_bms: MSC_PCS chg_state=1f410fc03010015 [0x15:3:1:4348:500] chg=u
+[  329.390166] google_battery: MSC_DIN chg_state=1f410fc03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4348 icl=500
+[  329.392632] healthd: battery l=94 v=4345 t=28.4 h=2 st=2 c=-377 fc=2711000 cc=13 chg=u
+[  329.394985] google_battery: MSC_LAST vbatt=4345000 ibatt=-377812 fv_uv=4400000
+[  329.395019] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  329.395042] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  329.395112] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  329.419496] healthd: battery l=94 v=4345 t=28.4 h=2 st=2 c=-377 fc=2711000 cc=13 chg=u
+[  329.463036] iaxxx-spi spi5.0: iaxxx_ext_clk_ctl: mclk_en 1, cancel 0
+[  329.563382] iaxxx-spi spi5.0: Timeout for wakeup event rc :0 wake flag :0
+[  329.600116] iaxxx-spi spi5.0: iaxxx_wakeup_chip set to normal power mode done
+[  329.600146] iaxxx-spi spi5.0: iaxxx_wakeup_chip() Success
+[  330.012187] binder: 930:5503 transaction failed 29189/-22, size 64-0 line 3128
+[  330.012813] binder: 930:5503 transaction failed 29189/-22, size 64-0 line 3128
+[  330.338949] type=1400 audit(1654589023.215:333): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  330.341509] type=1400 audit(1654589042.952:334): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  330.341959] type=1400 audit(1654589042.952:334): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  330.343895] type=1400 audit(1654589042.952:335): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  330.770549] type=1400 audit(1654589042.952:335): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  330.772623] type=1400 audit(1654589043.382:336): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  330.773063] type=1400 audit(1654589043.382:336): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  330.774932] type=1400 audit(1654589043.382:337): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  330.775350] type=1400 audit(1654589043.382:337): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  330.777287] type=1400 audit(1654589043.385:338): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  333.563700] iaxxx-spi spi5.0: iaxxx_ext_clk_ctl: mclk_en 1, cancel 0
+[  333.563746] iaxxx-spi spi5.0: iaxxx_suspend_chip() chip put into sleep power mode
+[  333.563767] iaxxx-spi spi5.0: iaxxx_suspend_chip() Success
+[  336.694160] iaxxx-spi spi5.0: iaxxx_ext_clk_off_work mclk_en 0 is off
+[  349.523558] type=1400 audit(1654589043.385:338): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  349.524539] type=1400 audit(1654589062.135:339): avc: denied { getattr } for comm="liblmkd_detecto" path="/postinstall" dev="dm-0" ino=48 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:postinstall_mnt_dir:s0 tclass=dir permissive=1 app=com.facebook.katana
+[  353.279211] type=1400 audit(1654589062.135:339): avc: denied { getattr } for comm="liblmkd_detecto" path="/postinstall" dev="dm-0" ino=48 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:postinstall_mnt_dir:s0 tclass=dir permissive=1 app=com.facebook.katana
+[  353.282160] type=1400 audit(1654589065.892:340): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  353.282550] type=1400 audit(1654589065.892:340): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  353.284846] type=1400 audit(1654589065.892:341): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  359.399477] google_charger: usbchg=USB typec=C usbv=4874 usbc=488 usbMv=5000 usbMc=500
+[  359.399661] sm8150_bms: MSC_PCS chg_state=1f4110403010015 [0x15:3:1:4356:500] chg=u
+[  359.399701] google_battery: MSC_DIN chg_state=1f4110403010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4356 icl=500
+[  359.404710] google_battery: MSC_LAST vbatt=4345156 ibatt=-360000 fv_uv=4400000
+[  359.404748] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  359.404773] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  359.404844] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  364.133011] healthd: battery l=94 v=4346 t=28.5 h=2 st=2 c=-354 fc=2711000 cc=13 chg=u
+[  373.254771] type=1400 audit(1654589065.892:341): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  373.256891] type=1400 audit(1654589085.868:342): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  373.257258] type=1400 audit(1654589085.868:342): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  373.259121] type=1400 audit(1654589085.868:343): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  373.259463] type=1400 audit(1654589085.868:343): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  373.261423] type=1400 audit(1654589085.868:344): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  389.406725] google_charger: usbchg=USB typec=C usbv=4877 usbc=487 usbMv=5000 usbMc=500
+[  389.406879] sm8150_bms: MSC_PCS chg_state=1f4110903010015 [0x15:3:1:4361:500] chg=u
+[  389.406918] google_battery: MSC_DIN chg_state=1f4110903010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4361 icl=500
+[  389.410588] google_battery: MSC_LAST vbatt=4349375 ibatt=-380312 fv_uv=4400000
+[  389.410624] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  389.410649] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  389.410735] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  413.279570] type=1400 audit(1654589085.868:344): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  413.282125] type=1400 audit(1654589125.892:345): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  413.282633] type=1400 audit(1654589125.892:345): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  413.285064] type=1400 audit(1654589125.892:346): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  419.412493] google_charger: usbchg=USB typec=C usbv=4880 usbc=489 usbMv=5000 usbMc=500
+[  419.412658] sm8150_bms: MSC_PCS chg_state=1f410fa03010015 [0x15:3:1:4346:500] chg=u
+[  419.412697] google_battery: MSC_DIN chg_state=1f410fa03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4346 icl=500
+[  419.417144] google_battery: MSC_LAST vbatt=4336718 ibatt=-302812 fv_uv=4400000
+[  419.417182] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  419.417207] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  419.417275] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  424.133685] healthd: battery l=94 v=4353 t=28.5 h=2 st=2 c=-369 fc=2711000 cc=13 chg=u
+[  429.604703] type=1400 audit(1654589125.892:346): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  429.605697] type=1400 audit(1654589142.218:347): avc: denied { getattr } for comm="liblmkd_detecto" path="/postinstall" dev="dm-0" ino=48 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:postinstall_mnt_dir:s0 tclass=dir permissive=1 app=com.facebook.katana
+[  429.888734] type=1400 audit(1654589142.218:347): avc: denied { getattr } for comm="liblmkd_detecto" path="/postinstall" dev="dm-0" ino=48 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:postinstall_mnt_dir:s0 tclass=dir permissive=1 app=com.facebook.katana
+[  429.890777] type=1400 audit(1654589142.502:348): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  429.891204] type=1400 audit(1654589142.502:348): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  429.892803] type=1400 audit(1654589142.502:349): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  449.420635] google_charger: usbchg=USB typec=C usbv=4883 usbc=488 usbMv=5000 usbMc=500
+[  449.420802] sm8150_bms: MSC_PCS chg_state=1f4110c03010015 [0x15:3:1:4364:500] chg=u
+[  449.420838] google_battery: MSC_DIN chg_state=1f4110c03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4364 icl=500
+[  449.425026] google_battery: MSC_LAST vbatt=4353906 ibatt=-371875 fv_uv=4400000
+[  449.425063] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  449.425086] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  449.425155] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  479.427573] google_charger: usbchg=USB typec=C usbv=4881 usbc=488 usbMv=5000 usbMc=500
+[  479.427738] sm8150_bms: MSC_PCS chg_state=1f4110003010015 [0x15:3:1:4352:500] chg=u
+[  479.427779] google_battery: MSC_DIN chg_state=1f4110003010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4352 icl=500
+[  479.431615] google_battery: MSC_LAST vbatt=4342656 ibatt=-305000 fv_uv=4400000
+[  479.431652] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  479.431677] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  479.431748] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  484.135054] healthd: battery l=94 v=4353 t=28.6 h=2 st=2 c=-356 fc=2711000 cc=13 chg=u
+[  509.434168] google_charger: usbchg=USB typec=C usbv=4880 usbc=487 usbMv=5000 usbMc=500
+[  509.434356] sm8150_bms: MSC_PCS chg_state=1f4110d03010015 [0x15:3:1:4365:500] chg=u
+[  509.434395] google_battery: MSC_DIN chg_state=1f4110d03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4365 icl=500
+[  509.444103] google_battery: MSC_LAST vbatt=4356093 ibatt=-360000 fv_uv=4400000
+[  509.444137] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  509.444158] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  509.444224] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  528.229515] cnt_norm=20776
+[  528.229534] cnt_lock_fail=0
+[  528.229577] cnt_non_LRU=0
+[  528.229595] cnt_non_page=20626
+[  528.229611] cnt_shared=31
+[  528.229628] cnt_file_anon=530
+[  531.080133] type=1400 audit(1654589142.502:349): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  531.082602] type=1400 audit(1654589243.692:350): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  531.082955] type=1400 audit(1654589243.692:350): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  531.084885] type=1400 audit(1654589243.692:351): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  533.280842] type=1400 audit(1654589243.692:351): avc: denied { open } for comm="AppInit4" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[  533.283415] type=1400 audit(1654589245.895:352): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  533.283866] type=1400 audit(1654589245.895:352): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  533.286010] type=1400 audit(1654589245.895:353): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  539.446729] google_charger: usbchg=USB typec=C usbv=4882 usbc=487 usbMv=5000 usbMc=500
+[  539.446913] sm8150_bms: MSC_PCS chg_state=1f4110c03010015 [0x15:3:1:4364:500] chg=u
+[  539.446953] google_battery: MSC_DIN chg_state=1f4110c03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4364 icl=500
+[  539.452034] google_battery: MSC_LAST vbatt=4355468 ibatt=-307812 fv_uv=4400000
+[  539.452072] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  539.452097] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  539.452170] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  544.134680] healthd: battery l=94 v=4357 t=28.6 h=2 st=2 c=-361 fc=2711000 cc=13 chg=u
+[  569.454355] google_charger: usbchg=USB typec=C usbv=4895 usbc=489 usbMv=5000 usbMc=500
+[  569.454540] sm8150_bms: MSC_PCS chg_state=1f4111003010015 [0x15:3:1:4368:500] chg=u
+[  569.454581] google_battery: MSC_DIN chg_state=1f4111003010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4368 icl=500
+[  569.459275] google_battery: MSC_LAST vbatt=4360312 ibatt=-372500 fv_uv=4400000
+[  569.459312] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  569.459335] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  569.459400] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  589.719028] type=1400 audit(1654589245.895:353): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  589.720209] type=1400 audit(1654589302.332:354): avc: denied { getattr } for comm="liblmkd_detecto" path="/postinstall" dev="dm-0" ino=48 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:postinstall_mnt_dir:s0 tclass=dir permissive=1 app=com.facebook.katana
+[  599.462012] google_charger: usbchg=USB typec=C usbv=4886 usbc=488 usbMv=5000 usbMc=500
+[  599.462195] sm8150_bms: MSC_PCS chg_state=1f4111503010015 [0x15:3:1:4373:500] chg=u
+[  599.462235] google_battery: MSC_DIN chg_state=1f4111503010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4373 icl=500
+[  599.465996] google_battery: MSC_LAST vbatt=4363281 ibatt=-346250 fv_uv=4400000
+[  599.466036] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  599.466060] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  599.466133] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  601.948924] type=1400 audit(1654589302.332:354): avc: denied { getattr } for comm="liblmkd_detecto" path="/postinstall" dev="dm-0" ino=48 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:postinstall_mnt_dir:s0 tclass=dir permissive=1 app=com.facebook.katana
+[  601.951386] type=1400 audit(1654589314.562:355): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  601.951822] type=1400 audit(1654589314.562:355): avc: denied { read } for comm="AppInit4" name="file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  601.953820] type=1400 audit(1654589314.562:356): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  601.954089] type=1400 audit(1654589314.562:356): avc: denied { open } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  601.955876] type=1400 audit(1654589314.562:357): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  604.135570] healthd: battery l=94 v=4365 t=28.7 h=2 st=2 c=-352 fc=2711000 cc=13 chg=u
+[  604.269112] max1720x_battery: max17x0x_reg_dump  8E:0043 8F:003C B2:0167 B4:0054 C4:0053 C5:0068 CD:007C CE:009E D7:0114 DF:0E3E
+[  604.278924] healthd: battery l=95 v=4365 t=28.7 h=2 st=2 c=-352 fc=2711000 cc=13 chg=u
+[  604.281070] google_charger: usbchg=USB typec=C usbv=4878 usbc=488 usbMv=5000 usbMc=500
+[  604.281200] sm8150_bms: MSC_PCS chg_state=1f4111703010015 [0x15:3:1:4375:500] chg=u
+[  604.281234] google_battery: MSC_DIN chg_state=1f4111703010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4375 icl=500
+[  604.284743] google_battery: MSC_LAST vbatt=4365000 ibatt=-352187 fv_uv=4400000
+[  604.284778] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  604.284800] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  604.284872] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  604.310901] healthd: battery l=95 v=4365 t=28.7 h=2 st=2 c=-352 fc=2711000 cc=13 chg=u
+[  604.349595] iaxxx-spi spi5.0: iaxxx_ext_clk_ctl: mclk_en 1, cancel 0
+[  604.450010] iaxxx-spi spi5.0: Timeout for wakeup event rc :0 wake flag :0
+[  604.486683] iaxxx-spi spi5.0: iaxxx_wakeup_chip set to normal power mode done
+[  604.486715] iaxxx-spi spi5.0: iaxxx_wakeup_chip() Success
+[  604.624327] type=1400 audit(1654589314.562:357): avc: denied { getattr } for comm="AppInit4" path="/proc/sys/fs/file-nr" dev="proc" ino=40816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[  604.624423] type=1400 audit(1654589317.238:358): avc: denied { open } for comm="crash_dump64" path="/dev/__properties__/u:object_r:test_harness_prop:s0" dev="tmpfs" ino=5322 scontext=u:r:crash_dump:s0 tcontext=u:object_r:test_harness_prop:s0 tclass=file permissive=1
+[  604.624775] audit: audit_lost=145 audit_rate_limit=5 audit_backlog_limit=64
+[  604.624781] audit: rate limit exceeded
+[  604.625081] type=1400 audit(1654589317.238:358): avc: denied { open } for comm="crash_dump64" path="/dev/__properties__/u:object_r:test_harness_prop:s0" dev="tmpfs" ino=5322 scontext=u:r:crash_dump:s0 tcontext=u:object_r:test_harness_prop:s0 tclass=file permissive=1
+[  604.625169] type=1400 audit(1654589317.238:359): avc: denied { getattr } for comm="crash_dump64" path="/dev/__properties__/u:object_r:test_harness_prop:s0" dev="tmpfs" ino=5322 scontext=u:r:crash_dump:s0 tcontext=u:object_r:test_harness_prop:s0 tclass=file permissive=1
+[  604.625477] type=1400 audit(1654589317.238:359): avc: denied { getattr } for comm="crash_dump64" path="/dev/__properties__/u:object_r:test_harness_prop:s0" dev="tmpfs" ino=5322 scontext=u:r:crash_dump:s0 tcontext=u:object_r:test_harness_prop:s0 tclass=file permissive=1
+[  604.625538] type=1400 audit(1654589317.238:360): avc: denied { map } for comm="crash_dump64" path="/dev/__properties__/u:object_r:test_harness_prop:s0" dev="tmpfs" ino=5322 scontext=u:r:crash_dump:s0 tcontext=u:object_r:test_harness_prop:s0 tclass=file permissive=1
+[  604.625735] type=1400 audit(1654589317.238:360): avc: denied { map } for comm="crash_dump64" path="/dev/__properties__/u:object_r:test_harness_prop:s0" dev="tmpfs" ino=5322 scontext=u:r:crash_dump:s0 tcontext=u:object_r:test_harness_prop:s0 tclass=file permissive=1
+[  604.625790] type=1400 audit(1654589317.238:361): avc: denied { open } for comm="crash_dump64" path="/dev/__properties__/u:object_r:system_boot_reason_prop:s0" dev="tmpfs" ino=5316 scontext=u:r:crash_dump:s0 tcontext=u:object_r:system_boot_reason_prop:s0 tclass=file permissive=1
+[  604.625985] type=1400 audit(1654589317.238:361): avc: denied { open } for comm="crash_dump64" path="/dev/__properties__/u:object_r:system_boot_reason_prop:s0" dev="tmpfs" ino=5316 scontext=u:r:crash_dump:s0 tcontext=u:object_r:system_boot_reason_prop:s0 tclass=file permissive=1
+[  604.626050] type=1400 audit(1654589317.238:362): avc: denied { getattr } for comm="crash_dump64" path="/dev/__properties__/u:object_r:system_boot_reason_prop:s0" dev="tmpfs" ino=5316 scontext=u:r:crash_dump:s0 tcontext=u:object_r:system_boot_reason_prop:s0 tclass=file permissive=1
+[  607.568402] iaxxx-spi spi5.0: iaxxx_ext_clk_ctl: mclk_en 1, cancel 0
+[  607.568457] iaxxx-spi spi5.0: iaxxx_suspend_chip() chip put into sleep power mode
+[  607.568478] iaxxx-spi spi5.0: iaxxx_suspend_chip() Success
+[  610.277226] type=1400 audit(1654589317.238:362): avc: denied { getattr } for comm="crash_dump64" path="/dev/__properties__/u:object_r:system_boot_reason_prop:s0" dev="tmpfs" ino=5316 scontext=u:r:crash_dump:s0 tcontext=u:object_r:system_boot_reason_prop:s0 tclass=file permissive=1
+[  610.278419] type=1400 audit(1654589322.892:366): avc: denied { call } for comm="Thread-54" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[  610.613638] iaxxx-spi spi5.0: iaxxx_ext_clk_off_work mclk_en 0 is off
+[  624.705396] type=1400 audit(1654589322.892:366): avc: denied { call } for comm="Thread-54" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[  624.705479] type=1400 audit(1654589337.318:367): avc: denied { kill } for comm="kworker/u16:7" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1 b/132594872
+[  624.706512] binder: release 7288:7288 transaction 239755 out, still active
+[  624.706523] binder: unexpected work type, 4, not freed
+[  624.706529] binder: unexpected work type, 4, not freed
+[  624.706536] binder: undelivered TRANSACTION_COMPLETE
+[  634.289145] google_charger: usbchg=USB typec=C usbv=4873 usbc=489 usbMv=5000 usbMc=500
+[  634.289331] sm8150_bms: MSC_PCS chg_state=1f4111803010015 [0x15:3:1:4376:500] chg=u
+[  634.289372] google_battery: MSC_DIN chg_state=1f4111803010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4376 icl=500
+[  634.293212] google_battery: MSC_LAST vbatt=4365468 ibatt=-374375 fv_uv=4400000
+[  634.293312] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[  634.293337] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[  634.293405] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[  653.283417] type=1400 audit(1654589337.318:367): avc: denied { kill } for comm="kworker/u16:7" capability=5 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability permissive=1 b/132594872
+[  653.286078] type=1400 audit(1654589365.895:368): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  653.286494] type=1400 audit(1654589365.895:368): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[  653.288749] type=1400 audit(1654589365.895:369): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga

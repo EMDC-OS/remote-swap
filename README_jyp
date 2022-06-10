@@ -18,8 +18,17 @@ send to nbd right after it is COUNTER>THRESHOLD ==> Pte walk 1/2
 - PTE walk (send_target_page)  DONE!
 add one bit in the entry, and set if the page is swapped (very cheap operation) 
 
+- SWAP TRACE TABLE WALK 
+current implementation -> periodically walk and find (tgid, vma) which in ZRAM. and send to NBD immediately
+it needs periodical random page table walk. any better IDEA?
+1. write pte that It has been targetted. and If it is
+
+- STOP sending / during switch_start
+It SHOULD be implemented to maximize prefetching --> made roughly, so need to be optimized
+
+
 // Implementation idea
 
-Should handle if the process exit
+Should handle if the process exit--> STT free or STT clean
 
-flag off after it is sent
+flag off after it is sent --> flag off or swapped flag on

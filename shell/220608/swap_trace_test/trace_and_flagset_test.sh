@@ -19,7 +19,7 @@ sleep 10
 
 adb shell cd /data/launch/
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
-sleep 20
+sleep 50
 STR1=`adb shell ps -ef | grep com.king.candycrushsaga |awk 'NR == 1 { print $2; exit }'`
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh home
@@ -31,7 +31,7 @@ sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
-sleep 20 
+sleep 50 
 adb shell "echo $STR1 > /proc/sys/kernel/swap_counter_dump"
 sleep 10
 adb shell cat /sys/kernel/debug/tracing/trace > flagset_trace1.txt
@@ -46,7 +46,7 @@ sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
-sleep 20 
+sleep 50 
 adb shell "echo $STR1 > /proc/sys/kernel/swap_counter_dump"
 sleep 10
 adb shell cat /sys/kernel/debug/tracing/trace > flagset_trace2.txt
@@ -61,7 +61,7 @@ sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
-sleep 20 
+sleep 50 
 adb shell "echo $STR1 > /proc/sys/kernel/swap_counter_dump"
 sleep 10
 adb shell cat /sys/kernel/debug/tracing/trace > flagset_trace3.txt
@@ -76,7 +76,7 @@ sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
-sleep 20 
+sleep 50 
 adb shell "echo $STR1 > /proc/sys/kernel/swap_counter_dump"
 sleep 10
 adb shell cat /sys/kernel/debug/tracing/trace > flagset_trace4.txt
@@ -92,7 +92,7 @@ sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
-sleep 20 
+sleep 50 
 adb shell "echo $STR1 > /proc/sys/kernel/swap_counter_dump"
 sleep 10
 adb shell cat /sys/kernel/debug/tracing/trace > flagset_trace5.txt
@@ -108,7 +108,7 @@ sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
-sleep 20 
+sleep 50 
 adb shell "echo $STR1 > /proc/sys/kernel/swap_counter_dump"
 sleep 10
 adb shell cat /sys/kernel/debug/tracing/trace > flagset_trace6.txt
@@ -124,7 +124,7 @@ sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
-sleep 20 
+sleep 50 
 adb shell "echo $STR1 > /proc/sys/kernel/swap_counter_dump"
 sleep 10
 adb shell cat /sys/kernel/debug/tracing/trace > flagset_trace7.txt
@@ -139,7 +139,7 @@ sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
-sleep 20 
+sleep 50 
 adb shell "echo $STR1 > /proc/sys/kernel/swap_counter_dump"
 sleep 10
 adb shell cat /sys/kernel/debug/tracing/trace > flagset_trace8.txt

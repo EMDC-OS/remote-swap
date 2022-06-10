@@ -698,16 +698,15 @@ static int scan_swap_map_slots(struct swap_info_struct *si,
 	si->flags += SWP_SCANNING;
 	scan_base = offset = si->cluster_next;
 
-/*		
+	/*	
 	if(si->cluster_info)
 		trace_printk("[REMOTE %s] %d: SSD algorithm!\n", __func__,(int)(si->type));
 	else
 		trace_printk("[REMOTE %s] %d: no SSD algorithm!\n", __func__,(int)(si->type));
-*/	
+	*/
+
 	/* SSD algorithm */
 	if (si->cluster_info) {
-
-		
 		if (scan_swap_map_try_ssd_cluster(si, &offset, &scan_base))
 			goto checks;
 		else
@@ -1030,10 +1029,6 @@ swp_entry_t get_swap_page_of_type(int type)
 	pgoff_t offset;
 
 	si = swap_info[type];
-	if(si->cluster_info)
-		trace_printk("[REMOTE %s] %d: SSD algorithm!\n", __func__,(int)(si->type));
-	else
-		trace_printk("[REMOTE %s] %d: no SSD algorithm!\n", __func__,(int)(si->type));
 	spin_lock(&si->lock);
 	if (si && (si->flags & SWP_WRITEOK)) {
 		atomic_long_dec(&nr_swap_pages);
@@ -3752,6 +3747,14 @@ static void free_swap_count_continuations(struct swap_info_struct *si)
 
 
 #ifdef CONFIG_APP_AWARE
+
+
+
+
+
+
+
+
 
 #endif
 

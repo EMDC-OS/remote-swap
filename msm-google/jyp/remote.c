@@ -30,6 +30,7 @@
 #include <linux/workqueue.h>
 #include <linux/wait.h>
 #include <linux/freezer.h>
+#include <linux/blkdev.h>
 
 
 #include <asm/io.h>
@@ -48,7 +49,7 @@
 
 #ifdef CONFIG_APP_AWARE
 
-#define MANAGER_PERIOD (HZ)
+#define MANAGER_PERIOD (100*HZ)
 
 #define TRUE 1
 #define FALSE 0
@@ -69,18 +70,31 @@ int backgrounded_uid;
 atomic_t sent_cold_page;
 atomic_t faulted_cold_page;
 
+int prefetch_on;
 
-struct cold_page_sender_work {
-	struct work_struct work;
-	struct task_struct *task;	
-};
-
+struct perapp_cluster pac[10];
 
 struct task_struct *send_target_manager_thread;
 static DECLARE_WAIT_QUEUE_HEAD(send_target_manager_wait);
 
 DEFINE_SPINLOCK(stm_wait_cond_lock);
+DEFINE_SPINLOCK(which_table_lock);
+DEFINE_SPINLOCK(switch_start_lock);
+
 bool stm_wait_cond;
+
+
+int get_id_from_uid(int uid){
+
+	if(uid==10128)
+		return 0;
+	else{
+		printk(KERN_ERR "[REMOTE %s] unregistered UID\n", __func__);
+		return -1;
+	}
+
+}
+
 
 void wake_up_send_target_manager(void)
 {
@@ -98,7 +112,9 @@ void wake_up_send_target_manager(void)
 }
 
 
+
 static int send_zram_to_nbd(pte_t *pte, pmd_t *pmd, unsigned long vpage, struct mm_struct *mm){
+
 
 
 				
@@ -124,7 +140,7 @@ static int send_zram_to_nbd(pte_t *pte, pmd_t *pmd, unsigned long vpage, struct 
 	page = alloc_pages(GFP_KERNEL, 0);
 	SetPageUnevictable(page);
 					
-	//	printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,(unsigned long)page_address(page));
+	//printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,(unsigned long)page_address(page));
 	new_entry = get_swap_page_of_type(NBD_TYPE);
 	new_pte = swp_entry_and_counter_to_pte(new_entry,1);
 	//if COLD, type==1 && counter==1
@@ -352,7 +368,146 @@ unlock:
 }
 
 
+static int prefetch_target_page(pid_t tgid, unsigned long va){
 
+
+	struct task_struct  *task = NULL;
+	struct mm_struct *mm = NULL;
+	struct vm_area_struct *vma = NULL;
+	pgd_t *pgd;
+	pud_t *pud;
+	pmd_t *pmd;
+	pte_t *pte;
+	struct page *page;
+	bool page_allocated;
+	gfp_t gfp_mask = GFP_HIGHUSER_MOVABLE;
+
+	trace_printk("prefetch_target_page %d %llx\n",tgid,va);
+	rcu_read_lock();
+	task = find_task_by_vpid(tgid);
+	rcu_read_unlock();
+	
+	mm = task->mm ;
+	vma = find_vma(mm,va);
+	pgd = pgd_offset(mm, va);
+	if (!pgd_none(*pgd) && !pgd_bad(*pgd)) {
+		pud = pud_offset(pgd, va);
+		if (!pud_none(*pud) && !pud_bad(*pud)) {
+			pmd = pmd_offset(pud, va);
+			if (!pmd_none(*pmd) && !pmd_bad(*pmd)) {
+				pte = pte_offset_map(pmd, va);
+				if(!pte || pte_none(*pte))
+				{
+					return 0;
+				}
+                if(is_swap_pte(*pte))    
+                {
+                    swp_entry_t entry = pte_to_swp_entry(*pte); 
+					if(non_swap_entry(entry))
+                    {
+                       return 0;
+                    }
+                    if(swp_swapcount(entry) != 1) {
+                        return 0;
+                    }
+                    else                    // page is swapped and swap entry.
+                    {
+						if(swp_type(entry) == NBD_TYPE)   
+						{
+							page = __read_swap_cache_async(entry, gfp_mask, vma,
+									va, &page_allocated);
+							if (!page){
+								pte_unmap(pte);
+								return 0;
+							}
+
+							if (page_allocated) {
+								swap_readpage(page, false);
+								SetPageReadahead(page);
+	
+								trace_printk("prefetch done: %d %llx\n", tgid, va);
+							}
+							else
+								trace_printk("page not allocated\n");
+								
+							put_page(page);
+						}
+					}
+			
+				}
+				pte_unmap(pte);
+			}
+		}
+	}       
+
+	return 0;
+}
+
+
+
+static void prefetch_work(struct work_struct *work)
+{
+
+	struct prefetch_work *tew;
+	int max_idx_l;
+	struct swap_trace_entry *swap_trace_table_l;
+	pid_t tgid;
+	unsigned long va;
+	struct blk_plug plug;
+	int i;
+	int target_table;
+	tew = container_of(work, struct prefetch_work, work);
+	target_table=tew->target_table;
+	
+
+	trace_printk("prefetch worker start! target_table: %d\n",target_table);
+	if(target_table){
+		max_idx_l = atomic_read(&st_index1);
+		swap_trace_table_l = swap_trace_table1;
+	}
+	else{
+		max_idx_l = atomic_read(&st_index0);
+		swap_trace_table_l = swap_trace_table0;
+	}
+
+	blk_start_plug(&plug);
+	for( i = 0 ; i < max_idx_l ; i++ ){
+		trace_printk("prefetch table %d: %d %llx, %d %d\n",target_table,swap_trace_table_l[i].tgid,swap_trace_table_l[i].va,swap_trace_table_l[i].to_nbd,swap_trace_table_l[i].swapped);
+		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
+			trace_printk("if statement\n");
+			tgid = swap_trace_table_l[i].tgid;
+			va = swap_trace_table_l[i].va;
+			prefetch_target_page(tgid,va);
+		}
+	}
+	blk_finish_plug(&plug);
+	lru_add_drain();
+
+	kfree(tew);
+}
+
+
+void prefetch_handler(int uid, int target_table)
+{
+
+	struct prefetch_work *tew;
+
+		
+	trace_printk("handler start! target_table: %d\n",target_table);
+
+
+	printk(KERN_ERR "[REMOTE %s] prefetch uid %d\n", __func__,uid);
+	tew = kmalloc(sizeof(*tew), GFP_KERNEL);
+	printk(KERN_ERR "[REMOTE %s] prefetch 2\n", __func__,uid);
+	if (!tew)
+		return;
+
+	INIT_WORK(&tew->work, prefetch_work);
+	tew->target_table=target_table;
+	//tew->task = p;
+
+	schedule_work_on(1,&tew->work); // cpu 1
+}
 
 
 void cold_page_sender_handler(struct task_struct *p)
@@ -665,14 +820,32 @@ int app_switch_start_handler(struct ctl_table *table, int write,
 
 	
 	int rc = proc_dointvec_minmax(table,write,buffer,length,ppos);
+	unsigned long flags;
+	int target_table;
 	if(rc)
 		return rc;
 	if(write){
 
+		trace_printk("###########switch start! foreground %d#############\n",foreground_uid);
+
+
+		spin_lock_irqsave(&which_table_lock,flags);
+		target_table = which_table;
+		spin_unlock_irqrestore(&which_table_lock,flags);
+			
+		if(foreground_uid && prefetch_on)
+			prefetch_handler(foreground_uid,target_table);
+
+
+
+		spin_lock_irqsave(&switch_start_lock,flags);
 		switch_start = 1;
+		spin_unlock_irqrestore(&switch_start_lock,flags);
 
 		if(!foreground_uid)
 			return 0;
+		
+		spin_lock_irqsave(&which_table_lock,flags);
 
 		if(!which_table && atomic_read(&st_index0)==-1)
 			which_table=0;
@@ -680,6 +853,7 @@ int app_switch_start_handler(struct ctl_table *table, int write,
 			which_table=1;
 		else
 			which_table=!which_table;
+		spin_unlock_irqrestore(&which_table_lock,flags);
 		
 		if(which_table)
 			atomic_set(&st_index1,-1);
@@ -753,12 +927,16 @@ int update_to_nbd_flag(int percentage){
 	
 
 	idx_l = max_idx_l * percentage/100;
+
 	trace_printk("table %d is latter, total target %d max idx e, l -> %d %d\n", which_table,cnt,max_idx_e,max_idx_l);
+/*
 	while(idx_l <= max_idx_l){
 		if( swap_trace_table_l[idx_l].to_nbd )
 			trace_printk("%d: tgid %d va %llx is target\n",idx_l,swap_trace_table_l[idx_l].tgid,swap_trace_table_l[idx_l].va);
 		idx_l++;
 	}
+
+*/
 
 	return 0;
 }
@@ -771,6 +949,7 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 
 
 	int rc = proc_dointvec_minmax(table,write,buffer,length,ppos);
+	unsigned long flags;
 	if(rc)
 		return rc;
 	if(write){
@@ -780,7 +959,9 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 		/*
 		 * Switch finished
 		 */
+		spin_lock_irqsave(&switch_start_lock,flags);
 		switch_start = 0;
+		spin_unlock_irqrestore(&switch_start_lock,flags);
 
 		/*
 		 * Update to_nbd flag of st_0
@@ -811,7 +992,9 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 
 
 
+		st_should_check = 1 ; // --> per app, and keep in list
 		wake_up_send_target_manager();
+
 
 		backgrounded_uid = foreground_uid;
 	}
@@ -928,11 +1111,10 @@ static int target_manager_should_run(void)
 
 	
 
-	return stm_wait_cond || st_should_check  || !switch_start ; // should run in background
+	return stm_wait_cond && st_should_check  && !switch_start ; // should run in background
 }
 
 static int send_target_page(int id, pid_t tgid, unsigned long va){
-
 
        
 
@@ -943,6 +1125,7 @@ static int send_target_page(int id, pid_t tgid, unsigned long va){
 	pmd_t *pmd;
 	pte_t *pte;
 	struct page *cache_page;
+									
 
 	rcu_read_lock();
 	task = find_task_by_vpid(tgid);
@@ -968,6 +1151,7 @@ static int send_target_page(int id, pid_t tgid, unsigned long va){
                        return 0;
                     }
                     if(swp_swapcount(entry) != 1) {
+				
                         return 0;
                     }
                     else                    // page is swapped and swap entry.
@@ -978,7 +1162,16 @@ static int send_target_page(int id, pid_t tgid, unsigned long va){
 							if(!cache_page)       // can't find the page from cache
 							{
 
-								send_zram_to_nbd(pte, pmd, va, mm);
+								if(send_zram_to_nbd(pte, pmd, va, mm)){
+									
+									trace_printk("target sent: %d %llx\n", tgid, va);
+									pte_unmap(pte);
+									return 1;
+
+								}
+								else
+									trace_printk("[REMOTE %s] send_zram_to_nbd_failed\n", __func__);
+
 						
 
 							}
@@ -1000,14 +1193,43 @@ static int send_target_manager(void *arg)
 
 	int i;
 	int max_idx_l;
+	int target_table;
 	pid_t tgid;
 	unsigned long va;
+	unsigned long flags;
+	unsigned long flags2;
 	struct swap_trace_entry *swap_trace_table_l;
 	set_user_nice(current, MAX_NICE);
+	
 
+		
+	trace_printk(KERN_ERR "[REMOTE %s] target manager started\n", __func__);
 	while (!kthread_should_stop()) {
 		
-		if(which_table){
+		
+		bool target_flag=0;
+		
+		spin_lock_irqsave(&switch_start_lock,flags);
+		if(!switch_start){
+			if(!spin_trylock_irqsave(&which_table_lock,flags2)){	
+				spin_unlock_irqrestore(&switch_start_lock,flags);
+				goto sleep;
+			}
+	
+			target_table = which_table;
+		
+			trace_printk("send target manager - which_table : %d\n",which_table);
+
+			spin_unlock_irqrestore(&which_table_lock,flags2);
+
+		}
+		else{
+			spin_unlock_irqrestore(&switch_start_lock,flags);
+			goto sleep;
+		}
+		spin_unlock_irqrestore(&switch_start_lock,flags);
+
+		if(target_table){
 			max_idx_l = atomic_read(&st_index1);
 			swap_trace_table_l = swap_trace_table1;
 		}
@@ -1017,27 +1239,42 @@ static int send_target_manager(void *arg)
 		}
 
 		for( i = 0 ; i < max_idx_l ; i++ ){
-			if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
+			if(switch_start){
+				target_flag=0;
+				trace_printk(KERN_ERR "[REMOTE %s] switch started during sent\n", __func__);
+				goto sleep;
+			}
+			if(swap_trace_table_l[i].to_nbd && !swap_trace_table_l[i].swapped){
+					
+				target_flag=1;
 				tgid = swap_trace_table_l[i].tgid;
 				va = swap_trace_table_l[i].va;
-				send_target_page(0/* ID */,tgid,va);
+				if(send_target_page(0/* ID */,tgid,va)){
+					trace_printk("swapped marked table %d: %d %llx\n",target_table,tgid,va);
+					swap_trace_table_l[i].swapped=1;
+				}
 			}
 		}
-
-		/*
-		spin_lock_irqsave(&stm_wait_cond_lock);
-		stm_wait_cond = FALSE;
-		spin_unlock_irqrestore(&stm_wait_cond_lock);
-		*/
+sleep:
+		if(target_flag==0) /*Nothing to be sent*/
+		{
+		
+			trace_printk(KERN_ERR "[REMOTE %s] target manager slept\n", __func__);
+			spin_lock_irqsave(&stm_wait_cond_lock,flags);
+			stm_wait_cond = FALSE;
+			spin_unlock_irqrestore(&stm_wait_cond_lock,flags);
+		}
 
 		if (target_manager_should_run())
 			schedule_timeout_interruptible(MANAGER_PERIOD);
-		else
+		else{
+			
 			wait_event_freezable(send_target_manager_wait,
 				target_manager_should_run() || kthread_should_stop());
 		
-	//	printk(KERN_ERR "[REMOTE %s] target manager wake up\n", __func__);
-	//	trace_printk("[REMOTE %s] target manager wake up\n", __func__);
+			trace_printk(KERN_ERR "[REMOTE %s] target manager wake up\n", __func__);
+		
+		}
 		
 		cond_resched();
 	}
@@ -1074,7 +1311,16 @@ static int __init remote_swap_init(void)
 	return 0;
 }
 
+static void __exit remote_swap_exit(void){
+
+	kthread_stop(send_target_manager_thread);
+	return ;
+
+}
+
+
 module_init(remote_swap_init)
+module_exit(remote_swap_exit)
 
 #endif
 

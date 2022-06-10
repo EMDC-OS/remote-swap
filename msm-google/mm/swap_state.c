@@ -470,6 +470,12 @@ struct page *lookup_swap_cache(swp_entry_t entry, struct vm_area_struct *vma,
 		}
 		if (readahead) {
 			count_vm_event(SWAP_RA_HIT);
+
+#ifdef CONFIG_APP_AWARE
+			if (swp_type(entry) == NBD_TYPE)
+				trace_printk("prefetch hit %d \"%s\" %lx %lx\n",current->tgid,current->comm,addr,swp_offset(entry));
+#endif
+			
 			if (!vma)
 				atomic_inc(&swapin_readahead_hits);
 		}

@@ -11,6 +11,19 @@
 #define COLD_PAGE_THRESHOLD 5
 
 
+
+struct cold_page_sender_work {
+	struct work_struct work;
+	struct task_struct *task;	
+};
+struct prefetch_work {
+	struct work_struct work;
+	int target_table;
+};
+struct perapp_cluster {
+	struct swap_cluster_info index; /* Current cluster index */
+	unsigned int next; /* Likely next allocation offset */
+};
 struct swap_trace_entry {
         pid_t tgid; 
         unsigned long va;
@@ -24,6 +37,7 @@ extern atomic_t st_index0;
 extern atomic_t st_index1;
 extern struct swap_trace_entry swap_trace_table0[40000];
 extern struct swap_trace_entry swap_trace_table1[40000];
+extern struct perapp_cluster pac[10];
 
 
 extern atomic_t sent_cold_page;
@@ -74,10 +88,13 @@ extern int app_switch_fin;
 extern int app_switch_fin_handler(struct ctl_table *table, int write,
                  void __user *buffer, size_t *length, loff_t *ppos);
 
+extern int get_id_from_uid(int uid);
+
 extern int foreground_uid;
 extern int foreground_pid;
 extern int swapin_vma_tracking;
 extern int swapin_anon_tracking;
+extern int prefetch_on;
 
 
 
