@@ -84,10 +84,12 @@ DEFINE_SPINLOCK(switch_start_lock);
 bool stm_wait_cond;
 
 
-int get_id_from_uid(int uid){
+unsigned int get_id_from_uid(int uid){
 
 	if(uid==10128)
 		return 0;
+	else if (uid==-1) // cold page
+		return 9;
 	else{
 		printk(KERN_ERR "[REMOTE %s] unregistered UID\n", __func__);
 		return -1;
@@ -142,8 +144,7 @@ static int send_zram_to_nbd(pte_t *pte, pmd_t *pmd, unsigned long vpage, struct 
 					
 	//printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,(unsigned long)page_address(page));
 	new_entry = get_swap_page_of_type(NBD_TYPE);
-	new_pte = swp_entry_and_counter_to_pte(new_entry,1);
-	//if COLD, type==1 && counter==1
+	//if Prefetch target, type==1 && counter==0
 	lock_page(page);
 	__SetPageSwapBacked(page);
 	ClearPageUptodate(page);
@@ -185,6 +186,7 @@ static int send_zram_to_nbd(pte_t *pte, pmd_t *pmd, unsigned long vpage, struct 
 	}
 	
 	set_pte(orig_pte, new_pte);
+	trace_printk("target sent: %d %llx %llx\n",mm->owner->tgid, vpage, swp_offset(new_entry));
 	swap_free(entry);
 	ret=1;
 unlock:
@@ -425,7 +427,7 @@ static int prefetch_target_page(pid_t tgid, unsigned long va){
 								swap_readpage(page, false);
 								SetPageReadahead(page);
 	
-								trace_printk("prefetch done: %d %llx\n", tgid, va);
+					//			trace_printk("prefetch done: %d %llx\n", tgid, va);
 							}
 							else
 								trace_printk("page not allocated\n");
@@ -460,7 +462,6 @@ static void prefetch_work(struct work_struct *work)
 	target_table=tew->target_table;
 	
 
-	trace_printk("prefetch worker start! target_table: %d\n",target_table);
 	if(target_table){
 		max_idx_l = atomic_read(&st_index1);
 		swap_trace_table_l = swap_trace_table1;
@@ -472,9 +473,8 @@ static void prefetch_work(struct work_struct *work)
 
 	blk_start_plug(&plug);
 	for( i = 0 ; i < max_idx_l ; i++ ){
-		trace_printk("prefetch table %d: %d %llx, %d %d\n",target_table,swap_trace_table_l[i].tgid,swap_trace_table_l[i].va,swap_trace_table_l[i].to_nbd,swap_trace_table_l[i].swapped);
+		//trace_printk("prefetch table %d: %d %llx, %d %d\n",target_table,swap_trace_table_l[i].tgid,swap_trace_table_l[i].va,swap_trace_table_l[i].to_nbd,swap_trace_table_l[i].swapped);
 		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
-			trace_printk("if statement\n");
 			tgid = swap_trace_table_l[i].tgid;
 			va = swap_trace_table_l[i].va;
 			prefetch_target_page(tgid,va);
@@ -1164,7 +1164,6 @@ static int send_target_page(int id, pid_t tgid, unsigned long va){
 
 								if(send_zram_to_nbd(pte, pmd, va, mm)){
 									
-									trace_printk("target sent: %d %llx\n", tgid, va);
 									pte_unmap(pte);
 									return 1;
 
@@ -1299,6 +1298,7 @@ static int __init remote_swap_init(void)
 {
 
 	int error;
+	int i;
 	printk(KERN_ERR "[REMOTE %s] INIT remote swap\n", __func__);
 			
 	atomic_set(&st_index0,-1);
@@ -1307,6 +1307,13 @@ static int __init remote_swap_init(void)
 	error = send_target_managers_init();
 	if (unlikely(error))
 		return error;
+
+	for(i=0;i<8;i++){
+		struct perapp_cluster *cluster;
+		cluster=&pac[i];
+		cluster_set_null(&cluster->index);
+	}
+
 
 	return 0;
 }

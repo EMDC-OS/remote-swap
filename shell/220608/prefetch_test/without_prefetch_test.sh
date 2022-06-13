@@ -51,19 +51,25 @@ sleep 5
 adb shell cat /sys/kernel/debug/tracing/trace > no_flagset_trace2.txt
 sleep 5 
 
-
+adb shell free -m
 adb shell /data/launch/with_sysctl_launch_app.sh home
 sleep 5
+adb shell free -m
 adb shell "echo anon > /proc/$STR1/reclaim"
 sleep 30
+adb shell free -m
 adb shell /data/screen_unlock.sh
 sleep 5
+adb shell free -m
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
 sleep 50 
+adb shell free -m
 adb shell "echo $STR1 > /proc/sys/kernel/swap_counter_dump"
 sleep 5
+adb shell free -m
 adb shell cat /sys/kernel/debug/tracing/trace > no_flagset_trace3.txt
 sleep 5 
+adb shell free -m
 
 
 adb shell /data/launch/with_sysctl_launch_app.sh home

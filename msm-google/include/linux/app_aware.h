@@ -88,7 +88,7 @@ extern int app_switch_fin;
 extern int app_switch_fin_handler(struct ctl_table *table, int write,
                  void __user *buffer, size_t *length, loff_t *ppos);
 
-extern int get_id_from_uid(int uid);
+extern unsigned int get_id_from_uid(int uid);
 
 extern int foreground_uid;
 extern int foreground_pid;

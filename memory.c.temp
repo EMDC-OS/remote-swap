@@ -3116,16 +3116,8 @@ int do_swap_page(struct vm_fault *vmf)
 	/*
 	 * For cold page dump
 	 */
-	if (swp_type(entry) == NBD_TYPE){
-		if(pte_to_swp_counter(vmf->orig_pte)){
-			atomic_inc(&faulted_cold_page);
-		}
-		else{
-			trace_printk("prefetch miss %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
-
-		}
-
-	}
+	if (swp_type(entry) == NBD_TYPE && pte_to_swp_counter(vmf->orig_pte))
+		atomic_inc(&faulted_cold_page);
 			
 
 

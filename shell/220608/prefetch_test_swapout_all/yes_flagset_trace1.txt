@@ -1,0 +1,47 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 36/36   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-201   [005] ....     0.524070: send_target_manager: 3[REMOTE send_target_manager] target manager started
+           <...>-201   [005] d..2     0.524080: send_target_manager: send target manager - which_table : 0
+           <...>-201   [005] ....     0.524081: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6513  [007] ....    67.783407: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-6513  [007] d..1    67.783410: app_switch_start_handler: target_table: 0
+           <...>-6513  [007] ....    67.783411: prefetch_handler: handler start! target_table: 0
+           <...>-6513  [007] ....    67.783435: app_switch_start_handler: which_table : 0
+           <...>-6513  [007] d..1    67.783435: app_switch_start_handler: which_table : 0
+           <...>-744   [001] ....    67.783686: prefetch_work: prefetch worker start! target_table: 0
+           <...>-201   [005] ....    68.391984: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [005] d..2    68.391986: send_target_manager: send target manager - which_table : 0
+           <...>-201   [005] ....    68.391987: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7226  [007] ....   123.484401: app_switch_start_handler: ###########switch start! foreground 0#############
+           <...>-7226  [007] d..1   123.484404: app_switch_start_handler: target_table: 0
+           <...>-7226  [007] ....   123.484405: app_switch_start_handler: which_table : 0
+           <...>-201   [006] ....   123.512808: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [006] d..2   123.512811: send_target_manager: send target manager - which_table : 0
+           <...>-201   [006] ....   123.512812: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-10079 [007] ....   864.548590: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-10079 [007] d..1   864.548595: app_switch_start_handler: target_table: 0
+           <...>-10079 [007] ....   864.548597: prefetch_handler: handler start! target_table: 0
+           <...>-10079 [007] ....   864.548630: app_switch_start_handler: which_table : 0
+           <...>-10079 [007] d..1   864.548631: app_switch_start_handler: which_table : 0
+           <...>-9827  [001] ....   864.548655: prefetch_work: prefetch worker start! target_table: 0
+           <...>-201   [007] ....   864.772541: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [007] d..2   864.772544: send_target_manager: send target manager - which_table : 0
+           <...>-201   [007] ....   864.772560: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+              sh-10158 [007] ....   914.796161: swap_counter_dump_handler: pid 6519: counter 0 = 21370
+              sh-10158 [007] ....   914.796164: swap_counter_dump_handler: pid 6519: counter 1 = 0
+              sh-10158 [007] ....   914.796165: swap_counter_dump_handler: pid 6519: counter 2 = 0
+              sh-10158 [007] ....   914.796166: swap_counter_dump_handler: pid 6519: counter 3 = 0
+              sh-10158 [007] ....   914.796167: swap_counter_dump_handler: pid 6519: counter 4 = 0
+              sh-10158 [007] ....   914.796167: swap_counter_dump_handler: pid 6519: counter 5 = 0
+              sh-10158 [007] ....   914.796168: swap_counter_dump_handler: pid 6519: counter >5 = 0
+              sh-10158 [007] ....   914.796169: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-10158 [007] ....   914.796170: swap_counter_dump_handler: remote: total faulted cold page: 0

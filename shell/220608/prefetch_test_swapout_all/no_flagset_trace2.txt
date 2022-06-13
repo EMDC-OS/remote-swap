@@ -1,0 +1,33 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 22/22   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-9970  [007] ....   925.443592: app_switch_start_handler: ###########switch start! foreground 0#############
+           <...>-9970  [007] d..1   925.443596: app_switch_start_handler: target_table: 0
+           <...>-9970  [007] ....   925.443597: app_switch_start_handler: which_table : 0
+           <...>-200   [001] .n..   925.473125: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [001] d..2   925.473580: send_target_manager: send target manager - which_table : 0
+           <...>-200   [001] ....   925.473613: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-12715 [007] ....  1645.751440: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-12715 [007] d..1  1645.751443: app_switch_start_handler: target_table: 0
+           <...>-12715 [007] ....  1645.751444: app_switch_start_handler: which_table : 0
+           <...>-12715 [007] d..1  1645.751445: app_switch_start_handler: which_table : 1
+           <...>-12715 [007] ....  1646.000314: update_to_nbd_flag: table 1 is latter, total target 2668 max idx e, l -> 7220 6749
+           <...>-200   [004] ....  1646.000327: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] d..2  1646.000329: send_target_manager: send target manager - which_table : 1
+              sh-12802 [007] ....  1696.025189: swap_counter_dump_handler: pid 6358: counter 0 = 4323
+              sh-12802 [007] ....  1696.025193: swap_counter_dump_handler: pid 6358: counter 1 = 20190
+              sh-12802 [007] ....  1696.025194: swap_counter_dump_handler: pid 6358: counter 2 = 0
+              sh-12802 [007] ....  1696.025195: swap_counter_dump_handler: pid 6358: counter 3 = 0
+              sh-12802 [007] ....  1696.025196: swap_counter_dump_handler: pid 6358: counter 4 = 0
+              sh-12802 [007] ....  1696.025196: swap_counter_dump_handler: pid 6358: counter 5 = 0
+              sh-12802 [007] ....  1696.025197: swap_counter_dump_handler: pid 6358: counter >5 = 0
+              sh-12802 [007] ....  1696.025198: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-12802 [007] ....  1696.025199: swap_counter_dump_handler: remote: total faulted cold page: 0

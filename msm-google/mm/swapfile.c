@@ -3748,6 +3748,278 @@ static void free_swap_count_continuations(struct swap_info_struct *si)
 
 #ifdef CONFIG_APP_AWARE
 
+static bool
+scan_swap_map_ssd_cluster_conflict_of_id(struct swap_info_struct *si,
+	unsigned long offset, unsigned int id)
+{
+	struct perapp_cluster *perapp_cluster;
+	bool conflict;
+
+	offset /= SWAPFILE_CLUSTER;
+	conflict = !cluster_list_empty(&si->free_clusters) &&
+		offset != cluster_list_first(&si->free_clusters) &&
+		cluster_is_free(&si->cluster_info[offset]);
+
+	if (!conflict)
+		return false;
+
+	perapp_cluster = &pac[id];
+	cluster_set_null(&perapp_cluster->index);
+	return true;
+}
+
+
+
+
+static bool scan_swap_map_try_cluster_id(struct swap_info_struct *si,
+	unsigned long *offset, unsigned long *scan_base, unsigned int id)
+{
+	struct perapp_cluster *cluster;
+	struct swap_cluster_info *ci;
+	bool found_free;
+	unsigned long tmp, max;
+
+new_cluster:
+	cluster = &pac[id];
+	if (cluster_is_null(&cluster->index)) {
+		if (!cluster_list_empty(&si->free_clusters)) {
+			cluster->index = si->free_clusters.head;
+			cluster->next = cluster_next(&cluster->index) *
+					SWAPFILE_CLUSTER;
+		} else if (!cluster_list_empty(&si->discard_clusters)) {
+			/*
+			 * we don't have free cluster but have some clusters in
+			 * discarding, do discard now and reclaim them
+			 */
+			swap_do_scheduled_discard(si);
+			*scan_base = *offset = si->cluster_next;
+			goto new_cluster;
+		} else
+			return false;
+	}
+
+	found_free = false;
+
+	/*
+	 * Other CPUs can use our cluster if they can't find a free cluster,
+	 * check if there is still free entry in the cluster
+	 */
+	tmp = cluster->next;
+	max = min_t(unsigned long, si->max,
+		    (cluster_next(&cluster->index) + 1) * SWAPFILE_CLUSTER);
+	if (tmp >= max) {
+		cluster_set_null(&cluster->index);
+		goto new_cluster;
+	}
+	ci = lock_cluster(si, tmp);
+	while (tmp < max) {
+		if (!si->swap_map[tmp]) {
+			found_free = true;
+			break;
+		}
+		tmp++;
+	}
+	unlock_cluster(ci);
+	if (!found_free) {
+		cluster_set_null(&cluster->index);
+		goto new_cluster;
+	}
+	cluster->next = tmp + 1;
+	*offset = tmp;
+	*scan_base = tmp;
+	return found_free;
+}
+
+static int scan_swap_map_slots_of_id(struct swap_info_struct *si,
+			       unsigned char usage, int nr,
+			       swp_entry_t slots[], unsigned int id)
+{
+	struct swap_cluster_info *ci;
+	unsigned long offset;
+	unsigned long scan_base;
+	int latency_ration = LATENCY_LIMIT;
+	int n_ret = 0;
+
+	if (nr > SWAP_BATCH)
+		nr = SWAP_BATCH;
+
+	/*
+	 * We try to cluster swap pages by allocating them sequentially
+	 * in swap.  Once we've allocated SWAPFILE_CLUSTER pages this
+	 * way, however, we resort to first-free allocation, starting
+	 * a new cluster.  This prevents us from scattering swap pages
+	 * all over the entire swap partition, so that we reduce
+	 * overall disk seek times between swap pages.  -- sct
+	 * But we do now try to find an empty cluster.  -Andrea
+	 * And we let swap pages go all over an SSD partition.  Hugh
+	 */
+
+	si->flags += SWP_SCANNING;
+	scan_base = offset = si->cluster_next;
+
+
+	/* SSD algorithm */
+	if (si->cluster_info) {
+		if (scan_swap_map_try_cluster_id(si, &offset, &scan_base, id))
+			goto checks;
+		else
+			goto scan;
+	}
+
+checks:
+	if (si->cluster_info) {
+		while (scan_swap_map_ssd_cluster_conflict_of_id(si, offset,id)) {
+		/* take a break if we already got some slots */
+			if (n_ret)
+				goto done;
+			if (!scan_swap_map_try_cluster_id(si, &offset,
+							&scan_base, id))
+				goto scan;
+		}
+	}
+	if (!(si->flags & SWP_WRITEOK))
+		goto no_page;
+	if (!si->highest_bit)
+		goto no_page;
+	if (offset > si->highest_bit)
+		scan_base = offset = si->lowest_bit;
+
+	ci = lock_cluster(si, offset);
+	/* reuse swap entry of cache-only swap if not busy. */
+	if (vm_swap_full() && si->swap_map[offset] == SWAP_HAS_CACHE) {
+		int swap_was_freed;
+		unlock_cluster(ci);
+		spin_unlock(&si->lock);
+		swap_was_freed = __try_to_reclaim_swap(si, offset);
+		spin_lock(&si->lock);
+		/* entry was freed successfully, try to use this again */
+		if (swap_was_freed)
+			goto checks;
+		goto scan; /* check next one */
+	}
+
+	if (si->swap_map[offset]) {
+		unlock_cluster(ci);
+		if (!n_ret)
+			goto scan;
+		else
+			goto done;
+	}
+	si->swap_map[offset] = usage;
+	inc_cluster_info_page(si, si->cluster_info, offset);
+	unlock_cluster(ci);
+
+	swap_range_alloc(si, offset, 1);
+	si->cluster_next = offset + 1;
+	slots[n_ret++] = swp_entry(si->type, offset);
+
+	/* got enough slots or reach max slots? */
+	if ((n_ret == nr) || (offset >= si->highest_bit))
+		goto done;
+
+	/* search for next available slot */
+
+	/* time to take a break? */
+	if (unlikely(--latency_ration < 0)) {
+		if (n_ret)
+			goto done;
+		spin_unlock(&si->lock);
+		cond_resched();
+		spin_lock(&si->lock);
+		latency_ration = LATENCY_LIMIT;
+	}
+
+	/* try to get more slots in cluster */
+	if (si->cluster_info) {
+		if (scan_swap_map_try_cluster_id(si, &offset, &scan_base,id))
+			goto checks;
+		else
+			goto done;
+	}
+
+done:
+	si->flags -= SWP_SCANNING;
+	return n_ret;
+
+scan:
+	spin_unlock(&si->lock);
+	while (++offset <= si->highest_bit) {
+		if (!si->swap_map[offset]) {
+			spin_lock(&si->lock);
+			goto checks;
+		}
+		if (vm_swap_full() && si->swap_map[offset] == SWAP_HAS_CACHE) {
+			spin_lock(&si->lock);
+			goto checks;
+		}
+		if (unlikely(--latency_ration < 0)) {
+			cond_resched();
+			latency_ration = LATENCY_LIMIT;
+		}
+	}
+	offset = si->lowest_bit;
+	while (offset < scan_base) {
+		if (!si->swap_map[offset]) {
+			spin_lock(&si->lock);
+			goto checks;
+		}
+		if (vm_swap_full() && si->swap_map[offset] == SWAP_HAS_CACHE) {
+			spin_lock(&si->lock);
+			goto checks;
+		}
+		if (unlikely(--latency_ration < 0)) {
+			cond_resched();
+			latency_ration = LATENCY_LIMIT;
+		}
+		offset++;
+	}
+	spin_lock(&si->lock);
+
+no_page:
+	si->flags -= SWP_SCANNING;
+	return n_ret;
+}
+
+
+
+static unsigned long scan_swap_map_of_id(struct swap_info_struct *si,
+				   unsigned char usage, unsigned int id)
+{
+	swp_entry_t entry;
+	int n_ret;
+
+	n_ret = scan_swap_map_slots_of_id(si, usage, 1, &entry,id);
+
+	if (n_ret)
+		return swp_offset(entry);
+	else
+		return 0;
+
+}
+
+
+
+/* The only caller of this function is now suspend routine */
+swp_entry_t get_swap_page_of_uid(int uid)
+{
+	struct swap_info_struct *si;
+	pgoff_t offset;
+	unsigned int id = get_id_from_uid(uid);
+	si = swap_info[NBD_TYPE];
+	spin_lock(&si->lock);
+	if (si && (si->flags & SWP_WRITEOK)) {
+		atomic_long_dec(&nr_swap_pages);
+		/* This is called for allocating swap entry, not cache */
+		offset = scan_swap_map_of_id(si, 1, id);
+		if (offset) {
+			spin_unlock(&si->lock);
+			return swp_entry(NBD_TYPE, offset);
+		}
+		atomic_long_inc(&nr_swap_pages);
+	}
+	spin_unlock(&si->lock);
+	return (swp_entry_t) {0};
+}
 
 
 

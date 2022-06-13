@@ -26,6 +26,10 @@ it needs periodical random page table walk. any better IDEA?
 - STOP sending / during switch_start
 It SHOULD be implemented to maximize prefetching --> made roughly, so need to be optimized
 
+- SWAP TRACE TABLE ALLOCATION
+current implementaion -> static big table
+optimization plan     -> at first, write to static big table, and then dynamically alloc the per-app tablie
+                      -> OR, alloc application well considering offline profiling, and dynamically resizing them if it is full
 
 // Implementation idea
 
