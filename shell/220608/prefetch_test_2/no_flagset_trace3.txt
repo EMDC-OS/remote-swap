@@ -1,0 +1,407 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 396/396   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-200   [005] ....     0.516035: send_target_manager: 3[REMOTE send_target_manager] target manager started
+           <...>-200   [005] d..2     0.516047: send_target_manager: send target manager - which_table : 0
+           <...>-200   [005] ....     0.516048: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6332  [006] ....    66.834662: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-200   [000] ....    67.446601: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [000] d..2    67.446611: send_target_manager: send target manager - which_table : 0
+           <...>-200   [000] ....    67.446613: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7047  [007] ....   122.538144: app_switch_start_handler: ###########switch start! foreground 0#############
+           <...>-200   [006] ....   122.567992: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [006] d..2   122.567996: send_target_manager: send target manager - which_table : 0
+           <...>-200   [006] ....   122.567997: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7153  [007] ....   164.564903: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-200   [003] ....   164.768163: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [003] d..2   164.768169: send_target_manager: send target manager - which_table : 0
+           <...>-200   [003] ....   164.770047: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7229  [007] ....   214.792630: swap_counter_dump_handler: pid 6338: counter 0 = 18188
+           <...>-7229  [007] ....   214.792634: swap_counter_dump_handler: pid 6338: counter 1 = 0
+           <...>-7229  [007] ....   214.792635: swap_counter_dump_handler: pid 6338: counter 2 = 0
+           <...>-7229  [007] ....   214.792635: swap_counter_dump_handler: pid 6338: counter 3 = 0
+           <...>-7229  [007] ....   214.792636: swap_counter_dump_handler: pid 6338: counter 4 = 0
+           <...>-7229  [007] ....   214.792637: swap_counter_dump_handler: pid 6338: counter 5 = 0
+           <...>-7229  [007] ....   214.792638: swap_counter_dump_handler: pid 6338: counter >5 = 0
+           <...>-7229  [007] ....   214.792639: swap_counter_dump_handler: remote: total sent cold page: 0
+           <...>-7229  [007] ....   214.792640: swap_counter_dump_handler: remote: total faulted cold page: 0
+           <...>-7234  [007] ....   224.838134: app_switch_start_handler: ###########switch start! foreground 0#############
+           <...>-200   [003] ....   224.864927: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [003] d..2   224.864933: send_target_manager: send target manager - which_table : 0
+           <...>-200   [003] ....   224.864944: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7277  [007] ....   266.615799: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-7277  [004] ....   266.811672: update_to_nbd_flag: table 1 is latter, total target 824 max idx e, l -> 1843 2025
+           <...>-200   [003] ....   266.811691: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [003] d..2   266.811694: send_target_manager: send target manager - which_table : 1
+           <...>-7412  [007] ....   316.837411: swap_counter_dump_handler: pid 6338: counter 0 = 274
+           <...>-7412  [007] ....   316.837416: swap_counter_dump_handler: pid 6338: counter 1 = 17883
+           <...>-7412  [007] ....   316.837417: swap_counter_dump_handler: pid 6338: counter 2 = 0
+           <...>-7412  [007] ....   316.837418: swap_counter_dump_handler: pid 6338: counter 3 = 0
+           <...>-7412  [007] ....   316.837419: swap_counter_dump_handler: pid 6338: counter 4 = 0
+           <...>-7412  [007] ....   316.837420: swap_counter_dump_handler: pid 6338: counter 5 = 0
+           <...>-7412  [007] ....   316.837421: swap_counter_dump_handler: pid 6338: counter >5 = 0
+           <...>-7412  [007] ....   316.837422: swap_counter_dump_handler: remote: total sent cold page: 0
+           <...>-7412  [007] ....   316.837424: swap_counter_dump_handler: remote: total faulted cold page: 0
+           <...>-7418  [007] ....   326.900027: app_switch_start_handler: ###########switch start! foreground 0#############
+           <...>-200   [001] d..2   368.266763: send_target_manager: send target manager - which_table : 1
+           <...>-200   [001] ...1   368.283041: send_zram_to_nbd: target sent: 6338 7eaf101000 3700
+           <...>-200   [001] ...1   368.288201: send_zram_to_nbd: target sent: 6338 7e9b487000 3701
+           <...>-200   [001] ...1   368.291351: send_zram_to_nbd: target sent: 6338 7e9b3cd000 3702
+           <...>-200   [002] ...1   368.294368: send_zram_to_nbd: target sent: 6338 7e9b4ab000 3703
+           <...>-200   [000] ...1   368.296868: send_zram_to_nbd: target sent: 6338 7e9e85a000 7700
+           <...>-200   [000] ...1   368.299477: send_zram_to_nbd: target sent: 6338 7eaf244000 b700
+           <...>-200   [002] ...1   368.301606: send_zram_to_nbd: target sent: 6338 7eaf240000 b701
+           <...>-200   [002] ...1   368.303839: send_zram_to_nbd: target sent: 6338 7e9b4ac000 7701
+           <...>-200   [002] ...1   368.306023: send_zram_to_nbd: target sent: 6338 7eb05d4000 7702
+           <...>-200   [002] ...1   368.308188: send_zram_to_nbd: target sent: 6338 7e9ed4f000 7703
+           <...>-200   [001] ...1   368.310250: send_zram_to_nbd: target sent: 6338 7e9ec25000 7704
+           <...>-200   [000] ...1   368.316476: send_zram_to_nbd: target sent: 6338 7ec68f1000 3704
+           <...>-200   [002] ...1   368.319238: send_zram_to_nbd: target sent: 6338 7e9edc8000 b702
+           <...>-200   [001] ...1   368.321274: send_zram_to_nbd: target sent: 6338 7e9ee15000 7705
+           <...>-200   [002] ...1   368.326768: send_zram_to_nbd: target sent: 6338 7e9e8d6000 3705
+           <...>-200   [000] ...1   368.328798: send_zram_to_nbd: target sent: 6338 7e9eaea000 7706
+           <...>-200   [001] ...1   368.330847: send_zram_to_nbd: target sent: 6338 7eaf177000 b703
+           <...>-200   [001] ...1   368.333021: send_zram_to_nbd: target sent: 6338 7e9e869000 3706
+           <...>-200   [001] ...1   368.335219: send_zram_to_nbd: target sent: 6338 7e9b84e000 3707
+           <...>-200   [003] ...1   368.337905: send_zram_to_nbd: target sent: 6338 7e9c197000 3708
+           <...>-200   [000] ...1   368.340860: send_zram_to_nbd: target sent: 6338 7e9bd4b000 f700
+           <...>-200   [000] ...1   368.344318: send_zram_to_nbd: target sent: 6338 7e9bde5000 b704
+           <...>-200   [000] ...1   368.347953: send_zram_to_nbd: target sent: 6338 7e9be6c000 b705
+           <...>-200   [000] ...1   368.353055: send_zram_to_nbd: target sent: 6338 7eb078b000 b706
+           <...>-200   [001] ...1   368.355290: send_zram_to_nbd: target sent: 6338 7eb0061000 b707
+           <...>-200   [001] ...1   368.358295: send_zram_to_nbd: target sent: 6338 7ec6875000 3709
+           <...>-200   [001] ...1   368.360309: send_zram_to_nbd: target sent: 6338 7eaf4cf000 370a
+           <...>-200   [001] ...1   368.362405: send_zram_to_nbd: target sent: 6338 7eaed05000 370b
+           <...>-200   [001] ...1   368.364562: send_zram_to_nbd: target sent: 6338 7eaedb0000 370c
+           <...>-200   [001] ...1   368.366725: send_zram_to_nbd: target sent: 6338 7e9ee4e000 370d
+           <...>-200   [001] ...1   368.369060: send_zram_to_nbd: target sent: 6338 7e9ef06000 370e
+           <...>-200   [001] ...1   368.371994: send_zram_to_nbd: target sent: 6338 7eb0460000 370f
+           <...>-200   [001] ...1   368.374103: send_zram_to_nbd: target sent: 6338 7e9eefc000 3710
+           <...>-200   [001] ...1   368.376207: send_zram_to_nbd: target sent: 6338 7e9b2e9000 3711
+           <...>-200   [003] ...1   368.384153: send_zram_to_nbd: target sent: 6338 7e9e8c0000 3712
+           <...>-200   [003] ...1   368.387269: send_zram_to_nbd: target sent: 6338 7eb0485000 f701
+           <...>-200   [003] ...1   368.389666: send_zram_to_nbd: target sent: 6338 7e9ecb6000 f702
+           <...>-200   [003] ...1   368.393139: send_zram_to_nbd: target sent: 6338 7e9ee68000 f703
+           <...>-200   [003] ...1   368.395216: send_zram_to_nbd: target sent: 6338 7e9eb33000 f704
+           <...>-200   [003] ...1   368.397126: send_zram_to_nbd: target sent: 6338 7e9ebe3000 f705
+           <...>-200   [003] ...1   368.398979: send_zram_to_nbd: target sent: 6338 7e9efc0000 f706
+           <...>-200   [003] ...1   368.401288: send_zram_to_nbd: target sent: 6338 7eafbbb000 f707
+           <...>-200   [003] ...1   368.403272: send_zram_to_nbd: target sent: 6338 7eb021b000 f708
+           <...>-200   [003] ...1   368.406296: send_zram_to_nbd: target sent: 6338 7eb0198000 f709
+           <...>-200   [002] ...1   368.410303: send_zram_to_nbd: target sent: 6338 7f2d6f4000 f70a
+           <...>-200   [002] ...1   368.412867: send_zram_to_nbd: target sent: 6338 7f2d78a000 7707
+           <...>-200   [002] ...1   368.414834: send_zram_to_nbd: target sent: 6338 7ec01a9000 7708
+           <...>-200   [001] ...1   368.419232: send_zram_to_nbd: target sent: 6338 7e9ef51000 7709
+           <...>-200   [001] ...1   368.421473: send_zram_to_nbd: target sent: 6338 7e9e84e000 3713
+           <...>-200   [000] ...1   368.424129: send_zram_to_nbd: target sent: 6338 7e9e84f000 3714
+           <...>-200   [000] ...1   368.426249: send_zram_to_nbd: target sent: 6338 7eafe5c000 b708
+           <...>-200   [000] ...1   368.428432: send_zram_to_nbd: target sent: 6338 7ed0aea000 b709
+           <...>-200   [003] ...1   368.430705: send_zram_to_nbd: target sent: 6338 7e9b373000 b70a
+           <...>-200   [003] ...1   368.434967: send_zram_to_nbd: target sent: 6338 7e9ec72000 f70b
+           <...>-200   [003] ...1   368.438830: send_zram_to_nbd: target sent: 6338 7eaf2b9000 f70c
+           <...>-200   [003] ...1   368.441590: send_zram_to_nbd: target sent: 6338 7e9ee3c000 f70d
+           <...>-200   [003] ...1   368.444012: send_zram_to_nbd: target sent: 6338 7e9ed6d000 f70e
+           <...>-200   [003] ...1   368.447231: send_zram_to_nbd: target sent: 6338 7e9b370000 f70f
+           <...>-200   [003] ...1   368.449569: send_zram_to_nbd: target sent: 6338 7e9ed6e000 f710
+           <...>-200   [003] ...1   368.452214: send_zram_to_nbd: target sent: 6338 7e9ed6f000 f711
+           <...>-200   [003] ...1   368.456399: send_zram_to_nbd: target sent: 6338 7e9ed70000 f712
+           <...>-200   [003] ...1   368.458834: send_zram_to_nbd: target sent: 6338 7e9b388000 f713
+           <...>-200   [003] ...1   368.461126: send_zram_to_nbd: target sent: 6338 7e9b387000 f714
+           <...>-200   [003] ...1   368.463864: send_zram_to_nbd: target sent: 6338 7e9b30a000 f715
+           <...>-200   [003] ...1   368.466014: send_zram_to_nbd: target sent: 6338 7e9b30b000 f716
+           <...>-200   [003] ...1   368.468669: send_zram_to_nbd: target sent: 6338 7e9b30d000 f717
+           <...>-200   [003] ...1   368.470821: send_zram_to_nbd: target sent: 6338 7e9ebbc000 f718
+           <...>-200   [003] ...1   368.477095: send_zram_to_nbd: target sent: 6338 7e9e93c000 f719
+           <...>-200   [003] ...1   368.479139: send_zram_to_nbd: target sent: 6338 7e9b39b000 f71a
+           <...>-200   [003] ...1   368.481415: send_zram_to_nbd: target sent: 6338 7e9ecf3000 f71b
+           <...>-200   [001] ...1   368.483603: send_zram_to_nbd: target sent: 6338 7e9ed68000 f71c
+           <...>-200   [001] ...1   368.485792: send_zram_to_nbd: target sent: 6338 7e9ea86000 3715
+           <...>-200   [001] ...1   368.487894: send_zram_to_nbd: target sent: 6338 7e9ea7b000 3716
+           <...>-200   [001] ...1   368.493038: send_zram_to_nbd: target sent: 6338 7e9eb42000 3717
+           <...>-200   [001] ...1   368.495403: send_zram_to_nbd: target sent: 6338 7e9ed61000 3718
+           <...>-200   [001] ...1   368.497735: send_zram_to_nbd: target sent: 6338 7eaef3e000 3719
+           <...>-200   [001] ...1   368.499719: send_zram_to_nbd: target sent: 6338 7e9e90f000 371a
+           <...>-200   [001] ...1   368.501703: send_zram_to_nbd: target sent: 6338 7e9ee53000 371b
+           <...>-200   [001] ...1   368.503833: send_zram_to_nbd: target sent: 6338 7e9e890000 371c
+           <...>-200   [001] ...1   368.506296: send_zram_to_nbd: target sent: 6338 7e9ecc6000 371d
+           <...>-200   [001] ...1   368.508391: send_zram_to_nbd: target sent: 6338 7eaed92000 371e
+           <...>-200   [001] ...1   368.510727: send_zram_to_nbd: target sent: 6338 7e9e89e000 371f
+           <...>-200   [001] ...1   368.513057: send_zram_to_nbd: target sent: 6338 7eb0243000 3720
+           <...>-200   [001] ...1   368.515502: send_zram_to_nbd: target sent: 6338 7e9b342000 3721
+           <...>-200   [001] ...1   368.517875: send_zram_to_nbd: target sent: 6338 7e9b343000 3722
+           <...>-200   [002] ...1   368.520867: send_zram_to_nbd: target sent: 6338 7e9b371000 3723
+           <...>-200   [002] ...1   368.523266: send_zram_to_nbd: target sent: 6338 7e9b30e000 770a
+           <...>-200   [001] ...1   368.527202: send_zram_to_nbd: target sent: 6338 7e9b30f000 770b
+           <...>-200   [001] ...1   368.529578: send_zram_to_nbd: target sent: 6338 7eaed07000 3724
+           <...>-200   [001] ...1   368.533328: send_zram_to_nbd: target sent: 6338 7eaf123000 3725
+           <...>-200   [001] ...1   368.537414: send_zram_to_nbd: target sent: 6338 7e9b310000 3726
+           <...>-200   [001] ...1   368.539665: send_zram_to_nbd: target sent: 6338 7eaedbf000 3727
+           <...>-200   [001] ...1   368.541918: send_zram_to_nbd: target sent: 6338 7e9edf2000 3728
+           <...>-200   [003] ...1   368.545385: send_zram_to_nbd: target sent: 6338 7e9ee3d000 3729
+           <...>-200   [003] ...1   368.548032: send_zram_to_nbd: target sent: 6338 7e9ee44000 f71d
+           <...>-200   [003] ...1   368.550504: send_zram_to_nbd: target sent: 6338 7eaf29c000 f71e
+           <...>-200   [003] ...1   368.553326: send_zram_to_nbd: target sent: 6338 7eaf29e000 f71f
+           <...>-200   [003] ...1   368.557785: send_zram_to_nbd: target sent: 6338 7e9ee45000 f720
+           <...>-200   [003] ...1   368.560427: send_zram_to_nbd: target sent: 6338 7eaf29f000 f721
+           <...>-200   [003] ...1   368.562816: send_zram_to_nbd: target sent: 6338 7eaf2aa000 f722
+           <...>-200   [003] ...1   368.565164: send_zram_to_nbd: target sent: 6338 7e9ee46000 f723
+           <...>-200   [003] ...1   368.567347: send_zram_to_nbd: target sent: 6338 7e9ee47000 f724
+           <...>-200   [003] ...1   368.573019: send_zram_to_nbd: target sent: 6338 7e9ed3c000 f725
+           <...>-200   [003] ...1   368.575349: send_zram_to_nbd: target sent: 6338 7e9ed3d000 f726
+           <...>-200   [003] ...1   368.578009: send_zram_to_nbd: target sent: 6338 7e9eee6000 f727
+           <...>-200   [003] ...1   368.580262: send_zram_to_nbd: target sent: 6338 7eaf2b5000 f728
+           <...>-200   [003] ...1   368.582429: send_zram_to_nbd: target sent: 6338 7eaf2b4000 f729
+           <...>-200   [003] ...1   368.584626: send_zram_to_nbd: target sent: 6338 7eaf2bc000 f72a
+           <...>-200   [003] ...1   368.587221: send_zram_to_nbd: target sent: 6338 7eaf2b6000 f72b
+           <...>-200   [003] ...1   368.590370: send_zram_to_nbd: target sent: 6338 7e9eee7000 f72c
+           <...>-200   [003] ...1   368.595547: send_zram_to_nbd: target sent: 6338 7eaf2b7000 f72d
+           <...>-200   [003] ...1   368.597744: send_zram_to_nbd: target sent: 6338 7e9eee8000 f72e
+           <...>-200   [003] ...1   368.600165: send_zram_to_nbd: target sent: 6338 7e9ed3e000 f72f
+           <...>-200   [003] ...1   368.602335: send_zram_to_nbd: target sent: 6338 7e9eee9000 f730
+           <...>-200   [003] ...1   368.605572: send_zram_to_nbd: target sent: 6338 7eaf121000 f731
+           <...>-200   [003] ...1   368.607924: send_zram_to_nbd: target sent: 6338 7eb000f000 f732
+           <...>-200   [003] ...1   368.610261: send_zram_to_nbd: target sent: 6338 7e9b21e000 f733
+           <...>-200   [003] ...1   368.612913: send_zram_to_nbd: target sent: 6338 7eaedbd000 f734
+           <...>-200   [003] ...1   368.615349: send_zram_to_nbd: target sent: 6338 7e9eb2d000 f735
+           <...>-200   [003] ...1   368.618140: send_zram_to_nbd: target sent: 6338 7eb0268000 f736
+           <...>-200   [003] ...1   368.620334: send_zram_to_nbd: target sent: 6338 7eaf2bb000 f737
+           <...>-200   [003] ...1   368.622634: send_zram_to_nbd: target sent: 6338 7e9b36f000 f738
+           <...>-200   [003] ...1   368.625108: send_zram_to_nbd: target sent: 6338 7e9ef07000 f739
+           <...>-200   [003] ...1   368.627785: send_zram_to_nbd: target sent: 6338 7e9eefb000 f73a
+           <...>-200   [003] ...1   368.630018: send_zram_to_nbd: target sent: 6338 7e9b3ca000 f73b
+           <...>-200   [003] ...1   368.632296: send_zram_to_nbd: target sent: 6338 7e9b53d000 f73c
+           <...>-200   [002] ...1   368.634551: send_zram_to_nbd: target sent: 6338 7e9efef000 f73d
+           <...>-200   [002] ...1   368.637541: send_zram_to_nbd: target sent: 6338 7e9e908000 770c
+           <...>-200   [002] ...1   368.640035: send_zram_to_nbd: target sent: 6338 7eaf17b000 770d
+           <...>-200   [002] ...1   368.642195: send_zram_to_nbd: target sent: 6338 7e9ea54000 770e
+           <...>-200   [002] ...1   368.644270: send_zram_to_nbd: target sent: 6338 7e9e957000 770f
+           <...>-200   [002] ...1   368.647020: send_zram_to_nbd: target sent: 6338 7eaff28000 7710
+           <...>-200   [002] ...1   368.649221: send_zram_to_nbd: target sent: 6338 7eaf0e5000 7711
+           <...>-200   [002] ...1   368.651222: send_zram_to_nbd: target sent: 6338 7e9e917000 7712
+           <...>-200   [001] .n.1   368.653673: send_zram_to_nbd: target sent: 6338 7e9e907000 7713
+           <...>-200   [001] ...1   368.655772: send_zram_to_nbd: target sent: 6338 7e9ea72000 372a
+           <...>-200   [001] ...1   368.662600: send_zram_to_nbd: target sent: 6338 7e9e93a000 372b
+           <...>-200   [001] ...1   368.666097: send_zram_to_nbd: target sent: 6338 7e9ea43000 372c
+           <...>-200   [000] ...1   368.668676: send_zram_to_nbd: target sent: 6338 7e9e96f000 372d
+           <...>-200   [000] ...1   368.670934: send_zram_to_nbd: target sent: 6338 7eaf253000 b70b
+           <...>-200   [000] ...1   368.673469: send_zram_to_nbd: target sent: 6338 7eaf235000 b70c
+           <...>-200   [002] ...1   368.679552: send_zram_to_nbd: target sent: 6338 7e9ec96000 b70d
+           <...>-200   [002] ...1   368.682102: send_zram_to_nbd: target sent: 6338 7eaef69000 7714
+           <...>-200   [002] ...1   368.686799: send_zram_to_nbd: target sent: 6338 7ed0c1f000 7715
+           <...>-200   [002] ...1   368.688987: send_zram_to_nbd: target sent: 6338 7eb028b000 7716
+           <...>-200   [002] ...1   368.691031: send_zram_to_nbd: target sent: 6338 7eaffd8000 7717
+           <...>-200   [002] ...1   368.693172: send_zram_to_nbd: target sent: 6338 7f2d60c000 7718
+           <...>-200   [002] ...1   368.697509: send_zram_to_nbd: target sent: 6338 7eb0269000 7719
+           <...>-200   [002] ...1   368.699901: send_zram_to_nbd: target sent: 6338 7e9b449000 771a
+           <...>-200   [002] ...1   368.702216: send_zram_to_nbd: target sent: 6338 7e9ed64000 771b
+           <...>-200   [002] ...1   368.704426: send_zram_to_nbd: target sent: 6338 7ed176c000 771c
+           <...>-200   [002] ...1   368.706656: send_zram_to_nbd: target sent: 6338 7e9b4da000 771d
+           <...>-200   [002] ...1   368.708728: send_zram_to_nbd: target sent: 6338 7eb00e4000 771e
+           <...>-200   [002] ...1   368.710865: send_zram_to_nbd: target sent: 6338 7ea9e6f000 771f
+           <...>-200   [000] ...1   368.713064: send_zram_to_nbd: target sent: 6338 7e9eb74000 7720
+           <...>-200   [000] ...1   368.715349: send_zram_to_nbd: target sent: 6338 7e9eb6d000 b70e
+           <...>-200   [000] ...1   368.717490: send_zram_to_nbd: target sent: 6338 7eb00e5000 b70f
+           <...>-200   [000] ...1   368.719736: send_zram_to_nbd: target sent: 6338 7eb047f000 b710
+           <...>-200   [001] ...1   368.722148: send_zram_to_nbd: target sent: 6338 7f2d79a000 b711
+           <...>-200   [003] ...1   368.724782: send_zram_to_nbd: target sent: 6338 7ec1470000 372e
+           <...>-200   [003] ...1   368.726955: send_zram_to_nbd: target sent: 6338 7eb0187000 f73e
+           <...>-200   [003] ...1   368.729176: send_zram_to_nbd: target sent: 6338 7ec1471000 f73f
+           <...>-200   [003] ...1   368.731884: send_zram_to_nbd: target sent: 6338 7e9bd10000 f740
+           <...>-200   [003] ...1   368.733884: send_zram_to_nbd: target sent: 6338 7ed17a7000 f741
+           <...>-200   [000] ...1   368.735791: send_zram_to_nbd: target sent: 6338 7e9be6e000 f742
+           <...>-200   [001] ...1   368.738176: send_zram_to_nbd: target sent: 6338 7eb0163000 b712
+           <...>-200   [002] ...1   368.740706: send_zram_to_nbd: target sent: 6338 7eb000e000 372f
+           <...>-200   [002] ...1   368.743251: send_zram_to_nbd: target sent: 6338 7eb0066000 7721
+           <...>-7476  [007] ....   368.745991: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-200   [002] ...1   368.746037: send_zram_to_nbd: target sent: 6338 7eaed2b000 7722
+           <...>-200   [002] ....   368.746063: send_target_manager: 3[REMOTE send_target_manager] switch started during sent
+           <...>-200   [002] ....   368.746073: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6393  [002] ....   368.771663: do_swap_page: prefetch fault 6338 "GLThread 439" 7f2d60c000 7718
+           <...>-6393  [006] ....   368.779805: do_swap_page: prefetch fault 6338 "GLThread 439" 7ec01a9000 7708
+           <...>-6393  [003] ....   368.842428: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ee68000 f703
+           <...>-6393  [005] ....   368.888489: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf101000 3700
+           <...>-6393  [004] ....   368.890435: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b487000 3701
+           <...>-6393  [004] ....   368.892428: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b3cd000 3702
+           <...>-6393  [004] ....   368.895048: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b4ab000 3703
+           <...>-6393  [004] ....   368.896814: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e85a000 7700
+           <...>-6393  [004] ....   368.900920: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf244000 b700
+           <...>-6393  [004] ....   368.902628: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf240000 b701
+           <...>-6393  [004] ....   368.904488: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b4ac000 7701
+           <...>-6393  [004] ....   368.906755: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb05d4000 7702
+           <...>-6393  [004] ....   368.908540: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ed4f000 7703
+           <...>-6393  [004] ....   368.910325: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ec25000 7704
+           <...>-6393  [004] ....   368.912483: do_swap_page: prefetch fault 6338 "GLThread 439" 7ec68f1000 3704
+           <...>-6393  [004] ....   368.914491: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9edc8000 b702
+           <...>-6393  [004] ....   368.916861: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ee15000 7705
+           <...>-6393  [004] ....   368.918724: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e8d6000 3705
+           <...>-6393  [004] ....   368.920419: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eaea000 7706
+           <...>-6393  [004] ....   368.922682: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf177000 b703
+           <...>-6393  [004] ....   368.924474: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e869000 3706
+           <...>-6393  [004] ....   368.926246: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b84e000 3707
+           <...>-6393  [004] ....   368.928024: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9c197000 3708
+           <...>-6393  [004] ....   368.929725: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9bd4b000 f700
+           <...>-6393  [004] ....   368.931613: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9bde5000 b704
+           <...>-6393  [004] ....   368.933408: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9be6c000 b705
+           <...>-6393  [004] ....   368.935076: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb078b000 b706
+           <...>-6393  [004] ....   368.936792: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb0061000 b707
+           <...>-6393  [004] ....   368.938892: do_swap_page: prefetch fault 6338 "GLThread 439" 7ec6875000 3709
+           <...>-6393  [004] ....   368.941324: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf4cf000 370a
+           <...>-6393  [004] ....   368.943029: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaed05000 370b
+           <...>-6393  [004] ....   368.947915: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaedb0000 370c
+           <...>-6393  [004] ....   368.949794: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ee4e000 370d
+           <...>-6393  [004] ....   368.952008: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ef06000 370e
+           <...>-6393  [004] ....   368.956770: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb0460000 370f
+           <...>-6393  [004] ....   368.959604: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eefc000 3710
+           <...>-6393  [004] ....   368.961868: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b2e9000 3711
+           <...>-6393  [004] ....   368.963528: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e8c0000 3712
+           <...>-6393  [004] ....   368.967152: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb0485000 f701
+           <...>-6393  [004] ....   368.968881: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ecb6000 f702
+           <...>-6393  [004] ....   368.970848: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eb33000 f704
+           <...>-6393  [004] ....   368.972687: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ebe3000 f705
+           <...>-6393  [004] ....   368.974613: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9efc0000 f706
+           <...>-6393  [007] ....   368.976555: do_swap_page: prefetch fault 6338 "GLThread 439" 7eafbbb000 f707
+           <...>-6393  [007] ....   368.978074: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb021b000 f708
+           <...>-6393  [007] ....   368.980547: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb0198000 f709
+           <...>-6393  [007] ....   368.982579: do_swap_page: prefetch fault 6338 "GLThread 439" 7f2d6f4000 f70a
+           <...>-6393  [007] ....   368.984543: do_swap_page: prefetch fault 6338 "GLThread 439" 7f2d78a000 7707
+           <...>-6393  [007] ....   368.986423: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ef51000 7709
+           <...>-6393  [007] ....   368.988408: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e84e000 3713
+           <...>-6393  [007] ....   368.990005: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e84f000 3714
+           <...>-6393  [007] ....   368.991797: do_swap_page: prefetch fault 6338 "GLThread 439" 7eafe5c000 b708
+           <...>-6393  [007] ....   368.993459: do_swap_page: prefetch fault 6338 "GLThread 439" 7ed0aea000 b709
+           <...>-6393  [007] ....   368.996292: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b373000 b70a
+           <...>-6393  [007] ....   368.997943: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ec72000 f70b
+           <...>-6393  [007] ....   369.000334: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf2b9000 f70c
+           <...>-6393  [007] ....   369.001971: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ee3c000 f70d
+           <...>-6393  [007] ....   369.004115: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ed6d000 f70e
+           <...>-6393  [007] ....   369.007612: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b370000 f70f
+           <...>-6393  [007] ....   369.009706: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ed6e000 f710
+           <...>-6393  [007] ....   369.011627: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ed6f000 f711
+           <...>-6393  [007] ....   369.013658: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ed70000 f712
+           <...>-6393  [007] ....   369.016149: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b388000 f713
+           <...>-6393  [007] ....   369.017891: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b387000 f714
+           <...>-6393  [007] ....   369.019716: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b30a000 f715
+           <...>-6393  [007] ....   369.022400: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b30b000 f716
+           <...>-6393  [007] ....   369.024379: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b30d000 f717
+           <...>-6393  [007] ....   369.026135: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ebbc000 f718
+           <...>-6393  [007] ....   369.027826: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e93c000 f719
+           <...>-6393  [007] ....   369.029736: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b39b000 f71a
+           <...>-6393  [007] ....   369.031463: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ecf3000 f71b
+           <...>-6393  [007] ....   369.033218: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ed68000 f71c
+           <...>-6393  [007] ....   369.034858: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ea86000 3715
+           <...>-6393  [007] ....   369.037399: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ea7b000 3716
+           <...>-6393  [007] ....   369.039397: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eb42000 3717
+           <...>-6393  [007] ....   369.041066: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ed61000 3718
+           <...>-6393  [007] ....   369.042819: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaef3e000 3719
+           <...>-6393  [007] ....   369.045410: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e90f000 371a
+           <...>-6393  [007] ....   369.048515: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ee53000 371b
+           <...>-6393  [007] ....   369.051371: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e890000 371c
+           <...>-6393  [007] ....   369.053242: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ecc6000 371d
+           <...>-6393  [007] ....   369.055013: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaed92000 371e
+           <...>-6393  [007] ....   369.056579: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e89e000 371f
+           <...>-6393  [007] ....   369.058217: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb0243000 3720
+           <...>-6393  [007] ....   369.059904: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b342000 3721
+           <...>-6393  [007] ....   369.061555: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b343000 3722
+           <...>-6393  [007] ....   369.063540: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b371000 3723
+           <...>-6393  [007] ....   369.065261: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b30e000 770a
+           <...>-6393  [007] ....   369.069555: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b30f000 770b
+           <...>-6393  [007] ....   369.071981: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaed07000 3724
+           <...>-6393  [007] ....   369.074602: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf123000 3725
+           <...>-6393  [007] ....   369.076782: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b310000 3726
+           <...>-6393  [007] ....   369.078755: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaedbf000 3727
+           <...>-6393  [007] ....   369.080595: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9edf2000 3728
+           <...>-6393  [007] ....   369.082570: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ee3d000 3729
+           <...>-6393  [007] ....   369.085224: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ee44000 f71d
+           <...>-6393  [007] ....   369.086781: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf29c000 f71e
+           <...>-6393  [007] ....   369.088751: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf29e000 f71f
+           <...>-6393  [007] ....   369.090480: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ee45000 f720
+           <...>-6393  [007] ....   369.092389: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf29f000 f721
+           <...>-6393  [007] ....   369.094016: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf2aa000 f722
+           <...>-6393  [007] ....   369.095863: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ee46000 f723
+           <...>-6393  [007] ....   369.097642: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ee47000 f724
+           <...>-6393  [007] ....   369.099611: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ed3c000 f725
+           <...>-6393  [007] ....   369.101221: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ed3d000 f726
+           <...>-6393  [007] ....   369.105750: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eee6000 f727
+           <...>-6393  [007] ....   369.107439: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf2b5000 f728
+           <...>-6393  [007] ....   369.109281: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf2b4000 f729
+           <...>-6393  [007] ....   369.111595: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf2bc000 f72a
+           <...>-6393  [007] ....   369.113524: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf2b6000 f72b
+           <...>-6393  [007] ....   369.115203: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eee7000 f72c
+           <...>-6393  [007] ....   369.117084: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf2b7000 f72d
+           <...>-6393  [007] ....   369.118843: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eee8000 f72e
+           <...>-6393  [007] ....   369.120735: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ed3e000 f72f
+           <...>-6393  [007] ....   369.122412: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eee9000 f730
+           <...>-6393  [007] ....   369.125133: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf121000 f731
+           <...>-6393  [007] ....   369.127083: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb000f000 f732
+           <...>-6393  [007] ....   369.129558: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b21e000 f733
+           <...>-6393  [007] ....   369.131393: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaedbd000 f734
+           <...>-6393  [007] ....   369.133161: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eb2d000 f735
+           <...>-6393  [007] ....   369.134779: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb0268000 f736
+           <...>-6393  [007] ....   369.137339: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf2bb000 f737
+           <...>-6393  [007] ....   369.141038: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b36f000 f738
+           <...>-6393  [007] ....   369.143083: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ef07000 f739
+           <...>-6393  [007] ....   369.144713: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eefb000 f73a
+           <...>-6393  [007] ....   369.148980: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b3ca000 f73b
+           <...>-6393  [007] ....   369.151828: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b53d000 f73c
+           <...>-6393  [007] ....   369.153491: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9efef000 f73d
+           <...>-6393  [007] ....   369.155415: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e908000 770c
+           <...>-6393  [007] ....   369.157386: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf17b000 770d
+           <...>-6393  [007] ....   369.159774: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ea54000 770e
+           <...>-6393  [007] ....   369.161499: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e957000 770f
+           <...>-6393  [007] ....   369.163700: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaff28000 7710
+           <...>-6393  [007] ....   369.165702: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf0e5000 7711
+           <...>-6393  [007] ....   369.167540: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e917000 7712
+           <...>-6393  [007] ....   369.171881: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e907000 7713
+           <...>-6393  [007] ....   369.174153: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ea72000 372a
+           <...>-6393  [007] ....   369.175987: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e93a000 372b
+           <...>-6393  [007] ....   369.177821: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ea43000 372c
+           <...>-6393  [007] ....   369.179490: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9e96f000 372d
+           <...>-6393  [007] ....   369.181190: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf253000 b70b
+           <...>-6393  [007] ....   369.182949: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaf235000 b70c
+           <...>-6393  [007] ....   369.185298: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ec96000 b70d
+           <...>-6393  [007] ....   369.187210: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaef69000 7714
+           <...>-6393  [007] ....   369.189248: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb028b000 7716
+           <...>-6393  [007] ....   369.191027: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaffd8000 7717
+        Thread-5-6466  [007] ....   369.192957: do_swap_page: prefetch fault 6338 "Thread-5" 7ea9e6f000 771f
+           <...>-6393  [007] ....   369.193012: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b449000 771a
+        Thread-5-6466  [007] ....   369.195098: do_swap_page: prefetch fault 6338 "Thread-5" 7eb0187000 f73e
+           <...>-6393  [007] ....   369.195165: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9ed64000 771b
+        Thread-5-6466  [007] ....   369.197171: do_swap_page: prefetch fault 6338 "Thread-5" 7e9bd10000 f740
+           <...>-6393  [007] ....   369.197238: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9b4da000 771d
+        Thread-5-6466  [007] ....   369.199180: do_swap_page: prefetch fault 6338 "Thread-5" 7ed17a7000 f741
+           <...>-6393  [007] ....   369.199235: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb00e4000 771e
+        Thread-5-6466  [007] ....   369.200979: do_swap_page: prefetch fault 6338 "Thread-5" 7eb0269000 7719
+           <...>-6393  [007] ....   369.201045: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eb74000 7720
+        Thread-5-6466  [007] ....   369.202842: do_swap_page: prefetch fault 6338 "Thread-5" 7e9be6e000 f742
+           <...>-6393  [007] ....   369.202904: do_swap_page: prefetch fault 6338 "GLThread 439" 7e9eb6d000 b70e
+        Thread-5-6466  [007] ....   369.204592: do_swap_page: prefetch fault 6338 "Thread-5" 7eb0066000 7721
+           <...>-6393  [007] ....   369.204657: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb00e5000 b70f
+           <...>-6393  [007] ....   369.208437: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb047f000 b710
+           <...>-6393  [007] ....   369.210409: do_swap_page: prefetch fault 6338 "GLThread 439" 7f2d79a000 b711
+           <...>-6393  [007] ....   369.212521: do_swap_page: prefetch fault 6338 "GLThread 439" 7ec1470000 372e
+           <...>-6393  [007] ....   369.214222: do_swap_page: prefetch fault 6338 "GLThread 439" 7ec1471000 f73f
+           <...>-6393  [007] ....   369.216535: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb0163000 b712
+           <...>-6393  [007] ....   369.218418: do_swap_page: prefetch fault 6338 "GLThread 439" 7eb000e000 372f
+           <...>-6393  [007] ....   369.220793: do_swap_page: prefetch fault 6338 "GLThread 439" 7eaed2b000 7722
+           <...>-6393  [007] ....   369.224973: do_swap_page: prefetch fault 6338 "GLThread 439" 7ed0c1f000 7715
+           <...>-6462  [005] ....   369.231405: do_swap_page: prefetch fault 6338 "GLThread 439" 7ed176c000 771c
+           <...>-7476  [007] ....   369.287431: update_to_nbd_flag: table 0 is latter, total target 884 max idx e, l -> 2030 2011
+           <...>-200   [007] ....   369.287704: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2   369.287705: send_target_manager: send target manager - which_table : 0
+              sh-7562  [007] ....   419.323719: swap_counter_dump_handler: pid 6338: counter 0 = 267
+              sh-7562  [007] ....   419.323723: swap_counter_dump_handler: pid 6338: counter 1 = 167
+              sh-7562  [007] ....   419.323723: swap_counter_dump_handler: pid 6338: counter 2 = 17500
+              sh-7562  [007] ....   419.323724: swap_counter_dump_handler: pid 6338: counter 3 = 0
+              sh-7562  [007] ....   419.323725: swap_counter_dump_handler: pid 6338: counter 4 = 0
+              sh-7562  [007] ....   419.323725: swap_counter_dump_handler: pid 6338: counter 5 = 0
+              sh-7562  [007] ....   419.323726: swap_counter_dump_handler: pid 6338: counter >5 = 0
+              sh-7562  [007] ....   419.323727: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-7562  [007] ....   419.323728: swap_counter_dump_handler: remote: total faulted cold page: 0

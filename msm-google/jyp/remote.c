@@ -144,6 +144,7 @@ static int send_zram_to_nbd(pte_t *pte, pmd_t *pmd, unsigned long vpage, struct 
 					
 	//printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,(unsigned long)page_address(page));
 	new_entry = get_swap_page_of_type(NBD_TYPE);
+	new_pte = swp_entry_to_pte(new_entry);
 	//if Prefetch target, type==1 && counter==0
 	lock_page(page);
 	__SetPageSwapBacked(page);
@@ -1249,7 +1250,6 @@ static int send_target_manager(void *arg)
 				tgid = swap_trace_table_l[i].tgid;
 				va = swap_trace_table_l[i].va;
 				if(send_target_page(0/* ID */,tgid,va)){
-					trace_printk("swapped marked table %d: %d %llx\n",target_table,tgid,va);
 					swap_trace_table_l[i].swapped=1;
 				}
 			}
@@ -1294,6 +1294,11 @@ static __init int send_target_managers_init(void)
 	return 0;
 }
 
+static void cluster_set_null_1(struct swap_cluster_info *info)
+{
+	info->flags = CLUSTER_FLAG_NEXT_NULL;
+	info->data = 0;
+}
 static int __init remote_swap_init(void)
 {
 
@@ -1311,7 +1316,7 @@ static int __init remote_swap_init(void)
 	for(i=0;i<8;i++){
 		struct perapp_cluster *cluster;
 		cluster=&pac[i];
-		cluster_set_null(&cluster->index);
+		cluster_set_null_1(&cluster->index);
 	}
 
 

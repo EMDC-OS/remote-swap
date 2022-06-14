@@ -1,0 +1,1525 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 1514/1514   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-13167 [007] ....  1714.835711: app_switch_start_handler: ###########switch start! foreground 0#############
+ send_target_man-200   [000] d..2  1750.667389: send_target_manager: send target manager - which_table : 1
+ send_target_man-200   [000] d..2  1851.360140: send_target_manager: send target manager - which_table : 1
+ send_target_man-200   [000] d..2  1952.053074: send_target_manager: send target manager - which_table : 1
+ send_target_man-200   [003] d..2  2052.746712: send_target_manager: send target manager - which_table : 1
+ send_target_man-200   [001] d..2  2153.439881: send_target_manager: send target manager - which_table : 1
+ send_target_man-200   [001] .n.1  2153.456312: send_zram_to_nbd: target sent: 602 7fb7933000 1000
+ send_target_man-200   [001] ...1  2153.458211: send_zram_to_nbd: target sent: 602 7fb75a7000 1001
+ send_target_man-200   [000] ...1  2153.460668: send_zram_to_nbd: target sent: 607 7fbd026000 1002
+ send_target_man-200   [001] ...1  2153.463215: send_zram_to_nbd: target sent: 607 7fbbafe000 5000
+ send_target_man-200   [000] ...1  2153.465551: send_zram_to_nbd: target sent: 607 7fbbaff000 1003
+ send_target_man-200   [000] ...1  2153.467677: send_zram_to_nbd: target sent: 607 7fbd021000 5001
+ send_target_man-200   [000] ...1  2153.470413: send_zram_to_nbd: target sent: 607 7fbd019000 5002
+ send_target_man-200   [000] ...1  2153.472489: send_zram_to_nbd: target sent: 607 7fbd006000 5003
+ send_target_man-200   [000] ...1  2153.474637: send_zram_to_nbd: target sent: 607 7fbd009000 5004
+ send_target_man-200   [000] ...1  2153.476834: send_zram_to_nbd: target sent: 607 7fbd067000 5005
+ send_target_man-200   [000] ...1  2153.478948: send_zram_to_nbd: target sent: 607 7fbdafe000 5006
+ send_target_man-200   [000] ...1  2153.481534: send_zram_to_nbd: target sent: 607 7fbd00d000 5007
+ send_target_man-200   [000] ...1  2153.484015: send_zram_to_nbd: target sent: 607 7fbd01c000 5008
+ send_target_man-200   [000] ...1  2153.486184: send_zram_to_nbd: target sent: 607 7fbdb76000 5009
+ send_target_man-200   [000] ...1  2153.488399: send_zram_to_nbd: target sent: 607 7fbdcd5000 500a
+ send_target_man-200   [000] ...1  2153.490552: send_zram_to_nbd: target sent: 607 7fbdcd1000 500b
+ send_target_man-200   [000] ...1  2153.492866: send_zram_to_nbd: target sent: 607 7fbdcd2000 500c
+ send_target_man-200   [000] ...1  2153.495016: send_zram_to_nbd: target sent: 607 7fbd040000 500d
+ send_target_man-200   [000] ...1  2153.497550: send_zram_to_nbd: target sent: 607 7fbd041000 500e
+ send_target_man-200   [000] ...1  2153.499648: send_zram_to_nbd: target sent: 607 7fbd011000 500f
+ send_target_man-200   [000] ...1  2153.502119: send_zram_to_nbd: target sent: 607 7fbbafa000 5010
+ send_target_man-200   [000] ...1  2153.504300: send_zram_to_nbd: target sent: 607 7fbd00a000 5011
+ send_target_man-200   [000] ...1  2153.506388: send_zram_to_nbd: target sent: 607 7fbbafb000 5012
+ send_target_man-200   [000] ...1  2153.510505: send_zram_to_nbd: target sent: 607 7fbbafc000 5013
+ send_target_man-200   [000] ...1  2153.512652: send_zram_to_nbd: target sent: 607 7fbbafd000 5014
+ send_target_man-200   [000] ...1  2153.514822: send_zram_to_nbd: target sent: 607 7fbd730000 5015
+ send_target_man-200   [000] ...1  2153.516886: send_zram_to_nbd: target sent: 607 7fbd005000 5016
+ send_target_man-200   [001] ...1  2153.519077: send_zram_to_nbd: target sent: 607 7fbd58f000 5017
+ send_target_man-200   [001] ...1  2153.522052: send_zram_to_nbd: target sent: 607 7fbd012000 1004
+ send_target_man-200   [001] ...1  2153.524234: send_zram_to_nbd: target sent: 607 7fbbaf6000 1005
+ send_target_man-200   [001] ...1  2153.526593: send_zram_to_nbd: target sent: 607 7fbbaf7000 1006
+ send_target_man-200   [001] ...1  2153.528660: send_zram_to_nbd: target sent: 607 7fbbaf8000 1007
+ send_target_man-200   [001] ...1  2153.530710: send_zram_to_nbd: target sent: 607 7fbbaf9000 1008
+ send_target_man-200   [001] ...1  2153.533183: send_zram_to_nbd: target sent: 607 7fbcde8000 1009
+ send_target_man-200   [001] ...1  2153.535280: send_zram_to_nbd: target sent: 607 7fbd200000 100a
+ send_target_man-200   [001] ...1  2153.537383: send_zram_to_nbd: target sent: 607 7fbd03a000 100b
+ send_target_man-200   [001] ...1  2153.539553: send_zram_to_nbd: target sent: 607 7fbd027000 100c
+ send_target_man-200   [001] ...1  2153.541821: send_zram_to_nbd: target sent: 602 7fba64c000 100d
+ send_target_man-200   [001] ...1  2153.544776: send_zram_to_nbd: target sent: 602 7fba7d3000 100e
+ send_target_man-200   [001] ...1  2153.547026: send_zram_to_nbd: target sent: 602 7fb631d000 100f
+ send_target_man-200   [001] ...1  2153.549117: send_zram_to_nbd: target sent: 602 7fb631c000 1010
+ send_target_man-200   [001] ...1  2153.551142: send_zram_to_nbd: target sent: 602 7fba64b000 1011
+ send_target_man-200   [001] ...1  2153.554497: send_zram_to_nbd: target sent: 602 7fbe1c5000 1012
+ send_target_man-200   [001] ...1  2153.556723: send_zram_to_nbd: target sent: 602 7fbcb75000 1013
+ send_target_man-200   [001] ...1  2153.559003: send_zram_to_nbd: target sent: 602 7fb9553000 1014
+ send_target_man-200   [001] ...1  2153.561109: send_zram_to_nbd: target sent: 602 7fbe1de000 1015
+ send_target_man-200   [001] ...1  2153.564692: send_zram_to_nbd: target sent: 602 7fbe1df000 1016
+ send_target_man-200   [001] ...1  2153.566815: send_zram_to_nbd: target sent: 602 7fbe1d8000 1017
+ send_target_man-200   [001] ...1  2153.568894: send_zram_to_nbd: target sent: 602 7fba7eb000 1018
+ send_target_man-200   [001] ...1  2153.570963: send_zram_to_nbd: target sent: 602 7fb7e7e000 1019
+ send_target_man-200   [001] ...1  2153.573285: send_zram_to_nbd: target sent: 602 7fbe230000 101a
+ send_target_man-200   [001] ...1  2153.575883: send_zram_to_nbd: target sent: 602 7fb94d8000 101b
+ send_target_man-200   [001] ...1  2153.577998: send_zram_to_nbd: target sent: 602 7fbe1c6000 101c
+ send_target_man-200   [001] ...1  2153.580343: send_zram_to_nbd: target sent: 602 7fba640000 101d
+ send_target_man-200   [001] ...1  2153.582448: send_zram_to_nbd: target sent: 602 7fba641000 101e
+ send_target_man-200   [001] ...1  2153.584549: send_zram_to_nbd: target sent: 602 7fba642000 101f
+ send_target_man-200   [001] ...1  2153.586764: send_zram_to_nbd: target sent: 602 7fba643000 1020
+ send_target_man-200   [001] ...1  2153.589248: send_zram_to_nbd: target sent: 602 7fba644000 1021
+ send_target_man-200   [001] ...1  2153.591486: send_zram_to_nbd: target sent: 602 7fbe1f6000 1022
+ send_target_man-200   [001] ...1  2153.593629: send_zram_to_nbd: target sent: 602 7fbe1f4000 1023
+ send_target_man-200   [001] ...1  2153.595740: send_zram_to_nbd: target sent: 602 7fbe234000 1024
+ send_target_man-200   [001] ...1  2153.597870: send_zram_to_nbd: target sent: 602 7fbe1f8000 1025
+ send_target_man-200   [001] ...1  2153.600157: send_zram_to_nbd: target sent: 602 7fba64e000 1026
+ send_target_man-200   [001] ...1  2153.602213: send_zram_to_nbd: target sent: 602 7fbe233000 1027
+ send_target_man-200   [001] ...1  2153.604258: send_zram_to_nbd: target sent: 602 7fbe1c8000 1028
+ send_target_man-200   [001] ...1  2153.606466: send_zram_to_nbd: target sent: 602 7fba64d000 1029
+ send_target_man-200   [001] ...1  2153.608683: send_zram_to_nbd: target sent: 602 7fbc964000 102a
+ send_target_man-200   [001] ...1  2153.612407: send_zram_to_nbd: target sent: 602 7fbc963000 102b
+ send_target_man-200   [001] ...1  2153.615132: send_zram_to_nbd: target sent: 602 7fb92ed000 102c
+ send_target_man-200   [001] ...1  2153.618082: send_zram_to_nbd: target sent: 602 7faa789000 102d
+ send_target_man-200   [001] ...1  2153.620371: send_zram_to_nbd: target sent: 602 7faa778000 102e
+ send_target_man-200   [001] ...1  2153.622451: send_zram_to_nbd: target sent: 602 7faa716000 102f
+ send_target_man-200   [000] d..2  2254.133045: send_target_manager: send target manager - which_table : 1
+ send_target_man-200   [002] ...1  2254.149352: send_zram_to_nbd: target sent: 790 7fbcd1f000 5018
+ send_target_man-200   [002] ...1  2254.151816: send_zram_to_nbd: target sent: 790 7fba09f000 9000
+ send_target_man-200   [002] ...1  2254.154196: send_zram_to_nbd: target sent: 790 7fbc9e7000 9001
+  surfaceflinger-602   [002] ....  2276.088602: do_swap_page: prefetch fault 602 "surfaceflinger" 7faa789000 102d
+  surfaceflinger-602   [000] ...1  2276.104581: do_swap_page: prefetch miss 602 "surfaceflinger" 7faa789000 102d
+ send_target_man-200   [002] d..2  2354.826373: send_target_manager: send target manager - which_table : 1
+ send_target_man-200   [002] ...1  2354.843818: send_zram_to_nbd: target sent: 910 f282b000 9002
+ send_target_man-200   [002] ...1  2354.846166: send_zram_to_nbd: target sent: 910 f7aed000 9003
+ send_target_man-200   [003] ...1  2354.848766: send_zram_to_nbd: target sent: 910 f7a26000 9004
+ send_target_man-200   [003] ...1  2354.851354: send_zram_to_nbd: target sent: 933 195557b000 d000
+ send_target_man-200   [003] ...1  2354.853796: send_zram_to_nbd: target sent: 933 195556a000 d001
+ send_target_man-200   [000] ...1  2354.856695: send_zram_to_nbd: target sent: 933 1855558000 d002
+ send_target_man-200   [000] ...1  2354.858959: send_zram_to_nbd: target sent: 933 1755559000 5019
+ send_target_man-200   [000] ...1  2354.861290: send_zram_to_nbd: target sent: 933 1b5555b000 501a
+ send_target_man-200   [003] ...1  2354.863472: send_zram_to_nbd: target sent: 933 1855566000 501b
+ send_target_man-200   [003] ...1  2354.865547: send_zram_to_nbd: target sent: 933 1e55552000 d003
+ send_target_man-200   [003] ...1  2354.867764: send_zram_to_nbd: target sent: 933 265555c000 d004
+ send_target_man-200   [003] ...1  2354.869742: send_zram_to_nbd: target sent: 933 1a55576000 d005
+ send_target_man-200   [003] ...1  2354.871844: send_zram_to_nbd: target sent: 933 1755561000 d006
+ send_target_man-200   [003] ...1  2354.873863: send_zram_to_nbd: target sent: 933 1955552000 d007
+ send_target_man-200   [003] ...1  2354.876609: send_zram_to_nbd: target sent: 933 1955575000 d008
+ send_target_man-200   [003] ...1  2354.878719: send_zram_to_nbd: target sent: 933 1a5555c000 d009
+ send_target_man-200   [000] ...1  2354.881005: send_zram_to_nbd: target sent: 933 1855568000 d00a
+ send_target_man-200   [000] ...1  2354.883513: send_zram_to_nbd: target sent: 933 1855569000 501c
+ send_target_man-200   [000] ...1  2354.885636: send_zram_to_nbd: target sent: 933 1855579000 501d
+ send_target_man-200   [003] ...1  2354.888113: send_zram_to_nbd: target sent: 933 175555b000 501e
+ send_target_man-200   [003] ...1  2354.890215: send_zram_to_nbd: target sent: 933 1b55555000 d00b
+ send_target_man-200   [003] ...1  2354.892412: send_zram_to_nbd: target sent: 933 1855565000 d00c
+ send_target_man-200   [003] ...1  2354.895434: send_zram_to_nbd: target sent: 933 1e55556000 d00d
+ send_target_man-200   [003] ...1  2354.899288: send_zram_to_nbd: target sent: 933 1755552000 d00e
+ send_target_man-200   [000] ...1  2354.901698: send_zram_to_nbd: target sent: 933 1a55578000 d00f
+ send_target_man-200   [000] ...1  2354.904153: send_zram_to_nbd: target sent: 933 1955564000 501f
+ send_target_man-200   [001] ...1  2354.908573: send_zram_to_nbd: target sent: 933 1935553000 5020
+ send_target_man-200   [001] ...1  2354.911695: send_zram_to_nbd: target sent: 910 f35ce000 1030
+ send_target_man-200   [001] ...1  2354.913733: send_zram_to_nbd: target sent: 910 f35d9000 1031
+ send_target_man-200   [001] ...1  2354.915831: send_zram_to_nbd: target sent: 910 f35dd000 1032
+ send_target_man-200   [001] ...1  2354.917867: send_zram_to_nbd: target sent: 910 f3555000 1033
+ send_target_man-200   [001] ...1  2354.920082: send_zram_to_nbd: target sent: 910 f7b19000 1034
+ send_target_man-200   [001] ...1  2354.922342: send_zram_to_nbd: target sent: 908 7f3a03e000 1035
+ send_target_man-200   [001] ...1  2354.924625: send_zram_to_nbd: target sent: 908 7f3a03f000 1036
+ send_target_man-200   [001] ...1  2354.926976: send_zram_to_nbd: target sent: 908 295555f000 1037
+ send_target_man-200   [001] ...1  2354.929028: send_zram_to_nbd: target sent: 908 3655554000 1038
+ send_target_man-200   [001] ...1  2354.931158: send_zram_to_nbd: target sent: 908 7fbe35a000 1039
+ send_target_man-200   [001] ...1  2354.935166: send_zram_to_nbd: target sent: 908 395555e000 103a
+ send_target_man-200   [001] ...1  2354.937449: send_zram_to_nbd: target sent: 908 395555f000 103b
+ send_target_man-200   [003] ...1  2354.939882: send_zram_to_nbd: target sent: 1344 7f20f20000 103c
+ send_target_man-200   [002] ...1  2354.942009: send_zram_to_nbd: target sent: 908 2055567000 d010
+ send_target_man-200   [002] ...1  2354.945830: send_zram_to_nbd: target sent: 908 1d5555d000 9005
+ send_target_man-200   [002] ...1  2354.948684: send_zram_to_nbd: target sent: 908 1d55552000 9006
+ send_target_man-200   [002] ...1  2354.950921: send_zram_to_nbd: target sent: 908 1755570000 9007
+ send_target_man-200   [002] ...1  2354.952940: send_zram_to_nbd: target sent: 908 265555b000 9008
+ send_target_man-200   [002] ...1  2354.955163: send_zram_to_nbd: target sent: 908 1b55554000 9009
+ send_target_man-200   [002] ...1  2354.957317: send_zram_to_nbd: target sent: 908 1b5555d000 900a
+ send_target_man-200   [002] ...1  2354.959532: send_zram_to_nbd: target sent: 908 2555561000 900b
+ send_target_man-200   [002] ...1  2354.961702: send_zram_to_nbd: target sent: 908 1d5555c000 900c
+ send_target_man-200   [002] ...1  2354.964006: send_zram_to_nbd: target sent: 908 2355556000 900d
+ send_target_man-200   [002] ...1  2354.966268: send_zram_to_nbd: target sent: 908 3455556000 900e
+ send_target_man-200   [002] ...1  2354.968423: send_zram_to_nbd: target sent: 908 3455557000 900f
+ send_target_man-200   [002] ...1  2354.970510: send_zram_to_nbd: target sent: 908 3755559000 9010
+ send_target_man-200   [002] ...1  2354.972528: send_zram_to_nbd: target sent: 908 375555a000 9011
+ send_target_man-200   [002] ...1  2354.975101: send_zram_to_nbd: target sent: 908 3a5555e000 9012
+ send_target_man-200   [002] ...1  2354.977217: send_zram_to_nbd: target sent: 908 3a5555f000 9013
+ send_target_man-200   [002] ...1  2354.979705: send_zram_to_nbd: target sent: 908 3a55560000 9014
+ send_target_man-200   [002] ...1  2354.981842: send_zram_to_nbd: target sent: 908 3755560000 9015
+ send_target_man-200   [002] ...1  2354.984043: send_zram_to_nbd: target sent: 908 1c55558000 9016
+ send_target_man-200   [002] ...1  2354.986661: send_zram_to_nbd: target sent: 908 335555b000 9017
+ send_target_man-200   [002] ...1  2354.988723: send_zram_to_nbd: target sent: 908 335555c000 9018
+ send_target_man-200   [002] ...1  2354.990862: send_zram_to_nbd: target sent: 908 3355559000 9019
+ send_target_man-200   [002] ...1  2354.993021: send_zram_to_nbd: target sent: 908 335555a000 901a
+ send_target_man-200   [002] ...1  2354.995459: send_zram_to_nbd: target sent: 908 1755564000 901b
+ send_target_man-200   [002] ...1  2354.999908: send_zram_to_nbd: target sent: 908 1c55557000 901c
+ send_target_man-200   [002] ...1  2355.001990: send_zram_to_nbd: target sent: 908 1755563000 901d
+ send_target_man-200   [002] ...1  2355.004161: send_zram_to_nbd: target sent: 908 1b55559000 901e
+ send_target_man-200   [002] ...1  2355.006208: send_zram_to_nbd: target sent: 908 1a55557000 901f
+ send_target_man-200   [002] ...1  2355.008538: send_zram_to_nbd: target sent: 908 1e55553000 9020
+ send_target_man-200   [002] ...1  2355.010587: send_zram_to_nbd: target sent: 908 1a55558000 9021
+ send_target_man-200   [002] ...1  2355.012810: send_zram_to_nbd: target sent: 908 2855555000 9022
+ send_target_man-200   [002] ...1  2355.014869: send_zram_to_nbd: target sent: 908 1e5555a000 9023
+ send_target_man-200   [002] ...1  2355.016969: send_zram_to_nbd: target sent: 908 2e5555c000 9024
+ send_target_man-200   [002] ...1  2355.019234: send_zram_to_nbd: target sent: 908 3955558000 9025
+ send_target_man-200   [002] ...1  2355.021387: send_zram_to_nbd: target sent: 908 395555a000 9026
+ send_target_man-200   [002] ...1  2355.023452: send_zram_to_nbd: target sent: 908 2055560000 9027
+ send_target_man-200   [002] ...1  2355.025555: send_zram_to_nbd: target sent: 908 1755565000 9028
+ send_target_man-200   [002] ...1  2355.027744: send_zram_to_nbd: target sent: 908 205555c000 9029
+ send_target_man-200   [002] ...1  2355.030221: send_zram_to_nbd: target sent: 908 2055569000 902a
+ send_target_man-200   [002] ...1  2355.032422: send_zram_to_nbd: target sent: 908 2055561000 902b
+ send_target_man-200   [002] ...1  2355.037922: send_zram_to_nbd: target sent: 908 2055555000 902c
+ send_target_man-200   [002] ...1  2355.040017: send_zram_to_nbd: target sent: 908 2055554000 902d
+ send_target_man-200   [002] ...1  2355.042065: send_zram_to_nbd: target sent: 908 205556e000 902e
+ send_target_man-200   [002] ...1  2355.044108: send_zram_to_nbd: target sent: 908 2055552000 902f
+ send_target_man-200   [002] ...1  2355.046860: send_zram_to_nbd: target sent: 908 2055556000 9030
+ send_target_man-200   [002] ...1  2355.048981: send_zram_to_nbd: target sent: 908 2055571000 9031
+ send_target_man-200   [002] ...1  2355.051053: send_zram_to_nbd: target sent: 908 2055570000 9032
+ send_target_man-200   [001] ...1  2355.053782: send_zram_to_nbd: target sent: 908 205555a000 9033
+ send_target_man-200   [001] ...1  2355.055929: send_zram_to_nbd: target sent: 908 2055559000 103d
+ send_target_man-200   [001] ...1  2355.058147: send_zram_to_nbd: target sent: 908 2e5555d000 103e
+ send_target_man-200   [001] ...1  2355.060300: send_zram_to_nbd: target sent: 908 315555f000 103f
+ send_target_man-200   [001] ...1  2355.062528: send_zram_to_nbd: target sent: 908 205557c000 1040
+ send_target_man-200   [000] ...1  2355.065363: send_zram_to_nbd: target sent: 908 2055580000 1041
+ send_target_man-200   [000] ...1  2355.067473: send_zram_to_nbd: target sent: 908 2055564000 5021
+ send_target_man-200   [000] ...1  2355.069595: send_zram_to_nbd: target sent: 908 205556d000 5022
+ send_target_man-200   [000] ...1  2355.071818: send_zram_to_nbd: target sent: 908 205557b000 5023
+ send_target_man-200   [000] ...1  2355.073923: send_zram_to_nbd: target sent: 908 205556c000 5024
+ send_target_man-200   [000] ...1  2355.076008: send_zram_to_nbd: target sent: 908 1835555000 5025
+ send_target_man-200   [000] ...1  2355.078356: send_zram_to_nbd: target sent: 908 205555e000 5026
+ send_target_man-200   [000] ...1  2355.080551: send_zram_to_nbd: target sent: 908 395555b000 5027
+ send_target_man-200   [000] ...1  2355.082712: send_zram_to_nbd: target sent: 908 1b55557000 5028
+ send_target_man-200   [000] ...1  2355.084880: send_zram_to_nbd: target sent: 908 305555a000 5029
+ send_target_man-200   [000] ...1  2355.088636: send_zram_to_nbd: target sent: 908 2055562000 502a
+ send_target_man-200   [000] ...1  2355.090796: send_zram_to_nbd: target sent: 908 1e55559000 502b
+ send_target_man-200   [000] ...1  2355.093217: send_zram_to_nbd: target sent: 908 3855557000 502c
+ send_target_man-200   [000] ...1  2355.095278: send_zram_to_nbd: target sent: 908 3855558000 502d
+ send_target_man-200   [000] ...1  2355.097441: send_zram_to_nbd: target sent: 908 365556e000 502e
+ send_target_man-200   [000] ...1  2355.100133: send_zram_to_nbd: target sent: 908 365556f000 502f
+ send_target_man-200   [000] ...1  2355.104184: send_zram_to_nbd: target sent: 908 245555c000 5030
+ send_target_man-200   [000] ...1  2355.106710: send_zram_to_nbd: target sent: 908 2d5555a000 5031
+ send_target_man-200   [000] ...1  2355.111113: send_zram_to_nbd: target sent: 908 2e55560000 5032
+ send_target_man-200   [000] ...1  2355.114058: send_zram_to_nbd: target sent: 908 1c5555c000 5033
+ send_target_man-200   [000] ...1  2355.116106: send_zram_to_nbd: target sent: 908 355555e000 5034
+ send_target_man-200   [000] ...1  2355.118324: send_zram_to_nbd: target sent: 908 285555e000 5035
+ send_target_man-200   [000] ...1  2355.120810: send_zram_to_nbd: target sent: 908 1c35552000 5036
+ send_target_man-200   [000] ...1  2355.123264: send_zram_to_nbd: target sent: 908 1d55557000 5037
+ send_target_man-200   [000] ...1  2355.125565: send_zram_to_nbd: target sent: 908 285555b000 5038
+ send_target_man-200   [000] ...1  2355.128168: send_zram_to_nbd: target sent: 908 1955558000 5039
+ send_target_man-200   [000] ...1  2355.130385: send_zram_to_nbd: target sent: 908 195555c000 503a
+ send_target_man-200   [000] ...1  2355.132575: send_zram_to_nbd: target sent: 908 195555e000 503b
+ send_target_man-200   [000] ...1  2355.134655: send_zram_to_nbd: target sent: 908 2355560000 503c
+ send_target_man-200   [000] ...1  2355.138413: send_zram_to_nbd: target sent: 908 1955555000 503d
+ send_target_man-200   [000] ...1  2355.141424: send_zram_to_nbd: target sent: 908 2355561000 503e
+ send_target_man-200   [000] ...1  2355.143488: send_zram_to_nbd: target sent: 908 2455553000 503f
+ send_target_man-200   [000] ...1  2355.146077: send_zram_to_nbd: target sent: 908 1a5555e000 5040
+ send_target_man-200   [000] ...1  2355.148434: send_zram_to_nbd: target sent: 908 2455554000 5041
+ send_target_man-200   [000] ...1  2355.150599: send_zram_to_nbd: target sent: 908 2655558000 5042
+ send_target_man-200   [000] ...1  2355.152676: send_zram_to_nbd: target sent: 908 1c55561000 5043
+ send_target_man-200   [000] ...1  2355.154790: send_zram_to_nbd: target sent: 908 1e5555b000 5044
+ send_target_man-200   [000] ...1  2355.157039: send_zram_to_nbd: target sent: 908 3555559000 5045
+ send_target_man-200   [000] ...1  2355.159142: send_zram_to_nbd: target sent: 908 1f55561000 5046
+ send_target_man-200   [000] ...1  2355.161423: send_zram_to_nbd: target sent: 908 215555a000 5047
+ send_target_man-200   [000] ...1  2355.163917: send_zram_to_nbd: target sent: 908 2055573000 5048
+ send_target_man-200   [000] ...1  2355.165968: send_zram_to_nbd: target sent: 908 265555d000 5049
+ send_target_man-200   [000] ...1  2355.168274: send_zram_to_nbd: target sent: 908 1d55558000 504a
+ send_target_man-200   [000] ...1  2355.170487: send_zram_to_nbd: target sent: 910 f3608000 504b
+ send_target_man-200   [002] .n.1  2355.172697: send_zram_to_nbd: target sent: 910 f3609000 504c
+ send_target_man-200   [002] ...1  2355.175225: send_zram_to_nbd: target sent: 910 f714a000 9034
+ send_target_man-200   [001] ...1  2355.177651: send_zram_to_nbd: target sent: 910 f714b000 9035
+ send_target_man-200   [001] ...1  2355.179899: send_zram_to_nbd: target sent: 910 f714c000 1042
+ send_target_man-200   [001] ...1  2355.181866: send_zram_to_nbd: target sent: 910 f714e000 1043
+ send_target_man-200   [001] ...1  2355.183742: send_zram_to_nbd: target sent: 908 2655559000 1044
+ send_target_man-200   [001] ...1  2355.185710: send_zram_to_nbd: target sent: 908 1b55560000 1045
+ send_target_man-200   [003] ...1  2355.188255: send_zram_to_nbd: target sent: 908 1d5555a000 1046
+ send_target_man-200   [003] ...1  2355.191752: send_zram_to_nbd: target sent: 910 f35fb000 d011
+ send_target_man-200   [003] ...1  2355.194673: send_zram_to_nbd: target sent: 910 f35fc000 d012
+ send_target_man-200   [001] ...1  2355.196793: send_zram_to_nbd: target sent: 910 f35fd000 d013
+ send_target_man-200   [001] ...1  2355.198783: send_zram_to_nbd: target sent: 908 1f55558000 1047
+ send_target_man-200   [001] ...1  2355.200876: send_zram_to_nbd: target sent: 908 2a5555c000 1048
+ send_target_man-200   [001] ...1  2355.203005: send_zram_to_nbd: target sent: 908 2e35552000 1049
+ send_target_man-200   [001] ...1  2355.205156: send_zram_to_nbd: target sent: 908 3c5555c000 104a
+ send_target_man-200   [001] ...1  2355.207349: send_zram_to_nbd: target sent: 908 3c5555d000 104b
+ send_target_man-200   [001] ...1  2355.209475: send_zram_to_nbd: target sent: 908 3c5555e000 104c
+ send_target_man-200   [002] ...1  2355.211906: send_zram_to_nbd: target sent: 908 3c5555f000 104d
+ send_target_man-200   [002] ...1  2355.214446: send_zram_to_nbd: target sent: 910 f3542000 9036
+ send_target_man-200   [002] ...1  2355.216795: send_zram_to_nbd: target sent: 910 f3551000 9037
+ send_target_man-200   [002] ...1  2355.218938: send_zram_to_nbd: target sent: 910 f356c000 9038
+ send_target_man-200   [002] ...1  2355.221026: send_zram_to_nbd: target sent: 910 f3545000 9039
+ send_target_man-200   [003] ...1  2355.223297: send_zram_to_nbd: target sent: 910 f35fe000 903a
+ send_target_man-200   [003] ...1  2355.225593: send_zram_to_nbd: target sent: 910 f35ff000 d014
+ send_target_man-200   [003] ...1  2355.227681: send_zram_to_nbd: target sent: 910 f27b0000 d015
+ send_target_man-200   [003] ...1  2355.229981: send_zram_to_nbd: target sent: 910 f27b1000 d016
+ send_target_man-200   [003] ...1  2355.232152: send_zram_to_nbd: target sent: 910 f27b3000 d017
+ send_target_man-200   [003] ...1  2355.234239: send_zram_to_nbd: target sent: 910 f27b4000 d018
+ send_target_man-200   [003] ...1  2355.236662: send_zram_to_nbd: target sent: 910 f27ba000 d019
+ send_target_man-200   [003] ...1  2355.241434: send_zram_to_nbd: target sent: 910 f27bb000 d01a
+ send_target_man-200   [003] ...1  2355.243565: send_zram_to_nbd: target sent: 910 f27bd000 d01b
+ send_target_man-200   [003] ...1  2355.245636: send_zram_to_nbd: target sent: 910 f27be000 d01c
+ send_target_man-200   [003] ...1  2355.248053: send_zram_to_nbd: target sent: 910 f27c4000 d01d
+ send_target_man-200   [003] ...1  2355.250585: send_zram_to_nbd: target sent: 910 f27c5000 d01e
+ send_target_man-200   [003] ...1  2355.252952: send_zram_to_nbd: target sent: 910 f27c6000 d01f
+ send_target_man-200   [003] ...1  2355.254996: send_zram_to_nbd: target sent: 910 f27c7000 d020
+ send_target_man-200   [003] ...1  2355.257041: send_zram_to_nbd: target sent: 910 f27c8000 d021
+ send_target_man-200   [003] ...1  2355.259131: send_zram_to_nbd: target sent: 910 f27ce000 d022
+ send_target_man-200   [003] ...1  2355.262053: send_zram_to_nbd: target sent: 908 7fbcfd0000 d023
+ send_target_man-200   [003] ...1  2355.264312: send_zram_to_nbd: target sent: 908 265555f000 d024
+ send_target_man-200   [003] ...1  2355.266772: send_zram_to_nbd: target sent: 908 1d5555e000 d025
+ send_target_man-200   [003] ...1  2355.268908: send_zram_to_nbd: target sent: 910 f7a25000 d026
+ send_target_man-200   [003] ...1  2355.271099: send_zram_to_nbd: target sent: 910 f7b20000 d027
+ send_target_man-200   [003] ...1  2355.273577: send_zram_to_nbd: target sent: 910 f7b1f000 d028
+ send_target_man-200   [003] ...1  2355.275990: send_zram_to_nbd: target sent: 910 f7b1c000 d029
+ send_target_man-200   [003] ...1  2355.278124: send_zram_to_nbd: target sent: 910 f714d000 d02a
+ send_target_man-200   [003] ...1  2355.280375: send_zram_to_nbd: target sent: 910 f2df9000 d02b
+ send_target_man-200   [003] ...1  2355.282454: send_zram_to_nbd: target sent: 933 1a55575000 d02c
+ send_target_man-200   [003] ...1  2355.284542: send_zram_to_nbd: target sent: 933 1955576000 d02d
+ send_target_man-200   [003] ...1  2355.286885: send_zram_to_nbd: target sent: 933 1a35552000 d02e
+ send_target_man-200   [003] ...1  2355.289327: send_zram_to_nbd: target sent: 933 1955565000 d02f
+ send_target_man-200   [003] ...1  2355.291963: send_zram_to_nbd: target sent: 933 1b55560000 d030
+ send_target_man-200   [003] ...1  2355.294065: send_zram_to_nbd: target sent: 933 1855578000 d031
+ send_target_man-200   [003] ...1  2355.296170: send_zram_to_nbd: target sent: 933 1e55557000 d032
+ send_target_man-200   [002] ...1  2355.298365: send_zram_to_nbd: target sent: 933 1a55565000 d033
+ send_target_man-200   [002] ...1  2355.300472: send_zram_to_nbd: target sent: 933 1955555000 903b
+ send_target_man-200   [002] ...1  2355.302535: send_zram_to_nbd: target sent: 933 1a55574000 903c
+ send_target_man-200   [002] ...1  2355.305263: send_zram_to_nbd: target sent: 933 185556d000 903d
+ send_target_man-200   [003] ...1  2355.307539: send_zram_to_nbd: target sent: 933 1855555000 903e
+ send_target_man-200   [003] ...1  2355.309704: send_zram_to_nbd: target sent: 933 1c35552000 d034
+ send_target_man-200   [003] ...1  2355.311804: send_zram_to_nbd: target sent: 933 1b55552000 d035
+ send_target_man-200   [003] ...1  2355.313902: send_zram_to_nbd: target sent: 933 1e55554000 d036
+ send_target_man-200   [001] ...1  2355.316657: send_zram_to_nbd: target sent: 933 1a55557000 d037
+ send_target_man-200   [003] ...1  2355.318947: send_zram_to_nbd: target sent: 933 1a55563000 104e
+ send_target_man-200   [003] ...1  2355.320960: send_zram_to_nbd: target sent: 910 f27b2000 d038
+ send_target_man-200   [003] ...1  2355.323354: send_zram_to_nbd: target sent: 910 f2e06000 d039
+ send_target_man-200   [000] ...1  2355.325558: send_zram_to_nbd: target sent: 910 f2dfa000 d03a
+ send_target_man-200   [000] ...1  2355.327743: send_zram_to_nbd: target sent: 910 f3562000 504d
+ send_target_man-200   [000] ...1  2355.329912: send_zram_to_nbd: target sent: 908 2755558000 504e
+ send_target_man-200   [000] ...1  2355.332046: send_zram_to_nbd: target sent: 908 2a5555e000 504f
+ send_target_man-200   [000] ...1  2355.334181: send_zram_to_nbd: target sent: 908 2c55561000 5050
+ send_target_man-200   [000] ...1  2355.336378: send_zram_to_nbd: target sent: 908 1d55559000 5051
+ send_target_man-200   [000] ...1  2355.338747: send_zram_to_nbd: target sent: 908 1f5555d000 5052
+ send_target_man-200   [000] ...1  2355.343909: send_zram_to_nbd: target sent: 908 2155561000 5053
+ send_target_man-200   [000] ...1  2355.346112: send_zram_to_nbd: target sent: 908 3955553000 5054
+ send_target_man-200   [000] ...1  2355.348339: send_zram_to_nbd: target sent: 910 f7a15000 5055
+ send_target_man-200   [000] ...1  2355.351086: send_zram_to_nbd: target sent: 908 1b55558000 5056
+ send_target_man-200   [003] ...1  2355.353273: send_zram_to_nbd: target sent: 910 f7a17000 5057
+ send_target_man-200   [003] ...1  2355.355362: send_zram_to_nbd: target sent: 910 f7a64000 d03b
+ send_target_man-200   [003] ...1  2355.357422: send_zram_to_nbd: target sent: 910 f7a4b000 d03c
+ send_target_man-200   [003] ...1  2355.360079: send_zram_to_nbd: target sent: 1344 7f21265000 d03d
+ send_target_man-200   [003] ...1  2355.362228: send_zram_to_nbd: target sent: 1344 7f28a89000 d03e
+ send_target_man-200   [003] ...1  2355.364684: send_zram_to_nbd: target sent: 1344 7f28b63000 d03f
+ send_target_man-200   [003] ...1  2355.366969: send_zram_to_nbd: target sent: 1344 7fbccb0000 d040
+ send_target_man-200   [003] ...1  2355.369920: send_zram_to_nbd: target sent: 1344 7e70f7f000 d041
+ send_target_man-200   [003] ...1  2355.372075: send_zram_to_nbd: target sent: 1344 7e7bfd3000 d042
+ send_target_man-200   [003] ...1  2355.374381: send_zram_to_nbd: target sent: 1344 7ed0e1d000 d043
+ send_target_man-200   [001] ...1  2355.376729: send_zram_to_nbd: target sent: 1344 7e63dd4000 d044
+ send_target_man-200   [001] ...1  2355.379406: send_zram_to_nbd: target sent: 1344 7e63dd5000 104f
+ send_target_man-200   [002] ...1  2355.381642: send_zram_to_nbd: target sent: 1344 7e63dd6000 1050
+ send_target_man-200   [002] ...1  2355.383788: send_zram_to_nbd: target sent: 1344 7ed0dd4000 903f
+ send_target_man-200   [002] ...1  2355.385850: send_zram_to_nbd: target sent: 1344 9f380000 9040
+ send_target_man-200   [002] ...1  2355.388102: send_zram_to_nbd: target sent: 1344 9f1b0000 9041
+ send_target_man-200   [002] ...1  2355.390459: send_zram_to_nbd: target sent: 908 3c55559000 9042
+ send_target_man-200   [002] ...1  2355.392570: send_zram_to_nbd: target sent: 908 3c5555a000 9043
+ send_target_man-200   [002] ...1  2355.394650: send_zram_to_nbd: target sent: 908 3c5555b000 9044
+ send_target_man-200   [002] ...1  2355.396843: send_zram_to_nbd: target sent: 908 3355555000 9045
+ send_target_man-200   [002] ...1  2355.399100: send_zram_to_nbd: target sent: 908 3355558000 9046
+ send_target_man-200   [002] ...1  2355.401255: send_zram_to_nbd: target sent: 908 2a55560000 9047
+ send_target_man-200   [002] ...1  2355.403361: send_zram_to_nbd: target sent: 908 1b55555000 9048
+ send_target_man-200   [002] ...1  2355.405402: send_zram_to_nbd: target sent: 908 2e55555000 9049
+ send_target_man-200   [001] ...1  2355.407551: send_zram_to_nbd: target sent: 908 1c55553000 904a
+ send_target_man-200   [001] ...1  2355.410929: send_zram_to_nbd: target sent: 1344 9f36e000 1051
+ send_target_man-200   [001] ...1  2355.413220: send_zram_to_nbd: target sent: 908 1b55552000 1052
+ send_target_man-200   [001] ...1  2355.415348: send_zram_to_nbd: target sent: 908 2535552000 1053
+ send_target_man-200   [001] ...1  2355.417982: send_zram_to_nbd: target sent: 908 2d35552000 1054
+ send_target_man-200   [001] ...1  2355.420273: send_zram_to_nbd: target sent: 908 2b55559000 1055
+ send_target_man-200   [001] ...1  2355.422453: send_zram_to_nbd: target sent: 908 2755561000 1056
+ send_target_man-200   [001] ...1  2355.424785: send_zram_to_nbd: target sent: 908 2f5555d000 1057
+ send_target_man-200   [001] ...1  2355.427103: send_zram_to_nbd: target sent: 908 2b5555b000 1058
+ send_target_man-200   [001] ...1  2355.429236: send_zram_to_nbd: target sent: 908 2055572000 1059
+ send_target_man-200   [001] ...1  2355.431438: send_zram_to_nbd: target sent: 908 205557f000 105a
+ send_target_man-200   [002] ...1  2355.433917: send_zram_to_nbd: target sent: 908 2055574000 105b
+ send_target_man-200   [002] ...1  2355.436115: send_zram_to_nbd: target sent: 908 175557e000 904b
+ send_target_man-200   [002] ...1  2355.438576: send_zram_to_nbd: target sent: 908 2055577000 904c
+ send_target_man-200   [002] ...1  2355.441135: send_zram_to_nbd: target sent: 908 2055578000 904d
+ send_target_man-200   [002] ...1  2355.444197: send_zram_to_nbd: target sent: 908 2055575000 904e
+ send_target_man-200   [001] ...1  2355.447472: send_zram_to_nbd: target sent: 1344 7e63dd8000 904f
+ send_target_man-200   [002] ...1  2355.449757: send_zram_to_nbd: target sent: 910 f3552000 105c
+ send_target_man-200   [002] ...1  2355.451871: send_zram_to_nbd: target sent: 1698 1314d000 9050
+ send_target_man-200   [002] ...1  2355.454120: send_zram_to_nbd: target sent: 908 1755577000 9051
+ send_target_man-200   [002] ...1  2355.456284: send_zram_to_nbd: target sent: 910 f354c000 9052
+ send_target_man-200   [002] ...1  2355.458403: send_zram_to_nbd: target sent: 908 205557e000 9053
+ send_target_man-200   [002] ...1  2355.460404: send_zram_to_nbd: target sent: 908 175557a000 9054
+ send_target_man-200   [002] ...1  2355.462535: send_zram_to_nbd: target sent: 908 3135552000 9055
+ send_target_man-200   [002] ...1  2355.465415: send_zram_to_nbd: target sent: 908 2b5555f000 9056
+ send_target_man-200   [002] ...1  2355.467512: send_zram_to_nbd: target sent: 908 2d5555f000 9057
+ send_target_man-200   [002] ...1  2355.469705: send_zram_to_nbd: target sent: 908 3255553000 9058
+ send_target_man-200   [002] ...1  2355.472136: send_zram_to_nbd: target sent: 908 3635552000 9059
+ send_target_man-200   [002] ...1  2355.474581: send_zram_to_nbd: target sent: 908 355555d000 905a
+ send_target_man-200   [002] ...1  2355.476727: send_zram_to_nbd: target sent: 908 1e35552000 905b
+ send_target_man-200   [002] ...1  2355.478828: send_zram_to_nbd: target sent: 908 1f55554000 905c
+ send_target_man-200   [002] ...1  2355.480933: send_zram_to_nbd: target sent: 908 2355552000 905d
+ send_target_man-200   [002] ...1  2355.483091: send_zram_to_nbd: target sent: 910 f7a27000 905e
+ send_target_man-200   [002] ...1  2355.485465: send_zram_to_nbd: target sent: 908 3955554000 905f
+ send_target_man-200   [002] ...1  2355.487552: send_zram_to_nbd: target sent: 908 395555c000 9060
+ send_target_man-200   [002] ...1  2355.489672: send_zram_to_nbd: target sent: 908 305555c000 9061
+ send_target_man-200   [002] ...1  2355.491777: send_zram_to_nbd: target sent: 908 395555d000 9062
+ send_target_man-200   [002] ...1  2355.493831: send_zram_to_nbd: target sent: 908 3055554000 9063
+ send_target_man-200   [002] ...1  2355.496856: send_zram_to_nbd: target sent: 1344 7f20ce6000 9064
+ send_target_man-200   [002] ...1  2355.499015: send_zram_to_nbd: target sent: 910 f2e16000 9065
+ send_target_man-200   [003] ...1  2355.501007: send_zram_to_nbd: target sent: 908 1e5555c000 9066
+ send_target_man-200   [003] ...1  2355.502828: send_zram_to_nbd: target sent: 1344 7ecb756000 d045
+ send_target_man-200   [003] ...1  2355.505480: send_zram_to_nbd: target sent: 1344 7ecb754000 d046
+ send_target_man-200   [000] ...1  2355.507319: send_zram_to_nbd: target sent: 1344 7f2d672000 d047
+ send_target_man-200   [000] ...1  2355.511019: send_zram_to_nbd: target sent: 910 f2e00000 5058
+ send_target_man-200   [000] ...1  2355.512839: send_zram_to_nbd: target sent: 1344 7f28ce2000 5059
+ send_target_man-200   [000] ...1  2355.514649: send_zram_to_nbd: target sent: 910 f282c000 505a
+ send_target_man-200   [000] ...1  2355.516500: send_zram_to_nbd: target sent: 908 285555f000 505b
+ send_target_man-200   [000] ...1  2355.518574: send_zram_to_nbd: target sent: 910 f3547000 505c
+ send_target_man-200   [000] ...1  2355.520718: send_zram_to_nbd: target sent: 1619 9f1d0000 505d
+ send_target_man-200   [000] ...1  2355.523746: send_zram_to_nbd: target sent: 1344 7fbf6fb000 505e
+ send_target_man-200   [000] ...1  2355.526339: send_zram_to_nbd: target sent: 1619 7f28cac000 505f
+ send_target_man-200   [000] ...1  2355.528515: send_zram_to_nbd: target sent: 910 f7a1e000 5060
+ send_target_man-200   [000] ...1  2355.530665: send_zram_to_nbd: target sent: 910 f7a07000 5061
+ send_target_man-200   [000] ...1  2355.532875: send_zram_to_nbd: target sent: 910 f7a65000 5062
+ send_target_man-200   [000] ...1  2355.535253: send_zram_to_nbd: target sent: 910 f7a28000 5063
+ send_target_man-200   [000] ...1  2355.537474: send_zram_to_nbd: target sent: 1619 7ecf192000 5064
+ send_target_man-200   [000] ...1  2355.539791: send_zram_to_nbd: target sent: 910 f7a4c000 5065
+ send_target_man-200   [000] ...1  2355.542038: send_zram_to_nbd: target sent: 910 f7a67000 5066
+ send_target_man-200   [000] ...1  2355.544340: send_zram_to_nbd: target sent: 1619 7ecf193000 5067
+ send_target_man-200   [000] ...1  2355.549996: send_zram_to_nbd: target sent: 1619 7ecf190000 5068
+ send_target_man-200   [000] ...1  2355.552431: send_zram_to_nbd: target sent: 910 f2e01000 5069
+ send_target_man-200   [000] ...1  2355.554698: send_zram_to_nbd: target sent: 1619 9f31c000 506a
+ send_target_man-200   [000] ...1  2355.557760: send_zram_to_nbd: target sent: 910 f2e02000 506b
+ send_target_man-200   [000] ...1  2355.560204: send_zram_to_nbd: target sent: 910 f2e03000 506c
+ send_target_man-200   [000] ...1  2355.562567: send_zram_to_nbd: target sent: 1619 9f253000 506d
+ send_target_man-200   [000] ...1  2355.564852: send_zram_to_nbd: target sent: 1619 7ed11b5000 506e
+ send_target_man-200   [000] ...1  2355.567145: send_zram_to_nbd: target sent: 1619 7ed1251000 506f
+ send_target_man-200   [003] ...1  2355.569876: send_zram_to_nbd: target sent: 910 f2e26000 5070
+ send_target_man-200   [003] ...1  2355.572357: send_zram_to_nbd: target sent: 1619 7eae4a9000 d048
+ send_target_man-200   [003] ...1  2355.574767: send_zram_to_nbd: target sent: 910 f2e27000 d049
+ send_target_man-200   [003] ...1  2355.577206: send_zram_to_nbd: target sent: 1619 7ed123b000 d04a
+ send_target_man-200   [003] ...1  2355.579512: send_zram_to_nbd: target sent: 910 f2e28000 d04b
+ send_target_man-200   [003] ...1  2355.581959: send_zram_to_nbd: target sent: 910 f2e29000 d04c
+ send_target_man-200   [003] ...1  2355.584354: send_zram_to_nbd: target sent: 910 f2e2a000 d04d
+ send_target_man-200   [000] ...1  2355.587091: send_zram_to_nbd: target sent: 910 f7a66000 d04e
+ send_target_man-200   [000] ...1  2355.589516: send_zram_to_nbd: target sent: 1619 7f28ce2000 5071
+ send_target_man-200   [002] ...1  2355.592070: send_zram_to_nbd: target sent: 910 f2e46000 5072
+ send_target_man-200   [002] ...1  2355.594376: send_zram_to_nbd: target sent: 910 f2e47000 9067
+ send_target_man-200   [002] ...1  2355.596668: send_zram_to_nbd: target sent: 910 f2e48000 9068
+ send_target_man-200   [002] ...1  2355.600344: send_zram_to_nbd: target sent: 910 f2e49000 9069
+ send_target_man-200   [002] ...1  2355.603222: send_zram_to_nbd: target sent: 910 f2e4a000 906a
+ send_target_man-200   [002] ...1  2355.605640: send_zram_to_nbd: target sent: 1344 7fbe4bd000 906b
+ send_target_man-200   [002] ...1  2355.607922: send_zram_to_nbd: target sent: 910 f2e4b000 906c
+ send_target_man-200   [002] ...1  2355.610208: send_zram_to_nbd: target sent: 910 f2e4c000 906d
+ send_target_man-200   [002] ...1  2355.614467: send_zram_to_nbd: target sent: 910 f2e4d000 906e
+ send_target_man-200   [002] ...1  2355.616768: send_zram_to_nbd: target sent: 910 f2e4e000 906f
+ send_target_man-200   [002] ...1  2355.619290: send_zram_to_nbd: target sent: 910 f2e4f000 9070
+ send_target_man-200   [002] ...1  2355.622425: send_zram_to_nbd: target sent: 910 f2e51000 9071
+ send_target_man-200   [002] ...1  2355.624918: send_zram_to_nbd: target sent: 910 f2e52000 9072
+ send_target_man-200   [002] ...1  2355.627308: send_zram_to_nbd: target sent: 1344 7fbe4be000 9073
+ send_target_man-200   [002] ...1  2355.629715: send_zram_to_nbd: target sent: 910 f2e53000 9074
+ send_target_man-200   [002] ...1  2355.632055: send_zram_to_nbd: target sent: 910 f2e54000 9075
+ send_target_man-200   [002] ...1  2355.634504: send_zram_to_nbd: target sent: 1344 7fbe4bf000 9076
+ send_target_man-200   [002] ...1  2355.636885: send_zram_to_nbd: target sent: 910 f2e55000 9077
+ send_target_man-200   [002] ...1  2355.639196: send_zram_to_nbd: target sent: 1344 7fbe4c0000 9078
+ send_target_man-200   [002] ...1  2355.641632: send_zram_to_nbd: target sent: 1344 7fbe4c1000 9079
+ send_target_man-200   [002] ...1  2355.643943: send_zram_to_nbd: target sent: 910 f7a18000 907a
+ send_target_man-200   [002] ...1  2355.646620: send_zram_to_nbd: target sent: 1344 7f28ccc000 907b
+ send_target_man-200   [002] ...1  2355.651113: send_zram_to_nbd: target sent: 1344 7fbe4c2000 907c
+ send_target_man-200   [002] ...1  2355.653712: send_zram_to_nbd: target sent: 1344 7f28ccd000 907d
+ send_target_man-200   [002] ...1  2355.656031: send_zram_to_nbd: target sent: 1344 7f28c5d000 907e
+ send_target_man-200   [002] ...1  2355.658491: send_zram_to_nbd: target sent: 1344 7fbe4c3000 907f
+ send_target_man-200   [002] ...1  2355.661276: send_zram_to_nbd: target sent: 1344 7fbe4c4000 9080
+ send_target_man-200   [002] ...1  2355.663789: send_zram_to_nbd: target sent: 1344 7fbe4c5000 9081
+ send_target_man-200   [002] ...1  2355.666413: send_zram_to_nbd: target sent: 1344 7fbe4c6000 9082
+ send_target_man-200   [002] ...1  2355.669326: send_zram_to_nbd: target sent: 1344 7fbe4c7000 9083
+ send_target_man-200   [002] ...1  2355.672200: send_zram_to_nbd: target sent: 1344 7fbe4c8000 9084
+ send_target_man-200   [002] ...1  2355.674678: send_zram_to_nbd: target sent: 1344 7fbe4c9000 9085
+ send_target_man-200   [002] ...1  2355.677061: send_zram_to_nbd: target sent: 1344 7fbe4ca000 9086
+ send_target_man-200   [002] ...1  2355.679453: send_zram_to_nbd: target sent: 1344 7fbe4cb000 9087
+ send_target_man-200   [002] ...1  2355.681936: send_zram_to_nbd: target sent: 910 f5e6b000 9088
+ send_target_man-200   [002] ...1  2355.684266: send_zram_to_nbd: target sent: 1344 7fbe4cc000 9089
+ send_target_man-200   [002] ...1  2355.687028: send_zram_to_nbd: target sent: 1344 7fbe4cd000 908a
+ send_target_man-200   [002] ...1  2355.689362: send_zram_to_nbd: target sent: 1344 7fbe4ce000 908b
+ send_target_man-200   [002] ...1  2355.691735: send_zram_to_nbd: target sent: 1344 7fbe4cf000 908c
+ send_target_man-200   [002] ...1  2355.694384: send_zram_to_nbd: target sent: 1344 7fbe4d0000 908d
+ send_target_man-200   [002] ...1  2355.696878: send_zram_to_nbd: target sent: 1344 7fbe4d1000 908e
+ send_target_man-200   [002] ...1  2355.699357: send_zram_to_nbd: target sent: 1344 7fbe4d2000 908f
+ send_target_man-200   [002] ...1  2355.701797: send_zram_to_nbd: target sent: 1344 7fbe4d3000 9090
+ send_target_man-200   [002] ...1  2355.704138: send_zram_to_nbd: target sent: 1344 7fbe4d4000 9091
+ send_target_man-200   [002] ...1  2355.706841: send_zram_to_nbd: target sent: 1344 7fbe4d5000 9092
+ send_target_man-200   [002] ...1  2355.709199: send_zram_to_nbd: target sent: 1344 7fbe4d6000 9093
+ send_target_man-200   [002] ...1  2355.711716: send_zram_to_nbd: target sent: 1344 7fbe4d7000 9094
+ send_target_man-200   [002] ...1  2355.714427: send_zram_to_nbd: target sent: 1344 7fbe4d8000 9095
+ send_target_man-200   [002] ...1  2355.717768: send_zram_to_nbd: target sent: 1344 7fbe4d9000 9096
+ send_target_man-200   [001] .n.1  2355.720228: send_zram_to_nbd: target sent: 1344 7fbe4da000 9097
+ send_target_man-200   [001] ...1  2355.722700: send_zram_to_nbd: target sent: 1344 7fbe4db000 105d
+ send_target_man-200   [001] ...1  2355.726019: send_zram_to_nbd: target sent: 1344 7fbe4dc000 105e
+ send_target_man-200   [001] ...1  2355.728720: send_zram_to_nbd: target sent: 1344 7fbe4dd000 105f
+ send_target_man-200   [001] ...1  2355.731188: send_zram_to_nbd: target sent: 1344 7fbe4de000 1060
+ send_target_man-200   [001] ...1  2355.733692: send_zram_to_nbd: target sent: 1344 7fbe4df000 1061
+ send_target_man-200   [001] ...1  2355.736334: send_zram_to_nbd: target sent: 1344 7fbe4e0000 1062
+ send_target_man-200   [000] ...1  2355.738890: send_zram_to_nbd: target sent: 1344 7fbe4e1000 1063
+ send_target_man-200   [000] ...1  2355.741181: send_zram_to_nbd: target sent: 1344 7fbe4e2000 5073
+ send_target_man-200   [000] ...1  2355.743216: send_zram_to_nbd: target sent: 1344 7fbe4e3000 5074
+ send_target_man-200   [000] ...1  2355.745244: send_zram_to_nbd: target sent: 1344 7fbe4e4000 5075
+ send_target_man-200   [000] ...1  2355.747538: send_zram_to_nbd: target sent: 910 f7a68000 5076
+ send_target_man-200   [000] ...1  2355.749798: send_zram_to_nbd: target sent: 1344 7fbe4e5000 5077
+ send_target_man-200   [000] ...1  2355.754814: send_zram_to_nbd: target sent: 1344 7fbe4e6000 5078
+ send_target_man-200   [000] ...1  2355.757660: send_zram_to_nbd: target sent: 1344 7fbe4e7000 5079
+ send_target_man-200   [000] ...1  2355.759879: send_zram_to_nbd: target sent: 1344 7fbe4e8000 507a
+ send_target_man-200   [000] ...1  2355.762606: send_zram_to_nbd: target sent: 1344 7fbe4e9000 507b
+ send_target_man-200   [000] ...1  2355.764733: send_zram_to_nbd: target sent: 1344 7fbe4ea000 507c
+ send_target_man-200   [000] ...1  2355.766916: send_zram_to_nbd: target sent: 1344 7fbe19b000 507d
+ send_target_man-200   [000] ...1  2355.769137: send_zram_to_nbd: target sent: 1344 7fbe1d8000 507e
+ send_target_man-200   [000] ...1  2355.771236: send_zram_to_nbd: target sent: 1344 7fbe267000 507f
+ send_target_man-200   [000] ...1  2355.773351: send_zram_to_nbd: target sent: 1344 7e70b9a000 5080
+ send_target_man-200   [000] ...1  2355.775489: send_zram_to_nbd: target sent: 1344 7e6f92e000 5081
+ send_target_man-200   [000] ...1  2355.778261: send_zram_to_nbd: target sent: 1619 7fbc1df000 5082
+ send_target_man-200   [000] ...1  2355.780548: send_zram_to_nbd: target sent: 1344 7e6f69c000 5083
+ send_target_man-200   [000] ...1  2355.782861: send_zram_to_nbd: target sent: 1619 9f2c1000 5084
+ send_target_man-200   [000] ...1  2355.785156: send_zram_to_nbd: target sent: 1344 7e7bf19000 5085
+ send_target_man-200   [000] ...1  2355.787277: send_zram_to_nbd: target sent: 1619 9f266000 5086
+ send_target_man-200   [003] .n.1  2355.790229: send_zram_to_nbd: target sent: 1619 9f2f9000 5087
+ send_target_man-200   [003] ...1  2355.792549: send_zram_to_nbd: target sent: 1344 7e6f740000 d04f
+ send_target_man-200   [003] ...1  2355.794572: send_zram_to_nbd: target sent: 1619 9f065000 d050
+ send_target_man-200   [003] ...1  2355.796724: send_zram_to_nbd: target sent: 1619 9f237000 d051
+ send_target_man-200   [003] ...1  2355.798764: send_zram_to_nbd: target sent: 1344 7e7be75000 d052
+ send_target_man-200   [003] ...1  2355.801003: send_zram_to_nbd: target sent: 1619 9f245000 d053
+ send_target_man-200   [003] ...1  2355.803127: send_zram_to_nbd: target sent: 1619 9f30a000 d054
+ send_target_man-200   [003] ...1  2355.805248: send_zram_to_nbd: target sent: 1619 9f307000 d055
+ send_target_man-200   [001] ...1  2355.807419: send_zram_to_nbd: target sent: 1619 9f190000 d056
+ send_target_man-200   [001] ...1  2355.809469: send_zram_to_nbd: target sent: 1619 13dbc000 1064
+ send_target_man-200   [001] ...1  2355.811825: send_zram_to_nbd: target sent: 1619 9f28c000 1065
+ send_target_man-200   [001] ...1  2355.813788: send_zram_to_nbd: target sent: 1619 9f2f3000 1066
+ send_target_man-200   [001] ...1  2355.816108: send_zram_to_nbd: target sent: 1619 7fbc1d8000 1067
+ send_target_man-200   [001] ...1  2355.819660: send_zram_to_nbd: target sent: 1619 13d42000 1068
+ send_target_man-200   [001] ...1  2355.821543: send_zram_to_nbd: target sent: 1619 9f2ce000 1069
+ send_target_man-200   [001] ...1  2355.823572: send_zram_to_nbd: target sent: 910 f7aff000 106a
+ send_target_man-200   [001] ...1  2355.825453: send_zram_to_nbd: target sent: 1619 9f297000 106b
+ send_target_man-200   [001] ...1  2355.827904: send_zram_to_nbd: target sent: 1619 9f1d1000 106c
+ send_target_man-200   [001] ...1  2355.830023: send_zram_to_nbd: target sent: 1619 9f285000 106d
+ send_target_man-200   [001] ...1  2355.832216: send_zram_to_nbd: target sent: 1619 9f284000 106e
+ send_target_man-200   [001] ...1  2355.834603: send_zram_to_nbd: target sent: 1344 9f0b8000 106f
+ send_target_man-200   [001] ...1  2355.836879: send_zram_to_nbd: target sent: 1344 9f3b0000 1070
+ send_target_man-200   [001] ...1  2355.838972: send_zram_to_nbd: target sent: 1344 7eb44b2000 1071
+ send_target_man-200   [001] ...1  2355.841066: send_zram_to_nbd: target sent: 1344 7ed0f5a000 1072
+ send_target_man-200   [001] ...1  2355.843382: send_zram_to_nbd: target sent: 1344 7e7441d000 1073
+ send_target_man-200   [001] ...1  2355.845494: send_zram_to_nbd: target sent: 1344 7e7441e000 1074
+ send_target_man-200   [001] ...1  2355.847595: send_zram_to_nbd: target sent: 1344 7e72973000 1075
+ send_target_man-200   [001] ...1  2355.850121: send_zram_to_nbd: target sent: 1344 7e72c45000 1076
+ send_target_man-200   [001] ...1  2355.852205: send_zram_to_nbd: target sent: 1344 7eb8b96000 1077
+ send_target_man-200   [003] ...1  2355.858079: send_zram_to_nbd: target sent: 1344 7e728dc000 1078
+ send_target_man-200   [003] ...1  2355.860184: send_zram_to_nbd: target sent: 910 f2e08000 d057
+ send_target_man-200   [002] ...1  2355.862201: send_zram_to_nbd: target sent: 910 f353f000 d058
+ send_target_man-200   [002] ...1  2355.864799: send_zram_to_nbd: target sent: 910 f355f000 9098
+ send_target_man-200   [003] ...1  2355.867203: send_zram_to_nbd: target sent: 910 f3510000 9099
+ send_target_man-200   [003] ...1  2355.869196: send_zram_to_nbd: target sent: 910 f3515000 d059
+ send_target_man-200   [003] ...1  2355.871178: send_zram_to_nbd: target sent: 910 f2e2b000 d05a
+ send_target_man-200   [003] ...1  2355.873238: send_zram_to_nbd: target sent: 1619 7fbe29c000 d05b
+ send_target_man-200   [003] ...1  2355.876275: send_zram_to_nbd: target sent: 910 f358a000 d05c
+ send_target_man-200   [003] ...1  2355.878311: send_zram_to_nbd: target sent: 910 f35b5000 d05d
+ send_target_man-200   [003] ...1  2355.880738: send_zram_to_nbd: target sent: 910 f35b6000 d05e
+ send_target_man-200   [003] ...1  2355.883351: send_zram_to_nbd: target sent: 1619 7fbe29d000 d05f
+ send_target_man-200   [001] ...1  2355.891211: send_zram_to_nbd: target sent: 910 f7a77000 d060
+ send_target_man-200   [001] ...1  2355.893317: send_zram_to_nbd: target sent: 910 f7a78000 1079
+ send_target_man-200   [000] ...1  2355.895436: send_zram_to_nbd: target sent: 1619 7f30c17000 107a
+ send_target_man-200   [000] ...1  2355.898426: send_zram_to_nbd: target sent: 1619 7ecf191000 5088
+ send_target_man-200   [000] ...1  2355.900369: send_zram_to_nbd: target sent: 1619 9f274000 5089
+ send_target_man-200   [000] ...1  2355.903122: send_zram_to_nbd: target sent: 1619 7eaea44000 508a
+ send_target_man-200   [000] ...1  2355.905684: send_zram_to_nbd: target sent: 1619 7ed1232000 508b
+ send_target_man-200   [000] ...1  2355.908461: send_zram_to_nbd: target sent: 1344 7ec8436000 508c
+ send_target_man-200   [001] ...1  2355.912306: send_zram_to_nbd: target sent: 910 f3471000 508d
+  surfaceflinger-602   [002] ....  2430.183769: do_swap_page: prefetch fault 602 "surfaceflinger" 7fba7eb000 1018
+  surfaceflinger-602   [003] ...1  2430.199771: do_swap_page: prefetch miss 602 "surfaceflinger" 7fba7eb000 1018
+           <...>-15913 [007] ....  2434.986528: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-15953 [005] ....  2435.129711: do_swap_page: prefetch fault 790 "netd" 7fbcd1f000 5018
+           <...>-2199  [004] ....  2435.129945: do_swap_page: prefetch fault 602 "Binder:602_5" 7fb7933000 1000
+           <...>-15953 [005] ...1  2435.131665: do_swap_page: prefetch miss 790 "netd" 7fbcd1f000 5018
+           <...>-15953 [006] ....  2435.131719: do_swap_page: prefetch fault 790 "netd" 7fba09f000 9000
+           <...>-2199  [004] ...1  2435.131755: do_swap_page: prefetch miss 602 "Binder:602_5" 7fb7933000 1000
+           <...>-2199  [004] ....  2435.131817: do_swap_page: prefetch fault 602 "Binder:602_5" 7fb75a7000 1001
+           <...>-15953 [006] ...1  2435.134311: do_swap_page: prefetch miss 790 "netd" 7fba09f000 9000
+           <...>-2199  [004] ...1  2435.134356: do_swap_page: prefetch miss 602 "Binder:602_5" 7fb75a7000 1001
+           <...>-607   [004] ....  2435.134420: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd026000 1002
+           <...>-607   [004] ...1  2435.136571: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd026000 1002
+           <...>-607   [004] ....  2435.136629: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd021000 5001
+           <...>-607   [004] ...1  2435.138482: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd021000 5001
+           <...>-607   [004] ....  2435.138508: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd019000 5002
+           <...>-607   [004] ...1  2435.140516: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd019000 5002
+           <...>-607   [004] ....  2435.140560: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd006000 5003
+           <...>-607   [004] ...1  2435.142969: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd006000 5003
+           <...>-607   [004] ....  2435.142994: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd009000 5004
+           <...>-607   [004] ...1  2435.145086: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd009000 5004
+           <...>-607   [004] ....  2435.145120: do_swap_page: prefetch fault 607 "allocator-servi" 7fbdafe000 5006
+           <...>-607   [004] ...1  2435.147070: do_swap_page: prefetch miss 607 "allocator-servi" 7fbdafe000 5006
+           <...>-607   [004] ....  2435.147097: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd00d000 5007
+           <...>-607   [004] ...1  2435.149025: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd00d000 5007
+           <...>-607   [004] ....  2435.149044: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd01c000 5008
+           <...>-607   [004] ...1  2435.150546: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd01c000 5008
+           <...>-607   [004] ....  2435.150579: do_swap_page: prefetch fault 607 "allocator-servi" 7fbdb76000 5009
+           <...>-607   [004] ...1  2435.152309: do_swap_page: prefetch miss 607 "allocator-servi" 7fbdb76000 5009
+           <...>-607   [004] ....  2435.152341: do_swap_page: prefetch fault 607 "allocator-servi" 7fbdcd5000 500a
+           <...>-607   [004] ...1  2435.154326: do_swap_page: prefetch miss 607 "allocator-servi" 7fbdcd5000 500a
+           <...>-607   [004] ....  2435.154351: do_swap_page: prefetch fault 607 "allocator-servi" 7fbdcd1000 500b
+           <...>-607   [004] ...1  2435.156244: do_swap_page: prefetch miss 607 "allocator-servi" 7fbdcd1000 500b
+           <...>-607   [004] ....  2435.156268: do_swap_page: prefetch fault 607 "allocator-servi" 7fbdcd2000 500c
+           <...>-607   [004] ...1  2435.158890: do_swap_page: prefetch miss 607 "allocator-servi" 7fbdcd2000 500c
+           <...>-607   [004] ....  2435.158930: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd011000 500f
+           <...>-607   [004] ...1  2435.160626: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd011000 500f
+           <...>-607   [004] ....  2435.160671: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd00a000 5011
+           <...>-607   [004] ...1  2435.163033: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd00a000 5011
+           <...>-607   [004] ....  2435.163078: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd730000 5015
+           <...>-607   [004] ...1  2435.164809: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd730000 5015
+           <...>-607   [004] ....  2435.164845: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd005000 5016
+           <...>-607   [004] ...1  2435.167023: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd005000 5016
+           <...>-607   [004] ....  2435.167051: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd58f000 5017
+           <...>-607   [004] ...1  2435.169122: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd58f000 5017
+           <...>-607   [004] ....  2435.169204: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd012000 1004
+           <...>-607   [004] ...1  2435.171277: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd012000 1004
+           <...>-607   [004] ....  2435.171373: do_swap_page: prefetch fault 607 "allocator-servi" 7fbcde8000 1009
+           <...>-607   [004] ...1  2435.173273: do_swap_page: prefetch miss 607 "allocator-servi" 7fbcde8000 1009
+           <...>-607   [004] ....  2435.173303: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd200000 100a
+           <...>-607   [004] ...1  2435.175403: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd200000 100a
+           <...>-607   [004] ....  2435.175432: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd03a000 100b
+           <...>-607   [004] ...1  2435.179917: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd03a000 100b
+           <...>-607   [004] ....  2435.179948: do_swap_page: prefetch fault 607 "allocator-servi" 7fbd027000 100c
+           <...>-607   [004] ...1  2435.182002: do_swap_page: prefetch miss 607 "allocator-servi" 7fbd027000 100c
+           <...>-2199  [004] ....  2435.182121: do_swap_page: prefetch fault 602 "Binder:602_5" 7fba64c000 100d
+           <...>-2199  [004] ...1  2435.184102: do_swap_page: prefetch miss 602 "Binder:602_5" 7fba64c000 100d
+           <...>-2199  [004] ....  2435.184187: do_swap_page: prefetch fault 602 "Binder:602_5" 7fba7d3000 100e
+           <...>-2199  [004] ...1  2435.186310: do_swap_page: prefetch miss 602 "Binder:602_5" 7fba7d3000 100e
+           <...>-654   [003] ....  2435.187891: do_swap_page: prefetch fault 602 "ImageManager" 7fb631d000 100f
+           <...>-654   [003] ...1  2435.189900: do_swap_page: prefetch miss 602 "ImageManager" 7fb631d000 100f
+           <...>-654   [003] ....  2435.189941: do_swap_page: prefetch fault 602 "ImageManager" 7fb631c000 1010
+           <...>-654   [003] ...1  2435.191894: do_swap_page: prefetch miss 602 "ImageManager" 7fb631c000 1010
+           <...>-654   [003] ....  2435.191968: do_swap_page: prefetch fault 602 "ImageManager" 7fba64b000 1011
+           <...>-654   [003] ...1  2435.195442: do_swap_page: prefetch miss 602 "ImageManager" 7fba64b000 1011
+           <...>-654   [003] ....  2435.195496: do_swap_page: prefetch fault 602 "ImageManager" 7fbe1c5000 1012
+           <...>-654   [003] ...1  2435.197503: do_swap_page: prefetch miss 602 "ImageManager" 7fbe1c5000 1012
+           <...>-654   [003] ....  2435.197535: do_swap_page: prefetch fault 602 "ImageManager" 7fbcb75000 1013
+           <...>-654   [003] ...1  2435.199391: do_swap_page: prefetch miss 602 "ImageManager" 7fbcb75000 1013
+           <...>-654   [003] ....  2435.199422: do_swap_page: prefetch fault 602 "ImageManager" 7fb9553000 1014
+           <...>-654   [003] ...1  2435.201758: do_swap_page: prefetch miss 602 "ImageManager" 7fb9553000 1014
+           <...>-654   [003] ....  2435.201788: do_swap_page: prefetch fault 602 "ImageManager" 7fbe1de000 1015
+           <...>-654   [003] ...1  2435.203809: do_swap_page: prefetch miss 602 "ImageManager" 7fbe1de000 1015
+           <...>-654   [003] ....  2435.203845: do_swap_page: prefetch fault 602 "ImageManager" 7fbe1df000 1016
+           <...>-2199  [005] ....  2435.205578: do_swap_page: prefetch fault 602 "Binder:602_5" 7fbc964000 102a
+           <...>-654   [000] ...1  2435.205836: do_swap_page: prefetch miss 602 "ImageManager" 7fbe1df000 1016
+           <...>-654   [000] ....  2435.205881: do_swap_page: prefetch fault 602 "ImageManager" 7fbe1d8000 1017
+           <...>-2199  [005] ...1  2435.207768: do_swap_page: prefetch miss 602 "Binder:602_5" 7fbc964000 102a
+           <...>-2199  [006] ....  2435.207840: do_swap_page: prefetch fault 602 "Binder:602_5" 7fbc963000 102b
+           <...>-654   [000] ...1  2435.207896: do_swap_page: prefetch miss 602 "ImageManager" 7fbe1d8000 1017
+           <...>-654   [000] ....  2435.207942: do_swap_page: prefetch fault 602 "ImageManager" 7fb7e7e000 1019
+           <...>-2199  [006] ...1  2435.210014: do_swap_page: prefetch miss 602 "Binder:602_5" 7fbc963000 102b
+           <...>-654   [001] ...1  2435.210071: do_swap_page: prefetch miss 602 "ImageManager" 7fb7e7e000 1019
+           <...>-654   [001] ....  2435.210114: do_swap_page: prefetch fault 602 "ImageManager" 7fbe230000 101a
+           <...>-654   [001] ...1  2435.212087: do_swap_page: prefetch miss 602 "ImageManager" 7fbe230000 101a
+           <...>-654   [001] ....  2435.212127: do_swap_page: prefetch fault 602 "ImageManager" 7fb94d8000 101b
+           <...>-654   [001] ...1  2435.214241: do_swap_page: prefetch miss 602 "ImageManager" 7fb94d8000 101b
+           <...>-654   [001] ....  2435.214433: do_swap_page: prefetch fault 602 "ImageManager" 7fbe1c6000 101c
+    Binder:910_5-3580  [003] ....  2435.215333: do_swap_page: prefetch fault 910 "Binder:910_5" f27c4000 d01d
+           <...>-654   [001] ...1  2435.216549: do_swap_page: prefetch miss 602 "ImageManager" 7fbe1c6000 101c
+           <...>-654   [001] ....  2435.216576: do_swap_page: prefetch fault 602 "ImageManager" 7fba640000 101d
+    Binder:910_5-3580  [003] ...1  2435.217071: do_swap_page: prefetch miss 910 "Binder:910_5" f27c4000 d01d
+    Binder:910_5-3580  [003] ....  2435.217125: do_swap_page: prefetch fault 910 "Binder:910_5" f27c5000 d01e
+           <...>-654   [000] ...1  2435.219581: do_swap_page: prefetch miss 602 "ImageManager" 7fba640000 101d
+           <...>-654   [000] ....  2435.219615: do_swap_page: prefetch fault 602 "ImageManager" 7fba641000 101e
+    Binder:910_5-3580  [003] ...1  2435.219625: do_swap_page: prefetch miss 910 "Binder:910_5" f27c5000 d01e
+    Binder:910_5-3580  [003] ....  2435.220318: do_swap_page: prefetch fault 910 "Binder:910_5" f7a25000 d026
+           <...>-654   [000] ...1  2435.221654: do_swap_page: prefetch miss 602 "ImageManager" 7fba641000 101e
+           <...>-654   [000] ....  2435.221690: do_swap_page: prefetch fault 602 "ImageManager" 7fba642000 101f
+    Binder:910_5-3580  [003] ...1  2435.222202: do_swap_page: prefetch miss 910 "Binder:910_5" f7a25000 d026
+           <...>-654   [000] ...1  2435.224656: do_swap_page: prefetch miss 602 "ImageManager" 7fba642000 101f
+           <...>-654   [000] ....  2435.224686: do_swap_page: prefetch fault 602 "ImageManager" 7fba643000 1020
+    mediaswcodec-933   [005] ....  2435.225406: do_swap_page: prefetch fault 933 "mediaswcodec" 265555c000 d004
+           <...>-654   [000] ...1  2435.227094: do_swap_page: prefetch miss 602 "ImageManager" 7fba643000 1020
+           <...>-654   [000] ....  2435.227129: do_swap_page: prefetch fault 602 "ImageManager" 7fba644000 1021
+    mediaswcodec-933   [005] ...1  2435.227300: do_swap_page: prefetch miss 933 "mediaswcodec" 265555c000 d004
+    mediaswcodec-933   [005] ....  2435.227554: do_swap_page: prefetch fault 933 "mediaswcodec" 1955565000 d02f
+           <...>-654   [001] ...1  2435.229424: do_swap_page: prefetch miss 602 "ImageManager" 7fba644000 1021
+           <...>-654   [001] ....  2435.229511: do_swap_page: prefetch fault 602 "ImageManager" 7fbe1f6000 1022
+    mediaswcodec-933   [005] ...1  2435.229765: do_swap_page: prefetch miss 933 "mediaswcodec" 1955565000 d02f
+    mediaswcodec-933   [005] ....  2435.230040: do_swap_page: prefetch fault 933 "mediaswcodec" 1755552000 d00e
+           <...>-654   [001] ...1  2435.232287: do_swap_page: prefetch miss 602 "ImageManager" 7fbe1f6000 1022
+           <...>-654   [001] ....  2435.232313: do_swap_page: prefetch fault 602 "ImageManager" 7fbe1f4000 1023
+    mediaswcodec-933   [005] ...1  2435.232612: do_swap_page: prefetch miss 933 "mediaswcodec" 1755552000 d00e
+    mediaswcodec-933   [005] ....  2435.232695: do_swap_page: prefetch fault 933 "mediaswcodec" 1a5555c000 d009
+           <...>-654   [001] ...1  2435.234479: do_swap_page: prefetch miss 602 "ImageManager" 7fbe1f4000 1023
+           <...>-654   [001] ....  2435.234541: do_swap_page: prefetch fault 602 "ImageManager" 7fbe234000 1024
+    mediaswcodec-933   [005] ...1  2435.234832: do_swap_page: prefetch miss 933 "mediaswcodec" 1a5555c000 d009
+    mediaswcodec-933   [005] ....  2435.234905: do_swap_page: prefetch fault 933 "mediaswcodec" 1855566000 501b
+           <...>-654   [001] ...1  2435.236686: do_swap_page: prefetch miss 602 "ImageManager" 7fbe234000 1024
+           <...>-654   [001] ....  2435.236707: do_swap_page: prefetch fault 602 "ImageManager" 7fbe1f8000 1025
+    mediaswcodec-933   [005] ...1  2435.237000: do_swap_page: prefetch miss 933 "mediaswcodec" 1855566000 501b
+    mediaswcodec-933   [005] ....  2435.237170: do_swap_page: prefetch fault 933 "mediaswcodec" 1855558000 d002
+           <...>-654   [001] ...1  2435.239069: do_swap_page: prefetch miss 602 "ImageManager" 7fbe1f8000 1025
+           <...>-654   [001] ....  2435.239109: do_swap_page: prefetch fault 602 "ImageManager" 7fba64e000 1026
+    mediaswcodec-933   [005] ...1  2435.239360: do_swap_page: prefetch miss 933 "mediaswcodec" 1855558000 d002
+    Binder:910_5-3580  [006] ....  2435.240882: do_swap_page: prefetch fault 910 "Binder:910_5" f3542000 9036
+           <...>-654   [001] ...1  2435.242891: do_swap_page: prefetch miss 602 "ImageManager" 7fba64e000 1026
+           <...>-654   [001] ....  2435.242959: do_swap_page: prefetch fault 602 "ImageManager" 7fbe233000 1027
+    Binder:910_5-3580  [006] ...1  2435.243551: do_swap_page: prefetch miss 910 "Binder:910_5" f3542000 9036
+    Binder:910_5-3580  [006] ....  2435.243619: do_swap_page: prefetch fault 910 "Binder:910_5" f27b2000 d038
+           <...>-654   [001] ...1  2435.245922: do_swap_page: prefetch miss 602 "ImageManager" 7fbe233000 1027
+           <...>-654   [001] ....  2435.245943: do_swap_page: prefetch fault 602 "ImageManager" 7fbe1c8000 1028
+    Binder:910_5-3580  [005] ...1  2435.246261: do_swap_page: prefetch miss 910 "Binder:910_5" f27b2000 d038
+    Binder:910_5-3580  [006] ....  2435.246299: do_swap_page: prefetch fault 910 "Binder:910_5" f27b3000 d017
+           <...>-654   [001] ...1  2435.250562: do_swap_page: prefetch miss 602 "ImageManager" 7fbe1c8000 1028
+           <...>-654   [001] ....  2435.251010: do_swap_page: prefetch fault 602 "ImageManager" 7fba64d000 1029
+    Binder:910_5-3580  [005] ...1  2435.251178: do_swap_page: prefetch miss 910 "Binder:910_5" f27b3000 d017
+           <...>-15957 [005] ....  2435.253028: do_swap_page: prefetch fault 910 "NuPlayerDriver " f7b1f000 d028
+           <...>-1801  [006] ....  2435.253867: do_swap_page: prefetch fault 1344 "Binder:1344_7" 7f20f20000 103c
+           <...>-654   [001] ...1  2435.254411: do_swap_page: prefetch miss 602 "ImageManager" 7fba64d000 1029
+           <...>-654   [001] ....  2435.254952: do_swap_page: prefetch fault 602 "ImageManager" 7fb92ed000 102c
+           <...>-15957 [005] ...1  2435.256404: do_swap_page: prefetch miss 910 "NuPlayerDriver " f7b1f000 d028
+           <...>-15957 [005] ....  2435.256473: do_swap_page: prefetch fault 910 "NuPlayerDriver " f7b19000 1034
+           <...>-1801  [006] ...1  2435.256829: do_swap_page: prefetch miss 1344 "Binder:1344_7" 7f20f20000 103c
+           <...>-654   [001] ...1  2435.257084: do_swap_page: prefetch miss 602 "ImageManager" 7fb92ed000 102c
+           <...>-1368  [005] ....  2435.258153: do_swap_page: prefetch fault 1344 "android.anim" 7f21265000 d03d
+           <...>-15957 [005] ...1  2435.258746: do_swap_page: prefetch miss 910 "NuPlayerDriver " f7b19000 1034
+           <...>-15957 [005] ....  2435.258808: do_swap_page: prefetch fault 910 "NuPlayerDriver " f7b20000 d027
+           <...>-1368  [005] ...1  2435.260282: do_swap_page: prefetch miss 1344 "android.anim" 7f21265000 d03d
+           <...>-1368  [005] ....  2435.260472: do_swap_page: prefetch fault 1344 "android.anim" 7f28a89000 d03e
+           <...>-15957 [005] ...1  2435.260480: do_swap_page: prefetch miss 910 "NuPlayerDriver " f7b20000 d027
+    Binder:908_6-5209  [005] ....  2435.261093: do_swap_page: prefetch fault 908 "Binder:908_6" 7fbe35a000 1039
+           <...>-1368  [005] ...1  2435.262522: do_swap_page: prefetch miss 1344 "android.anim" 7f28a89000 d03e
+           <...>-1368  [005] ....  2435.262622: do_swap_page: prefetch fault 1344 "android.anim" 7f28b63000 d03f
+    Binder:908_6-5209  [006] ...1  2435.262663: do_swap_page: prefetch miss 908 "Binder:908_6" 7fbe35a000 1039
+    Binder:908_6-5209  [006] ....  2435.262902: do_swap_page: prefetch fault 908 "Binder:908_6" 1e5555c000 9066
+           <...>-1368  [005] ...1  2435.265347: do_swap_page: prefetch miss 1344 "android.anim" 7f28b63000 d03f
+           <...>-1368  [005] ....  2435.265392: do_swap_page: prefetch fault 1344 "android.anim" 7fbccb0000 d040
+    Binder:908_6-5209  [006] ...1  2435.265439: do_swap_page: prefetch miss 908 "Binder:908_6" 1e5555c000 9066
+    Binder:908_6-5209  [006] ....  2435.265531: do_swap_page: prefetch fault 908 "Binder:908_6" 1d55558000 504a
+           <...>-1368  [005] ...1  2435.267399: do_swap_page: prefetch miss 1344 "android.anim" 7fbccb0000 d040
+    Binder:908_6-5209  [006] ...1  2435.267495: do_swap_page: prefetch miss 908 "Binder:908_6" 1d55558000 504a
+    Binder:908_6-5209  [006] ....  2435.267550: do_swap_page: prefetch fault 908 "Binder:908_6" 1e35552000 905b
+           <...>-1368  [006] ....  2435.267562: do_swap_page: prefetch fault 1344 "android.anim" 7e70f7f000 d041
+           <...>-1368  [005] ...1  2435.271805: do_swap_page: prefetch miss 1344 "android.anim" 7e70f7f000 d041
+    Binder:908_6-5209  [006] ...1  2435.271932: do_swap_page: prefetch miss 908 "Binder:908_6" 1e35552000 905b
+           <...>-1368  [005] ....  2435.271984: do_swap_page: prefetch fault 1344 "android.anim" 7e7bfd3000 d042
+    Binder:908_6-5209  [006] ....  2435.272547: do_swap_page: prefetch fault 908 "Binder:908_6" 1b55552000 1052
+           <...>-1368  [005] ...1  2435.274085: do_swap_page: prefetch miss 1344 "android.anim" 7e7bfd3000 d042
+           <...>-1368  [005] ....  2435.274166: do_swap_page: prefetch fault 1344 "android.anim" 7ed0e1d000 d043
+    Binder:908_6-5209  [005] ...1  2435.274235: do_swap_page: prefetch miss 908 "Binder:908_6" 1b55552000 1052
+           <...>-15957 [005] ....  2435.274444: do_swap_page: prefetch fault 910 "generic" f35ff000 d014
+           <...>-1368  [005] ...1  2435.277144: do_swap_page: prefetch miss 1344 "android.anim" 7ed0e1d000 d043
+           <...>-1368  [005] ....  2435.277205: do_swap_page: prefetch fault 1344 "android.anim" 7e63dd4000 d044
+           <...>-15957 [005] ...1  2435.277220: do_swap_page: prefetch miss 910 "generic" f35ff000 d014
+    Binder:908_6-5209  [005] ....  2435.277326: do_swap_page: prefetch fault 908 "Binder:908_6" 1b55558000 5056
+           <...>-1368  [005] ...1  2435.279125: do_swap_page: prefetch miss 1344 "android.anim" 7e63dd4000 d044
+           <...>-1368  [005] ....  2435.279180: do_swap_page: prefetch fault 1344 "android.anim" 7e63dd5000 104f
+    Binder:908_6-5209  [006] ...1  2435.279200: do_swap_page: prefetch miss 908 "Binder:908_6" 1b55558000 5056
+    Binder:908_6-5209  [006] ....  2435.279447: do_swap_page: prefetch fault 908 "Binder:908_6" 1d5555c000 900c
+           <...>-1368  [005] ...1  2435.283543: do_swap_page: prefetch miss 1344 "android.anim" 7e63dd5000 104f
+           <...>-1368  [004] ....  2435.283588: do_swap_page: prefetch fault 1344 "android.anim" 7e63dd6000 1050
+    Binder:908_6-5209  [005] ...1  2435.283601: do_swap_page: prefetch miss 908 "Binder:908_6" 1d5555c000 900c
+    Binder:908_6-5209  [005] ....  2435.283697: do_swap_page: prefetch fault 908 "Binder:908_6" 2355556000 900d
+           <...>-1368  [005] ...1  2435.285513: do_swap_page: prefetch miss 1344 "android.anim" 7e63dd6000 1050
+           <...>-1368  [005] ....  2435.285587: do_swap_page: prefetch fault 1344 "android.anim" 7ed0dd4000 903f
+    Binder:908_6-5209  [005] ...1  2435.285592: do_swap_page: prefetch miss 908 "Binder:908_6" 2355556000 900d
+    Binder:908_6-5209  [005] ....  2435.285712: do_swap_page: prefetch fault 908 "Binder:908_6" 1955558000 5039
+           <...>-1368  [007] ...1  2435.287828: do_swap_page: prefetch miss 1344 "android.anim" 7ed0dd4000 903f
+    Binder:908_6-5209  [005] ...1  2435.287960: do_swap_page: prefetch miss 908 "Binder:908_6" 1955558000 5039
+           <...>-1368  [007] ....  2435.287984: do_swap_page: prefetch fault 1344 "android.anim" 9f380000 9040
+    Binder:908_6-5209  [005] ....  2435.288157: do_swap_page: prefetch fault 908 "Binder:908_6" 3755559000 9010
+           <...>-1368  [007] ...1  2435.291484: do_swap_page: prefetch miss 1344 "android.anim" 9f380000 9040
+           <...>-1368  [007] ....  2435.291527: do_swap_page: prefetch fault 1344 "android.anim" 9f1b0000 9041
+    Binder:908_6-5209  [005] ...1  2435.291606: do_swap_page: prefetch miss 908 "Binder:908_6" 3755559000 9010
+    Binder:908_6-5209  [005] ....  2435.291660: do_swap_page: prefetch fault 908 "Binder:908_6" 375555a000 9011
+           <...>-1368  [007] ...1  2435.293625: do_swap_page: prefetch miss 1344 "android.anim" 9f1b0000 9041
+    Binder:908_6-5209  [005] ...1  2435.293706: do_swap_page: prefetch miss 908 "Binder:908_6" 375555a000 9011
+    Binder:908_6-5209  [005] ....  2435.293767: do_swap_page: prefetch fault 908 "Binder:908_6" 3255553000 9058
+           <...>-1368  [007] ....  2435.294355: do_swap_page: prefetch fault 1344 "android.anim" 9f36e000 1051
+    Binder:908_6-5209  [005] ...1  2435.296074: do_swap_page: prefetch miss 908 "Binder:908_6" 3255553000 9058
+    Binder:908_6-5209  [005] ....  2435.296105: do_swap_page: prefetch fault 908 "Binder:908_6" 3a5555e000 9012
+           <...>-1368  [007] ...1  2435.296173: do_swap_page: prefetch miss 1344 "android.anim" 9f36e000 1051
+           <...>-1368  [007] ....  2435.296737: do_swap_page: prefetch fault 1344 "android.anim" 7e63dd8000 904f
+    Binder:908_6-5209  [005] ...1  2435.298123: do_swap_page: prefetch miss 908 "Binder:908_6" 3a5555e000 9012
+    Binder:908_6-5209  [005] ....  2435.298181: do_swap_page: prefetch fault 908 "Binder:908_6" 3a5555f000 9013
+           <...>-1368  [007] ...1  2435.298272: do_swap_page: prefetch miss 1344 "android.anim" 7e63dd8000 904f
+           <...>-1368  [007] ....  2435.299173: do_swap_page: prefetch fault 1344 "android.anim" 7f20ce6000 9064
+    Binder:908_6-5209  [005] ...1  2435.300094: do_swap_page: prefetch miss 908 "Binder:908_6" 3a5555f000 9013
+    Binder:908_6-5209  [005] ....  2435.300144: do_swap_page: prefetch fault 908 "Binder:908_6" 3a55560000 9014
+           <...>-1368  [007] ...1  2435.300976: do_swap_page: prefetch miss 1344 "android.anim" 7f20ce6000 9064
+ ndroid.systemui-1619  [005] ....  2435.301341: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f1d0000 505d
+           <...>-1368  [007] ....  2435.301511: do_swap_page: prefetch fault 1344 "android.anim" 7f28ccc000 907b
+           <...>-1369  [007] ....  2435.301535: do_swap_page: prefetch fault 1344 "android.anim.lf" 7ecb756000 d045
+           <...>-1372  [002] ....  2435.301709: do_swap_page: prefetch fault 1344 "android.bg" 7fbf6fb000 505e
+    Binder:908_6-5209  [005] ...1  2435.302048: do_swap_page: prefetch miss 908 "Binder:908_6" 3a55560000 9014
+    Binder:908_6-5209  [005] ....  2435.302114: do_swap_page: prefetch fault 908 "Binder:908_6" 3755560000 9015
+ ndroid.systemui-1619  [005] ...1  2435.303710: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f1d0000 505d
+ ndroid.systemui-1619  [005] ....  2435.303771: do_swap_page: prefetch fault 1619 "ndroid.systemui" 7f28cac000 505f
+           <...>-1372  [002] ...1  2435.304676: do_swap_page: prefetch miss 1344 "android.bg" 7fbf6fb000 505e
+           <...>-1372  [002] ....  2435.304720: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4bd000 906b
+           <...>-1368  [007] ...1  2435.304888: do_swap_page: prefetch miss 1344 "android.anim" 7f28ccc000 907b
+    Binder:908_6-5209  [005] ...1  2435.304907: do_swap_page: prefetch miss 908 "Binder:908_6" 3755560000 9015
+           <...>-1369  [007] ...1  2435.304946: do_swap_page: prefetch miss 1344 "android.anim.lf" 7ecb756000 d045
+           <...>-1369  [007] ....  2435.304959: do_swap_page: prefetch fault 1344 "android.anim.lf" 7ecb754000 d046
+           <...>-1368  [007] ....  2435.304978: do_swap_page: prefetch fault 1344 "android.anim" 7f28ccd000 907d
+ ndroid.systemui-1619  [005] ...1  2435.306004: do_swap_page: prefetch miss 1619 "ndroid.systemui" 7f28cac000 505f
+ ndroid.systemui-1619  [005] ....  2435.306172: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f31c000 506a
+           <...>-1939  [005] ....  2435.306185: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7ecf192000 5064
+    Binder:908_6-5209  [005] ....  2435.306232: do_swap_page: prefetch fault 908 "Binder:908_6" 1755570000 9007
+           <...>-1372  [002] ...1  2435.306979: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4bd000 906b
+           <...>-1372  [002] ....  2435.307083: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4be000 9073
+           <...>-1368  [007] ...1  2435.307134: do_swap_page: prefetch miss 1344 "android.anim" 7f28ccd000 907d
+           <...>-1369  [007] ...1  2435.307172: do_swap_page: prefetch miss 1344 "android.anim.lf" 7ecb754000 d046
+           <...>-1368  [007] ....  2435.307196: do_swap_page: prefetch fault 1344 "android.anim" 7f28c5d000 907e
+           <...>-1369  [007] ....  2435.307240: do_swap_page: prefetch fault 1344 "android.anim.lf" 7f2d672000 d047
+    Binder:908_6-5209  [005] ...1  2435.308943: do_swap_page: prefetch miss 908 "Binder:908_6" 1755570000 9007
+           <...>-1939  [005] ...1  2435.309038: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7ecf192000 5064
+           <...>-1939  [005] ....  2435.309105: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7ecf193000 5067
+ ndroid.systemui-1619  [005] ...1  2435.309110: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f31c000 506a
+           <...>-1372  [000] ...1  2435.309132: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4be000 9073
+           <...>-1372  [000] ....  2435.309159: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4bf000 9076
+ ndroid.systemui-1619  [000] ....  2435.309184: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f253000 506d
+    Binder:908_6-5209  [005] ....  2435.309206: do_swap_page: prefetch fault 908 "Binder:908_6" 1755564000 901b
+           <...>-1369  [007] ...1  2435.309209: do_swap_page: prefetch miss 1344 "android.anim.lf" 7f2d672000 d047
+           <...>-1369  [007] ....  2435.309221: do_swap_page: prefetch fault 1344 "android.anim.lf" 7f28ce2000 5059
+           <...>-1368  [007] ...1  2435.309249: do_swap_page: prefetch miss 1344 "android.anim" 7f28c5d000 907e
+    Binder:908_6-5209  [005] ...1  2435.311709: do_swap_page: prefetch miss 908 "Binder:908_6" 1755564000 901b
+           <...>-1939  [005] ...1  2435.311810: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7ecf193000 5067
+ ndroid.systemui-1619  [000] ...1  2435.311816: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f253000 506d
+           <...>-1939  [005] ....  2435.311885: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7ecf190000 5068
+           <...>-1369  [007] ...1  2435.311893: do_swap_page: prefetch miss 1344 "android.anim.lf" 7f28ce2000 5059
+    Binder:908_6-5209  [005] ....  2435.311898: do_swap_page: prefetch fault 908 "Binder:908_6" 2a5555e000 504f
+           <...>-1372  [000] ...1  2435.311922: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4bf000 9076
+           <...>-1372  [002] ....  2435.311985: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4c0000 9078
+ ndroid.systemui-1619  [005] ....  2435.312265: do_swap_page: prefetch fault 1619 "ndroid.systemui" 7fbc1df000 5082
+           <...>-1368  [007] ....  2435.312481: do_swap_page: prefetch fault 1344 "android.anim" 7e6f92e000 5081
+    Binder:908_6-5209  [005] ...1  2435.314525: do_swap_page: prefetch miss 908 "Binder:908_6" 2a5555e000 504f
+           <...>-1939  [005] ...1  2435.314629: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7ecf190000 5068
+           <...>-1939  [005] ....  2435.314666: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7ed11b5000 506e
+    Binder:908_6-5209  [005] ....  2435.314670: do_swap_page: prefetch fault 908 "Binder:908_6" 335555b000 9017
+           <...>-1372  [002] ...1  2435.314716: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4c0000 9078
+ ndroid.systemui-1619  [005] ...1  2435.314739: do_swap_page: prefetch miss 1619 "ndroid.systemui" 7fbc1df000 5082
+ ndroid.systemui-1619  [005] ....  2435.314753: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f2c1000 5084
+           <...>-1372  [001] ....  2435.314808: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4c1000 9079
+           <...>-1368  [007] ...1  2435.314875: do_swap_page: prefetch miss 1344 "android.anim" 7e6f92e000 5081
+           <...>-1369  [007] ....  2435.316171: do_swap_page: prefetch fault 1344 "android.anim.lf" 9f0b8000 106f
+  surfaceflinger-602   [001] ....  2435.316561: do_swap_page: prefetch fault 602 "surfaceflinger" 7faa716000 102f
+    Binder:908_6-5209  [001] ...1  2435.318174: do_swap_page: prefetch miss 908 "Binder:908_6" 335555b000 9017
+    Binder:908_6-5209  [001] ....  2435.318444: do_swap_page: prefetch fault 908 "Binder:908_6" 1835555000 5025
+           <...>-1939  [000] ...1  2435.318575: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7ed11b5000 506e
+           <...>-1939  [000] ....  2435.318632: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7ed1251000 506f
+           <...>-1372  [001] ...1  2435.318654: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4c1000 9079
+           <...>-1372  [001] ....  2435.318676: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4c2000 907c
+ ndroid.systemui-1619  [000] ...1  2435.318846: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f2c1000 5084
+ ndroid.systemui-1619  [002] ....  2435.319077: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f266000 5086
+           <...>-1369  [007] ...1  2435.320561: do_swap_page: prefetch miss 1344 "android.anim.lf" 9f0b8000 106f
+           <...>-1369  [007] ....  2435.320590: do_swap_page: prefetch fault 1344 "android.anim.lf" 9f3b0000 1070
+  surfaceflinger-602   [000] ...1  2435.320667: do_swap_page: prefetch miss 602 "surfaceflinger" 7faa716000 102f
+  surfaceflinger-602   [000] ....  2435.320831: do_swap_page: prefetch fault 602 "surfaceflinger" 7faa778000 102e
+    Binder:908_6-5209  [001] ...1  2435.321602: do_swap_page: prefetch miss 908 "Binder:908_6" 1835555000 5025
+    Binder:908_6-5209  [001] ....  2435.321780: do_swap_page: prefetch fault 908 "Binder:908_6" 3355558000 9046
+           <...>-1939  [001] ...1  2435.321982: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7ed1251000 506f
+           <...>-1939  [001] ....  2435.322089: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7eae4a9000 d048
+           <...>-1372  [001] ...1  2435.322110: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4c2000 907c
+           <...>-1372  [003] ....  2435.322211: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4c3000 907f
+           <...>-15913 [005] ....  2435.322317: update_to_nbd_flag: table 0 is latter, total target 1784 max idx e, l -> 5938 4753
+ ndroid.systemui-1619  [002] ...1  2435.323505: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f266000 5086
+ ndroid.systemui-1619  [002] ....  2435.323556: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f2f9000 5087
+           <...>-1369  [007] ...1  2435.323742: do_swap_page: prefetch miss 1344 "android.anim.lf" 9f3b0000 1070
+  surfaceflinger-602   [000] ...1  2435.323757: do_swap_page: prefetch miss 602 "surfaceflinger" 7faa778000 102e
+           <...>-1369  [007] ....  2435.323905: do_swap_page: prefetch fault 1344 "android.anim.lf" 7eb44b2000 1071
+    Binder:908_6-5209  [001] ...1  2435.324075: do_swap_page: prefetch miss 908 "Binder:908_6" 3355558000 9046
+           <...>-1939  [003] ...1  2435.324246: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7eae4a9000 d048
+    Binder:908_6-5209  [000] ....  2435.324266: do_swap_page: prefetch fault 908 "Binder:908_6" 1a55557000 901f
+           <...>-1939  [003] ....  2435.324422: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7ed123b000 d04a
+ ndroid.systemui-1619  [002] ...1  2435.326662: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f2f9000 5087
+           <...>-1369  [007] ...1  2435.326712: do_swap_page: prefetch miss 1344 "android.anim.lf" 7eb44b2000 1071
+           <...>-1939  [003] ...1  2435.326752: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7ed123b000 d04a
+ ndroid.systemui-1619  [002] ....  2435.326760: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f065000 d050
+           <...>-1939  [003] ....  2435.326827: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7f28ce2000 5071
+           <...>-1372  [003] ...1  2435.326844: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4c3000 907f
+           <...>-1372  [003] ....  2435.326864: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4c4000 9080
+    Binder:908_6-5209  [000] ...1  2435.327328: do_swap_page: prefetch miss 908 "Binder:908_6" 1a55557000 901f
+           <...>-1369  [007] ....  2435.327390: do_swap_page: prefetch fault 1344 "android.anim.lf" 7ed0f5a000 1072
+    Binder:908_6-5209  [000] ....  2435.327531: do_swap_page: prefetch fault 908 "Binder:908_6" 1755563000 901d
+ ndroid.systemui-1619  [002] ...1  2435.329554: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f065000 d050
+ ndroid.systemui-1619  [002] ....  2435.329612: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f237000 d051
+           <...>-1939  [003] ...1  2435.329683: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7f28ce2000 5071
+           <...>-1372  [003] ...1  2435.329754: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4c4000 9080
+           <...>-1372  [003] ....  2435.329773: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4c5000 9081
+           <...>-1369  [007] ...1  2435.329806: do_swap_page: prefetch miss 1344 "android.anim.lf" 7ed0f5a000 1072
+    Binder:908_6-5209  [000] ...1  2435.329821: do_swap_page: prefetch miss 908 "Binder:908_6" 1755563000 901d
+    Binder:908_6-5209  [000] ....  2435.329861: do_swap_page: prefetch fault 908 "Binder:908_6" 1755565000 9028
+           <...>-1369  [007] ....  2435.329928: do_swap_page: prefetch fault 1344 "android.anim.lf" 7e7441d000 1073
+           <...>-1939  [005] ....  2435.329972: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7fbe29c000 d05b
+ ndroid.systemui-1619  [002] ...1  2435.332490: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f237000 d051
+ ndroid.systemui-1619  [002] ....  2435.332518: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f245000 d053
+           <...>-1372  [001] ...1  2435.332682: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4c5000 9081
+    Binder:908_6-5209  [000] ...1  2435.332700: do_swap_page: prefetch miss 908 "Binder:908_6" 1755565000 9028
+           <...>-1372  [001] ....  2435.332706: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4c6000 9082
+           <...>-1939  [003] ...1  2435.332721: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7fbe29c000 d05b
+           <...>-1369  [007] ...1  2435.332736: do_swap_page: prefetch miss 1344 "android.anim.lf" 7e7441d000 1073
+    Binder:908_6-5209  [000] ....  2435.332746: do_swap_page: prefetch fault 908 "Binder:908_6" 1a55558000 9021
+           <...>-1939  [003] ....  2435.332758: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7fbe29d000 d05f
+           <...>-1369  [007] ....  2435.332761: do_swap_page: prefetch fault 1344 "android.anim.lf" 7e7441e000 1074
+ ndroid.systemui-1619  [002] ...1  2435.335188: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f245000 d053
+           <...>-1372  [001] ...1  2435.335230: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4c6000 9082
+    Binder:908_6-5209  [000] ...1  2435.335271: do_swap_page: prefetch miss 908 "Binder:908_6" 1a55558000 9021
+           <...>-1372  [001] ....  2435.335375: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4c7000 9083
+           <...>-1939  [003] ...1  2435.335436: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7fbe29d000 d05f
+           <...>-1369  [007] ...1  2435.335472: do_swap_page: prefetch miss 1344 "android.anim.lf" 7e7441e000 1074
+ ndroid.systemui-1619  [002] ....  2435.335510: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f30a000 d054
+    Binder:908_6-5209  [001] ....  2435.335545: do_swap_page: prefetch fault 908 "Binder:908_6" 355555e000 5034
+           <...>-1939  [003] ....  2435.335547: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7f30c17000 107a
+           <...>-1369  [007] ....  2435.335574: do_swap_page: prefetch fault 1344 "android.anim.lf" 7e72973000 1075
+           <...>-1372  [000] ...1  2435.337826: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4c7000 9083
+    Binder:908_6-5209  [001] ...1  2435.337884: do_swap_page: prefetch miss 908 "Binder:908_6" 355555e000 5034
+ ndroid.systemui-1619  [002] ...1  2435.337887: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f30a000 d054
+           <...>-1372  [000] ....  2435.337899: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4c8000 9084
+           <...>-1369  [007] ...1  2435.337935: do_swap_page: prefetch miss 1344 "android.anim.lf" 7e72973000 1075
+           <...>-1939  [003] ...1  2435.337938: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7f30c17000 107a
+ ndroid.systemui-1619  [002] ....  2435.337938: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f307000 d055
+           <...>-1369  [007] ....  2435.337976: do_swap_page: prefetch fault 1344 "android.anim.lf" 7e72c45000 1076
+           <...>-1939  [003] ....  2435.338015: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7ecf191000 5088
+    Binder:908_6-5209  [001] ....  2435.338506: do_swap_page: prefetch fault 908 "Binder:908_6" 1b5555d000 900a
+ ndroid.systemui-1619  [002] ...1  2435.340496: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f307000 d055
+           <...>-1372  [000] ...1  2435.340533: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4c8000 9084
+ ndroid.systemui-1619  [002] ....  2435.340542: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f190000 d056
+           <...>-1369  [005] ...1  2435.340545: do_swap_page: prefetch miss 1344 "android.anim.lf" 7e72c45000 1076
+           <...>-1372  [000] ....  2435.340565: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4c9000 9085
+           <...>-1369  [005] ....  2435.340586: do_swap_page: prefetch fault 1344 "android.anim.lf" 7eb8b96000 1077
+           <...>-1939  [003] ...1  2435.340603: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7ecf191000 5088
+           <...>-1939  [003] ....  2435.340686: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 9f274000 5089
+    Binder:908_6-5209  [001] ...1  2435.344286: do_swap_page: prefetch miss 908 "Binder:908_6" 1b5555d000 900a
+ ndroid.systemui-1619  [002] ...1  2435.344319: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f190000 d056
+           <...>-1372  [000] ...1  2435.344361: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4c9000 9085
+ ndroid.systemui-1619  [002] ....  2435.344374: do_swap_page: prefetch fault 1619 "ndroid.systemui" 13dbc000 1064
+           <...>-1369  [004] ...1  2435.344376: do_swap_page: prefetch miss 1344 "android.anim.lf" 7eb8b96000 1077
+           <...>-1372  [000] ....  2435.344391: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4ca000 9086
+           <...>-1369  [004] ....  2435.344392: do_swap_page: prefetch fault 1344 "android.anim.lf" 7e728dc000 1078
+           <...>-1939  [002] ...1  2435.344566: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 9f274000 5089
+    Binder:908_6-5209  [001] ....  2435.345175: do_swap_page: prefetch fault 908 "Binder:908_6" 2655559000 1044
+           <...>-1939  [006] ....  2435.345265: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7eaea44000 508a
+ ndroid.systemui-1619  [002] ...1  2435.346733: do_swap_page: prefetch miss 1619 "ndroid.systemui" 13dbc000 1064
+ ndroid.systemui-1619  [002] ....  2435.346765: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f28c000 1065
+           <...>-1372  [000] ...1  2435.346836: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4ca000 9086
+           <...>-1372  [000] ....  2435.346860: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4cb000 9087
+           <...>-1369  [004] ...1  2435.346953: do_swap_page: prefetch miss 1344 "android.anim.lf" 7e728dc000 1078
+    Binder:908_6-5209  [001] ...1  2435.348215: do_swap_page: prefetch miss 908 "Binder:908_6" 2655559000 1044
+    Binder:908_6-5209  [001] ....  2435.348424: do_swap_page: prefetch fault 908 "Binder:908_6" 1e5555b000 5044
+           <...>-1939  [000] ...1  2435.348501: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7eaea44000 508a
+           <...>-1939  [000] ....  2435.348679: do_swap_page: prefetch fault 1619 "pool-2-thread-1" 7ed1232000 508b
+ ndroid.systemui-1619  [002] ...1  2435.348936: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f28c000 1065
+           <...>-1372  [000] ...1  2435.349116: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4cb000 9087
+ ndroid.systemui-1619  [002] ....  2435.349199: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f2f3000 1066
+           <...>-1372  [000] ....  2435.349271: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4cc000 9089
+    Binder:908_6-5209  [003] ...1  2435.350812: do_swap_page: prefetch miss 908 "Binder:908_6" 1e5555b000 5044
+           <...>-1939  [000] ...1  2435.350989: do_swap_page: prefetch miss 1619 "pool-2-thread-1" 7ed1232000 508b
+    Binder:908_6-5209  [003] ....  2435.351306: do_swap_page: prefetch fault 908 "Binder:908_6" 2e5555d000 103e
+           <...>-1372  [003] ...1  2435.351321: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4cc000 9089
+           <...>-1372  [000] ....  2435.351554: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4cd000 908a
+ ndroid.systemui-1619  [002] ...1  2435.351556: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f2f3000 1066
+ ndroid.systemui-1619  [002] ....  2435.351593: do_swap_page: prefetch fault 1619 "ndroid.systemui" 7fbc1d8000 1067
+    Binder:908_6-5209  [003] ...1  2435.353655: do_swap_page: prefetch miss 908 "Binder:908_6" 2e5555d000 103e
+           <...>-1372  [000] ...1  2435.353771: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4cd000 908a
+           <...>-1372  [000] ....  2435.353802: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4ce000 908b
+ ndroid.systemui-1619  [002] ...1  2435.354052: do_swap_page: prefetch miss 1619 "ndroid.systemui" 7fbc1d8000 1067
+    Binder:908_6-5209  [003] ....  2435.354084: do_swap_page: prefetch fault 908 "Binder:908_6" 205557c000 1040
+ ndroid.systemui-1619  [002] ....  2435.354087: do_swap_page: prefetch fault 1619 "ndroid.systemui" 13d42000 1068
+    Binder:908_6-5209  [003] ...1  2435.356090: do_swap_page: prefetch miss 908 "Binder:908_6" 205557c000 1040
+           <...>-1372  [000] ...1  2435.356196: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4ce000 908b
+           <...>-1372  [000] ....  2435.356305: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4cf000 908c
+ ndroid.systemui-1619  [002] ...1  2435.356504: do_swap_page: prefetch miss 1619 "ndroid.systemui" 13d42000 1068
+ ndroid.systemui-1619  [002] ....  2435.356535: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f2ce000 1069
+    Binder:908_6-5209  [003] ....  2435.356647: do_swap_page: prefetch fault 908 "Binder:908_6" 285555b000 5038
+    Binder:908_6-5209  [003] ...1  2435.358674: do_swap_page: prefetch miss 908 "Binder:908_6" 285555b000 5038
+ ndroid.systemui-1619  [002] ...1  2435.358918: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f2ce000 1069
+ ndroid.systemui-1619  [002] ....  2435.358950: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f297000 106b
+    Binder:908_6-5209  [003] ....  2435.359130: do_swap_page: prefetch fault 908 "Binder:908_6" 1c55558000 9016
+           <...>-1372  [003] ...1  2435.359143: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4cf000 908c
+           <...>-1372  [001] ....  2435.359274: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4d0000 908d
+ ndroid.systemui-1619  [002] ...1  2435.361490: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f297000 106b
+ ndroid.systemui-1619  [002] ....  2435.361571: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f1d1000 106c
+    Binder:908_6-5209  [003] ...1  2435.361768: do_swap_page: prefetch miss 908 "Binder:908_6" 1c55558000 9016
+    Binder:908_6-5209  [003] ....  2435.361971: do_swap_page: prefetch fault 908 "Binder:908_6" 2055574000 105b
+           <...>-1372  [001] ...1  2435.364427: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4d0000 908d
+           <...>-1372  [001] ....  2435.364689: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4d1000 908e
+ ndroid.systemui-1619  [002] ...1  2435.364894: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f1d1000 106c
+ ndroid.systemui-1619  [002] ....  2435.364927: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f285000 106d
+    Binder:908_6-5209  [006] ...1  2435.365385: do_swap_page: prefetch miss 908 "Binder:908_6" 2055574000 105b
+    Binder:908_6-5209  [006] ....  2435.365480: do_swap_page: prefetch fault 908 "Binder:908_6" 3855557000 502c
+           <...>-1372  [001] ...1  2435.366452: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4d1000 908e
+           <...>-1372  [001] ....  2435.366573: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4d2000 908f
+ ndroid.systemui-1619  [002] ...1  2435.367467: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f285000 106d
+ ndroid.systemui-1619  [002] ....  2435.367500: do_swap_page: prefetch fault 1619 "ndroid.systemui" 9f284000 106e
+    Binder:908_6-5209  [000] ...1  2435.367732: do_swap_page: prefetch miss 908 "Binder:908_6" 3855557000 502c
+    Binder:908_6-5209  [000] ....  2435.367854: do_swap_page: prefetch fault 908 "Binder:908_6" 3855558000 502d
+           <...>-1372  [001] ...1  2435.371270: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4d2000 908f
+           <...>-1372  [001] ....  2435.371427: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4d3000 9090
+ ndroid.systemui-1619  [001] ...1  2435.371605: do_swap_page: prefetch miss 1619 "ndroid.systemui" 9f284000 106e
+    Binder:908_6-5209  [003] ...1  2435.372330: do_swap_page: prefetch miss 908 "Binder:908_6" 3855558000 502d
+    Binder:908_6-5209  [003] ....  2435.373093: do_swap_page: prefetch fault 908 "Binder:908_6" 365556e000 502e
+    Binder:908_6-5209  [003] ...1  2435.375349: do_swap_page: prefetch miss 908 "Binder:908_6" 365556e000 502e
+    Binder:908_6-5209  [003] ....  2435.375817: do_swap_page: prefetch fault 908 "Binder:908_6" 365556f000 502f
+    Binder:908_6-5209  [001] ...1  2435.378849: do_swap_page: prefetch miss 908 "Binder:908_6" 365556f000 502f
+    Binder:908_6-5209  [001] ....  2435.379036: do_swap_page: prefetch fault 908 "Binder:908_6" 1c35552000 5036
+           <...>-1372  [001] ...1  2435.379058: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4d3000 9090
+           <...>-1372  [001] ....  2435.379161: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4d4000 9091
+    Binder:908_6-5209  [001] ...1  2435.380984: do_swap_page: prefetch miss 908 "Binder:908_6" 1c35552000 5036
+    Binder:908_6-5209  [001] ....  2435.381147: do_swap_page: prefetch fault 908 "Binder:908_6" 2b55559000 1055
+           <...>-1372  [001] ...1  2435.381249: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4d4000 9091
+           <...>-1372  [001] ....  2435.381342: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4d5000 9092
+    Binder:908_6-5209  [003] ...1  2435.385782: do_swap_page: prefetch miss 908 "Binder:908_6" 2b55559000 1055
+    Binder:908_6-5209  [003] ....  2435.386606: do_swap_page: prefetch fault 908 "Binder:908_6" 1955555000 503d
+           <...>-1372  [003] ...1  2435.386625: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4d5000 9092
+           <...>-1372  [003] ....  2435.386771: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4d6000 9093
+    Binder:908_6-5209  [003] ...1  2435.388768: do_swap_page: prefetch miss 908 "Binder:908_6" 1955555000 503d
+           <...>-1372  [001] ...1  2435.389012: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4d6000 9093
+    Binder:908_6-5209  [003] ....  2435.389044: do_swap_page: prefetch fault 908 "Binder:908_6" 2c55561000 5050
+           <...>-1372  [001] ....  2435.389400: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4d7000 9094
+    Binder:908_6-5209  [003] ...1  2435.391173: do_swap_page: prefetch miss 908 "Binder:908_6" 2c55561000 5050
+    Binder:908_6-5209  [003] ....  2435.391377: do_swap_page: prefetch fault 908 "Binder:908_6" 2b5555b000 1058
+           <...>-1372  [003] ...1  2435.391391: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4d7000 9094
+           <...>-1372  [003] ....  2435.391538: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4d8000 9095
+           <...>-1372  [000] ...1  2435.394095: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4d8000 9095
+           <...>-1372  [000] ....  2435.394212: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4d9000 9096
+    Binder:908_6-5209  [003] ...1  2435.394868: do_swap_page: prefetch miss 908 "Binder:908_6" 2b5555b000 1058
+    Binder:908_6-5209  [003] ....  2435.395109: do_swap_page: prefetch fault 908 "Binder:908_6" 2e35552000 1049
+           <...>-1372  [000] ...1  2435.397417: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4d9000 9096
+           <...>-1372  [000] ....  2435.397542: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4da000 9097
+    Binder:908_6-5209  [003] ...1  2435.398184: do_swap_page: prefetch miss 908 "Binder:908_6" 2e35552000 1049
+    Binder:908_6-5209  [003] ....  2435.398580: do_swap_page: prefetch fault 908 "Binder:908_6" 2355560000 503c
+           <...>-1372  [000] ...1  2435.399512: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4da000 9097
+           <...>-1372  [000] ....  2435.399664: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4db000 105d
+           <...>-1372  [000] ...1  2435.401714: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4db000 105d
+           <...>-1372  [000] ....  2435.401805: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4dc000 105e
+    Binder:908_6-5209  [003] ...1  2435.401883: do_swap_page: prefetch miss 908 "Binder:908_6" 2355560000 503c
+    Binder:908_6-5209  [003] ....  2435.402609: do_swap_page: prefetch fault 908 "Binder:908_6" 265555b000 9008
+           <...>-1372  [003] ...1  2435.411174: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4dc000 105e
+    Binder:908_6-5209  [000] ...1  2435.411246: do_swap_page: prefetch miss 908 "Binder:908_6" 265555b000 9008
+    Binder:908_6-5209  [000] ....  2435.411312: do_swap_page: prefetch fault 908 "Binder:908_6" 195555e000 503b
+           <...>-1372  [003] ....  2435.411499: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4dd000 105f
+    Binder:908_6-5209  [000] ...1  2435.413682: do_swap_page: prefetch miss 908 "Binder:908_6" 195555e000 503b
+           <...>-1372  [003] ...1  2435.413769: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4dd000 105f
+    Binder:908_6-5209  [000] ....  2435.413848: do_swap_page: prefetch fault 908 "Binder:908_6" 1c55561000 5043
+           <...>-1372  [003] ....  2435.413982: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4de000 1060
+           <...>-1372  [003] ...1  2435.417353: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4de000 1060
+           <...>-1372  [003] ....  2435.417522: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4df000 1061
+    Binder:908_6-5209  [000] ...1  2435.418796: do_swap_page: prefetch miss 908 "Binder:908_6" 1c55561000 5043
+    Binder:908_6-5209  [000] ....  2435.418980: do_swap_page: prefetch fault 908 "Binder:908_6" 205557f000 105a
+           <...>-1372  [003] ...1  2435.420973: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4df000 1061
+           <...>-1372  [003] ....  2435.421122: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4e0000 1062
+    Binder:908_6-5209  [001] ...1  2435.422178: do_swap_page: prefetch miss 908 "Binder:908_6" 205557f000 105a
+    Binder:908_6-5209  [001] ....  2435.422522: do_swap_page: prefetch fault 908 "Binder:908_6" 1b55557000 5028
+           <...>-1372  [003] ...1  2435.423902: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4e0000 1062
+           <...>-1372  [003] ....  2435.424190: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4e1000 1063
+    Binder:908_6-5209  [001] ...1  2435.424201: do_swap_page: prefetch miss 908 "Binder:908_6" 1b55557000 5028
+    Binder:908_6-5209  [001] ....  2435.424537: do_swap_page: prefetch fault 908 "Binder:908_6" 1c55557000 901c
+           <...>-1372  [003] ...1  2435.427139: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4e1000 1063
+           <...>-1372  [003] ....  2435.427312: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4e2000 5073
+    Binder:908_6-5209  [001] ...1  2435.428393: do_swap_page: prefetch miss 908 "Binder:908_6" 1c55557000 901c
+    Binder:908_6-5209  [001] ....  2435.428836: do_swap_page: prefetch fault 908 "Binder:908_6" 2a55560000 9047
+           <...>-1372  [003] ...1  2435.430039: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4e2000 5073
+           <...>-1372  [003] ....  2435.430240: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4e3000 5074
+    Binder:908_6-5209  [001] ...1  2435.432264: do_swap_page: prefetch miss 908 "Binder:908_6" 2a55560000 9047
+    Binder:908_6-5209  [001] ....  2435.432652: do_swap_page: prefetch fault 908 "Binder:908_6" 1d55557000 5037
+           <...>-1372  [003] ...1  2435.433626: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4e3000 5074
+           <...>-1372  [003] ....  2435.433759: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4e4000 5075
+    Binder:908_6-5209  [002] ...1  2435.435964: do_swap_page: prefetch miss 908 "Binder:908_6" 1d55557000 5037
+           <...>-1372  [003] ...1  2435.436043: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4e4000 5075
+           <...>-1372  [003] ....  2435.436281: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4e5000 5077
+    Binder:908_6-5209  [002] ....  2435.436488: do_swap_page: prefetch fault 908 "Binder:908_6" 2055580000 1041
+           <...>-1372  [003] ...1  2435.438321: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4e5000 5077
+           <...>-1372  [003] ....  2435.438501: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4e6000 5078
+    Binder:908_6-5209  [002] ...1  2435.439921: do_swap_page: prefetch miss 908 "Binder:908_6" 2055580000 1041
+    Binder:908_6-5209  [002] ....  2435.440183: do_swap_page: prefetch fault 908 "Binder:908_6" 205556e000 902e
+           <...>-1372  [003] ...1  2435.441263: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4e6000 5078
+           <...>-1372  [003] ....  2435.441439: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4e7000 5079
+    Binder:908_6-5209  [002] ...1  2435.442515: do_swap_page: prefetch miss 908 "Binder:908_6" 205556e000 902e
+    Binder:908_6-5209  [002] ....  2435.442787: do_swap_page: prefetch fault 908 "Binder:908_6" 2455554000 5041
+           <...>-1372  [003] ...1  2435.443527: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4e7000 5079
+           <...>-1372  [003] ....  2435.443661: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4e8000 507a
+    Binder:908_6-5209  [002] ...1  2435.445539: do_swap_page: prefetch miss 908 "Binder:908_6" 2455554000 5041
+           <...>-1372  [003] ...1  2435.445727: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4e8000 507a
+    Binder:908_6-5209  [002] ....  2435.445729: do_swap_page: prefetch fault 908 "Binder:908_6" 2455553000 503f
+           <...>-1372  [003] ....  2435.445860: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4e9000 507b
+    Binder:908_6-5209  [002] ...1  2435.448080: do_swap_page: prefetch miss 908 "Binder:908_6" 2455553000 503f
+    Binder:908_6-5209  [002] ....  2435.448186: do_swap_page: prefetch fault 908 "Binder:908_6" 1c5555c000 5033
+           <...>-1372  [002] ...1  2435.448223: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4e9000 507b
+           <...>-1372  [002] ....  2435.448306: do_swap_page: prefetch fault 1344 "android.bg" 7fbe4ea000 507c
+    Binder:908_6-5209  [002] ...1  2435.450649: do_swap_page: prefetch miss 908 "Binder:908_6" 1c5555c000 5033
+    Binder:908_6-5209  [002] ....  2435.450702: do_swap_page: prefetch fault 908 "Binder:908_6" 245555c000 5030
+           <...>-1372  [002] ...1  2435.452364: do_swap_page: prefetch miss 1344 "android.bg" 7fbe4ea000 507c
+           <...>-1372  [002] ....  2435.452628: do_swap_page: prefetch fault 1344 "android.bg" 7fbe19b000 507d
+    Binder:908_6-5209  [002] ...1  2435.454525: do_swap_page: prefetch miss 908 "Binder:908_6" 245555c000 5030
+           <...>-1372  [002] ...1  2435.454800: do_swap_page: prefetch miss 1344 "android.bg" 7fbe19b000 507d
+           <...>-1372  [002] ....  2435.454913: do_swap_page: prefetch fault 1344 "android.bg" 7fbe1d8000 507e
+    Binder:908_6-5209  [005] ....  2435.455290: do_swap_page: prefetch fault 908 "Binder:908_6" 2055564000 5021
+           <...>-1372  [002] ...1  2435.457488: do_swap_page: prefetch miss 1344 "android.bg" 7fbe1d8000 507e
+           <...>-1372  [002] ....  2435.457534: do_swap_page: prefetch fault 1344 "android.bg" 7fbe267000 507f
+    Binder:908_6-5209  [000] ...1  2435.457681: do_swap_page: prefetch miss 908 "Binder:908_6" 2055564000 5021
+    Binder:908_6-5209  [000] ....  2435.457811: do_swap_page: prefetch fault 908 "Binder:908_6" 205556d000 5022
+           <...>-1372  [002] ...1  2435.462690: do_swap_page: prefetch miss 1344 "android.bg" 7fbe267000 507f
+           <...>-1372  [002] ....  2435.463626: do_swap_page: prefetch fault 1344 "android.bg" 7e70b9a000 5080
+    Binder:908_6-5209  [000] ...1  2435.463775: do_swap_page: prefetch miss 908 "Binder:908_6" 205556d000 5022
+           <...>-5221  [000] ....  2435.464242: do_swap_page: prefetch fault 908 "Binder:908_7" 295555f000 1037
+           <...>-1372  [002] ...1  2435.465767: do_swap_page: prefetch miss 1344 "android.bg" 7e70b9a000 5080
+           <...>-5221  [000] ...1  2435.465963: do_swap_page: prefetch miss 908 "Binder:908_7" 295555f000 1037
+           <...>-1372  [002] ....  2435.466013: do_swap_page: prefetch fault 1344 "android.bg" 7e6f69c000 5083
+           <...>-5221  [000] ....  2435.466161: do_swap_page: prefetch fault 908 "Binder:908_7" 395555a000 9026
+           <...>-5221  [000] ...1  2435.468331: do_swap_page: prefetch miss 908 "Binder:908_7" 395555a000 9026
+           <...>-5221  [000] ....  2435.468441: do_swap_page: prefetch fault 908 "Binder:908_7" 395555b000 5027
+           <...>-1372  [002] ...1  2435.469035: do_swap_page: prefetch miss 1344 "android.bg" 7e6f69c000 5083
+           <...>-1372  [002] ....  2435.469178: do_swap_page: prefetch fault 1344 "android.bg" 7e7bf19000 5085
+           <...>-5221  [000] ...1  2435.470892: do_swap_page: prefetch miss 908 "Binder:908_7" 395555b000 5027
+           <...>-1372  [002] ...1  2435.471079: do_swap_page: prefetch miss 1344 "android.bg" 7e7bf19000 5085
+           <...>-1372  [002] ....  2435.471222: do_swap_page: prefetch fault 1344 "android.bg" 7e6f740000 d04f
+           <...>-5221  [000] ....  2435.471903: do_swap_page: prefetch fault 908 "Binder:908_7" 1c55553000 904a
+           <...>-1372  [000] ...1  2435.474694: do_swap_page: prefetch miss 1344 "android.bg" 7e6f740000 d04f
+           <...>-1372  [000] ....  2435.475012: do_swap_page: prefetch fault 1344 "android.bg" 7e7be75000 d052
+           <...>-5221  [000] ...1  2435.475197: do_swap_page: prefetch miss 908 "Binder:908_7" 1c55553000 904a
+           <...>-5221  [000] ....  2435.475476: do_swap_page: prefetch fault 908 "Binder:908_7" 205557b000 5023
+           <...>-1372  [000] ...1  2435.476961: do_swap_page: prefetch miss 1344 "android.bg" 7e7be75000 d052
+           <...>-5221  [000] ...1  2435.477164: do_swap_page: prefetch miss 908 "Binder:908_7" 205557b000 5023
+           <...>-5221  [000] ....  2435.477366: do_swap_page: prefetch fault 908 "Binder:908_7" 265555d000 5049
+           <...>-1372  [000] ....  2435.477628: do_swap_page: prefetch fault 1344 "android.bg" 7ec8436000 508c
+           <...>-5221  [000] ...1  2435.479637: do_swap_page: prefetch miss 908 "Binder:908_7" 265555d000 5049
+           <...>-5221  [000] ....  2435.479742: do_swap_page: prefetch fault 908 "Binder:908_7" 3555559000 5045
+           <...>-1372  [000] ...1  2435.479965: do_swap_page: prefetch miss 1344 "android.bg" 7ec8436000 508c
+           <...>-5221  [003] ...1  2435.481768: do_swap_page: prefetch miss 908 "Binder:908_7" 3555559000 5045
+           <...>-5221  [003] ....  2435.482047: do_swap_page: prefetch fault 908 "Binder:908_7" 2055571000 9031
+           <...>-5221  [003] ...1  2435.484932: do_swap_page: prefetch miss 908 "Binder:908_7" 2055571000 9031
+           <...>-5221  [003] ....  2435.485377: do_swap_page: prefetch fault 908 "Binder:908_7" 195555c000 503a
+           <...>-5221  [003] ...1  2435.487898: do_swap_page: prefetch miss 908 "Binder:908_7" 195555c000 503a
+           <...>-5221  [003] ....  2435.489037: do_swap_page: prefetch fault 908 "Binder:908_7" 1755577000 9051
+           <...>-5221  [003] ...1  2435.495324: do_swap_page: prefetch miss 908 "Binder:908_7" 1755577000 9051
+           <...>-5221  [003] ....  2435.495674: do_swap_page: prefetch fault 908 "Binder:908_7" 2055554000 902d
+           <...>-5221  [003] ...1  2435.497639: do_swap_page: prefetch miss 908 "Binder:908_7" 2055554000 902d
+           <...>-15957 [003] ....  2435.498149: do_swap_page: prefetch fault 910 "generic" f3608000 504b
+           <...>-15957 [001] ...1  2435.500320: do_swap_page: prefetch miss 910 "generic" f3608000 504b
+           <...>-15957 [001] ....  2435.500462: do_swap_page: prefetch fault 910 "generic" f3609000 504c
+           <...>-15957 [003] ...1  2435.502503: do_swap_page: prefetch miss 910 "generic" f3609000 504c
+           <...>-15957 [003] ....  2435.502726: do_swap_page: prefetch fault 910 "generic" f714a000 9034
+           <...>-15957 [003] ...1  2435.504828: do_swap_page: prefetch miss 910 "generic" f714a000 9034
+           <...>-15957 [003] ....  2435.506793: do_swap_page: prefetch fault 910 "generic" f714b000 9035
+           <...>-15957 [003] ...1  2435.508731: do_swap_page: prefetch miss 910 "generic" f714b000 9035
+           <...>-15957 [003] ....  2435.508965: do_swap_page: prefetch fault 910 "generic" f714c000 1042
+           <...>-15957 [003] ...1  2435.511241: do_swap_page: prefetch miss 910 "generic" f714c000 1042
+           <...>-15957 [003] ....  2435.511382: do_swap_page: prefetch fault 910 "generic" f714e000 1043
+           <...>-15957 [003] ...1  2435.513412: do_swap_page: prefetch miss 910 "generic" f714e000 1043
+           <...>-5221  [003] ....  2435.513804: do_swap_page: prefetch fault 908 "Binder:908_7" 1b55554000 9009
+           <...>-5221  [003] ...1  2435.515635: do_swap_page: prefetch miss 908 "Binder:908_7" 1b55554000 9009
+           <...>-5221  [003] ....  2435.515770: do_swap_page: prefetch fault 908 "Binder:908_7" 1b55559000 901e
+           <...>-5221  [003] ...1  2435.518150: do_swap_page: prefetch miss 908 "Binder:908_7" 1b55559000 901e
+           <...>-5221  [003] ....  2435.518454: do_swap_page: prefetch fault 908 "Binder:908_7" 205555c000 9029
+           <...>-5221  [002] ...1  2435.520747: do_swap_page: prefetch miss 908 "Binder:908_7" 205555c000 9029
+           <...>-5221  [002] ....  2435.521340: do_swap_page: prefetch fault 908 "Binder:908_7" 2055562000 502a
+           <...>-5221  [002] ...1  2435.524423: do_swap_page: prefetch miss 908 "Binder:908_7" 2055562000 502a
+           <...>-15957 [002] ....  2435.524941: do_swap_page: prefetch fault 910 "generic" f27b0000 d015
+           <...>-15957 [002] ...1  2435.527061: do_swap_page: prefetch miss 910 "generic" f27b0000 d015
+    Binder:908_6-5209  [002] ....  2435.527450: do_swap_page: prefetch fault 908 "Binder:908_6" 1b55560000 1045
+    Binder:908_6-5209  [002] ...1  2435.529611: do_swap_page: prefetch miss 908 "Binder:908_6" 1b55560000 1045
+    Binder:908_6-5209  [002] ....  2435.529873: do_swap_page: prefetch fault 908 "Binder:908_6" 1d5555d000 9005
+    Binder:908_6-5209  [003] ...1  2435.532492: do_swap_page: prefetch miss 908 "Binder:908_6" 1d5555d000 9005
+           <...>-15957 [003] ....  2435.533032: do_swap_page: prefetch fault 910 "generic" f27b1000 d016
+           <...>-15957 [003] ...1  2435.534911: do_swap_page: prefetch miss 910 "generic" f27b1000 d016
+ NuPlayerDriver -15956 [000] ....  2435.535116: do_swap_page: prefetch fault 910 "NuPlayerDriver " f7aed000 9003
+    Binder:908_6-5209  [003] ....  2435.535624: do_swap_page: prefetch fault 908 "Binder:908_6" 1f55561000 5046
+ NuPlayerDriver -15956 [000] ...1  2435.537539: do_swap_page: prefetch miss 910 "NuPlayerDriver " f7aed000 9003
+    Binder:908_6-5209  [003] ...1  2435.537927: do_swap_page: prefetch miss 908 "Binder:908_6" 1f55561000 5046
+    Binder:908_6-5209  [003] ....  2435.538322: do_swap_page: prefetch fault 908 "Binder:908_6" 205555a000 9033
+           <...>-5221  [000] ....  2435.540102: do_swap_page: prefetch fault 908 "Binder:908_7" 1a5555e000 5040
+    Binder:908_6-5209  [003] ...1  2435.540989: do_swap_page: prefetch miss 908 "Binder:908_6" 205555a000 9033
+    Binder:908_6-5209  [003] ....  2435.541267: do_swap_page: prefetch fault 908 "Binder:908_6" 2a5555c000 1048
+           <...>-5221  [000] ...1  2435.544115: do_swap_page: prefetch miss 908 "Binder:908_7" 1a5555e000 5040
+    Binder:908_6-5209  [003] ...1  2435.544202: do_swap_page: prefetch miss 908 "Binder:908_6" 2a5555c000 1048
+    Binder:908_6-5209  [003] ....  2435.544447: do_swap_page: prefetch fault 908 "Binder:908_6" 2055569000 902a
+           <...>-5221  [000] ....  2435.544776: do_swap_page: prefetch fault 908 "Binder:908_7" 2055570000 9032
+    Binder:908_6-5209  [003] ...1  2435.546604: do_swap_page: prefetch miss 908 "Binder:908_6" 2055569000 902a
+           <...>-5221  [000] ...1  2435.546780: do_swap_page: prefetch miss 908 "Binder:908_7" 2055570000 9032
+    Binder:908_6-5209  [003] ....  2435.546858: do_swap_page: prefetch fault 908 "Binder:908_6" 2055561000 902b
+ NuPlayerDriver -15956 [000] ....  2435.546960: do_swap_page: prefetch fault 910 "NuPlayerDriver " f7b1c000 d029
+    Binder:908_6-5209  [003] ...1  2435.549393: do_swap_page: prefetch miss 908 "Binder:908_6" 2055561000 902b
+ NuPlayerDriver -15956 [000] ...1  2435.549598: do_swap_page: prefetch miss 910 "NuPlayerDriver " f7b1c000 d029
+ NuPlayerDriver -15956 [000] ....  2435.549815: do_swap_page: prefetch fault 910 "NuPlayerDriver " f714d000 d02a
+    Binder:908_6-5209  [003] ....  2435.550334: do_swap_page: prefetch fault 908 "Binder:908_6" 3055554000 9063
+ NuPlayerDriver -15956 [000] ...1  2435.551989: do_swap_page: prefetch miss 910 "NuPlayerDriver " f714d000 d02a
+    Binder:910_4-3568  [006] ....  2435.553270: do_swap_page: prefetch fault 910 "Binder:910_4" f7a64000 d03b
+    Binder:908_6-5209  [003] ...1  2435.553692: do_swap_page: prefetch miss 908 "Binder:908_6" 3055554000 9063
+    Binder:908_6-5209  [003] ....  2435.553905: do_swap_page: prefetch fault 908 "Binder:908_6" 395555e000 103a
+    Binder:910_4-3568  [000] ...1  2435.555353: do_swap_page: prefetch miss 910 "Binder:910_4" f7a64000 d03b
+    Binder:908_6-5209  [003] ...1  2435.555543: do_swap_page: prefetch miss 908 "Binder:908_6" 395555e000 103a
+    Binder:910_4-3568  [000] ....  2435.555708: do_swap_page: prefetch fault 910 "Binder:910_4" f7a17000 5057
+    Binder:908_6-5209  [003] ....  2435.555829: do_swap_page: prefetch fault 908 "Binder:908_6" 395555c000 9060
+    Binder:910_4-3568  [000] ...1  2435.557923: do_swap_page: prefetch miss 910 "Binder:910_4" f7a17000 5057
+    Binder:908_6-5209  [003] ...1  2435.558073: do_swap_page: prefetch miss 908 "Binder:908_6" 395555c000 9060
+    Binder:908_6-5209  [003] ....  2435.558349: do_swap_page: prefetch fault 908 "Binder:908_6" 2055578000 904d
+           <...>-15962 [005] ....  2435.558794: do_swap_page: prefetch fault 910 "Binder:910_4" f2df9000 d02b
+    Binder:908_6-5209  [003] ...1  2435.560474: do_swap_page: prefetch miss 908 "Binder:908_6" 2055578000 904d
+    Binder:910_4-3568  [001] ....  2435.560623: do_swap_page: prefetch fault 910 "Binder:910_4" f2e16000 9065
+           <...>-15962 [005] ...1  2435.560683: do_swap_page: prefetch miss 910 "Binder:910_4" f2df9000 d02b
+    Binder:908_6-5209  [003] ....  2435.561209: do_swap_page: prefetch fault 908 "Binder:908_6" 2055577000 904c
+    Binder:910_4-3568  [003] ...1  2435.563041: do_swap_page: prefetch miss 910 "Binder:910_4" f2e16000 9065
+    Binder:908_6-5209  [003] ...1  2435.566148: do_swap_page: prefetch miss 908 "Binder:908_6" 2055577000 904c
+    Binder:908_6-5209  [003] ....  2435.566433: do_swap_page: prefetch fault 908 "Binder:908_6" 2055552000 902f
+    mediaswcodec-933   [003] ....  2435.567471: do_swap_page: prefetch fault 933 "mediaswcodec" 185556d000 903d
+    Binder:908_6-5209  [000] ...1  2435.568613: do_swap_page: prefetch miss 908 "Binder:908_6" 2055552000 902f
+    Binder:908_6-5209  [000] ....  2435.568839: do_swap_page: prefetch fault 908 "Binder:908_6" 2055567000 d010
+    mediaswcodec-933   [001] ...1  2435.569908: do_swap_page: prefetch miss 933 "mediaswcodec" 185556d000 903d
+    mediaswcodec-933   [001] ....  2435.570263: do_swap_page: prefetch fault 933 "mediaswcodec" 1a55563000 104e
+    Binder:908_6-5209  [000] ...1  2435.570836: do_swap_page: prefetch miss 908 "Binder:908_6" 2055567000 d010
+    Binder:908_6-5209  [000] ....  2435.571067: do_swap_page: prefetch fault 908 "Binder:908_6" 205556c000 5024
+    mediaswcodec-933   [001] ...1  2435.574180: do_swap_page: prefetch miss 933 "mediaswcodec" 1a55563000 104e
+    Binder:908_6-5209  [000] ...1  2435.574416: do_swap_page: prefetch miss 908 "Binder:908_6" 205556c000 5024
+    Binder:908_6-5209  [000] ....  2435.574616: do_swap_page: prefetch fault 908 "Binder:908_6" 175557a000 9054
+  HwBinder:933_7-2024  [001] ....  2435.574816: do_swap_page: prefetch fault 933 "HwBinder:933_7" 175555b000 501e
+    Binder:908_6-5209  [000] ...1  2435.577113: do_swap_page: prefetch miss 908 "Binder:908_6" 175557a000 9054
+  HwBinder:933_7-2024  [001] ...1  2435.577119: do_swap_page: prefetch miss 933 "HwBinder:933_7" 175555b000 501e
+    Binder:908_6-5209  [000] ....  2435.577256: do_swap_page: prefetch fault 908 "Binder:908_6" 2055559000 103d
+  HwBinder:933_7-2024  [001] ....  2435.577405: do_swap_page: prefetch fault 933 "HwBinder:933_7" 195556a000 d001
+    Binder:908_6-5209  [000] ...1  2435.579146: do_swap_page: prefetch miss 908 "Binder:908_6" 2055559000 103d
+    Binder:908_6-5209  [000] ....  2435.579211: do_swap_page: prefetch fault 908 "Binder:908_6" 2055556000 9030
+  HwBinder:933_7-2024  [001] ...1  2435.579453: do_swap_page: prefetch miss 933 "HwBinder:933_7" 195556a000 d001
+    mediaswcodec-933   [001] ....  2435.580074: do_swap_page: prefetch fault 933 "mediaswcodec" 1855568000 d00a
+    Binder:908_6-5209  [000] ...1  2435.581449: do_swap_page: prefetch miss 908 "Binder:908_6" 2055556000 9030
+    Binder:908_6-5209  [000] ....  2435.581581: do_swap_page: prefetch fault 908 "Binder:908_6" 2055573000 5048
+    mediaswcodec-933   [001] ...1  2435.582517: do_swap_page: prefetch miss 933 "mediaswcodec" 1855568000 d00a
+    mediaswcodec-933   [001] ....  2435.582642: do_swap_page: prefetch fault 933 "mediaswcodec" 1855569000 501c
+    Binder:908_6-5209  [000] ...1  2435.583440: do_swap_page: prefetch miss 908 "Binder:908_6" 2055573000 5048
+    Binder:908_6-5209  [000] ....  2435.583612: do_swap_page: prefetch fault 908 "Binder:908_6" 2055555000 902c
+    mediaswcodec-933   [006] ...1  2435.585925: do_swap_page: prefetch miss 933 "mediaswcodec" 1855569000 501c
+    mediaswcodec-933   [006] ....  2435.586007: do_swap_page: prefetch fault 933 "mediaswcodec" 1855555000 903e
+    Binder:908_6-5209  [000] ...1  2435.586517: do_swap_page: prefetch miss 908 "Binder:908_6" 2055555000 902c
+    Binder:908_6-5209  [000] ....  2435.586753: do_swap_page: prefetch fault 908 "Binder:908_6" 205555e000 5026
+    mediaswcodec-933   [000] ...1  2435.589248: do_swap_page: prefetch miss 933 "mediaswcodec" 1855555000 903e
+  HwBinder:933_7-2024  [000] ....  2435.590360: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1a55575000 d02c
+    Binder:908_6-5209  [000] ...1  2435.590502: do_swap_page: prefetch miss 908 "Binder:908_6" 205555e000 5026
+    Binder:908_6-5209  [000] ....  2435.590797: do_swap_page: prefetch fault 908 "Binder:908_6" 205557e000 9053
+  HwBinder:933_7-2024  [005] ...1  2435.593397: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1a55575000 d02c
+  HwBinder:933_7-2024  [005] ....  2435.593483: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1935553000 5020
+    Binder:908_6-5209  [000] ...1  2435.593687: do_swap_page: prefetch miss 908 "Binder:908_6" 205557e000 9053
+    Binder:908_6-5209  [000] ....  2435.593875: do_swap_page: prefetch fault 908 "Binder:908_6" 2055575000 904e
+  HwBinder:933_7-2024  [005] ...1  2435.596895: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1935553000 5020
+    Binder:908_6-5209  [003] ...1  2435.597244: do_swap_page: prefetch miss 908 "Binder:908_6" 2055575000 904e
+    Binder:908_6-5209  [003] ....  2435.598520: do_swap_page: prefetch fault 908 "Binder:908_6" 2055560000 9027
+    Binder:910_4-3568  [003] ....  2435.600198: do_swap_page: prefetch fault 910 "Binder:910_4" f7a15000 5055
+    Binder:908_6-5209  [001] ...1  2435.603674: do_swap_page: prefetch miss 908 "Binder:908_6" 2055560000 9027
+    Binder:910_4-3568  [006] ...1  2435.603801: do_swap_page: prefetch miss 910 "Binder:910_4" f7a15000 5055
+    Binder:908_6-5209  [001] ....  2435.603972: do_swap_page: prefetch fault 908 "Binder:908_6" 2055572000 1059
+    Binder:910_4-3568  [006] ....  2435.604362: do_swap_page: prefetch fault 910 "Binder:910_4" f2e00000 5058
+    Binder:908_6-5209  [002] ...1  2435.606679: do_swap_page: prefetch miss 908 "Binder:908_6" 2055572000 1059
+    Binder:908_6-5209  [002] ....  2435.606765: do_swap_page: prefetch fault 908 "Binder:908_6" 175557e000 904b
+    Binder:910_4-3568  [006] ...1  2435.606831: do_swap_page: prefetch miss 910 "Binder:910_4" f2e00000 5058
+    Binder:910_4-3568  [006] ....  2435.606858: do_swap_page: prefetch fault 910 "Binder:910_4" f7a67000 5066
+    Binder:908_6-5209  [002] ...1  2435.609757: do_swap_page: prefetch miss 908 "Binder:908_6" 175557e000 904b
+    Binder:910_4-3568  [003] ...1  2435.609958: do_swap_page: prefetch miss 910 "Binder:910_4" f7a67000 5066
+    Binder:908_6-5209  [002] ....  2435.610279: do_swap_page: prefetch fault 908 "Binder:908_6" 2d5555a000 5031
+    Binder:910_4-3568  [006] ....  2435.610681: do_swap_page: prefetch fault 910 "Binder:910_4" f2dfa000 d03a
+    Binder:908_6-5209  [003] ...1  2435.613141: do_swap_page: prefetch miss 908 "Binder:908_6" 2d5555a000 5031
+    Binder:910_4-3568  [006] ...1  2435.613218: do_swap_page: prefetch miss 910 "Binder:910_4" f2dfa000 d03a
+    Binder:908_6-5209  [003] ....  2435.613376: do_swap_page: prefetch fault 908 "Binder:908_6" 3135552000 9055
+           <...>-1247  [006] ....  2435.613779: do_swap_page: prefetch fault 910 "Binder:910_1" f7a26000 9004
+    Binder:908_6-5209  [003] ...1  2435.616599: do_swap_page: prefetch miss 908 "Binder:908_6" 3135552000 9055
+    Binder:908_6-5209  [003] ....  2435.616760: do_swap_page: prefetch fault 908 "Binder:908_6" 395555d000 9062
+           <...>-1247  [001] ...1  2435.616979: do_swap_page: prefetch miss 910 "Binder:910_1" f7a26000 9004
+         generic-15964 [006] ....  2435.618462: do_swap_page: prefetch fault 910 "NuPlayerDriver " f2e06000 d039
+    Binder:908_6-5209  [003] ...1  2435.618710: do_swap_page: prefetch miss 908 "Binder:908_6" 395555d000 9062
+    Binder:908_6-5209  [003] ....  2435.618927: do_swap_page: prefetch fault 908 "Binder:908_6" 1b55555000 9048
+         generic-15964 [006] ...1  2435.620700: do_swap_page: prefetch miss 910 "NuPlayerDriver " f2e06000 d039
+         generic-15964 [006] ....  2435.620798: do_swap_page: prefetch fault 910 "NuPlayerDriver " f2e02000 506b
+    Binder:908_6-5209  [003] ...1  2435.621070: do_swap_page: prefetch miss 908 "Binder:908_6" 1b55555000 9048
+    Binder:908_6-5209  [003] ....  2435.621408: do_swap_page: prefetch fault 908 "Binder:908_6" 305555c000 9061
+         generic-15964 [006] ...1  2435.623037: do_swap_page: prefetch miss 910 "NuPlayerDriver " f2e02000 506b
+         generic-15964 [006] ....  2435.623089: do_swap_page: prefetch fault 910 "NuPlayerDriver " f2e03000 506c
+         generic-15964 [006] ...1  2435.625041: do_swap_page: prefetch miss 910 "NuPlayerDriver " f2e03000 506c
+           <...>-5221  [006] ....  2435.625627: do_swap_page: prefetch fault 908 "Binder:908_7" 1f5555d000 5052
+    Binder:908_6-5209  [003] ...1  2435.626513: do_swap_page: prefetch miss 908 "Binder:908_6" 305555c000 9061
+    Binder:908_6-5209  [003] ....  2435.626834: do_swap_page: prefetch fault 908 "Binder:908_6" 1d55552000 9006
+    Binder:908_6-5209  [003] ...1  2435.629918: do_swap_page: prefetch miss 908 "Binder:908_6" 1d55552000 9006
+           <...>-5221  [006] ...1  2435.630030: do_swap_page: prefetch miss 908 "Binder:908_7" 1f5555d000 5052
+           <...>-5221  [006] ....  2435.630689: do_swap_page: prefetch fault 908 "Binder:908_7" 2555561000 900b
+    Binder:908_6-5209  [003] ....  2435.631266: do_swap_page: prefetch fault 908 "Binder:908_6" 3c5555c000 104a
+           <...>-5221  [006] ...1  2435.632631: do_swap_page: prefetch miss 908 "Binder:908_7" 2555561000 900b
+         generic-15964 [006] ....  2435.632719: do_swap_page: prefetch fault 910 "generic" f7a4b000 d03c
+    Binder:908_6-5209  [003] ...1  2435.632772: do_swap_page: prefetch miss 908 "Binder:908_6" 3c5555c000 104a
+    Binder:908_6-5209  [003] ....  2435.632977: do_swap_page: prefetch fault 908 "Binder:908_6" 3c5555d000 104b
+         generic-15964 [005] ...1  2435.635709: do_swap_page: prefetch miss 910 "generic" f7a4b000 d03c
+    Binder:908_6-5209  [003] ...1  2435.636907: do_swap_page: prefetch miss 908 "Binder:908_6" 3c5555d000 104b
+           <...>-5221  [000] ....  2435.637002: do_swap_page: prefetch fault 908 "Binder:908_7" 3455556000 900e
+    Binder:908_6-5209  [000] ....  2435.637082: do_swap_page: prefetch fault 908 "Binder:908_6" 3c5555e000 104c
+           <...>-5221  [006] ...1  2435.640007: do_swap_page: prefetch miss 908 "Binder:908_7" 3455556000 900e
+           <...>-5221  [006] ....  2435.640086: do_swap_page: prefetch fault 908 "Binder:908_7" 3455557000 900f
+    Binder:908_6-5209  [006] ...1  2435.640092: do_swap_page: prefetch miss 908 "Binder:908_6" 3c5555e000 104c
+    Binder:908_6-5209  [006] ....  2435.640212: do_swap_page: prefetch fault 908 "Binder:908_6" 3c5555f000 104d
+           <...>-5221  [006] ...1  2435.642175: do_swap_page: prefetch miss 908 "Binder:908_7" 3455557000 900f
+           <...>-5221  [006] ....  2435.642341: do_swap_page: prefetch fault 908 "Binder:908_7" 3955554000 905f
+    Binder:908_6-5209  [006] ...1  2435.642346: do_swap_page: prefetch miss 908 "Binder:908_6" 3c5555f000 104d
+           <...>-15957 [006] ....  2435.642598: do_swap_page: prefetch fault 910 "generic" f3551000 9037
+           <...>-5221  [006] ...1  2435.644471: do_swap_page: prefetch miss 908 "Binder:908_7" 3955554000 905f
+           <...>-15957 [003] ...1  2435.644505: do_swap_page: prefetch miss 910 "generic" f3551000 9037
+           <...>-15957 [003] ....  2435.644693: do_swap_page: prefetch fault 910 "generic" f356c000 9038
+           <...>-5221  [006] ....  2435.645514: do_swap_page: prefetch fault 908 "Binder:908_7" 3355555000 9045
+           <...>-15957 [005] ...1  2435.646485: do_swap_page: prefetch miss 910 "generic" f356c000 9038
+           <...>-15957 [005] ....  2435.646573: do_swap_page: prefetch fault 910 "generic" f3545000 9039
+           <...>-15957 [001] ...1  2435.648617: do_swap_page: prefetch miss 910 "generic" f3545000 9039
+           <...>-15957 [001] ....  2435.648916: do_swap_page: prefetch fault 910 "generic" f27b4000 d018
+           <...>-5221  [003] ...1  2435.649289: do_swap_page: prefetch miss 908 "Binder:908_7" 3355555000 9045
+           <...>-5221  [003] ....  2435.649867: do_swap_page: prefetch fault 908 "Binder:908_7" 3955558000 9025
+           <...>-15957 [001] ...1  2435.651553: do_swap_page: prefetch miss 910 "generic" f27b4000 d018
+           <...>-5221  [006] ...1  2435.651602: do_swap_page: prefetch miss 908 "Binder:908_7" 3955558000 9025
+           <...>-5221  [006] ....  2435.651673: do_swap_page: prefetch fault 908 "Binder:908_7" 1d55559000 5051
+           <...>-15957 [001] ....  2435.651802: do_swap_page: prefetch fault 910 "generic" f27ba000 d019
+           <...>-15957 [003] ...1  2435.654189: do_swap_page: prefetch miss 910 "generic" f27ba000 d019
+           <...>-5221  [001] ...1  2435.654308: do_swap_page: prefetch miss 908 "Binder:908_7" 1d55559000 5051
+           <...>-5221  [001] ....  2435.654351: do_swap_page: prefetch fault 908 "Binder:908_7" 2655558000 5042
+           <...>-15957 [003] ....  2435.654499: do_swap_page: prefetch fault 910 "generic" f27bb000 d01a
+           <...>-15957 [003] ...1  2435.656487: do_swap_page: prefetch miss 910 "generic" f27bb000 d01a
+           <...>-5221  [001] ...1  2435.656607: do_swap_page: prefetch miss 908 "Binder:908_7" 2655558000 5042
+           <...>-5221  [001] ....  2435.656897: do_swap_page: prefetch fault 908 "Binder:908_7" 3955553000 5054
+           <...>-15957 [003] ....  2435.657413: do_swap_page: prefetch fault 910 "generic" f27bd000 d01b
+           <...>-15957 [006] ...1  2435.661205: do_swap_page: prefetch miss 910 "generic" f27bd000 d01b
+           <...>-15957 [006] ....  2435.661376: do_swap_page: prefetch fault 910 "generic" f27be000 d01c
+           <...>-5221  [006] ...1  2435.661392: do_swap_page: prefetch miss 908 "Binder:908_7" 3955553000 5054
+           <...>-5221  [006] ....  2435.661483: do_swap_page: prefetch fault 908 "Binder:908_7" 2e5555c000 9024
+           <...>-15957 [001] ...1  2435.663557: do_swap_page: prefetch miss 910 "generic" f27be000 d01c
+           <...>-15957 [001] ....  2435.663769: do_swap_page: prefetch fault 910 "generic" f27c6000 d01f
+           <...>-5221  [001] ...1  2435.663786: do_swap_page: prefetch miss 908 "Binder:908_7" 2e5555c000 9024
+           <...>-5221  [001] ....  2435.663903: do_swap_page: prefetch fault 908 "Binder:908_7" 2e55555000 9049
+           <...>-5221  [001] ...1  2435.666376: do_swap_page: prefetch miss 908 "Binder:908_7" 2e55555000 9049
+           <...>-15957 [003] ...1  2435.666466: do_swap_page: prefetch miss 910 "generic" f27c6000 d01f
+           <...>-5221  [001] ....  2435.666496: do_swap_page: prefetch fault 908 "Binder:908_7" 1e55553000 9020
+           <...>-15957 [003] ....  2435.666746: do_swap_page: prefetch fault 910 "generic" f27c7000 d020
+           <...>-5221  [001] ...1  2435.670256: do_swap_page: prefetch miss 908 "Binder:908_7" 1e55553000 9020
+           <...>-15957 [000] ...1  2435.670447: do_swap_page: prefetch miss 910 "generic" f27c7000 d020
+           <...>-15957 [000] ....  2435.670634: do_swap_page: prefetch fault 910 "generic" f27c8000 d021
+           <...>-5221  [001] ....  2435.670771: do_swap_page: prefetch fault 908 "Binder:908_7" 285555f000 505b
+           <...>-5221  [001] ...1  2435.674023: do_swap_page: prefetch miss 908 "Binder:908_7" 285555f000 505b
+           <...>-15957 [002] ...1  2435.674154: do_swap_page: prefetch miss 910 "generic" f27c8000 d021
+           <...>-5221  [001] ....  2435.674270: do_swap_page: prefetch fault 908 "Binder:908_7" 2755561000 1056
+           <...>-15957 [002] ....  2435.674398: do_swap_page: prefetch fault 910 "generic" f27ce000 d022
+           <...>-5221  [001] ...1  2435.677192: do_swap_page: prefetch miss 908 "Binder:908_7" 2755561000 1056
+           <...>-15957 [002] ...1  2435.677310: do_swap_page: prefetch miss 910 "generic" f27ce000 d022
+           <...>-5221  [001] ....  2435.677401: do_swap_page: prefetch fault 908 "Binder:908_7" 2d35552000 1054
+    Binder:908_6-5209  [002] ....  2435.678772: do_swap_page: prefetch fault 908 "Binder:908_6" 3355559000 9019
+           <...>-5221  [001] ...1  2435.679936: do_swap_page: prefetch miss 908 "Binder:908_7" 2d35552000 1054
+           <...>-5221  [001] ....  2435.680476: do_swap_page: prefetch fault 908 "Binder:908_7" 2155561000 5053
+    Binder:908_6-5209  [002] ...1  2435.680915: do_swap_page: prefetch miss 908 "Binder:908_6" 3355559000 9019
+    Binder:908_6-5209  [002] ....  2435.681208: do_swap_page: prefetch fault 908 "Binder:908_6" 335555a000 901a
+    Binder:908_6-5209  [002] ...1  2435.683710: do_swap_page: prefetch miss 908 "Binder:908_6" 335555a000 901a
+           <...>-5221  [001] ...1  2435.683993: do_swap_page: prefetch miss 908 "Binder:908_7" 2155561000 5053
+           <...>-5221  [001] ....  2435.684203: do_swap_page: prefetch fault 908 "Binder:908_7" 2355552000 905d
+           <...>-15957 [002] ....  2435.684856: do_swap_page: prefetch fault 910 "generic" f3552000 105c
+           <...>-5221  [001] ...1  2435.686504: do_swap_page: prefetch miss 908 "Binder:908_7" 2355552000 905d
+           <...>-5221  [001] ....  2435.686721: do_swap_page: prefetch fault 908 "Binder:908_7" 285555e000 5035
+           <...>-15957 [002] ...1  2435.686797: do_swap_page: prefetch miss 910 "generic" f3552000 105c
+           <...>-15957 [002] ....  2435.687280: do_swap_page: prefetch fault 910 "generic" f354c000 9052
+           <...>-5221  [001] ...1  2435.688526: do_swap_page: prefetch miss 908 "Binder:908_7" 285555e000 5035
+           <...>-5221  [001] ....  2435.688931: do_swap_page: prefetch fault 908 "Binder:908_7" 1f55554000 905c
+           <...>-15957 [002] ...1  2435.689083: do_swap_page: prefetch miss 910 "generic" f354c000 9052
+           <...>-15957 [002] ....  2435.691945: do_swap_page: prefetch fault 910 "generic" f3547000 505c
+           <...>-5221  [001] ...1  2435.693381: do_swap_page: prefetch miss 908 "Binder:908_7" 1f55554000 905c
+           <...>-5221  [001] ....  2435.693735: do_swap_page: prefetch fault 908 "Binder:908_7" 265555f000 d024
+           <...>-15957 [001] ...1  2435.695383: do_swap_page: prefetch miss 910 "generic" f3547000 505c
+           <...>-15957 [001] ....  2435.695844: do_swap_page: prefetch fault 910 "generic" f282c000 505a
+           <...>-5221  [001] ...1  2435.695861: do_swap_page: prefetch miss 908 "Binder:908_7" 265555f000 d024
+           <...>-5221  [001] ....  2435.697245: do_swap_page: prefetch fault 908 "Binder:908_7" 1e55559000 502b
+           <...>-15957 [001] ...1  2435.697682: do_swap_page: prefetch miss 910 "generic" f282c000 505a
+           <...>-5221  [001] ...1  2435.699322: do_swap_page: prefetch miss 908 "Binder:908_7" 1e55559000 502b
+    Binder:908_6-5209  [000] ....  2435.699480: do_swap_page: prefetch fault 908 "Binder:908_6" 3635552000 9059
+           <...>-5221  [001] ....  2435.699948: do_swap_page: prefetch fault 908 "Binder:908_7" 215555a000 5047
+    Binder:908_6-5209  [000] ...1  2435.701562: do_swap_page: prefetch miss 908 "Binder:908_6" 3635552000 9059
+           <...>-5221  [001] ...1  2435.701730: do_swap_page: prefetch miss 908 "Binder:908_7" 215555a000 5047
+    Binder:908_6-5209  [000] ....  2435.701730: do_swap_page: prefetch fault 908 "Binder:908_6" 355555d000 905a
+    Binder:908_6-5209  [001] ...1  2435.705054: do_swap_page: prefetch miss 908 "Binder:908_6" 355555d000 905a
+ NuPlayerDriver -15956 [001] ....  2435.705482: do_swap_page: prefetch fault 910 "NuPlayerDriver " f5e6b000 9088
+           <...>-5221  [001] ....  2435.705610: do_swap_page: prefetch fault 908 "Binder:908_7" 2855555000 9022
+           <...>-5221  [001] ...1  2435.707137: do_swap_page: prefetch miss 908 "Binder:908_7" 2855555000 9022
+ NuPlayerDriver -15956 [002] ...1  2435.707289: do_swap_page: prefetch miss 910 "NuPlayerDriver " f5e6b000 9088
+    Binder:908_6-5209  [005] ....  2435.707505: do_swap_page: prefetch fault 908 "Binder:908_6" 7fbcfd0000 d023
+           <...>-1245  [002] ....  2435.708644: do_swap_page: prefetch fault 908 "Binder:908_1" 7f3a03e000 1035
+    Binder:908_6-5209  [003] ...1  2435.709815: do_swap_page: prefetch miss 908 "Binder:908_6" 7fbcfd0000 d023
+         generic-15964 [005] ....  2435.710144: do_swap_page: prefetch fault 910 "generic" f7a27000 905e
+           <...>-1245  [002] ...1  2435.710741: do_swap_page: prefetch miss 908 "Binder:908_1" 7f3a03e000 1035
+           <...>-1245  [002] ....  2435.710788: do_swap_page: prefetch fault 908 "Binder:908_1" 7f3a03f000 1036
+         generic-15964 [005] ...1  2435.712783: do_swap_page: prefetch miss 910 "generic" f7a27000 905e
+           <...>-1245  [002] ...1  2435.712962: do_swap_page: prefetch miss 908 "Binder:908_1" 7f3a03f000 1036
+           <...>-1245  [002] ....  2435.712995: do_swap_page: prefetch fault 908 "Binder:908_1" 3655554000 1038
+           <...>-5221  [005] ....  2435.713025: do_swap_page: prefetch fault 908 "Binder:908_7" 1e5555a000 9023
+           <...>-1245  [000] ...1  2435.718280: do_swap_page: prefetch miss 908 "Binder:908_1" 3655554000 1038
+ NuPlayerDriver -15956 [000] ....  2435.719123: do_swap_page: prefetch fault 910 "NuPlayerDriver " f7aff000 106a
+           <...>-5221  [000] ...1  2435.719376: do_swap_page: prefetch miss 908 "Binder:908_7" 1e5555a000 9023
+         generic-15964 [000] ....  2435.720954: do_swap_page: prefetch fault 910 "generic" f7a07000 5061
+ NuPlayerDriver -15956 [003] ...1  2435.721041: do_swap_page: prefetch miss 910 "NuPlayerDriver " f7aff000 106a
+ NuPlayerDriver -15956 [003] ....  2435.721171: do_swap_page: prefetch fault 910 "NuPlayerDriver " f7a1e000 5060
+         generic-15964 [000] ...1  2435.723164: do_swap_page: prefetch miss 910 "generic" f7a07000 5061
+ NuPlayerDriver -15956 [001] ...1  2435.723351: do_swap_page: prefetch miss 910 "NuPlayerDriver " f7a1e000 5060
+           <...>-1245  [000] ....  2435.724214: do_swap_page: prefetch fault 908 "Binder:908_1" 1d5555a000 1046
+ NuPlayerDriver -15956 [001] ....  2435.724471: do_swap_page: prefetch fault 910 "NuPlayerDriver " f2e26000 5070
+           <...>-15967 [003] ....  2435.724570: do_swap_page: prefetch fault 910 "NuPlayerDriver " f2e08000 d057
+           <...>-1245  [000] ...1  2435.726920: do_swap_page: prefetch miss 908 "Binder:908_1" 1d5555a000 1046
+ NuPlayerDriver -15956 [003] ...1  2435.727043: do_swap_page: prefetch miss 910 "NuPlayerDriver " f2e26000 5070
+           <...>-15967 [005] ...1  2435.727071: do_swap_page: prefetch miss 910 "NuPlayerDriver " f2e08000 d057
+           <...>-1245  [000] ....  2435.727456: do_swap_page: prefetch fault 908 "Binder:908_1" 3c55559000 9042
+           <...>-15966 [006] ....  2435.727516: do_swap_page: prefetch fault 910 "NPDecoder" f353f000 d058
+           <...>-15966 [006] ...1  2435.729623: do_swap_page: prefetch miss 910 "NPDecoder" f353f000 d058
+           <...>-15966 [006] ....  2435.729695: do_swap_page: prefetch fault 910 "NPDecoder" f355f000 9098
+           <...>-1245  [000] ...1  2435.729735: do_swap_page: prefetch miss 908 "Binder:908_1" 3c55559000 9042
+           <...>-1245  [000] ....  2435.729869: do_swap_page: prefetch fault 908 "Binder:908_1" 3c5555a000 9043
+           <...>-15966 [006] ...1  2435.731788: do_swap_page: prefetch miss 910 "NPDecoder" f355f000 9098
+           <...>-15966 [006] ....  2435.731858: do_swap_page: prefetch fault 910 "NPDecoder" f3510000 9099
+           <...>-1245  [000] ...1  2435.731989: do_swap_page: prefetch miss 908 "Binder:908_1" 3c5555a000 9043
+           <...>-1245  [000] ....  2435.732098: do_swap_page: prefetch fault 908 "Binder:908_1" 3c5555b000 9044
+           <...>-15966 [006] ...1  2435.734085: do_swap_page: prefetch miss 910 "NPDecoder" f3510000 9099
+           <...>-15966 [006] ....  2435.734165: do_swap_page: prefetch fault 910 "NPDecoder" f3515000 d059
+           <...>-1245  [000] ...1  2435.734189: do_swap_page: prefetch miss 908 "Binder:908_1" 3c5555b000 9044
+         generic-15964 [000] ....  2435.734802: do_swap_page: prefetch fault 910 "generic" f7a65000 5062
+           <...>-15966 [006] ...1  2435.736566: do_swap_page: prefetch miss 910 "NPDecoder" f3515000 d059
+           <...>-15966 [006] ....  2435.736707: do_swap_page: prefetch fault 910 "NPDecoder" f358a000 d05c
+         generic-15964 [000] ...1  2435.736742: do_swap_page: prefetch miss 910 "generic" f7a65000 5062
+         generic-15964 [000] ....  2435.737059: do_swap_page: prefetch fault 910 "generic" f7a28000 5063
+           <...>-15966 [006] ...1  2435.739341: do_swap_page: prefetch miss 910 "NPDecoder" f358a000 d05c
+           <...>-15966 [006] ....  2435.739453: do_swap_page: prefetch fault 910 "NPDecoder" f35b5000 d05d
+         generic-15964 [000] ...1  2435.739489: do_swap_page: prefetch miss 910 "generic" f7a28000 5063
+         generic-15964 [000] ....  2435.739762: do_swap_page: prefetch fault 910 "generic" f7a4c000 5065
+           <...>-15966 [006] ...1  2435.741523: do_swap_page: prefetch miss 910 "NPDecoder" f35b5000 d05d
+           <...>-15966 [006] ....  2435.741589: do_swap_page: prefetch fault 910 "NPDecoder" f35b6000 d05e
+         generic-15964 [000] ...1  2435.741728: do_swap_page: prefetch miss 910 "generic" f7a4c000 5065
+         generic-15964 [000] ....  2435.741877: do_swap_page: prefetch fault 910 "generic" f7a66000 d04e
+           <...>-15966 [003] ...1  2435.743667: do_swap_page: prefetch miss 910 "NPDecoder" f35b6000 d05e
+         generic-15964 [000] ...1  2435.743812: do_swap_page: prefetch miss 910 "generic" f7a66000 d04e
+         generic-15964 [000] ....  2435.743941: do_swap_page: prefetch fault 910 "generic" f7a68000 5076
+           <...>-15966 [003] ....  2435.744113: do_swap_page: prefetch fault 910 "NPDecoder" f7a77000 d060
+         generic-15964 [006] ...1  2435.746264: do_swap_page: prefetch miss 910 "generic" f7a68000 5076
+           <...>-15966 [005] ...1  2435.746357: do_swap_page: prefetch miss 910 "NPDecoder" f7a77000 d060
+           <...>-15966 [005] ....  2435.746384: do_swap_page: prefetch fault 910 "NPDecoder" f7a78000 1079
+         generic-15964 [006] ....  2435.746431: do_swap_page: prefetch fault 910 "generic" f2e2b000 d05a
+         generic-15964 [002] ...1  2435.748646: do_swap_page: prefetch miss 910 "generic" f2e2b000 d05a
+           <...>-15966 [005] ...1  2435.748748: do_swap_page: prefetch miss 910 "NPDecoder" f7a78000 1079
+         generic-15964 [002] ....  2435.749030: do_swap_page: prefetch fault 910 "generic" f2e46000 5072
+           <...>-15966 [003] ....  2435.750024: do_swap_page: prefetch fault 910 "NPDecoder" f2e49000 9069
+         generic-15964 [001] ...1  2435.750920: do_swap_page: prefetch miss 910 "generic" f2e46000 5072
+         generic-15964 [001] ....  2435.751052: do_swap_page: prefetch fault 910 "generic" f2e47000 9067
+           <...>-15966 [003] ...1  2435.752427: do_swap_page: prefetch miss 910 "NPDecoder" f2e49000 9069
+           <...>-15966 [003] ....  2435.752676: do_swap_page: prefetch fault 910 "NPDecoder" f2e4a000 906a
+         generic-15964 [000] ...1  2435.754326: do_swap_page: prefetch miss 910 "generic" f2e47000 9067
+         generic-15964 [000] ....  2435.754492: do_swap_page: prefetch fault 910 "generic" f2e48000 9068
+           <...>-15966 [003] ...1  2435.754554: do_swap_page: prefetch miss 910 "NPDecoder" f2e4a000 906a
+           <...>-15966 [003] ....  2435.754597: do_swap_page: prefetch fault 910 "NPDecoder" f2e4b000 906c
+           <...>-15966 [005] ...1  2435.757064: do_swap_page: prefetch miss 910 "NPDecoder" f2e4b000 906c
+         generic-15964 [006] ...1  2435.757157: do_swap_page: prefetch miss 910 "generic" f2e48000 9068
+           <...>-15966 [005] ....  2435.757162: do_swap_page: prefetch fault 910 "NPDecoder" f2e4c000 906d
+         generic-15964 [006] ....  2435.757288: do_swap_page: prefetch fault 910 "generic" f2e53000 9074
+           <...>-15966 [003] ...1  2435.759892: do_swap_page: prefetch miss 910 "NPDecoder" f2e4c000 906d
+         generic-15964 [001] ...1  2435.759928: do_swap_page: prefetch miss 910 "generic" f2e53000 9074
+           <...>-15967 [006] ....  2435.760055: do_swap_page: prefetch fault 910 "NPDecoder-CL" f3471000 508d
+         generic-15964 [001] ....  2435.760139: do_swap_page: prefetch fault 910 "generic" f2e54000 9075
+         generic-15964 [005] ...1  2435.762245: do_swap_page: prefetch miss 910 "generic" f2e54000 9075
+           <...>-15967 [001] ...1  2435.762284: do_swap_page: prefetch miss 910 "NPDecoder-CL" f3471000 508d
+         generic-15964 [005] ....  2435.762633: do_swap_page: prefetch fault 910 "generic" f7a18000 907a
+  HwBinder:933_7-2024  [005] ....  2435.764443: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1a55565000 d033
+         generic-15964 [001] ...1  2435.764475: do_swap_page: prefetch miss 910 "generic" f7a18000 907a
+  HwBinder:933_7-2024  [001] ...1  2435.766579: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1a55565000 d033
+  HwBinder:933_7-2024  [001] ....  2435.766877: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1955564000 501f
+  HwBinder:933_7-2024  [001] ...1  2435.769250: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1955564000 501f
+  HwBinder:933_7-2024  [001] ....  2435.769526: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1b5555b000 501a
+  HwBinder:933_7-2024  [001] ...1  2435.771745: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1b5555b000 501a
+  HwBinder:933_7-2024  [001] ....  2435.771879: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1b55555000 d00b
+  HwBinder:933_7-2024  [001] ...1  2435.774118: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1b55555000 d00b
+  HwBinder:933_7-2024  [001] ....  2435.774439: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1855565000 d00c
+  HwBinder:933_7-2024  [001] ...1  2435.776561: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1855565000 d00c
+  HwBinder:933_7-2024  [001] ....  2435.779091: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1b55560000 d030
+  HwBinder:933_7-2024  [001] ...1  2435.783324: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1b55560000 d030
+  HwBinder:933_7-2024  [000] ....  2435.783698: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1e55552000 d003
+  HwBinder:933_7-2024  [001] ...1  2435.785847: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1e55552000 d003
+  HwBinder:933_7-2024  [001] ....  2435.786026: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1755559000 5019
+  HwBinder:933_7-2024  [001] ...1  2435.787843: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1755559000 5019
+  HwBinder:933_7-2024  [001] ....  2435.788389: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1c35552000 d034
+  HwBinder:933_7-2024  [001] ...1  2435.790260: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1c35552000 d034
+  HwBinder:933_7-2024  [001] ....  2435.790392: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1b55552000 d035
+  HwBinder:933_7-2024  [001] ...1  2435.794254: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1b55552000 d035
+  HwBinder:933_7-2024  [002] ....  2435.794544: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1955552000 d007
+  HwBinder:933_7-2024  [001] ...1  2435.796558: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1955552000 d007
+  HwBinder:933_7-2024  [001] ....  2435.796936: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1e55557000 d032
+  HwBinder:933_7-2024  [002] ...1  2435.798878: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1e55557000 d032
+  HwBinder:933_7-2024  [002] ....  2435.799199: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1e55556000 d00d
+  HwBinder:933_7-2024  [002] ...1  2435.801111: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1e55556000 d00d
+  HwBinder:933_7-2024  [002] ....  2435.801277: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1755561000 d006
+  HwBinder:933_7-2024  [002] ...1  2435.805744: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1755561000 d006
+  HwBinder:933_7-2024  [002] ....  2435.807695: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1a55578000 d00f
+  HwBinder:933_7-2024  [002] ...1  2435.809567: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1a55578000 d00f
+  HwBinder:933_7-2024  [002] ....  2435.810387: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1a55557000 d037
+  HwBinder:933_7-2024  [001] ...1  2435.812380: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1a55557000 d037
+  HwBinder:933_7-2024  [001] ....  2435.812767: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1a55576000 d005
+  HwBinder:933_7-2024  [005] ...1  2435.816309: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1a55576000 d005
+  HwBinder:933_7-2024  [005] ....  2435.817022: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1855579000 501d
+  HwBinder:933_7-2024  [002] ...1  2435.818835: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1855579000 501d
+  HwBinder:933_7-2024  [002] ....  2435.818945: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1e55554000 d036
+  HwBinder:933_7-2024  [002] ...1  2435.820948: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1e55554000 d036
+  HwBinder:933_7-2024  [002] ....  2435.821415: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1a55574000 903c
+  HwBinder:933_7-2024  [001] ...1  2435.823340: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1a55574000 903c
+  HwBinder:933_7-2024  [001] ....  2435.823717: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1955555000 903b
+  HwBinder:933_7-2024  [006] ...1  2435.825684: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1955555000 903b
+  HwBinder:933_7-2024  [006] ....  2435.825854: do_swap_page: prefetch fault 933 "HwBinder:933_7" 195557b000 d000
+  HwBinder:933_7-2024  [001] ...1  2435.827788: do_swap_page: prefetch miss 933 "HwBinder:933_7" 195557b000 d000
+  HwBinder:933_7-2024  [001] ....  2435.827918: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1955576000 d02d
+  HwBinder:933_7-2024  [001] ...1  2435.831789: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1955576000 d02d
+  HwBinder:933_7-2024  [001] ....  2435.832233: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1855578000 d031
+  HwBinder:933_7-2024  [001] ...1  2435.834399: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1855578000 d031
+  HwBinder:933_7-2024  [001] ....  2435.834879: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1955575000 d008
+  HwBinder:933_7-2024  [002] ...1  2435.836947: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1955575000 d008
+  HwBinder:933_7-2024  [002] ....  2435.837363: do_swap_page: prefetch fault 933 "HwBinder:933_7" 1a35552000 d02e
+  HwBinder:933_7-2024  [003] ...1  2435.839834: do_swap_page: prefetch miss 933 "HwBinder:933_7" 1a35552000 d02e
+           <...>-15967 [005] ....  2435.850985: do_swap_page: prefetch fault 910 "NPDecoder-CL" f35d9000 1031
+           <...>-15967 [000] ...1  2435.853019: do_swap_page: prefetch miss 910 "NPDecoder-CL" f35d9000 1031
+  HwBinder:910_1-6537  [002] ....  2435.865455: do_swap_page: prefetch fault 910 "HwBinder:910_1" f2e4d000 906e
+  HwBinder:910_1-6537  [005] ...1  2435.867596: do_swap_page: prefetch miss 910 "HwBinder:910_1" f2e4d000 906e
+  HwBinder:910_1-6537  [005] ....  2435.867708: do_swap_page: prefetch fault 910 "HwBinder:910_1" f2e4e000 906f
+  HwBinder:910_1-6537  [001] ...1  2435.870060: do_swap_page: prefetch miss 910 "HwBinder:910_1" f2e4e000 906f
+  HwBinder:910_1-6537  [006] ....  2435.871433: do_swap_page: prefetch fault 910 "HwBinder:910_1" f2e55000 9077
+  HwBinder:910_1-6537  [000] ...1  2435.873726: do_swap_page: prefetch miss 910 "HwBinder:910_1" f2e55000 9077
+  HwBinder:910_1-6537  [006] ....  2435.878843: do_swap_page: prefetch fault 910 "HwBinder:910_1" f2e4f000 9070
+           <...>-15965 [003] ....  2435.881476: do_swap_page: prefetch fault 910 "NuPlayerRendere" f35ce000 1030
+  HwBinder:910_1-6537  [002] ...1  2435.884523: do_swap_page: prefetch miss 910 "HwBinder:910_1" f2e4f000 9070
+           <...>-15965 [005] ...1  2435.884751: do_swap_page: prefetch miss 910 "NuPlayerRendere" f35ce000 1030
+           <...>-15965 [005] ....  2435.884936: do_swap_page: prefetch fault 910 "NuPlayerRendere" f35dd000 1032
+  HwBinder:910_1-6537  [003] ....  2435.885687: do_swap_page: prefetch fault 910 "HwBinder:910_1" f2e51000 9071
+           <...>-15965 [000] ...1  2435.887577: do_swap_page: prefetch miss 910 "NuPlayerRendere" f35dd000 1032
+  HwBinder:910_1-6537  [002] ...1  2435.887738: do_swap_page: prefetch miss 910 "HwBinder:910_1" f2e51000 9071
+           <...>-15965 [000] ....  2435.887831: do_swap_page: prefetch fault 910 "NuPlayerRendere" f3555000 1033
+  HwBinder:910_1-6537  [002] ....  2435.888360: do_swap_page: prefetch fault 910 "HwBinder:910_1" f2e52000 9072
+           <...>-15965 [001] ...1  2435.890116: do_swap_page: prefetch miss 910 "NuPlayerRendere" f3555000 1033
+  HwBinder:910_1-6537  [003] ...1  2435.890348: do_swap_page: prefetch miss 910 "HwBinder:910_1" f2e52000 9072
+           <...>-1245  [002] ....  2436.677620: do_swap_page: prefetch fault 908 "Binder:908_1" 2b5555f000 9056
+           <...>-1245  [002] ...1  2436.692458: do_swap_page: prefetch miss 908 "Binder:908_1" 2b5555f000 9056
+           <...>-1245  [002] ....  2436.693289: do_swap_page: prefetch fault 908 "Binder:908_1" 395555f000 103b
+           <...>-1245  [002] ...1  2436.695765: do_swap_page: prefetch miss 908 "Binder:908_1" 395555f000 103b
+           <...>-1245  [002] ....  2436.696178: do_swap_page: prefetch fault 908 "Binder:908_1" 2e55560000 5032
+           <...>-1245  [003] ...1  2436.699635: do_swap_page: prefetch miss 908 "Binder:908_1" 2e55560000 5032
+           <...>-1245  [003] ....  2436.700089: do_swap_page: prefetch fault 908 "Binder:908_1" 2755558000 504e
+           <...>-1245  [003] ...1  2436.702270: do_swap_page: prefetch miss 908 "Binder:908_1" 2755558000 504e
+           <...>-15957 [000] ....  2436.708598: do_swap_page: prefetch fault 910 "generic" f282b000 9002
+           <...>-15957 [000] ...1  2436.712342: do_swap_page: prefetch miss 910 "generic" f282b000 9002
+           <...>-5221  [001] ....  2440.074707: do_swap_page: prefetch fault 908 "Binder:908_7" 1d5555e000 d025
+           <...>-5221  [001] ...1  2440.089955: do_swap_page: prefetch miss 908 "Binder:908_7" 1d5555e000 d025
+           <...>-1245  [003] ....  2443.206829: do_swap_page: prefetch fault 908 "Binder:908_1" 2d5555f000 9057
+           <...>-1245  [003] ...1  2443.222671: do_swap_page: prefetch miss 908 "Binder:908_1" 2d5555f000 9057
+           <...>-1245  [003] ....  2443.223336: do_swap_page: prefetch fault 908 "Binder:908_1" 305555a000 5029
+           <...>-1245  [003] ...1  2443.226061: do_swap_page: prefetch miss 908 "Binder:908_1" 305555a000 5029
+  HwBinder:910_1-6537  [000] ....  2452.851340: do_swap_page: prefetch fault 910 "HwBinder:910_1" f2e27000 d049
+  HwBinder:910_1-6537  [002] ...1  2452.867101: do_swap_page: prefetch miss 910 "HwBinder:910_1" f2e27000 d049
+ send_target_man-200   [003] d..2  2457.226337: send_target_manager: send target manager - which_table : 0
+    Binder:910_5-3580  [003] ....  2459.707450: do_swap_page: prefetch fault 910 "Binder:910_5" f3562000 504d
+    Binder:910_5-3580  [002] ...1  2459.721647: do_swap_page: prefetch miss 910 "Binder:910_5" f3562000 504d
+    Binder:910_5-3580  [002] ....  2459.721708: do_swap_page: prefetch fault 910 "Binder:910_5" f35fb000 d011
+    Binder:910_5-3580  [001] ...1  2459.723909: do_swap_page: prefetch miss 910 "Binder:910_5" f35fb000 d011
+    Binder:910_5-3580  [006] ....  2459.724626: do_swap_page: prefetch fault 910 "Binder:910_5" f35fc000 d012
+    Binder:910_5-3580  [002] ...1  2459.727126: do_swap_page: prefetch miss 910 "Binder:910_5" f35fc000 d012
+              sh-15987 [007] ....  2485.345980: swap_counter_dump_handler: pid 6355: counter 0 = 2125
+              sh-15987 [007] ....  2485.345985: swap_counter_dump_handler: pid 6355: counter 1 = 294
+              sh-15987 [007] ....  2485.345986: swap_counter_dump_handler: pid 6355: counter 2 = 17923
+              sh-15987 [007] ....  2485.345987: swap_counter_dump_handler: pid 6355: counter 3 = 0
+              sh-15987 [007] ....  2485.345988: swap_counter_dump_handler: pid 6355: counter 4 = 0
+              sh-15987 [007] ....  2485.345989: swap_counter_dump_handler: pid 6355: counter 5 = 0
+              sh-15987 [007] ....  2485.345990: swap_counter_dump_handler: pid 6355: counter >5 = 0
+              sh-15987 [007] ....  2485.345992: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-15987 [007] ....  2485.345994: swap_counter_dump_handler: remote: total faulted cold page: 0

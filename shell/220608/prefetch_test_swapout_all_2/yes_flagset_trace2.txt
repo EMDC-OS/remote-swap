@@ -1,0 +1,29 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 18/18   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-9971  [007] ....   923.882327: app_switch_start_handler: ###########switch start! foreground 0#############
+           <...>-200   [002] ....   923.909738: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [002] d..2   923.909744: send_target_manager: send target manager - which_table : 0
+           <...>-200   [002] ....   923.909776: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-12626 [007] ....  1644.009683: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-12626 [007] ....  1644.009688: prefetch_handler: handler start! target_table: 0
+           <...>-12626 [007] ....  1644.245107: update_to_nbd_flag: table 1 is latter, total target 2284 max idx e, l -> 7511 6549
+           <...>-200   [007] ....  1644.245209: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  1644.245211: send_target_manager: send target manager - which_table : 1
+              sh-12705 [007] ....  1694.269723: swap_counter_dump_handler: pid 6400: counter 0 = 1473
+              sh-12705 [007] ....  1694.269729: swap_counter_dump_handler: pid 6400: counter 1 = 18406
+              sh-12705 [007] ....  1694.269730: swap_counter_dump_handler: pid 6400: counter 2 = 0
+              sh-12705 [007] ....  1694.269731: swap_counter_dump_handler: pid 6400: counter 3 = 0
+              sh-12705 [007] ....  1694.269732: swap_counter_dump_handler: pid 6400: counter 4 = 0
+              sh-12705 [007] ....  1694.269733: swap_counter_dump_handler: pid 6400: counter 5 = 0
+              sh-12705 [007] ....  1694.269734: swap_counter_dump_handler: pid 6400: counter >5 = 0
+              sh-12705 [007] ....  1694.269734: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-12705 [007] ....  1694.269736: swap_counter_dump_handler: remote: total faulted cold page: 0

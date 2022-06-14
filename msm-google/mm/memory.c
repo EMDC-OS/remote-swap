@@ -3012,12 +3012,26 @@ int do_swap_page(struct vm_fault *vmf)
 			 */
 			vmf->pte = pte_offset_map_lock(vma->vm_mm, vmf->pmd,
 					vmf->address, &vmf->ptl);
-			if (likely(pte_same(*vmf->pte, vmf->orig_pte)))
+			if (likely(pte_same(*vmf->pte, vmf->orig_pte))){
 				ret = VM_FAULT_OOM;
+			}
 			delayacct_clear_flag(DELAYACCT_PF_SWAPIN);
 			goto unlock;
 		}
-
+#ifdef CONFIG_APP_AWARE
+		/*
+		 * For cold page dump
+		 *
+		*/
+		if (swp_type(entry) == NBD_TYPE){
+			if(pte_to_swp_counter(vmf->orig_pte)){
+				atomic_inc(&faulted_cold_page);
+			}
+			else{
+				trace_printk("prefetch fault %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+			}
+		}
+#endif
 		/* Had to read the page from swap area: Major fault */
 		ret = VM_FAULT_MAJOR;
 		count_vm_event(PGMAJFAULT);
@@ -3108,25 +3122,9 @@ int do_swap_page(struct vm_fault *vmf)
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
-	//	trace_printk("table %d || %d: %d %llx\n", which_table, idx, current->tgid, vmf->address);
+		trace_printk("table %d || %d: %d %llx\n", which_table, idx, current->tgid, vmf->address);
 
 	}
-	
-
-	/*
-	 * For cold page dump
-	 */
-	if (swp_type(entry) == NBD_TYPE){
-		if(pte_to_swp_counter(vmf->orig_pte)){
-			atomic_inc(&faulted_cold_page);
-		}
-		else{
-			trace_printk("prefetch miss %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
-
-		}
-
-	}
-			
 
 
 #endif
