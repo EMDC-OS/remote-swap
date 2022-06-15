@@ -37,7 +37,7 @@ fi
 adb shell "echo $STR0"
 adb shell "echo $STR0 > /proc/sys/kernel/foreground_uid"
 
-adb shell /data/launch/launch_app_track_switch.sh ${app}
+adb shell /data/launch/launch_app.sh ${app}
 sleep 60 
 
 if [ "${app}" = "angrybirds" ]; then
@@ -102,7 +102,7 @@ adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
 sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
-adb shell /data/launch/launch_app_track_switch.sh ${app}
+adb shell /data/launch/launch_app.sh ${app}
 sleep 150
 adb shell cat /proc/vmstat* | grep swp
 adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
@@ -135,7 +135,7 @@ adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
 sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
-adb shell /data/launch/launch_app_track_switch.sh ${app}
+adb shell /data/launch/launch_app.sh ${app}
 sleep 150
 adb shell cat /proc/vmstat* | grep swp
 adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
@@ -164,7 +164,7 @@ adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
 sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
-adb shell /data/launch/launch_app_track_switch.sh ${app}
+adb shell /data/launch/launch_app.sh ${app}
 sleep 150
 adb shell cat /proc/vmstat* | grep swp
 adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
@@ -197,7 +197,7 @@ adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
 sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
-adb shell /data/launch/launch_app_track_switch.sh ${app}
+adb shell /data/launch/launch_app.sh ${app}
 sleep 150
 adb shell cat /proc/vmstat* | grep swp
 adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
@@ -227,7 +227,7 @@ adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
 sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
-adb shell /data/launch/launch_app_track_switch.sh ${app}
+adb shell /data/launch/launch_app.sh ${app}
 sleep 150
 adb shell cat /proc/vmstat* | grep swp
 adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
@@ -260,7 +260,7 @@ adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
 sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
-adb shell /data/launch/launch_app_track_switch.sh ${app}
+adb shell /data/launch/launch_app.sh ${app}
 sleep 150
 adb shell cat /proc/vmstat* | grep swp
 adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
@@ -289,7 +289,7 @@ adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
 sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
-adb shell /data/launch/launch_app_track_switch.sh ${app}
+adb shell /data/launch/launch_app.sh ${app}
 sleep 150
 adb shell cat /proc/vmstat* | grep swp
 adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
@@ -322,7 +322,7 @@ adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
 sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
-adb shell /data/launch/launch_app_track_switch.sh ${app}
+adb shell /data/launch/launch_app.sh ${app}
 sleep 150
 adb shell cat /proc/vmstat* | grep swp
 adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
@@ -352,7 +352,7 @@ adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
 sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
-adb shell /data/launch/launch_app_track_switch.sh ${app}
+adb shell /data/launch/launch_app.sh ${app}
 sleep 150
 adb shell cat /proc/vmstat* | grep swp
 adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
@@ -382,7 +382,7 @@ adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'
 sleep 5
 adb shell /data/screen_unlock.sh
 sleep 5
-adb shell /data/launch/launch_app_track_switch.sh ${app}
+adb shell /data/launch/launch_app.sh ${app}
 sleep 150
 adb shell cat /proc/vmstat* | grep swp
 adb shell cat /proc/$STR1/status | awk 'NR==19 || NR==20'

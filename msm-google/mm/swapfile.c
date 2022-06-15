@@ -3858,7 +3858,6 @@ static int scan_swap_map_slots_of_id(struct swap_info_struct *si,
 	scan_base = offset = si->cluster_next;
 
 
-	/* SSD algorithm */
 	if (si->cluster_info) {
 		if (scan_swap_map_try_cluster_id(si, &offset, &scan_base, id))
 			goto checks;

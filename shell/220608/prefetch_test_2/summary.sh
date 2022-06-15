@@ -15,5 +15,5 @@ do
 	target=`cat $file | grep "target sent" | wc -l`
 	hit=`cat $file | grep "prefetch hit" | wc -l`
 	fault=`cat $file | grep "prefetch fault" | awk -F "do_swap_page:" '{print $2}' | awk '!x[$0]++ {print $0}' |  wc -l`
-	echo $file $target $hit $fault  $(($fault-$hit))
+	echo $file $target $hit $fault
 done

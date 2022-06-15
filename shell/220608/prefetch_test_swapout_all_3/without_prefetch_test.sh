@@ -27,7 +27,7 @@ adb shell /data/launch/with_sysctl_launch_app.sh home
 sleep 5
 
 ./swapout_all.sh
-sleep 30
+sleep 100
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
@@ -43,7 +43,7 @@ sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh home
 sleep 5
 ./swapout_all.sh
-sleep 30
+sleep 100
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
@@ -59,7 +59,7 @@ sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh home
 sleep 5
 ./swapout_all.sh
-sleep 30
+sleep 100
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
@@ -75,7 +75,7 @@ sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh home
 sleep 5
 ./swapout_all.sh
-sleep 30
+sleep 100
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
@@ -92,7 +92,7 @@ sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh home
 sleep 5
 ./swapout_all.sh
-sleep 30
+sleep 100
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
@@ -109,7 +109,7 @@ sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh home
 sleep 5
 ./swapout_all.sh
-sleep 30
+sleep 100
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
@@ -126,7 +126,7 @@ sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh home
 sleep 5
 ./swapout_all.sh
-sleep 30
+sleep 100
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
@@ -142,7 +142,7 @@ sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh home
 sleep 5
 ./swapout_all.sh
-sleep 30
+sleep 100
 adb shell /data/screen_unlock.sh
 sleep 5
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush

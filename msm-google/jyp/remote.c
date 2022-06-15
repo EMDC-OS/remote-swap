@@ -49,7 +49,7 @@
 
 #ifdef CONFIG_APP_AWARE
 
-#define MANAGER_PERIOD (100*HZ)
+#define MANAGER_PERIOD (10*HZ)
 
 #define TRUE 1
 #define FALSE 0
@@ -171,7 +171,7 @@ static int send_zram_to_nbd(pte_t *pte, pmd_t *pmd, unsigned long vpage, struct 
 	page->mapping = mapping;
 	
 	write_one_page(page);
-	__delete_from_swap_cache(page);
+	delete_from_swap_cache(page);
 	
 	orig_pte=pte_offset_map_lock(mm,pmd,vpage,&ptl);
 
@@ -329,7 +329,7 @@ static void cold_page_sender_work(struct work_struct *work)
 						
 							
 						write_one_page(page);
-						__delete_from_swap_cache(page);
+						delete_from_swap_cache(page);
 						
 						
 						orig_pte=pte_offset_map_lock(mm,pmd,vpage,&ptl);
@@ -681,7 +681,7 @@ int ksg_handler(struct ctl_table *table, int write,
 									
 									
 									temp_entry.val=page_private(page);
-                                    __delete_from_swap_cache(page);
+                                    delete_from_swap_cache(page);
 
                                    
                                     if(!is_swap_pte(*orig_pte))
@@ -837,14 +837,14 @@ int app_switch_start_handler(struct ctl_table *table, int write,
 		if(foreground_uid && prefetch_on)
 			prefetch_handler(foreground_uid,target_table);
 
+		if(!foreground_uid)
+			return 0;
 
 
 		spin_lock_irqsave(&switch_start_lock,flags);
 		switch_start = 1;
 		spin_unlock_irqrestore(&switch_start_lock,flags);
 
-		if(!foreground_uid)
-			return 0;
 		
 		spin_lock_irqsave(&which_table_lock,flags);
 
@@ -1252,6 +1252,8 @@ static int send_target_manager(void *arg)
 				if(send_target_page(0/* ID */,tgid,va)){
 					swap_trace_table_l[i].swapped=1;
 				}
+				else
+					trace_printk("[REMOTE %s] send_target_failed %d %llx\n", __func__,tgid,va);
 			}
 		}
 sleep:

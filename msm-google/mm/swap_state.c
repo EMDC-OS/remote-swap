@@ -589,8 +589,14 @@ struct page *read_swap_cache_async(swp_entry_t entry, gfp_t gfp_mask,
 	struct page *retpage = __read_swap_cache_async(entry, gfp_mask,
 			vma, addr, &page_was_allocated);
 
-	if (page_was_allocated)
+	if (page_was_allocated){
 		swap_readpage(retpage, do_poll);
+#ifdef CONFIG_APP_AWARE
+		if (swp_type(entry) == NBD_TYPE)
+			trace_printk("remote readpage %d \"%s\" %lx %lx\n",current->tgid,current->comm,addr,swp_offset(entry));
+#endif
+	
+	}
 
 	return retpage;
 }

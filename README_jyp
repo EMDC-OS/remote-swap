@@ -34,6 +34,10 @@ optimization plan     -> at first, write to static big table, and then dynamical
 - CPU Binding!!
 using CPU bind of Prefetching with different core 
 
+- try_to_free_swap()
+current implementation -> called on critical path
+optimization plan 	   -> called after switch
+
 // Implementation idea
 
 Should handle if the process exit--> STT free or STT clean

@@ -3155,9 +3155,17 @@ int do_swap_page(struct vm_fault *vmf)
 	}
 
 	swap_free(entry);
+
+
 	if (mem_cgroup_swap_full(page) ||
-	    (vma->vm_flags & VM_LOCKED) || PageMlocked(page))
+	    (vma->vm_flags & VM_LOCKED) || PageMlocked(page)
+#ifdef CONFIG_APP_AWARE
+		|| swp_type(entry)==NBD_TYPE
+#endif
+		)
 		try_to_free_swap(page);
+	
+	
 	unlock_page(page);
 	if (page != swapcache) {
 		/*
