@@ -10,6 +10,18 @@
 #define NBD_TYPE    1
 #define COLD_PAGE_THRESHOLD 5
 
+/******************************
+ * APPLICATION UID DEFINITION *
+ ******************************/
+#define MAPS_UID 10135
+#define YT_UID 10126
+#define IG_UID 10127
+#define TW_UID 10133
+#define CC_UID 10128
+#define AB_UID 10122
+#define CR_UID 10159
+#define MAIL_UID 10136
+#define CH_UID 0 
 
 
 struct cold_page_sender_work {
@@ -95,6 +107,7 @@ extern int foreground_pid;
 extern int swapin_vma_tracking;
 extern int swapin_anon_tracking;
 extern int prefetch_on;
+extern int target_percentage;
 
 
 

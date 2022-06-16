@@ -1,0 +1,35 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 24/24   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-200   [006] ....     0.524820: send_target_manager: 3[REMOTE send_target_manager] target manager started
+           <...>-200   [006] d..2     0.524831: send_target_manager: send target manager - which_table : 0
+           <...>-200   [006] ....     0.524833: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6083  [007] ....    67.521803: app_switch_start_handler: ###########switch start! foreground 0#############
+           <...>-200   [004] ....    67.953924: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] d..2    67.953928: send_target_manager: send target manager - which_table : 0
+           <...>-200   [004] ....    67.953929: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6606  [007] ....   123.039374: app_switch_start_handler: ###########switch start! foreground 0#############
+           <...>-200   [004] ....   123.099244: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] d..2   123.099246: send_target_manager: send target manager - which_table : 0
+           <...>-200   [004] ....   123.099247: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-9460  [007] ....   932.743374: app_switch_start_handler: ###########switch start! foreground 0#############
+           <...>-200   [007] ....   932.882811: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2   932.882814: send_target_manager: send target manager - which_table : 0
+           <...>-200   [007] ....   932.882815: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+              sh-9508  [007] ....   982.910340: swap_counter_dump_handler: pid 6089: counter 0 = 78772
+              sh-9508  [007] ....   982.910344: swap_counter_dump_handler: pid 6089: counter 1 = 0
+              sh-9508  [007] ....   982.910344: swap_counter_dump_handler: pid 6089: counter 2 = 0
+              sh-9508  [007] ....   982.910345: swap_counter_dump_handler: pid 6089: counter 3 = 0
+              sh-9508  [007] ....   982.910346: swap_counter_dump_handler: pid 6089: counter 4 = 0
+              sh-9508  [007] ....   982.910347: swap_counter_dump_handler: pid 6089: counter 5 = 0
+              sh-9508  [007] ....   982.910347: swap_counter_dump_handler: pid 6089: counter >5 = 0
+              sh-9508  [007] ....   982.910348: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-9508  [007] ....   982.910349: swap_counter_dump_handler: remote: total faulted cold page: 0

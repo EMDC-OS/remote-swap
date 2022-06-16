@@ -71,6 +71,7 @@ atomic_t sent_cold_page;
 atomic_t faulted_cold_page;
 
 int prefetch_on;
+int target_percentage;
 
 struct perapp_cluster pac[10];
 
@@ -86,12 +87,28 @@ bool stm_wait_cond;
 
 unsigned int get_id_from_uid(int uid){
 
-	if(uid==10128)
+	if(uid==MAPS_UID)
 		return 0;
+	if(uid==YT_UID)
+		return 1;
+	if(uid==IG_UID)
+		return 2;
+	if(uid==TW_UID)
+		return 3;
+	if(uid==CC_UID)
+		return 4;
+	if(uid==AB_UID)
+		return 5;
+	if(uid==CR_UID)
+		return 6;
+	if(uid==MAIL_UID)
+		return 7;
+	if(uid==CH_UID)
+		return 8;
 	else if (uid==-1) // cold page
 		return 9;
 	else{
-		printk(KERN_ERR "[REMOTE %s] unregistered UID\n", __func__);
+		panic("[REMOTE %s] unregistered UID\n", __func__);
 		return -1;
 	}
 
@@ -970,7 +987,7 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 
 		
 		if(foreground_uid && atomic_read(&st_index0)!=-1 && atomic_read(&st_index1)!=-1)
-			update_to_nbd_flag(50); //<--app_number or uid
+			update_to_nbd_flag(target_percentage); //<--app_number or uid
 
 
 		/*
@@ -1252,8 +1269,6 @@ static int send_target_manager(void *arg)
 				if(send_target_page(0/* ID */,tgid,va)){
 					swap_trace_table_l[i].swapped=1;
 				}
-				else
-					trace_printk("[REMOTE %s] send_target_failed %d %llx\n", __func__,tgid,va);
 			}
 		}
 sleep:
@@ -1310,6 +1325,9 @@ static int __init remote_swap_init(void)
 			
 	atomic_set(&st_index0,-1);
 	atomic_set(&st_index1,-1);
+
+
+	target_percentage = 50;
 
 	error = send_target_managers_init();
 	if (unlikely(error))

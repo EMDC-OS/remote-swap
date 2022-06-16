@@ -36,7 +36,12 @@ using CPU bind of Prefetching with different core
 
 - try_to_free_swap()
 current implementation -> called on critical path
-optimization plan 	   -> called after switch
+optimization plan      -> called after switch
+
+- PREFETCH MISS Pages handling
+current implementaion  -> Nothing. So it could be kept in Remote if swapcache flushed
+optimization plan      -> Force them faulted after switch and MADVISE them (MADV_PAGEOUT) then it can be in ZRAM...
+
 
 // Implementation idea
 
