@@ -14,19 +14,19 @@ debugfs="/sys/kernel/debug"
 #echo 0 > $debugfs/tracing/tracing_on
 #echo 4096 > $debugfs/tracing/buffer_size_kb
 
-mkdir -p /data/launch/result_${app}
-mkdir -p /data/launch/result_${app}/${kernel}
-mkdir -p /data/launch/result_${app}/${kernel}/${state}
+#mkdir -p /data/launch/result_${app}
+#mkdir -p /data/launch/result_${app}/${kernel}
+#mkdir -p /data/launch/result_${app}/${kernel}/${state}
 
-cat /proc/vmstat > /data/launch/result_${app}/${kernel}/${state}/vmstat_start
-cat /proc/stat > /data/launch/result_${app}/${kernel}/${state}/stat_start
-cat /proc/diskstats > /data/launch/result_${app}/${kernel}/${state}/diskstats_start
+#cat /proc/vmstat > /data/launch/result_${app}/${kernel}/${state}/vmstat_start
+#cat /proc/stat > /data/launch/result_${app}/${kernel}/${state}/stat_start
+#cat /proc/diskstats > /data/launch/result_${app}/${kernel}/${state}/diskstats_start
 
 #echo 1 > $debugfs/tracing/tracing_on
 #echo 1 > /proc/sys/kernel/fastpf_analysis
-if [ "${kernel}" = "fastpf" ]; then
-	echo 1 > /proc/sys/kernel/fastpf
-fi
+#if [ "${kernel}" = "fastpf" ]; then
+#	echo 1 > /proc/sys/kernel/fastpf
+#fi
 
 
 
@@ -82,23 +82,25 @@ elif [ "${app}" = "pubg" ]; then
 	am start -n com.pubg.krmobile/com.epicgames.ue4.GameActivity -W
 elif [ "${app}" = "dropbox" ]; then
 	am start -n com.dropbox.android/.activity.DropboxBrowser -W
+elif [ "${app}" = "home" ]; then
+	am start -a android.intent.action.MAIN -c android.intent.category.HOME
 else
 	echo "Please enter Appname Kernel_mode Launching_state"
 fi
 
-cat /proc/vmstat > /data/launch/result_${app}/${kernel}/${state}/vmstat_end
-if [ "${kernel}" = "fastpf" ]; then
-	echo 0 > /proc/sys/kernel/fastpf
-fi
+#cat /proc/vmstat > /data/launch/result_${app}/${kernel}/${state}/vmstat_end
+#if [ "${kernel}" = "fastpf" ]; then
+#	echo 0 > /proc/sys/kernel/fastpf
+#fi
 #echo 0 > /proc/sys/kernel/fastpf_analysis
 #echo 0 > $debugfs/tracing/tracing_on
 #echo 0 > /sys/kernel/debug/tracing/events/fastpf/enable
 
-dmesg > /data/launch/result_${app}/dmesg.txt
+#dmesg > /data/launch/result_${app}/dmesg.txt
 
 #./test_time
-cat /proc/stat > /data/launch/result_${app}/${kernel}/${state}/stat_end
-cat /proc/diskstats > /data/launch/result_${app}/${kernel}/${state}/diskstats_end
+#cat /proc/stat > /data/launch/result_${app}/${kernel}/${state}/stat_end
+#cat /proc/diskstats > /data/launch/result_${app}/${kernel}/${state}/diskstats_end
 
 #cat $debugfs/tracing/per_cpu/cpu0/trace_pipe > ./result_${app}/${kernel}/${state}/core0.txt
 #cat $debugfs/tracing/per_cpu/cpu1/trace_pipe > ./result_${app}/${kernel}/${state}/core1.txt
@@ -109,7 +111,7 @@ cat /proc/diskstats > /data/launch/result_${app}/${kernel}/${state}/diskstats_en
 #cat $debugfs/tracing/per_cpu/cpu6/trace_pipe > ./result_${app}/${kernel}/${state}/core6.txt
 #cat $debugfs/tracing/per_cpu/cpu7/trace_pipe > ./result_${app}/${kernel}/${state}/core7.txt
 
-echo nop > $debugfs/tracing/current_tracer
+#echo nop > $debugfs/tracing/current_tracer
 echo "end"
 
 #cat /proc/vmstat > vmstat_chrome_end

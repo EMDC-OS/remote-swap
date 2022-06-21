@@ -1854,8 +1854,8 @@ static int reclaim_pte_range(pmd_t *pmd, unsigned long addr,
 		if (!PageLRU(page))
 			continue;
 
-	//	if ( page_mapcount(page) > 1) 
-	//		continue;
+		if ( page_mapcount(page) > 1) 
+			continue;
 
 
 		if (isolate_lru_page(page))

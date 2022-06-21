@@ -42,7 +42,13 @@ optimization plan      -> called after switch
 current implementaion  -> Nothing. So it could be kept in Remote if swapcache flushed
 optimization plan      -> Force them faulted after switch and MADVISE them (MADV_PAGEOUT) then it can be in ZRAM...
 
+- IF target page is sent, and faulted in background
+It should not be sent again, because it might be faulted again. It is solved because once the swapped flag set, It will never be sent to remote again.
 
+- delete swap cache
+HOW about using try_to_free_swap()
+
+	
 // Implementation idea
 
 Should handle if the process exit--> STT free or STT clean

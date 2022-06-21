@@ -9,6 +9,7 @@
 #define ZRAM_TYPE   0
 #define NBD_TYPE    1
 #define COLD_PAGE_THRESHOLD 5
+#define NUM_STT_ENTRIES 20000
 
 /******************************
  * APPLICATION UID DEFINITION *
@@ -21,15 +22,21 @@
 #define AB_UID 10122
 #define CR_UID 10159
 #define MAIL_UID 10136
-#define CH_UID 0 
+#define CH_UID 10124 
 
 
+struct prefetch_work {
+	struct work_struct work;
+	unsigned int id;
+	int target_table;
+};
 struct cold_page_sender_work {
 	struct work_struct work;
 	struct task_struct *task;	
 };
-struct prefetch_work {
+struct miss_page_work {
 	struct work_struct work;
+	unsigned int id;
 	int target_table;
 };
 struct perapp_cluster {
@@ -42,15 +49,19 @@ struct swap_trace_entry {
 		bool to_nbd;
 		bool swapped;
 };
+// --> per app
+struct per_app_swap_trace {
+	atomic_t st_index0;
+	atomic_t st_index1;
+	struct swap_trace_entry swap_trace_table0[NUM_STT_ENTRIES];
+	struct swap_trace_entry swap_trace_table1[NUM_STT_ENTRIES];
+	bool st_should_check; // --> per app, and keep in list
+	bool which_table; // --> per app
+};
 
-extern bool which_table;
 extern bool switch_start;
-extern atomic_t st_index0;
-extern atomic_t st_index1;
-extern struct swap_trace_entry swap_trace_table0[40000];
-extern struct swap_trace_entry swap_trace_table1[40000];
 extern struct perapp_cluster pac[10];
-
+extern struct per_app_swap_trace *past[9];
 
 extern atomic_t sent_cold_page;
 extern atomic_t faulted_cold_page;
@@ -101,6 +112,7 @@ extern int app_switch_fin_handler(struct ctl_table *table, int write,
                  void __user *buffer, size_t *length, loff_t *ppos);
 
 extern unsigned int get_id_from_uid(int uid);
+extern void init_past(struct per_app_swap_trace *past);
 
 extern int foreground_uid;
 extern int foreground_pid;
@@ -108,6 +120,7 @@ extern int swapin_vma_tracking;
 extern int swapin_anon_tracking;
 extern int prefetch_on;
 extern int target_percentage;
+extern int random_nbd_entry;
 
 
 

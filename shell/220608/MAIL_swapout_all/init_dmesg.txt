@@ -1,0 +1,1004 @@
+[    3.150722] ueventd: firmware: loading 'modem.b18' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b18'
+[    3.152944] type=1400 audit(1655394492.291:82): avc: denied { search } for comm="imsdatadaemon" name="soc:qcom,faceauth_fws" dev="sysfs" ino=42432 scontext=u:r:ims:s0 tcontext=u:object_r:sysfs_faceauth:s0 tclass=dir permissive=0 b/129460752
+[    3.152963] type=1400 audit(1655394492.378:83): avc: denied { read } for comm="audio@2.0-servi" name="u:object_r:default_prop:s0" dev="tmpfs" ino=3749 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+[    3.154270] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b18 took 3ms
+[    3.156975] ueventd: firmware: loading 'modem.b19' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b19'
+[    3.160532] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b19 took 3ms
+[    3.162058] ueventd: firmware: loading 'modem.b20' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b20'
+[    3.176241] init: Service 'vendor.init_citadel' (pid 875) exited with status 0
+[    3.180143] [ FTS ] READ EVENT = 43 13 00 00 00 00 00 02 
+[    3.180220] [ FTS ] READ EVENT = 43 0A 02 00 00 00 00 01 
+[    3.180324] [ FTS ] READ EVENT = 03 00 00 00 00 00 00 00 
+[    3.180327] [ FTS ] FOUND EVENT = 03 00 00 00 00 00 00 00 
+[    3.180331] [ FTS ] pollForErrorType: Starting to poll ErrorList... count = 0
+[    3.180334] [ FTS ] pollForErrorType: Error Type Not Found into ErrorList! ERROR 80000007
+[    3.180336] [ FTS ] fts_crc_check: No Config CRC Error Found!
+[    3.180339] [ FTS ] fts_crc_check: Verifying if Cx CRC Error...
+[    3.180341] [ FTS ] pollForErrorType: Starting to poll ErrorList... count = 0
+[    3.180343] [ FTS ] pollForErrorType: Error Type Not Found into ErrorList! ERROR 80000007
+[    3.180345] [ FTS ] fts_crc_check: No Cx CRC Error Found!
+[    3.180348] [ FTS ] fts_fw_update: NO CRC Error or Impossible to read CRC register!
+[    3.180351] [ FTS ] Reading Fw file...
+[    3.180353] [ FTS ] getFWdata starting ...
+[    3.180356] [ FTS ] Read FW from BIN file ftm5_fw_f2.ftb !
+[    3.181432] ueventd: firmware: loading 'ftm5_fw_f2.ftb' for '/devices/platform/soc/890000.spi/spi_master/spi1/spi1.0/firmware/ftm5_fw_f2.ftb'
+[    3.196758] ueventd: loading /devices/platform/soc/890000.spi/spi_master/spi1/spi1.0/firmware/ftm5_fw_f2.ftb took 15ms
+[    3.196806] [ FTS ] getFWdata Finished!
+[    3.196810] [ FTS ] parseBinFile: Fw Signature OK!
+[    3.196813] [ FTS ] parseBinFile: ftb_version OK!
+[    3.196815] [ FTS ] parseBinFile: FILE SVN REV = 00002410
+[    3.196817] [ FTS ] parseBinFile: FILE Fw Version = 0164
+[    3.196820] [ FTS ] parseBinFile: FILE Config Project ID = 0000000B
+[    3.196822] [ FTS ] parseBinFile: FILE Config Version = 00001636
+[    3.196825] [ FTS ] parseBinFile: File External Release = 16 36 00 00 00 00 00 00 
+[    3.196828] [ FTS ] parseBinFile:  sec0_size = 00019CFC (105724 bytes)
+[    3.196830] [ FTS ] parseBinFile:  sec1_size = 00000CB8 (3256 bytes)
+[    3.196833] [ FTS ] parseBinFile:  sec2_size = 00000000 (0 bytes)
+[    3.196835] [ FTS ] parseBinFile:  sec3_size = 00000000 (0 bytes)
+[    3.196848] [ FTS ] parseBinFile: Initialize cx_ver to default value!
+[    3.196851] [ FTS ] parseBinFile: CX Version = FFFF
+[    3.196853] [ FTS ] READ FW DONE 108980 bytes!
+[    3.196856] [ FTS ] Fw file read COMPLETED!
+[    3.196859] [ FTS ] Starting flashing procedure...
+[    3.196861] [ FTS ] flash_burn: Firmware in the chip matches the firmware to flash! NO UPDATE ERROR 8000000C
+[    3.196863] [ FTS ] flashing procedure Finished!
+[    3.196867] [ FTS ] fts_fw_update: Verifying if CX CRC Error...
+[    3.196869] [ FTS ] System resetting...
+[    3.204921] QSEECOM: qseecom_load_app: App (haventkn) does'nt exist, loading apps for first time
+[    3.223507] [ FTS ] READ EVENT = 43 13 00 00 00 00 00 02 
+[    3.223589] [ FTS ] READ EVENT = 43 0A 02 00 00 00 00 01 
+[    3.223668] [ FTS ] READ EVENT = 03 00 00 00 00 00 00 00 
+[    3.223672] [ FTS ] FOUND EVENT = 03 00 00 00 00 00 00 00 
+[    3.223676] [ FTS ] pollForErrorType: Starting to poll ErrorList... count = 0
+[    3.223678] [ FTS ] pollForErrorType: Error Type Not Found into ErrorList! ERROR 80000007
+[    3.223681] [ FTS ] fts_fw_update: No Cx CRC Error Found!
+[    3.223683] [ FTS ] fts_fw_update: Verifying if Panel CRC Error...
+[    3.223685] [ FTS ] pollForErrorType: Starting to poll ErrorList... count = 0
+[    3.223689] [ FTS ] pollForErrorType: Error Type Not Found into ErrorList! ERROR 80000007
+[    3.223692] [ FTS ] fts_fw_update: No Panel CRC Error Found!
+[    3.223860] [ FTS ] fts_mode_handler: Sense ON!
+[    3.223919] [ FTS ] heatmap_enable
+[    3.223972] [ FTS ] Fw Update Finished! error = 00000000
+[    3.224188] [ FTS ] fts_status_event_handler: Sense on Force cal = 01 00 00 00 00 01
+[    3.224814] QSEECOM: qseecom_load_app: App with id 3 (haventkn) now loaded
+[    3.230497] QSEECOM: qseecom_load_app: App (seccamdemo64) does'nt exist, loading apps for first time
+[    3.236154] [ FTS ] fts_status_event_handler: Received unknown status event = 43 13 00 00 00 00 00 00
+[    3.249584] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.254059] QSEECOM: qseecom_load_app: App with id 4 (seccamdemo64) now loaded
+[    3.254808] type=1400 audit(1655394492.378:83): avc: denied { read } for comm="audio@2.0-servi" name="u:object_r:default_prop:s0" dev="tmpfs" ino=3749 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+[    3.254824] type=1400 audit(1655394492.481:84): avc: denied { read } for comm="android.hardwar" name="u:object_r:config_prop:s0" dev="tmpfs" ino=3725 scontext=u:r:hal_face_default:s0 tcontext=u:object_r:config_prop:s0 tclass=file permissive=0 b/134894179
+[    3.255360] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b20 took 93ms
+[    3.262387] subsys-restart: __subsystem_get(): Changing subsys fw_name to venus
+[    3.263372] ueventd: firmware: loading 'modem.b21' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b21'
+[    3.263514] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 560 (/system/bin/hwservicemanager)
+[    3.263531] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    3.264408] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 560 (/system/bin/hwservicemanager)
+[    3.264420] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    3.266874] ueventd: firmware: loading 'venus.mdt' for '/devices/platform/soc/aae0000.qcom,venus/firmware/venus.mdt'
+[    3.284425] ueventd: loading /devices/platform/soc/aae0000.qcom,venus/firmware/venus.mdt took 17ms
+[    3.284740] subsys-pil-tz aae0000.qcom,venus: venus: loading from 0x0000000099000000 to 0x0000000099500000
+[    3.291746] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b21 took 28ms
+[    3.309499] ueventd: firmware: loading 'modem.b23' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b23'
+[    3.313893] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b23 took 4ms
+[    3.320075] ueventd: firmware: loading 'modem.b24' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b24'
+[    3.320818] ueventd: firmware: loading 'venus.b02' for '/devices/platform/soc/aae0000.qcom,venus/firmware/venus.b02'
+[    3.325733] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 560 (/system/bin/hwservicemanager)
+[    3.325755] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    3.326099] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 560 (/system/bin/hwservicemanager)
+[    3.326112] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    3.327567] ueventd: loading /devices/platform/soc/aae0000.qcom,venus/firmware/venus.b02 took 6ms
+[    3.328519] ueventd: firmware: loading 'venus.b03' for '/devices/platform/soc/aae0000.qcom,venus/firmware/venus.b03'
+[    3.337635] ueventd: loading /devices/platform/soc/aae0000.qcom,venus/firmware/venus.b03 took 8ms
+[    3.338859] ueventd: firmware: loading 'venus.b04' for '/devices/platform/soc/aae0000.qcom,venus/firmware/venus.b04'
+[    3.342442] ueventd: loading /devices/platform/soc/aae0000.qcom,venus/firmware/venus.b04 took 3ms
+[    3.350209] subsys-pil-tz aae0000.qcom,venus: venus: Brought out of reset
+[    3.362666] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.362669] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.362679] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.362680] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.365407] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.365409] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.365416] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.365418] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.365454] msm_vidc:  err: This control 980928 is not supported yet
+[    3.366724] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.366807] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.369307] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.369309] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.369316] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.369317] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.369346] msm_vidc:  err: This control 980928 is not supported yet
+[    3.370555] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.370636] msm_vidc: info: Opening video instance: 0000000000000000, 0
+[    3.371689] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.371691] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.371697] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.371699] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.372064] msm_vidc:  err: This control 980927 is not supported yet
+[    3.372736] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.372808] msm_vidc: info: Opening video instance: 0000000000000000, 0
+[    3.373440] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.373442] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.373448] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.373450] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.373664] msm_vidc:  err: This control 980927 is not supported yet
+[    3.374432] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.374496] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.376705] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.376707] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.376713] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.376715] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.376737] msm_vidc:  err: This control 980928 is not supported yet
+[    3.378425] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.378532] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.380660] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.380662] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.380668] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.380670] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.380701] msm_vidc:  err: This control 980928 is not supported yet
+[    3.381818] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.381897] msm_vidc: info: Opening video instance: 0000000000000000, 0
+[    3.382530] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.382532] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.382538] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.382540] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.382783] msm_vidc:  err: This control 980927 is not supported yet
+[    3.383386] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.383457] msm_vidc: info: Opening video instance: 0000000000000000, 0
+[    3.384215] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.384217] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.384223] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.384225] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.384448] msm_vidc:  err: This control 980927 is not supported yet
+[    3.385052] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.385150] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.386051] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.386054] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.386059] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.386061] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.387095] msm_vidc:  err: This control 980928 is not supported yet
+[    3.387922] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.388000] msm_vidc: info: Opening video instance: 0000000000000000, 0
+[    3.389178] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.389181] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.389187] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.389189] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.389461] msm_vidc:  err: This control 980927 is not supported yet
+[    3.390134] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.390217] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.391079] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.391081] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.391087] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.391088] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.391116] msm_vidc:  err: This control 980928 is not supported yet
+[    3.392049] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.392125] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[    3.393147] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[    3.393150] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.393156] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[    3.393157] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[    3.393185] msm_vidc:  err: This control 980928 is not supported yet
+[    3.393976] msm_vidc: info: Closed video instance: 0000000000000000
+[    3.395441] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[19][icp][0] comp[40000000], comp_ab[40000000], uncomp[40000000]
+[    3.396851] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[18][bps][0] comp[1024], comp_ab[40000000], uncomp[1024]
+[    3.397482] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[14][ipe][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    3.398476] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[15][ipe][1] comp[1024], comp_ab[1024], uncomp[1024]
+[    3.402682] ueventd: firmware: loading 'CAMERA_ICP.elf' for '/devices/platform/soc/ac00000.qcom,a5/firmware/CAMERA_ICP.elf'
+[    3.412273] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b24 took 94ms
+[    3.413938] ueventd: firmware: loading 'modem.b25' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b25'
+[    3.422234] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b25 took 8ms
+[    3.423278] ueventd: firmware: loading 'modem.b26' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b26'
+[    3.429215] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b26 took 5ms
+[    3.430547] ueventd: firmware: loading 'modem.b27' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b27'
+[    3.430873] ueventd: loading /devices/platform/soc/ac00000.qcom,a5/firmware/CAMERA_ICP.elf took 28ms
+[    3.442232] CAM_INFO: CAM-ICP: cam_icp_mgr_process_dbg_buf: 1922 FW_DBG:CICP_FW_E : HFI  :QC_IMAGE_VERSION_STRING=CICP.FW.1.0-00064,OEM_IMAGE_VERSION_STRING=CRM,BUILD_TIME: Feb  5 2019 21:45:06,CACHE_ENABLED at icphostinterface.c:636
+[    3.442244] CAM_INFO: CAM-ICP: cam_icp_mgr_process_dbg_buf: 1922 FW_DBG:CICP_FW_E : HFI  :ELF variant: CACHE-ENABLED:API_V1::USE_CDM_1_0: , API version: 0x100002e at icphostinterface.c:637
+[    3.442276] CAM_INFO: CAM-ICP: cam_icp_mgr_hw_open: 3091 FW download done successfully
+[    3.447588] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b27 took 17ms
+[    3.449369] ueventd: firmware: loading 'modem.b28' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b28'
+[    3.456845] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b28 took 7ms
+[    3.458765] ueventd: firmware: loading 'modem.b29' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b29'
+[    3.460773] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b29 took 2ms
+[    3.462108] ueventd: firmware: loading 'modem.b30' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b30'
+[    3.465824] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b30 took 3ms
+[    3.467638] ueventd: firmware: loading 'modem.b31' for '/devices/platform/soc/4080000.qcom,mss/firmware/modem.b31'
+[    3.470128] iaxxx-dev iaxxx_misc: action 1
+[    3.470444] iaxxx-odsp-celldrv iaxxx-odsp-celldrv: Enter :iaxxx_odsp_dev_probe
+[    3.470615] iaxxx-odsp-celldrv iaxxx-odsp-celldrv: ODSP device cdev initialized.
+[    3.471137] populate_snd_card_dailinks: sm8150 sound card
+[    3.471188] iaxxx : producer_thread:722, producer_thread: producer thread wait for start\x0a
+[    3.471727] sm8150-asoc-snd soc:qcom,msm-audio-apr:snd_8150: msm_init_wsa_dev: wsa-max-devs property missing in DT /soc/qcom,msm-audio-apr/snd_8150, ret = -22
+[    3.472988] iaxxx-spi spi5.0: Efuse Boot0 Val 0xd2020101
+[    3.472995] iaxxx-spi spi5.0: Int OSC TRIM programmed: 1, osc calibration val: 0x69
+[    3.472999] iaxxx-spi spi5.0: iaxxx_get_efuse_boot_values() chip Layout Rev(B)
+[    3.473003] iaxxx-spi spi5.0: iaxxx_get_efuse_boot_values: cannot recognize revision
+[    3.473080] iaxxx-spi spi5.0: Efuse Boot1 Val 0x89
+[    3.473084] iaxxx-spi spi5.0: LDO_BG_TRIM: 1, LDO_BG_TRIM_DATA val: 0x09
+[    3.473087] iaxxx-spi spi5.0: LDO_0_TRIM: 0, LDO_1_TRIM: 0
+[    3.473853] ueventd: loading /devices/platform/soc/4080000.qcom,mss/firmware/modem.b31 took 6ms
+[    3.588000] iaxxx-spi spi5.0: addr 0x58018bb0 size 0x15e0
+[    3.588007] iaxxx-spi spi5.0: addr 0x5801c220 size 0x15e0
+[    3.588010] iaxxx-spi spi5.0: addr 0x5801a760 size 0x15e0
+[    3.588013] iaxxx-spi spi5.0: addr 0x5801a1a8 size 0x4b0
+[    3.588015] iaxxx-spi spi5.0: addr 0x5801d818 size 0x4b0
+[    3.588017] iaxxx-spi spi5.0: addr 0x5801bd58 size 0x4b0
+[    3.588020] iaxxx-spi spi5.0: addr 0x0 size 0x8000
+[    3.588022] iaxxx-spi spi5.0: addr 0x8000 size 0x8000
+[    3.588024] iaxxx-spi spi5.0: addr 0x10000 size 0x2000
+[    3.588026] iaxxx-spi spi5.0: addr 0x0 size 0xff
+[    3.588029] iaxxx-spi spi5.0: iaxxx_fw_update_work: done
+[    3.588216] iaxxx-spi spi5.0: IAXXX_AO_OSC_CTRL_ADDR: 0x169
+[    3.589738] iaxxx-dev iaxxx_misc: action 2
+[    3.624305] iaxxx-codec iaxxx-codec: iaxxx_codec_probe
+[    3.653395] faceauth: Successfully register link listener for faceauth driver
+[    3.671850] msm_audrx_init: dev_name:soc:qcom,msm-dai-q6:qcom,msm-dai-q6-sb-0-rx
+[    3.684355] sm8150-asoc-snd soc:qcom,msm-audio-apr:snd_8150: ASoC: no source widget found for MCLK
+[    3.684362] sm8150-asoc-snd soc:qcom,msm-audio-apr:snd_8150: ASoC: Failed to add route MCLK -> direct -> AIF4 VI
+[    3.736647] sm8150-asoc-snd soc:qcom,msm-audio-apr:snd_8150: Sound card sm8150-iaxxx-flame-snd-card registered
+[    3.803075] init: Received control message 'start' for 'adbd' from pid: 859 (/system/bin/usbd)
+[    3.803179] init: starting service 'adbd'...
+[    3.805047] init: Service 'usbd' (pid 859) exited with status 0
+[    3.806435] init: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[    3.810066] binder: undelivered transaction 833, process died.
+[    3.811205] subsys-pil-tz 4080000.qcom,mss: modem: Brought out of reset
+[    3.845153] read descriptors
+[    3.845248] read strings
+[    3.858434] subsys-pil-tz 4080000.qcom,mss: Subsystem error monitoring/handling services are up
+[    3.858450] subsys-pil-tz 4080000.qcom,mss: modem: Power/Clock ready interrupt received
+[    3.860665] ipa-wan ipa3_lcl_mdm_ssr_notifier_cb:2975 IPA received MPSS AFTER_POWERUP
+[    3.860673] ipa ipa3_odl_pipe_open:334 adpl pipe not configured
+[    3.860676] ipa-wan ipa3_lcl_mdm_ssr_notifier_cb:2980 IPA AFTER_POWERUP handling is complete
+[    3.862529] rmt_storage:INFO:rmt_storage_open_cb: Processing: Open Request for /boot/modem_fs1!
+[    3.863515] service-notifier: service_notifier_new_server: Connection established between QMI handle and 180 service
+[    3.863524] sysmon-qmi: ssctl_new_server: Connection established between QMI handle and modem's SSCTL service
+[    3.863728] rmt_storage:INFO:rmt_storage_open_cb: Processing: Open Request for /boot/modem_fs2!
+[    3.864467] rmt_storage:INFO:rmt_storage_open_cb: Processing: Open Request for /boot/modem_fsg!
+[    3.866395] rmt_storage:INFO:rmt_storage_open_cb: Processing: Open Request for /boot/modem_fsc!
+[    3.867683] rmt_storage:ERR:rmt_storage_alloc_buff_cb: elapsed time(ms) is 3867 < 5000
+[    3.867696] rmt_storage:INFO:kmsg_disable: Disabling KMSG-LOGS!
+[    3.908842] init: Received control message 'interface_start' for 'android.frameworks.sensorservice@1.0::ISensorManager/default' from pid: 560 (/system/bin/hwservicemanager)
+[    3.908863] init: Could not find 'android.frameworks.sensorservice@1.0::ISensorManager/default' for ctl.interface_start
+[    4.215962] Sending QMI_IPA_INIT_MODEM_DRIVER_REQ_V01
+[    4.237239] ipa-wan ipa3_handle_indication_req:117 not send indication
+[    4.241238] ipa ipa3_uc_wdi_event_log_info_handler:375 WDI stats ofst=0x47150
+[    4.241254] ipa ipa3_uc_ntn_event_log_info_handler:40 NTN stats ofst=0x470e0
+[    4.244130] QMI_IPA_INIT_MODEM_DRIVER_REQ_V01 response received
+[    4.244481] ipa ipa3_uc_send_cmd_64b_param:679 Recevied status 0, Expected status 2
+[    4.250391] diag: In diag_send_peripheral_buffering_mode, buffering flag not set for 0
+[    4.264896] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 560 (/system/bin/hwservicemanager)
+[    4.264915] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    4.326729] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 560 (/system/bin/hwservicemanager)
+[    4.326753] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    4.412069] msm_qti_pp_get_rms_value_control, back not active to query rms be_idx:3
+[    4.412238] android_work: did not send uevent (0 0 0000000000000000)
+[    4.422353] core_get_license_status: cmdrsp_license_result.result = 0x15 for module 0x131ff
+[    4.511190] google_charger: usbchg=USB typec=C usbv=4645 usbc=914 usbMv=5000 usbMc=500
+[    4.511268] sm8150_bms: MSC_PCS chg_state=f9501030001 [0x1:1:3:3989:0] chg= 
+[    4.511274] google_battery: MSC_DIN chg_state=f9501030001 f=0x1 chg_s=Not Charging chg_t=None vchg=3989 icl=0
+[    4.516330] google_battery: MSC_DSG vbatt_idx:0->0 vbatt=4102187 ibatt=694687 fv_uv=4200000 cv_cnt=3 ov_cnt=0
+[    4.516338] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:0->0, fv=4200000->4200000, cc_max=2825000
+[    4.516341] google_battery: MSC_VOTE fv_uv=4200000 cc_max=2825000 update_interval=30000
+[    4.516352] google_charger: MSC_CHG fv_uv=4200000, cc_max=2800000, rerun in 2000 ms (0)
+[    4.516397] healthd: battery l=98 v=4102 t=26.5 h=2 st=4 c=694 fc=2706000 cc=13 chg=
+[    4.770149] msm_qti_pp_get_rms_value_control, back not active to query rms be_idx:3
+[    4.783666] core_get_license_status: cmdrsp_license_result.result = 0x15 for module 0x131ff
+[    4.859242] msm_pcm_path_latency_ctl_get substream runtime not found
+[    4.860627] msm_pcm_path_latency_ctl_get substream runtime not found
+[    4.861856] msm_pcm_path_latency_ctl_get substream runtime not found
+[    4.864852] msm_pcm_path_latency_ctl_get substream runtime not found
+[    4.868057] msm_pcm_path_latency_ctl_get substream runtime not found
+[    4.869505] msm-dwc3 a600000.ssusb: Avail curr from USB = 100
+[    4.871684] msm_pcm_path_latency_ctl_get substream runtime not found
+[    4.884649] msm_pcm_path_latency_ctl_get substream runtime not found
+[    4.886008] msm_pcm_path_latency_ctl_get substream runtime not found
+[    4.909455] init: Received control message 'interface_start' for 'android.frameworks.sensorservice@1.0::ISensorManager/default' from pid: 560 (/system/bin/hwservicemanager)
+[    4.909501] init: Could not find 'android.frameworks.sensorservice@1.0::ISensorManager/default' for ctl.interface_start
+[    4.949680] android_work: sent uevent USB_STATE=CONNECTED
+[    4.954104] android_work: sent uevent USB_STATE=DISCONNECTED
+[    5.057577] android_work: sent uevent USB_STATE=CONNECTED
+[    5.059873] configfs-gadget gadget: high-speed config #1: b
+[    5.059938] msm-dwc3 a600000.ssusb: Avail curr from USB = 500
+[    5.060191] android_work: sent uevent USB_STATE=CONFIGURED
+[    5.105962] healthd: battery l=98 v=4102 t=26.5 h=2 st=4 c=694 fc=2706000 cc=13 chg=u
+[    5.143982] msm_pcm_path_latency_ctl_get substream runtime not found
+[    5.144908] msm_pcm_path_latency_ctl_get substream runtime not found
+[    5.145736] msm_pcm_path_latency_ctl_get substream runtime not found
+[    5.147721] msm_pcm_path_latency_ctl_get substream runtime not found
+[    5.149688] msm_pcm_path_latency_ctl_get substream runtime not found
+[    5.151935] msm_pcm_path_latency_ctl_get substream runtime not found
+[    5.160481] msm_pcm_path_latency_ctl_get substream runtime not found
+[    5.161357] msm_pcm_path_latency_ctl_get substream runtime not found
+[    5.265726] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 560 (/system/bin/hwservicemanager)
+[    5.265746] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    5.282461] Cirrus SP Enable: Config ENABLE
+[    5.282469] port = 0x9020 module = 0x10027053 param = 0x10002001 length = 4
+[    5.282472] afe port is not cirrus's topology
+[    5.285637] type=1400 audit(1655394492.481:84): avc: denied { read } for comm="android.hardwar" name="u:object_r:config_prop:s0" dev="tmpfs" ino=3725 scontext=u:r:hal_face_default:s0 tcontext=u:object_r:config_prop:s0 tclass=file permissive=0 b/134894179
+[    5.285672] type=1400 audit(1655394494.511:85): avc: denied { read } for comm="HwBinder:797_2" name="u:object_r:audio_prop:s0" dev="tmpfs" ino=3715 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:audio_prop:s0 tclass=file permissive=0
+[    5.327188] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 560 (/system/bin/hwservicemanager)
+[    5.327211] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    5.392518] google_charger: usbchg=USB typec=C usbv=4879 usbc=485 usbMv=5000 usbMc=500
+[    5.392605] sm8150_bms: MSC_PCS chg_state=1f40f5601030011 [0x11:1:3:3926:500] chg=u
+[    5.392610] google_battery: MSC_DIN chg_state=1f40f5601030011 f=0x11 chg_s=Not Charging chg_t=None vchg=3926 icl=500
+[    5.395162] google_battery: MSC_DSG vbatt_idx:0->0 vbatt=4102187 ibatt=694687 fv_uv=4200000 cv_cnt=3 ov_cnt=0
+[    5.395169] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:0->0, fv=4200000->4200000, cc_max=2825000
+[    5.395173] google_battery: MSC_VOTE fv_uv=4200000 cc_max=2825000 update_interval=30000
+[    5.395187] google_charger: MSC_CHG fv_uv=4200000, cc_max=2800000, rerun in 2000 ms (0)
+[    5.404197] healthd: battery l=98 v=4102 t=26.5 h=2 st=4 c=694 fc=2706000 cc=13 chg=u
+[    5.520391] sm8150_bms: MSC_PCS chg_state=1f40f5603010005 [0x5:3:1:3926:500] chg=u
+[    5.524579] google_charger: usbchg=USB typec=C usbv=4879 usbc=487 usbMv=5000 usbMc=500
+[    5.524713] sm8150_bms: MSC_PCS chg_state=1f40f5603010005 [0x5:3:1:3926:500] chg=u
+[    5.524748] google_battery: MSC_DIN chg_state=1f40f5603010005 f=0x5 chg_s=Charging chg_t=Fast vchg=3926 icl=500
+[    5.526132] healthd: battery l=98 v=4102 t=26.5 h=2 st=4 c=694 fc=2706000 cc=13 chg=u
+[    5.527851] google_battery: MSC_DSG vbatt_idx:0->0 vbatt=4102187 ibatt=694687 fv_uv=4200000 cv_cnt=3 ov_cnt=0
+[    5.527865] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:0->0, fv=4200000->4200000, cc_max=2825000
+[    5.527872] google_battery: MSC_VOTE fv_uv=4200000 cc_max=2825000 update_interval=30000
+[    5.527898] google_charger: MSC_CHG fv_uv=4200000, cc_max=2800000, rerun in 30000 ms (0)
+[    5.554653] left calibration 10412
+[    5.554661] right calibration 9857
+[    5.556399] ueventd: firmware: loading 'crus_sp_config_flame_tx.bin' for '/devices/platform/soc/soc:qcom,msm-pcm-routing/firmware/crus_sp_config_flame_tx.bin'
+[    5.557548] Sending TX config
+[    5.557556] port = 0x9021 module = 0x10027053 param = 0xa1bf0a length = 4
+[    5.557559] afe port is not cirrus's topology
+[    5.557560] port = 0x9021 module = 0x10027053 param = 0xa1bf0a length = 4
+[    5.557564] afe port is not cirrus's topology
+[    5.559123] ueventd: loading /devices/platform/soc/soc:qcom,msm-pcm-routing/firmware/crus_sp_config_flame_tx.bin took 2ms
+[    5.559547] ueventd: firmware: loading 'crus_sp_config_flame_rx.bin' for '/devices/platform/soc/soc:qcom,msm-pcm-routing/firmware/crus_sp_config_flame_rx.bin'
+[    5.563382] Sending RX config
+[    5.563390] port = 0x9021 module = 0x10027053 param = 0xa1bf0a length = 4
+[    5.563393] afe port is not cirrus's topology
+[    5.563394] port = 0x9021 module = 0x10027053 param = 0xa1bf0a length = 4
+[    5.563397] afe port is not cirrus's topology
+[    5.564095] ueventd: loading /devices/platform/soc/soc:qcom,msm-pcm-routing/firmware/crus_sp_config_flame_rx.bin took 4ms
+[    5.573880] type=1400 audit(1655394494.511:85): avc: denied { read } for comm="HwBinder:797_2" name="u:object_r:audio_prop:s0" dev="tmpfs" ino=3715 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:audio_prop:s0 tclass=file permissive=0
+[    5.573990] type=1400 audit(1655394494.801:86): avc: denied { read } for comm="HwBinder:797_2" name="u:object_r:default_prop:s0" dev="tmpfs" ino=3749 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+[    5.589572] type=1400 audit(1655394494.801:87): avc: denied { read } for comm="HwBinder:797_2" name="u:object_r:default_prop:s0" dev="tmpfs" ino=3749 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:default_prop:s0 tclass=file permissive=0
+[    5.589605] type=1400 audit(1655394494.814:88): avc: denied { read } for comm="audio@2.0-servi" name="audio_effects.conf" dev="dm-0" ino=579 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=0
+[    5.613793] init: Received control message 'start' for 'idmap2d' from pid: 1342 (system_server)
+[    5.668103] healthd: battery l=98 v=4102 t=26.5 h=2 st=4 c=694 fc=2706000 cc=13 chg=u
+[    5.705743] healthd: battery l=98 v=4102 t=26.5 h=2 st=4 c=694 fc=2706000 cc=13 chg=u
+[    5.713649] healthd: battery l=98 v=4102 t=26.5 h=2 st=4 c=694 fc=2706000 cc=13 chg=u
+[    5.752995] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[5][cci][1] comp[1024], comp_ab[1024], uncomp[1024]
+[    5.753388] CAM_INFO: CAM-SENSOR: cam_sensor_driver_cmd: 1032 Probe success,slot:0,slave_addr:0x20,sensor_id:0x363
+[    5.753490] CAM_INFO: CAM-SENSOR: getFWVersion: 380 ois_fwver=0x27, vcm_fwver=0x27\x0a
+[    5.785390] init: Received control message 'interface_start' for 'android.hardware.input.classifier@1.0::IInputClassifier/default' from pid: 560 (/system/bin/hwservicemanager)
+[    5.785711] init: starting service 'vendor.input.classifier-1-0'...
+[    5.788143] init: Received control message 'interface_start' for 'android.hardware.input.classifier@1.0::IInputClassifier/default' from pid: 560 (/system/bin/hwservicemanager)
+[    5.799602] init: processing action (sys.sysctl.extra_free_kbytes=*) from (/init.rc:812)
+[    5.831133] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    5.831641] CAM_INFO: CAM-SENSOR: cam_sensor_driver_cmd: 1032 Probe success,slot:2,slave_addr:0x20,sensor_id:0x520
+[    5.887216] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[5][cci][1] comp[1024], comp_ab[1024], uncomp[1024]
+[    5.887651] CAM_INFO: CAM-SENSOR: cam_sensor_driver_cmd: 1032 Probe success,slot:1,slave_addr:0x34,sensor_id:0x481
+[    5.887761] CAM_INFO: CAM-SENSOR: getFWVersion: 380 ois_fwver=0x27, vcm_fwver=0x27\x0a
+[    5.941844] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    5.942807] CAM_INFO: CAM-SENSOR: cam_sensor_driver_cmd: 1032 Probe success,slot:3,slave_addr:0xe4,sensor_id:0x7750
+[    5.982457] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    5.982950] CAM_INFO: CAM-SENSOR: cam_sensor_driver_cmd: 1032 Probe success,slot:4,slave_addr:0xe0,sensor_id:0x7750
+[    5.987081] read descriptors
+[    5.987119] read strings
+[    5.987150] read descriptors
+[    5.987179] read strings
+[    5.991218] acc_open
+[    5.991227] acc_release
+[    6.056035] init: processing action (vendor.ims.DATA_DAEMON_STATUS=1) from (/vendor/etc/init/hw/init.sm8150.rc:773)
+[    6.056128] init: Sending signal 9 to service 'vendor.ims_rtp_daemon' (pid 889) process group...
+[    6.061370] libprocessgroup: Successfully killed process cgroup uid 1001 pid 889 in 5ms
+[    6.061524] init: Service 'vendor.ims_rtp_daemon' (pid 889) received signal 9
+[    6.076375] ip_local_port_range: prefer different parity for start/end values.
+[    6.086024] init: Received control message 'stop' for 'vendor.imsrcsservice' from pid: 1019 (/system/vendor/bin/imsdatadaemon)
+[    6.086039] init: Sending signal 9 to service 'vendor.imsrcsservice' (pid 888) process group...
+[    6.091427] libprocessgroup: Successfully killed process cgroup uid 1001 pid 888 in 5ms
+[    6.091723] init: Service 'vendor.imsrcsservice' (pid 888) received signal 9
+[    6.092548] init: Received control message 'start' for 'vendor.imsrcsservice' from pid: 1019 (/system/vendor/bin/imsdatadaemon)
+[    6.092716] init: starting service 'vendor.imsrcsservice'...
+[    6.102046] init: Received control message 'stop' for 'vendor.imsrcsservice' from pid: 1019 (/system/vendor/bin/imsdatadaemon)
+[    6.102063] init: Sending signal 9 to service 'vendor.imsrcsservice' (pid 1576) process group...
+[    6.107292] libprocessgroup: Successfully killed process cgroup uid 1001 pid 1576 in 5ms
+[    6.107768] init: Service 'vendor.imsrcsservice' (pid 1576) received signal 9
+[    6.107967] init: Received control message 'start' for 'vendor.imsrcsservice' from pid: 1019 (/system/vendor/bin/imsdatadaemon)
+[    6.108080] init: starting service 'vendor.imsrcsservice'...
+[    6.137683] Wifi Turning On from UI
+[    6.249109] service-notifier: root_service_service_ind_cb: Indication received from msm/modem/wlan_pd, state: 0x1fffffff, trans-id: 1
+[    6.249254] service-notifier: send_ind_ack: Indication ACKed for transid 1, service msm/modem/wlan_pd, instance 180!
+[    6.250970] icnss_qmi: QMI Server Connected: state: 0x980
+[    6.266121] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 560 (/system/bin/hwservicemanager)
+[    6.266172] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    6.328169] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 560 (/system/bin/hwservicemanager)
+[    6.328218] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    6.347512] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[5][cci][1] comp[1024], comp_ab[1024], uncomp[1024]
+[    6.413339] ipa-wan ipa3_wwan_ioctl:1856 dev(rmnet_data0) register to IPA
+[    6.745763] init: processing action (persist.sys.theme=1) from (/vendor/etc/init/hw/init.sm8150.rc:968)
+[    6.746152] init: starting service 'vendor.theme_clear'...
+[    6.752770] init: Received control message 'interface_start' for 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' from pid: 560 (/system/bin/hwservicemanager)
+[    6.752794] init: Could not find 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' for ctl.interface_start
+[    6.770751] init: Service 'vendor.theme_clear' (pid 1869) exited with status 0
+[    6.784712] init: Received control message 'interface_start' for 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' from pid: 560 (/system/bin/hwservicemanager)
+[    6.784733] init: Could not find 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' for ctl.interface_start
+[    6.787064] init: Received control message 'interface_start' for 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' from pid: 560 (/system/bin/hwservicemanager)
+[    6.787085] init: Could not find 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' for ctl.interface_start
+[    7.122166] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    7.214693] init: Received control message 'interface_start' for 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' from pid: 560 (/system/bin/hwservicemanager)
+[    7.214715] init: Could not find 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' for ctl.interface_start
+[    7.218721] init: Received control message 'interface_start' for 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' from pid: 560 (/system/bin/hwservicemanager)
+[    7.218745] init: Could not find 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' for ctl.interface_start
+[    7.235175] Connection established with the WDA Service
+[    7.235338] Connection established with the DFC Service
+[    7.266523] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 560 (/system/bin/hwservicemanager)
+[    7.266569] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    7.328706] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 560 (/system/bin/hwservicemanager)
+[    7.328753] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    7.382698] init: Received control message 'interface_start' for 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' from pid: 560 (/system/bin/hwservicemanager)
+[    7.382718] init: Could not find 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' for ctl.interface_start
+[    7.447806] init: Received control message 'interface_start' for 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' from pid: 560 (/system/bin/hwservicemanager)
+[    7.447830] init: Could not find 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' for ctl.interface_start
+[    7.452739] init: Received control message 'interface_start' for 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' from pid: 560 (/system/bin/hwservicemanager)
+[    7.452999] init: Could not find 'android.hardware.biometrics.face@1.0::IBiometricsFace/default' for ctl.interface_start
+[    7.520420] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[5][cci][1] comp[1024], comp_ab[1024], uncomp[1024]
+[    7.546467] init: Service 'bootanim' (pid 603) exited with status 0
+[    7.716013] dsi_backlight_update_status:443: req:96 bl:1537 state:0x0
+[    7.717941] init: processing action (sys.boot_completed=1) from (/init.rc:803)
+[    7.718332] init: starting service 'exec 14 (/bin/rm -rf /data/per_boot)'...
+[    7.718959] init: SVC_EXEC service 'exec 14 (/bin/rm -rf /data/per_boot)' pid 2317 (uid 1000 gid 1000+0 context default) started; waiting...
+[    7.722963] sdcardfs version 2.0
+[    7.722971] sdcardfs: dev_name -> /data/media
+[    7.722974] sdcardfs: options -> fsuid=1023,fsgid=1023,multiuser,derive_gid,default_normal,unshared_obb,mask=6,userid=0,gid=1015
+[    7.722977] sdcardfs: mnt -> 0000000000000000
+[    7.723235] sdcardfs: mounted on top of /data/media type f2fs
+[    7.724338] Remount options were mask=23,gid=9997 for vfsmnt 0000000000000000.
+[    7.724347] sdcardfs : options - debug:1
+[    7.724349] sdcardfs : options - gid:9997
+[    7.724351] sdcardfs : options - mask:23
+[    7.725301] Remount options were mask=7,gid=9997 for vfsmnt 0000000000000000.
+[    7.725307] sdcardfs : options - debug:1
+[    7.725310] sdcardfs : options - gid:9997
+[    7.725312] sdcardfs : options - mask:7
+[    7.726133] Remount options were mask=7,gid=9997 for vfsmnt 0000000000000000.
+[    7.726140] sdcardfs : options - debug:1
+[    7.726143] sdcardfs : options - gid:9997
+[    7.726145] sdcardfs : options - mask:7
+[    7.727442] dsi_backlight_update_status:443: req:94 bl:1505 state:0x0
+[    7.734166] init: Service 'exec 14 (/bin/rm -rf /data/per_boot)' (pid 2317) exited with status 0 waiting took 0.015000 seconds
+[    7.734492] init: Setting per_boot key on /data/per_boot
+[    7.734529] init: Setting policy on /data/per_boot
+[    7.734564] init: Policy for /data/per_boot set to a726238a46695292 modes 127/4
+[    7.734582] init: processing action (sys.boot_completed=1) from (/vendor/etc/init/hw/init.sm8150.rc:545)
+[    7.738685] dsi_backlight_update_status:443: req:92 bl:1473 state:0x0
+[    7.749754] dsi_backlight_update_status:443: req:90 bl:1441 state:0x0
+[    7.761078] dsi_backlight_update_status:443: req:88 bl:1409 state:0x0
+[    7.766838] zram: setup backing device /dev/block/loop9
+[    7.766871] init: [libfs_mgr]Success to set /dev/block/loop9 to /sys/block/zram0/backing_dev
+[    7.770897] zram0: detected capacity change from 0 to 2147483648
+[    7.771782] dsi_backlight_update_status:443: req:86 bl:1377 state:0x0
+[    7.778140] mkswap: Swapspace size: 2097148k, UUID=f273d5bd-4339-4231-a3e8-5c89299513e0
+[    7.778862] Adding 2097148k swap on /dev/block/zram0.  Priority:-2 extents:1 across:2097148k SS
+[    7.779343] init: starting service 'vendor.ims_rtp_daemon'...
+[    7.783203] dsi_backlight_update_status:443: req:84 bl:1345 state:0x0
+[    7.785789] selinux: SELinux: Skipping restorecon on directory(/data/system_ce/0)\x0a
+[    7.787682] init: Async property child exited with status 0
+[    7.795185] dsi_backlight_update_status:443: req:82 bl:1313 state:0x0
+[    7.806528] dsi_backlight_update_status:443: req:80 bl:1281 state:0x0
+[    7.806647] type=1400 audit(1655394494.814:88): avc: denied { read } for comm="audio@2.0-servi" name="audio_effects.conf" dev="dm-0" ino=579 scontext=u:r:hal_audio_default:s0 tcontext=u:object_r:system_file:s0 tclass=file permissive=0
+[    7.806677] type=1400 audit(1655394497.031:89): avc: denied { search } for comm="ims_rtp_daemon" name="soc0" dev="sysfs" ino=72658 scontext=u:r:hal_imsrtp:s0 tcontext=u:object_r:sysfs_soc:s0 tclass=dir permissive=0
+[    7.807395] init: processing action (sys.boot_completed=1) from (/vendor/etc/init/hw/init.sm8150.rc:664)
+[    7.807502] init: processing action (sys.boot_completed=1 && sys.logbootcomplete=1) from (/system/etc/init/bootstat.rc:78)
+[    7.807790] init: starting service 'exec 15 (/system/bin/bootstat --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)'...
+[    7.807900] selinux: SELinux: Skipping restorecon on directory(/data/vendor_ce/0)\x0a
+[    7.808398] init: processing action (sys.boot_completed=1) from (/system/etc/init/flags_health_check.rc:7)
+[    7.808945] init: processing action (sys.boot_completed=1) from (/system/etc/init/logd.rc:32)
+[    7.809233] init: starting service 'logd-auditctl'...
+[    7.809950] init: Async property child exited with status 0
+[    7.810007] init: processing action (sys.boot_completed=1 && sys.wifitracing.started=0) from (/system/etc/init/wifi-events.rc:20)
+[    7.817453] dsi_backlight_update_status:443: req:78 bl:1249 state:0x0
+[    7.825007] init: Service 'exec 15 (/system/bin/bootstat --record_boot_complete --record_boot_reason --record_time_since_factory_reset -l)' (pid 2337) exited with status 0
+[    7.825082] init: Service 'logd-auditctl' (pid 2338) exited with status 0
+[    7.828299] dsi_backlight_update_status:443: req:76 bl:1217 state:0x0
+[    7.829781] init: processing action (sys.boot_completed=1) from (/vendor/etc/init/init.sm8150.userdebug.rc:17)
+[    7.829907] selinux: SELinux: Skipping restorecon on directory(/data/misc_ce/0)\x0a
+[    7.829993] init: processing action (sys.boot_completed=1) from (/vendor/etc/init/init_dp.rc:1)
+[    7.830467] init: starting service 'init_dp'...
+[    7.831292] init: processing action (vendor.setup.power=1) from (/vendor/etc/init/hw/init.sm8150.power.rc:25)
+[    7.832460] init: Async property child exited with status 0
+[    7.840126] dsi_backlight_update_status:443: req:74 bl:1185 state:0x0
+[    7.850944] dsi_backlight_update_status:443: req:72 bl:1153 state:0x0
+[    7.856109] devfreq-simple-dev soc:qcom,cdsp-cdsp-l3-lat: Successfully started CDSP L3 governor
+[    7.859259] init: processing action (sys.user.0.ce_available=true) from (/vendor/etc/init/init-ramoops.rc:1)
+[    7.860219] init: starting service 'vendor.ramoops_sh'...
+[    7.862363] dsi_backlight_update_status:443: req:70 bl:1121 state:0x0
+[    7.873161] dsi_backlight_update_status:443: req:68 bl:1089 state:0x0
+[    7.884741] dsi_backlight_update_status:443: req:66 bl:1057 state:0x0
+[    7.896090] dsi_backlight_update_status:443: req:64 bl:1025 state:0x0
+[    7.907187] dsi_backlight_update_status:443: req:62 bl:993 state:0x0
+[    7.909213] ramoops: Failed to decrypt -74
+[    7.915467] init: processing action (vendor.ramoops.decrypted=true) from (/vendor/etc/init/init-ramoops.rc:6)
+[    7.918167] dsi_backlight_update_status:443: req:60 bl:961 state:0x0
+[    7.923370] init: Service 'vendor.ramoops_sh' (pid 2354) exited with status 0
+[    7.929204] dsi_backlight_update_status:443: req:58 bl:929 state:0x0
+[    7.940940] dsi_backlight_update_status:443: req:56 bl:897 state:0x0
+[    7.951365] dsi_backlight_update_status:443: req:54 bl:865 state:0x0
+[    7.959226] init: Service 'init_dp' (pid 2341) exited with status 0
+[    7.962272] dsi_backlight_update_status:443: req:52 bl:833 state:0x0
+[    7.974853] dsi_backlight_update_status:443: req:50 bl:801 state:0x0
+[    7.986171] dsi_backlight_update_status:443: req:48 bl:769 state:0x0
+[    7.997325] dsi_backlight_update_status:443: req:46 bl:737 state:0x0
+[    8.008773] dsi_backlight_update_status:443: req:44 bl:705 state:0x0
+[    8.019895] dsi_backlight_update_status:443: req:42 bl:674 state:0x0
+[    8.029790] dsi_backlight_update_status:443: req:40 bl:642 state:0x0
+[    8.042614] dsi_backlight_update_status:443: req:38 bl:610 state:0x0
+[    8.053820] dsi_backlight_update_status:443: req:36 bl:578 state:0x0
+[    8.064454] dsi_backlight_update_status:443: req:34 bl:546 state:0x0
+[    8.074921] dsi_backlight_update_status:443: req:32 bl:514 state:0x0
+[    8.086499] dsi_backlight_update_status:443: req:30 bl:482 state:0x0
+[    8.098024] dsi_backlight_update_status:443: req:28 bl:450 state:0x0
+[    8.109220] dsi_backlight_update_status:443: req:26 bl:418 state:0x0
+[    8.120954] dsi_backlight_update_status:443: req:24 bl:386 state:0x0
+[    8.268898] init: Received control message 'interface_start' for 'android.frameworks.cameraservice.service@2.0::ICameraService/default' from pid: 560 (/system/bin/hwservicemanager)
+[    8.268921] init: Could not find 'android.frameworks.cameraservice.service@2.0::ICameraService/default' for ctl.interface_start
+[    8.320591] iaxxx-spi spi5.0: Proc status 0x34
+[    8.328599] iaxxx-spi spi5.0: iaxxx_get_proc_pwr_status() SRB_PROC_ACTIVE_STATUS_ADDR: 40 pwr_status: 0x00000000
+[    8.328704] iaxxx-spi spi5.0: iaxxx_get_proc_pwr_status() SRB_DED_MEM_PWR_STATUS_ADDR: 56 mem_status: 0x00000010
+[    8.329358] init: Received control message 'interface_start' for 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' from pid: 560 (/system/bin/hwservicemanager)
+[    8.329461] init: Could not find 'android.hardware.camera.provider@2.4::ICameraProvider/internal/0' for ctl.interface_start
+[    8.336933] iaxxx-spi spi5.0: iaxxx_get_proc_pwr_status() SRB_PROC_ACTIVE_STATUS_ADDR: 8 pwr_status: 0x00000000
+[    8.337143] iaxxx-spi spi5.0: iaxxx_get_proc_pwr_status() SRB_DED_MEM_PWR_STATUS_ADDR: 40 mem_status: 0x00000020
+[    8.372122] st54j_se spi3.0: st54j_se_open: device_open = 1
+[    8.372145] st54j_se spi3.0: st54j_se_ioctl  Reset Request received!!
+[    8.377688] st54j_se spi3.0: st54j_se_ioctl sent Reset request on eSE
+[    8.410050] iaxxx-spi spi5.0: iaxxx_ext_clk_ctl: mclk_en 1, cancel 0
+[    8.410058] iaxxx-spi spi5.0: iaxxx_suspend_chip() chip put into sleep power mode
+[    8.410062] iaxxx-spi spi5.0: iaxxx_suspend_chip() Success
+[    8.427896] spi_geni a80000.spi: proto 1
+[    8.428372] spi_geni a80000.spi: tx_fifo 16 rx_fifo 16 tx_width 32
+[    8.474915] ### ST21NFC_SET_POLARITY_HIGH ###
+[    8.475375] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    8.516594] init: Received control message 'interface_start' for 'android.hardware.secure_element@1.0::ISecureElement/SIM2' from pid: 560 (/system/bin/hwservicemanager)
+[    8.516644] init: Could not find 'android.hardware.secure_element@1.0::ISecureElement/SIM2' for ctl.interface_start
+[    8.596430] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    8.713919] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    8.724984] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: enable safety ic funciton, safety_ic_owner 0
+[    8.725418] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: laser driver mode has been set to 0x2
+[    8.725544] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: Silego status: 0xc0
+[    8.730585] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: Silego under fault condition, irq: 299
+[    8.730599] CAM_INFO: CAM-CRM: cam_req_mgr_update_safety_ic_status: 639 change laser status from 0 to 2
+[    8.731186] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: disable safety ic function, safety_ic_owner: 0
+[    8.736289] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-flood@64: silego self test result: 1
+[    8.744843] CAM_INFO: CAM-CPAS: cam_cpas_hw_start: 1019 AXI client=[4][cci][0] comp[1024], comp_ab[1024], uncomp[1024]
+[    8.757243] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: enable safety ic funciton, safety_ic_owner 1
+[    8.757742] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: laser driver mode has been set to 0x2
+[    8.757866] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: Silego status: 0xc0
+[    8.762907] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: Silego under fault condition, irq: 299
+[    8.767911] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: disable safety ic function, safety_ic_owner: 1
+[    8.772188] lm36011 ac4a000.qcom,cci:qcom,cam-led-laser-dot@64: silego self test result: 1
+[    9.086092] icnss: WLAN FW is ready: 0xd87
+[    9.086195] qcom,rpmh-regulator soc:rpmh-regulator-ldoa7: TCS Busy, retrying RPMH message send
+[    9.087730] [kworker/u16:18][0x189ed78e][00:48:18.317330] wlan: [1291:I:HDD] hdd_soc_probe: 393: probing driver
+[    9.087748] [kworker/u16:18][0x189ed93a][00:48:18.317351] wlan: [1291:I:QDF] cds_smmu_mem_map_setup: 2803: SMMU S1 enabled
+[    9.089559] ueventd: firmware: loading 'wlan/qca_cld/WCNSS_qcom_cfg.ini' for '/devices/platform/soc/18800000.qcom,icnss/firmware/wlan!qca_cld!WCNSS_qcom_cfg.ini'
+[    9.090815] ueventd: loading /devices/platform/soc/18800000.qcom,icnss/firmware/wlan!qca_cld!WCNSS_qcom_cfg.ini took 1ms
+[    9.093010] [kworker/u16:18][0x18a063e4][00:48:18.322613] wlan: [1291:I:tdls] tdls_psoc_obj_create_notification: 68: TDLS obj attach to psoc successfully
+[    9.093035] [kworker/u16:18][0x18a065e2][00:48:18.322640] wlan: [1291:I:OBJMGR] wlan_objmgr_psoc_obj_create: 187: Created psoc 0
+[    9.093091] [kworker/u16:18][0x18a06a1a][00:48:18.322696] wlan: [1291:I:HDD] hdd_wlan_start_modules: 3012: Wlan transitioning (UNINITIALIZED -> CLOSED)
+[    9.093096] [kworker/u16:18][0x18a06a6f][00:48:18.322701] wlan: [1291:I:HDD] hdd_wlan_start_modules: 3016: Wlan transitioning (CLOSED -> ENABLED)
+[    9.093584] ipa ipa3_uc_reg_rdyCB:2834 bad parm. inout=0000000000000000 
+[    9.093606] [kworker/u16:18][0x18a09086][00:48:18.323209] wlan: [1291:W:HIF] hif_snoc_enable_bus: device_init_wakeup already done
+[    9.093618] [kworker/u16:18][0x18a0919a][00:48:18.323223] wlan: [1291:E:TXRX] hif_print_hal_shadow_register_cfg: CONFIG_SHADOW_V2 not defined\x0a
+[    9.142423] [kworker/u16:18][0x18aedbce][00:48:18.371999] wlan: [1291:I:HIF] hif_snoc_bus_configure: 188: expecting wake from ce 2, irq 165
+[    9.142463] [kworker/u16:18][0x18aee0ea][00:48:18.372067] wlan: [1291:E:QDF] cds_get_context: 1277: Module ID 66 context is Null
+[    9.143567] [kworker/u16:18][0x18af33b5][00:48:18.373171] wlan: [1291:E:QDF] cds_get_context: 1277: Module ID 66 context is Null
+[    9.143706] [kworker/u16:18][0x18af3e28][00:48:18.373310] wlan: [1291:F:WMA] WMA --> wmi_unified_attach - success
+[    9.147004] [kworker/u16:18][0x18b03570][00:48:18.376607] wlan: [1291:E:QDF] Target Ready! TX resource : 2 size:2184, MaxMsgsPerHTCBundle = 1
+[    9.147012] [kworker/u16:18][0x18b03625][00:48:18.376617] wlan: [1291:E:QDF] SVS Index : 1 TX : 0x100 : alloc:2
+[    9.148159] [kworker/u16:1][0x18b08c0d][00:48:18.377762] wlan: [77:I:WMA] wma_rx_service_ready_event: Firmware build version : 3202807f
+[    9.148168] [kworker/u16:1][0x18b08cd1][00:48:18.377772] wlan: [77:I:WMA] wma_rx_service_ready_event: Board id: 0, Board version: 11 0 0 0 0
+[    9.148207] [kworker/u16:1][0x18b08fc5][00:48:18.377812] wlan: [77:E:QDF] Num chain mask tables: 0\x0a
+[    9.148364] [kworker/u16:1][0x18b09b28][00:48:18.377964] wlan: [77:E:WMA] wma_update_supported_bands: wrong supported band
+[    9.148409] [kworker/u16:1][0x18b09eee][00:48:18.378014] wlan: [77:E:QDF] copy_fw_abi_version_tlv: INIT_CMD version: 1, 0, 0x5f414351, 0x4c4d, 0x0, 0x0
+[    9.173578] [kworker/u16:1][0x18b7fe87][00:48:18.403182] wlan: [77:E:QDF] ready_extract_init_status_tlv:0\x0a
+[    9.173698] [kworker/u16:1][0x18b8079d][00:48:18.403303] wlan: [77:I:dfs] WLAN_DEBUG_DFS_ALWAYS : wlan_dfs_pdev_obj_create_notification: 356: dfs_offload 0
+[    9.173875] [kworker/u16:1][0x18b814dd][00:48:18.403480] wlan: [77:E:dfs] WLAN_DEBUG_DFS_ALWAYS : dfs_init_radar_filters: 249: Unknown dfs domain 0
+[    9.173896] null_get_capability: 1518: SPECTRAL : get_capability not registered
+[    9.173898] target_if_pdev_spectral_init: 1992: HAL_CAP_PHYDIAG : Capable
+[    9.173900] null_get_capability: 1518: SPECTRAL : get_capability not registered
+[    9.173904] target_if_pdev_spectral_init: 1996: HAL_CAP_RADAR   : Capable
+[    9.173904] null_get_capability: 1518: SPECTRAL : get_capability not registered
+[    9.173908] target_if_pdev_spectral_init: 2001: HAL_CAP_SPECTRAL_SCAN : Capable
+[    9.173910] null_get_tsf64: 1506: SPECTRAL : get_tsf64 not registered
+[    9.174000] [kworker/u16:1][0x18b81e3d][00:48:18.403605] wlan: [77:I:OBJMGR] wlan_objmgr_pdev_obj_create: 176: Created pdev 0
+[    9.174025] [kworker/u16:1][0x18b82017][00:48:18.403629] wlan: [77:I:HDD] hdd_update_tgt_cfg: 2203: hw_mac is zero
+[    9.174197] [kworker/u16:18][0x18b82cf6][00:48:18.403801] wlan: [1291:I:WMA] wma_wait_for_ready_event: 6853: FW ready event received
+[    9.176268] [kworker/u16:18][0x18b8c83c][00:48:18.405871] wlan: [1291:I:HTT] max pool size 64 pool filled 64
+[    9.178580] [kworker/u16:18][0x18b97588][00:48:18.408182] wlan: [1291:I:HTT] HTT: full reorder offload enabled
+[    9.184462] [kworker/u16:18][0x18bb2eb4][00:48:18.414065] wlan: [1291:I:HDD] hdd_update_hw_sw_info: 2681: Host SW:5.2.03.9H, FW:3.2.0.9.127.0, HW:HW_VERSION=40060000., Board ver: 11 Ref design id: 0, Customer id: 0, Project id: 0, Board Data Rev: 0
+[    9.186035] [kworker/u16:18][0x18bba4c7][00:48:18.415638] wlan: [1291:I:SYS] Creating periodic timer for OLBC UPDATE CACHE TIMEOUT\x0a
+[    9.186147] [kworker/u16:18][0x18bbad34][00:48:18.415751] wlan: [1291:I:tdls] ucfg_tdls_psoc_enable: 250: psoc tdls enable: 0x0000000000000000
+[    9.187308] [kworker/u16:18][0x18bc045b][00:48:18.416913] wlan: [1291:E:HDD] wlan_hdd_tsf_init: 1657: set tsf GPIO failed, status: 4
+[    9.187333] [kworker/u16:18][0x18bc063c][00:48:18.416938] wlan: [1291:I:HDD] hdd_wlan_start_modules: 3154: Wlan transitioned (now ENABLED)
+[    9.188358] [scheduler_threa][0x18bc5306][00:48:18.417962] wlan: [2806:I:QDF] host_diag_log_submit: Unloading/Loading in Progress. Ignore!!!
+[    9.188837] [kworker/u16:18][0x18bc7703][00:48:18.418442] wlan: [1291:I:HDD] hdd_platform_wlan_mac: 10515: provisioned MAC Addr [0]88:54:1f:05:02:de
+[    9.188852] [kworker/u16:18][0x18bc7821][00:48:18.418456] wlan: [1291:I:HDD] hdd_initialize_mac_address: 10602: using MAC address from platform driver
+[    9.188948] [kworker/u16:18][0x18bc7f54][00:48:18.418552] wlan: [1291:I:HDD] wlan_hdd_get_provisioned_intf_addr: 3749: Assigning MAC from provisioned list88:54:1f:05:02:de
+[    9.198003] [kworker/u16:18][0x18bf2668][00:48:18.427607] wlan: [1291:I:HDD] hdd_open_adapter: 5536: wlan0 interface created. iftype: 0
+[    9.198025] [kworker/u16:18][0x18bf281b][00:48:18.427630] wlan: [1291:I:HDD] wlan_hdd_get_derived_intf_addr: 3718: Assigning MAC from derived list8a:54:1f:05:02:de
+[    9.202883] [kworker/u16:18][0x18c0945b][00:48:18.432486] wlan: [1291:I:HDD] hdd_open_adapter: 5536: wlan1 interface created. iftype: 0
+[    9.202905] [kworker/u16:18][0x18c09629][00:48:18.432510] wlan: [1291:I:HDD] wlan_hdd_get_derived_intf_addr: 3718: Assigning MAC from derived list8a:54:1f:86:02:de
+[    9.206605] [kworker/u16:18][0x18c1ab88][00:48:18.436209] wlan: [1291:I:HDD] hdd_open_adapter: 5536: p2p0 interface created. iftype: 7
+[    9.206819] [kworker/u16:18][0x18c1bba1][00:48:18.436423] wlan: [1291:I:HDD] hdd_set_idle_ps_config: 8361: Already in the requested power state:1
+[    9.211902] [wifi_ext@1.0-se][0x18c338d7][00:48:18.441506] wlan: [826:I:HDD] hdd_vdev_create: 4452: creating new vdev
+[    9.211945] [wifi_ext@1.0-se][0x18c33c24][00:48:18.441550] wlan: [826:I:OBJMGR] wlan_objmgr_vdev_obj_create: 262: Created vdev 0
+[    9.212420] [wifi_ext@1.0-se][0x18c35fa5][00:48:18.442023] wlan: [826:I:HDD] hdd_vdev_create: 4537: vdev 0 created successfully
+[    9.212814] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[    9.213441] [lowi-server][0x18c3ac32][00:48:18.443044] wlan: [1112:W:HDD] hdd_check_wext_control: 2893: Using deprecated ioctl 8be5
+[    9.233066] [soft_irq][0x18c96c24][00:48:18.462670] wlan: [0:E:WMA] wma_chan_phy_mode : Invalid channel width
+[    9.270516] [wificond][0x18d464d8][00:48:18.500119] wlan: [929:I:SME] sme_ps_disable_auto_ps_timer: 797: Stop auto_ps_enable_timer Timer for session ID: 0
+[    9.270763] [wificond][0x18d47777][00:48:18.500368] wlan: [929:E:OSIF] wlan_cfg80211_sched_scan_stop: 628: Failed to disabled PNO
+[    9.270771] [wificond][0x18d47814][00:48:18.500376] wlan: [929:I:HDD] hdd_vdev_destroy: 4245: destroying vdev 0
+[    9.270782] [wificond][0x18d478eb][00:48:18.500387] wlan: [929:I:WMI] Deleting pattern id: 0 vdev id 0 in fw
+[    9.282342] [wificond][0x18d7dbbf][00:48:18.511945] wlan: [929:I:OBJMGR] wlan_objmgr_vdev_obj_delete: 334: Logically deleting vdev 0
+[    9.282404] [wificond][0x18d7e084][00:48:18.512008] wlan: [929:I:HDD] hdd_vdev_destroy: 4298: vdev 0 destroyed successfully
+[    9.296992] QSEECOM: qseecom_load_app: App (autocal) does'nt exist, loading apps for first time
+[    9.308888] Wifi Turning On from UI
+[    9.330880] init: Received control message 'interface_start' for 'android.hardware.wifi.supplicant@1.0::ISupplicant/default' from pid: 560 (/system/bin/hwservicemanager)
+[    9.331275] init: starting service 'wpa_supplicant'...
+[    9.332859] init: Created socket '/dev/socket/wpa_wlan0', mode 660, user 1010, group 1010
+[    9.333754] QSEECOM: qseecom_load_app: App with id 5 (autocal) now loaded
+[    9.429975] [wifi_ext@1.0-se][0x19031c34][00:48:18.659578] wlan: [826:I:HDD] hdd_vdev_create: 4452: creating new vdev
+[    9.430049] [wifi_ext@1.0-se][0x190321f1][00:48:18.659654] wlan: [826:I:OBJMGR] wlan_objmgr_vdev_obj_create: 262: Created vdev 0
+[    9.430462] [wifi_ext@1.0-se][0x190340d0][00:48:18.660066] wlan: [826:I:HDD] hdd_vdev_create: 4537: vdev 0 created successfully
+[    9.430820] IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+[    9.448906] [soft_irq][0x1908a6bc][00:48:18.678491] wlan: [0:E:WMA] wma_chan_phy_mode : Invalid channel width
+[    9.479993] [scheduler_threa][0x1911c38f][00:48:18.709596] wlan: [2806:E:QDF] __pktlog_enable: pktlog operation not in progress\x0a
+[    9.482231] [scheduler_threa][0x19126b40][00:48:18.711831] wlan: [2806:E:QDF] __pktlog_enable: pktlog operation not in progress\x0a
+[    9.483584] [wpa_supplicant][0x1912d0fa][00:48:18.713188] wlan: [2898:W:HDD] hdd_driver_rxfilter_command_handler: 6487: Unsupported RXFILTER type 3
+[    9.902405] type=1400 audit(1655394497.031:89): avc: denied { search } for comm="ims_rtp_daemon" name="soc0" dev="sysfs" ino=72658 scontext=u:r:hal_imsrtp:s0 tcontext=u:object_r:sysfs_soc:s0 tclass=dir permissive=0
+[    9.903197] type=1400 audit(1655394499.128:90): avc: denied { read } for comm="facebook.katana" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   10.045398] type=1400 audit(1655394499.128:90): avc: denied { read } for comm="facebook.katana" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   10.046165] type=1400 audit(1655394499.271:91): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_cppdistract_cppdistract.so" dev="dm-5" ino=200531 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.047218] type=1400 audit(1655394499.271:91): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_cppdistract_cppdistract.so" dev="dm-5" ino=200531 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.048385] type=1400 audit(1655394499.274:92): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_museum_museum.so" dev="dm-5" ino=189856 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.050486] type=1400 audit(1655394499.274:92): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_museum_museum.so" dev="dm-5" ino=189856 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.051138] type=1400 audit(1655394499.274:93): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_sigmuxutils_sigmuxutils.so" dev="dm-5" ino=135743 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.054130] type=1400 audit(1655394499.274:93): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_sigmuxutils_sigmuxutils.so" dev="dm-5" ino=135743 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.054801] type=1400 audit(1655394499.281:94): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libbreakpad.so" dev="dm-5" ino=126826 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.066461] type=1400 audit(1655394499.281:94): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libbreakpad.so" dev="dm-5" ino=126826 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.068275] type=1400 audit(1655394499.291:95): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libglog.so" dev="dm-5" ino=1597007 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.079691] type=1400 audit(1655394499.291:95): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libglog.so" dev="dm-5" ino=1597007 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.080466] type=1400 audit(1655394499.304:96): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libdexload.so" dev="dm-5" ino=189657 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.091435] type=1400 audit(1655394499.304:96): avc: granted { execute } for comm="AppInit2" path="/data/data/com.facebook.katana/lib-compressed/libdexload.so" dev="dm-5" ino=189657 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.092190] type=1400 audit(1655394499.318:97): avc: granted { execute } for comm="AppInit8" path="/data/data/com.facebook.katana/lib-compressed/liblive-query-jni.so" dev="dm-5" ino=189947 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.093452] type=1400 audit(1655394499.318:97): avc: granted { execute } for comm="AppInit8" path="/data/data/com.facebook.katana/lib-compressed/liblive-query-jni.so" dev="dm-5" ino=189947 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.094467] type=1400 audit(1655394499.318:98): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libappstatelogger2.so" dev="dm-5" ino=189805 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   10.096171] audit: audit_lost=1 audit_rate_limit=5 audit_backlog_limit=64
+[   10.096180] audit: rate limit exceeded
+[   11.256329] type=1400 audit(1655394499.318:98): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libappstatelogger2.so" dev="dm-5" ino=189805 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   11.257055] type=1400 audit(1655394500.481:141): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libnative_oomscorereader.so" dev="dm-5" ino=232170 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   11.336424] sm8150_bms: MSC_PCS chg_state=1f4106704010009 [0x9:4:1:4199:500] chg=u
+[   11.338271] google_charger: usbchg=USB typec=C usbv=4917 usbc=334 usbMv=5000 usbMc=500
+[   11.338368] sm8150_bms: MSC_PCS chg_state=1f4106704010009 [0x9:4:1:4199:500] chg=u
+[   11.338379] google_battery: MSC_DIN chg_state=1f4106704010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4199 icl=500
+[   11.343209] google_battery: MSC_DSG vbatt_idx:0->0 vbatt=4116875 ibatt=393125 fv_uv=4200000 cv_cnt=3 ov_cnt=0
+[   11.343225] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:0->0, fv=4200000->4200000, cc_max=2825000
+[   11.343233] google_battery: MSC_VOTE fv_uv=4200000 cc_max=2825000 update_interval=30000
+[   11.343259] google_charger: MSC_CHG fv_uv=4200000, cc_max=2800000, rerun in 30000 ms (0)
+[   11.346704] healthd: battery l=98 v=4116 t=26.5 h=2 st=4 c=393 fc=2706000 cc=13 chg=u
+[   11.574488] iaxxx-spi spi5.0: iaxxx_ext_clk_off_work mclk_en 0 is off
+[   11.832642] type=1400 audit(1655394500.481:141): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libnative_oomscorereader.so" dev="dm-5" ino=232170 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   11.833466] type=1400 audit(1655394501.058:142): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libreliabilitymerged.so" dev="dm-5" ino=146772 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.103002] type=1400 audit(1655394501.058:142): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libreliabilitymerged.so" dev="dm-5" ino=146772 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.104080] type=1400 audit(1655394501.324:143): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libqplreliabilityhttpheader.so" dev="dm-5" ino=2080492 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.188428] type=1400 audit(1655394501.324:143): avc: granted { execute } for comm="AppInit3" path="/data/data/com.facebook.katana/lib-compressed/libqplreliabilityhttpheader.so" dev="dm-5" ino=2080492 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.189460] type=1400 audit(1655394501.414:144): avc: granted { execute } for comm="Thread-5" path="/data/data/com.facebook.katana/lib-compressed/libdistractutil.so" dev="dm-5" ino=1509944 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.226356] [wifi_ext@1.0-se][0x1c365c7f][00:48:21.455955] wlan: [826:E:OSIF] wlan_cfg80211_sched_scan_stop: 628: Failed to disabled PNO
+[   12.228014] [wifi_ext@1.0-se][0x1c36d8e3][00:48:21.457614] wlan: [826:I:HDD] hdd_vdev_destroy: 4245: destroying vdev 0
+[   12.228042] [wifi_ext@1.0-se][0x1c36db39][00:48:21.457645] wlan: [826:I:WMI] Deleting pattern id: 0 vdev id 0 in fw
+[   12.235529] [wifi_ext@1.0-se][0x1c390b4a][00:48:21.465112] wlan: [826:I:OBJMGR] wlan_objmgr_vdev_obj_delete: 334: Logically deleting vdev 0
+[   12.235647] [wifi_ext@1.0-se][0x1c391584][00:48:21.465249] wlan: [826:I:HDD] hdd_vdev_destroy: 4298: vdev 0 destroyed successfully
+[   12.244157] [wifi_ext@1.0-se][0x1c3b93a4][00:48:21.473757] wlan: [826:I:HDD] __hdd_set_mac_address: 3677: Changing MAC to ae:d3:7f:c1:de:17 of the interface wlan0 
+[   12.245020] [wifi_ext@1.0-se][0x1c3bd478][00:48:21.474621] wlan: [826:I:HDD] hdd_vdev_create: 4452: creating new vdev
+[   12.245124] [wifi_ext@1.0-se][0x1c3bdc55][00:48:21.474726] wlan: [826:I:OBJMGR] wlan_objmgr_vdev_obj_create: 262: Created vdev 0
+[   12.246398] [wifi_ext@1.0-se][0x1c3c3bdb][00:48:21.476000] wlan: [826:I:HDD] hdd_vdev_create: 4537: vdev 0 created successfully
+[   12.248404] [lowi-server][0x1c3cd254][00:48:21.478006] wlan: [1112:W:HDD] hdd_check_wext_control: 2893: Using deprecated ioctl 8be5
+[   12.257010] type=1400 audit(1655394501.414:144): avc: granted { execute } for comm="Thread-5" path="/data/data/com.facebook.katana/lib-compressed/libdistractutil.so" dev="dm-5" ino=1509944 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.258453] type=1400 audit(1655394501.484:145): avc: granted { execute } for comm="Thread-5" path="/data/data/com.facebook.katana/lib-compressed/libsigquit.so" dev="dm-5" ino=198920 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.259984] type=1400 audit(1655394501.484:145): avc: granted { execute } for comm="Thread-5" path="/data/data/com.facebook.katana/lib-compressed/libsigquit.so" dev="dm-5" ino=198920 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.260775] type=1400 audit(1655394501.484:146): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libunwindstack_stream.so" dev="dm-5" ino=189816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.278141] [wpa_supplicant][0x1c45885b][00:48:21.507740] wlan: [2898:E:SER] wlan_serialization_peek_head_pending_cmd_using_psoc: 192: Empty Queue
+[   12.279099] [wpa_supplicant][0x1c45d05c][00:48:21.508700] wlan: [2898:E:SME] csr_send_join_req_msg: 15914: Connecting to ssid:CSL_iptime5G bssid: 70:5d:cc:ae:d4:6e rssi: -34 channel: 149 country_code: KR
+[   12.279743] [scheduler_threa][0x1c4600b6][00:48:21.509345] wlan: [2806:E:PE] lim_extract_ap_capability: 386: AP does not support op_mode rx
+[   12.279993] [scheduler_threa][0x1c46137a][00:48:21.509595] wlan: [2806:I:WMA] wma_set_channel: 3178: vht_capable: 1, dot11_mode: 7
+[   12.280120] [scheduler_threa][0x1c461ce4][00:48:21.509720] wlan: [2806:I:WMI] send_vdev_start_cmd_tlv: vdev_id 0 freq 5745 chanmode 10 ch_info: 0xa is_dfs 0 beacon interval 100 dtim 1 center_chan 5775 center_freq2 0 reg_info_1: 0x1b0000 reg_info_2: 0x1b00, req->max_txpow: 0x1b Tx SS 2, Rx SS 2, ldpc_rx: 0, cac 0, regd 0, HE ops: 0req->dis_hw_ack: 0 
+[   12.293415] [scheduler_threa][0x1c4a01e8][00:48:21.523014] wlan: [2806:I:PE] lim_send_auth_mgmt_frame: 2484: Tx Auth SN=2049 TSN:1 status 0 (1) to 70:5d:cc:ae:d4:6e
+[   12.295112] [scheduler_threa][0x1c4a7fe6][00:48:21.524694] wlan: [2806:I:PE] lim_process_auth_frame: 1430: Rx Auth frame SN=0 type: 0 TSN: 2 status: 0 0
+[   12.295337] [scheduler_threa][0x1c4a9233][00:48:21.524938] wlan: [2806:I:PE] lim_send_assoc_req_mgmt_frame: 2123: Tx Assoc Req SN=2050 len 218 to 
+[   12.298321] [scheduler_threa][0x1c4b7217][00:48:21.527923] wlan: [2806:I:PE] lim_process_assoc_rsp_frame: 537: Rx Assoc Rsp frame SN=1 s_id: 0 s_role: 3 and mlmST: 12 RSSI: 33 from 70:5d:cc:ae:d4:6e
+[   12.299109] [scheduler_threa][0x1c4bad30][00:48:21.528711] wlan: [2806:E:WMA] wma_objmgr_set_peer_mlme_phymode: 1167: peer object null
+[   12.301173] [scheduler_threa][0x1c4c47fc][00:48:21.530775] wlan: [2806:E:POLICY_MGR] policy_mgr_dump_current_concurrency: 1146: STA Standalone
+[   12.301201] [scheduler_threa][0x1c4c4a2f][00:48:21.530804] wlan: [2806:I:HDD] hdd_send_association_event: 1394: wlan: ae:d3:7f:c1:de:17 connected to 70:5d:cc:ae:d4:6e\x0a
+[   12.307382] [scheduler_threa][0x1c4e1975][00:48:21.536981] wlan: [2806:E:SME] sme_free_join_rsp_fils_params: 6851: FILS Roam Param NULL
+[   12.311095] type=1400 audit(1655394501.484:146): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libunwindstack_stream.so" dev="dm-5" ino=189816 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.311897] type=1400 audit(1655394501.538:147): avc: granted { execute } for comm="CombinedTP7" path="/data/data/com.facebook.katana/lib-compressed/libimagepipeline.so" dev="dm-5" ino=189876 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.315737] [scheduler_threa][0x1c508c28][00:48:21.545337] wlan: [2806:I:WMA] Set MAX TX pwr limit [WMI_VDEV_PARAM_TX_PWRLIMIT] to 30
+[   12.390529] type=1400 audit(1655394501.538:147): avc: granted { execute } for comm="CombinedTP7" path="/data/data/com.facebook.katana/lib-compressed/libimagepipeline.so" dev="dm-5" ino=189876 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.391552] type=1400 audit(1655394501.618:148): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libbreakpad_extra.so" dev="dm-5" ino=189942 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.396355] [cds_ol_rx_threa][0x1c682a11][00:48:21.625950] wlan: [2807:I:QDF] qdf_dp_display_proto_pkt_always: 1890:  DPT: 0001:255 EAPOL: [0] [M1] SA: 70:5d:cc:ae:d4:6e  <--  DA: ae:d3:7f:c1:de:17
+[   12.397069] [soft_irq][0x1c685ffc][00:48:21.626668] wlan: [0:I:QDF] qdf_dp_display_proto_pkt_always: 1890:  DPT: 0003:255 EAPOL: [0] [M2] SA: ae:d3:7f:c1:de:17  -->  DA: 70:5d:cc:ae:d4:6e
+[   12.399387] [cds_ol_rx_threa][0x1c690dcc][00:48:21.628986] wlan: [2807:I:QDF] qdf_dp_display_proto_pkt_always: 1890:  DPT: 0006:255 EAPOL: [0] [M3] SA: 70:5d:cc:ae:d4:6e  <--  DA: ae:d3:7f:c1:de:17
+[   12.399722] [soft_irq][0x1c69263a][00:48:21.629312] wlan: [0:I:QDF] qdf_dp_display_proto_pkt_always: 1890:  DPT: 0008:255 EAPOL: [0] [M4] SA: ae:d3:7f:c1:de:17  -->  DA: 70:5d:cc:ae:d4:6e
+[   12.401898] [scheduler_threa][0x1c69ca4f][00:48:21.631499] wlan: [2806:E:POLICY_MGR] policy_mgr_store_and_del_conn_info: 665: Mode:0 number of conn 1 temp del
+[   12.410073] [scheduler_threa][0x1c6c2f65][00:48:21.639674] wlan: [2806:E:QDF] qdf_mc_timer_start: Cannot start timer in state = 21 
+[   12.410175] [scheduler_threa][0x1c6c372a][00:48:21.639777] wlan: [2806:E:POLICY_MGR] policy_mgr_store_and_del_conn_info: 665: Mode:0 number of conn 1 temp del
+[   12.410805] [scheduler_threa][0x1c6c6665][00:48:21.640407] wlan: [2806:E:PE] lim_update_fils_rik: 1870: Fils rik len(0) max 64
+[   12.411088] [scheduler_threa][0x1c6c7baa][00:48:21.640691] wlan: [2806:I:WMI] LFR3:OKC enabled
+[   12.411098] [scheduler_threa][0x1c6c7c79][00:48:21.640701] wlan: [2806:I:WMI] LFR3:PMKSA caching enabled
+[   12.420097] [scheduler_threa][0x1c6f1f21][00:48:21.649697] wlan: [2806:E:QDF] qdf_mc_timer_start: Cannot start timer in state = 21 
+[   12.431885] [wifi_ext@1.0-se][0x1c729331][00:48:21.661484] wlan: [826:E:HDD] hdd_enable_ns_offload: 406: Failed to cache ns request; status:4
+[   12.437851] [soft_irq][0x1c745300][00:48:21.667455] wlan: [0:E:PMO] pmo_core_do_disable_mc_addr_list: 234: mc filter is not applied in fwr
+[   12.437873] [soft_irq][0x1c7454bb][00:48:21.667478] wlan: [0:E:HDD] hdd_disable_and_flush_mc_addr_list: 1039: failed to disable mc list; status:4
+[   12.446223] [wpa_supplicant][0x1c76c6e1][00:48:21.675827] wlan: [2898:I:SME] sme_ps_disable_auto_ps_timer: 797: Stop auto_ps_enable_timer Timer for session ID: 0
+[   12.450145] [soft_irq][0x1c77eca8][00:48:21.679744] wlan: [0:I:QDF] qdf_dp_display_proto_pkt_always: 1890:  DPT: 0016:255 DHCP: [0] [DISC] SA: ae:d3:7f:c1:de:17  -->  DA: ff:ff:ff:ff:ff:ff
+[   12.486033] type=1400 audit(1655394501.618:148): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libbreakpad_extra.so" dev="dm-5" ino=189942 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.486925] type=1400 audit(1655394501.711:149): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libfbnightwatch.so" dev="dm-5" ino=148032 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.499925] [cds_ol_rx_threa][0x1c8680ae][00:48:21.729505] wlan: [2807:I:QDF] qdf_dp_display_proto_pkt_always: 1890:  DPT: 0019:255 DHCP: [0] [OFF] SA: 70:5d:cc:ae:d4:6f  <--  DA: ae:d3:7f:c1:de:17
+[   12.503672] [soft_irq][0x1c879b3f][00:48:21.733272] wlan: [0:I:QDF] qdf_dp_display_proto_pkt_always: 1890:  DPT: 0021:255 DHCP: [0] [REQ] SA: ae:d3:7f:c1:de:17  -->  DA: ff:ff:ff:ff:ff:ff
+[   12.555849] [cds_ol_rx_threa][0x1c96e41f][00:48:21.785444] wlan: [2807:I:QDF] qdf_dp_display_proto_pkt_always: 1890:  DPT: 0024:255 DHCP: [0] [ACK] SA: 70:5d:cc:ae:d4:6f  <--  DA: ae:d3:7f:c1:de:17
+[   12.559001] [scheduler_threa][0x1c97d137][00:48:21.788605] wlan: [2806:I:WMA] QPOWER is enabled in power save mode 2
+[   12.577301] audit: audit_lost=43 audit_rate_limit=5 audit_backlog_limit=64
+[   12.577314] audit: rate limit exceeded
+[   12.582416] type=1400 audit(1655394501.711:149): avc: granted { execute } for comm="AppInit4" path="/data/data/com.facebook.katana/lib-compressed/libfbnightwatch.so" dev="dm-5" ino=148032 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   12.583175] type=1400 audit(1655394501.804:150): avc: denied { read } for comm="AppInit4" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0 app=com.facebook.katana
+[   12.623550] init: processing action (sys.sysctl.tcp_def_init_rwnd=*) from (/init.rc:816)
+[   12.673163] sm8150_bms: MSC_PCS chg_state=1f4105503010015 [0x15:3:1:4181:500] chg=u
+[   12.675229] google_charger: usbchg=USB typec=C usbv=4880 usbc=489 usbMv=5000 usbMc=500
+[   12.675334] sm8150_bms: MSC_PCS chg_state=1f4105503010015 [0x15:3:1:4181:500] chg=u
+[   12.675346] google_battery: MSC_DIN chg_state=1f4105503010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4181 icl=500
+[   12.682945] google_battery: MSC_DSG vbatt_idx:0->0 vbatt=4116875 ibatt=393125 fv_uv=4200000 cv_cnt=3 ov_cnt=0
+[   12.682963] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:0->0, fv=4200000->4200000, cc_max=2825000
+[   12.682970] google_battery: MSC_VOTE fv_uv=4200000 cc_max=2825000 update_interval=30000
+[   12.682997] google_charger: MSC_CHG fv_uv=4200000, cc_max=2800000, rerun in 30000 ms (0)
+[   12.684300] healthd: battery l=98 v=4116 t=26.5 h=2 st=4 c=393 fc=2706000 cc=13 chg=u
+[   12.924151] [netmgrd][0x1d02cb28][00:48:22.153751] wlan: [1156:E:HDD] __hdd_validate_adapter: 870: bad adapter magic (via __wlan_hdd_ipv6_changed)
+[   13.333486] type=1400 audit(1655394501.804:150): avc: denied { read } for comm="AppInit4" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=0 app=com.facebook.katana
+[   13.334262] type=1400 audit(1655394502.558:156): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libIGL.so" dev="dm-5" ino=189700 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   13.430972] type=1400 audit(1655394502.558:156): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libIGL.so" dev="dm-5" ino=189700 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   13.431679] type=1400 audit(1655394502.658:157): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libard-shader-models-android.so" dev="dm-5" ino=169939 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   13.713793] type=1400 audit(1655394502.658:157): avc: granted { execute } for comm="Thread-6" path="/data/data/com.facebook.katana/lib-compressed/libard-shader-models-android.so" dev="dm-5" ino=169939 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   13.714438] type=1400 audit(1655394502.941:158): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   13.889231] dsi_backlight_update_status:443: req:23 bl:370 state:0x0
+[   13.900813] dsi_backlight_update_status:443: req:21 bl:338 state:0x0
+[   13.911819] dsi_backlight_update_status:443: req:19 bl:306 state:0x0
+[   13.922903] dsi_backlight_update_status:443: req:17 bl:274 state:0x0
+[   13.934285] dsi_backlight_update_status:443: req:15 bl:242 state:0x0
+[   13.946953] dsi_backlight_update_status:443: req:13 bl:210 state:0x0
+[   13.956141] dsi_backlight_update_status:443: req:10 bl:162 state:0x0
+[   13.968099] dsi_backlight_update_status:443: req:8 bl:130 state:0x0
+[   13.978866] dsi_backlight_update_status:443: req:6 bl:98 state:0x0
+[   14.969351] sm8150_bms: MSC_PCS chg_state=1f4106604010009 [0x9:4:1:4198:500] chg=u
+[   14.973008] google_charger: usbchg=USB typec=C usbv=4939 usbc=300 usbMv=5000 usbMc=500
+[   14.973103] sm8150_bms: MSC_PCS chg_state=1f4106604010009 [0x9:4:1:4198:500] chg=u
+[   14.973119] google_battery: MSC_DIN chg_state=1f4106604010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4198 icl=500
+[   14.978710] google_battery: MSC_DSG vbatt_idx:0->1 vbatt=4198750 ibatt=260312 fv_uv=4200000 cv_cnt=3 ov_cnt=0
+[   14.978727] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   14.978736] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+[   14.978784] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1925625, val=38 pause=0 (0)
+[   14.978803] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+[   14.978813] google_charger: MSC_CHG fv_uv=4200000->4300000 cc_max=2800000->1975000 rc=0
+[   14.978824] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 30000 ms (0)
+[   14.979168] healthd: battery l=98 v=4198 t=26.9 h=2 st=4 c=260 fc=2706000 cc=13 chg=u
+[   15.061052] sm8150_bms: MSC_PCS chg_state=1f4106603010015 [0x15:3:1:4198:500] chg=u
+[   15.064555] google_charger: usbchg=USB typec=C usbv=4874 usbc=487 usbMv=5000 usbMc=500
+[   15.064669] sm8150_bms: MSC_PCS chg_state=1f4106603010015 [0x15:3:1:4198:500] chg=u
+[   15.064683] google_battery: MSC_DIN chg_state=1f4106603010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4198 icl=500
+[   15.069195] google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4198750 ibatt=260312 fv_uv=4300000 cv_cnt=3 ov_cnt=0
+[   15.070180] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+[   15.070190] google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+[   15.070220] google_charger: MSC_CHG fv_uv=4300000, cc_max=1975000, rerun in 30000 ms (0)
+[   15.072592] healthd: battery l=98 v=4198 t=26.9 h=2 st=4 c=260 fc=2706000 cc=13 chg=u
+[   15.315839] type=1400 audit(1655394503.941:159): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   15.315876] type=1400 audit(1655394504.541:160): avc: denied { read } for comm="face@1.0-servic" name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=3846 scontext=u:r:hal_face_default:s0 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 b/134894179
+[   15.694991] init: Received control message 'stop' for 'idmap2d' from pid: 1342 (system_server)
+[   15.695021] init: Sending signal 9 to service 'idmap2d' (pid 907) process group...
+[   15.700718] libprocessgroup: Successfully killed process cgroup uid 1000 pid 907 in 5ms
+[   15.701349] init: Service 'idmap2d' (pid 907) received signal 9
+[   15.747145] type=1400 audit(1655394504.541:160): avc: denied { read } for comm="face@1.0-servic" name="u:object_r:vendor_display_prop:s0" dev="tmpfs" ino=3846 scontext=u:r:hal_face_default:s0 tcontext=u:object_r:vendor_display_prop:s0 tclass=file permissive=0 b/134894179
+[   15.747859] type=1400 audit(1655394504.974:161): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   15.803339] dsi_backlight_update_status:443: req:0 bl:0 state:0x0
+[   15.826214] [ FTS ] fts_mode_handler: Sense OFF!
+[   15.826219] dsi_backlight_early_dpms:778: power_mode:5 state:0x0
+[   15.826520] [ FTS ] System resetting...
+[   15.860139] [ FTS ] READ EVENT = 43 13 00 00 00 00 00 02 
+[   15.860235] [ FTS ] READ EVENT = 43 0A 02 00 00 00 00 01 
+[   15.860321] [ FTS ] READ EVENT = 03 00 00 00 00 00 00 00 
+[   15.860329] [ FTS ] FOUND EVENT = 03 00 00 00 00 00 00 00 
+[   15.860336] [ FTS ] writeSysCmd: Command = A4 00 01 
+[   15.860341] [ FTS ] writeSysCmd: Writing Sys command...
+[   15.860484] [ FTS ] READ EVENT = 43 01 A4 00 01 00 00 00 
+[   15.860491] [ FTS ] FOUND EVENT = 43 01 A4 00 01 00 00 00 
+[   15.860495] [ FTS ] ECHO OK!
+[   15.860500] [ FTS ] writeSysCmd: FINISHED!
+[   15.860505] [ FTS ] FIFO flushed!
+[   15.860916] fts spi1.0: kernel releasing bus access from SLPI
+[   15.963222] apexd: Found bundled key in package /system/apex/com.android.apex.cts.shim.apex
+[   15.963516] apexd: Found bundled key in package /system/apex/com.android.conscrypt.apex
+[   15.963690] apexd: Found bundled key in package /system/apex/com.android.media.apex
+[   15.963854] apexd: Found bundled key in package /system/apex/com.android.media.swcodec.apex
+[   15.964012] apexd: Found bundled key in package /system/apex/com.android.resolv.apex
+[   15.964167] apexd: Found bundled key in package /system/apex/com.android.runtime.debug.apex
+[   15.964333] apexd: Found bundled key in package /system/apex/com.android.tzdata.apex
+[   15.964551] apexd: Found bundled key in package /system/apex/com.android.runtime.debug.apex
+[   15.964705] apexd: Found bundled key in package /system/apex/com.android.media.swcodec.apex
+[   15.964852] apexd: Found bundled key in package /system/apex/com.android.apex.cts.shim.apex
+[   15.965001] apexd: Found bundled key in package /system/apex/com.android.media.apex
+[   15.965147] apexd: Found bundled key in package /system/apex/com.android.resolv.apex
+[   15.965299] apexd: Found bundled key in package /system/apex/com.android.tzdata.apex
+[   15.965449] apexd: Found bundled key in package /system/apex/com.android.conscrypt.apex
+[   15.965523] apexd: Can't open /product/apex for reading : No such file or directory
+[   16.828905] type=1400 audit(1655394506.018:162): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   16.830112] type=1400 audit(1655394506.054:163): avc: granted { execute } for comm="Analytics-Micro" path="/data/data/com.facebook.katana/lib-compressed/libchipsetmerged.so" dev="dm-5" ino=198932 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.530470] sm8150_bms: MSC_PCS chg_state=1f410cb04010009 [0x9:4:1:4299:500] chg=u
+[   17.535522] google_charger: usbchg=USB typec=C usbv=4911 usbc=398 usbMv=5000 usbMc=500
+[   17.535627] sm8150_bms: MSC_PCS chg_state=1f410cb04010009 [0x9:4:1:4299:500] chg=u
+[   17.535642] google_battery: MSC_DIN chg_state=1f410cb04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4299 icl=500
+[   17.541229] google_battery: MSC_DSG vbatt_idx:1->2 vbatt=4298437 ibatt=50312 fv_uv=4300000 cv_cnt=3 ov_cnt=0
+[   17.541250] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   17.541258] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   17.541317] sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=1365000, val=27 pause=0 (0)
+[   17.541340] sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4400000, val=80 (0)
+[   17.541347] google_charger: MSC_CHG fv_uv=4300000->4400000 cc_max=1975000->1400000 rc=0
+[   17.541359] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   17.541414] healthd: battery l=98 v=4298 t=26.9 h=2 st=4 c=50 fc=2706000 cc=13 chg=u
+[   17.604419] type=1400 audit(1655394506.054:163): avc: granted { execute } for comm="Analytics-Micro" path="/data/data/com.facebook.katana/lib-compressed/libchipsetmerged.so" dev="dm-5" ino=198932 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.607095] type=1400 audit(1655394506.831:164): avc: granted { execute } for comm="CombinedTP6" path="/data/data/com.facebook.katana/lib-compressed/libreliablemediamonitor.so" dev="dm-5" ino=165218 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.632518] sm8150_bms: MSC_PCS chg_state=1f410cf03010015 [0x15:3:1:4303:500] chg=u
+[   17.634572] google_charger: usbchg=USB typec=C usbv=4877 usbc=488 usbMv=5000 usbMc=500
+[   17.634672] sm8150_bms: MSC_PCS chg_state=1f410cf03010015 [0x15:3:1:4303:500] chg=u
+[   17.634685] google_battery: MSC_DIN chg_state=1f410cf03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4303 icl=500
+[   17.639393] type=1400 audit(1655394506.831:164): avc: granted { execute } for comm="CombinedTP6" path="/data/data/com.facebook.katana/lib-compressed/libreliablemediamonitor.so" dev="dm-5" ino=165218 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.639782] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4303593 ibatt=31562 fv_uv=4400000 cv_cnt=3 ov_cnt=0
+[   17.639795] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   17.639803] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   17.639837] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   17.640123] type=1400 audit(1655394506.864:165): avc: granted { execute } for comm="CombinedTP6" path="/data/data/com.facebook.katana/lib-compressed/libtigonnativeauthedservice.so" dev="dm-5" ino=135809 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.642549] healthd: battery l=98 v=4303 t=26.9 h=2 st=4 c=31 fc=2706000 cc=13 chg=u
+[   17.792169] type=1400 audit(1655394506.864:165): avc: granted { execute } for comm="CombinedTP6" path="/data/data/com.facebook.katana/lib-compressed/libtigonnativeauthedservice.so" dev="dm-5" ino=135809 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.793083] type=1400 audit(1655394507.018:166): avc: granted { execute } for comm="CombinedTP4" path="/data/data/com.facebook.katana/lib-compressed/libmediacodechooks_jni.so" dev="dm-5" ino=200339 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.816939] i2c_geni a84000.i2c: i2c error :-107
+[   17.816956] st21nfc_dev_write : i2c_master_send returned -107
+[   17.830991] type=1400 audit(1655394507.018:166): avc: granted { execute } for comm="CombinedTP4" path="/data/data/com.facebook.katana/lib-compressed/libmediacodechooks_jni.so" dev="dm-5" ino=200339 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   17.832477] type=1400 audit(1655394507.058:167): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   18.895157] init: Received control message 'start' for 'gsid' from pid: 1342 (system_server)
+[   18.895526] init: starting service 'gsid'...
+[   18.967015] init: Received control message 'stop' for 'gsid' from pid: 1342 (system_server)
+[   18.967056] init: Sending signal 9 to service 'gsid' (pid 3840) process group...
+[   18.972479] libprocessgroup: Successfully killed process cgroup uid 0 pid 3840 in 5ms
+[   18.974159] init: Service 'gsid' (pid 3840) received signal 9
+[   22.534088] type=1400 audit(1655394511.161:171): avc: denied { read } for comm="AppInit4" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana duplicate messages suppressed
+[   22.534970] type=1400 audit(1655394511.758:172): avc: denied { read } for comm="ana:fwkstartlog" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   22.575424] audit: audit_lost=48 audit_rate_limit=5 audit_backlog_limit=64
+[   22.575440] audit: rate limit exceeded
+[   22.589533] type=1400 audit(1655394511.758:172): avc: denied { read } for comm="ana:fwkstartlog" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=0 app=com.facebook.katana
+[   22.590202] type=1400 audit(1655394511.798:173): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_cppdistract_cppdistract.so" dev="dm-5" ino=200531 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   22.611254] type=1400 audit(1655394511.798:173): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_cppdistract_cppdistract.so" dev="dm-5" ino=200531 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   22.611911] type=1400 audit(1655394511.801:174): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_museum_museum.so" dev="dm-5" ino=189856 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   22.612013] type=1400 audit(1655394511.801:174): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_museum_museum.so" dev="dm-5" ino=189856 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   22.612586] type=1400 audit(1655394511.801:175): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_sigmuxutils_sigmuxutils.so" dev="dm-5" ino=135743 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   24.091091] binder: undelivered transaction 89172, process died.
+[   27.767200] type=1400 audit(1655394511.801:175): avc: granted { execute } for comm="AppInit5" path="/data/data/com.facebook.katana/lib-compressed/libfbandroid_native_sigmuxutils_sigmuxutils.so" dev="dm-5" ino=135743 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c137,c256,c512,c768 tclass=file app=com.facebook.katana
+[   27.768128] type=1400 audit(1655394516.994:199): avc: denied { read } for comm="pool-10-thread-" name="version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=0 app=com.kakao.talk
+[   27.915067] type=1400 audit(1655394516.994:199): avc: denied { read } for comm="pool-10-thread-" name="version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=0 app=com.kakao.talk
+[   27.915846] type=1400 audit(1655394517.141:200): avc: denied { read } for comm="DefaultDispatch" name="version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=0 app=com.kakao.talk
+[   28.731405] type=1400 audit(1655394517.141:200): avc: denied { read } for comm="DefaultDispatch" name="version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=0 app=com.kakao.talk
+[   28.732689] type=1400 audit(1655394517.954:201): avc: denied { read } for comm="com.kakao.talk" name="somaxconn" dev="proc" ino=74680 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_net:s0 tclass=file permissive=0 app=com.kakao.talk
+[   29.474584] binder_alloc: 2259: binder_alloc_buf size 1056768 failed, no address space
+[   29.474604] binder_alloc: allocated: 5200 (num: 16 largest: 4304), free: 1035184 (num: 8 largest: 1017008)
+[   29.474613] binder: 2535:2763 transaction failed 29201/-28, size 1056768-0 line 3274
+[   29.552574] logd: logdr: UID=10052 GID=10052 PID=2535 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   30.233967] binder: 2259:2710 transaction failed 29189/-22, size 164-0 line 3128
+[   30.280130] binder: 2259:2711 transaction failed 29189/-22, size 164-0 line 3128
+[   30.776756] type=1400 audit(1655394517.954:201): avc: denied { read } for comm="com.kakao.talk" name="somaxconn" dev="proc" ino=74680 scontext=u:r:untrusted_app:s0:c134,c256,c512,c768 tcontext=u:object_r:proc_net:s0 tclass=file permissive=0 app=com.kakao.talk
+[   30.777374] type=1400 audit(1655394520.001:202): avc: denied { search } for comm="Binder:5320_1" name="vendor" dev="tmpfs" ino=22101 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:mnt_vendor_file:s0 tclass=dir permissive=0 app=com.google.android.gms
+[   30.780012] type=1400 audit(1655394520.001:202): avc: denied { search } for comm="Binder:5320_1" name="vendor" dev="tmpfs" ino=22101 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:mnt_vendor_file:s0 tclass=dir permissive=0 app=com.google.android.gms
+[   30.790243] type=1400 audit(1655394520.004:203): avc: denied { getattr } for comm="Binder:5320_1" name="/" dev="sda8" ino=1 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:firmware_file:s0 tclass=filesystem permissive=0 app=com.google.android.gms
+[   31.081220] binder: undelivered transaction 132459, process died.
+[   31.081234] binder: undelivered transaction 132460, process died.
+[   31.081283] binder: undelivered transaction 132456, process died.
+[   31.246713] citadel spi2.0: Citadel SPI timed out
+[   31.266700] citadel spi2.0: Citadel SPI timed out
+[   31.286765] citadel spi2.0: Citadel SPI timed out
+[   31.306949] citadel spi2.0: Citadel SPI timed out
+[   31.326743] citadel spi2.0: Citadel SPI timed out
+[   31.346719] citadel spi2.0: Citadel SPI timed out
+[   31.349084] logd: logdr: UID=10052 GID=10052 PID=2259 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   31.368449] logd: logdr: UID=10052 GID=10052 PID=2259 n tail=0 logMask=4 pid=0 start=1655394506964000000ns timeout=1655401720597443623ns
+[   31.679123] type=1400 audit(1655394520.004:203): avc: denied { getattr } for comm="Binder:5320_1" name="/" dev="sda8" ino=1 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:firmware_file:s0 tclass=filesystem permissive=0 app=com.google.android.gms
+[   31.679780] type=1400 audit(1655394520.904:204): avc: denied { search } for comm="IntentService[D" name="vendor" dev="tmpfs" ino=22101 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:mnt_vendor_file:s0 tclass=dir permissive=0 app=com.google.android.gms
+[   31.686096] type=1400 audit(1655394520.904:204): avc: denied { search } for comm="IntentService[D" name="vendor" dev="tmpfs" ino=22101 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:mnt_vendor_file:s0 tclass=dir permissive=0 app=com.google.android.gms
+[   31.686726] type=1400 audit(1655394520.911:205): avc: denied { getattr } for comm="IntentService[D" name="/" dev="sda8" ino=1 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:firmware_file:s0 tclass=filesystem permissive=0 app=com.google.android.gms
+[   31.917603] type=1400 audit(1655394520.911:205): avc: denied { getattr } for comm="IntentService[D" name="/" dev="sda8" ino=1 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:firmware_file:s0 tclass=filesystem permissive=0 app=com.google.android.gms
+[   31.918248] type=1400 audit(1655394521.141:206): avc: denied { read } for comm=".BOOT_COMPLETED" name="u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=3843 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+[   32.477232] logd: logdr: UID=10052 GID=10052 PID=2259 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   32.942340] logd: logdr: UID=10052 GID=10052 PID=2259 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[   33.718061] type=1400 audit(1655394521.141:206): avc: denied { read } for comm=".BOOT_COMPLETED" name="u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=3843 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+[   33.718710] type=1400 audit(1655394522.944:207): avc: denied { search } for comm="Binder:5320_5" name="vendor" dev="tmpfs" ino=22101 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:mnt_vendor_file:s0 tclass=dir permissive=0 app=com.google.android.gms
+[   33.723245] type=1400 audit(1655394522.944:207): avc: denied { search } for comm="Binder:5320_5" name="vendor" dev="tmpfs" ino=22101 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:mnt_vendor_file:s0 tclass=dir permissive=0 app=com.google.android.gms
+[   33.723917] type=1400 audit(1655394522.948:208): avc: denied { getattr } for comm="Binder:5320_5" name="/" dev="sda8" ino=1 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:firmware_file:s0 tclass=filesystem permissive=0 app=com.google.android.gms
+[   33.762469] max1720x 2-0036: s=2->1 c=-232812 avg_c=20937 ichgt=140000 vfsoc=98 soc=98 fullsocthr=90
+[   33.768076] google_charger: usbchg=USB typec=C usbv=4882 usbc=487 usbMv=5000 usbMc=500
+[   33.768184] sm8150_bms: MSC_PCS chg_state=1f4111203010015 [0x15:3:1:4370:500] chg=u
+[   33.768196] google_battery: MSC_DIN chg_state=1f4111203010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4370 icl=500
+[   33.770916] google_battery: MSC_LAST vbatt=4387031 ibatt=-232812 fv_uv=4400000
+[   33.770928] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   33.770936] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   33.770964] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   33.784349] healthd: battery l=98 v=4387 t=26.7 h=2 st=2 c=-232 fc=2706000 cc=13 chg=u
+[   36.225201] sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+[   36.232790] google_charger: usbchg=USB typec=C usbv=4971 usbc=237 usbMv=5000 usbMc=500
+[   36.232909] sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+[   36.232931] google_battery: MSC_DIN chg_state=1f4112f04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4399 icl=500
+[   36.237992] google_battery: MSC_LAST vbatt=4390781 ibatt=-150000 fv_uv=4400000
+[   36.238009] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   36.238020] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   36.238068] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   36.240909] healthd: battery l=98 v=4390 t=26.7 h=2 st=2 c=-150 fc=2706000 cc=13 chg=u
+[   47.499999] init: Service 'adbd' (pid 1270) exited with status 1
+[   47.500105] init: Sending signal 9 to service 'adbd' (pid 1270) process group...
+[   47.500562] libprocessgroup: Successfully killed process cgroup uid 0 pid 1270 in 0ms
+[   47.502150] init: starting service 'adbd'...
+[   47.505970] init: Created socket '/dev/socket/adbd', mode 660, user 1000, group 1000
+[   47.520224] read descriptors
+[   47.520281] read strings
+[   48.033468] android_work: sent uevent USB_STATE=DISCONNECTED
+[   48.387217] msm-dwc3 a600000.ssusb: Avail curr from USB = 100
+[   48.387836] android_work: did not send uevent (0 0 0000000000000000)
+[   48.468092] android_work: sent uevent USB_STATE=CONNECTED
+[   48.471644] android_work: sent uevent USB_STATE=DISCONNECTED
+[   48.552422] sm8150_bms: MSC_PCS chg_state=64112603010015 [0x15:3:1:4390:100] chg=u
+[   48.555027] google_charger: usbchg=USB typec=C usbv=5015 usbc=388 usbMv=5000 usbMc=100
+[   48.555154] sm8150_bms: MSC_PCS chg_state=64112603010015 [0x15:3:1:4390:100] chg=u
+[   48.555190] google_battery: MSC_DIN chg_state=64112603010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4390 icl=100
+[   48.558987] max1720x 2-0036: s=1->2 c=-49062 avg_c=14375 ichgt=140000 vfsoc=98 soc=98 fullsocthr=90
+[   48.561467] google_battery: MSC_LAST vbatt=4380312 ibatt=-49062 fv_uv=4400000
+[   48.561497] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   48.561515] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   48.561579] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   48.565792] healthd: battery l=98 v=4380 t=26.7 h=2 st=4 c=-49 fc=2706000 cc=13 chg=u
+[   48.575988] android_work: sent uevent USB_STATE=CONNECTED
+[   48.576272] configfs-gadget gadget: high-speed config #1: b
+[   48.576544] msm-dwc3 a600000.ssusb: Avail curr from USB = 500
+[   48.577675] android_work: sent uevent USB_STATE=CONFIGURED
+[   49.176480] sm8150_bms: MSC_PCS chg_state=1c2112604010009 [0x9:4:1:4390:450] chg=u
+[   49.179622] google_charger: usbchg=USB typec=C usbv=4971 usbc=240 usbMv=5000 usbMc=450
+[   49.179749] sm8150_bms: MSC_PCS chg_state=1c2112604010009 [0x9:4:1:4390:450] chg=u
+[   49.179782] google_battery: MSC_DIN chg_state=1c2112604010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4390 icl=450
+[   49.186559] google_battery: MSC_LAST vbatt=4392656 ibatt=-126562 fv_uv=4400000
+[   49.186591] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   49.186611] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   49.186791] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   49.190136] healthd: battery l=98 v=4392 t=26.7 h=2 st=4 c=-126 fc=2706000 cc=13 chg=u
+[   49.641038] healthd: battery l=98 v=4391 t=26.7 h=2 st=4 c=-135 fc=2706000 cc=13 chg=u
+[   49.716467] healthd: battery l=98 v=4391 t=26.7 h=2 st=4 c=-135 fc=2706000 cc=13 chg=u
+[   49.878761] sm8150_bms: MSC_PCS chg_state=1f4113003010015 [0x15:3:1:4400:500] chg=u
+[   49.882066] google_charger: usbchg=USB typec=C usbv=4876 usbc=489 usbMv=5000 usbMc=500
+[   49.882182] sm8150_bms: MSC_PCS chg_state=1f4113003010015 [0x15:3:1:4400:500] chg=u
+[   49.882204] google_battery: MSC_DIN chg_state=1f4113003010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4400 icl=500
+[   49.887328] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4369218 ibatt=12500 fv_uv=4400000 cv_cnt=3 ov_cnt=0
+[   49.887357] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   49.887372] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   49.887412] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   49.890829] healthd: battery l=98 v=4391 t=26.7 h=2 st=4 c=12 fc=2706000 cc=13 chg=u
+[   49.906154] sh (5887): drop_caches: 3
+[   50.246401] sm8150_bms: MSC_PCS chg_state=1f4113004010009 [0x9:4:1:4400:500] chg=u
+[   50.249867] google_charger: usbchg=USB typec=C usbv=4916 usbc=289 usbMv=5000 usbMc=500
+[   50.249980] sm8150_bms: MSC_PCS chg_state=1f4113004010009 [0x9:4:1:4400:500] chg=u
+[   50.250010] google_battery: MSC_DIN chg_state=1f4113004010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4400 icl=500
+[   50.253965] max1720x 2-0036: s=2->1 c=-146250 avg_c=13750 ichgt=140000 vfsoc=98 soc=98 fullsocthr=90
+[   50.256096] google_battery: MSC_LAST vbatt=4369218 ibatt=-146250 fv_uv=4400000
+[   50.256123] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[   50.256143] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[   50.256211] google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+[   50.260721] healthd: battery l=98 v=4369 t=26.7 h=2 st=2 c=-146 fc=2706000 cc=13 chg=u
+[   54.240642] type=1400 audit(1655394522.948:208): avc: denied { getattr } for comm="Binder:5320_5" name="/" dev="sda8" ino=1 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:firmware_file:s0 tclass=filesystem permissive=0 app=com.google.android.gms
+[   54.240736] type=1404 audit(1655394543.468:209): enforcing=0 old_enforcing=1 auid=4294967295 ses=4294967295
+[   55.315526] type=1404 audit(1655394543.468:209): enforcing=0 old_enforcing=1 auid=4294967295 ses=4294967295
+[   55.315596] type=1400 audit(1655394544.541:210): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.5 lport=41752 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[   55.317656] type=1400 audit(1655394544.541:210): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.5 lport=41752 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[   55.317716] type=1400 audit(1655394544.541:211): avc: denied { write } for comm="kworker/4:1H" laddr=192.168.0.5 lport=41752 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[   56.585980] init: Untracked pid 3312 exited with status 0
+[   57.593751] Adding 314572796k swap on /dev/nbd0.  Priority:-3 extents:1 across:314572796k SS

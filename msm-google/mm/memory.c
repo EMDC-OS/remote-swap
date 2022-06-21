@@ -2924,6 +2924,7 @@ int do_swap_page(struct vm_fault *vmf)
 #ifdef CONFIG_APP_AWARE
 
 	int idx;
+	unsigned int id;
 	atomic_t *st_idx_ptr;
 	struct swap_trace_entry *swap_trace_table;
 
@@ -3106,15 +3107,15 @@ int do_swap_page(struct vm_fault *vmf)
 
 #ifdef CONFIG_APP_AWARE
 
-	if(switch_start){
-
-		if(which_table){
-			st_idx_ptr = &st_index1;
-			swap_trace_table = swap_trace_table1;
+	if(switch_start && foreground_uid){
+		id = get_id_from_uid(foreground_uid);
+		if(past[id]->which_table){
+			st_idx_ptr = &past[id]->st_index1;
+			swap_trace_table = past[id]->swap_trace_table1;
 		}
 		else{
-			st_idx_ptr = &st_index0;
-			swap_trace_table = swap_trace_table0;
+			st_idx_ptr = &past[id]->st_index0;
+			swap_trace_table = past[id]->swap_trace_table0;
 		}
 
 		idx = atomic_inc_return(st_idx_ptr);
@@ -3122,7 +3123,7 @@ int do_swap_page(struct vm_fault *vmf)
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
-		trace_printk("table %d || %d: %d %llx\n", which_table, idx, current->tgid, vmf->address);
+		trace_printk("id %d, table %d || %d: %d %llx\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
 
 	}
 

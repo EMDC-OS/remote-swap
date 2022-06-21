@@ -398,6 +398,10 @@ static void swap_cluster_schedule_discard(struct swap_info_struct *si,
 static void __free_cluster(struct swap_info_struct *si, unsigned long idx)
 {
 	struct swap_cluster_info *ci = si->cluster_info;
+			
+#ifdef CONFIG_APP_AWARE
+	trace_printk("[REMOTE %s] free cluster %ld\n", __func__,idx);
+#endif
 
 	cluster_set_flag(ci + idx, CLUSTER_FLAG_FREE);
 	cluster_list_add_tail(&si->free_clusters, ci, idx);
@@ -3769,8 +3773,6 @@ scan_swap_map_ssd_cluster_conflict_of_id(struct swap_info_struct *si,
 }
 
 
-
-
 static bool scan_swap_map_try_cluster_id(struct swap_info_struct *si,
 	unsigned long *offset, unsigned long *scan_base, unsigned int id)
 {
@@ -3786,6 +3788,10 @@ new_cluster:
 			cluster->index = si->free_clusters.head;
 			cluster->next = cluster_next(&cluster->index) *
 					SWAPFILE_CLUSTER;
+
+			trace_printk("[REMOTE %s] id %d: alloc new cluster %ld\n", __func__,id,(cluster->next)/SWAPFILE_CLUSTER);
+		
+		
 		} else if (!cluster_list_empty(&si->discard_clusters)) {
 			/*
 			 * we don't have free cluster but have some clusters in
@@ -3999,17 +4005,22 @@ static unsigned long scan_swap_map_of_id(struct swap_info_struct *si,
 
 
 /* The only caller of this function is now suspend routine */
-swp_entry_t get_swap_page_of_uid(int uid)
+swp_entry_t get_swap_page_of_id(unsigned int id)
 {
 	struct swap_info_struct *si;
 	pgoff_t offset;
-	unsigned int id = get_id_from_uid(uid);
+
+	if(id<0 || id>9){
+		panic("[REMOTE %s] unregistered ID %d\n", __func__,id);
+	}
+			
 	si = swap_info[NBD_TYPE];
 	spin_lock(&si->lock);
 	if (si && (si->flags & SWP_WRITEOK)) {
 		atomic_long_dec(&nr_swap_pages);
 		/* This is called for allocating swap entry, not cache */
 		offset = scan_swap_map_of_id(si, 1, id);
+	//	trace_printk("[REMOTE %s] id %d: offset %ld\n", __func__,id,offset%SWAPFILE_CLUSTER);
 		if (offset) {
 			spin_unlock(&si->lock);
 			return swp_entry(NBD_TYPE, offset);

@@ -13,8 +13,6 @@ adb shell "echo 1 > /sys/kernel/debug/tracing/tracing_on"
 sleep 1
 adb shell "echo 1 > /proc/sys/kernel/prefetch_on"
 sleep 1
-adb shell "echo 1 > /proc/sys/kernel/swapin_vma_tracking"
-sleep 1
 adb shell "echo 50000 > /sys/kernel/debug/tracing/buffer_size_kb"
 sleep 1
 

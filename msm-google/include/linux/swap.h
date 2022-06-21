@@ -478,6 +478,9 @@ extern int try_to_free_swap(struct page *);
 struct backing_dev_info;
 extern int init_swap_address_space(unsigned int type, unsigned long nr_pages);
 extern void exit_swap_address_space(unsigned int type);
+#ifdef CONFIG_APP_AWARE
+extern swp_entry_t get_swap_page_of_id(unsigned int id);
+#endif
 
 #else /* CONFIG_SWAP */
 

@@ -472,8 +472,16 @@ struct page *lookup_swap_cache(swp_entry_t entry, struct vm_area_struct *vma,
 			count_vm_event(SWAP_RA_HIT);
 
 #ifdef CONFIG_APP_AWARE
-			if (swp_type(entry) == NBD_TYPE)
-				trace_printk("prefetch hit %d \"%s\" %lx %lx\n",current->tgid,current->comm,addr,swp_offset(entry));
+			if (swp_type(entry) == NBD_TYPE){
+				if(switch_start)
+					trace_printk("prefetch hit %d \"%s\" %lx %lx\n",current->tgid,current->comm,addr,swp_offset(entry));
+				else
+				{
+					trace_printk("prefetch miss %d \"%s\" %lx %lx\n",current->tgid,current->comm,addr,swp_offset(entry));
+
+
+				}
+			}
 #endif
 			
 			if (!vma)
