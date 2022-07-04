@@ -64,10 +64,12 @@ struct per_app_swap_trace *past[9];
 int backgrounded_uid;
 atomic_t sent_cold_page;
 atomic_t faulted_cold_page;
+atomic_t excepted_page;
 
 int prefetch_on;
 int target_percentage;
-int random_nbd_entry;
+
+struct task_struct *preempted_cold_task;
 
 struct perapp_cluster pac[10];
 
@@ -158,12 +160,9 @@ static int send_zram_to_nbd(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned lo
 	SetPageUnevictable(page);
 					
 	//printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,(unsigned long)page_address(page));
-	if(random_nbd_entry)
-		new_entry = get_swap_page_of_type(NBD_TYPE);
-	else
 		new_entry = get_swap_page_of_id(id);
-	new_pte = swp_entry_to_pte(new_entry);
-	//if Prefetch target, type==1 && counter==0
+	new_pte = swp_entry_and_counter_to_pte(new_entry,id);
+	//if Prefetch target, type==1 && counter(id)==id
 	lock_page(page);
 	__SetPageSwapBacked(page);
 	ClearPageUptodate(page);
@@ -205,7 +204,7 @@ static int send_zram_to_nbd(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned lo
 	}
 	
 	set_pte(orig_pte, new_pte);
-	trace_printk("target sent: %d %llx %llx\n",mm->owner->tgid, vpage, swp_offset(new_entry));
+	trace_printk("target sent id %d: %d %llx %llx\n",id, mm->owner->tgid, vpage, swp_offset(new_entry));
 	swap_free(entry);
 	ret=1;
 unlock:
@@ -287,7 +286,7 @@ static void cold_page_sender_work(struct work_struct *work)
 						continue;
 					}
 					
-					if(swp_swapcount(entry) != 1 || counter <= COLD_PAGE_THRESHOLD) {
+					if(swp_type(entry) == NBD_TYPE || swp_swapcount(entry) != 1 || counter <= COLD_PAGE_THRESHOLD) {
 						continue;
 					}
 					else                    // page is swapped and swap entry.
@@ -311,13 +310,10 @@ static void cold_page_sender_work(struct work_struct *work)
 						
 					//	printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,(unsigned long)page_address(page));
 
-						if(random_nbd_entry)
-							new_entry = get_swap_page_of_type(NBD_TYPE);
-						else
 							new_entry = get_swap_page_of_id(9); // cold page
 
-						new_pte = swp_entry_and_counter_to_pte(new_entry,1);
-						//if COLD, type==1 && counter==1
+						new_pte = swp_entry_and_counter_to_pte(new_entry,9);
+						//if COLD, type==1 && counter(id)==9 (cold id)
 
 
 						
@@ -377,6 +373,13 @@ unlock:
 //						printk(KERN_ERR "[REMOTE %s] free page %llx\n", __func__,(unsigned long)page_address(page));
 						free_page((unsigned long)(page_address(page)));
 
+						if(switch_start){
+							trace_printk(KERN_ERR "[REMOTE %s] switch started during cold work. preempted! \n", __func__);
+							atomic_add(cnt, &sent_cold_page);
+							kfree(tew);
+							preempted_cold_task = task ;
+							return;
+						}
 						
 					}
 				}
@@ -389,6 +392,8 @@ unlock:
 	trace_printk("remote: total sent cold page: %d\n", sent_cold_page);
 	trace_printk("remote: total faulted cold page: %d\n", faulted_cold_page);
 	kfree(tew);
+
+	preempted_cold_task = NULL;
 
 }
 
@@ -408,7 +413,18 @@ static int fault_target_page(pid_t tgid, unsigned long va){
 	rcu_read_lock();
 	task = find_task_by_vpid(tgid);
 	rcu_read_unlock();
-	
+
+
+	if(!task)     
+    {
+	//	printk(KERN_ERR "[REMOTE %s] task is NULL \n", __func__);
+        return 0;
+    }
+    
+        
+	if(task->mm && task->mm->mmap) 
+    {
+
 	mm = task->mm ;
 	vma = find_vma(mm,va);
 	pgd = pgd_offset(mm, va);
@@ -472,6 +488,8 @@ retry:
 		}
 	}       
 
+
+	}
 	return 0;
 }
 
@@ -496,7 +514,19 @@ static int prefetch_target_page(pid_t tgid, unsigned long va){
 	rcu_read_lock();
 	task = find_task_by_vpid(tgid);
 	rcu_read_unlock();
-	
+
+	if(!task)     
+    {
+	//	printk(KERN_ERR "[REMOTE %s] task is NULL \n", __func__);
+        return 0;
+    }
+    
+        
+	if(task->mm && task->mm->mmap) 
+    {
+
+
+
 	mm = task->mm ;
 	vma = find_vma(mm,va);
 	pgd = pgd_offset(mm, va);
@@ -549,6 +579,11 @@ static int prefetch_target_page(pid_t tgid, unsigned long va){
 			}
 		}
 	}       
+
+
+
+	}
+
 
 	return 0;
 }
@@ -814,9 +849,6 @@ int ksg_handler(struct ctl_table *table, int write,
                                     pte_t new_pte;
 									int ret;
 
-									if(random_nbd_entry)
-										new_entry = get_swap_page_of_type(NBD_TYPE);
-									else
 										new_entry = get_swap_page_of_id(id);
 									
                                     new_pte = swp_entry_to_pte(new_entry);
@@ -1006,8 +1038,6 @@ int app_switch_start;
 int app_switch_start_handler(struct ctl_table *table, int write,
 			   void __user *buffer, size_t *length, loff_t *ppos)
 {
-
-	
 	int rc = proc_dointvec_minmax(table,write,buffer,length,ppos);
 	unsigned int id;
 	unsigned long flags;
@@ -1030,10 +1060,6 @@ int app_switch_start_handler(struct ctl_table *table, int write,
 		if(foreground_uid && prefetch_on)
 			prefetch_handler(id,target_table);
 
-		spin_lock_irqsave(&switch_start_lock,flags);
-		switch_start = 1;
-		spin_unlock_irqrestore(&switch_start_lock,flags);
-
 		
 		spin_lock_irqsave(&which_table_lock,flags);
 
@@ -1051,8 +1077,9 @@ int app_switch_start_handler(struct ctl_table *table, int write,
 			atomic_set(&past[id]->st_index0,-1);
 
 
-
-
+		spin_lock_irqsave(&switch_start_lock,flags);
+		switch_start = 1;
+		spin_unlock_irqrestore(&switch_start_lock,flags);
 
 	}
 
@@ -1163,7 +1190,7 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 
 
 		if(foreground_uid && atomic_read(&past[id]->st_index0)!=-1 && atomic_read(&past[id]->st_index1)!=-1){
-			update_to_nbd_flag(id, target_percentage); //<--app_number or uid
+			update_to_nbd_flag(id, 100-target_percentage); //<--app_number or uid
 			past[id]->st_should_check = 1 ; // --> per app, and keep in list
 		}
 
@@ -1180,6 +1207,11 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 					printk("backgrounded_uid %d",backgrounded_uid);
 					if(task_swap_counter_inc(p))
 						cold_page_sender_handler(p);
+					/* for preempted task */
+					if(preempted_cold_task){
+						trace_printk("preempted cold task recheck\n");
+						cold_page_sender_handler(preempted_cold_task);
+					}
 				}
 			}
 			rcu_read_unlock();
@@ -1291,6 +1323,7 @@ int swap_counter_dump_handler(struct ctl_table *table, int write,
 
 	trace_printk("remote: total sent cold page: %d\n", sent_cold_page);
 	trace_printk("remote: total faulted cold page: %d\n", faulted_cold_page);
+	trace_printk("remote: total excepted page: %d\n", excepted_page);
 	}
 	return 0;
 }
@@ -1328,7 +1361,7 @@ static int send_target_page(unsigned int id, pid_t tgid, unsigned long va){
 
 	if(!task)     
     {
-		printk(KERN_ERR "[REMOTE %s] task is NULL \n", __func__);
+		//printk(KERN_ERR "[REMOTE %s] task is NULL \n", __func__);
         return 0;
     }
 
@@ -1573,6 +1606,8 @@ static int __init remote_swap_init(void)
 		past[i]=(struct per_app_swap_trace *)vmalloc(sizeof(struct per_app_swap_trace));
 		init_past(past[i]);
 	}
+
+	preempted_cold_task = NULL;
 
 	error = send_target_managers_init();
 	if (unlikely(error))

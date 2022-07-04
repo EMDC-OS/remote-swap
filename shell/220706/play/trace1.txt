@@ -1,0 +1,320 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 309/309   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-201   [005] ....     0.525219: send_target_manager: 3[REMOTE send_target_manager] target manager started
+           <...>-201   [005] ....     0.525233: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [004] ....     0.525300: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [004] ....     0.525306: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-5764  [007] ....    36.865808: app_switch_start_handler: ###########switch start! foreground 10135#############
+           <...>-5764  [007] ....    36.865813: prefetch_handler: prefetch handler start! target(id,table): 0,0
+           <...>-5764  [007] ....    37.671910: miss_page_handler: miss page handler start! target(id,table): 0,1
+           <...>-201   [007] ....    37.672843: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [007] ....    37.672847: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [007] ....   163.466777: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [007] ....   163.466782: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [004] ....   313.654094: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [004] ....   313.654099: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-9550  [007] ....   350.482443: app_switch_start_handler: ###########switch start! foreground 10126#############
+           <...>-9550  [007] ....   350.482447: prefetch_handler: prefetch handler start! target(id,table): 1,0
+           <...>-9550  [006] ....   351.564754: miss_page_handler: miss page handler start! target(id,table): 1,1
+           <...>-201   [006] ....   351.564867: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [006] ....   351.564870: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [006] ....   463.840398: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [006] ....   463.840408: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [001] ....   614.026731: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [001] ....   614.026755: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [001] ....   764.213411: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [001] ....   764.213441: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [002] ....   914.403394: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [002] ....   914.403410: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [001] ....  1064.586657: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [001] ....  1064.586676: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-10133 [007] ....  1074.918277: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-10133 [007] ....  1074.918283: prefetch_handler: prefetch handler start! target(id,table): 4,0
+           <...>-10133 [006] ....  1075.516200: miss_page_handler: miss page handler start! target(id,table): 4,1
+           <...>-201   [003] ....  1075.516239: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [003] ....  1075.516246: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [001] ....  1214.773460: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [001] ....  1214.773474: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-11210 [007] ....  1259.303773: app_switch_start_handler: ###########switch start! foreground 10124#############
+           <...>-11210 [007] ....  1259.303777: prefetch_handler: prefetch handler start! target(id,table): 8,0
+           <...>-11210 [007] ....  1259.555483: miss_page_handler: miss page handler start! target(id,table): 8,1
+           <...>-201   [004] ....  1259.555503: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [004] ....  1259.555507: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [001] ....  1364.960016: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [001] ....  1364.960041: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [001] ....  1515.147142: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [001] ....  1515.147169: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [001] ....  1665.333183: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [001] ....  1665.333191: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-13188 [007] ....  1680.837498: app_switch_start_handler: ###########switch start! foreground 10133#############
+           <...>-13188 [007] ....  1680.837504: prefetch_handler: prefetch handler start! target(id,table): 3,0
+           <...>-13188 [006] ....  1681.670065: miss_page_handler: miss page handler start! target(id,table): 3,1
+           <...>-201   [006] ....  1681.670458: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [006] ....  1681.670461: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-13469 [007] ....  1725.761897: app_switch_start_handler: ###########switch start! foreground 10122#############
+           <...>-13469 [007] ....  1725.761899: prefetch_handler: prefetch handler start! target(id,table): 5,0
+           <...>-13469 [004] ....  1726.263383: miss_page_handler: miss page handler start! target(id,table): 5,1
+           <...>-201   [004] ....  1726.269697: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [004] ....  1726.269702: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [005] ....  1815.520025: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [005] ....  1815.520031: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-14114 [007] ....  1910.063327: app_switch_start_handler: ###########switch start! foreground 10136#############
+           <...>-14114 [007] ....  1910.063334: prefetch_handler: prefetch handler start! target(id,table): 7,0
+           <...>-14114 [007] ....  1910.872137: miss_page_handler: miss page handler start! target(id,table): 7,1
+           <...>-201   [004] ....  1910.874713: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [004] ....  1910.874717: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [001] ....  1965.706699: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [001] ....  1965.706729: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-14455 [007] ....  1985.164469: app_switch_start_handler: ###########switch start! foreground 10127#############
+           <...>-14455 [007] ....  1985.164474: prefetch_handler: prefetch handler start! target(id,table): 2,0
+           <...>-14455 [006] ....  1986.198426: miss_page_handler: miss page handler start! target(id,table): 2,1
+           <...>-201   [001] ....  1986.198457: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [001] ....  1986.198464: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [001] ....  2115.893018: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [001] ....  2115.893028: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [001] ....  2266.083040: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [001] ....  2266.083051: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-19555 [007] ....  2309.085910: app_switch_start_handler: ###########switch start! foreground 10159#############
+           <...>-19555 [007] ....  2309.085915: prefetch_handler: prefetch handler start! target(id,table): 6,0
+           <...>-19555 [007] ....  2309.878546: miss_page_handler: miss page handler start! target(id,table): 6,1
+           <...>-201   [007] ....  2309.878647: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [007] ....  2309.878649: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-201   [002] ....  2416.266597: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-201   [002] ....  2416.266622: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+ cds_ol_rx_threa-2805  [003] d..1  2445.291639: wakeup_source_activate: qcom_rx_wakelock state=0x47660005
+ cds_ol_rx_threa-2805  [001] d..1  2445.496794: wakeup_source_activate: qcom_rx_wakelock state=0x47670005
+          <idle>-0     [000] d.h4  2446.359809: wakeup_source_activate: epoll_system_server_file:[timerfd14_system_server] state=0x47680005
+    AlarmManager-1450  [000] d..1  2446.359891: wakeup_source_activate: epoll_system_server_epollfd state=0x47680006
+    AlarmManager-1450  [000] d..1  2446.359901: wakeup_source_activate: epoll_system_server_file:[timerfd14_system_server] state=0x47690006
+    AlarmManager-1450  [000] d..1  2446.362513: wakeup_source_activate: epoll_system_server_epollfd state=0x476a0006
+           <...>-920   [002] d..1  2446.399159: wakeup_source_activate: scan_wake_lock state=0x476c0005
+     kworker/3:0-10052 [003] d..1  2446.986383: wakeup_source_activate: battery state=0x476c0006
+ cds_ol_rx_threa-2805  [001] d..1  2450.228765: wakeup_source_activate: qcom_rx_wakelock state=0x476d0006
+ cds_ol_rx_threa-2805  [000] d..1  2450.428687: wakeup_source_activate: qcom_rx_wakelock state=0x476e0006
+           <...>-2803  [002] d..1  2451.270205: wakeup_source_activate: scan_wake_lock state=0x47700005
+ cds_ol_rx_threa-2805  [003] d..1  2451.273533: wakeup_source_activate: qcom_rx_wakelock state=0x47700006
+ cds_ol_rx_threa-2805  [002] d..1  2455.326704: wakeup_source_activate: qcom_rx_wakelock state=0x47720005
+          <idle>-0     [002] d.s2  2455.376246: wakeup_source_deactivate: qcom_rx_wakelock state=0x47730004
+ cds_ol_rx_threa-2805  [001] d..1  2455.531049: wakeup_source_activate: qcom_rx_wakelock state=0x47730005
+          <idle>-0     [001] d.s2  2455.579579: wakeup_source_deactivate: qcom_rx_wakelock state=0x47740004
+          <idle>-0     [002] d.h3  2457.673985: wakeup_source_activate: qrtr_0 state=0x47740005
+          <idle>-0     [002] d.h3  2457.674003: wakeup_source_deactivate: qrtr_0 state=0x47750004
+ cds_ol_rx_threa-2805  [000] d..1  2457.681376: wakeup_source_activate: qcom_rx_wakelock state=0x47750005
+          <idle>-0     [000] d.s2  2457.729576: wakeup_source_deactivate: qcom_rx_wakelock state=0x47760004
+ cds_ol_rx_threa-2805  [001] d..1  2460.345301: wakeup_source_activate: qcom_rx_wakelock state=0x47760005
+          <idle>-0     [001] d.s2  2460.392904: wakeup_source_deactivate: qcom_rx_wakelock state=0x47770004
+ cds_ol_rx_threa-2805  [002] d..1  2460.651387: wakeup_source_activate: qcom_rx_wakelock state=0x47770005
+          <idle>-0     [002] dns2  2460.699595: wakeup_source_deactivate: qcom_rx_wakelock state=0x47780004
+ cds_ol_rx_threa-2805  [002] d..1  2460.954919: wakeup_source_activate: qcom_rx_wakelock state=0x47780005
+          <idle>-0     [002] d.s2  2461.002908: wakeup_source_deactivate: qcom_rx_wakelock state=0x47790004
+ cds_ol_rx_threa-2805  [003] d..1  2461.265662: wakeup_source_activate: qcom_rx_wakelock state=0x47790005
+          writer-13569 [003] d.s1  2461.312924: wakeup_source_deactivate: qcom_rx_wakelock state=0x477a0004
+ cds_ol_rx_threa-2805  [001] d..1  2463.314988: wakeup_source_activate: qcom_rx_wakelock state=0x477a0005
+          <idle>-0     [001] dns2  2463.362941: wakeup_source_deactivate: qcom_rx_wakelock state=0x477b0004
+           <...>-10931 [002] dnh3  2465.353434: wakeup_source_activate: qrtr_0 state=0x477b0005
+           <...>-10931 [002] dnh3  2465.353451: wakeup_source_deactivate: qrtr_0 state=0x477c0004
+ cds_ol_rx_threa-2805  [001] d..1  2465.364729: wakeup_source_activate: qcom_rx_wakelock state=0x477c0005
+          <idle>-0     [001] d.s2  2465.412912: wakeup_source_deactivate: qcom_rx_wakelock state=0x477d0004
+ suspend@1.0-ser-794   [003] d..1  2465.489240: wakeup_source_activate: KeyEvents state=0x477d0005
+ suspend@1.0-ser-794   [003] d..1  2465.489936: wakeup_source_deactivate: KeyEvents state=0x477e0004
+ cds_ol_rx_threa-2805  [002] d..1  2465.565982: wakeup_source_activate: qcom_rx_wakelock state=0x477e0005
+          <idle>-0     [002] d.s2  2465.612907: wakeup_source_deactivate: qcom_rx_wakelock state=0x477f0004
+          <idle>-0     [003] d.h4  2467.108805: wakeup_source_activate: epoll_system_server_file:[timerfd15_system_server] state=0x477f0005
+    AlarmManager-1450  [000] d..1  2467.108890: wakeup_source_activate: epoll_system_server_epollfd state=0x477f0006
+    AlarmManager-1450  [000] d..1  2467.108905: wakeup_source_deactivate: epoll_system_server_file:[timerfd15_system_server] state=0x47800005
+    AlarmManager-1450  [000] d..1  2467.108914: wakeup_source_activate: epoll_system_server_file:[timerfd15_system_server] state=0x47800006
+    AlarmManager-1450  [000] d..2  2467.108918: wakeup_source_deactivate: epoll_system_server_epollfd state=0x47810005
+    AlarmManager-1450  [000] d..1  2467.111099: wakeup_source_activate: epoll_system_server_epollfd state=0x47810006
+    AlarmManager-1450  [000] d..1  2467.111107: wakeup_source_deactivate: epoll_system_server_file:[timerfd15_system_server] state=0x47820005
+    AlarmManager-1450  [000] d..2  2467.111111: wakeup_source_deactivate: epoll_system_server_epollfd state=0x47830004
+ cds_ol_rx_threa-2805  [002] d..1  2470.379405: wakeup_source_activate: qcom_rx_wakelock state=0x47830005
+           <...>-27    [002] d.s1  2470.429755: wakeup_source_deactivate: qcom_rx_wakelock state=0x47840004
+ cds_ol_rx_threa-2805  [002] d..1  2470.685649: wakeup_source_activate: qcom_rx_wakelock state=0x47840005
+           <...>-2885  [002] d.s1  2470.732985: wakeup_source_deactivate: qcom_rx_wakelock state=0x47850004
+ cds_ol_rx_threa-2805  [003] d..1  2471.303484: wakeup_source_activate: qcom_rx_wakelock state=0x47850005
+          <idle>-0     [003] dns2  2471.352926: wakeup_source_deactivate: qcom_rx_wakelock state=0x47860004
+ cds_ol_rx_threa-2805  [001] d..1  2475.396939: wakeup_source_activate: qcom_rx_wakelock state=0x47860005
+  surfaceflinger-603   [001] d.s1  2475.446257: wakeup_source_deactivate: qcom_rx_wakelock state=0x47870004
+ cds_ol_rx_threa-2805  [003] d..1  2475.601306: wakeup_source_activate: qcom_rx_wakelock state=0x47870005
+          <idle>-0     [003] d.s2  2475.649571: wakeup_source_deactivate: qcom_rx_wakelock state=0x47880004
+     kworker/3:0-10052 [003] dn.1  2477.706428: wakeup_source_activate: battery state=0x47880005
+     kworker/3:0-10052 [003] d..1  2477.712179: wakeup_source_deactivate: battery state=0x47890004
+     kworker/3:0-10052 [003] d..1  2478.316405: wakeup_source_activate: google-charger state=0x47890005
+     kworker/3:0-10052 [003] d..1  2478.318150: wakeup_source_activate: MSC state=0x47890006
+     kworker/3:0-10052 [003] d..1  2478.321548: wakeup_source_deactivate: MSC state=0x478a0005
+     kworker/3:0-10052 [003] d..1  2478.321591: wakeup_source_deactivate: google-charger state=0x478b0004
+ cds_ol_rx_threa-2805  [003] d..1  2480.313010: wakeup_source_activate: qcom_rx_wakelock state=0x478b0005
+     kworker/3:0-10052 [003] d..1  2480.321639: wakeup_source_activate: google-charger state=0x478b0006
+     kworker/3:0-10052 [003] d..1  2480.321658: wakeup_source_deactivate: google-charger state=0x478c0005
+     kworker/3:0-10052 [003] d..1  2480.323595: wakeup_source_activate: MSC state=0x478c0006
+     kworker/3:0-10052 [003] d..1  2480.327503: wakeup_source_deactivate: MSC state=0x478d0005
+     kworker/3:0-10052 [003] d..1  2480.327522: wakeup_source_activate: google-charger state=0x478d0006
+     kworker/3:0-10052 [003] d..1  2480.327541: wakeup_source_deactivate: google-charger state=0x478e0005
+          <idle>-0     [003] d.s2  2480.362904: wakeup_source_deactivate: qcom_rx_wakelock state=0x478f0004
+ cds_ol_rx_threa-2805  [000] d..1  2480.619224: wakeup_source_activate: qcom_rx_wakelock state=0x478f0005
+           <...>-687   [000] d.s1  2480.666308: wakeup_source_deactivate: qcom_rx_wakelock state=0x47900004
+ cds_ol_rx_threa-2805  [000] d..1  2481.335949: wakeup_source_activate: qcom_rx_wakelock state=0x47900005
+          <idle>-0     [000] d.s2  2481.382904: wakeup_source_deactivate: qcom_rx_wakelock state=0x47910004
+     kworker/3:0-10052 [003] d..1  2482.327607: wakeup_source_activate: google-charger state=0x47910005
+     kworker/3:0-10052 [003] d..1  2482.327634: wakeup_source_deactivate: google-charger state=0x47920004
+     kworker/3:0-10052 [003] d..1  2482.329826: wakeup_source_activate: MSC state=0x47920005
+     kworker/3:0-10052 [003] d..1  2482.336597: wakeup_source_deactivate: MSC state=0x47930004
+     kworker/3:0-10052 [003] d..1  2482.336623: wakeup_source_activate: google-charger state=0x47930005
+     kworker/3:0-10052 [003] d..1  2482.336645: wakeup_source_deactivate: google-charger state=0x47940004
+ cds_ol_rx_threa-2805  [001] d..1  2482.769137: wakeup_source_activate: qcom_rx_wakelock state=0x47940005
+          <idle>-0     [001] dns2  2482.816260: wakeup_source_deactivate: qcom_rx_wakelock state=0x47950004
+ cds_ol_rx_threa-2805  [001] d..1  2483.281589: wakeup_source_activate: qcom_rx_wakelock state=0x47950005
+          <idle>-0     [002] d.h3  2483.307326: wakeup_source_activate: qrtr_0 state=0x47950006
+          <idle>-0     [002] d.h3  2483.307339: wakeup_source_deactivate: qrtr_0 state=0x47960005
+          <idle>-0     [001] d.s2  2483.329576: wakeup_source_deactivate: qcom_rx_wakelock state=0x47970004
+     kworker/3:0-10052 [003] d..1  2484.336714: wakeup_source_activate: google-charger state=0x47970005
+     kworker/3:0-10052 [003] d..1  2484.336739: wakeup_source_deactivate: google-charger state=0x47980004
+     kworker/3:0-10052 [003] d..1  2484.339744: wakeup_source_activate: MSC state=0x47980005
+     kworker/3:0-10052 [003] d..1  2484.344940: wakeup_source_deactivate: MSC state=0x47990004
+     kworker/3:0-10052 [003] d..1  2484.344967: wakeup_source_activate: google-charger state=0x47990005
+     kworker/3:0-10052 [003] d..1  2484.345092: wakeup_source_deactivate: google-charger state=0x479a0004
+ cds_ol_rx_threa-2805  [003] d..1  2485.329279: wakeup_source_activate: qcom_rx_wakelock state=0x479a0005
+          <idle>-0     [003] d.s2  2485.379601: wakeup_source_deactivate: qcom_rx_wakelock state=0x479b0004
+ cds_ol_rx_threa-2805  [001] d..1  2485.533787: wakeup_source_activate: qcom_rx_wakelock state=0x479b0005
+          <idle>-0     [001] dns2  2485.582926: wakeup_source_deactivate: qcom_rx_wakelock state=0x479c0004
+     kworker/3:0-10052 [003] d..1  2486.345228: wakeup_source_activate: google-charger state=0x479c0005
+     kworker/3:0-10052 [003] d..1  2486.345585: wakeup_source_deactivate: google-charger state=0x479d0004
+     kworker/3:0-10052 [003] d..1  2486.347485: wakeup_source_activate: MSC state=0x479d0005
+     kworker/3:0-10052 [003] d..1  2486.352246: wakeup_source_deactivate: MSC state=0x479e0004
+     kworker/3:0-10052 [003] d..1  2486.352269: wakeup_source_activate: google-charger state=0x479e0005
+     kworker/3:0-10052 [003] d..1  2486.352291: wakeup_source_deactivate: google-charger state=0x479f0004
+     kworker/3:0-10052 [003] d..1  2488.352347: wakeup_source_activate: google-charger state=0x479f0005
+     kworker/3:0-10052 [003] d..1  2488.352380: wakeup_source_deactivate: google-charger state=0x47a00004
+     kworker/3:0-10052 [003] d..1  2488.354376: wakeup_source_activate: MSC state=0x47a00005
+     kworker/3:0-10052 [003] d..1  2488.358984: wakeup_source_deactivate: MSC state=0x47a10004
+     kworker/3:0-10052 [003] d..1  2488.359013: wakeup_source_activate: google-charger state=0x47a10005
+     kworker/3:0-10052 [003] d..1  2488.359037: wakeup_source_deactivate: google-charger state=0x47a20004
+ cds_ol_rx_threa-2805  [002] d..1  2490.347931: wakeup_source_activate: qcom_rx_wakelock state=0x47a20005
+     kworker/3:0-10052 [003] d..1  2490.359181: wakeup_source_activate: google-charger state=0x47a20006
+     kworker/3:0-10052 [003] d..1  2490.359199: wakeup_source_deactivate: google-charger state=0x47a30005
+     kworker/3:0-10052 [003] d..1  2490.361048: wakeup_source_activate: MSC state=0x47a30006
+     kworker/3:0-10052 [003] d..1  2490.367263: wakeup_source_deactivate: MSC state=0x47a40005
+     kworker/3:0-10052 [003] d..1  2490.367283: wakeup_source_activate: google-charger state=0x47a40006
+     kworker/3:0-10052 [003] d..1  2490.367303: wakeup_source_deactivate: google-charger state=0x47a50005
+  surfaceflinger-603   [002] d.s1  2490.396259: wakeup_source_deactivate: qcom_rx_wakelock state=0x47a60004
+          <idle>-0     [002] dnh3  2490.400426: wakeup_source_activate: qrtr_0 state=0x47a60005
+          <idle>-0     [002] dnh3  2490.400439: wakeup_source_deactivate: qrtr_0 state=0x47a70004
+ cds_ol_rx_threa-2805  [002] d..1  2490.654028: wakeup_source_activate: qcom_rx_wakelock state=0x47a70005
+          writer-13569 [002] d.s1  2490.702920: wakeup_source_deactivate: qcom_rx_wakelock state=0x47a80004
+ cds_ol_rx_threa-2805  [003] d..1  2491.268055: wakeup_source_activate: qcom_rx_wakelock state=0x47a80005
+          <idle>-0     [003] d.s2  2491.316216: wakeup_source_deactivate: qcom_rx_wakelock state=0x47a90004
+     kworker/3:0-10052 [003] d..1  2492.367345: wakeup_source_activate: google-charger state=0x47a90005
+     kworker/3:0-10052 [003] d..1  2492.367369: wakeup_source_deactivate: google-charger state=0x47aa0004
+     kworker/3:0-10052 [003] d..1  2492.369264: wakeup_source_activate: MSC state=0x47aa0005
+     kworker/3:0-10052 [003] d..1  2492.373350: wakeup_source_deactivate: MSC state=0x47ab0004
+     kworker/3:0-10052 [003] d..1  2492.373371: wakeup_source_activate: google-charger state=0x47ab0005
+     kworker/3:0-10052 [003] d..1  2492.373387: wakeup_source_deactivate: google-charger state=0x47ac0004
+ cds_ol_rx_threa-2805  [001] d..1  2492.910654: wakeup_source_activate: qcom_rx_wakelock state=0x47ac0005
+          <idle>-0     [001] d.s2  2492.959572: wakeup_source_deactivate: qcom_rx_wakelock state=0x47ad0004
+ cds_ol_rx_threa-2805  [001] d..1  2493.116727: wakeup_source_activate: qcom_rx_wakelock state=0x47ad0005
+           <...>-13207 [001] d.s1  2493.209584: wakeup_source_deactivate: qcom_rx_wakelock state=0x47ae0004
+     kworker/3:0-10052 [003] d..1  2494.373467: wakeup_source_activate: google-charger state=0x47ae0005
+     kworker/3:0-10052 [003] d..1  2494.373499: wakeup_source_deactivate: google-charger state=0x47af0004
+     kworker/3:0-10052 [003] d..1  2494.375503: wakeup_source_activate: MSC state=0x47af0005
+     kworker/3:0-10052 [003] d..1  2494.379870: wakeup_source_deactivate: MSC state=0x47b00004
+ cds_ol_rx_threa-2805  [003] d..1  2495.365560: wakeup_source_activate: qcom_rx_wakelock state=0x47b00005
+          writer-13569 [003] d.s1  2495.412910: wakeup_source_deactivate: qcom_rx_wakelock state=0x47b10004
+ suspend@1.0-ser-794   [000] d..1  2495.490644: wakeup_source_activate: KeyEvents state=0x47b10005
+ suspend@1.0-ser-794   [000] d..1  2495.491573: wakeup_source_deactivate: KeyEvents state=0x47b20004
+ cds_ol_rx_threa-2805  [003] d..1  2495.573565: wakeup_source_activate: qcom_rx_wakelock state=0x47b20005
+          <idle>-0     [003] d.s2  2495.622894: wakeup_source_deactivate: qcom_rx_wakelock state=0x47b30004
+          <idle>-0     [002] d.h3  2498.121447: wakeup_source_activate: qrtr_0 state=0x47b30005
+          <idle>-0     [002] d.h3  2498.121464: wakeup_source_deactivate: qrtr_0 state=0x47b40004
+ cds_ol_rx_threa-2805  [001] d..1  2498.129271: wakeup_source_activate: qcom_rx_wakelock state=0x47b40005
+          <idle>-0     [001] d.s2  2498.216234: wakeup_source_deactivate: qcom_rx_wakelock state=0x47b50004
+          <idle>-0     [002] d.h3  2500.374161: wakeup_source_activate: qrtr_0 state=0x47b50005
+          <idle>-0     [002] d.h3  2500.374180: wakeup_source_deactivate: qrtr_0 state=0x47b60004
+ cds_ol_rx_threa-2805  [003] d..1  2500.382128: wakeup_source_activate: qcom_rx_wakelock state=0x47b60005
+          <idle>-0     [003] d.s2  2500.429581: wakeup_source_deactivate: qcom_rx_wakelock state=0x47b70004
+ cds_ol_rx_threa-2805  [003] d..1  2500.587821: wakeup_source_activate: qcom_rx_wakelock state=0x47b70005
+          <idle>-0     [003] d.s2  2500.636240: wakeup_source_deactivate: qcom_rx_wakelock state=0x47b80004
+ cds_ol_rx_threa-2805  [003] d..1  2501.303639: wakeup_source_activate: qcom_rx_wakelock state=0x47b80005
+          <idle>-0     [003] d.s2  2501.352923: wakeup_source_deactivate: qcom_rx_wakelock state=0x47b90004
+ cds_ol_rx_threa-2805  [003] d..1  2503.351483: wakeup_source_activate: qcom_rx_wakelock state=0x47b90005
+          <idle>-0     [003] dns2  2503.399605: wakeup_source_deactivate: qcom_rx_wakelock state=0x47ba0004
+ cds_ol_rx_threa-2805  [003] d..1  2505.399828: wakeup_source_activate: qcom_rx_wakelock state=0x47ba0005
+  surfaceflinger-603   [003] d.s1  2505.449593: wakeup_source_deactivate: qcom_rx_wakelock state=0x47bb0004
+ cds_ol_rx_threa-2805  [001] d..1  2505.604379: wakeup_source_activate: qcom_rx_wakelock state=0x47bb0005
+          <idle>-0     [001] d.s2  2505.652892: wakeup_source_deactivate: qcom_rx_wakelock state=0x47bc0004
+ cds_ol_rx_threa-2805  [001] d..1  2507.755793: wakeup_source_activate: qcom_rx_wakelock state=0x47bc0005
+           <...>-639   [001] d.s1  2507.802970: wakeup_source_deactivate: qcom_rx_wakelock state=0x47bd0004
+     kworker/3:0-10052 [003] d..1  2508.426369: wakeup_source_activate: battery state=0x47bd0005
+     kworker/3:0-10052 [003] d..1  2508.432086: wakeup_source_deactivate: battery state=0x47be0004
+ cds_ol_rx_threa-2805  [003] d..1  2509.495570: wakeup_source_activate: qcom_rx_wakelock state=0x47be0005
+          <idle>-0     [003] dns2  2509.549591: wakeup_source_deactivate: qcom_rx_wakelock state=0x47bf0004
+ cds_ol_rx_threa-2805  [003] d..1  2510.417447: wakeup_source_activate: qcom_rx_wakelock state=0x47bf0005
+          <idle>-0     [003] d.s2  2510.466246: wakeup_source_deactivate: qcom_rx_wakelock state=0x47c00004
+ cds_ol_rx_threa-2805  [003] d..1  2510.622323: wakeup_source_activate: qcom_rx_wakelock state=0x47c00005
+          <idle>-0     [003] d.s2  2510.669571: wakeup_source_deactivate: qcom_rx_wakelock state=0x47c10004
+ cds_ol_rx_threa-2805  [003] d..1  2511.338637: wakeup_source_activate: qcom_rx_wakelock state=0x47c10005
+          <idle>-0     [003] d.s2  2511.386233: wakeup_source_deactivate: qcom_rx_wakelock state=0x47c20004
+ cds_ol_rx_threa-2805  [000] d..1  2515.433547: wakeup_source_activate: qcom_rx_wakelock state=0x47c20005
+   kworker/u16:2-12883 [000] d.s1  2515.482959: wakeup_source_deactivate: qcom_rx_wakelock state=0x47c30004
+ cds_ol_rx_threa-2805  [000] d..1  2515.741854: wakeup_source_activate: qcom_rx_wakelock state=0x47c30005
+          <idle>-0     [000] d.s2  2515.789570: wakeup_source_deactivate: qcom_rx_wakelock state=0x47c40004
+ cds_ol_rx_threa-2805  [001] d..1  2520.452469: wakeup_source_activate: qcom_rx_wakelock state=0x47c40005
+          <idle>-0     [001] dns2  2520.502917: wakeup_source_deactivate: qcom_rx_wakelock state=0x47c50004
+ cds_ol_rx_threa-2805  [003] d..1  2520.657414: wakeup_source_activate: qcom_rx_wakelock state=0x47c50005
+          <idle>-0     [003] d.s2  2520.706243: wakeup_source_deactivate: qcom_rx_wakelock state=0x47c60004
+ cds_ol_rx_threa-2805  [003] d..1  2520.965718: wakeup_source_activate: qcom_rx_wakelock state=0x47c60005
+           <...>-271   [003] d.s3  2521.012908: wakeup_source_deactivate: qcom_rx_wakelock state=0x47c70004
+ cds_ol_rx_threa-2805  [003] d..1  2521.375345: wakeup_source_activate: qcom_rx_wakelock state=0x47c70005
+          <idle>-0     [003] d.s2  2521.422870: wakeup_source_deactivate: qcom_rx_wakelock state=0x47c80004
+ cds_ol_rx_threa-2805  [000] d..1  2523.422637: wakeup_source_activate: qcom_rx_wakelock state=0x47c80005
+          <idle>-0     [000] dns2  2523.472883: wakeup_source_deactivate: qcom_rx_wakelock state=0x47c90004
+ cds_ol_rx_threa-2805  [000] d..1  2525.470030: wakeup_source_activate: qcom_rx_wakelock state=0x47c90005
+ suspend@1.0-ser-794   [002] d..1  2525.492068: wakeup_source_activate: KeyEvents state=0x47c90006
+ suspend@1.0-ser-794   [002] d..1  2525.492637: wakeup_source_deactivate: KeyEvents state=0x47ca0005
+          <idle>-0     [000] d.s2  2525.519548: wakeup_source_deactivate: qcom_rx_wakelock state=0x47cb0004
+ cds_ol_rx_threa-2805  [003] d..1  2525.674615: wakeup_source_activate: qcom_rx_wakelock state=0x47cb0005
+          <idle>-0     [003] d.s2  2525.722878: wakeup_source_deactivate: qcom_rx_wakelock state=0x47cc0004
+          <idle>-0     [000] d.h4  2527.108797: wakeup_source_activate: epoll_system_server_file:[timerfd15_system_server] state=0x47cc0005
+    AlarmManager-1450  [000] d..1  2527.108901: wakeup_source_activate: epoll_system_server_epollfd state=0x47cc0006
+    AlarmManager-1450  [000] d..1  2527.108911: wakeup_source_deactivate: epoll_system_server_file:[timerfd15_system_server] state=0x47cd0005
+    AlarmManager-1450  [000] d..1  2527.108921: wakeup_source_activate: epoll_system_server_file:[timerfd15_system_server] state=0x47cd0006
+    AlarmManager-1450  [000] d..2  2527.108926: wakeup_source_deactivate: epoll_system_server_epollfd state=0x47ce0005
+    AlarmManager-1450  [006] d..1  2527.110362: wakeup_source_activate: epoll_system_server_epollfd state=0x47ce0006
+    AlarmManager-1450  [006] d..1  2527.110365: wakeup_source_deactivate: epoll_system_server_file:[timerfd15_system_server] state=0x47cf0005
+    AlarmManager-1450  [006] d..2  2527.110365: wakeup_source_deactivate: epoll_system_server_epollfd state=0x47d00004
+          <idle>-0     [002] dnh3  2527.149057: wakeup_source_activate: qrtr_0 state=0x47d00005
+          <idle>-0     [002] dnh3  2527.149068: wakeup_source_deactivate: qrtr_0 state=0x47d10004
+ cds_ol_rx_threa-2805  [003] d..1  2530.489202: wakeup_source_activate: qcom_rx_wakelock state=0x47d10005
+          <idle>-0     [003] d.s2  2530.539547: wakeup_source_deactivate: qcom_rx_wakelock state=0x47d20004
+ cds_ol_rx_threa-2805  [003] d..1  2530.692599: wakeup_source_activate: qcom_rx_wakelock state=0x47d20005
+         logcatd-874   [003] d.s1  2530.739579: wakeup_source_deactivate: qcom_rx_wakelock state=0x47d30004
+ cds_ol_rx_threa-2805  [003] d..1  2531.306484: wakeup_source_activate: qcom_rx_wakelock state=0x47d30005
+          <idle>-0     [003] d.s2  2531.356211: wakeup_source_deactivate: qcom_rx_wakelock state=0x47d40004
+ cds_ol_rx_threa-2805  [003] d..1  2532.740203: wakeup_source_activate: qcom_rx_wakelock state=0x47d40005
+          <idle>-0     [003] d.s2  2532.789547: wakeup_source_deactivate: qcom_rx_wakelock state=0x47d50004
+ cds_ol_rx_threa-2805  [003] d..1  2535.402914: wakeup_source_activate: qcom_rx_wakelock state=0x47d50005
+          <idle>-0     [003] dns2  2535.452881: wakeup_source_deactivate: qcom_rx_wakelock state=0x47d60004
+ cds_ol_rx_threa-2805  [003] d..1  2535.607372: wakeup_source_activate: qcom_rx_wakelock state=0x47d60005
+          <idle>-0     [003] d.s2  2535.656214: wakeup_source_deactivate: qcom_rx_wakelock state=0x47d70004
+ cds_ol_rx_threa-2805  [001] d..1  2537.349505: wakeup_source_activate: qcom_rx_wakelock state=0x47d70005
+          <idle>-0     [001] dns2  2537.396251: wakeup_source_deactivate: qcom_rx_wakelock state=0x47d80004
+     kworker/3:0-10052 [003] d..1  2539.146359: wakeup_source_activate: battery state=0x47d80005
+     kworker/3:0-10052 [003] d..1  2539.152664: wakeup_source_deactivate: battery state=0x47d90004
+ cds_ol_rx_threa-2805  [001] d..1  2540.420520: wakeup_source_activate: qcom_rx_wakelock state=0x47d90005
+          <idle>-0     [001] d.s2  2540.469555: wakeup_source_deactivate: qcom_rx_wakelock state=0x47da0004
+ cds_ol_rx_threa-2805  [003] d..1  2540.625430: wakeup_source_activate: qcom_rx_wakelock state=0x47da0005
+          <idle>-0     [003] d.s2  2540.672886: wakeup_source_deactivate: qcom_rx_wakelock state=0x47db0004
+ cds_ol_rx_threa-2805  [001] d..1  2543.391017: wakeup_source_activate: qcom_rx_wakelock state=0x47db0005
+          <idle>-0     [001] d.s2  2543.439586: wakeup_source_deactivate: qcom_rx_wakelock state=0x47dc0004
+ cds_ol_rx_threa-2805  [002] d..1  2545.438512: wakeup_source_activate: qcom_rx_wakelock state=0x47dc0005
+          <idle>-0     [002] d.s2  2545.486225: wakeup_source_deactivate: qcom_rx_wakelock state=0x47dd0004
+ cds_ol_rx_threa-2805  [001] d..1  2545.641482: wakeup_source_activate: qcom_rx_wakelock state=0x47dd0005
+          <idle>-0     [001] d.s2  2545.689593: wakeup_source_deactivate: qcom_rx_wakelock state=0x47de0004

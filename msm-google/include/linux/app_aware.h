@@ -8,7 +8,7 @@
 
 #define ZRAM_TYPE   0
 #define NBD_TYPE    1
-#define COLD_PAGE_THRESHOLD 5
+#define COLD_PAGE_THRESHOLD 3
 #define NUM_STT_ENTRIES 20000
 
 /******************************
@@ -66,6 +66,8 @@ extern struct per_app_swap_trace *past[9];
 extern atomic_t sent_cold_page;
 extern atomic_t faulted_cold_page;
 
+extern atomic_t excepted_page;
+
 
 extern int swapcache_flush;
 extern int swapcache_flush_handler(struct ctl_table *table, int write,
@@ -120,7 +122,6 @@ extern int swapin_vma_tracking;
 extern int swapin_anon_tracking;
 extern int prefetch_on;
 extern int target_percentage;
-extern int random_nbd_entry;
 
 
 

@@ -1,0 +1,40 @@
+fio_test_file: (g=0): rw=read, bs=(R) 64.0KiB-64.0KiB, (W) 64.0KiB-64.0KiB, (T) 64.0KiB-64.0KiB, ioengine=libaio, iodepth=64
+...
+fio-3.27-16-gdd46-dirty
+Starting 8 processes
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+fio_test_file: Laying out IO file (1 file / 128MiB)
+
+fio_test_file: (groupid=0, jobs=8): err= 0: pid=7398: Tue Jun 21 14:08:49 2022
+  read: IOPS=736, BW=46.0MiB/s (48.2MB/s)(1024MiB/22259msec)
+    slat (usec): min=9, max=185209, avg=543.32, stdev=3428.85
+    clat (msec): min=10, max=1409, avg=685.73, stdev=86.30
+     lat (msec): min=12, max=1409, avg=686.28, stdev=86.30
+    clat percentiles (msec):
+     |  1.00th=[  239],  5.00th=[  634], 10.00th=[  651], 20.00th=[  667],
+     | 30.00th=[  684], 40.00th=[  693], 50.00th=[  701], 60.00th=[  701],
+     | 70.00th=[  709], 80.00th=[  718], 90.00th=[  726], 95.00th=[  735],
+     | 99.00th=[  776], 99.50th=[  844], 99.90th=[ 1351], 99.95th=[ 1368],
+     | 99.99th=[ 1418]
+   bw (  KiB/s): min= 2044, max=67070, per=100.00%, avg=54709.52, stdev=2424.71, samples=296
+   iops        : min=   28, max= 1047, avg=853.15, stdev=37.91, samples=296
+  lat (msec)   : 20=0.02%, 50=0.10%, 100=0.23%, 250=0.73%, 500=1.62%
+  lat (msec)   : 750=95.00%, 1000=1.90%, 2000=0.40%
+  cpu          : usr=0.10%, sys=0.40%, ctx=13028, majf=1, minf=8388
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.2%, 8=0.4%, 16=0.8%, 32=1.6%, >=64=96.9%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=99.9%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=16384,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+   READ: bw=46.0MiB/s (48.2MB/s), 46.0MiB/s-46.0MiB/s (48.2MB/s-48.2MB/s), io=1024MiB (1074MB), run=22259-22259msec
+
+Disk stats (read/write):
+  nbd0: ios=8209/3, merge=8168/9, ticks=5562593/1380, in_queue=2803443, util=99.65%

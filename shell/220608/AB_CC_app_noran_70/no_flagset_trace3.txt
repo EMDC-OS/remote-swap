@@ -1,0 +1,391 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 380/380   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+ send_target_man-200   [002] d..2   461.706682: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2   471.733322: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2   481.760008: send_target_manager: send target manager - id, which_table : 5, 1
+       UnityMain-6048  [006] d..4   482.439980: __free_cluster: [REMOTE __free_cluster] free cluster 561
+ send_target_man-200   [001] d..2   491.786699: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [001] d..2   501.813370: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [001] d..2   511.839976: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [001] d..2   521.866667: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-7259  [004] ....   526.588980: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-6533  [004] d..4   526.659811: __free_cluster: [REMOTE __free_cluster] free cluster 241
+           <...>-7276  [007] d..4   526.713008: __free_cluster: [REMOTE __free_cluster] free cluster 625
+           <...>-7259  [004] ....   526.926842: update_to_nbd_flag: appid 4: table 1 is latter, total target 1446 max idx e, l -> 3420 3186
+           <...>-7259  [004] ....   526.940730: miss_page_handler: miss page handler start! target(id,table): 4,0
+           <...>-6008  [001] d..3   531.851810: __free_cluster: [REMOTE __free_cluster] free cluster 1584
+           <...>-6008  [001] d..3   531.851869: __free_cluster: [REMOTE __free_cluster] free cluster 1648
+           <...>-6008  [001] d..3   531.851876: __free_cluster: [REMOTE __free_cluster] free cluster 1712
+ send_target_man-200   [001] d..2   531.893317: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [001] d..2   531.893733: send_target_manager: send target manager - id, which_table : 5, 1
+ pool-9-thread-1-6054  [001] d..4   532.220496: __free_cluster: [REMOTE __free_cluster] free cluster 1776
+ send_target_man-200   [002] d..2   541.919975: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [002] ...1   541.920381: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 4: alloc new cluster 44
+ send_target_man-200   [002] ...1   541.922756: send_zram_to_nbd: target sent id 4: 5995 7d56e85000 2c00
+ send_target_man-200   [002] d..2   541.922774: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] ...1   541.922790: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 5: alloc new cluster 108
+ send_target_man-200   [002] ...1   541.924751: send_zram_to_nbd: target sent id 5: 5995 9d9d5000 6c00
+ send_target_man-200   [002] ...1   541.926869: send_zram_to_nbd: target sent id 5: 5995 71915000 6c01
+ send_target_man-200   [002] ...1   541.928739: send_zram_to_nbd: target sent id 5: 5995 718e0000 6c02
+ send_target_man-200   [002] ...1   541.931552: send_zram_to_nbd: target sent id 5: 5995 7fbd774000 6c03
+ send_target_man-200   [000] ...1   541.933633: send_zram_to_nbd: target sent id 5: 5995 7fbe211000 6c04
+ send_target_man-200   [000] ...1   541.935466: send_zram_to_nbd: target sent id 5: 5995 7f2d757000 6c05
+ send_target_man-200   [000] ...1   541.937246: send_zram_to_nbd: target sent id 5: 5995 9d8a0000 6c06
+ send_target_man-200   [000] ...1   541.939074: send_zram_to_nbd: target sent id 5: 5995 7ebed24000 6c07
+ send_target_man-200   [002] ...1   541.941460: send_zram_to_nbd: target sent id 5: 5995 7fbe294000 6c08
+ send_target_man-200   [002] ...1   541.943551: send_zram_to_nbd: target sent id 5: 5995 7f2d7d4000 6c09
+ send_target_man-200   [002] ...1   541.945412: send_zram_to_nbd: target sent id 5: 5995 7ecb31a000 6c0a
+ send_target_man-200   [002] ...1   541.947514: send_zram_to_nbd: target sent id 5: 5995 7ecb31b000 6c0b
+ send_target_man-200   [002] ...1   541.949268: send_zram_to_nbd: target sent id 5: 5995 7ecb318000 6c0c
+ send_target_man-200   [002] ...1   541.951049: send_zram_to_nbd: target sent id 5: 5995 7f2d6c7000 6c0d
+ send_target_man-200   [003] ...1   541.952864: send_zram_to_nbd: target sent id 5: 5995 7f2d6c9000 6c0e
+ send_target_man-200   [003] ...1   541.955300: send_zram_to_nbd: target sent id 5: 5995 7ecb319000 6c0f
+ send_target_man-200   [003] ...1   541.957449: send_zram_to_nbd: target sent id 5: 5995 7f311d5000 6c10
+ send_target_man-200   [003] ...1   541.959671: send_zram_to_nbd: target sent id 5: 5995 7f28e75000 6c11
+ send_target_man-200   [003] ...1   541.962261: send_zram_to_nbd: target sent id 5: 5995 7f28e77000 6c12
+ send_target_man-200   [003] ...1   541.964182: send_zram_to_nbd: target sent id 5: 5995 7f2d6a0000 6c13
+ send_target_man-200   [003] ...1   541.966049: send_zram_to_nbd: target sent id 5: 5995 9d9c7000 6c14
+ send_target_man-200   [003] ...1   541.967978: send_zram_to_nbd: target sent id 5: 5995 7f28fb3000 6c15
+ send_target_man-200   [003] ...1   541.969833: send_zram_to_nbd: target sent id 5: 5995 7ecb317000 6c16
+ send_target_man-200   [003] ...1   541.971808: send_zram_to_nbd: target sent id 5: 5995 7f28b29000 6c17
+ send_target_man-200   [003] ...1   541.973866: send_zram_to_nbd: target sent id 5: 5995 7f28e00000 6c18
+ send_target_man-200   [003] ...1   541.976255: send_zram_to_nbd: target sent id 5: 5995 7f28f8c000 6c19
+ send_target_man-200   [003] ...1   541.978150: send_zram_to_nbd: target sent id 5: 5995 7f2986b000 6c1a
+ send_target_man-200   [003] ...1   541.981168: send_zram_to_nbd: target sent id 5: 5995 7ecbff8000 6c1b
+ send_target_man-200   [000] ...1   541.987017: send_zram_to_nbd: target sent id 5: 5995 7ecbff9000 6c1c
+ send_target_man-200   [000] ...1   541.990312: send_zram_to_nbd: target sent id 5: 5995 7f2d6ad000 6c1d
+ send_target_man-200   [000] ...1   541.992550: send_zram_to_nbd: target sent id 5: 5995 9d8a1000 6c1e
+ send_target_man-200   [002] ...1   541.994781: send_zram_to_nbd: target sent id 5: 5995 9d8a9000 6c1f
+ send_target_man-200   [000] ...1   541.997588: send_zram_to_nbd: target sent id 5: 5995 7d57478000 6c20
+ send_target_man-200   [000] ...1   542.000528: send_zram_to_nbd: target sent id 5: 5995 7161e000 6c21
+ send_target_man-200   [000] ...1   542.002530: send_zram_to_nbd: target sent id 5: 5995 7f2895f000 6c22
+ send_target_man-200   [000] ...1   542.004454: send_zram_to_nbd: target sent id 5: 5995 9d898000 6c23
+ send_target_man-200   [000] ...1   542.006429: send_zram_to_nbd: target sent id 5: 5995 7f28e76000 6c24
+ send_target_man-200   [002] ...1   542.008904: send_zram_to_nbd: target sent id 5: 5995 7f28ec6000 6c25
+ send_target_man-200   [002] ...1   542.011796: send_zram_to_nbd: target sent id 5: 5995 7f2898b000 6c26
+ send_target_man-200   [002] ...1   542.013686: send_zram_to_nbd: target sent id 5: 5995 7fba0b4000 6c27
+ send_target_man-200   [002] ...1   542.015672: send_zram_to_nbd: target sent id 5: 5995 7fbc276000 6c28
+ send_target_man-200   [002] ...1   542.017669: send_zram_to_nbd: target sent id 5: 5995 7eb860c000 6c29
+ send_target_man-200   [002] ...1   542.020157: send_zram_to_nbd: target sent id 5: 5995 7eb73f5000 6c2a
+ send_target_man-200   [002] ...1   542.022374: send_zram_to_nbd: target sent id 5: 5995 7f28f4a000 6c2b
+ send_target_man-200   [002] ...1   542.025017: send_zram_to_nbd: target sent id 5: 5995 7eb7c04000 6c2c
+ send_target_man-200   [002] ...1   542.027184: send_zram_to_nbd: target sent id 5: 5995 7f28b97000 6c2d
+ send_target_man-200   [002] ...1   542.029319: send_zram_to_nbd: target sent id 5: 5995 7ebd818000 6c2e
+ send_target_man-200   [002] ...1   542.032634: send_zram_to_nbd: target sent id 5: 5995 7f28b9f000 6c2f
+ send_target_man-200   [001] ...1   542.036666: send_zram_to_nbd: target sent id 5: 5995 7f28e1d000 6c30
+ send_target_man-200   [001] ...1   542.040186: send_zram_to_nbd: target sent id 5: 5995 7eb794f000 6c31
+ send_target_man-200   [000] ...1   542.042524: send_zram_to_nbd: target sent id 5: 5995 7eb79a8000 6c32
+ send_target_man-200   [000] ...1   542.045038: send_zram_to_nbd: target sent id 5: 5995 7eb86f9000 6c33
+ send_target_man-200   [000] ...1   542.047031: send_zram_to_nbd: target sent id 5: 5995 7eb86fa000 6c34
+ send_target_man-200   [000] ...1   542.049007: send_zram_to_nbd: target sent id 5: 5995 7eb86fb000 6c35
+ send_target_man-200   [000] ...1   542.051272: send_zram_to_nbd: target sent id 5: 5995 7eb86fc000 6c36
+ send_target_man-200   [000] ...1   542.056165: send_zram_to_nbd: target sent id 5: 5995 7eb7a5c000 6c37
+ send_target_man-200   [000] ...1   542.058314: send_zram_to_nbd: target sent id 5: 5995 7eb7a5d000 6c38
+ send_target_man-200   [000] ...1   542.060476: send_zram_to_nbd: target sent id 5: 5995 7eb7a5e000 6c39
+ send_target_man-200   [000] ...1   542.063033: send_zram_to_nbd: target sent id 5: 5995 7eb7a5f000 6c3a
+ send_target_man-200   [000] ...1   542.065112: send_zram_to_nbd: target sent id 5: 5995 7eb7a60000 6c3b
+ send_target_man-200   [000] ...1   542.067124: send_zram_to_nbd: target sent id 5: 5995 7f28f93000 6c3c
+ send_target_man-200   [000] ...1   542.069145: send_zram_to_nbd: target sent id 5: 5995 7f28f94000 6c3d
+ send_target_man-200   [000] ...1   542.071240: send_zram_to_nbd: target sent id 5: 5995 7f2895e000 6c3e
+ send_target_man-200   [000] ...1   542.073318: send_zram_to_nbd: target sent id 5: 5995 7f28f29000 6c3f
+ send_target_man-200   [000] ...1   542.076254: send_zram_to_nbd: target sent id 5: 5995 7f28f2a000 6c40
+ send_target_man-200   [000] ...1   542.080183: send_zram_to_nbd: target sent id 5: 5995 7f28afd000 6c41
+ send_target_man-200   [000] ...1   542.082233: send_zram_to_nbd: target sent id 5: 5995 7f28f96000 6c42
+ send_target_man-200   [000] ...1   542.084273: send_zram_to_nbd: target sent id 5: 5995 7f28f97000 6c43
+ send_target_man-200   [003] ...1   542.086363: send_zram_to_nbd: target sent id 5: 5995 7f28abd000 6c44
+ send_target_man-200   [000] ...1   542.088748: send_zram_to_nbd: target sent id 5: 5995 7ebd888000 6c45
+ send_target_man-200   [000] ...1   542.090760: send_zram_to_nbd: target sent id 5: 5995 7ebd889000 6c46
+ send_target_man-200   [000] ...1   542.093156: send_zram_to_nbd: target sent id 5: 5995 7f28f3f000 6c47
+ send_target_man-200   [003] ...1   542.095475: send_zram_to_nbd: target sent id 5: 5995 7ebd85a000 6c48
+ send_target_man-200   [000] ...1   542.098523: send_zram_to_nbd: target sent id 5: 5995 9d93c000 6c49
+ send_target_man-200   [000] ...1   542.100661: send_zram_to_nbd: target sent id 5: 5995 7ebed3d000 6c4a
+ send_target_man-200   [000] ...1   542.103726: send_zram_to_nbd: target sent id 5: 5995 7ebed0c000 6c4b
+ send_target_man-200   [001] ...1   542.105728: send_zram_to_nbd: target sent id 5: 5995 7f28d75000 6c4c
+ send_target_man-200   [001] ...1   542.107690: send_zram_to_nbd: target sent id 5: 5995 7d5701c000 6c4d
+ send_target_man-200   [001] ...1   542.109642: send_zram_to_nbd: target sent id 5: 5995 7eb7c06000 6c4e
+ send_target_man-200   [001] ...1   542.111623: send_zram_to_nbd: target sent id 5: 5995 7fffff8000 6c4f
+ send_target_man-200   [001] ...1   542.113738: send_zram_to_nbd: target sent id 5: 5995 7f20f19000 6c50
+ send_target_man-200   [001] ...1   542.115708: send_zram_to_nbd: target sent id 5: 5995 7f2099c000 6c51
+ send_target_man-200   [001] ...1   542.117598: send_zram_to_nbd: target sent id 5: 5995 7f2099d000 6c52
+ send_target_man-200   [001] ...1   542.119621: send_zram_to_nbd: target sent id 5: 5995 7f20de9000 6c53
+ send_target_man-200   [000] ...1   542.122877: send_zram_to_nbd: target sent id 5: 5995 7ebd5c4000 6c54
+ send_target_man-200   [001] ...1   542.125198: send_zram_to_nbd: target sent id 5: 5995 7ebd5c5000 6c55
+ send_target_man-200   [003] ...1   542.127695: send_zram_to_nbd: target sent id 5: 5995 7f28d25000 6c56
+ send_target_man-200   [003] ...1   542.129869: send_zram_to_nbd: target sent id 5: 5995 7f28d26000 6c57
+ send_target_man-200   [000] ...1   542.132198: send_zram_to_nbd: target sent id 5: 5995 7fba7d9000 6c58
+ send_target_man-200   [000] ...1   542.134239: send_zram_to_nbd: target sent id 5: 5995 7fbe1c7000 6c59
+ send_target_man-200   [000] ...1   542.136268: send_zram_to_nbd: target sent id 5: 5995 7eb7521000 6c5a
+ send_target_man-200   [000] ...1   542.138240: send_zram_to_nbd: target sent id 5: 5995 7f235e9000 6c5b
+ send_target_man-200   [003] ...1   542.140338: send_zram_to_nbd: target sent id 5: 5995 7eb78cf000 6c5c
+ send_target_man-200   [003] ...1   542.142577: send_zram_to_nbd: target sent id 5: 5995 7eb79b2000 6c5d
+ send_target_man-200   [003] ...1   542.145379: send_zram_to_nbd: target sent id 5: 5995 7ebd5be000 6c5e
+  com.rovio.baba-5995  [000] ....   551.880902: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb79a8000 6c32
+  com.rovio.baba-5995  [000] ....   551.880921: do_swap_page: prefetch fault id 4: 5995 "com.rovio.baba" 7eb79a8000 6c32
+ send_target_man-200   [003] d..2   552.159988: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [003] d..2   552.160378: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [003] d..2   562.186724: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [003] d..2   562.187312: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-7266  [000] ....   563.827662: read_swap_cache_async: remote readpage 5995 "Measurement Wor" 7f28f8c000 6c19
+           <...>-7266  [000] ....   563.827680: do_swap_page: prefetch fault id 4: 5995 "Measurement Wor" 7f28f8c000 6c19
+           <...>-6042  [000] ....   564.284273: read_swap_cache_async: remote readpage 5995 "OkHttp Connecti" 7f28e76000 6c24
+           <...>-6042  [000] ....   564.284293: do_swap_page: prefetch fault id 4: 5995 "OkHttp Connecti" 7f28e76000 6c24
+           <...>-6042  [000] ....   564.300403: read_swap_cache_async: remote readpage 5995 "OkHttp Connecti" 7ecb31a000 6c0a
+           <...>-6042  [000] ....   564.300416: do_swap_page: prefetch fault id 4: 5995 "OkHttp Connecti" 7ecb31a000 6c0a
+ send_target_man-200   [003] d..2   572.213395: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [002] d..2   572.216263: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [001] d..2   582.240035: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [001] d..2   582.242292: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [001] d..2   592.266647: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [001] d..2   592.267210: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-7390  [007] ....   598.868958: app_switch_start_handler: ###########switch start! foreground 10122#############
+  com.rovio.baba-5995  [005] ....   598.971991: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 9d9d5000 6c00
+  com.rovio.baba-5995  [005] ....   598.971993: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 9d9d5000 6c00
+           <...>-6043  [004] ....   598.972145: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 71915000 6c01
+           <...>-6043  [004] ....   598.972147: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 71915000 6c01
+           <...>-6025  [004] ....   598.972728: read_swap_cache_async: remote readpage 5995 "queued-work-loo" 7ecbff8000 6c1b
+           <...>-6025  [004] ....   598.972730: do_swap_page: prefetch fault id 5: 5995 "queued-work-loo" 7ecbff8000 6c1b
+ Measurement Wor-7398  [005] ....   598.973008: read_swap_cache_async: remote readpage 5995 "Measurement Wor" 9d8a9000 6c1f
+ Measurement Wor-7398  [005] ....   598.973010: do_swap_page: prefetch fault id 5: 5995 "Measurement Wor" 9d8a9000 6c1f
+           <...>-6043  [007] ....   598.986713: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 718e0000 6c02
+           <...>-6043  [007] ....   598.986717: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 718e0000 6c02
+           <...>-6025  [007] ....   598.986761: read_swap_cache_async: remote readpage 5995 "queued-work-loo" 7ecbff9000 6c1c
+           <...>-6025  [007] ....   598.986762: do_swap_page: prefetch fault id 5: 5995 "queued-work-loo" 7ecbff9000 6c1c
+           <...>-6043  [007] ....   598.988258: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 7fbd774000 6c03
+           <...>-6043  [007] ....   598.988260: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 7fbd774000 6c03
+ Measurement Wor-7398  [005] ....   598.988509: read_swap_cache_async: remote readpage 5995 "Measurement Wor" 7d57478000 6c20
+ Measurement Wor-7398  [005] ....   598.988511: do_swap_page: prefetch fault id 5: 5995 "Measurement Wor" 7d57478000 6c20
+           <...>-6025  [007] ....   598.989004: read_swap_cache_async: remote readpage 5995 "queued-work-loo" 7f2d6ad000 6c1d
+           <...>-6025  [007] ....   598.989006: do_swap_page: prefetch fault id 5: 5995 "queued-work-loo" 7f2d6ad000 6c1d
+           <...>-6043  [007] ....   598.990129: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 7fbe211000 6c04
+           <...>-6043  [007] ....   598.990130: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 7fbe211000 6c04
+  com.rovio.baba-5995  [005] ....   598.990988: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7ebed24000 6c07
+  com.rovio.baba-5995  [005] ....   598.990991: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7ebed24000 6c07
+           <...>-6043  [007] ....   598.991957: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 7f2d757000 6c05
+           <...>-6043  [007] ....   598.991960: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 7f2d757000 6c05
+  com.rovio.baba-5995  [004] ....   598.992866: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7fbe294000 6c08
+  com.rovio.baba-5995  [004] ....   598.992868: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7fbe294000 6c08
+           <...>-6043  [004] ....   598.994030: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 9d8a0000 6c06
+           <...>-6043  [004] ....   598.994032: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 9d8a0000 6c06
+  com.rovio.baba-5995  [005] ....   598.996385: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28fb3000 6c15
+  com.rovio.baba-5995  [005] ....   598.996388: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28fb3000 6c15
+           <...>-6043  [006] ....   598.996749: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 7f2d7d4000 6c09
+           <...>-6043  [006] ....   598.996751: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 7f2d7d4000 6c09
+  com.rovio.baba-5995  [005] ....   598.998444: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28b29000 6c17
+  com.rovio.baba-5995  [005] ....   598.998447: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28b29000 6c17
+           <...>-6043  [004] ....   598.998982: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 7f2d6c7000 6c0d
+           <...>-6043  [004] ....   598.998984: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 7f2d6c7000 6c0d
+           <...>-6041  [007] ....   598.999111: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 7ecb31b000 6c0b
+           <...>-6041  [007] ....   598.999114: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 7ecb31b000 6c0b
+           <...>-6041  [004] ....   599.001209: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 7ecb318000 6c0c
+           <...>-6041  [004] ....   599.001212: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 7ecb318000 6c0c
+           <...>-6043  [004] ....   599.001350: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 7f2d6c9000 6c0e
+           <...>-6043  [004] ....   599.001352: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 7f2d6c9000 6c0e
+  com.rovio.baba-5995  [006] ....   599.002986: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f2986b000 6c1a
+  com.rovio.baba-5995  [006] ....   599.002989: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f2986b000 6c1a
+           <...>-6041  [004] ....   599.003211: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 7ecb319000 6c0f
+           <...>-6041  [004] ....   599.003213: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 7ecb319000 6c0f
+           <...>-6043  [005] ....   599.003515: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 9d8a1000 6c1e
+           <...>-6043  [005] ....   599.003517: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 9d8a1000 6c1e
+           <...>-6041  [004] ....   599.005100: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 7f311d5000 6c10
+           <...>-6041  [004] ....   599.005102: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 7f311d5000 6c10
+  com.rovio.baba-5995  [006] ....   599.005429: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28abd000 6c44
+  com.rovio.baba-5995  [006] ....   599.005431: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28abd000 6c44
+           <...>-6043  [005] ....   599.006504: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 7d56e85000 2c00
+           <...>-6043  [005] ....   599.006507: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 7d56e85000 2c00
+           <...>-6041  [005] ....   599.007508: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 7f28e75000 6c11
+           <...>-6041  [005] ....   599.007510: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 7f28e75000 6c11
+  com.rovio.baba-5995  [007] ....   599.007552: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28e1d000 6c30
+  com.rovio.baba-5995  [007] ....   599.007554: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28e1d000 6c30
+           <...>-6043  [005] ....   599.008852: read_swap_cache_async: remote readpage 5995 "pool-3-thread-1" 7161e000 6c21
+           <...>-6043  [005] ....   599.008854: do_swap_page: prefetch fault id 5: 5995 "pool-3-thread-1" 7161e000 6c21
+           <...>-6041  [007] ....   599.009440: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 7f28e77000 6c12
+           <...>-6041  [007] ....   599.009442: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 7f28e77000 6c12
+  com.rovio.baba-5995  [007] ....   599.009527: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28f96000 6c42
+  com.rovio.baba-5995  [007] ....   599.009529: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28f96000 6c42
+           <...>-6043  [005] d..4   599.011624: __free_cluster: [REMOTE __free_cluster] free cluster 44
+           <...>-6041  [007] ....   599.011801: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 7f2d6a0000 6c13
+           <...>-6041  [007] ....   599.011802: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 7f2d6a0000 6c13
+  com.rovio.baba-5995  [007] ....   599.011951: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28f97000 6c43
+  com.rovio.baba-5995  [007] ....   599.011952: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28f97000 6c43
+           <...>-6041  [007] ....   599.014247: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 9d9c7000 6c14
+           <...>-6041  [007] ....   599.014249: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 9d9c7000 6c14
+           <...>-6041  [007] ....   599.016193: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 7ecb317000 6c16
+           <...>-6041  [007] ....   599.016196: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 7ecb317000 6c16
+  com.rovio.baba-5995  [005] ....   599.016369: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f2895f000 6c22
+  com.rovio.baba-5995  [005] ....   599.016371: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f2895f000 6c22
+           <...>-6041  [004] ....   599.018265: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 7f28e00000 6c18
+           <...>-6041  [004] ....   599.018268: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 7f28e00000 6c18
+           <...>-6041  [006] ....   599.020480: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 9d898000 6c23
+           <...>-6041  [006] ....   599.020483: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 9d898000 6c23
+  com.rovio.baba-5995  [005] ....   599.022344: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7fba0b4000 6c27
+  com.rovio.baba-5995  [005] ....   599.022347: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7fba0b4000 6c27
+           <...>-6041  [006] ....   599.023004: read_swap_cache_async: remote readpage 5995 "pool-5-thread-1" 7f28ec6000 6c25
+           <...>-6041  [006] ....   599.023006: do_swap_page: prefetch fault id 5: 5995 "pool-5-thread-1" 7f28ec6000 6c25
+  com.rovio.baba-5995  [005] ....   599.024153: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7fbc276000 6c28
+  com.rovio.baba-5995  [005] ....   599.024156: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7fbc276000 6c28
+  com.rovio.baba-5995  [005] ....   599.026070: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb860c000 6c29
+  com.rovio.baba-5995  [005] ....   599.026073: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb860c000 6c29
+  com.rovio.baba-5995  [005] ....   599.027872: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb73f5000 6c2a
+  com.rovio.baba-5995  [005] ....   599.027875: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb73f5000 6c2a
+  com.rovio.baba-5995  [004] ....   599.030101: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28b97000 6c2d
+  com.rovio.baba-5995  [004] ....   599.030104: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28b97000 6c2d
+  com.rovio.baba-5995  [005] ....   599.032738: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7ebd818000 6c2e
+  com.rovio.baba-5995  [005] ....   599.032741: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7ebd818000 6c2e
+  com.rovio.baba-5995  [005] ....   599.034831: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb86f9000 6c33
+  com.rovio.baba-5995  [005] ....   599.034833: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb86f9000 6c33
+  com.rovio.baba-5995  [005] ....   599.041175: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb86fa000 6c34
+  com.rovio.baba-5995  [005] ....   599.041181: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb86fa000 6c34
+  com.rovio.baba-5995  [006] ....   599.046758: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb86fb000 6c35
+  com.rovio.baba-5995  [006] ....   599.046761: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb86fb000 6c35
+  com.rovio.baba-5995  [006] ....   599.049014: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb86fc000 6c36
+  com.rovio.baba-5995  [006] ....   599.049016: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb86fc000 6c36
+  com.rovio.baba-5995  [006] ....   599.050928: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb7a5c000 6c37
+  com.rovio.baba-5995  [006] ....   599.050930: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb7a5c000 6c37
+  com.rovio.baba-5995  [006] ....   599.057159: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb7a5d000 6c38
+  com.rovio.baba-5995  [006] ....   599.057163: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb7a5d000 6c38
+  com.rovio.baba-5995  [006] ....   599.059020: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb7a5e000 6c39
+  com.rovio.baba-5995  [006] ....   599.059021: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb7a5e000 6c39
+  com.rovio.baba-5995  [006] ....   599.062230: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb7a5f000 6c3a
+  com.rovio.baba-5995  [006] ....   599.062234: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb7a5f000 6c3a
+  com.rovio.baba-5995  [006] ....   599.064417: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb7a60000 6c3b
+  com.rovio.baba-5995  [006] ....   599.064418: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb7a60000 6c3b
+  com.rovio.baba-5995  [006] ....   599.067522: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28f93000 6c3c
+  com.rovio.baba-5995  [006] ....   599.067525: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28f93000 6c3c
+  com.rovio.baba-5995  [006] ....   599.069366: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28f94000 6c3d
+  com.rovio.baba-5995  [006] ....   599.069369: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28f94000 6c3d
+  com.rovio.baba-5995  [006] ....   599.071326: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f2895e000 6c3e
+  com.rovio.baba-5995  [006] ....   599.071328: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f2895e000 6c3e
+  com.rovio.baba-5995  [006] ....   599.074435: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7ebd5be000 6c5e
+  com.rovio.baba-5995  [006] ....   599.074437: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7ebd5be000 6c5e
+  com.rovio.baba-5995  [004] ....   599.076718: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28f29000 6c3f
+  com.rovio.baba-5995  [004] ....   599.076722: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28f29000 6c3f
+  com.rovio.baba-5995  [004] ....   599.078505: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28f2a000 6c40
+  com.rovio.baba-5995  [004] ....   599.078508: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28f2a000 6c40
+  com.rovio.baba-5995  [004] ....   599.081284: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28afd000 6c41
+  com.rovio.baba-5995  [004] ....   599.081286: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28afd000 6c41
+  com.rovio.baba-5995  [004] ....   599.083059: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7ebd85a000 6c48
+  com.rovio.baba-5995  [004] ....   599.083061: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7ebd85a000 6c48
+  com.rovio.baba-5995  [004] ....   599.085736: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7ebd888000 6c45
+  com.rovio.baba-5995  [004] ....   599.085739: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7ebd888000 6c45
+  com.rovio.baba-5995  [004] ....   599.087571: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7ebd889000 6c46
+  com.rovio.baba-5995  [004] ....   599.087573: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7ebd889000 6c46
+       UnityMain-6048  [005] ....   599.090556: read_swap_cache_async: remote readpage 5995 "UnityMain" 7ebed3d000 6c4a
+       UnityMain-6048  [005] ....   599.090560: do_swap_page: prefetch fault id 5: 5995 "UnityMain" 7ebed3d000 6c4a
+  com.rovio.baba-5995  [004] ....   599.090631: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 9d93c000 6c49
+  com.rovio.baba-5995  [004] ....   599.090634: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 9d93c000 6c49
+       UnityMain-6048  [005] ....   599.092499: read_swap_cache_async: remote readpage 5995 "UnityMain" 7ebed0c000 6c4b
+       UnityMain-6048  [005] ....   599.092502: do_swap_page: prefetch fault id 5: 5995 "UnityMain" 7ebed0c000 6c4b
+  com.rovio.baba-5995  [004] ....   599.092921: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28d75000 6c4c
+  com.rovio.baba-5995  [004] ....   599.092923: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28d75000 6c4c
+  com.rovio.baba-5995  [004] ....   599.095234: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7d5701c000 6c4d
+  com.rovio.baba-5995  [004] ....   599.095237: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7d5701c000 6c4d
+  com.rovio.baba-5995  [004] ....   599.097708: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28f3f000 6c47
+  com.rovio.baba-5995  [004] ....   599.097710: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28f3f000 6c47
+  com.rovio.baba-5995  [005] ....   599.099678: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb7c06000 6c4e
+  com.rovio.baba-5995  [005] ....   599.099682: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb7c06000 6c4e
+  com.rovio.baba-5995  [005] ....   599.101764: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7fffff8000 6c4f
+  com.rovio.baba-5995  [005] ....   599.101767: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7fffff8000 6c4f
+  com.rovio.baba-5995  [005] ....   599.103574: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f20f19000 6c50
+  com.rovio.baba-5995  [005] ....   599.103576: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f20f19000 6c50
+  com.rovio.baba-5995  [005] ....   599.105387: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f2099c000 6c51
+  com.rovio.baba-5995  [005] ....   599.105388: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f2099c000 6c51
+  com.rovio.baba-5995  [005] ....   599.107250: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f2099d000 6c52
+  com.rovio.baba-5995  [005] ....   599.107252: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f2099d000 6c52
+  com.rovio.baba-5995  [005] ....   599.109280: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f20de9000 6c53
+  com.rovio.baba-5995  [005] ....   599.109282: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f20de9000 6c53
+  com.rovio.baba-5995  [005] ....   599.111318: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7ebd5c4000 6c54
+  com.rovio.baba-5995  [005] ....   599.111320: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7ebd5c4000 6c54
+  com.rovio.baba-5995  [005] ....   599.113155: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7ebd5c5000 6c55
+  com.rovio.baba-5995  [005] ....   599.113157: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7ebd5c5000 6c55
+  com.rovio.baba-5995  [005] ....   599.115306: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28d25000 6c56
+  com.rovio.baba-5995  [005] ....   599.115308: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28d25000 6c56
+  com.rovio.baba-5995  [005] ....   599.117513: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f28d26000 6c57
+  com.rovio.baba-5995  [005] ....   599.117516: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f28d26000 6c57
+  com.rovio.baba-5995  [005] ....   599.119456: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7fba7d9000 6c58
+  com.rovio.baba-5995  [005] ....   599.119460: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7fba7d9000 6c58
+  com.rovio.baba-5995  [005] ....   599.121471: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7fbe1c7000 6c59
+  com.rovio.baba-5995  [005] ....   599.121475: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7fbe1c7000 6c59
+  com.rovio.baba-5995  [005] ....   599.134430: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb7521000 6c5a
+  com.rovio.baba-5995  [005] ....   599.134433: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb7521000 6c5a
+  com.rovio.baba-5995  [005] ....   599.136913: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7f235e9000 6c5b
+  com.rovio.baba-5995  [005] ....   599.136917: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7f235e9000 6c5b
+           <...>-7390  [006] ....   599.138471: update_to_nbd_flag: appid 5: table 0 is latter, total target 118 max idx e, l -> 646 1025
+  com.rovio.baba-5995  [005] ....   599.143372: read_swap_cache_async: remote readpage 5995 "com.rovio.baba" 7eb78cf000 6c5c
+  com.rovio.baba-5995  [005] ....   599.143376: do_swap_page: prefetch fault id 5: 5995 "com.rovio.baba" 7eb78cf000 6c5c
+           <...>-7390  [006] ....   599.145883: miss_page_handler: miss page handler start! target(id,table): 5,1
+           <...>-695   [001] ....   599.146201: read_swap_cache_async: remote readpage 695 "kworker/1:2" 7f2898b000 6c26
+           <...>-695   [001] ....   599.146208: do_swap_page: prefetch fault id 5: 695 "kworker/1:2" 7f2898b000 6c26
+           <...>-695   [001] ....   599.149743: read_swap_cache_async: remote readpage 695 "kworker/1:2" 7f28f4a000 6c2b
+           <...>-695   [001] ....   599.149749: do_swap_page: prefetch fault id 5: 695 "kworker/1:2" 7f28f4a000 6c2b
+       UnityMain-6048  [004] ....   599.151088: read_swap_cache_async: remote readpage 5995 "UnityMain" 7eb79b2000 6c5d
+       UnityMain-6048  [004] ....   599.151091: do_swap_page: prefetch fault id 5: 5995 "UnityMain" 7eb79b2000 6c5d
+           <...>-695   [001] ....   599.151705: read_swap_cache_async: remote readpage 695 "kworker/1:2" 7eb7c04000 6c2c
+           <...>-695   [001] ....   599.151711: do_swap_page: prefetch fault id 5: 695 "kworker/1:2" 7eb7c04000 6c2c
+           <...>-695   [001] ....   599.153417: read_swap_cache_async: remote readpage 695 "kworker/1:2" 7f28b9f000 6c2f
+           <...>-695   [001] ....   599.153422: do_swap_page: prefetch fault id 5: 695 "kworker/1:2" 7f28b9f000 6c2f
+           <...>-695   [001] ....   599.156687: read_swap_cache_async: remote readpage 695 "kworker/1:2" 7eb794f000 6c31
+           <...>-695   [001] ....   599.156696: do_swap_page: prefetch fault id 5: 695 "kworker/1:2" 7eb794f000 6c31
+           <...>-6063  [001] d..4   599.208999: __free_cluster: [REMOTE __free_cluster] free cluster 108
+       UnityMain-6048  [007] d..4   599.592952: __free_cluster: [REMOTE __free_cluster] free cluster 628
+       UnityMain-6048  [007] d..4   600.126202: __free_cluster: [REMOTE __free_cluster] free cluster 1716
+       UnityMain-6048  [007] d..4   600.126211: __free_cluster: [REMOTE __free_cluster] free cluster 756
+       UnityMain-6048  [007] d..4   600.126221: __free_cluster: [REMOTE __free_cluster] free cluster 692
+       UnityMain-6048  [005] d..4   600.142902: __free_cluster: [REMOTE __free_cluster] free cluster 820
+       UnityMain-6048  [007] d..4   600.645018: __free_cluster: [REMOTE __free_cluster] free cluster 948
+       UnityMain-6048  [007] d..4   600.645032: __free_cluster: [REMOTE __free_cluster] free cluster 884
+ send_target_man-200   [001] d..2   602.293306: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [001] d..2   602.293810: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-6527  [001] d..3   604.079538: __free_cluster: [REMOTE __free_cluster] free cluster 1458
+           <...>-6527  [001] d..4   604.081526: __free_cluster: [REMOTE __free_cluster] free cluster 1650
+           <...>-6527  [001] d..4   604.081538: __free_cluster: [REMOTE __free_cluster] free cluster 1714
+           <...>-6527  [001] d..4   604.081571: __free_cluster: [REMOTE __free_cluster] free cluster 1778
+           <...>-6527  [001] d..4   604.081577: __free_cluster: [REMOTE __free_cluster] free cluster 1842
+           <...>-6527  [001] d..4   604.081586: __free_cluster: [REMOTE __free_cluster] free cluster 1586
+           <...>-6529  [000] d..4   604.083321: __free_cluster: [REMOTE __free_cluster] free cluster 1522
+       UnityMain-6048  [007] d..4   604.642473: __free_cluster: [REMOTE __free_cluster] free cluster 1396
+       UnityMain-6048  [007] d..4   604.642491: __free_cluster: [REMOTE __free_cluster] free cluster 564
+       UnityMain-6048  [006] d..4   611.859097: __free_cluster: [REMOTE __free_cluster] free cluster 1204
+ send_target_man-200   [001] d..2   612.320022: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [001] d..2   612.320652: send_target_manager: send target manager - id, which_table : 5, 0
+ FMOD mixer thre-7407  [006] d..4   620.797924: __free_cluster: [REMOTE __free_cluster] free cluster 1841
+ send_target_man-200   [003] d..2   622.346733: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [003] d..2   622.350085: send_target_manager: send target manager - id, which_table : 5, 0
+       UnityMain-6048  [005] d..4   623.576029: __free_cluster: [REMOTE __free_cluster] free cluster 626
+       UnityMain-6048  [005] d..4   624.558205: __free_cluster: [REMOTE __free_cluster] free cluster 754
+  com.rovio.baba-5995  [005] d..4   625.961375: __free_cluster: [REMOTE __free_cluster] free cluster 305
+       UnityMain-6048  [005] d..4   626.660660: __free_cluster: [REMOTE __free_cluster] free cluster 49
+       UnityMain-6048  [006] d..4   628.031934: __free_cluster: [REMOTE __free_cluster] free cluster 113
+ send_target_man-200   [000] d..2   632.373306: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [000] d..2   632.374622: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [000] d..2   642.399958: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [000] d..2   642.400482: send_target_manager: send target manager - id, which_table : 5, 0
+       UnityMain-6048  [004] d..4   645.074086: __free_cluster: [REMOTE __free_cluster] free cluster 52
+              sh-7443  [007] ....   649.171082: swap_counter_dump_handler: pid 5995: counter 0 = 1923
+              sh-7443  [007] ....   649.171086: swap_counter_dump_handler: pid 5995: counter 1 = 513
+              sh-7443  [007] ....   649.171087: swap_counter_dump_handler: pid 5995: counter 2 = 65994
+              sh-7443  [007] ....   649.171087: swap_counter_dump_handler: pid 5995: counter 3 = 0
+              sh-7443  [007] ....   649.171088: swap_counter_dump_handler: pid 5995: counter 4 = 0
+              sh-7443  [007] ....   649.171088: swap_counter_dump_handler: pid 5995: counter 5 = 0
+              sh-7443  [007] ....   649.171089: swap_counter_dump_handler: pid 5995: counter >5 = 0
+              sh-7443  [007] ....   649.171090: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-7443  [007] ....   649.171091: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-7445  [007] ....   649.184925: swap_counter_dump_handler: pid 6514: counter 0 = 0
+              sh-7445  [007] ....   649.184928: swap_counter_dump_handler: pid 6514: counter 1 = 590
+              sh-7445  [007] ....   649.184929: swap_counter_dump_handler: pid 6514: counter 2 = 23953
+              sh-7445  [007] ....   649.184929: swap_counter_dump_handler: pid 6514: counter 3 = 0
+              sh-7445  [007] ....   649.184930: swap_counter_dump_handler: pid 6514: counter 4 = 0
+              sh-7445  [007] ....   649.184930: swap_counter_dump_handler: pid 6514: counter 5 = 0
+              sh-7445  [007] ....   649.184931: swap_counter_dump_handler: pid 6514: counter >5 = 0
+              sh-7445  [007] ....   649.184932: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-7445  [007] ....   649.184933: swap_counter_dump_handler: remote: total faulted cold page: 0
+ send_target_man-200   [000] d..2   652.426631: send_target_manager: send target manager - id, which_table : 4, 1
+ send_target_man-200   [000] d..2   652.427015: send_target_manager: send target manager - id, which_table : 5, 0

@@ -295,6 +295,11 @@ int add_to_swap(struct page *page)
 	if (!entry.val)
 		return 0;
 
+#ifdef CONFIG_APP_AWARE
+	if(swp_type(entry)==NBD_TYPE)
+		trace_printk("ZRAM full: nbd swapout offset %llx",swp_offset(entry));
+#endif
+
 	if (mem_cgroup_try_charge_swap(page, entry))
 		goto fail;
 
@@ -474,10 +479,10 @@ struct page *lookup_swap_cache(swp_entry_t entry, struct vm_area_struct *vma,
 #ifdef CONFIG_APP_AWARE
 			if (swp_type(entry) == NBD_TYPE){
 				if(switch_start)
-					trace_printk("prefetch hit %d \"%s\" %lx %lx\n",current->tgid,current->comm,addr,swp_offset(entry));
+					trace_printk("prefetch hit id %d: %d \"%s\" %lx %lx\n",get_id_from_uid(foreground_uid),current->tgid,current->comm,addr,swp_offset(entry));
 				else
 				{
-					trace_printk("prefetch miss %d \"%s\" %lx %lx\n",current->tgid,current->comm,addr,swp_offset(entry));
+					trace_printk("prefetch miss id %d: %d \"%s\" %lx %lx\n",get_id_from_uid(foreground_uid),current->tgid,current->comm,addr,swp_offset(entry));
 
 
 				}

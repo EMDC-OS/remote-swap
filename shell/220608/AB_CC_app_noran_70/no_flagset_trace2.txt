@@ -1,0 +1,66 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 55/55   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+ send_target_man-200   [000] ....   313.653465: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [000] ....   313.653477: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7080  [007] ....   328.926689: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-6514  [007] d..4   329.007936: __free_cluster: [REMOTE __free_cluster] free cluster 546
+           <...>-6514  [007] d..4   329.007939: __free_cluster: [REMOTE __free_cluster] free cluster 610
+           <...>-7080  [007] ....   329.309760: miss_page_handler: miss page handler start! target(id,table): 4,1
+ send_target_man-200   [000] ....   329.309876: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [000] ....   329.309883: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6009  [000] d..4   334.234740: __free_cluster: [REMOTE __free_cluster] free cluster 97
+           <...>-6009  [000] d..4   334.234758: __free_cluster: [REMOTE __free_cluster] free cluster 161
+           <...>-6009  [000] d..4   334.234805: __free_cluster: [REMOTE __free_cluster] free cluster 33
+           <...>-6470  [001] d..4   334.598356: __free_cluster: [REMOTE __free_cluster] free cluster 225
+           <...>-7211  [007] ....   401.267298: app_switch_start_handler: ###########switch start! foreground 10122#############
+           <...>-7211  [007] ....   401.382727: update_to_nbd_flag: appid 5: table 1 is latter, total target 97 max idx e, l -> 1195 646
+           <...>-7211  [007] ....   401.389083: miss_page_handler: miss page handler start! target(id,table): 5,0
+ send_target_man-200   [007] ....   401.389434: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [007] d..2   401.389437: send_target_manager: send target manager - id, which_table : 5, 1
+       UnityMain-6048  [005] d..4   401.466013: __free_cluster: [REMOTE __free_cluster] free cluster 1777
+       UnityMain-6048  [007] d..4   402.034590: __free_cluster: [REMOTE __free_cluster] free cluster 1457
+       UnityMain-6048  [007] d..4   402.034600: __free_cluster: [REMOTE __free_cluster] free cluster 1393
+       UnityMain-6048  [005] d..4   402.150413: __free_cluster: [REMOTE __free_cluster] free cluster 242
+       UnityMain-6048  [007] d..4   402.416251: __free_cluster: [REMOTE __free_cluster] free cluster 1521
+       UnityMain-6048  [006] d..4   402.483769: __free_cluster: [REMOTE __free_cluster] free cluster 1137
+       UnityMain-6048  [007] d..4   402.784994: __free_cluster: [REMOTE __free_cluster] free cluster 1201
+       UnityMain-6048  [004] d..4   403.331502: __free_cluster: [REMOTE __free_cluster] free cluster 1265
+       UnityMain-6048  [007] d..4   406.088133: __free_cluster: [REMOTE __free_cluster] free cluster 1329
+           <...>-6527  [000] d..4   406.360953: __free_cluster: [REMOTE __free_cluster] free cluster 178
+           <...>-6527  [000] d..3   406.482375: __free_cluster: [REMOTE __free_cluster] free cluster 1772
+           <...>-6527  [000] d..3   406.482390: __free_cluster: [REMOTE __free_cluster] free cluster 1836
+           <...>-6527  [000] d..4   406.484289: __free_cluster: [REMOTE __free_cluster] free cluster 1964
+           <...>-6527  [000] d..4   406.484332: __free_cluster: [REMOTE __free_cluster] free cluster 1900
+ send_target_man-200   [002] d..2   411.573324: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2   421.599987: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [000] d..2   431.626685: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2   441.653556: send_target_manager: send target manager - id, which_table : 5, 1
+       UnityMain-6048  [006] d..4   446.117640: __free_cluster: [REMOTE __free_cluster] free cluster 433
+              sh-7244  [007] ....   451.415360: swap_counter_dump_handler: pid 5995: counter 0 = 2916
+              sh-7244  [007] ....   451.415363: swap_counter_dump_handler: pid 5995: counter 1 = 68841
+              sh-7244  [007] ....   451.415364: swap_counter_dump_handler: pid 5995: counter 2 = 0
+              sh-7244  [007] ....   451.415365: swap_counter_dump_handler: pid 5995: counter 3 = 0
+              sh-7244  [007] ....   451.415366: swap_counter_dump_handler: pid 5995: counter 4 = 0
+              sh-7244  [007] ....   451.415366: swap_counter_dump_handler: pid 5995: counter 5 = 0
+              sh-7244  [007] ....   451.415367: swap_counter_dump_handler: pid 5995: counter >5 = 0
+              sh-7244  [007] ....   451.415367: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-7244  [007] ....   451.415368: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-7246  [007] ....   451.430122: swap_counter_dump_handler: pid 6514: counter 0 = 0
+              sh-7246  [007] ....   451.430124: swap_counter_dump_handler: pid 6514: counter 1 = 24094
+              sh-7246  [007] ....   451.430125: swap_counter_dump_handler: pid 6514: counter 2 = 0
+              sh-7246  [007] ....   451.430125: swap_counter_dump_handler: pid 6514: counter 3 = 0
+              sh-7246  [007] ....   451.430126: swap_counter_dump_handler: pid 6514: counter 4 = 0
+              sh-7246  [007] ....   451.430126: swap_counter_dump_handler: pid 6514: counter 5 = 0
+              sh-7246  [007] ....   451.430127: swap_counter_dump_handler: pid 6514: counter >5 = 0
+              sh-7246  [007] ....   451.430128: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-7246  [007] ....   451.430128: swap_counter_dump_handler: remote: total faulted cold page: 0
+ send_target_man-200   [002] d..2   451.680021: send_target_manager: send target manager - id, which_table : 5, 1

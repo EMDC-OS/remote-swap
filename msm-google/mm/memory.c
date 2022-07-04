@@ -2924,9 +2924,12 @@ int do_swap_page(struct vm_fault *vmf)
 #ifdef CONFIG_APP_AWARE
 
 	int idx;
-	unsigned int id;
+	unsigned int id = 0;
 	atomic_t *st_idx_ptr;
 	struct swap_trace_entry *swap_trace_table;
+	bool excepted = 0;
+	if(switch_start && foreground_uid)
+		id = get_id_from_uid(foreground_uid);
 
 #endif
 
@@ -3025,11 +3028,25 @@ int do_swap_page(struct vm_fault *vmf)
 		 *
 		*/
 		if (swp_type(entry) == NBD_TYPE){
-			if(pte_to_swp_counter(vmf->orig_pte)){
+			if(pte_to_swp_counter(vmf->orig_pte)==9) { //cold
 				atomic_inc(&faulted_cold_page);
+				atomic_dec(&sent_cold_page);
+			}
+			else if(switch_start && id && pte_to_swp_counter(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
+					trace_printk("prefetch fault id %d: %d \"%s\" %lx %lx\n",get_id_from_uid(foreground_uid),current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
 			else{
-				trace_printk("prefetch fault %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+				trace_printk("Exception : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+				atomic_inc(&excepted_page);
+				SetPageExcepted(page);
+				excepted = 1;
+			}
+		}
+		else{ // ZRAM_TYPE
+			if(pte_to_swp_excepted(vmf->orig_pte)){
+				trace_printk("Exception touched after marked : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+				SetPageExcepted(page);
+				excepted = 1;
 			}
 		}
 #endif
@@ -3107,8 +3124,7 @@ int do_swap_page(struct vm_fault *vmf)
 
 #ifdef CONFIG_APP_AWARE
 
-	if(switch_start && foreground_uid){
-		id = get_id_from_uid(foreground_uid);
+	if(switch_start && foreground_uid && !excepted){
 		if(past[id]->which_table){
 			st_idx_ptr = &past[id]->st_index1;
 			swap_trace_table = past[id]->swap_trace_table1;

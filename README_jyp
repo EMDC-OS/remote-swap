@@ -4,51 +4,51 @@ am start app
 echo 1 > /proc/sys/kernel/app_switch_fin
 play app ~~
 
-
 **You should handle foreground==0 after real workload
-
-
-
 
 // Optimization plan
 
-- PTE walk (cold page sender)
+- PTE walk (cold page sender) DONE!
 send to nbd right after it is COUNTER>THRESHOLD ==> Pte walk 1/2
 
 - PTE walk (send_target_page)  DONE!
-add one bit in the entry, and set if the page is swapped (very cheap operation) 
+add one bit in the entry, and set if the page is swapped in ZRAM (very cheap operation) 
 
 - SWAP TRACE TABLE WALK 
 current implementation -> periodically walk and find (tgid, vma) which in ZRAM. and send to NBD immediately
 it needs periodical random page table walk. any better IDEA?
-1. write pte that It has been targetted. and If it is
+1. write pte that It has been targetted. and If it is to be swapped out, then swap it to NBD immediately. But nee to modify pte. So current system is good if that overhead is negligible
 
-- STOP sending / during switch_start
+- STOP sending / during switch_start      Partially Done!
 It SHOULD be implemented to maximize prefetching --> made roughly, so need to be optimized
 
 - SWAP TRACE TABLE ALLOCATION
 current implementaion -> static big table
-optimization plan     -> at first, write to static big table, and then dynamically alloc the per-app tablie
+optimization plan     -> at first, write to static big table, and then dynamically alloc the per-app table
                       -> OR, alloc application well considering offline profiling, and dynamically resizing them if it is full
 
 - CPU Binding!!
-using CPU bind of Prefetching with different core 
+using CPU bind of Prefetching with different core (current is only 1, but should increase the number of core) 
 
 - try_to_free_swap()
 current implementation -> called on critical path
-optimization plan      -> called after switch
+optimization plan      -> called after switch // it can be done in miss page handler! for example) if!switch_on-->try_to_free_swap. Easy work.
 
-- PREFETCH MISS Pages handling
-current implementaion  -> Nothing. So it could be kept in Remote if swapcache flushed
-optimization plan      -> Force them faulted after switch and MADVISE them (MADV_PAGEOUT) then it can be in ZRAM...
+- PREFETCH MISS Pages handling      Partialy Done!
+Past implementaion  -> Nothing. So it could be kept in Remote if swapcache flushed
+Current             -> Force them faulted after switch ((and MADVISE them (MADV_PAGEOUT) then it can be in ZRAM soon...))
 
-- IF target page is sent, and faulted in background
-It should not be sent again, because it might be faulted again. It is solved because once the swapped flag set, It will never be sent to remote again.
+- After target page sent, It is faulted in background         DONE!
+It should not be sent again, because it might be faulted again. It is alrealy solved because once the swapped flag set, It will never be sent to remote again.
 
 - delete swap cache
-HOW about using try_to_free_swap()
+HOW about using try_to_free_swap(). similar maybe..?
 
-	
+- ZRAM Pressure
+If ZRAM Pressure get higher, how about COLD_THRESHOLD dec, and target percentage inc
+and if ZRAM get full, Some pages can be swapped out to NBD. We should handle this page.
+
+
 // Implementation idea
 
 Should handle if the process exit--> STT free or STT clean

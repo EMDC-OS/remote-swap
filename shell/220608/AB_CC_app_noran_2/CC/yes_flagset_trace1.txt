@@ -1,0 +1,1343 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 1332/1332   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-200   [006] ....     0.518314: send_target_manager: 3[REMOTE send_target_manager] target manager started
+           <...>-200   [006] ....     0.518327: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [002] ....     0.518382: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [002] ....     0.518391: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-5975  [007] ....    69.449370: app_switch_start_handler: ###########switch start! foreground 10122#############
+           <...>-5975  [007] ....    69.449375: prefetch_handler: prefetch handler start! target(id,table): 5,0
+           <...>-5975  [006] ....    69.882060: miss_page_handler: miss page handler start! target(id,table): 5,1
+           <...>-200   [002] ....    69.882103: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [002] ....    69.882114: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6467  [007] ....   124.974453: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-6467  [007] ....   124.974458: prefetch_handler: prefetch handler start! target(id,table): 4,0
+           <...>-6467  [004] ....   125.701543: miss_page_handler: miss page handler start! target(id,table): 4,1
+           <...>-200   [001] ....   125.701631: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [001] ....   125.701650: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [002] ....   163.467294: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [002] ....   163.467311: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6992  [007] ....   203.327677: app_switch_start_handler: ###########switch start! foreground 10122#############
+           <...>-6992  [007] ....   203.327683: prefetch_handler: prefetch handler start! target(id,table): 5,0
+           <...>-6000  [001] ...1   203.380296: do_swap_page: id 5, table 0 || 0: 5981 7f2deb1000
+           <...>-6000  [001] ...1   203.380326: do_swap_page: id 5, table 0 || 1: 5981 7f2deb2000
+           <...>-6000  [001] ...1   203.380351: do_swap_page: id 5, table 0 || 2: 5981 7f28a67000
+           <...>-6000  [001] ...1   203.380371: do_swap_page: id 5, table 0 || 3: 5981 7f28a69000
+           <...>-6000  [001] ...1   203.380396: do_swap_page: id 5, table 0 || 4: 5981 7f28a6a000
+           <...>-6000  [001] ...1   203.380426: do_swap_page: id 5, table 0 || 5: 5981 142d1000
+           <...>-6000  [001] ...1   203.380456: do_swap_page: id 5, table 0 || 6: 5981 7f2deaf000
+           <...>-6000  [001] ...1   203.380502: do_swap_page: id 5, table 0 || 7: 5981 7f2deb0000
+           <...>-6000  [001] ...1   203.380577: do_swap_page: id 5, table 0 || 8: 5981 7fbe306000
+           <...>-6000  [001] ...1   203.380592: do_swap_page: id 5, table 0 || 9: 5981 7fbe30f000
+           <...>-6000  [001] ...1   203.380616: do_swap_page: id 5, table 0 || 10: 5981 7ed740f000
+           <...>-6000  [001] ...1   203.380642: do_swap_page: id 5, table 0 || 11: 5981 7daa85e000
+           <...>-5999  [000] ...1   203.380656: do_swap_page: id 5, table 0 || 12: 5981 7f2dfae000
+           <...>-6000  [001] ...1   203.380677: do_swap_page: id 5, table 0 || 13: 5981 14484000
+           <...>-5999  [000] ...1   203.380680: do_swap_page: id 5, table 0 || 14: 5981 7f2dfaf000
+           <...>-5999  [000] ...1   203.380698: do_swap_page: id 5, table 0 || 15: 5981 7f2d428000
+           <...>-6000  [001] ...1   203.380700: do_swap_page: id 5, table 0 || 16: 5981 14476000
+           <...>-5999  [000] ...1   203.380719: do_swap_page: id 5, table 0 || 17: 5981 7f2d42c000
+           <...>-5999  [000] ...1   203.380740: do_swap_page: id 5, table 0 || 18: 5981 7f2d470000
+           <...>-5999  [000] ...1   203.380754: do_swap_page: id 5, table 0 || 19: 5981 7f2d471000
+           <...>-6000  [001] ...1   203.380759: do_swap_page: id 5, table 0 || 20: 5981 7f28957000
+           <...>-5999  [000] ...1   203.380771: do_swap_page: id 5, table 0 || 21: 5981 7f2dfac000
+           <...>-5999  [000] ...1   203.380802: do_swap_page: id 5, table 0 || 22: 5981 7f2dfad000
+           <...>-5999  [000] ...1   203.380844: do_swap_page: id 5, table 0 || 23: 5981 7fbe304000
+           <...>-5999  [000] ...1   203.380858: do_swap_page: id 5, table 0 || 24: 5981 7fbe305000
+           <...>-5999  [000] ...1   203.380884: do_swap_page: id 5, table 0 || 25: 5981 7f2d489000
+           <...>-5999  [000] ...1   203.380908: do_swap_page: id 5, table 0 || 26: 5981 7fbe168000
+           <...>-5999  [000] ...1   203.380952: do_swap_page: id 5, table 0 || 27: 5981 7eb5b8e000
+           <...>-5999  [000] ...1   203.380980: do_swap_page: id 5, table 0 || 28: 5981 7f2d48c000
+           <...>-5999  [000] ...1   203.381008: do_swap_page: id 5, table 0 || 29: 5981 1421d000
+           <...>-5999  [000] ...1   203.381030: do_swap_page: id 5, table 0 || 30: 5981 145f6000
+           <...>-5999  [000] ...1   203.381047: do_swap_page: id 5, table 0 || 31: 5981 145f5000
+           <...>-5999  [000] ...1   203.381068: do_swap_page: id 5, table 0 || 32: 5981 14477000
+           <...>-5999  [000] ...1   203.381106: do_swap_page: id 5, table 0 || 33: 5981 145f7000
+           <...>-5999  [000] ...1   203.381143: do_swap_page: id 5, table 0 || 34: 5981 7f2d491000
+  com.rovio.baba-5981  [000] ...1   203.381232: do_swap_page: id 5, table 0 || 35: 5981 1462e000
+  com.rovio.baba-5981  [000] ...1   203.381260: do_swap_page: id 5, table 0 || 36: 5981 7fbe1d5000
+  com.rovio.baba-5981  [000] ...1   203.381334: do_swap_page: id 5, table 0 || 37: 5981 7f28ae4000
+  com.rovio.baba-5981  [000] ...1   203.381359: do_swap_page: id 5, table 0 || 38: 5981 7fba539000
+  com.rovio.baba-5981  [000] ...1   203.381379: do_swap_page: id 5, table 0 || 39: 5981 7fbe166000
+  com.rovio.baba-5981  [000] ...1   203.381486: do_swap_page: id 5, table 0 || 40: 5981 14475000
+  com.rovio.baba-5981  [000] ...1   203.381741: do_swap_page: id 5, table 0 || 41: 5981 1447c000
+  com.rovio.baba-5981  [000] ...1   203.391499: do_swap_page: id 5, table 0 || 42: 5981 7fbc0f8000
+  com.rovio.baba-5981  [000] ...1   203.391563: do_swap_page: id 5, table 0 || 43: 5981 145a0000
+  com.rovio.baba-5981  [000] ...1   203.391595: do_swap_page: id 5, table 0 || 44: 5981 1447e000
+  com.rovio.baba-5981  [000] ...1   203.391614: do_swap_page: id 5, table 0 || 45: 5981 7fbe2fd000
+  com.rovio.baba-5981  [000] ...1   203.391645: do_swap_page: id 5, table 0 || 46: 5981 7f28cff000
+  com.rovio.baba-5981  [000] ...1   203.391728: do_swap_page: id 5, table 0 || 47: 5981 14480000
+  com.rovio.baba-5981  [000] ...1   203.391761: do_swap_page: id 5, table 0 || 48: 5981 712a4000
+  com.rovio.baba-5981  [000] ...1   203.391785: do_swap_page: id 5, table 0 || 49: 5981 71285000
+  com.rovio.baba-5981  [000] ...1   203.391815: do_swap_page: id 5, table 0 || 50: 5981 7112d000
+  com.rovio.baba-5981  [000] ...1   203.391841: do_swap_page: id 5, table 0 || 51: 5981 71136000
+  com.rovio.baba-5981  [000] ...1   203.391867: do_swap_page: id 5, table 0 || 52: 5981 1447d000
+  com.rovio.baba-5981  [000] ...1   203.391887: do_swap_page: id 5, table 0 || 53: 5981 14478000
+  com.rovio.baba-5981  [000] ...1   203.391918: do_swap_page: id 5, table 0 || 54: 5981 14256000
+  com.rovio.baba-5981  [000] ...1   203.391942: do_swap_page: id 5, table 0 || 55: 5981 14485000
+  com.rovio.baba-5981  [000] ...1   203.391977: do_swap_page: id 5, table 0 || 56: 5981 1447f000
+  com.rovio.baba-5981  [000] ...1   203.392031: do_swap_page: id 5, table 0 || 57: 5981 7eb5fee000
+  com.rovio.baba-5981  [004] ...1   203.416265: do_swap_page: id 5, table 0 || 58: 5981 145f8000
+  com.rovio.baba-5981  [004] ...1   203.416325: do_swap_page: id 5, table 0 || 59: 5981 7112e000
+  com.rovio.baba-5981  [004] ...1   203.416340: do_swap_page: id 5, table 0 || 60: 5981 71224000
+  com.rovio.baba-5981  [004] ...1   203.416373: do_swap_page: id 5, table 0 || 61: 5981 7f3501c000
+  com.rovio.baba-5981  [004] ...1   203.416394: do_swap_page: id 5, table 0 || 62: 5981 7fbe17a000
+  com.rovio.baba-5981  [004] ...1   203.416442: do_swap_page: id 5, table 0 || 63: 5981 7129f000
+  com.rovio.baba-5981  [004] ...1   203.416477: do_swap_page: id 5, table 0 || 64: 5981 7129a000
+  com.rovio.baba-5981  [004] ...1   203.416579: do_swap_page: id 5, table 0 || 65: 5981 7128e000
+  com.rovio.baba-5981  [004] ...1   203.416607: do_swap_page: id 5, table 0 || 66: 5981 142d5000
+  com.rovio.baba-5981  [004] ...1   203.416700: do_swap_page: id 5, table 0 || 67: 5981 7daa94e000
+  com.rovio.baba-5981  [004] ...1   203.416716: do_swap_page: id 5, table 0 || 68: 5981 7eb5faa000
+  com.rovio.baba-5981  [004] ...1   203.416730: do_swap_page: id 5, table 0 || 69: 5981 7eb6e71000
+  com.rovio.baba-5981  [004] ...1   203.416745: do_swap_page: id 5, table 0 || 70: 5981 7f288d6000
+  com.rovio.baba-5981  [004] ...1   203.416755: do_swap_page: id 5, table 0 || 71: 5981 7eb6bb5000
+  com.rovio.baba-5981  [004] ...1   203.416767: do_swap_page: id 5, table 0 || 72: 5981 7f2898a000
+  com.rovio.baba-5981  [004] ...1   203.416782: do_swap_page: id 5, table 0 || 73: 5981 7eb66f4000
+  com.rovio.baba-5981  [004] ...1   203.416791: do_swap_page: id 5, table 0 || 75: 5981 7eb6e6d000
+           <...>-5999  [003] ...1   203.416792: do_swap_page: id 5, table 0 || 74: 5981 71299000
+  com.rovio.baba-5981  [004] ...1   203.416803: do_swap_page: id 5, table 0 || 76: 5981 7f288bf000
+  com.rovio.baba-5981  [004] ...1   203.416859: do_swap_page: id 5, table 0 || 77: 5981 14257000
+  com.rovio.baba-5981  [004] ...1   203.416875: do_swap_page: id 5, table 0 || 78: 5981 14481000
+  com.rovio.baba-5981  [004] ...1   203.416886: do_swap_page: id 5, table 0 || 79: 5981 7f23283000
+  com.rovio.baba-5981  [004] ...1   203.416911: do_swap_page: id 5, table 0 || 80: 5981 7fbe1f5000
+  com.rovio.baba-5981  [004] ...1   203.416931: do_swap_page: id 5, table 0 || 81: 5981 7f23280000
+  com.rovio.baba-5981  [004] ...1   203.416944: do_swap_page: id 5, table 0 || 82: 5981 7f2d8d7000
+  com.rovio.baba-5981  [004] ...1   203.416958: do_swap_page: id 5, table 0 || 84: 5981 7e50102000
+           <...>-5999  [003] ...1   203.416958: do_swap_page: id 5, table 0 || 83: 5981 7f2d58b000
+  com.rovio.baba-5981  [004] ...1   203.416971: do_swap_page: id 5, table 0 || 85: 5981 7ebcf16000
+  com.rovio.baba-5981  [004] ...1   203.416981: do_swap_page: id 5, table 0 || 87: 5981 7e5000f000
+           <...>-5999  [003] ...1   203.416982: do_swap_page: id 5, table 0 || 86: 5981 7f2d472000
+  com.rovio.baba-5981  [004] ...1   203.416989: do_swap_page: id 5, table 0 || 88: 5981 7ebcf13000
+  com.rovio.baba-5981  [004] ...1   203.416997: do_swap_page: id 5, table 0 || 89: 5981 7ebcf15000
+  com.rovio.baba-5981  [004] ...1   203.417005: do_swap_page: id 5, table 0 || 91: 5981 7e5000e000
+           <...>-5999  [003] ...1   203.417005: do_swap_page: id 5, table 0 || 90: 5981 7f28a43000
+  com.rovio.baba-5981  [004] ...1   203.417013: do_swap_page: id 5, table 0 || 92: 5981 7ebce6e000
+  com.rovio.baba-5981  [004] ...1   203.417023: do_swap_page: id 5, table 0 || 93: 5981 7ebce70000
+  com.rovio.baba-5981  [004] ...1   203.417030: do_swap_page: id 5, table 0 || 94: 5981 7ebce71000
+  com.rovio.baba-5981  [004] ...1   203.417037: do_swap_page: id 5, table 0 || 95: 5981 7ebce7f000
+  com.rovio.baba-5981  [004] ...1   203.417046: do_swap_page: id 5, table 0 || 96: 5981 7e50400000
+  com.rovio.baba-5981  [004] ...1   203.417056: do_swap_page: id 5, table 0 || 97: 5981 7ebcecb000
+  com.rovio.baba-5981  [004] ...1   203.417066: do_swap_page: id 5, table 0 || 98: 5981 7f2d518000
+  com.rovio.baba-5981  [004] ...1   203.417078: do_swap_page: id 5, table 0 || 99: 5981 7df0d90000
+  com.rovio.baba-5981  [004] ...1   203.417091: do_swap_page: id 5, table 0 || 100: 5981 7df0dad000
+  com.rovio.baba-5981  [004] ...1   203.417100: do_swap_page: id 5, table 0 || 101: 5981 7df0fff000
+  com.rovio.baba-5981  [004] ...1   203.417106: do_swap_page: id 5, table 0 || 102: 5981 7ebce72000
+  com.rovio.baba-5981  [004] ...1   203.417115: do_swap_page: id 5, table 0 || 103: 5981 7f28bca000
+  com.rovio.baba-5981  [004] ...1   203.417131: do_swap_page: id 5, table 0 || 104: 5981 7df0000000
+  com.rovio.baba-5981  [004] ...1   203.417142: do_swap_page: id 5, table 0 || 105: 5981 7df0095000
+  com.rovio.baba-5981  [004] ...1   203.417149: do_swap_page: id 5, table 0 || 106: 5981 7df0db6000
+  com.rovio.baba-5981  [004] ...1   203.417160: do_swap_page: id 5, table 0 || 107: 5981 7df084f000
+  com.rovio.baba-5981  [004] ...1   203.417178: do_swap_page: id 5, table 0 || 108: 5981 7df04e8000
+  com.rovio.baba-5981  [004] ...1   203.417186: do_swap_page: id 5, table 0 || 109: 5981 7df01e0000
+  com.rovio.baba-5981  [004] ...1   203.417197: do_swap_page: id 5, table 0 || 110: 5981 7df0dae000
+  com.rovio.baba-5981  [004] ...1   203.417226: do_swap_page: id 5, table 0 || 111: 5981 1421b000
+  com.rovio.baba-5981  [004] ...1   203.417238: do_swap_page: id 5, table 0 || 112: 5981 7fbc04a000
+  com.rovio.baba-5981  [004] ...1   203.417296: do_swap_page: id 5, table 0 || 113: 5981 14653000
+  com.rovio.baba-5981  [004] ...1   203.417310: do_swap_page: id 5, table 0 || 114: 5981 14627000
+  com.rovio.baba-5981  [004] ...1   203.417322: do_swap_page: id 5, table 0 || 115: 5981 14628000
+  com.rovio.baba-5981  [004] ...1   203.417337: do_swap_page: id 5, table 0 || 116: 5981 1462d000
+  com.rovio.baba-5981  [004] ...1   203.417371: do_swap_page: id 5, table 0 || 117: 5981 7f2d43e000
+  com.rovio.baba-5981  [006] ...1   203.417727: do_swap_page: id 5, table 0 || 118: 5981 71139000
+  com.rovio.baba-5981  [006] ...1   203.417740: do_swap_page: id 5, table 0 || 119: 5981 71141000
+  com.rovio.baba-5981  [006] ...1   203.417756: do_swap_page: id 5, table 0 || 120: 5981 7f28875000
+  com.rovio.baba-5981  [006] ...1   203.417767: do_swap_page: id 5, table 0 || 121: 5981 71298000
+  com.rovio.baba-5981  [006] ...1   203.417781: do_swap_page: id 5, table 0 || 122: 5981 71187000
+  com.rovio.baba-5981  [006] ...1   203.417790: do_swap_page: id 5, table 0 || 123: 5981 7111c000
+  com.rovio.baba-5981  [006] ...1   203.417808: do_swap_page: id 5, table 0 || 124: 5981 7fbbeb7000
+  com.rovio.baba-5981  [006] ...1   203.417817: do_swap_page: id 5, table 0 || 125: 5981 7f28891000
+  com.rovio.baba-5981  [006] ...1   203.417827: do_swap_page: id 5, table 0 || 126: 5981 7f28921000
+  com.rovio.baba-5981  [006] ...1   203.417836: do_swap_page: id 5, table 0 || 127: 5981 7fbe187000
+  com.rovio.baba-5981  [006] ...1   203.417848: do_swap_page: id 5, table 0 || 128: 5981 7f39834000
+  com.rovio.baba-5981  [006] ...1   203.417860: do_swap_page: id 5, table 0 || 129: 5981 7fbe188000
+  com.rovio.baba-5981  [006] ...1   203.417878: do_swap_page: id 5, table 0 || 130: 5981 7f288bb000
+  com.rovio.baba-5981  [006] ...1   203.417893: do_swap_page: id 5, table 0 || 131: 5981 7f288e5000
+  com.rovio.baba-5981  [006] ...1   203.417902: do_swap_page: id 5, table 0 || 132: 5981 7f2892b000
+  com.rovio.baba-5981  [006] ...1   203.417992: do_swap_page: id 5, table 0 || 133: 5981 7f28966000
+  com.rovio.baba-5981  [006] ...1   203.418003: do_swap_page: id 5, table 0 || 134: 5981 7f288ba000
+  com.rovio.baba-5981  [006] ...1   203.418043: do_swap_page: id 5, table 0 || 135: 5981 7f28983000
+  com.rovio.baba-5981  [006] ...1   203.418057: do_swap_page: id 5, table 0 || 136: 5981 7f28872000
+  com.rovio.baba-5981  [006] ...1   203.418066: do_swap_page: id 5, table 0 || 137: 5981 7f2889b000
+  com.rovio.baba-5981  [006] ...1   203.418073: do_swap_page: id 5, table 0 || 138: 5981 7f28964000
+  com.rovio.baba-5981  [006] ...1   203.418082: do_swap_page: id 5, table 0 || 139: 5981 7f28889000
+  com.rovio.baba-5981  [006] ...1   203.418099: do_swap_page: id 5, table 0 || 140: 5981 7f3985a000
+  com.rovio.baba-5981  [006] ...1   203.418111: do_swap_page: id 5, table 0 || 141: 5981 7f289c5000
+  com.rovio.baba-5981  [006] ...1   203.418122: do_swap_page: id 5, table 0 || 142: 5981 7f2897f000
+  com.rovio.baba-5981  [006] ...1   203.418131: do_swap_page: id 5, table 0 || 143: 5981 7f3985d000
+  com.rovio.baba-5981  [006] ...1   203.418152: do_swap_page: id 5, table 0 || 144: 5981 7f28ba9000
+  com.rovio.baba-5981  [006] ...1   203.418159: do_swap_page: id 5, table 0 || 145: 5981 7fbe18c000
+  com.rovio.baba-5981  [006] ...1   203.418164: do_swap_page: id 5, table 0 || 146: 5981 7f28979000
+  com.rovio.baba-5981  [006] ...1   203.418181: do_swap_page: id 5, table 0 || 147: 5981 14413000
+  com.rovio.baba-5981  [006] ...1   203.418201: do_swap_page: id 5, table 0 || 148: 5981 71296000
+  com.rovio.baba-5981  [006] ...1   203.418214: do_swap_page: id 5, table 0 || 149: 5981 71288000
+  com.rovio.baba-5981  [006] ...1   203.418235: do_swap_page: id 5, table 0 || 150: 5981 7d6a7db000
+  com.rovio.baba-5981  [006] ...1   203.418247: do_swap_page: id 5, table 0 || 151: 5981 7d5d022000
+  com.rovio.baba-5981  [006] ...1   203.418253: do_swap_page: id 5, table 0 || 152: 5981 7d6a7e5000
+  com.rovio.baba-5981  [006] ...1   203.418262: do_swap_page: id 5, table 0 || 153: 5981 7d6a494000
+  com.rovio.baba-5981  [006] ...1   203.418280: do_swap_page: id 5, table 0 || 154: 5981 7d5d0d2000
+  com.rovio.baba-5981  [006] ...1   203.418294: do_swap_page: id 5, table 0 || 155: 5981 7d5d0cc000
+  com.rovio.baba-5981  [006] ...1   203.418304: do_swap_page: id 5, table 0 || 156: 5981 7d6a029000
+  com.rovio.baba-5981  [006] ...1   203.418373: do_swap_page: id 5, table 0 || 157: 5981 7d5cf78000
+  com.rovio.baba-5981  [006] ...1   203.418382: do_swap_page: id 5, table 0 || 158: 5981 7d5cfce000
+  com.rovio.baba-5981  [006] ...1   203.418388: do_swap_page: id 5, table 0 || 159: 5981 7d5cf77000
+  com.rovio.baba-5981  [006] ...1   203.418398: do_swap_page: id 5, table 0 || 160: 5981 7ebe746000
+  com.rovio.baba-5981  [006] ...1   203.418436: do_swap_page: id 5, table 0 || 161: 5981 7f28a60000
+  com.rovio.baba-5981  [006] ...1   203.418449: do_swap_page: id 5, table 0 || 162: 5981 7d5cef3000
+  com.rovio.baba-5981  [006] ...1   203.418469: do_swap_page: id 5, table 0 || 163: 5981 7f39859000
+  com.rovio.baba-5981  [006] ...1   203.418483: do_swap_page: id 5, table 0 || 164: 5981 7eb6a38000
+  com.rovio.baba-5981  [006] ...1   203.418492: do_swap_page: id 5, table 0 || 165: 5981 7d6a495000
+  com.rovio.baba-5981  [006] ...1   203.418499: do_swap_page: id 5, table 0 || 166: 5981 7d6a496000
+  com.rovio.baba-5981  [006] ...1   203.418513: do_swap_page: id 5, table 0 || 167: 5981 7d5d023000
+  com.rovio.baba-5981  [006] ...1   203.418522: do_swap_page: id 5, table 0 || 168: 5981 7d69ffa000
+  com.rovio.baba-5981  [006] ...1   203.418531: do_swap_page: id 5, table 0 || 169: 5981 7d6a04b000
+  com.rovio.baba-5981  [006] ...1   203.418541: do_swap_page: id 5, table 0 || 170: 5981 7fbe1fd000
+  com.rovio.baba-5981  [006] ...1   203.418560: do_swap_page: id 5, table 0 || 171: 5981 14410000
+  com.rovio.baba-5981  [006] ...1   203.418571: do_swap_page: id 5, table 0 || 172: 5981 14411000
+  com.rovio.baba-5981  [006] ...1   203.418586: do_swap_page: id 5, table 0 || 173: 5981 7129e000
+  com.rovio.baba-5981  [006] ...1   203.418610: do_swap_page: id 5, table 0 || 174: 5981 7ed73f7000
+  com.rovio.baba-5981  [006] ...1   203.418621: do_swap_page: id 5, table 0 || 175: 5981 7ed739b000
+  com.rovio.baba-5981  [006] ...1   203.418627: do_swap_page: id 5, table 0 || 176: 5981 7ed73a0000
+  com.rovio.baba-5981  [006] ...1   203.418637: do_swap_page: id 5, table 0 || 177: 5981 7ebe606000
+  com.rovio.baba-5981  [006] ...1   203.418651: do_swap_page: id 5, table 0 || 178: 5981 7f2d66e000
+  com.rovio.baba-5981  [006] ...1   203.418662: do_swap_page: id 5, table 0 || 179: 5981 7f2d688000
+  com.rovio.baba-5981  [006] ...1   203.418685: do_swap_page: id 5, table 0 || 180: 5981 7d49aba000
+  com.rovio.baba-5981  [006] ...1   203.418692: do_swap_page: id 5, table 0 || 181: 5981 7ed7396000
+  com.rovio.baba-5981  [006] ...1   203.418756: do_swap_page: id 5, table 0 || 182: 5981 7ed73e5000
+  com.rovio.baba-5981  [006] ...1   203.418764: do_swap_page: id 5, table 0 || 183: 5981 7ed7408000
+  com.rovio.baba-5981  [006] ...1   203.418771: do_swap_page: id 5, table 0 || 184: 5981 7d49abb000
+  com.rovio.baba-5981  [006] ...1   203.418808: do_swap_page: id 5, table 0 || 185: 5981 7ed7398000
+  com.rovio.baba-5981  [006] ...1   203.418824: do_swap_page: id 5, table 0 || 186: 5981 7ebe607000
+  com.rovio.baba-5981  [006] ...1   203.418843: do_swap_page: id 5, table 0 || 187: 5981 7f28a41000
+  com.rovio.baba-5981  [006] ...1   203.418852: do_swap_page: id 5, table 0 || 188: 5981 7eb197e000
+  com.rovio.baba-5981  [006] ...1   203.418859: do_swap_page: id 5, table 0 || 189: 5981 7eb197f000
+  com.rovio.baba-5981  [006] ...1   203.418887: do_swap_page: id 5, table 0 || 190: 5981 7f2d18c000
+  com.rovio.baba-5981  [006] ...1   203.418902: do_swap_page: id 5, table 0 || 191: 5981 7ed7248000
+  com.rovio.baba-5981  [006] ...1   203.418911: do_swap_page: id 5, table 0 || 192: 5981 7ed739a000
+  com.rovio.baba-5981  [006] ...1   203.418936: do_swap_page: id 5, table 0 || 193: 5981 7128b000
+  com.rovio.baba-5981  [006] ...1   203.418949: do_swap_page: id 5, table 0 || 194: 5981 71286000
+  com.rovio.baba-5981  [006] ...1   203.418968: do_swap_page: id 5, table 0 || 195: 5981 7d69fcf000
+  com.rovio.baba-5981  [006] ...1   203.418976: do_swap_page: id 5, table 0 || 196: 5981 7ebe603000
+  com.rovio.baba-5981  [006] ...1   203.418988: do_swap_page: id 5, table 0 || 197: 5981 7f2d63e000
+  com.rovio.baba-5981  [006] ...1   203.418998: do_swap_page: id 5, table 0 || 198: 5981 7ebe602000
+  com.rovio.baba-5981  [006] ...1   203.419011: do_swap_page: id 5, table 0 || 199: 5981 7d6fa7e000
+  com.rovio.baba-5981  [006] ...1   203.419019: do_swap_page: id 5, table 0 || 200: 5981 7d69f0b000
+  com.rovio.baba-5981  [006] ...1   203.419088: do_swap_page: id 5, table 0 || 201: 5981 7ebe52d000
+  com.rovio.baba-5981  [006] ...1   203.419127: do_swap_page: id 5, table 0 || 202: 5981 7f2d58d000
+  com.rovio.baba-5981  [006] ...1   203.419141: do_swap_page: id 5, table 0 || 203: 5981 7f28972000
+  com.rovio.baba-5981  [006] ...1   203.419170: do_swap_page: id 5, table 0 || 204: 5981 7f3980b000
+  com.rovio.baba-5981  [006] ...1   203.419184: do_swap_page: id 5, table 0 || 205: 5981 7f2d51f000
+  com.rovio.baba-5981  [006] ...1   203.419196: do_swap_page: id 5, table 0 || 206: 5981 7f2d569000
+  com.rovio.baba-5981  [006] ...1   203.419204: do_swap_page: id 5, table 0 || 207: 5981 7f2d568000
+  com.rovio.baba-5981  [006] ...1   203.419215: do_swap_page: id 5, table 0 || 208: 5981 7d6a7d9000
+  com.rovio.baba-5981  [006] ...1   203.419225: do_swap_page: id 5, table 0 || 209: 5981 7f2d49e000
+  com.rovio.baba-5981  [006] ...1   203.419237: do_swap_page: id 5, table 0 || 210: 5981 7d5cec0000
+  com.rovio.baba-5981  [006] ...1   203.419251: do_swap_page: id 5, table 0 || 211: 5981 7f28ba4000
+  com.rovio.baba-5981  [006] ...1   203.419263: do_swap_page: id 5, table 0 || 212: 5981 7d6f9a3000
+  com.rovio.baba-5981  [006] ...1   203.419280: do_swap_page: id 5, table 0 || 213: 5981 7d5cf04000
+  com.rovio.baba-5981  [006] ...1   203.419290: do_swap_page: id 5, table 0 || 214: 5981 7d6a07b000
+  com.rovio.baba-5981  [006] ...1   203.419304: do_swap_page: id 5, table 0 || 215: 5981 7d6a04a000
+  com.rovio.baba-5981  [006] ...1   203.419321: do_swap_page: id 5, table 0 || 216: 5981 7d6a493000
+  com.rovio.baba-5981  [006] ...1   203.419332: do_swap_page: id 5, table 0 || 217: 5981 7d69fee000
+  com.rovio.baba-5981  [006] ...1   203.419367: do_swap_page: id 5, table 0 || 218: 5981 7f28893000
+  com.rovio.baba-5981  [006] ...1   203.419380: do_swap_page: id 5, table 0 || 219: 5981 7f28a81000
+  com.rovio.baba-5981  [006] ...1   203.419386: do_swap_page: id 5, table 0 || 220: 5981 7f28a82000
+  com.rovio.baba-5981  [006] ...1   203.419407: do_swap_page: id 5, table 0 || 221: 5981 7f28b27000
+  com.rovio.baba-5981  [006] ...1   203.419481: do_swap_page: id 5, table 0 || 222: 5981 7f28a54000
+  com.rovio.baba-5981  [006] ...1   203.419489: do_swap_page: id 5, table 0 || 223: 5981 7f28a66000
+  com.rovio.baba-5981  [006] ...1   203.419495: do_swap_page: id 5, table 0 || 224: 5981 7f28b1d000
+  com.rovio.baba-5981  [006] ...1   203.419533: do_swap_page: id 5, table 0 || 225: 5981 7f28b15000
+  com.rovio.baba-5981  [006] ...1   203.419840: do_swap_page: id 5, table 0 || 226: 5981 7f28bac000
+  com.rovio.baba-5981  [006] ...1   203.420055: do_swap_page: id 5, table 0 || 227: 5981 712a0000
+  com.rovio.baba-5981  [006] ...1   203.420217: do_swap_page: id 5, table 0 || 228: 5981 7f28cd7000
+  com.rovio.baba-5981  [006] ...1   203.420227: do_swap_page: id 5, table 0 || 229: 5981 7eb6a23000
+  com.rovio.baba-5981  [006] ...1   203.420246: do_swap_page: id 5, table 0 || 230: 5981 7eb6b5b000
+  com.rovio.baba-5981  [006] ...1   203.420266: do_swap_page: id 5, table 0 || 231: 5981 7eb67b6000
+  com.rovio.baba-5981  [006] ...1   203.420344: do_swap_page: id 5, table 0 || 232: 5981 7daa7c5000
+  com.rovio.baba-5981  [006] ...1   203.420352: do_swap_page: id 5, table 0 || 233: 5981 7eb6b0f000
+  com.rovio.baba-5981  [006] ...1   203.420359: do_swap_page: id 5, table 0 || 234: 5981 7daa758000
+  com.rovio.baba-5981  [006] ...1   203.420408: do_swap_page: id 5, table 0 || 235: 5981 7daa969000
+  com.rovio.baba-5981  [006] ...1   203.420419: do_swap_page: id 5, table 0 || 236: 5981 7eb6a28000
+  com.rovio.baba-5981  [006] ...1   203.420438: do_swap_page: id 5, table 0 || 237: 5981 7f28bea000
+  com.rovio.baba-5981  [006] ...1   203.420458: do_swap_page: id 5, table 0 || 238: 5981 7f28c09000
+  com.rovio.baba-5981  [006] ...1   203.420467: do_swap_page: id 5, table 0 || 239: 5981 7eb6a24000
+  com.rovio.baba-5981  [006] ...1   203.420482: do_swap_page: id 5, table 0 || 240: 5981 7daa871000
+  com.rovio.baba-5981  [006] ...1   203.420497: do_swap_page: id 5, table 0 || 241: 5981 7fbe349000
+  com.rovio.baba-5981  [006] ...1   203.420507: do_swap_page: id 5, table 0 || 242: 5981 7fbe22c000
+  com.rovio.baba-5981  [006] ...1   203.420515: do_swap_page: id 5, table 0 || 243: 5981 7fbe176000
+  com.rovio.baba-5981  [006] ...1   203.420523: do_swap_page: id 5, table 0 || 244: 5981 7eb67de000
+  com.rovio.baba-5981  [006] ...1   203.420531: do_swap_page: id 5, table 0 || 245: 5981 7eb6a35000
+  com.rovio.baba-5981  [006] ...1   203.420543: do_swap_page: id 5, table 0 || 246: 5981 7daa671000
+  com.rovio.baba-5981  [006] ...1   203.420564: do_swap_page: id 5, table 0 || 247: 5981 7fbe346000
+  com.rovio.baba-5981  [006] ...1   203.420574: do_swap_page: id 5, table 0 || 248: 5981 7daa868000
+  com.rovio.baba-5981  [006] ...1   203.420581: do_swap_page: id 5, table 0 || 249: 5981 7eb6a34000
+  com.rovio.baba-5981  [006] ...1   203.420588: do_swap_page: id 5, table 0 || 250: 5981 7eb67d5000
+  com.rovio.baba-5981  [006] ...1   203.420595: do_swap_page: id 5, table 0 || 251: 5981 7daa85c000
+  com.rovio.baba-5981  [006] ...1   203.420604: do_swap_page: id 5, table 0 || 252: 5981 7eb7016000
+  com.rovio.baba-5981  [006] ...1   203.420625: do_swap_page: id 5, table 0 || 253: 5981 7daa947000
+  com.rovio.baba-5981  [006] ...1   203.420631: do_swap_page: id 5, table 0 || 254: 5981 7eb6b5c000
+  com.rovio.baba-5981  [006] ...1   203.420636: do_swap_page: id 5, table 0 || 255: 5981 7eb6af7000
+  com.rovio.baba-5981  [006] ...1   203.420640: do_swap_page: id 5, table 0 || 256: 5981 7eb6af4000
+  com.rovio.baba-5981  [006] ...1   203.420645: do_swap_page: id 5, table 0 || 257: 5981 7eb6af0000
+  com.rovio.baba-5981  [006] ...1   203.420650: do_swap_page: id 5, table 0 || 258: 5981 7eb6aed000
+  com.rovio.baba-5981  [006] ...1   203.420669: do_swap_page: id 5, table 0 || 259: 5981 1436e000
+  com.rovio.baba-5981  [006] ...1   203.420697: do_swap_page: id 5, table 0 || 260: 5981 7f35014000
+  com.rovio.baba-5981  [006] ...1   203.420709: do_swap_page: id 5, table 0 || 261: 5981 7fbc4bd000
+  com.rovio.baba-5981  [006] ...1   203.420719: do_swap_page: id 5, table 0 || 262: 5981 7fbe231000
+  com.rovio.baba-5981  [006] ...1   203.420734: do_swap_page: id 5, table 0 || 263: 5981 7f28887000
+  com.rovio.baba-5981  [006] ...1   203.420741: do_swap_page: id 5, table 0 || 264: 5981 7f288fe000
+  com.rovio.baba-5981  [006] ...1   203.420762: do_swap_page: id 5, table 0 || 265: 5981 14657000
+  com.rovio.baba-5981  [006] ...1   203.420773: do_swap_page: id 5, table 0 || 266: 5981 7f28b0f000
+  com.rovio.baba-5981  [006] ...1   203.420779: do_swap_page: id 5, table 0 || 267: 5981 7f28b10000
+  com.rovio.baba-5981  [006] ...1   203.420791: do_swap_page: id 5, table 0 || 268: 5981 1443e000
+  com.rovio.baba-5981  [006] ...1   203.420803: do_swap_page: id 5, table 0 || 269: 5981 1443f000
+  com.rovio.baba-5981  [006] ...1   203.420811: do_swap_page: id 5, table 0 || 270: 5981 14654000
+  com.rovio.baba-5981  [006] ...1   203.420817: do_swap_page: id 5, table 0 || 271: 5981 14488000
+  com.rovio.baba-5981  [006] ...1   203.420823: do_swap_page: id 5, table 0 || 272: 5981 14487000
+  com.rovio.baba-5981  [006] ...1   203.420833: do_swap_page: id 5, table 0 || 273: 5981 14471000
+  com.rovio.baba-5981  [006] ...1   203.420841: do_swap_page: id 5, table 0 || 274: 5981 7f23291000
+  com.rovio.baba-5981  [006] ...1   203.420857: do_swap_page: id 5, table 0 || 275: 5981 14595000
+  com.rovio.baba-5981  [006] ...1   203.420865: do_swap_page: id 5, table 0 || 276: 5981 1423c000
+  com.rovio.baba-5981  [006] ...1   203.420872: do_swap_page: id 5, table 0 || 277: 5981 7f23298000
+  com.rovio.baba-5981  [006] ...1   203.420877: do_swap_page: id 5, table 0 || 278: 5981 7f23297000
+  com.rovio.baba-5981  [006] ...1   203.420888: do_swap_page: id 5, table 0 || 279: 5981 1431f000
+  com.rovio.baba-5981  [006] ...1   203.420894: do_swap_page: id 5, table 0 || 280: 5981 14326000
+  com.rovio.baba-5981  [006] ...1   203.420904: do_swap_page: id 5, table 0 || 281: 5981 7f20d4c000
+  com.rovio.baba-5981  [006] ...1   203.420912: do_swap_page: id 5, table 0 || 282: 5981 142d3000
+  com.rovio.baba-5981  [006] ...1   203.420921: do_swap_page: id 5, table 0 || 283: 5981 7d6d8af000
+  com.rovio.baba-5981  [006] ...1   203.420927: do_swap_page: id 5, table 0 || 284: 5981 14314000
+  com.rovio.baba-5981  [006] ...1   203.420935: do_swap_page: id 5, table 0 || 285: 5981 14305000
+  com.rovio.baba-5981  [006] ...1   203.420940: do_swap_page: id 5, table 0 || 286: 5981 14306000
+  com.rovio.baba-5981  [006] ...1   203.420950: do_swap_page: id 5, table 0 || 287: 5981 14313000
+  com.rovio.baba-5981  [006] ...1   203.420956: do_swap_page: id 5, table 0 || 288: 5981 14329000
+  com.rovio.baba-5981  [006] ...1   203.420962: do_swap_page: id 5, table 0 || 289: 5981 7f20d51000
+  com.rovio.baba-5981  [006] ...1   203.420970: do_swap_page: id 5, table 0 || 290: 5981 143aa000
+  com.rovio.baba-5981  [006] ...1   203.420976: do_swap_page: id 5, table 0 || 291: 5981 14340000
+  com.rovio.baba-5981  [006] ...1   203.420990: do_swap_page: id 5, table 0 || 292: 5981 7f1f6da000
+  com.rovio.baba-5981  [006] ...1   203.421000: do_swap_page: id 5, table 0 || 293: 5981 7fbbd81000
+  com.rovio.baba-5981  [006] ...1   203.421024: do_swap_page: id 5, table 0 || 294: 5981 7ec18d1000
+  com.rovio.baba-5981  [006] ...1   203.421032: do_swap_page: id 5, table 0 || 295: 5981 7fbbd92000
+  com.rovio.baba-5981  [006] ...1   203.421042: do_swap_page: id 5, table 0 || 296: 5981 71289000
+  com.rovio.baba-5981  [006] ...1   203.421074: do_swap_page: id 5, table 0 || 297: 5981 14233000
+  com.rovio.baba-5981  [006] ...1   203.421081: do_swap_page: id 5, table 0 || 298: 5981 1459e000
+  com.rovio.baba-5981  [006] ...1   203.421096: do_swap_page: id 5, table 0 || 299: 5981 7fbbd96000
+  com.rovio.baba-5981  [006] ...1   203.421105: do_swap_page: id 5, table 0 || 300: 5981 14253000
+  com.rovio.baba-5981  [006] ...1   203.421117: do_swap_page: id 5, table 0 || 301: 5981 1450b000
+  com.rovio.baba-5981  [006] ...1   203.421122: do_swap_page: id 5, table 0 || 302: 5981 7fbbd97000
+  com.rovio.baba-5981  [006] ...1   203.421129: do_swap_page: id 5, table 0 || 303: 5981 7128a000
+  com.rovio.baba-5981  [006] ...1   203.421136: do_swap_page: id 5, table 0 || 304: 5981 7fbbd8e000
+  com.rovio.baba-5981  [006] ...1   203.421145: do_swap_page: id 5, table 0 || 305: 5981 14268000
+  com.rovio.baba-5981  [006] ...1   203.421151: do_swap_page: id 5, table 0 || 306: 5981 14506000
+  com.rovio.baba-5981  [006] ...1   203.421157: do_swap_page: id 5, table 0 || 307: 5981 7fbbd94000
+  com.rovio.baba-5981  [006] ...1   203.421165: do_swap_page: id 5, table 0 || 308: 5981 7fbbd82000
+  com.rovio.baba-5981  [006] ...1   203.421283: do_swap_page: id 5, table 0 || 309: 5981 142d6000
+  com.rovio.baba-5981  [006] ...1   203.421355: do_swap_page: id 5, table 0 || 310: 5981 14414000
+  com.rovio.baba-5981  [006] ...1   203.421365: do_swap_page: id 5, table 0 || 311: 5981 1420a000
+  com.rovio.baba-5981  [006] ...1   203.421379: do_swap_page: id 5, table 0 || 312: 5981 7fbe28b000
+  com.rovio.baba-5981  [006] ...1   203.421398: do_swap_page: id 5, table 0 || 313: 5981 7fbf5e3000
+  com.rovio.baba-5981  [006] ...1   203.421407: do_swap_page: id 5, table 0 || 314: 5981 7fba435000
+  com.rovio.baba-5981  [006] ...1   203.421415: do_swap_page: id 5, table 0 || 315: 5981 7f2890d000
+  com.rovio.baba-5981  [006] ...1   203.421424: do_swap_page: id 5, table 0 || 316: 5981 7fbe191000
+  com.rovio.baba-5981  [006] ...1   203.421430: do_swap_page: id 5, table 0 || 317: 5981 7f28a33000
+  com.rovio.baba-5981  [006] ...1   203.421496: do_swap_page: id 5, table 0 || 318: 5981 14470000
+  com.rovio.baba-5981  [006] ...1   203.421503: do_swap_page: id 5, table 0 || 319: 5981 1428e000
+  com.rovio.baba-5981  [006] ...1   203.421509: do_swap_page: id 5, table 0 || 320: 5981 144ba000
+  com.rovio.baba-5981  [006] ...1   203.421517: do_swap_page: id 5, table 0 || 321: 5981 7fbbd8f000
+  com.rovio.baba-5981  [006] ...1   203.421524: do_swap_page: id 5, table 0 || 322: 5981 144d0000
+  com.rovio.baba-5981  [006] ...1   203.421530: do_swap_page: id 5, table 0 || 323: 5981 1427b000
+  com.rovio.baba-5981  [006] ...1   203.421537: do_swap_page: id 5, table 0 || 324: 5981 7fbbd93000
+  com.rovio.baba-5981  [006] ...1   203.421543: do_swap_page: id 5, table 0 || 325: 5981 7fbbd95000
+  com.rovio.baba-5981  [006] ...1   203.421549: do_swap_page: id 5, table 0 || 326: 5981 145d8000
+  com.rovio.baba-5981  [006] ...1   203.421561: do_swap_page: id 5, table 0 || 327: 5981 145e5000
+  com.rovio.baba-5981  [006] ...1   203.421568: do_swap_page: id 5, table 0 || 328: 5981 7f2d8c4000
+  com.rovio.baba-5981  [006] ...1   203.421574: do_swap_page: id 5, table 0 || 329: 5981 14279000
+  com.rovio.baba-5981  [006] ...1   203.421580: do_swap_page: id 5, table 0 || 330: 5981 144d5000
+  com.rovio.baba-5981  [006] ...1   203.421586: do_swap_page: id 5, table 0 || 331: 5981 7f2d8cc000
+  com.rovio.baba-5981  [006] ...1   203.421593: do_swap_page: id 5, table 0 || 332: 5981 14522000
+  com.rovio.baba-5981  [006] ...1   203.421599: do_swap_page: id 5, table 0 || 333: 5981 14546000
+  com.rovio.baba-5981  [006] ...1   203.421607: do_swap_page: id 5, table 0 || 334: 5981 7f2134f000
+  com.rovio.baba-5981  [006] ...1   203.421612: do_swap_page: id 5, table 0 || 335: 5981 7f21358000
+  com.rovio.baba-5981  [006] ...1   203.421617: do_swap_page: id 5, table 0 || 336: 5981 7f21366000
+  com.rovio.baba-5981  [006] ...1   203.421623: do_swap_page: id 5, table 0 || 337: 5981 14289000
+  com.rovio.baba-5981  [006] ...1   203.421630: do_swap_page: id 5, table 0 || 338: 5981 144bd000
+  com.rovio.baba-5981  [006] ...1   203.421637: do_swap_page: id 5, table 0 || 339: 5981 7f2328b000
+  com.rovio.baba-5981  [006] ...1   203.421649: do_swap_page: id 5, table 0 || 340: 5981 14286000
+  com.rovio.baba-5981  [006] ...1   203.421654: do_swap_page: id 5, table 0 || 341: 5981 144be000
+  com.rovio.baba-5981  [006] ...1   203.421663: do_swap_page: id 5, table 0 || 342: 5981 7f1f6cd000
+  com.rovio.baba-5981  [006] ...1   203.421672: do_swap_page: id 5, table 0 || 343: 5981 7f28eb5000
+  com.rovio.baba-5981  [006] ...1   203.421680: do_swap_page: id 5, table 0 || 344: 5981 14379000
+  com.rovio.baba-5981  [006] ...1   203.421687: do_swap_page: id 5, table 0 || 345: 5981 1433f000
+  com.rovio.baba-5981  [006] ...1   203.421693: do_swap_page: id 5, table 0 || 346: 5981 143ac000
+  com.rovio.baba-5981  [006] ...1   203.421700: do_swap_page: id 5, table 0 || 347: 5981 7ed6584000
+  com.rovio.baba-5981  [006] ...1   203.421710: do_swap_page: id 5, table 0 || 348: 5981 7dd0008000
+  com.rovio.baba-5981  [006] ...1   203.421725: do_swap_page: id 5, table 0 || 349: 5981 144b4000
+  com.rovio.baba-5981  [006] ...1   203.421731: do_swap_page: id 5, table 0 || 350: 5981 14292000
+  com.rovio.baba-5981  [006] ...1   203.421741: do_swap_page: id 5, table 0 || 351: 5981 7ec03ec000
+  com.rovio.baba-5981  [006] ...1   203.421749: do_swap_page: id 5, table 0 || 352: 5981 7ec03eb000
+  com.rovio.baba-5981  [006] ...1   203.421780: do_swap_page: id 5, table 0 || 353: 5981 145f3000
+           <...>-6000  [004] ...1   203.422323: do_swap_page: id 5, table 0 || 354: 5981 7fbe1d3000
+           <...>-6000  [004] ...1   203.422351: do_swap_page: id 5, table 0 || 355: 5981 7f2d499000
+       UnityMain-6037  [007] ...1   203.422454: do_swap_page: id 5, table 0 || 356: 5981 7ec9e9d000
+       UnityMain-6037  [007] ...1   203.422482: do_swap_page: id 5, table 0 || 357: 5981 7ec9e9f000
+       UnityMain-6037  [007] ...1   203.422497: do_swap_page: id 5, table 0 || 358: 5981 7ec9e9e000
+       UnityMain-6037  [007] ...1   203.422510: do_swap_page: id 5, table 0 || 359: 5981 7f28c1d000
+       UnityMain-6037  [007] ...1   203.422524: do_swap_page: id 5, table 0 || 360: 5981 7f28c36000
+       UnityMain-6037  [007] ...1   203.422539: do_swap_page: id 5, table 0 || 361: 5981 7ec9e9c000
+       UnityMain-6037  [007] ...1   203.422562: do_swap_page: id 5, table 0 || 362: 5981 1464d000
+       UnityMain-6037  [007] ...1   203.422579: do_swap_page: id 5, table 0 || 363: 5981 7f310a0000
+       UnityMain-6037  [007] ...1   203.422622: do_swap_page: id 5, table 0 || 364: 5981 7f28b41000
+       UnityMain-6037  [007] ...1   203.422636: do_swap_page: id 5, table 0 || 365: 5981 7f28b43000
+       UnityMain-6037  [007] ...1   203.422655: do_swap_page: id 5, table 0 || 366: 5981 7d5d1b0000
+       UnityMain-6037  [007] ...1   203.422674: do_swap_page: id 5, table 0 || 367: 5981 7ec9e9b000
+       UnityMain-6037  [007] ...1   203.422709: do_swap_page: id 5, table 0 || 368: 5981 7e500b9000
+       UnityMain-6037  [007] ...1   203.422730: do_swap_page: id 5, table 0 || 369: 5981 7ebcf14000
+       UnityMain-6037  [007] ...1   203.422751: do_swap_page: id 5, table 0 || 370: 5981 7df022b000
+       UnityMain-6037  [007] ...1   203.422763: do_swap_page: id 5, table 0 || 371: 5981 7f2d517000
+       UnityMain-6037  [007] ...1   203.422777: do_swap_page: id 5, table 0 || 372: 5981 7e3384c000
+       UnityMain-6037  [007] ...1   203.422793: do_swap_page: id 5, table 0 || 373: 5981 7e3212e000
+       UnityMain-6037  [007] ...1   203.422810: do_swap_page: id 5, table 0 || 374: 5981 7e33417000
+       UnityMain-6037  [007] ...1   203.422820: do_swap_page: id 5, table 0 || 375: 5981 7e33fff000
+       UnityMain-6037  [007] ...1   203.422836: do_swap_page: id 5, table 0 || 376: 5981 7e30000000
+       UnityMain-6037  [007] ...1   203.422853: do_swap_page: id 5, table 0 || 377: 5981 7ebced6000
+       UnityMain-6037  [007] ...1   203.422887: do_swap_page: id 5, table 0 || 378: 5981 7ed7441000
+           <...>-6000  [005] ...1   203.424852: do_swap_page: id 5, table 0 || 379: 5981 1445c000
+           <...>-6000  [005] ...1   203.424874: do_swap_page: id 5, table 0 || 380: 5981 7f2deae000
+           <...>-6000  [004] ...1   203.426273: do_swap_page: id 5, table 0 || 381: 5981 7fbe307000
+           <...>-6000  [004] ...1   203.428574: do_swap_page: id 5, table 0 || 382: 5981 7dd382b000
+       UnityMain-6037  [007] ...1   203.428658: do_swap_page: id 5, table 0 || 383: 5981 7f23288000
+       UnityMain-6037  [007] ...1   203.428689: do_swap_page: id 5, table 0 || 384: 5981 7e3170e000
+       UnityMain-6037  [007] ...1   203.428722: do_swap_page: id 5, table 0 || 385: 5981 7ebced0000
+  com.rovio.baba-5981  [005] ...1   203.439935: do_swap_page: id 5, table 0 || 386: 5981 7f2d8c7000
+  com.rovio.baba-5981  [005] ...1   203.439961: do_swap_page: id 5, table 0 || 387: 5981 9d192000
+  com.rovio.baba-5981  [005] ...1   203.439970: do_swap_page: id 5, table 0 || 388: 5981 9d190000
+  com.rovio.baba-5981  [005] ...1   203.440034: do_swap_page: id 5, table 0 || 389: 5981 9d195000
+  com.rovio.baba-5981  [005] ...1   203.440044: do_swap_page: id 5, table 0 || 390: 5981 14474000
+  com.rovio.baba-5981  [005] ...1   203.440056: do_swap_page: id 5, table 0 || 391: 5981 7fffff9000
+  com.rovio.baba-5981  [005] ...1   203.440065: do_swap_page: id 5, table 0 || 392: 5981 9d194000
+  com.rovio.baba-5981  [005] ...1   203.440078: do_swap_page: id 5, table 0 || 393: 5981 9d193000
+  com.rovio.baba-5981  [005] ...1   203.440089: do_swap_page: id 5, table 0 || 394: 5981 1428d000
+  com.rovio.baba-5981  [005] ...1   203.440108: do_swap_page: id 5, table 0 || 395: 5981 9d191000
+  com.rovio.baba-5981  [005] ...1   203.440119: do_swap_page: id 5, table 0 || 396: 5981 7ec03ed000
+  com.rovio.baba-5981  [005] ...1   203.440136: do_swap_page: id 5, table 0 || 397: 5981 7f29c1c000
+  com.rovio.baba-5981  [005] ...1   203.440146: do_swap_page: id 5, table 0 || 398: 5981 1426e000
+  com.rovio.baba-5981  [005] ...1   203.440153: do_swap_page: id 5, table 0 || 399: 5981 1426d000
+  com.rovio.baba-5981  [005] ...1   203.440171: do_swap_page: id 5, table 0 || 400: 5981 7fbbda0000
+  com.rovio.baba-5981  [005] ...1   203.440178: do_swap_page: id 5, table 0 || 401: 5981 1424a000
+  com.rovio.baba-5981  [005] ...1   203.440187: do_swap_page: id 5, table 0 || 402: 5981 7f2d8c8000
+  com.rovio.baba-5981  [005] ...1   203.440195: do_swap_page: id 5, table 0 || 403: 5981 14255000
+  com.rovio.baba-5981  [005] ...1   203.440201: do_swap_page: id 5, table 0 || 404: 5981 7fbbd9b000
+  com.rovio.baba-5981  [005] ...1   203.440208: do_swap_page: id 5, table 0 || 405: 5981 14236000
+  com.rovio.baba-5981  [005] ...1   203.440224: do_swap_page: id 5, table 0 || 406: 5981 7d49ee3000
+  com.rovio.baba-5981  [005] ...1   203.440232: do_swap_page: id 5, table 0 || 407: 5981 142c4000
+  com.rovio.baba-5981  [005] ...1   203.440241: do_swap_page: id 5, table 0 || 408: 5981 14509000
+  com.rovio.baba-5981  [005] ...1   203.440265: do_swap_page: id 5, table 0 || 409: 5981 14515000
+  com.rovio.baba-5981  [005] ...1   203.440274: do_swap_page: id 5, table 0 || 410: 5981 7f2d49f000
+  com.rovio.baba-5981  [005] ...1   203.440286: do_swap_page: id 5, table 0 || 411: 5981 7f2350f000
+  com.rovio.baba-5981  [005] ...1   203.440293: do_swap_page: id 5, table 0 || 412: 5981 14516000
+  com.rovio.baba-5981  [005] ...1   203.440299: do_swap_page: id 5, table 0 || 413: 5981 7f2350a000
+  com.rovio.baba-5981  [005] ...1   203.440308: do_swap_page: id 5, table 0 || 414: 5981 7f23508000
+  com.rovio.baba-5981  [005] ...1   203.440341: do_swap_page: id 5, table 0 || 415: 5981 7eb5e52000
+  com.rovio.baba-5981  [005] ...1   203.440362: do_swap_page: id 5, table 0 || 416: 5981 145ba000
+  com.rovio.baba-5981  [005] ...1   203.440369: do_swap_page: id 5, table 0 || 417: 5981 145f2000
+  com.rovio.baba-5981  [005] ...1   203.440384: do_swap_page: id 5, table 0 || 418: 5981 7fbe1af000
+  com.rovio.baba-5981  [005] ...1   203.440393: do_swap_page: id 5, table 0 || 419: 5981 7f317c6000
+  com.rovio.baba-5981  [005] ...1   203.440424: do_swap_page: id 5, table 0 || 420: 5981 7f21264000
+  com.rovio.baba-5981  [005] ...1   203.440436: do_swap_page: id 5, table 0 || 421: 5981 7fbe243000
+  com.rovio.baba-5981  [005] ...1   203.440447: do_swap_page: id 5, table 0 || 422: 5981 7f28cb3000
+  com.rovio.baba-5981  [005] ...1   203.440481: do_swap_page: id 5, table 0 || 423: 5981 14250000
+  com.rovio.baba-5981  [005] ...1   203.440494: do_swap_page: id 5, table 0 || 424: 5981 14287000
+  com.rovio.baba-5981  [005] ...1   203.440500: do_swap_page: id 5, table 0 || 425: 5981 7f21263000
+  com.rovio.baba-5981  [005] ...1   203.440506: do_swap_page: id 5, table 0 || 426: 5981 9d196000
+  com.rovio.baba-5981  [005] ...1   203.440535: do_swap_page: id 5, table 0 || 427: 5981 9d197000
+  com.rovio.baba-5981  [005] ...1   203.440552: do_swap_page: id 5, table 0 || 428: 5981 7d49ee4000
+  com.rovio.baba-5981  [005] ...1   203.440560: do_swap_page: id 5, table 0 || 429: 5981 1421f000
+  com.rovio.baba-5981  [005] ...1   203.440568: do_swap_page: id 5, table 0 || 430: 5981 142c6000
+  com.rovio.baba-5981  [005] ...1   203.440608: do_swap_page: id 5, table 0 || 431: 5981 7eb5f93000
+  com.rovio.baba-5981  [005] ...1   203.440615: do_swap_page: id 5, table 0 || 432: 5981 7eb5f94000
+  com.rovio.baba-5981  [005] ...1   203.440619: do_swap_page: id 5, table 0 || 433: 5981 7eb5f95000
+  com.rovio.baba-5981  [004] ...1   203.440727: do_swap_page: id 5, table 0 || 434: 5981 7f28eb4000
+  com.rovio.baba-5981  [004] ...1   203.440796: do_swap_page: id 5, table 0 || 435: 5981 7ed656b000
+  com.rovio.baba-5981  [004] ...1   203.440813: do_swap_page: id 5, table 0 || 436: 5981 7ed656c000
+  com.rovio.baba-5981  [004] ...1   203.440823: do_swap_page: id 5, table 0 || 437: 5981 142c0000
+           <...>-7001  [005] ...1   203.440825: do_swap_page: id 5, table 0 || 438: 5981 7fbe303000
+  com.rovio.baba-5981  [004] ...1   203.440837: do_swap_page: id 5, table 0 || 439: 5981 144b5000
+  com.rovio.baba-5981  [004] ...1   203.440850: do_swap_page: id 5, table 0 || 440: 5981 14276000
+  com.rovio.baba-5981  [004] ...1   203.440866: do_swap_page: id 5, table 0 || 441: 5981 9d199000
+  com.rovio.baba-5981  [004] ...1   203.440874: do_swap_page: id 5, table 0 || 442: 5981 145c9000
+           <...>-7001  [005] ...1   203.440883: do_swap_page: id 5, table 0 || 443: 5981 9d19b000
+           <...>-7001  [005] ...1   203.440910: do_swap_page: id 5, table 0 || 444: 5981 7f2d8dd000
+           <...>-7001  [005] ...1   203.440926: do_swap_page: id 5, table 0 || 445: 5981 71138000
+           <...>-7001  [005] ...1   203.440935: do_swap_page: id 5, table 0 || 446: 5981 14300000
+           <...>-7001  [005] ...1   203.440949: do_swap_page: id 5, table 0 || 447: 5981 7eb5e54000
+           <...>-7001  [005] ...1   203.440959: do_swap_page: id 5, table 0 || 448: 5981 7f1f6cf000
+           <...>-7001  [005] ...1   203.440969: do_swap_page: id 5, table 0 || 449: 5981 7f1f6d0000
+           <...>-7001  [005] ...1   203.440989: do_swap_page: id 5, table 0 || 450: 5981 12c00000
+           <...>-7001  [005] ...1   203.441005: do_swap_page: id 5, table 0 || 451: 5981 142a9000
+           <...>-7001  [005] ...1   203.441014: do_swap_page: id 5, table 0 || 452: 5981 7fbe291000
+  com.rovio.baba-5981  [006] ...1   203.441054: do_swap_page: id 5, table 0 || 453: 5981 7fbe242000
+  com.rovio.baba-5981  [006] ...1   203.441066: do_swap_page: id 5, table 0 || 454: 5981 7f28cc4000
+           <...>-7001  [005] ...1   203.441090: do_swap_page: id 5, table 0 || 455: 5981 7f28a40000
+           <...>-7001  [005] ...1   203.441107: do_swap_page: id 5, table 0 || 456: 5981 7fbc02b000
+           <...>-7001  [005] ...1   203.441122: do_swap_page: id 5, table 0 || 457: 5981 7f39867000
+           <...>-7001  [005] ...1   203.441138: do_swap_page: id 5, table 0 || 458: 5981 7f1f6d1000
+  com.rovio.baba-5981  [006] ...1   203.441147: do_swap_page: id 5, table 0 || 459: 5981 7ec0407000
+           <...>-7001  [005] ...1   203.441156: do_swap_page: id 5, table 0 || 460: 5981 7fbb364000
+  com.rovio.baba-5981  [006] ...1   203.441165: do_swap_page: id 5, table 0 || 461: 5981 14269000
+           <...>-7001  [005] ...1   203.441173: do_swap_page: id 5, table 0 || 462: 5981 7ec5219000
+           <...>-7001  [005] ...1   203.441183: do_swap_page: id 5, table 0 || 463: 5981 14437000
+           <...>-7001  [005] ...1   203.441190: do_swap_page: id 5, table 0 || 464: 5981 7ec5218000
+           <...>-7001  [005] ...1   203.441197: do_swap_page: id 5, table 0 || 465: 5981 142db000
+  com.rovio.baba-5981  [006] ...1   203.441208: do_swap_page: id 5, table 0 || 466: 5981 70f00000
+           <...>-7001  [005] ...1   203.441226: do_swap_page: id 5, table 0 || 467: 5981 7f28bbf000
+  com.rovio.baba-5981  [006] ...1   203.441233: do_swap_page: id 5, table 0 || 468: 5981 7fbf6fb000
+           <...>-7001  [005] ...1   203.441241: do_swap_page: id 5, table 0 || 469: 5981 701a3000
+  com.rovio.baba-5981  [006] ...1   203.441245: do_swap_page: id 5, table 0 || 470: 5981 14479000
+           <...>-7001  [005] ...1   203.441247: do_swap_page: id 5, table 0 || 471: 5981 7112b000
+           <...>-7001  [005] ...1   203.441258: do_swap_page: id 5, table 0 || 472: 5981 142df000
+           <...>-7001  [005] ...1   203.441276: do_swap_page: id 5, table 0 || 473: 5981 7ec521a000
+           <...>-7001  [005] ...1   203.441292: do_swap_page: id 5, table 0 || 474: 5981 7ec5210000
+           <...>-7001  [005] ...1   203.441308: do_swap_page: id 5, table 0 || 475: 5981 7ec5217000
+           <...>-7001  [005] ...1   203.441316: do_swap_page: id 5, table 0 || 476: 5981 7ec521b000
+           <...>-7001  [005] ...1   203.441322: do_swap_page: id 5, table 0 || 477: 5981 142e8000
+           <...>-7001  [005] ...1   203.441333: do_swap_page: id 5, table 0 || 478: 5981 142e7000
+           <...>-7001  [005] ...1   203.441340: do_swap_page: id 5, table 0 || 479: 5981 7ec5215000
+           <...>-7001  [005] ...1   203.441351: do_swap_page: id 5, table 0 || 480: 5981 7ec521c000
+  com.rovio.baba-5981  [006] ...1   203.441361: do_swap_page: id 5, table 0 || 481: 5981 7fbe1f2000
+           <...>-7001  [005] ...1   203.441364: do_swap_page: id 5, table 0 || 482: 5981 142e9000
+           <...>-7001  [005] ...1   203.441370: do_swap_page: id 5, table 0 || 483: 5981 7ec521e000
+           <...>-7001  [005] ...1   203.441399: do_swap_page: id 5, table 0 || 484: 5981 9d18b000
+  com.rovio.baba-5981  [006] ...1   203.441439: do_swap_page: id 5, table 0 || 485: 5981 7f2d8c9000
+  com.rovio.baba-5981  [006] ...1   203.441451: do_swap_page: id 5, table 0 || 486: 5981 7f2d8cb000
+  com.rovio.baba-5981  [006] ...1   203.441460: do_swap_page: id 5, table 0 || 487: 5981 14278000
+  com.rovio.baba-5981  [006] ...1   203.441468: do_swap_page: id 5, table 0 || 488: 5981 7f2327f000
+       UnityMain-6037  [004] ...1   203.441512: do_swap_page: id 5, table 0 || 489: 5981 144d6000
+  com.rovio.baba-5981  [006] ...1   203.441512: do_swap_page: id 5, table 0 || 490: 5981 7f2d8d8000
+       UnityMain-6037  [004] ...1   203.441526: do_swap_page: id 5, table 0 || 491: 5981 7ea0001000
+  com.rovio.baba-5981  [006] ...1   203.441546: do_swap_page: id 5, table 0 || 492: 5981 9d19f000
+  com.rovio.baba-5981  [006] ...1   203.441591: do_swap_page: id 5, table 0 || 493: 5981 7d49ed9000
+  com.rovio.baba-5981  [006] ...1   203.441598: do_swap_page: id 5, table 0 || 494: 5981 142a8000
+  com.rovio.baba-5981  [006] ...1   203.441616: do_swap_page: id 5, table 0 || 495: 5981 1450e000
+  com.rovio.baba-5981  [006] ...1   203.441626: do_swap_page: id 5, table 0 || 496: 5981 9d18c000
+  com.rovio.baba-5981  [006] ...1   203.441634: do_swap_page: id 5, table 0 || 497: 5981 7fbbd9f000
+  com.rovio.baba-5981  [006] ...1   203.441640: do_swap_page: id 5, table 0 || 498: 5981 145c8000
+  com.rovio.baba-5981  [006] ...1   203.441652: do_swap_page: id 5, table 0 || 499: 5981 14259000
+  com.rovio.baba-5981  [006] ...1   203.441669: do_swap_page: id 5, table 0 || 500: 5981 14247000
+  com.rovio.baba-5981  [006] ...1   203.441686: do_swap_page: id 5, table 0 || 501: 5981 14512000
+  com.rovio.baba-5981  [006] ...1   203.441704: do_swap_page: id 5, table 0 || 502: 5981 7f2d8cd000
+  com.rovio.baba-5981  [006] ...1   203.441710: do_swap_page: id 5, table 0 || 503: 5981 145d9000
+  com.rovio.baba-5981  [006] ...1   203.441719: do_swap_page: id 5, table 0 || 504: 5981 7fbbd41000
+  com.rovio.baba-5981  [006] ...1   203.441725: do_swap_page: id 5, table 0 || 505: 5981 14508000
+  com.rovio.baba-5981  [006] ...1   203.441735: do_swap_page: id 5, table 0 || 506: 5981 7fbbd3c000
+  com.rovio.baba-5981  [006] ...1   203.441742: do_swap_page: id 5, table 0 || 507: 5981 14258000
+  com.rovio.baba-5981  [006] ...1   203.441747: do_swap_page: id 5, table 0 || 508: 5981 7fbbd3d000
+  com.rovio.baba-5981  [006] ...1   203.441753: do_swap_page: id 5, table 0 || 509: 5981 7fbbd3e000
+  com.rovio.baba-5981  [006] ...1   203.441758: do_swap_page: id 5, table 0 || 510: 5981 7fbbd3f000
+  com.rovio.baba-5981  [006] ...1   203.441764: do_swap_page: id 5, table 0 || 511: 5981 7fbbd40000
+  com.rovio.baba-5981  [006] ...1   203.441774: do_swap_page: id 5, table 0 || 512: 5981 1422c000
+  com.rovio.baba-5981  [006] ...1   203.441785: do_swap_page: id 5, table 0 || 513: 5981 14254000
+  com.rovio.baba-5981  [006] ...1   203.441792: do_swap_page: id 5, table 0 || 514: 5981 7fbbd22000
+  com.rovio.baba-5981  [006] ...1   203.441802: do_swap_page: id 5, table 0 || 515: 5981 7f2d8ce000
+  com.rovio.baba-5981  [006] ...1   203.441813: do_swap_page: id 5, table 0 || 516: 5981 145dc000
+  com.rovio.baba-5981  [006] ...1   203.441822: do_swap_page: id 5, table 0 || 517: 5981 14246000
+  com.rovio.baba-5981  [006] ...1   203.441829: do_swap_page: id 5, table 0 || 518: 5981 7f23282000
+  com.rovio.baba-5981  [006] ...1   203.441837: do_swap_page: id 5, table 0 || 519: 5981 7f23281000
+  com.rovio.baba-5981  [006] ...1   203.441843: do_swap_page: id 5, table 0 || 520: 5981 14513000
+  com.rovio.baba-5981  [006] ...1   203.441862: do_swap_page: id 5, table 0 || 521: 5981 1424c000
+  com.rovio.baba-5981  [006] ...1   203.441869: do_swap_page: id 5, table 0 || 522: 5981 7f2d8d9000
+  com.rovio.baba-5981  [006] ...1   203.441878: do_swap_page: id 5, table 0 || 523: 5981 1450d000
+  com.rovio.baba-5981  [006] ...1   203.442268: do_swap_page: id 5, table 0 || 524: 5981 7eb6ae6000
+  com.rovio.baba-5981  [006] ...1   203.442304: do_swap_page: id 5, table 0 || 525: 5981 7d49ed8000
+  com.rovio.baba-5981  [006] ...1   203.442312: do_swap_page: id 5, table 0 || 526: 5981 142a4000
+  com.rovio.baba-5981  [006] ...1   203.442355: do_swap_page: id 5, table 0 || 527: 5981 142c7000
+  com.rovio.baba-5981  [006] ...1   203.442364: do_swap_page: id 5, table 0 || 528: 5981 142f9000
+  com.rovio.baba-5981  [006] ...1   203.442372: do_swap_page: id 5, table 0 || 529: 5981 14633000
+  com.rovio.baba-5981  [006] ...1   203.442379: do_swap_page: id 5, table 0 || 530: 5981 7112c000
+  com.rovio.baba-5981  [006] ...1   203.442387: do_swap_page: id 5, table 0 || 531: 5981 14634000
+  com.rovio.baba-5981  [006] ...1   203.442401: do_swap_page: id 5, table 0 || 532: 5981 7d49ee0000
+  com.rovio.baba-5981  [006] ...1   203.442409: do_swap_page: id 5, table 0 || 533: 5981 142ba000
+  com.rovio.baba-5981  [006] ...1   203.442420: do_swap_page: id 5, table 0 || 534: 5981 7f2d8dc000
+  com.rovio.baba-5981  [006] ...1   203.442441: do_swap_page: id 5, table 0 || 535: 5981 14636000
+  com.rovio.baba-5981  [006] ...1   203.442451: do_swap_page: id 5, table 0 || 536: 5981 14249000
+  com.rovio.baba-5981  [006] ...1   203.442479: do_swap_page: id 5, table 0 || 537: 5981 7d49edc000
+  com.rovio.baba-5981  [006] ...1   203.442486: do_swap_page: id 5, table 0 || 538: 5981 142ae000
+  com.rovio.baba-5981  [006] ...1   203.442502: do_swap_page: id 5, table 0 || 539: 5981 7fbbd23000
+  com.rovio.baba-5981  [006] ...1   203.442511: do_swap_page: id 5, table 0 || 540: 5981 1450a000
+  com.rovio.baba-5981  [006] ...1   203.442536: do_swap_page: id 5, table 0 || 541: 5981 7f2d8da000
+           <...>-5987  [000] ...1   203.442771: do_swap_page: id 5, table 0 || 542: 5981 7fbccba000
+  com.rovio.baba-5981  [006] ...1   203.442797: do_swap_page: id 5, table 0 || 543: 5981 7f23287000
+           <...>-5987  [000] ...1   203.442803: do_swap_page: id 5, table 0 || 544: 5981 7f2e8cb000
+  com.rovio.baba-5981  [006] ...1   203.442821: do_swap_page: id 5, table 0 || 545: 5981 14650000
+  com.rovio.baba-5981  [006] ...1   203.442838: do_swap_page: id 5, table 0 || 546: 5981 7f28b56000
+           <...>-6024  [004] ...1   203.442864: do_swap_page: id 5, table 0 || 547: 5981 7ec7aff000
+  com.rovio.baba-5981  [006] ...1   203.442873: do_swap_page: id 5, table 0 || 548: 5981 14538000
+           <...>-6024  [004] ...1   203.442874: do_swap_page: id 5, table 0 || 549: 5981 7ec7b00000
+  com.rovio.baba-5981  [006] ...1   203.442880: do_swap_page: id 5, table 0 || 550: 5981 7f21355000
+           <...>-6024  [004] ...1   203.442885: do_swap_page: id 5, table 0 || 551: 5981 7f28a24000
+  com.rovio.baba-5981  [006] ...1   203.442886: do_swap_page: id 5, table 0 || 552: 5981 14531000
+           <...>-5987  [000] ...1   203.442889: do_swap_page: id 5, table 0 || 553: 5981 7f2d405000
+           <...>-6024  [004] ...1   203.442893: do_swap_page: id 5, table 0 || 554: 5981 7f28a23000
+  com.rovio.baba-5981  [006] ...1   203.442896: do_swap_page: id 5, table 0 || 555: 5981 7f23511000
+           <...>-6024  [004] ...1   203.442902: do_swap_page: id 5, table 0 || 556: 5981 7ec7afd000
+  com.rovio.baba-5981  [006] ...1   203.442911: do_swap_page: id 5, table 0 || 557: 5981 14240000
+           <...>-5987  [000] ...1   203.442916: do_swap_page: id 5, table 0 || 558: 5981 7eb5e53000
+           <...>-6024  [004] ...1   203.442917: do_swap_page: id 5, table 0 || 559: 5981 7f28b57000
+  com.rovio.baba-5981  [006] ...1   203.442917: do_swap_page: id 5, table 0 || 560: 5981 14592000
+           <...>-6024  [004] ...1   203.442927: do_swap_page: id 5, table 0 || 561: 5981 7ec7afe000
+  com.rovio.baba-5981  [006] ...1   203.442928: do_swap_page: id 5, table 0 || 562: 5981 1442c000
+           <...>-6024  [004] ...1   203.442934: do_swap_page: id 5, table 0 || 563: 5981 7ec7afc000
+  com.rovio.baba-5981  [006] ...1   203.442941: do_swap_page: id 5, table 0 || 564: 5981 7d6f992000
+           <...>-6024  [004] ...1   203.442944: do_swap_page: id 5, table 0 || 565: 5981 7f2d8ca000
+  com.rovio.baba-5981  [006] ...1   203.442949: do_swap_page: id 5, table 0 || 566: 5981 7f2d49c000
+           <...>-6024  [004] ...1   203.442957: do_swap_page: id 5, table 0 || 567: 5981 142b0000
+           <...>-6024  [004] ...1   203.442963: do_swap_page: id 5, table 0 || 568: 5981 1450f000
+  com.rovio.baba-5981  [006] ...1   203.442966: do_swap_page: id 5, table 0 || 569: 5981 7f21251000
+  com.rovio.baba-5981  [006] ...1   203.442974: do_swap_page: id 5, table 0 || 570: 5981 7f21250000
+  com.rovio.baba-5981  [006] ...1   203.442981: do_swap_page: id 5, table 0 || 571: 5981 14291000
+           <...>-6024  [004] ...1   203.442982: do_swap_page: id 5, table 0 || 572: 5981 7eb5e51000
+           <...>-6024  [004] ...1   203.442989: do_swap_page: id 5, table 0 || 573: 5981 145c1000
+  com.rovio.baba-5981  [006] ...1   203.442994: do_swap_page: id 5, table 0 || 574: 5981 7fbbd87000
+  com.rovio.baba-5981  [006] ...1   203.443002: do_swap_page: id 5, table 0 || 575: 5981 7fbbd86000
+  com.rovio.baba-5981  [006] ...1   203.443016: do_swap_page: id 5, table 0 || 576: 5981 7f23299000
+  com.rovio.baba-5981  [006] ...1   203.443050: do_swap_page: id 5, table 0 || 577: 5981 7ec18d0000
+           <...>-6024  [004] ...1   203.443061: do_swap_page: id 5, table 0 || 579: 5981 7d49edd000
+  com.rovio.baba-5981  [006] ...1   203.443061: do_swap_page: id 5, table 0 || 580: 5981 7ec18cf000
+           <...>-6130  [007] ...1   203.443061: do_swap_page: id 5, table 0 || 578: 5981 7d6f479000
+           <...>-6024  [004] ...1   203.443071: do_swap_page: id 5, table 0 || 581: 5981 142b2000
+           <...>-6130  [007] ...1   203.443083: do_swap_page: id 5, table 0 || 582: 5981 7d6f47a000
+           <...>-6024  [004] ...1   203.443085: do_swap_page: id 5, table 0 || 583: 5981 142b1000
+           <...>-6130  [007] ...1   203.443093: do_swap_page: id 5, table 0 || 584: 5981 7dd3a4d000
+           <...>-6024  [004] ...1   203.443093: do_swap_page: id 5, table 0 || 585: 5981 7f2d8c1000
+           <...>-6024  [004] ...1   203.443100: do_swap_page: id 5, table 0 || 586: 5981 1424d000
+           <...>-6130  [007] ...1   203.443102: do_swap_page: id 5, table 0 || 587: 5981 7dd3b18000
+           <...>-6130  [007] ...1   203.443111: do_swap_page: id 5, table 0 || 588: 5981 7d6f477000
+           <...>-6024  [004] ...1   203.443120: do_swap_page: id 5, table 0 || 589: 5981 145c2000
+           <...>-6130  [007] ...1   203.443121: do_swap_page: id 5, table 0 || 590: 5981 7f2f07c000
+           <...>-6024  [004] ...1   203.443127: do_swap_page: id 5, table 0 || 591: 5981 145ef000
+           <...>-6130  [007] ...1   203.443131: do_swap_page: id 5, table 0 || 592: 5981 7f23296000
+           <...>-6130  [007] ...1   203.443144: do_swap_page: id 5, table 0 || 593: 5981 7dd3a4e000
+           <...>-6024  [004] ...1   203.443147: do_swap_page: id 5, table 0 || 594: 5981 71132000
+           <...>-6130  [007] ...1   203.443154: do_swap_page: id 5, table 0 || 595: 5981 7d6f478000
+           <...>-6024  [004] ...1   203.443158: do_swap_page: id 5, table 0 || 596: 5981 71130000
+           <...>-6130  [007] ...1   203.443165: do_swap_page: id 5, table 0 || 597: 5981 7d6f476000
+           <...>-6024  [004] ...1   203.443165: do_swap_page: id 5, table 0 || 598: 5981 145ac000
+           <...>-6024  [004] ...1   203.443174: do_swap_page: id 5, table 0 || 599: 5981 7f309e6000
+  com.rovio.baba-5981  [006] ...1   203.443175: do_swap_page: id 5, table 0 || 600: 5981 7f1f6e0000
+           <...>-6130  [007] ...1   203.443175: do_swap_page: id 5, table 0 || 601: 5981 7d6f995000
+  com.rovio.baba-5981  [006] ...1   203.443184: do_swap_page: id 5, table 0 || 602: 5981 145da000
+           <...>-7001  [005] ...1   203.443188: do_swap_page: id 5, table 0 || 603: 5981 7eb681a000
+  com.rovio.baba-5981  [006] ...1   203.443193: do_swap_page: id 5, table 0 || 604: 5981 9d19a000
+  com.rovio.baba-5981  [006] ...1   203.443200: do_swap_page: id 5, table 0 || 605: 5981 14295000
+  com.rovio.baba-5981  [006] ...1   203.443207: do_swap_page: id 5, table 0 || 606: 5981 7ec18ce000
+           <...>-6024  [004] ...1   203.443209: do_swap_page: id 5, table 0 || 607: 5981 7d49ee5000
+  com.rovio.baba-5981  [006] ...1   203.443213: do_swap_page: id 5, table 0 || 608: 5981 14290000
+           <...>-6024  [004] ...1   203.443216: do_swap_page: id 5, table 0 || 609: 5981 142ca000
+  com.rovio.baba-5981  [006] ...1   203.443222: do_swap_page: id 5, table 0 || 610: 5981 145e2000
+           <...>-6024  [004] ...1   203.443230: do_swap_page: id 5, table 0 || 611: 5981 142a6000
+  com.rovio.baba-5981  [006] ...1   203.443240: do_swap_page: id 5, table 0 || 612: 5981 144a9000
+           <...>-6024  [004] ...1   203.443242: do_swap_page: id 5, table 0 || 613: 5981 14245000
+  com.rovio.baba-5981  [006] ...1   203.443249: do_swap_page: id 5, table 0 || 614: 5981 142cb000
+           <...>-6024  [004] ...1   203.443253: do_swap_page: id 5, table 0 || 615: 5981 7f2d8c2000
+  com.rovio.baba-5981  [006] ...1   203.443255: do_swap_page: id 5, table 0 || 616: 5981 14262000
+           <...>-6024  [004] ...1   203.443259: do_swap_page: id 5, table 0 || 617: 5981 145db000
+           <...>-6024  [004] ...1   203.443267: do_swap_page: id 5, table 0 || 618: 5981 14232000
+           <...>-6024  [004] ...1   203.443273: do_swap_page: id 5, table 0 || 619: 5981 7f2d8c3000
+  com.rovio.baba-5981  [006] ...1   203.443274: do_swap_page: id 5, table 0 || 620: 5981 1425d000
+  com.rovio.baba-5981  [006] ...1   203.443280: do_swap_page: id 5, table 0 || 621: 5981 1425f000
+           <...>-6024  [004] ...1   203.443285: do_swap_page: id 5, table 0 || 622: 5981 14243000
+  com.rovio.baba-5981  [006] ...1   203.443288: do_swap_page: id 5, table 0 || 623: 5981 7f1f6df000
+           <...>-7001  [005] ...1   203.443292: do_swap_page: id 5, table 0 || 624: 5981 142eb000
+           <...>-6024  [004] ...1   203.443294: do_swap_page: id 5, table 0 || 625: 5981 7fbbd9c000
+  com.rovio.baba-5981  [006] ...1   203.443298: do_swap_page: id 5, table 0 || 626: 5981 145cd000
+           <...>-5987  [000] ...1   203.443302: do_swap_page: id 5, table 0 || 627: 5981 7fbbd91000
+           <...>-6024  [004] ...1   203.443305: do_swap_page: id 5, table 0 || 628: 5981 14514000
+           <...>-7001  [005] ...1   203.443308: do_swap_page: id 5, table 0 || 629: 5981 14433000
+  com.rovio.baba-5981  [006] ...1   203.443342: do_swap_page: id 5, table 0 || 630: 5981 7ed6579000
+           <...>-6024  [004] ...1   203.443342: do_swap_page: id 5, table 0 || 631: 5981 7d49ee2000
+           <...>-7001  [005] ...1   203.443351: do_swap_page: id 5, table 0 || 632: 5981 7ec1a87000
+           <...>-6024  [004] ...1   203.443352: do_swap_page: id 5, table 0 || 633: 5981 142bf000
+           <...>-6024  [004] ...1   203.443360: do_swap_page: id 5, table 0 || 634: 5981 145d5000
+           <...>-5987  [000] ...1   203.443364: do_swap_page: id 5, table 0 || 635: 5981 7ed73c5000
+  com.rovio.baba-5981  [006] ...1   203.443364: do_swap_page: id 5, table 0 || 636: 5981 14360000
+           <...>-6024  [004] ...1   203.443371: do_swap_page: id 5, table 0 || 637: 5981 145e6000
+  com.rovio.baba-5981  [006] ...1   203.443372: do_swap_page: id 5, table 0 || 638: 5981 14366000
+  com.rovio.baba-5981  [006] ...1   203.443378: do_swap_page: id 5, table 0 || 639: 5981 7ed6585000
+  com.rovio.baba-5981  [006] ...1   203.443386: do_swap_page: id 5, table 0 || 640: 5981 7ed6576000
+  com.rovio.baba-5981  [006] ...1   203.443392: do_swap_page: id 5, table 0 || 641: 5981 1435c000
+           <...>-6024  [004] ...1   203.443400: do_swap_page: id 5, table 0 || 642: 5981 7d49ede000
+  com.rovio.baba-5981  [006] ...1   203.443400: do_swap_page: id 5, table 0 || 643: 5981 7ed6570000
+  com.rovio.baba-5981  [006] ...1   203.443407: do_swap_page: id 5, table 0 || 644: 5981 14367000
+           <...>-6024  [004] ...1   203.443408: do_swap_page: id 5, table 0 || 645: 5981 142b6000
+           <...>-5987  [000] ...1   203.443411: do_swap_page: id 5, table 0 || 646: 5981 7f2e8ca000
+           <...>-7001  [005] ...1   203.443411: do_swap_page: id 5, table 0 || 647: 5981 7ec5223000
+  com.rovio.baba-5981  [006] ...1   203.443414: do_swap_page: id 5, table 0 || 648: 5981 7ed6578000
+  com.rovio.baba-5981  [006] ...1   203.443420: do_swap_page: id 5, table 0 || 649: 5981 14375000
+  com.rovio.baba-5981  [006] ...1   203.443429: do_swap_page: id 5, table 0 || 650: 5981 7ed6565000
+  com.rovio.baba-5981  [006] ...1   203.443437: do_swap_page: id 5, table 0 || 651: 5981 7ed654c000
+  com.rovio.baba-5981  [006] ...1   203.443443: do_swap_page: id 5, table 0 || 652: 5981 14345000
+  com.rovio.baba-5981  [006] ...1   203.443452: do_swap_page: id 5, table 0 || 653: 5981 7ed656f000
+           <...>-7001  [005] ...1   203.443454: do_swap_page: id 5, table 0 || 654: 5981 7d6f78d000
+  com.rovio.baba-5981  [006] ...1   203.443461: do_swap_page: id 5, table 0 || 655: 5981 14347000
+  com.rovio.baba-5981  [006] ...1   203.443467: do_swap_page: id 5, table 0 || 656: 5981 143a1000
+           <...>-5987  [000] ...1   203.443469: do_swap_page: id 5, table 0 || 657: 5981 7ed6df4000
+  com.rovio.baba-5981  [006] ...1   203.443472: do_swap_page: id 5, table 0 || 658: 5981 143a4000
+  com.rovio.baba-5981  [006] ...1   203.443481: do_swap_page: id 5, table 0 || 659: 5981 7ed657d000
+  com.rovio.baba-5981  [006] ...1   203.443487: do_swap_page: id 5, table 0 || 660: 5981 7ed657e000
+  com.rovio.baba-5981  [006] ...1   203.443494: do_swap_page: id 5, table 0 || 661: 5981 7ed657f000
+  com.rovio.baba-5981  [006] ...1   203.443501: do_swap_page: id 5, table 0 || 662: 5981 14385000
+           <...>-7001  [005] ...1   203.443502: do_swap_page: id 5, table 0 || 663: 5981 71122000
+           <...>-7001  [005] ...1   203.443525: do_swap_page: id 5, table 0 || 664: 5981 142bb000
+           <...>-5987  [000] ...1   203.443533: do_swap_page: id 5, table 0 || 665: 5981 7f2e8c9000
+  com.rovio.baba-5981  [006] ...1   203.443545: do_swap_page: id 5, table 0 || 666: 5981 1429e000
+  com.rovio.baba-5981  [006] ...1   203.443551: do_swap_page: id 5, table 0 || 667: 5981 14386000
+           <...>-6024  [007] ...1   203.443555: do_swap_page: id 5, table 0 || 668: 5981 7d49eda000
+           <...>-7001  [005] ...1   203.443557: do_swap_page: id 5, table 0 || 669: 5981 71295000
+  com.rovio.baba-5981  [006] ...1   203.443560: do_swap_page: id 5, table 0 || 670: 5981 14348000
+           <...>-6024  [007] ...1   203.443564: do_swap_page: id 5, table 0 || 671: 5981 142aa000
+           <...>-6024  [007] ...1   203.443581: do_swap_page: id 5, table 0 || 672: 5981 7d49edb000
+           <...>-6024  [007] ...1   203.443587: do_swap_page: id 5, table 0 || 673: 5981 142ab000
+           <...>-5987  [000] ...1   203.443596: do_swap_page: id 5, table 0 || 674: 5981 7f2e8c8000
+  com.rovio.baba-5981  [006] ...1   203.443597: do_swap_page: id 5, table 0 || 675: 5981 14391000
+           <...>-7001  [005] ...1   203.443598: do_swap_page: id 5, table 0 || 676: 5981 7fbe1a5000
+  com.rovio.baba-5981  [006] ...1   203.443605: do_swap_page: id 5, table 0 || 677: 5981 14394000
+  com.rovio.baba-5981  [006] ...1   203.443612: do_swap_page: id 5, table 0 || 678: 5981 14396000
+           <...>-6024  [007] ...1   203.443615: do_swap_page: id 5, table 0 || 679: 5981 7d49ed7000
+  com.rovio.baba-5981  [006] ...1   203.443650: do_swap_page: id 5, table 0 || 680: 5981 7ed6546000
+           <...>-6024  [007] ...1   203.443651: do_swap_page: id 5, table 0 || 681: 5981 142a2000
+  com.rovio.baba-5981  [006] ...1   203.443677: do_swap_page: id 5, table 0 || 682: 5981 7ec0414000
+  com.rovio.baba-5981  [006] ...1   203.443697: do_swap_page: id 5, table 0 || 683: 5981 7ed70b2000
+           <...>-6024  [004] ...1   203.443705: do_swap_page: id 5, table 0 || 684: 5981 71254000
+           <...>-5987  [004] ...1   203.443735: do_swap_page: id 5, table 0 || 685: 5981 7f2d66b000
+           <...>-6320  [005] ...1   203.443740: do_swap_page: id 5, table 0 || 686: 5981 7d3d980000
+           <...>-6320  [007] ...1   203.443776: do_swap_page: id 5, table 0 || 687: 5981 7d3d981000
+           <...>-6320  [007] ...1   203.443789: do_swap_page: id 5, table 0 || 688: 5981 7eb5b53000
+           <...>-6320  [007] ...1   203.443800: do_swap_page: id 5, table 0 || 689: 5981 7d3d97e000
+           <...>-5987  [005] ...1   203.443803: do_swap_page: id 5, table 0 || 690: 5981 7f2d432000
+           <...>-6320  [007] ...1   203.443808: do_swap_page: id 5, table 0 || 691: 5981 7f2373d000
+           <...>-6320  [007] ...1   203.443820: do_swap_page: id 5, table 0 || 692: 5981 7eb5b54000
+           <...>-6320  [007] ...1   203.443828: do_swap_page: id 5, table 0 || 693: 5981 7d3d97f000
+           <...>-6320  [007] ...1   203.443833: do_swap_page: id 5, table 0 || 694: 5981 7d3d97d000
+           <...>-7001  [004] ...1   203.443851: do_swap_page: id 5, table 0 || 695: 5981 7fbe1d4000
+           <...>-6320  [007] ...1   203.443864: do_swap_page: id 5, table 0 || 696: 5981 7d5cf0d000
+           <...>-5987  [005] ...1   203.443872: do_swap_page: id 5, table 0 || 697: 5981 12c80000
+           <...>-6024  [007] ...1   203.443885: do_swap_page: id 5, table 0 || 698: 5981 7123a000
+           <...>-6024  [007] ...1   203.443891: do_swap_page: id 5, table 0 || 699: 5981 71126000
+           <...>-6024  [007] ...1   203.443899: do_swap_page: id 5, table 0 || 700: 5981 7123d000
+           <...>-6024  [007] ...1   203.443909: do_swap_page: id 5, table 0 || 701: 5981 14223000
+           <...>-6024  [007] ...1   203.443931: do_swap_page: id 5, table 0 || 702: 5981 7fbc0c8000
+           <...>-6024  [007] ...1   203.443945: do_swap_page: id 5, table 0 || 703: 5981 7fbc04b000
+           <...>-6024  [007] ...1   203.443951: do_swap_page: id 5, table 0 || 704: 5981 14220000
+           <...>-6024  [007] ...1   203.443957: do_swap_page: id 5, table 0 || 705: 5981 7fbc0c5000
+           <...>-6024  [007] ...1   203.443964: do_swap_page: id 5, table 0 || 706: 5981 7fbc0c6000
+           <...>-6024  [007] ...1   203.443972: do_swap_page: id 5, table 0 || 707: 5981 7fbc0c2000
+           <...>-6024  [007] ...1   203.443977: do_swap_page: id 5, table 0 || 708: 5981 7fbc0c9000
+           <...>-6024  [007] ...1   203.443983: do_swap_page: id 5, table 0 || 709: 5981 7fbc0c1000
+           <...>-6024  [007] ...1   203.443989: do_swap_page: id 5, table 0 || 710: 5981 14221000
+           <...>-6024  [007] ...1   203.443996: do_swap_page: id 5, table 0 || 711: 5981 7ec7afb000
+           <...>-6024  [007] ...1   203.444006: do_swap_page: id 5, table 0 || 712: 5981 7fbc03c000
+           <...>-6024  [007] ...1   203.444011: do_swap_page: id 5, table 0 || 713: 5981 71128000
+           <...>-6024  [007] ...1   203.444024: do_swap_page: id 5, table 0 || 714: 5981 7f28b7c000
+           <...>-6024  [007] ...1   203.444029: do_swap_page: id 5, table 0 || 715: 5981 7f28b7d000
+           <...>-6024  [007] ...1   203.444035: do_swap_page: id 5, table 0 || 716: 5981 7fbc0c3000
+           <...>-6024  [007] ...1   203.444043: do_swap_page: id 5, table 0 || 717: 5981 7fbc047000
+           <...>-7001  [006] ...1   203.444049: do_swap_page: id 5, table 0 || 718: 5981 7fbe2fc000
+           <...>-6024  [007] ...1   203.444059: do_swap_page: id 5, table 0 || 719: 5981 1420d000
+           <...>-6024  [007] ...1   203.444067: do_swap_page: id 5, table 0 || 720: 5981 711f8000
+           <...>-6024  [007] ...1   203.444080: do_swap_page: id 5, table 0 || 721: 5981 7eb5acc000
+           <...>-6024  [007] ...1   203.444090: do_swap_page: id 5, table 0 || 722: 5981 142b3000
+           <...>-5987  [005] ...1   203.444092: do_swap_page: id 5, table 0 || 723: 5981 7f2d4de000
+           <...>-6024  [007] ...1   203.444102: do_swap_page: id 5, table 0 || 724: 5981 7f23309000
+           <...>-7001  [006] ...1   203.444107: do_swap_page: id 5, table 0 || 725: 5981 142ea000
+           <...>-6024  [007] ...1   203.444107: do_swap_page: id 5, table 0 || 726: 5981 7f23471000
+           <...>-5987  [005] ...1   203.444123: do_swap_page: id 5, table 0 || 727: 5981 7ebe60b000
+           <...>-6024  [007] ...1   203.444155: do_swap_page: id 5, table 0 || 728: 5981 711c3000
+           <...>-6024  [007] ...1   203.444170: do_swap_page: id 5, table 0 || 729: 5981 7fbc4be000
+           <...>-6024  [007] ...1   203.444180: do_swap_page: id 5, table 0 || 730: 5981 7fbe211000
+           <...>-6024  [007] ...1   203.444190: do_swap_page: id 5, table 0 || 731: 5981 7f28988000
+           <...>-6024  [007] ...1   203.444213: do_swap_page: id 5, table 0 || 732: 5981 1463c000
+           <...>-5987  [005] ...1   203.444331: do_swap_page: id 5, table 0 || 733: 5981 7f2e8c7000
+           <...>-6024  [007] ...1   203.444348: do_swap_page: id 5, table 0 || 734: 5981 7d49ee6000
+           <...>-6024  [007] ...1   203.444356: do_swap_page: id 5, table 0 || 735: 5981 14219000
+           <...>-6024  [007] ...1   203.444362: do_swap_page: id 5, table 0 || 736: 5981 142cc000
+           <...>-6024  [007] ...1   203.444412: do_swap_page: id 5, table 0 || 737: 5981 1425e000
+           <...>-6024  [007] ...1   203.444419: do_swap_page: id 5, table 0 || 738: 5981 142c1000
+           <...>-6024  [007] ...1   203.444428: do_swap_page: id 5, table 0 || 739: 5981 14230000
+           <...>-6024  [007] ...1   203.444434: do_swap_page: id 5, table 0 || 740: 5981 145de000
+           <...>-6024  [007] ...1   203.444443: do_swap_page: id 5, table 0 || 741: 5981 14271000
+           <...>-6024  [007] ...1   203.444471: do_swap_page: id 5, table 0 || 742: 5981 7f2d8db000
+           <...>-6024  [007] ...1   203.444482: do_swap_page: id 5, table 0 || 743: 5981 145d4000
+           <...>-6024  [007] ...1   203.444550: do_swap_page: id 5, table 0 || 744: 5981 142c2000
+           <...>-6024  [007] ...1   203.444734: do_swap_page: id 5, table 0 || 745: 5981 14244000
+           <...>-6024  [007] ...1   203.444758: do_swap_page: id 5, table 0 || 746: 5981 7f28b4b000
+           <...>-6028  [004] ...1   203.444787: do_swap_page: id 5, table 0 || 747: 5981 7ebe0b7000
+           <...>-6024  [007] ...1   203.444797: do_swap_page: id 5, table 0 || 748: 5981 7d49ee1000
+           <...>-6028  [004] ...1   203.444798: do_swap_page: id 5, table 0 || 749: 5981 7f28b4c000
+           <...>-6028  [004] ...1   203.444802: do_swap_page: id 5, table 0 || 750: 5981 7ebe0b8000
+           <...>-6024  [007] ...1   203.444804: do_swap_page: id 5, table 0 || 751: 5981 142be000
+           <...>-6028  [004] ...1   203.444811: do_swap_page: id 5, table 0 || 752: 5981 7ebe0b5000
+           <...>-6028  [004] ...1   203.444826: do_swap_page: id 5, table 0 || 753: 5981 7ebe0b6000
+           <...>-6024  [007] ...1   203.444827: do_swap_page: id 5, table 0 || 754: 5981 142a7000
+           <...>-6028  [004] ...1   203.444833: do_swap_page: id 5, table 0 || 755: 5981 7ebe0b4000
+           <...>-6028  [004] ...1   203.444850: do_swap_page: id 5, table 0 || 756: 5981 7f28b4d000
+           <...>-6028  [004] ...1   203.444890: do_swap_page: id 5, table 0 || 757: 5981 142ad000
+           <...>-6028  [004] ...1   203.444905: do_swap_page: id 5, table 0 || 758: 5981 142b5000
+           <...>-6028  [004] ...1   203.444923: do_swap_page: id 5, table 0 || 759: 5981 7f309b1000
+           <...>-6028  [004] ...1   203.444954: do_swap_page: id 5, table 0 || 760: 5981 1422b000
+           <...>-6028  [004] ...1   203.444963: do_swap_page: id 5, table 0 || 761: 5981 7f28c33000
+           <...>-6028  [004] ...1   203.444977: do_swap_page: id 5, table 0 || 762: 5981 145df000
+           <...>-6024  [007] ...1   203.444998: do_swap_page: id 5, table 0 || 763: 5981 142a3000
+           <...>-6024  [007] ...1   203.445022: do_swap_page: id 5, table 0 || 764: 5981 7f28c0f000
+           <...>-6028  [004] ...1   203.445037: do_swap_page: id 5, table 0 || 765: 5981 1422d000
+           <...>-6028  [004] ...1   203.445048: do_swap_page: id 5, table 0 || 766: 5981 142bc000
+           <...>-5987  [005] ...1   203.445164: do_swap_page: id 5, table 0 || 767: 5981 7f2d578000
+           <...>-5987  [005] ...1   203.445204: do_swap_page: id 5, table 0 || 768: 5981 7d6a054000
+           <...>-6024  [006] ...1   203.445217: do_swap_page: id 5, table 0 || 769: 5981 14635000
+           <...>-6024  [006] ...1   203.445231: do_swap_page: id 5, table 0 || 770: 5981 145c0000
+           <...>-5987  [005] ...1   203.445287: do_swap_page: id 5, table 0 || 771: 5981 7f2d4e6000
+           <...>-5987  [005] ...1   203.445294: do_swap_page: id 5, table 0 || 772: 5981 7f2d400000
+           <...>-5987  [005] ...1   203.445312: do_swap_page: id 5, table 0 || 773: 5981 7f2d4dd000
+           <...>-5987  [005] ...1   203.445332: do_swap_page: id 5, table 0 || 774: 5981 7ed711c000
+           <...>-5987  [005] ...1   203.445366: do_swap_page: id 5, table 0 || 775: 5981 7f2d4eb000
+           <...>-5987  [005] ...1   203.445392: do_swap_page: id 5, table 0 || 776: 5981 7d5d0d3000
+  com.rovio.baba-5981  [006] ...1   203.445395: do_swap_page: id 5, table 0 || 777: 5981 1427a000
+           <...>-5987  [005] ...1   203.445409: do_swap_page: id 5, table 0 || 778: 5981 7d5d2ad000
+           <...>-5987  [005] ...1   203.445427: do_swap_page: id 5, table 0 || 779: 5981 7d5d3dc000
+           <...>-5987  [005] ...1   203.445471: do_swap_page: id 5, table 0 || 780: 5981 7f2d584000
+           <...>-6028  [004] ...1   203.445550: do_swap_page: id 5, table 0 || 781: 5981 7ebe0b3000
+  com.rovio.baba-5981  [004] ...1   203.445603: do_swap_page: id 5, table 0 || 782: 5981 7ebced3000
+  com.rovio.baba-5981  [004] ...1   203.445616: do_swap_page: id 5, table 0 || 783: 5981 145d7000
+  com.rovio.baba-5981  [004] ...1   203.445626: do_swap_page: id 5, table 0 || 784: 5981 7f2d8d0000
+  com.rovio.baba-5981  [004] ...1   203.445671: do_swap_page: id 5, table 0 || 785: 5981 1462c000
+  com.rovio.baba-5981  [004] ...1   203.446935: do_swap_page: id 5, table 0 || 786: 5981 7f28cc9000
+  com.rovio.baba-5981  [004] ...1   203.446952: do_swap_page: id 5, table 0 || 787: 5981 7f28a31000
+  com.rovio.baba-5981  [004] ...1   203.447080: do_swap_page: id 5, table 0 || 788: 5981 7f28888000
+  com.rovio.baba-5981  [004] ...1   203.447114: do_swap_page: id 5, table 0 || 789: 5981 71291000
+  com.rovio.baba-5981  [005] ...1   203.447512: do_swap_page: id 5, table 0 || 790: 5981 14468000
+  com.rovio.baba-5981  [005] ...1   203.447522: do_swap_page: id 5, table 0 || 791: 5981 1431e000
+  com.rovio.baba-5981  [005] ...1   203.447534: do_swap_page: id 5, table 0 || 792: 5981 7f20d4f000
+  com.rovio.baba-5981  [005] ...1   203.447546: do_swap_page: id 5, table 0 || 793: 5981 7d6d8ae000
+  com.rovio.baba-5981  [005] ...1   203.447553: do_swap_page: id 5, table 0 || 794: 5981 1443b000
+  com.rovio.baba-5981  [005] ...1   203.447561: do_swap_page: id 5, table 0 || 795: 5981 142d4000
+  com.rovio.baba-5981  [005] ...1   203.447569: do_swap_page: id 5, table 0 || 796: 5981 7f20e0b000
+           <...>-6028  [004] ...1   203.447828: do_swap_page: id 5, table 0 || 797: 5981 1428b000
+  com.rovio.baba-5981  [006] ...1   203.447882: do_swap_page: id 5, table 0 || 798: 5981 7d6d8ab000
+  com.rovio.baba-5981  [006] ...1   203.447894: do_swap_page: id 5, table 0 || 799: 5981 14312000
+  com.rovio.baba-5981  [006] ...1   203.448012: do_swap_page: id 5, table 0 || 800: 5981 7f20dfe000
+  com.rovio.baba-5981  [006] ...1   203.448429: do_swap_page: id 5, table 0 || 801: 5981 7d6d8ad000
+  com.rovio.baba-5981  [004] ...1   203.448503: do_swap_page: id 5, table 0 || 802: 5981 7f28ccb000
+  com.rovio.baba-5981  [004] ...1   203.448523: do_swap_page: id 5, table 0 || 803: 5981 7daa65f000
+  com.rovio.baba-5981  [004] ...1   203.448530: do_swap_page: id 5, table 0 || 804: 5981 7daa662000
+  com.rovio.baba-5981  [004] ...1   203.448541: do_swap_page: id 5, table 0 || 805: 5981 7eb7014000
+  com.rovio.baba-5981  [004] ...1   203.448554: do_swap_page: id 5, table 0 || 806: 5981 7daa86f000
+  com.rovio.baba-5981  [004] ...1   203.448573: do_swap_page: id 5, table 0 || 807: 5981 14319000
+  com.rovio.baba-5981  [004] ...1   203.448583: do_swap_page: id 5, table 0 || 808: 5981 7daa7c2000
+  com.rovio.baba-5981  [004] ...1   203.448597: do_swap_page: id 5, table 0 || 809: 5981 7eb6aff000
+  com.rovio.baba-5981  [004] ...1   203.448602: do_swap_page: id 5, table 0 || 810: 5981 14318000
+  com.rovio.baba-5981  [004] ...1   203.448614: do_swap_page: id 5, table 0 || 811: 5981 1431d000
+  com.rovio.baba-5981  [004] ...1   203.448623: do_swap_page: id 5, table 0 || 812: 5981 142d7000
+  com.rovio.baba-5981  [004] ...1   203.448632: do_swap_page: id 5, table 0 || 813: 5981 1443c000
+  com.rovio.baba-5981  [004] ...1   203.448641: do_swap_page: id 5, table 0 || 814: 5981 7f20d5a000
+  com.rovio.baba-5981  [004] ...1   203.448729: do_swap_page: id 5, table 0 || 815: 5981 7f28a9d000
+  com.rovio.baba-5981  [004] ...1   203.448744: do_swap_page: id 5, table 0 || 816: 5981 7f28a9c000
+           <...>-6028  [004] ...1   203.449201: do_swap_page: id 5, table 0 || 817: 5981 7f28c1f000
+           <...>-6028  [004] ...1   203.449216: do_swap_page: id 5, table 0 || 818: 5981 7eb6f43000
+ Measurement Wor-7002  [005] ...1   203.449217: do_swap_page: id 5, table 0 || 819: 5981 7fbe317000
+           <...>-6028  [004] ...1   203.449227: do_swap_page: id 5, table 0 || 820: 5981 7eb6ea8000
+ Measurement Wor-7002  [005] ...1   203.449227: do_swap_page: id 5, table 0 || 821: 5981 7fbe318000
+           <...>-6028  [004] ...1   203.449240: do_swap_page: id 5, table 0 || 822: 5981 7f28c20000
+ Measurement Wor-7002  [005] ...1   203.449246: do_swap_page: id 5, table 0 || 823: 5981 7f2d62b000
+ Measurement Wor-7002  [005] ...1   203.449251: do_swap_page: id 5, table 0 || 824: 5981 7f2d62e000
+ Measurement Wor-7002  [005] ...1   203.449436: do_swap_page: id 5, table 0 || 825: 5981 7f2d630000
+ Measurement Wor-7002  [005] ...1   203.449449: do_swap_page: id 5, table 0 || 826: 5981 7f2d633000
+ Measurement Wor-7002  [005] ...1   203.449456: do_swap_page: id 5, table 0 || 827: 5981 7f2d63a000
+ Measurement Wor-7002  [005] ...1   203.449464: do_swap_page: id 5, table 0 || 828: 5981 7f2d64c000
+ Measurement Wor-7002  [005] ...1   203.449469: do_swap_page: id 5, table 0 || 829: 5981 7f2d613000
+ Measurement Wor-7002  [005] ...1   203.449476: do_swap_page: id 5, table 0 || 830: 5981 7f2d609000
+ Measurement Wor-7002  [005] ...1   203.449481: do_swap_page: id 5, table 0 || 831: 5981 7f2d60f000
+ Measurement Wor-7002  [005] ...1   203.449487: do_swap_page: id 5, table 0 || 832: 5981 7f2d670000
+           <...>-6024  [004] ...1   203.449565: do_swap_page: id 5, table 0 || 833: 5981 7f28a37000
+           <...>-6024  [004] ...1   203.449959: do_swap_page: id 5, table 0 || 834: 5981 7eb5e50000
+           <...>-6024  [004] ...1   203.450003: do_swap_page: id 5, table 0 || 835: 5981 71127000
+           <...>-6024  [004] ...1   203.450013: do_swap_page: id 5, table 0 || 836: 5981 7fbc048000
+           <...>-6024  [004] ...1   203.450050: do_swap_page: id 5, table 0 || 837: 5981 14228000
+           <...>-6024  [004] ...1   203.450066: do_swap_page: id 5, table 0 || 838: 5981 70f01000
+           <...>-6024  [004] ...1   203.450075: do_swap_page: id 5, table 0 || 839: 5981 14212000
+           <...>-6024  [004] ...1   203.450090: do_swap_page: id 5, table 0 || 840: 5981 14415000
+ Measurement Wor-7002  [005] ...1   203.450169: do_swap_page: id 5, table 0 || 841: 5981 7fbbd7f000
+           <...>-6024  [004] ...1   203.450253: do_swap_page: id 5, table 0 || 842: 5981 14229000
+           <...>-6024  [004] ...1   203.450288: do_swap_page: id 5, table 0 || 843: 5981 143ea000
+           <...>-6024  [004] ...1   203.450314: do_swap_page: id 5, table 0 || 844: 5981 7f2d498000
+           <...>-6007  [004] ...1   203.450337: do_swap_page: id 5, table 0 || 845: 5981 7ece2c2000
+           <...>-6007  [004] ...1   203.450348: do_swap_page: id 5, table 0 || 846: 5981 7ece2c3000
+           <...>-6007  [004] ...1   203.450354: do_swap_page: id 5, table 0 || 847: 5981 7f2d4b8000
+           <...>-6007  [004] ...1   203.450361: do_swap_page: id 5, table 0 || 848: 5981 7f2d414000
+           <...>-6028  [004] ...1   203.450473: do_swap_page: id 5, table 0 || 849: 5981 7f28d7e000
+           <...>-6007  [004] ...1   203.450539: do_swap_page: id 5, table 0 || 850: 5981 7f28a08000
+           <...>-6007  [004] ...1   203.450552: do_swap_page: id 5, table 0 || 851: 5981 7fbe308000
+           <...>-6007  [004] ...1   203.450563: do_swap_page: id 5, table 0 || 852: 5981 7f2d435000
+           <...>-6007  [004] ...1   203.450568: do_swap_page: id 5, table 0 || 853: 5981 7fbe309000
+           <...>-6007  [004] ...1   203.450574: do_swap_page: id 5, table 0 || 854: 5981 7fbe30b000
+           <...>-6007  [004] ...1   203.450580: do_swap_page: id 5, table 0 || 855: 5981 7f2d4a5000
+           <...>-6007  [004] ...1   203.450585: do_swap_page: id 5, table 0 || 856: 5981 7f289cd000
+           <...>-6007  [004] ...1   203.450592: do_swap_page: id 5, table 0 || 857: 5981 7f288da000
+           <...>-6007  [004] ...1   203.450597: do_swap_page: id 5, table 0 || 858: 5981 7f2d4c9000
+           <...>-6007  [004] ...1   203.450603: do_swap_page: id 5, table 0 || 859: 5981 7f28b28000
+           <...>-6007  [004] ...1   203.450608: do_swap_page: id 5, table 0 || 860: 5981 7f28b29000
+           <...>-6007  [004] ...1   203.450616: do_swap_page: id 5, table 0 || 861: 5981 7f28b49000
+           <...>-6007  [004] ...1   203.450625: do_swap_page: id 5, table 0 || 862: 5981 7ece2c1000
+           <...>-6007  [004] ...1   203.450632: do_swap_page: id 5, table 0 || 863: 5981 7f28b0a000
+           <...>-6007  [004] ...1   203.450637: do_swap_page: id 5, table 0 || 864: 5981 7f28b39000
+           <...>-6007  [004] ...1   203.450649: do_swap_page: id 5, table 0 || 865: 5981 7d6a264000
+           <...>-6007  [004] ...1   203.450673: do_swap_page: id 5, table 0 || 866: 5981 7f2d4ba000
+           <...>-6028  [004] ...1   203.450788: do_swap_page: id 5, table 0 || 867: 5981 14251000
+           <...>-6028  [004] ...1   203.450813: do_swap_page: id 5, table 0 || 868: 5981 7ebe0b2000
+           <...>-5987  [004] ...1   203.450844: do_swap_page: id 5, table 0 || 869: 5981 7d49bc5000
+           <...>-6028  [007] ...1   203.450901: do_swap_page: id 5, table 0 || 870: 5981 1450c000
+           <...>-5987  [004] ...1   203.450914: do_swap_page: id 5, table 0 || 871: 5981 7f2d4db000
+           <...>-5987  [004] ...1   203.450926: do_swap_page: id 5, table 0 || 872: 5981 7f2d57b000
+ Measurement Wor-7002  [002] ...1   203.450931: do_swap_page: id 5, table 0 || 873: 5981 14217000
+           <...>-5987  [004] ...1   203.450933: do_swap_page: id 5, table 0 || 874: 5981 7f2d57c000
+           <...>-6028  [007] ...1   203.450939: do_swap_page: id 5, table 0 || 875: 5981 7f28d00000
+           <...>-5987  [004] ...1   203.450940: do_swap_page: id 5, table 0 || 876: 5981 7f2d4dc000
+           <...>-5987  [004] ...1   203.450960: do_swap_page: id 5, table 0 || 877: 5981 7d6a077000
+           <...>-6028  [007] ...1   203.450968: do_swap_page: id 5, table 0 || 878: 5981 7f39801000
+           <...>-5987  [004] ...1   203.450969: do_swap_page: id 5, table 0 || 879: 5981 7f2d48d000
+           <...>-5987  [004] ...1   203.450983: do_swap_page: id 5, table 0 || 880: 5981 7dd30e9000
+           <...>-5987  [004] ...1   203.450996: do_swap_page: id 5, table 0 || 881: 5981 7f2d4a2000
+           <...>-5987  [004] ...1   203.451011: do_swap_page: id 5, table 0 || 882: 5981 7ed74e7000
+           <...>-6028  [007] ...1   203.451016: do_swap_page: id 5, table 0 || 883: 5981 7eb6a31000
+           <...>-5987  [004] ...1   203.451021: do_swap_page: id 5, table 0 || 884: 5981 7ed7207000
+           <...>-5987  [004] ...1   203.451030: do_swap_page: id 5, table 0 || 885: 5981 7ed743a000
+           <...>-6028  [007] ...1   203.451034: do_swap_page: id 5, table 0 || 886: 5981 7eb6a32000
+           <...>-5987  [004] ...1   203.451039: do_swap_page: id 5, table 0 || 887: 5981 7d49ca7000
+           <...>-6028  [007] ...1   203.451041: do_swap_page: id 5, table 0 || 888: 5981 7eb6a36000
+ Measurement Wor-7002  [002] ...1   203.451062: do_swap_page: id 5, table 0 || 889: 5981 7d69fe3000
+           <...>-5987  [004] ...1   203.451096: do_swap_page: id 5, table 0 || 890: 5981 7f290b7000
+ Measurement Wor-7002  [002] ...1   203.451491: do_swap_page: id 5, table 0 || 891: 5981 7f2d60b000
+ Measurement Wor-7002  [002] ...1   203.451517: do_swap_page: id 5, table 0 || 892: 5981 7f2d5b1000
+ Measurement Wor-7002  [002] ...1   203.451533: do_swap_page: id 5, table 0 || 893: 5981 7f2d5b2000
+ Measurement Wor-7002  [002] ...1   203.451652: do_swap_page: id 5, table 0 || 894: 5981 14436000
+ Measurement Wor-7002  [002] ...1   203.452223: do_swap_page: id 5, table 0 || 895: 5981 142b8000
+           <...>-6028  [007] ...1   203.452928: do_swap_page: id 5, table 0 || 896: 5981 7f28c34000
+           <...>-6028  [007] ...1   203.452937: do_swap_page: id 5, table 0 || 897: 5981 7f28c56000
+           <...>-6028  [007] ...1   203.453007: do_swap_page: id 5, table 0 || 898: 5981 7eb6ecf000
+           <...>-6028  [007] ...1   203.453026: do_swap_page: id 5, table 0 || 899: 5981 7f28894000
+ Measurement Wor-7002  [002] ...1   203.453106: do_swap_page: id 5, table 0 || 900: 5981 142ec000
+ Measurement Wor-7002  [002] ...1   203.453138: do_swap_page: id 5, table 0 || 901: 5981 142c5000
+  com.rovio.baba-5981  [005] ...1   203.454074: do_swap_page: id 5, table 0 || 902: 5981 7128d000
+  com.rovio.baba-5981  [004] ...1   203.454252: do_swap_page: id 5, table 0 || 903: 5981 7f28a05000
+  com.rovio.baba-5981  [004] ...1   203.454268: do_swap_page: id 5, table 0 || 904: 5981 7f28d06000
+  com.rovio.baba-5981  [004] ...1   203.454278: do_swap_page: id 5, table 0 || 905: 5981 7fbd4ee000
+  com.rovio.baba-5981  [004] ...1   203.454310: do_swap_page: id 5, table 0 || 906: 5981 71125000
+  com.rovio.baba-5981  [004] ...1   203.454323: do_swap_page: id 5, table 0 || 907: 5981 7fbc037000
+  com.rovio.baba-5981  [004] ...1   203.454383: do_swap_page: id 5, table 0 || 908: 5981 14432000
+  com.rovio.baba-5981  [004] ...1   203.454412: do_swap_page: id 5, table 0 || 909: 5981 7eb5c1e000
+  com.rovio.baba-5981  [004] ...1   203.454424: do_swap_page: id 5, table 0 || 910: 5981 7113e000
+  com.rovio.baba-5981  [004] ...1   203.454441: do_swap_page: id 5, table 0 || 911: 5981 7ebe5d1000
+  com.rovio.baba-5981  [004] ...1   203.454451: do_swap_page: id 5, table 0 || 912: 5981 7eb607b000
+  com.rovio.baba-5981  [004] ...1   203.454460: do_swap_page: id 5, table 0 || 913: 5981 7eb6710000
+  com.rovio.baba-5981  [004] ...1   203.454469: do_swap_page: id 5, table 0 || 914: 5981 7f28b13000
+  com.rovio.baba-5981  [004] ...1   203.454477: do_swap_page: id 5, table 0 || 915: 5981 7eb6ae2000
+  com.rovio.baba-5981  [004] ...1   203.454493: do_swap_page: id 5, table 0 || 916: 5981 7eb6a22000
+ Measurement Wor-7002  [005] ...1   203.454754: do_swap_page: id 5, table 0 || 917: 5981 7ec5226000
+ Measurement Wor-7002  [005] ...1   203.454770: do_swap_page: id 5, table 0 || 918: 5981 142af000
+ Measurement Wor-7002  [005] ...1   203.454784: do_swap_page: id 5, table 0 || 919: 5981 142c9000
+ Measurement Wor-7002  [005] ...1   203.454795: do_swap_page: id 5, table 0 || 920: 5981 142b4000
+ Measurement Wor-7002  [005] ...1   203.454804: do_swap_page: id 5, table 0 || 921: 5981 142c3000
+ Measurement Wor-7002  [005] ...1   203.454811: do_swap_page: id 5, table 0 || 922: 5981 142bd000
+ Measurement Wor-7002  [005] ...1   203.454819: do_swap_page: id 5, table 0 || 923: 5981 142a1000
+  com.rovio.baba-5981  [004] ...1   203.454826: do_swap_page: id 5, table 0 || 924: 5981 7eb6a42000
+  com.rovio.baba-5981  [004] ...1   203.454841: do_swap_page: id 5, table 0 || 925: 5981 7eb6aa8000
+  com.rovio.baba-5981  [004] ...1   203.454863: do_swap_page: id 5, table 0 || 926: 5981 7eb6e91000
+  com.rovio.baba-5981  [004] ...1   203.454875: do_swap_page: id 5, table 0 || 927: 5981 7eb6adc000
+  com.rovio.baba-5981  [004] ...1   203.454884: do_swap_page: id 5, table 0 || 928: 5981 7eb5bea000
+ Measurement Wor-7002  [005] ...1   203.454890: do_swap_page: id 5, table 0 || 929: 5981 14214000
+  com.rovio.baba-5981  [004] ...1   203.454921: do_swap_page: id 5, table 0 || 930: 5981 7f3982b000
+  com.rovio.baba-5981  [004] ...1   203.454953: do_swap_page: id 5, table 0 || 931: 5981 7f39851000
+  com.rovio.baba-5981  [004] ...1   203.454960: do_swap_page: id 5, table 0 || 932: 5981 7f28a85000
+  com.rovio.baba-5981  [004] ...1   203.454968: do_swap_page: id 5, table 0 || 933: 5981 7eb5d41000
+  com.rovio.baba-5981  [004] ...1   203.454978: do_swap_page: id 5, table 0 || 934: 5981 7eb6f42000
+  com.rovio.baba-5981  [004] ...1   203.454990: do_swap_page: id 5, table 0 || 935: 5981 7eb5b41000
+  com.rovio.baba-5981  [004] ...1   203.454997: do_swap_page: id 5, table 0 || 936: 5981 7eb5b42000
+ Measurement Wor-7002  [005] ...1   203.455344: do_swap_page: id 5, table 0 || 937: 5981 7ec5221000
+ Measurement Wor-7002  [005] ...1   203.455453: do_swap_page: id 5, table 0 || 938: 5981 7ec1a88000
+  com.rovio.baba-5981  [004] ...1   203.455479: do_swap_page: id 5, table 0 || 939: 5981 7eb6b0e000
+  com.rovio.baba-5981  [004] ...1   203.455535: do_swap_page: id 5, table 0 || 940: 5981 7f288c0000
+  com.rovio.baba-5981  [004] ...1   203.455546: do_swap_page: id 5, table 0 || 941: 5981 7eb6f61000
+  com.rovio.baba-5981  [004] ...1   203.455562: do_swap_page: id 5, table 0 || 942: 5981 7f28d05000
+ Measurement Wor-7002  [005] ...1   203.455568: do_swap_page: id 5, table 0 || 943: 5981 70eff000
+  com.rovio.baba-5981  [004] ...1   203.455581: do_swap_page: id 5, table 0 || 944: 5981 7eb5c87000
+ Measurement Wor-7002  [005] ...1   203.455583: do_swap_page: id 5, table 0 || 945: 5981 7fbada6000
+ Measurement Wor-7002  [005] ...1   203.455596: do_swap_page: id 5, table 0 || 946: 5981 7f2d698000
+ Measurement Wor-7002  [005] ...1   203.455608: do_swap_page: id 5, table 0 || 947: 5981 7f2d1f5000
+ Measurement Wor-7002  [005] ...1   203.455615: do_swap_page: id 5, table 0 || 948: 5981 7ebeb0e000
+  com.rovio.baba-5981  [004] ...1   203.455621: do_swap_page: id 5, table 0 || 949: 5981 7eb5dd1000
+ Measurement Wor-7002  [005] ...1   203.455628: do_swap_page: id 5, table 0 || 950: 5981 7f2d48e000
+  com.rovio.baba-5981  [004] ...1   203.455628: do_swap_page: id 5, table 0 || 951: 5981 7eb5dd2000
+ Measurement Wor-7002  [005] ...1   203.455635: do_swap_page: id 5, table 0 || 952: 5981 7f2d440000
+ Measurement Wor-7002  [005] ...1   203.455644: do_swap_page: id 5, table 0 || 953: 5981 7f2d524000
+  com.rovio.baba-5981  [004] ...1   203.455649: do_swap_page: id 5, table 0 || 954: 5981 7eb5bab000
+  com.rovio.baba-5981  [004] ...1   203.455659: do_swap_page: id 5, table 0 || 955: 5981 7eb5bac000
+  com.rovio.baba-5981  [004] ...1   203.455667: do_swap_page: id 5, table 0 || 956: 5981 7eb5bad000
+  com.rovio.baba-5981  [004] ...1   203.455675: do_swap_page: id 5, table 0 || 957: 5981 7eb5bae000
+  com.rovio.baba-5981  [004] ...1   203.455683: do_swap_page: id 5, table 0 || 958: 5981 7eb6046000
+  com.rovio.baba-5981  [004] ...1   203.455689: do_swap_page: id 5, table 0 || 959: 5981 7eb6047000
+ Measurement Wor-7002  [005] ...1   203.455695: do_swap_page: id 5, table 0 || 960: 5981 7d6a07c000
+  com.rovio.baba-5981  [004] ...1   203.455706: do_swap_page: id 5, table 0 || 961: 5981 7eb6048000
+  com.rovio.baba-5981  [004] ...1   203.455712: do_swap_page: id 5, table 0 || 962: 5981 7eb6049000
+  com.rovio.baba-5981  [004] ...1   203.455735: do_swap_page: id 5, table 0 || 963: 5981 7eb5e45000
+  com.rovio.baba-5981  [004] ...1   203.455741: do_swap_page: id 5, table 0 || 964: 5981 7eb5e46000
+  com.rovio.baba-5981  [004] ...1   203.455744: do_swap_page: id 5, table 0 || 965: 5981 7eb604a000
+  com.rovio.baba-5981  [004] ...1   203.455751: do_swap_page: id 5, table 0 || 966: 5981 7eb6b47000
+  com.rovio.baba-5981  [004] ...1   203.455759: do_swap_page: id 5, table 0 || 967: 5981 7eb6b48000
+  com.rovio.baba-5981  [004] ...1   203.455765: do_swap_page: id 5, table 0 || 968: 5981 7eb6b49000
+  com.rovio.baba-5981  [004] ...1   203.455772: do_swap_page: id 5, table 0 || 969: 5981 7eb6b4a000
+ Measurement Wor-7002  [005] ...1   203.455775: do_swap_page: id 5, table 0 || 970: 5981 7d5d0cb000
+  com.rovio.baba-5981  [004] ...1   203.455778: do_swap_page: id 5, table 0 || 971: 5981 7eb6b4b000
+  com.rovio.baba-5981  [004] ...1   203.455785: do_swap_page: id 5, table 0 || 972: 5981 7eb5e47000
+  com.rovio.baba-5981  [004] ...1   203.455791: do_swap_page: id 5, table 0 || 973: 5981 7eb5e48000
+  com.rovio.baba-5981  [004] ...1   203.455796: do_swap_page: id 5, table 0 || 974: 5981 7eb5e49000
+ Measurement Wor-7002  [005] ...1   203.455800: do_swap_page: id 5, table 0 || 975: 5981 7ed70f0000
+  com.rovio.baba-5981  [004] ...1   203.455807: do_swap_page: id 5, table 0 || 976: 5981 7eb5fb5000
+ Measurement Wor-7002  [005] ...1   203.455811: do_swap_page: id 5, table 0 || 977: 5981 7f2d403000
+  com.rovio.baba-5981  [004] ...1   203.455813: do_swap_page: id 5, table 0 || 978: 5981 7eb5fb6000
+  com.rovio.baba-5981  [004] ...1   203.455818: do_swap_page: id 5, table 0 || 979: 5981 7eb5fb7000
+ Measurement Wor-7002  [005] ...1   203.455819: do_swap_page: id 5, table 0 || 980: 5981 7f2d690000
+  com.rovio.baba-5981  [004] ...1   203.455825: do_swap_page: id 5, table 0 || 982: 5981 7eb5fb8000
+ Measurement Wor-7002  [005] ...1   203.455826: do_swap_page: id 5, table 0 || 981: 5981 7f2d643000
+ Measurement Wor-7002  [005] ...1   203.455833: do_swap_page: id 5, table 0 || 983: 5981 7f2d640000
+  com.rovio.baba-5981  [004] ...1   203.455834: do_swap_page: id 5, table 0 || 984: 5981 7f28cb2000
+ Measurement Wor-7002  [005] ...1   203.455842: do_swap_page: id 5, table 0 || 985: 5981 7ed70fa000
+ Measurement Wor-7002  [005] ...1   203.455859: do_swap_page: id 5, table 0 || 986: 5981 7ed7206000
+  com.rovio.baba-5981  [004] ...1   203.455876: do_swap_page: id 5, table 0 || 987: 5981 7eb5dd3000
+ Measurement Wor-7002  [005] ...1   203.455887: do_swap_page: id 5, table 0 || 988: 5981 7ed725c000
+ Measurement Wor-7002  [005] ...1   203.455894: do_swap_page: id 5, table 0 || 989: 5981 7f2d415000
+ Measurement Wor-7002  [005] ...1   203.455907: do_swap_page: id 5, table 0 || 990: 5981 7d5cfe4000
+ Measurement Wor-7002  [005] ...1   203.455914: do_swap_page: id 5, table 0 || 991: 5981 7d5cfe5000
+  com.rovio.baba-5981  [004] ...1   203.455917: do_swap_page: id 5, table 0 || 992: 5981 7eb5dd4000
+ Measurement Wor-7002  [005] ...1   203.455920: do_swap_page: id 5, table 0 || 993: 5981 7d5cfe6000
+ Measurement Wor-7002  [005] ...1   203.455925: do_swap_page: id 5, table 0 || 994: 5981 7d5cfe7000
+  com.rovio.baba-5981  [004] ...1   203.455935: do_swap_page: id 5, table 0 || 995: 5981 7f28b55000
+  com.rovio.baba-5981  [004] ...1   203.455953: do_swap_page: id 5, table 0 || 996: 5981 7f3984e000
+  com.rovio.baba-5981  [004] ...1   203.455960: do_swap_page: id 5, table 0 || 997: 5981 7f39866000
+ Measurement Wor-7002  [005] ...1   203.455981: do_swap_page: id 5, table 0 || 998: 5981 7fbd4b0000
+  com.rovio.baba-5981  [004] ...1   203.455987: do_swap_page: id 5, table 0 || 999: 5981 7f28ca5000
+ Measurement Wor-7002  [005] ...1   203.455993: do_swap_page: id 5, table 0 || 1000: 5981 7f288fb000
+ Measurement Wor-7002  [005] ...1   203.456000: do_swap_page: id 5, table 0 || 1001: 5981 7f288fd000
+ Measurement Wor-7002  [005] ...1   203.456008: do_swap_page: id 5, table 0 || 1002: 5981 7f28a55000
+ Measurement Wor-7002  [005] ...1   203.456019: do_swap_page: id 5, table 0 || 1004: 5981 7fbe1eb000
+  com.rovio.baba-5981  [004] ...1   203.456019: do_swap_page: id 5, table 0 || 1003: 5981 7eb6800000
+ Measurement Wor-7002  [005] ...1   203.456027: do_swap_page: id 5, table 0 || 1005: 5981 7f28a80000
+  com.rovio.baba-5981  [004] ...1   203.456028: do_swap_page: id 5, table 0 || 1006: 5981 7f28a9f000
+ Measurement Wor-7002  [005] ...1   203.456050: do_swap_page: id 5, table 0 || 1007: 5981 1420e000
+ Measurement Wor-7002  [005] ...1   203.456221: do_swap_page: id 5, table 0 || 1008: 5981 7f28904000
+ Measurement Wor-7002  [005] ...1   203.456330: do_swap_page: id 5, table 0 || 1009: 5981 7f2d416000
+ Measurement Wor-7002  [005] ...1   203.456339: do_swap_page: id 5, table 0 || 1010: 5981 7f2d18a000
+ Measurement Wor-7002  [005] ...1   203.456348: do_swap_page: id 5, table 0 || 1011: 5981 7eb1592000
+ Measurement Wor-7002  [005] ...1   203.456379: do_swap_page: id 5, table 0 || 1012: 5981 7f28867000
+ Measurement Wor-7002  [005] ...1   203.456392: do_swap_page: id 5, table 0 || 1013: 5981 7d6a03b000
+ Measurement Wor-7002  [005] ...1   203.456460: do_swap_page: id 5, table 0 || 1014: 5981 7f2d508000
+ Measurement Wor-7002  [005] ...1   203.456478: do_swap_page: id 5, table 0 || 1015: 5981 7ebe580000
+ Measurement Wor-7002  [005] ...1   203.456492: do_swap_page: id 5, table 0 || 1016: 5981 7d5cefb000
+ Measurement Wor-7002  [005] ...1   203.456507: do_swap_page: id 5, table 0 || 1017: 5981 7f2d5ce000
+ Measurement Wor-7002  [005] ...1   203.456520: do_swap_page: id 5, table 0 || 1018: 5981 7ebe733000
+  com.rovio.baba-5981  [004] ...1   203.456665: do_swap_page: id 5, table 0 || 1019: 5981 7f28a9e000
+ Measurement Wor-7002  [005] ...1   203.456678: do_swap_page: id 5, table 0 || 1020: 5981 7fbe1cb000
+ Measurement Wor-7002  [005] ...1   203.456696: do_swap_page: id 5, table 0 || 1021: 5981 7f2d56a000
+ Measurement Wor-7002  [005] ...1   203.456794: do_swap_page: id 5, table 0 || 1022: 5981 7ed7161000
+ Measurement Wor-7002  [005] ...1   203.456850: do_swap_page: id 5, table 0 || 1023: 5981 7d6a07f000
+ Measurement Wor-7002  [005] ...1   203.456885: do_swap_page: id 5, table 0 || 1024: 5981 71182000
+           <...>-5987  [004] ...1   203.457027: do_swap_page: id 5, table 0 || 1025: 5981 7ed743d000
+ Measurement Wor-7002  [005] ...1   203.457070: do_swap_page: id 5, table 0 || 1026: 5981 7edf53c000
+ Measurement Wor-7002  [005] ...1   203.457084: do_swap_page: id 5, table 0 || 1027: 5981 7fbe172000
+           <...>-5987  [004] ...1   203.457222: do_swap_page: id 5, table 0 || 1028: 5981 7ed74ee000
+           <...>-5987  [004] .n.1   203.457373: do_swap_page: id 5, table 0 || 1029: 5981 7d49abc000
+           <...>-5987  [004] ...1   203.457488: do_swap_page: id 5, table 0 || 1030: 5981 7fbe316000
+           <...>-5987  [004] ...1   203.457499: do_swap_page: id 5, table 0 || 1031: 5981 7f2d52e000
+           <...>-5987  [004] ...1   203.457508: do_swap_page: id 5, table 0 || 1032: 5981 7f2d52f000
+           <...>-5987  [004] ...1   203.457629: do_swap_page: id 5, table 0 || 1033: 5981 7d49ca6000
+  com.rovio.baba-5981  [007] ...1   203.457648: do_swap_page: id 5, table 0 || 1034: 5981 7ed71e2000
+ Measurement Wor-7002  [005] ...1   203.457997: do_swap_page: id 5, table 0 || 1035: 5981 7dd2c9c000
+ Measurement Wor-7002  [005] ...1   203.458007: do_swap_page: id 5, table 0 || 1036: 5981 7dd3897000
+ Measurement Wor-7002  [005] ...1   203.458015: do_swap_page: id 5, table 0 || 1037: 5981 7dd3898000
+ Measurement Wor-7002  [005] ...1   203.458023: do_swap_page: id 5, table 0 || 1038: 5981 7d6a025000
+ Measurement Wor-7002  [005] ...1   203.458061: do_swap_page: id 5, table 0 || 1039: 5981 7d6a075000
+ Measurement Wor-7002  [005] ...1   203.458069: do_swap_page: id 5, table 0 || 1040: 5981 7d6a076000
+ Measurement Wor-7002  [005] ...1   203.458079: do_swap_page: id 5, table 0 || 1041: 5981 7d5cef4000
+  com.rovio.baba-5981  [007] ...1   203.458276: do_swap_page: id 5, table 0 || 1042: 5981 7f28a06000
+  com.rovio.baba-5981  [007] ...1   203.458291: do_swap_page: id 5, table 0 || 1043: 5981 7f28d13000
+  com.rovio.baba-5981  [007] ...1   203.458299: do_swap_page: id 5, table 0 || 1044: 5981 7eb5a8a000
+  com.rovio.baba-5981  [007] ...1   203.458305: do_swap_page: id 5, table 0 || 1045: 5981 7eb5a8b000
+  com.rovio.baba-5981  [007] ...1   203.458311: do_swap_page: id 5, table 0 || 1046: 5981 7eb5a8c000
+  com.rovio.baba-5981  [007] ...1   203.458317: do_swap_page: id 5, table 0 || 1047: 5981 7eb5abd000
+  com.rovio.baba-5981  [007] ...1   203.458328: do_swap_page: id 5, table 0 || 1048: 5981 7eb5b43000
+  com.rovio.baba-5981  [007] ...1   203.458336: do_swap_page: id 5, table 0 || 1049: 5981 7eb5fab000
+  com.rovio.baba-5981  [007] ...1   203.458802: do_swap_page: id 5, table 0 || 1050: 5981 7ed71e3000
+  com.rovio.baba-5981  [007] ...1   203.458823: do_swap_page: id 5, table 0 || 1051: 5981 7eb67fd000
+  com.rovio.baba-5981  [007] ...1   203.458831: do_swap_page: id 5, table 0 || 1052: 5981 7eb5f27000
+  com.rovio.baba-5981  [007] ...1   203.458836: do_swap_page: id 5, table 0 || 1053: 5981 7eb5f28000
+  com.rovio.baba-5981  [007] ...1   203.458928: do_swap_page: id 5, table 0 || 1054: 5981 7eb5b44000
+  com.rovio.baba-5981  [007] ...1   203.458938: do_swap_page: id 5, table 0 || 1055: 5981 7eb5b45000
+  com.rovio.baba-5981  [007] ...1   203.458948: do_swap_page: id 5, table 0 || 1056: 5981 7daa833000
+  com.rovio.baba-5981  [007] ...1   203.458955: do_swap_page: id 5, table 0 || 1057: 5981 7daa888000
+  com.rovio.baba-5981  [007] ...1   203.458960: do_swap_page: id 5, table 0 || 1058: 5981 7daa889000
+  com.rovio.baba-5981  [007] ...1   203.458966: do_swap_page: id 5, table 0 || 1059: 5981 7daa88a000
+  com.rovio.baba-5981  [007] ...1   203.459022: do_swap_page: id 5, table 0 || 1060: 5981 14277000
+           <...>-6000  [004] ...1   203.459051: do_swap_page: id 5, table 0 || 1061: 5981 71294000
+  com.rovio.baba-5981  [007] ...1   203.459077: do_swap_page: id 5, table 0 || 1062: 5981 145cf000
+  com.rovio.baba-5981  [007] ...1   203.459084: do_swap_page: id 5, table 0 || 1063: 5981 145d0000
+ Measurement Wor-7002  [005] ...1   203.459118: do_swap_page: id 5, table 0 || 1064: 5981 7f2124f000
+ Measurement Wor-7002  [005] ...1   203.459131: do_swap_page: id 5, table 0 || 1065: 5981 9d198000
+ Measurement Wor-7002  [005] ...1   203.459138: do_swap_page: id 5, table 0 || 1066: 5981 14263000
+ Measurement Wor-7002  [005] ...1   203.459144: do_swap_page: id 5, table 0 || 1067: 5981 14261000
+ Measurement Wor-7002  [005] ...1   203.459152: do_swap_page: id 5, table 0 || 1068: 5981 1425c000
+ Measurement Wor-7002  [005] ...1   203.459159: do_swap_page: id 5, table 0 || 1069: 5981 14260000
+ Measurement Wor-7002  [005] ...1   203.459186: do_swap_page: id 5, table 0 || 1070: 5981 1426c000
+       UnityMain-6037  [007] ...1   203.459188: do_swap_page: id 5, table 0 || 1071: 5981 7f28c1e000
+ Measurement Wor-7002  [005] ...1   203.459207: do_swap_page: id 5, table 0 || 1072: 5981 7fbbd84000
+       UnityMain-6037  [007] ...1   203.459216: do_swap_page: id 5, table 0 || 1073: 5981 7ebceec000
+ Measurement Wor-7002  [005] ...1   203.459231: do_swap_page: id 5, table 0 || 1074: 5981 14460000
+ Measurement Wor-7002  [005] ...1   203.459237: do_swap_page: id 5, table 0 || 1075: 5981 7f21252000
+       UnityMain-6037  [007] ...1   203.459244: do_swap_page: id 5, table 0 || 1076: 5981 145bc000
+ Measurement Wor-7002  [005] ...1   203.459246: do_swap_page: id 5, table 0 || 1077: 5981 14296000
+ Measurement Wor-7002  [005] ...1   203.459258: do_swap_page: id 5, table 0 || 1078: 5981 14498000
+ Measurement Wor-7002  [005] ...1   203.459267: do_swap_page: id 5, table 0 || 1079: 5981 7f21253000
+       UnityMain-6037  [007] ...1   203.459268: do_swap_page: id 5, table 0 || 1080: 5981 7ebcebb000
+ Measurement Wor-7002  [005] ...1   203.459299: do_swap_page: id 5, table 0 || 1081: 5981 14265000
+ Measurement Wor-7002  [005] ...1   203.459315: do_swap_page: id 5, table 0 || 1082: 5981 14461000
+ Measurement Wor-7002  [005] ...1   203.459322: do_swap_page: id 5, table 0 || 1083: 5981 14264000
+ Measurement Wor-7002  [005] ...1   203.459329: do_swap_page: id 5, table 0 || 1084: 5981 7f21258000
+ Measurement Wor-7002  [005] ...1   203.459334: do_swap_page: id 5, table 0 || 1085: 5981 7f21257000
+ Measurement Wor-7002  [005] ...1   203.459358: do_swap_page: id 5, table 0 || 1086: 5981 144f4000
+  com.rovio.baba-5981  [007] ...1   203.459364: do_swap_page: id 5, table 0 || 1087: 5981 7f28cb5000
+ Measurement Wor-7002  [005] ...1   203.459369: do_swap_page: id 5, table 0 || 1088: 5981 7eb676a000
+ Measurement Wor-7002  [005] ...1   203.459384: do_swap_page: id 5, table 0 || 1089: 5981 7ebe528000
+ Measurement Wor-7002  [005] ...1   203.459422: do_swap_page: id 5, table 0 || 1090: 5981 7f2329d000
+ Measurement Wor-7002  [005] ...1   203.459437: do_swap_page: id 5, table 0 || 1091: 5981 144fb000
+ Measurement Wor-7002  [005] ...1   203.459450: do_swap_page: id 5, table 0 || 1092: 5981 7f1f6d2000
+ Measurement Wor-7002  [005] ...1   203.459541: do_swap_page: id 5, table 0 || 1093: 5981 7f30849000
+ Measurement Wor-7002  [005] ...1   203.459581: do_swap_page: id 5, table 0 || 1094: 5981 7f2f03f000
+ Measurement Wor-7002  [005] ...1   203.459594: do_swap_page: id 5, table 0 || 1095: 5981 14209000
+ Measurement Wor-7002  [005] ...1   203.459621: do_swap_page: id 5, table 0 || 1096: 5981 1426f000
+ Measurement Wor-7002  [005] ...1   203.459666: do_swap_page: id 5, table 0 || 1097: 5981 7f35259000
+ Measurement Wor-7002  [005] ...1   203.459679: do_swap_page: id 5, table 0 || 1098: 5981 7eb5c16000
+ Measurement Wor-7002  [005] ...1   203.459779: do_swap_page: id 5, table 0 || 1099: 5981 7f307dc000
+ Measurement Wor-7002  [005] ...1   203.459825: do_swap_page: id 5, table 0 || 1100: 5981 702f6000
+ Measurement Wor-7002  [005] ...1   203.459876: do_swap_page: id 5, table 0 || 1101: 5981 144f3000
+  com.rovio.baba-5981  [007] ...1   203.460176: do_swap_page: id 5, table 0 || 1102: 5981 7fffff8000
+  com.rovio.baba-5981  [007] ...1   203.460190: do_swap_page: id 5, table 0 || 1103: 5981 7f20c63000
+  com.rovio.baba-5981  [007] ...1   203.460200: do_swap_page: id 5, table 0 || 1104: 5981 7f20a20000
+  com.rovio.baba-5981  [007] ...1   203.460205: do_swap_page: id 5, table 0 || 1105: 5981 7f20a21000
+  com.rovio.baba-5981  [007] ...1   203.460236: do_swap_page: id 5, table 0 || 1106: 5981 7f211b0000
+  com.rovio.baba-5981  [007] ...1   203.460287: do_swap_page: id 5, table 0 || 1107: 5981 7fbe294000
+  com.rovio.baba-5981  [007] ...1   203.460296: do_swap_page: id 5, table 0 || 1108: 5981 7f28c35000
+  com.rovio.baba-5981  [007] ...1   203.460305: do_swap_page: id 5, table 0 || 1109: 5981 7f28b12000
+  com.rovio.baba-5981  [007] ...1   203.460329: do_swap_page: id 5, table 0 || 1110: 5981 7fba3de000
+  com.rovio.baba-5981  [007] ...1   203.460345: do_swap_page: id 5, table 0 || 1111: 5981 7fbe1c7000
+           <...>-5987  [004] ...1   203.460821: do_swap_page: id 5, table 0 || 1112: 5981 7eb13a0000
+           <...>-5987  [004] ...1   203.460874: do_swap_page: id 5, table 0 || 1113: 5981 7ed74e6000
+           <...>-5987  [004] ...1   203.460885: do_swap_page: id 5, table 0 || 1114: 5981 7ed7260000
+ Measurement Wor-7002  [005] ...1   203.462943: do_swap_page: id 5, table 0 || 1115: 5981 7f1f6d3000
+ Measurement Wor-7002  [005] ...1   203.463055: do_swap_page: id 5, table 0 || 1116: 5981 7f2d49d000
+  com.rovio.baba-5981  [007] ...1   203.466375: do_swap_page: id 5, table 0 || 1117: 5981 7eb6795000
+ Measurement Wor-7002  [005] ...1   203.468454: do_swap_page: id 5, table 0 || 1118: 5981 7f21246000
+           <...>-5987  [006] ...1   203.468587: do_swap_page: id 5, table 0 || 1119: 5981 7ed71c2000
+           <...>-7003  [004] ...1   203.468701: do_swap_page: id 5, table 0 || 1120: 5981 144fc000
+           <...>-7003  [004] ...1   203.468978: do_swap_page: id 5, table 0 || 1121: 5981 7f35261000
+ Measurement Wor-7002  [005] ...1   203.469051: do_swap_page: id 5, table 0 || 1122: 5981 142b9000
+ Measurement Wor-7002  [005] ...1   203.469067: do_swap_page: id 5, table 0 || 1123: 5981 142f2000
+ Measurement Wor-7002  [005] ...1   203.469077: do_swap_page: id 5, table 0 || 1124: 5981 7ec5228000
+ Measurement Wor-7002  [005] ...1   203.469268: do_swap_page: id 5, table 0 || 1125: 5981 14213000
+ Measurement Wor-7002  [005] ...1   203.469277: do_swap_page: id 5, table 0 || 1126: 5981 1420f000
+ Measurement Wor-7002  [005] ...1   203.469284: do_swap_page: id 5, table 0 || 1127: 5981 14298000
+ Measurement Wor-7002  [005] ...1   203.469292: do_swap_page: id 5, table 0 || 1128: 5981 1421a000
+  com.rovio.baba-5981  [006] ...1   203.471283: do_swap_page: id 5, table 0 || 1129: 5981 14407000
+  com.rovio.baba-5981  [006] ...1   203.471303: do_swap_page: id 5, table 0 || 1130: 5981 7ed34e8000
+  com.rovio.baba-5981  [006] ...1   203.471311: do_swap_page: id 5, table 0 || 1131: 5981 14406000
+  com.rovio.baba-5981  [006] ...1   203.471323: do_swap_page: id 5, table 0 || 1132: 5981 7ed34d7000
+  com.rovio.baba-5981  [006] ...1   203.471332: do_swap_page: id 5, table 0 || 1133: 5981 7ed34de000
+  com.rovio.baba-5981  [006] ...1   203.471338: do_swap_page: id 5, table 0 || 1134: 5981 7ed34d9000
+  com.rovio.baba-5981  [006] ...1   203.471351: do_swap_page: id 5, table 0 || 1135: 5981 7ed34e3000
+  com.rovio.baba-5981  [006] ...1   203.471358: do_swap_page: id 5, table 0 || 1136: 5981 7ed34d8000
+  com.rovio.baba-5981  [006] ...1   203.471366: do_swap_page: id 5, table 0 || 1137: 5981 14412000
+  com.rovio.baba-5981  [006] ...1   203.471372: do_swap_page: id 5, table 0 || 1138: 5981 14409000
+  com.rovio.baba-5981  [006] ...1   203.471378: do_swap_page: id 5, table 0 || 1139: 5981 1440a000
+  com.rovio.baba-5981  [006] ...1   203.471486: do_swap_page: id 5, table 0 || 1140: 5981 1443d000
+  com.rovio.baba-5981  [006] ...1   203.471505: do_swap_page: id 5, table 0 || 1141: 5981 7f20d5d000
+  com.rovio.baba-5981  [006] ...1   203.471520: do_swap_page: id 5, table 0 || 1142: 5981 7ee3fd7000
+  com.rovio.baba-5981  [006] ...1   203.471536: do_swap_page: id 5, table 0 || 1143: 5981 7eb67d6000
+  com.rovio.baba-5981  [006] ...1   203.471551: do_swap_page: id 5, table 0 || 1144: 5981 7eb6a26000
+  com.rovio.baba-5981  [006] ...1   203.471556: do_swap_page: id 5, table 0 || 1145: 5981 7eb6a25000
+  com.rovio.baba-5981  [006] ...1   203.471570: do_swap_page: id 5, table 0 || 1146: 5981 7eb5be3000
+  com.rovio.baba-5981  [006] ...1   203.471581: do_swap_page: id 5, table 0 || 1147: 5981 7eb5adc000
+  com.rovio.baba-5981  [006] ...1   203.471613: do_swap_page: id 5, table 0 || 1148: 5981 7f28e69000
+  com.rovio.baba-5981  [006] ...1   203.471824: do_swap_page: id 5, table 0 || 1149: 5981 7f28c6e000
+  com.rovio.baba-5981  [006] ...1   203.471838: do_swap_page: id 5, table 0 || 1150: 5981 7ed71f7000
+  com.rovio.baba-5981  [006] ...1   203.471853: do_swap_page: id 5, table 0 || 1151: 5981 7eb5fbc000
+  com.rovio.baba-5981  [006] ...1   203.471857: do_swap_page: id 5, table 0 || 1152: 5981 7eb5fbd000
+  com.rovio.baba-5981  [006] ...1   203.471871: do_swap_page: id 5, table 0 || 1153: 5981 7eb5e69000
+  com.rovio.baba-5981  [006] ...1   203.471884: do_swap_page: id 5, table 0 || 1154: 5981 7eb66c8000
+  com.rovio.baba-5981  [006] ...1   203.471904: do_swap_page: id 5, table 0 || 1155: 5981 7daa940000
+  com.rovio.baba-5981  [006] ...1   203.472075: do_swap_page: id 5, table 0 || 1156: 5981 7ee3fad000
+  com.rovio.baba-5981  [006] ...1   203.472085: do_swap_page: id 5, table 0 || 1157: 5981 7daa7d4000
+  com.rovio.baba-5981  [006] ...1   203.472094: do_swap_page: id 5, table 0 || 1158: 5981 7eb6703000
+  com.rovio.baba-5981  [006] ...1   203.472103: do_swap_page: id 5, table 0 || 1159: 5981 7eb6ab0000
+  com.rovio.baba-5981  [006] ...1   203.472126: do_swap_page: id 5, table 0 || 1160: 5981 7eb6ab1000
+  com.rovio.baba-5981  [006] ...1   203.472131: do_swap_page: id 5, table 0 || 1161: 5981 7ee3fac000
+  com.rovio.baba-5981  [006] ...1   203.472142: do_swap_page: id 5, table 0 || 1162: 5981 7eb6ac8000
+  com.rovio.baba-5981  [006] ...1   203.472150: do_swap_page: id 5, table 0 || 1163: 5981 7ee3fa7000
+  com.rovio.baba-5981  [006] ...1   203.472161: do_swap_page: id 5, table 0 || 1164: 5981 145e3000
+  com.rovio.baba-5981  [006] ...1   203.472169: do_swap_page: id 5, table 0 || 1165: 5981 7f20d4d000
+  com.rovio.baba-5981  [006] ...1   203.472180: do_swap_page: id 5, table 0 || 1166: 5981 7d6d8ac000
+  com.rovio.baba-5981  [006] ...1   203.472188: do_swap_page: id 5, table 0 || 1167: 5981 7eb6a33000
+  com.rovio.baba-5981  [006] ...1   203.472198: do_swap_page: id 5, table 0 || 1168: 5981 7eb6a58000
+  com.rovio.baba-5981  [006] ...1   203.472206: do_swap_page: id 5, table 0 || 1169: 5981 7f28a84000
+  com.rovio.baba-5981  [006] ...1   203.472226: do_swap_page: id 5, table 0 || 1170: 5981 7eb6f3d000
+  com.rovio.baba-5981  [006] ...1   203.472238: do_swap_page: id 5, table 0 || 1171: 5981 7eb5abb000
+  com.rovio.baba-5981  [006] ...1   203.472246: do_swap_page: id 5, table 0 || 1172: 5981 7eb6bb7000
+           <...>-6170  [004] ...1   203.472282: do_swap_page: id 5, table 0 || 1173: 5981 7d6fa66000
+  com.rovio.baba-5981  [006] ...1   203.472298: do_swap_page: id 5, table 0 || 1174: 5981 7ee3fcc000
+           <...>-6170  [004] ...1   203.472301: do_swap_page: id 5, table 0 || 1175: 5981 7ebe732000
+  com.rovio.baba-5981  [006] ...1   203.472307: do_swap_page: id 5, table 0 || 1176: 5981 7daa7a7000
+           <...>-6170  [004] ...1   203.472308: do_swap_page: id 5, table 0 || 1177: 5981 7d6fa8e000
+  com.rovio.baba-5981  [006] ...1   203.472324: do_swap_page: id 5, table 0 || 1178: 5981 1431a000
+  com.rovio.baba-5981  [006] ...1   203.472332: do_swap_page: id 5, table 0 || 1179: 5981 7f20d4e000
+           <...>-6170  [004] ...1   203.472350: do_swap_page: id 5, table 0 || 1180: 5981 7d6cc26000
+  com.rovio.baba-5981  [006] ...1   203.472359: do_swap_page: id 5, table 0 || 1181: 5981 7daa7d5000
+  com.rovio.baba-5981  [006] ...1   203.472365: do_swap_page: id 5, table 0 || 1182: 5981 7eb6ec1000
+           <...>-6170  [004] ...1   203.472368: do_swap_page: id 5, table 0 || 1183: 5981 7d69fe4000
+  com.rovio.baba-5981  [006] ...1   203.472374: do_swap_page: id 5, table 0 || 1184: 5981 7eb6bac000
+           <...>-6170  [004] ...1   203.472375: do_swap_page: id 5, table 0 || 1185: 5981 7d69fe5000
+  com.rovio.baba-5981  [006] ...1   203.472381: do_swap_page: id 5, table 0 || 1186: 5981 7eb6a27000
+           <...>-6170  [004] ...1   203.472382: do_swap_page: id 5, table 0 || 1187: 5981 7d69fd9000
+           <...>-6170  [004] ...1   203.472389: do_swap_page: id 5, table 0 || 1188: 5981 7d6fa8c000
+  com.rovio.baba-5981  [006] ...1   203.472390: do_swap_page: id 5, table 0 || 1189: 5981 7eb5fef000
+           <...>-6170  [004] ...1   203.472404: do_swap_page: id 5, table 0 || 1190: 5981 7daa948000
+           <...>-6170  [004] ...1   203.472414: do_swap_page: id 5, table 0 || 1191: 5981 7d6a07d000
+           <...>-6170  [004] ...1   203.472421: do_swap_page: id 5, table 0 || 1192: 5981 7ee3fb1000
+           <...>-6170  [004] ...1   203.472428: do_swap_page: id 5, table 0 || 1193: 5981 7daa7e6000
+           <...>-6170  [004] ...1   203.472432: do_swap_page: id 5, table 0 || 1194: 5981 7daa7e7000
+           <...>-6170  [004] ...1   203.472442: do_swap_page: id 5, table 0 || 1195: 5981 7d6cc24000
+           <...>-6170  [004] ...1   203.472453: do_swap_page: id 5, table 0 || 1196: 5981 7ed70dd000
+           <...>-6170  [004] ...1   203.472462: do_swap_page: id 5, table 0 || 1197: 5981 7ed7119000
+           <...>-6170  [004] ...1   203.472471: do_swap_page: id 5, table 0 || 1198: 5981 7f2d5fb000
+           <...>-6170  [004] ...1   203.472479: do_swap_page: id 5, table 0 || 1199: 5981 7d6a04d000
+           <...>-6170  [004] ...1   203.472488: do_swap_page: id 5, table 0 || 1200: 5981 7fbe25b000
+           <...>-6170  [004] ...1   203.472496: do_swap_page: id 5, table 0 || 1201: 5981 7d6f9ff000
+           <...>-6170  [004] ...1   203.472506: do_swap_page: id 5, table 0 || 1202: 5981 7eb5eed000
+           <...>-6170  [004] ...1   203.472517: do_swap_page: id 5, table 0 || 1203: 5981 7d49bc6000
+           <...>-6170  [004] ...1   203.472526: do_swap_page: id 5, table 0 || 1204: 5981 7f28982000
+  com.rovio.baba-5981  [006] ...1   203.472538: do_swap_page: id 5, table 0 || 1205: 5981 7eb6b2b000
+           <...>-6170  [004] ...1   203.472541: do_swap_page: id 5, table 0 || 1206: 5981 7ed720e000
+           <...>-6170  [004] ...1   203.472549: do_swap_page: id 5, table 0 || 1207: 5981 7daa86e000
+  com.rovio.baba-5981  [006] ...1   203.472550: do_swap_page: id 5, table 0 || 1208: 5981 7eb6ade000
+  com.rovio.baba-5981  [006] ...1   203.472558: do_swap_page: id 5, table 0 || 1209: 5981 7eb6bbd000
+  com.rovio.baba-5981  [006] ...1   203.472568: do_swap_page: id 5, table 0 || 1210: 5981 7eb6adf000
+  com.rovio.baba-5981  [006] ...1   203.472578: do_swap_page: id 5, table 0 || 1211: 5981 7eb5bd7000
+  com.rovio.baba-5981  [006] ...1   203.472588: do_swap_page: id 5, table 0 || 1212: 5981 1436f000
+  com.rovio.baba-5981  [006] ...1   203.472599: do_swap_page: id 5, table 0 || 1213: 5981 7eb6aa2000
+  com.rovio.baba-5981  [006] ...1   203.472608: do_swap_page: id 5, table 0 || 1215: 5981 7eb5b6a000
+           <...>-6170  [004] ...1   203.472609: do_swap_page: id 5, table 0 || 1214: 5981 7d69ff1000
+           <...>-6170  [004] ...1   203.472624: do_swap_page: id 5, table 0 || 1216: 5981 7f2d45c000
+           <...>-6170  [004] ...1   203.472654: do_swap_page: id 5, table 0 || 1217: 5981 7dd3a49000
+           <...>-6170  [004] ...1   203.472662: do_swap_page: id 5, table 0 || 1219: 5981 7ed7111000
+  com.rovio.baba-5981  [006] ...1   203.472662: do_swap_page: id 5, table 0 || 1218: 5981 7eb6b2c000
+           <...>-6170  [004] ...1   203.472669: do_swap_page: id 5, table 0 || 1220: 5981 7d6a082000
+  com.rovio.baba-5981  [006] ...1   203.472670: do_swap_page: id 5, table 0 || 1221: 5981 7eb6ec0000
+           <...>-6170  [004] ...1   203.472675: do_swap_page: id 5, table 0 || 1222: 5981 7dd3a4a000
+  com.rovio.baba-5981  [006] ...1   203.472680: do_swap_page: id 5, table 0 || 1223: 5981 7f28a7f000
+  com.rovio.baba-5981  [006] ...1   203.472690: do_swap_page: id 5, table 0 || 1224: 5981 7eb5be2000
+  com.rovio.baba-5981  [006] ...1   203.472824: do_swap_page: id 5, table 0 || 1225: 5981 7f28c91000
+  com.rovio.baba-5981  [006] ...1   203.472836: do_swap_page: id 5, table 0 || 1226: 5981 7eb6ae1000
+  com.rovio.baba-5981  [006] ...1   203.472844: do_swap_page: id 5, table 0 || 1227: 5981 7eb5c37000
+  com.rovio.baba-5981  [006] ...1   203.472854: do_swap_page: id 5, table 0 || 1228: 5981 7eb5e57000
+  com.rovio.baba-5981  [006] ...1   203.472866: do_swap_page: id 5, table 0 || 1229: 5981 7eb6e70000
+  com.rovio.baba-5981  [006] ...1   203.472876: do_swap_page: id 5, table 0 || 1230: 5981 144c4000
+  com.rovio.baba-5981  [006] ...1   203.472887: do_swap_page: id 5, table 0 || 1231: 5981 7eb6e77000
+  com.rovio.baba-5981  [006] ...1   203.472894: do_swap_page: id 5, table 0 || 1232: 5981 7eb5be4000
+  com.rovio.baba-5981  [006] ...1   203.472902: do_swap_page: id 5, table 0 || 1233: 5981 7daa93e000
+  com.rovio.baba-5981  [006] ...1   203.472952: do_swap_page: id 5, table 0 || 1234: 5981 7eb5be0000
+  com.rovio.baba-5981  [006] ...1   203.472961: do_swap_page: id 5, table 0 || 1235: 5981 7eb5be1000
+  com.rovio.baba-5981  [006] ...1   203.472977: do_swap_page: id 5, table 0 || 1236: 5981 7eb5c03000
+  com.rovio.baba-5981  [006] ...1   203.472986: do_swap_page: id 5, table 0 || 1237: 5981 7eb66dd000
+  com.rovio.baba-5981  [006] ...1   203.472994: do_swap_page: id 5, table 0 || 1238: 5981 7eb6068000
+  com.rovio.baba-5981  [006] ...1   203.473168: do_swap_page: id 5, table 0 || 1239: 5981 7ebe7cd000
+  com.rovio.baba-5981  [006] ...1   203.473179: do_swap_page: id 5, table 0 || 1240: 5981 7eb5b8f000
+  com.rovio.baba-5981  [006] ...1   203.473188: do_swap_page: id 5, table 0 || 1241: 5981 7eb5f48000
+  com.rovio.baba-5981  [006] ...1   203.473202: do_swap_page: id 5, table 0 || 1242: 5981 7eb6060000
+  com.rovio.baba-5981  [006] ...1   203.473210: do_swap_page: id 5, table 0 || 1243: 5981 7eb66e4000
+  com.rovio.baba-5981  [006] ...1   203.473221: do_swap_page: id 5, table 0 || 1244: 5981 144fd000
+  com.rovio.baba-5981  [006] ...1   203.473232: do_swap_page: id 5, table 0 || 1245: 5981 7eb5dbb000
+  com.rovio.baba-5981  [006] ...1   203.473240: do_swap_page: id 5, table 0 || 1246: 5981 7f28d0c000
+  com.rovio.baba-5981  [006] ...1   203.473248: do_swap_page: id 5, table 0 || 1247: 5981 7eb5f1d000
+  com.rovio.baba-5981  [006] ...1   203.473255: do_swap_page: id 5, table 0 || 1248: 5981 7eb6ae0000
+  com.rovio.baba-5981  [006] ...1   203.473330: do_swap_page: id 5, table 0 || 1249: 5981 7eb67fe000
+  com.rovio.baba-5981  [006] ...1   203.473370: do_swap_page: id 5, table 0 || 1250: 5981 7eb5c04000
+  com.rovio.baba-5981  [006] ...1   203.473400: do_swap_page: id 5, table 0 || 1251: 5981 7f28eb3000
+  com.rovio.baba-5981  [006] ...1   203.473422: do_swap_page: id 5, table 0 || 1252: 5981 7f28eaf000
+  com.rovio.baba-5981  [006] ...1   203.473433: do_swap_page: id 5, table 0 || 1253: 5981 14294000
+  com.rovio.baba-5981  [006] ...1   203.473461: do_swap_page: id 5, table 0 || 1254: 5981 14311000
+  com.rovio.baba-5981  [006] ...1   203.473474: do_swap_page: id 5, table 0 || 1255: 5981 7f20d56000
+  com.rovio.baba-5981  [006] ...1   203.473481: do_swap_page: id 5, table 0 || 1256: 5981 1432a000
+  com.rovio.baba-5981  [006] ...1   203.473489: do_swap_page: id 5, table 0 || 1257: 5981 7f20d54000
+  com.rovio.baba-5981  [006] ...1   203.473498: do_swap_page: id 5, table 0 || 1258: 5981 7f20e11000
+  com.rovio.baba-5981  [006] ...1   203.473507: do_swap_page: id 5, table 0 || 1259: 5981 1446a000
+  com.rovio.baba-5981  [006] ...1   203.473512: do_swap_page: id 5, table 0 || 1260: 5981 1446c000
+  com.rovio.baba-5981  [006] ...1   203.473518: do_swap_page: id 5, table 0 || 1261: 5981 1446f000
+  com.rovio.baba-5981  [006] ...1   203.473532: do_swap_page: id 5, table 0 || 1262: 5981 7f20d48000
+  com.rovio.baba-5981  [006] ...1   203.473543: do_swap_page: id 5, table 0 || 1263: 5981 7eb6a59000
+  com.rovio.baba-5981  [006] ...1   203.473551: do_swap_page: id 5, table 0 || 1264: 5981 7f20e0d000
+  com.rovio.baba-5981  [006] ...1   203.473557: do_swap_page: id 5, table 0 || 1265: 5981 14469000
+  com.rovio.baba-5981  [006] ...1   203.473566: do_swap_page: id 5, table 0 || 1266: 5981 14324000
+  com.rovio.baba-5981  [006] ...1   203.473573: do_swap_page: id 5, table 0 || 1267: 5981 7f20d44000
+  com.rovio.baba-5981  [006] ...1   203.473582: do_swap_page: id 5, table 0 || 1268: 5981 7f28e60000
+  com.rovio.baba-5981  [006] ...1   203.473588: do_swap_page: id 5, table 0 || 1269: 5981 7f28e74000
+  com.rovio.baba-5981  [006] ...1   203.473595: do_swap_page: id 5, table 0 || 1270: 5981 7f20dff000
+  com.rovio.baba-5981  [006] ...1   203.473601: do_swap_page: id 5, table 0 || 1271: 5981 7f28e5f000
+  com.rovio.baba-5981  [006] ...1   203.473625: do_swap_page: id 5, table 0 || 1272: 5981 7eb6a5b000
+  com.rovio.baba-5981  [006] ...1   203.473634: do_swap_page: id 5, table 0 || 1273: 5981 7eb6b59000
+  com.rovio.baba-5981  [006] ...1   203.473682: do_swap_page: id 5, table 0 || 1274: 5981 1441a000
+  com.rovio.baba-5981  [006] ...1   203.473693: do_swap_page: id 5, table 0 || 1275: 5981 7ec0410000
+  com.rovio.baba-5981  [006] ...1   203.473709: do_swap_page: id 5, table 0 || 1276: 5981 143a3000
+  com.rovio.baba-5981  [006] ...1   203.473731: do_swap_page: id 5, table 0 || 1277: 5981 14299000
+  com.rovio.baba-5981  [006] ...1   203.473767: do_swap_page: id 5, table 0 || 1278: 5981 14392000
+  com.rovio.baba-5981  [006] ...1   203.473775: do_swap_page: id 5, table 0 || 1279: 5981 143a0000
+           <...>-5987  [004] ...1   203.474903: do_swap_page: id 5, table 0 || 1280: 5981 7d5cf05000
+           <...>-5987  [004] ...1   203.474956: do_swap_page: id 5, table 0 || 1281: 5981 7ed71c0000
+           <...>-5987  [004] ...1   203.475135: do_swap_page: id 5, table 0 || 1282: 5981 7ed656d000
+           <...>-5987  [004] ...1   203.475711: do_swap_page: id 5, table 0 || 1283: 5981 143dc000
+  com.rovio.baba-5981  [006] ...1   203.476533: do_swap_page: id 5, table 0 || 1284: 5981 7129b000
+           <...>-6992  [007] ....   203.483449: miss_page_handler: miss page handler start! target(id,table): 5,1
+           <...>-200   [002] ....   203.483466: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [002] ....   203.483473: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+       UnityMain-6037  [007] d..4   204.160331: __free_cluster: [REMOTE __free_cluster] free cluster 1283
+       UnityMain-6037  [007] d..4   204.160337: __free_cluster: [REMOTE __free_cluster] free cluster 835
+       UnityMain-6037  [007] d..4   204.406378: __free_cluster: [REMOTE __free_cluster] free cluster 899
+       UnityMain-6037  [004] d..4   204.439754: __free_cluster: [REMOTE __free_cluster] free cluster 963
+       UnityMain-6037  [007] d..4   204.708097: __free_cluster: [REMOTE __free_cluster] free cluster 1027
+       UnityMain-6037  [007] d..4   214.170317: __free_cluster: [REMOTE __free_cluster] free cluster 1155
+       UnityMain-6037  [007] d..4   214.170322: __free_cluster: [REMOTE __free_cluster] free cluster 1219
+       UnityMain-6037  [007] d..4   214.170332: __free_cluster: [REMOTE __free_cluster] free cluster 1091
+              sh-7076  [007] ....   253.508602: swap_counter_dump_handler: pid 5981: counter 0 = 71913
+              sh-7076  [007] ....   253.508608: swap_counter_dump_handler: pid 5981: counter 1 = 0
+              sh-7076  [007] ....   253.508609: swap_counter_dump_handler: pid 5981: counter 2 = 0
+              sh-7076  [007] ....   253.508610: swap_counter_dump_handler: pid 5981: counter 3 = 0
+              sh-7076  [007] ....   253.508611: swap_counter_dump_handler: pid 5981: counter 4 = 0
+              sh-7076  [007] ....   253.508611: swap_counter_dump_handler: pid 5981: counter 5 = 0
+              sh-7076  [007] ....   253.508612: swap_counter_dump_handler: pid 5981: counter >5 = 0
+              sh-7076  [007] ....   253.508613: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-7076  [007] ....   253.508614: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-7078  [007] ....   253.522929: swap_counter_dump_handler: pid 6475: counter 0 = 0
+              sh-7078  [007] ....   253.522931: swap_counter_dump_handler: pid 6475: counter 1 = 0
+              sh-7078  [007] ....   253.522932: swap_counter_dump_handler: pid 6475: counter 2 = 0
+              sh-7078  [007] ....   253.522933: swap_counter_dump_handler: pid 6475: counter 3 = 0
+              sh-7078  [007] ....   253.522934: swap_counter_dump_handler: pid 6475: counter 4 = 0
+              sh-7078  [007] ....   253.522934: swap_counter_dump_handler: pid 6475: counter 5 = 0
+              sh-7078  [007] ....   253.522935: swap_counter_dump_handler: pid 6475: counter >5 = 0
+              sh-7078  [007] ....   253.522935: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-7078  [007] ....   253.522936: swap_counter_dump_handler: remote: total faulted cold page: 0

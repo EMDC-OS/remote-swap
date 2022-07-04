@@ -1,0 +1,59 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 48/48   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-200   [000] ....     0.525178: send_target_manager: 3[REMOTE send_target_manager] target manager started
+           <...>-200   [000] ....     0.525211: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [000] ....     0.525373: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [000] ....     0.525374: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-5998  [007] ....    68.644664: app_switch_start_handler: ###########switch start! foreground 10122#############
+           <...>-5998  [007] ....    68.644670: prefetch_handler: prefetch handler start! target(id,table): 5,0
+           <...>-5998  [006] ....    69.047843: miss_page_handler: miss page handler start! target(id,table): 5,1
+           <...>-200   [000] ....    69.047867: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [000] ....    69.047877: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6526  [007] ....   124.213861: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-6526  [007] ....   124.213865: prefetch_handler: prefetch handler start! target(id,table): 4,0
+           <...>-6526  [005] ....   124.919083: miss_page_handler: miss page handler start! target(id,table): 4,1
+           <...>-200   [000] ....   124.919122: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [000] ....   124.919129: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [002] ....   163.466818: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [002] ....   163.466838: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7034  [007] ....   202.523392: app_switch_start_handler: ###########switch start! foreground 10122#############
+           <...>-7034  [007] ....   202.523397: prefetch_handler: prefetch handler start! target(id,table): 5,0
+           <...>-7034  [005] ....   202.655873: miss_page_handler: miss page handler start! target(id,table): 5,1
+           <...>-200   [004] ....   202.656010: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] ....   202.656014: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+       UnityMain-6063  [005] d..4   203.128270: __free_cluster: [REMOTE __free_cluster] free cluster 1159
+       UnityMain-6063  [005] d..4   203.479648: __free_cluster: [REMOTE __free_cluster] free cluster 1223
+       UnityMain-6063  [007] d..4   203.577513: __free_cluster: [REMOTE __free_cluster] free cluster 1287
+       UnityMain-6063  [007] d..4   203.894647: __free_cluster: [REMOTE __free_cluster] free cluster 1351
+       UnityMain-6063  [007] d..4   205.411269: __free_cluster: [REMOTE __free_cluster] free cluster 1031
+       UnityMain-6063  [007] d..4   205.411282: __free_cluster: [REMOTE __free_cluster] free cluster 967
+ UnityGfxDeviceW-6092  [005] d..4   205.600262: __free_cluster: [REMOTE __free_cluster] free cluster 1095
+       UnityMain-6063  [007] d..4   227.651237: __free_cluster: [REMOTE __free_cluster] free cluster 513
+       UnityMain-6063  [007] d..4   227.651270: __free_cluster: [REMOTE __free_cluster] free cluster 777
+              sh-7070  [007] ....   252.677968: swap_counter_dump_handler: pid 6005: counter 0 = 72983
+              sh-7070  [007] ....   252.677971: swap_counter_dump_handler: pid 6005: counter 1 = 0
+              sh-7070  [007] ....   252.677972: swap_counter_dump_handler: pid 6005: counter 2 = 0
+              sh-7070  [007] ....   252.677972: swap_counter_dump_handler: pid 6005: counter 3 = 0
+              sh-7070  [007] ....   252.677973: swap_counter_dump_handler: pid 6005: counter 4 = 0
+              sh-7070  [007] ....   252.677973: swap_counter_dump_handler: pid 6005: counter 5 = 0
+              sh-7070  [007] ....   252.677974: swap_counter_dump_handler: pid 6005: counter >5 = 0
+              sh-7070  [007] ....   252.677975: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-7070  [007] ....   252.677975: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-7072  [007] ....   252.691602: swap_counter_dump_handler: pid 6534: counter 0 = 0
+              sh-7072  [007] ....   252.691605: swap_counter_dump_handler: pid 6534: counter 1 = 0
+              sh-7072  [007] ....   252.691606: swap_counter_dump_handler: pid 6534: counter 2 = 0
+              sh-7072  [007] ....   252.691606: swap_counter_dump_handler: pid 6534: counter 3 = 0
+              sh-7072  [007] ....   252.691607: swap_counter_dump_handler: pid 6534: counter 4 = 0
+              sh-7072  [007] ....   252.691607: swap_counter_dump_handler: pid 6534: counter 5 = 0
+              sh-7072  [007] ....   252.691608: swap_counter_dump_handler: pid 6534: counter >5 = 0
+              sh-7072  [007] ....   252.691609: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-7072  [007] ....   252.691610: swap_counter_dump_handler: remote: total faulted cold page: 0

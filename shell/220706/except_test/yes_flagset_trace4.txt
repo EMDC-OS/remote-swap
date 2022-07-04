@@ -1,0 +1,1585 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 1574/1574   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+ send_target_man-200   [002] d..2   445.921718: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-6815  [007] ....   446.811082: app_switch_start_handler: ###########switch start! foreground 0#############
+           <...>-6201  [000] d..4   452.323426: __free_cluster: [REMOTE __free_cluster] free cluster 1151
+           <...>-6201  [000] d..4   452.517846: __free_cluster: [REMOTE __free_cluster] free cluster 895
+           <...>-6201  [000] d..4   452.556703: __free_cluster: [REMOTE __free_cluster] free cluster 831
+           <...>-6201  [000] d..4   452.556717: __free_cluster: [REMOTE __free_cluster] free cluster 639
+           <...>-6201  [000] d..4   452.556723: __free_cluster: [REMOTE __free_cluster] free cluster 767
+           <...>-6201  [000] d..3   452.557636: __free_cluster: [REMOTE __free_cluster] free cluster 1087
+           <...>-6202  [001] d..4   452.559335: __free_cluster: [REMOTE __free_cluster] free cluster 703
+           <...>-6202  [001] d..4   452.559341: __free_cluster: [REMOTE __free_cluster] free cluster 959
+           <...>-6202  [001] ....   452.560310: do_swap_page: Exception touched after marked : 6188 "ReferenceQueueD" 7f28987000 73f48
+           <...>-6203  [000] ....   452.561953: do_swap_page: Exception touched after marked : 6188 "FinalizerDaemon" 7f39876000 7ff1a
+ send_target_man-200   [002] d..2   455.946763: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] ...1   455.946865: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 7: alloc new cluster 247
+ send_target_man-200   [002] ...1   455.961555: send_zram_to_nbd: target sent id 7: 6188 9e3cf000 f700
+         sql-5-0-6289  [001] ....   462.861820: do_swap_page: Exception touched after marked : 6188 "sql-5-0" 7e90c25000 63f05
+ send_target_man-200   [002] d..2   465.973666: send_target_manager: send target manager - id, which_table : 7, 1
+ gm counters ini-6266  [000] ....   467.869825: read_swap_cache_async: remote readpage 6188 "gm counters ini" 9e3cf000 f700
+ gm counters ini-6266  [000] ....   467.869844: do_swap_page: Exception : 6188 "gm counters ini" 9e3cf000 f700
+ ogle.android.gm-6188  [000] ....   467.893947: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e351000 53f55
+ ogle.android.gm-6188  [000] ....   467.894122: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9dc3c000 4bf5f
+ send_target_man-200   [002] d..2   476.001790: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2   486.026812: send_target_manager: send target manager - id, which_table : 7, 1
+              sh-6858  [007] ....   488.603366: app_switch_start_handler: ###########switch start! foreground 10136#############
+              sh-6858  [007] ....   488.603374: prefetch_handler: prefetch handler start! target(id,table): 7,1
+ ogle.android.gm-6188  [000] ...1   488.624159: do_swap_page: id 7, table 0 || 0: 6188 7f28a06000
+ ogle.android.gm-6188  [000] ...1   488.624196: do_swap_page: id 7, table 0 || 1: 6188 7fbf700000
+ ogle.android.gm-6188  [000] ...1   488.624230: do_swap_page: id 7, table 0 || 2: 6188 7fbe166000
+ ogle.android.gm-6188  [000] ...1   488.624299: do_swap_page: id 7, table 0 || 3: 6188 7eae3ce000
+           <...>-6258  [000] ...1   488.624403: do_swap_page: id 7, table 0 || 4: 6188 7e9686b000
+   Binder:6188_4-6363  [001] ...1   488.627500: do_swap_page: id 7, table 0 || 5: 6188 7e6de40000
+   Binder:6188_4-6363  [001] ...1   488.627525: do_swap_page: id 7, table 0 || 6: 6188 7e5d4a6000
+   Binder:6188_4-6363  [001] ...1   488.627603: do_swap_page: id 7, table 0 || 7: 6188 7e671fb000
+   Binder:6188_4-6363  [001] ...1   488.627662: do_swap_page: id 7, table 0 || 8: 6188 7e671fc000
+   Binder:6188_4-6363  [001] ...1   488.627721: do_swap_page: id 7, table 0 || 9: 6188 7e6de29000
+   Binder:6188_4-6363  [001] ...1   488.627736: do_swap_page: id 7, table 0 || 10: 6188 7e6de6a000
+   Binder:6188_4-6363  [001] ...1   488.627769: do_swap_page: id 7, table 0 || 11: 6188 7e90c26000
+   Binder:6188_4-6363  [001] ...1   488.627812: do_swap_page: id 7, table 0 || 12: 6188 7e72f36000
+ ogle.android.gm-6188  [004] ...1   488.630171: do_swap_page: id 7, table 0 || 13: 6188 7e72f1e000
+ ogle.android.gm-6188  [004] ...1   488.630195: do_swap_page: id 7, table 0 || 14: 6188 7fbd09f000
+ ogle.android.gm-6188  [004] ...1   488.630238: do_swap_page: id 7, table 0 || 15: 6188 7f2da79000
+ ogle.android.gm-6188  [004] ...1   488.630249: do_swap_page: id 7, table 0 || 16: 6188 7f2da7a000
+ ogle.android.gm-6188  [004] ...1   488.630286: do_swap_page: id 7, table 0 || 17: 6188 9da71000
+ ogle.android.gm-6188  [004] ...1   488.630299: do_swap_page: id 7, table 0 || 18: 6188 9da57000
+ ogle.android.gm-6188  [004] ...1   488.630307: do_swap_page: id 7, table 0 || 19: 6188 9dae4000
+ ogle.android.gm-6188  [004] ...1   488.630315: do_swap_page: id 7, table 0 || 20: 6188 9da41000
+ ogle.android.gm-6188  [004] ...1   488.630321: do_swap_page: id 7, table 0 || 21: 6188 9db2c000
+ ogle.android.gm-6188  [004] ...1   488.630328: do_swap_page: id 7, table 0 || 22: 6188 9da3b000
+ ogle.android.gm-6188  [004] ...1   488.630336: do_swap_page: id 7, table 0 || 23: 6188 9daf0000
+ ogle.android.gm-6188  [004] ...1   488.630345: do_swap_page: id 7, table 0 || 24: 6188 9da80000
+ ogle.android.gm-6188  [004] ...1   488.630353: do_swap_page: id 7, table 0 || 25: 6188 9db60000
+ ogle.android.gm-6188  [004] ...1   488.630362: do_swap_page: id 7, table 0 || 26: 6188 9db73000
+ ogle.android.gm-6188  [004] ...1   488.630371: do_swap_page: id 7, table 0 || 27: 6188 9da32000
+ ogle.android.gm-6188  [004] ...1   488.630379: do_swap_page: id 7, table 0 || 28: 6188 9da28000
+ ogle.android.gm-6188  [004] ...1   488.630385: do_swap_page: id 7, table 0 || 29: 6188 9db0c000
+ ogle.android.gm-6188  [004] ...1   488.630393: do_swap_page: id 7, table 0 || 30: 6188 9dbb8000
+ ogle.android.gm-6188  [004] ...1   488.630399: do_swap_page: id 7, table 0 || 31: 6188 9db0f000
+ ogle.android.gm-6188  [004] ...1   488.630407: do_swap_page: id 7, table 0 || 32: 6188 9d9de000
+ ogle.android.gm-6188  [004] ...1   488.630414: do_swap_page: id 7, table 0 || 33: 6188 9d9f9000
+ ogle.android.gm-6188  [004] ...1   488.630424: do_swap_page: id 7, table 0 || 34: 6188 9db09000
+ ogle.android.gm-6188  [004] ...1   488.630432: do_swap_page: id 7, table 0 || 35: 6188 9d995000
+ ogle.android.gm-6188  [004] ...1   488.630438: do_swap_page: id 7, table 0 || 36: 6188 9da2e000
+ ogle.android.gm-6188  [004] ...1   488.630449: do_swap_page: id 7, table 0 || 37: 6188 9db2e000
+ ogle.android.gm-6188  [004] ...1   488.630456: do_swap_page: id 7, table 0 || 38: 6188 9daa6000
+ ogle.android.gm-6188  [004] ...1   488.630463: do_swap_page: id 7, table 0 || 39: 6188 9da4b000
+ ogle.android.gm-6188  [004] ...1   488.630471: do_swap_page: id 7, table 0 || 40: 6188 9db8a000
+ ogle.android.gm-6188  [004] ...1   488.630483: do_swap_page: id 7, table 0 || 41: 6188 9d9bb000
+ ogle.android.gm-6188  [004] ...1   488.630489: do_swap_page: id 7, table 0 || 42: 6188 9db13000
+ ogle.android.gm-6188  [004] ...1   488.630495: do_swap_page: id 7, table 0 || 43: 6188 9da51000
+ ogle.android.gm-6188  [004] ...1   488.630502: do_swap_page: id 7, table 0 || 44: 6188 9d9a2000
+ ogle.android.gm-6188  [004] ...1   488.630508: do_swap_page: id 7, table 0 || 45: 6188 9da0b000
+ ogle.android.gm-6188  [004] ...1   488.630514: do_swap_page: id 7, table 0 || 46: 6188 9db5d000
+ ogle.android.gm-6188  [004] ...1   488.630522: do_swap_page: id 7, table 0 || 47: 6188 9da24000
+ ogle.android.gm-6188  [004] ...1   488.630529: do_swap_page: id 7, table 0 || 48: 6188 9db99000
+ ogle.android.gm-6188  [004] ...1   488.630541: do_swap_page: id 7, table 0 || 49: 6188 9dbc3000
+ ogle.android.gm-6188  [004] ...1   488.630548: do_swap_page: id 7, table 0 || 50: 6188 9d9ff000
+ ogle.android.gm-6188  [004] ...1   488.630555: do_swap_page: id 7, table 0 || 51: 6188 9d9e2000
+ ogle.android.gm-6188  [004] ...1   488.630562: do_swap_page: id 7, table 0 || 52: 6188 9d9e3000
+ ogle.android.gm-6188  [004] ...1   488.630569: do_swap_page: id 7, table 0 || 53: 6188 9daa1000
+ ogle.android.gm-6188  [004] ...1   488.630575: do_swap_page: id 7, table 0 || 54: 6188 9dbb2000
+ ogle.android.gm-6188  [004] ...1   488.630582: do_swap_page: id 7, table 0 || 55: 6188 9db15000
+ ogle.android.gm-6188  [004] ...1   488.630590: do_swap_page: id 7, table 0 || 56: 6188 9da13000
+ ogle.android.gm-6188  [004] ...1   488.630601: do_swap_page: id 7, table 0 || 57: 6188 9d9a7000
+ ogle.android.gm-6188  [004] ...1   488.630607: do_swap_page: id 7, table 0 || 58: 6188 9da37000
+ ogle.android.gm-6188  [004] ...1   488.630614: do_swap_page: id 7, table 0 || 59: 6188 9da35000
+ ogle.android.gm-6188  [004] ...1   488.630621: do_swap_page: id 7, table 0 || 60: 6188 9d9ef000
+ ogle.android.gm-6188  [004] ...1   488.630629: do_swap_page: id 7, table 0 || 61: 6188 9da04000
+ ogle.android.gm-6188  [004] ...1   488.630637: do_swap_page: id 7, table 0 || 62: 6188 9da6e000
+ ogle.android.gm-6188  [004] ...1   488.630645: do_swap_page: id 7, table 0 || 63: 6188 9db32000
+ ogle.android.gm-6188  [004] ...1   488.630665: do_swap_page: id 7, table 0 || 64: 6188 9dbaf000
+           <...>-6258  [004] ...1   488.630775: do_swap_page: id 7, table 0 || 65: 6188 7eae45f000
+           <...>-6258  [004] ...1   488.630790: do_swap_page: id 7, table 0 || 66: 6188 7e9686f000
+           <...>-6258  [004] ...1   488.630798: do_swap_page: id 7, table 0 || 67: 6188 7f2dad7000
+           <...>-6258  [004] ...1   488.630809: do_swap_page: id 7, table 0 || 68: 6188 7eae3c8000
+           <...>-6258  [004] ...1   488.630816: do_swap_page: id 7, table 0 || 69: 6188 7eae48e000
+           <...>-6258  [004] ...1   488.630850: do_swap_page: id 7, table 0 || 70: 6188 7e96b99000
+           <...>-6258  [004] ...1   488.630859: do_swap_page: id 7, table 0 || 71: 6188 7e96ae5000
+           <...>-6258  [004] ...1   488.630865: do_swap_page: id 7, table 0 || 72: 6188 7e96b80000
+           <...>-6258  [004] ...1   488.630871: do_swap_page: id 7, table 0 || 73: 6188 7e96b8e000
+           <...>-6258  [004] ...1   488.630881: do_swap_page: id 7, table 0 || 74: 6188 7e969f3000
+           <...>-6258  [004] ...1   488.630890: do_swap_page: id 7, table 0 || 75: 6188 7e90c36000
+           <...>-6258  [004] ...1   488.630908: do_swap_page: id 7, table 0 || 76: 6188 7e96b98000
+           <...>-6258  [004] ...1   488.630918: do_swap_page: id 7, table 0 || 77: 6188 7f28986000
+           <...>-6258  [004] ...1   488.630925: do_swap_page: id 7, table 0 || 78: 6188 7f2d9c1000
+           <...>-6258  [004] ...1   488.630932: do_swap_page: id 7, table 0 || 79: 6188 7f208fe000
+           <...>-6258  [004] ...1   488.630940: do_swap_page: id 7, table 0 || 80: 6188 7e96a86000
+           <...>-6258  [004] ...1   488.630947: do_swap_page: id 7, table 0 || 81: 6188 7e96b17000
+           <...>-6258  [004] ...1   488.630953: do_swap_page: id 7, table 0 || 82: 6188 7e96840000
+           <...>-6258  [004] ...1   488.630958: do_swap_page: id 7, table 0 || 83: 6188 7e96b20000
+           <...>-6258  [004] ...1   488.630963: do_swap_page: id 7, table 0 || 84: 6188 7e96b13000
+           <...>-6258  [004] ...1   488.630970: do_swap_page: id 7, table 0 || 85: 6188 7e96a4f000
+           <...>-6258  [004] ...1   488.630974: do_swap_page: id 7, table 0 || 86: 6188 7e96b8d000
+           <...>-6258  [004] ...1   488.630978: do_swap_page: id 7, table 0 || 87: 6188 7e96b16000
+           <...>-6258  [004] ...1   488.630983: do_swap_page: id 7, table 0 || 88: 6188 7e96b01000
+           <...>-6258  [004] ...1   488.630992: do_swap_page: id 7, table 0 || 89: 6188 7f2da78000
+           <...>-6258  [004] ...1   488.631004: do_swap_page: id 7, table 0 || 90: 6188 7fbe181000
+           <...>-6258  [004] ...1   488.631011: do_swap_page: id 7, table 0 || 91: 6188 7f2da01000
+           <...>-6258  [004] ...1   488.631023: do_swap_page: id 7, table 0 || 92: 6188 7e96a4c000
+           <...>-6258  [004] ...1   488.631035: do_swap_page: id 7, table 0 || 93: 6188 7e90af9000
+           <...>-6258  [004] ...1   488.631043: do_swap_page: id 7, table 0 || 94: 6188 7f2d170000
+           <...>-6258  [004] ...1   488.631051: do_swap_page: id 7, table 0 || 95: 6188 7f39836000
+           <...>-6258  [004] ...1   488.631070: do_swap_page: id 7, table 0 || 96: 6188 7e96b44000
+           <...>-6258  [004] ...1   488.631078: do_swap_page: id 7, table 0 || 97: 6188 7e730e8000
+           <...>-6258  [004] ...1   488.631084: do_swap_page: id 7, table 0 || 98: 6188 7e96b14000
+           <...>-6258  [004] ...1   488.631094: do_swap_page: id 7, table 0 || 99: 6188 7e96936000
+           <...>-6258  [004] ...1   488.631109: do_swap_page: id 7, table 0 || 100: 6188 7e96b15000
+           <...>-6258  [004] ...1   488.631118: do_swap_page: id 7, table 0 || 101: 6188 7e96a82000
+           <...>-6258  [004] ...1   488.631123: do_swap_page: id 7, table 0 || 102: 6188 7e96a83000
+           <...>-6258  [004] ...1   488.631134: do_swap_page: id 7, table 0 || 103: 6188 7f2db50000
+           <...>-6258  [004] ...1   488.631143: do_swap_page: id 7, table 0 || 104: 6188 7e90c4f000
+           <...>-6258  [004] ...1   488.631147: do_swap_page: id 7, table 0 || 105: 6188 7e90ab1000
+           <...>-6258  [004] ...1   488.631156: do_swap_page: id 7, table 0 || 106: 6188 7e90b38000
+           <...>-6258  [004] ...1   488.631163: do_swap_page: id 7, table 0 || 107: 6188 7f39843000
+           <...>-6258  [004] ...1   488.631172: do_swap_page: id 7, table 0 || 108: 6188 7e90dbf000
+           <...>-6258  [004] ...1   488.631186: do_swap_page: id 7, table 0 || 109: 6188 7e96a3f000
+           <...>-6258  [004] ...1   488.631228: do_swap_page: id 7, table 0 || 110: 6188 7fbe1c7000
+ ogle.android.gm-6188  [004] ...1   488.631301: do_swap_page: id 7, table 0 || 111: 6188 7eae415000
+ ogle.android.gm-6188  [006] ...1   488.636139: do_swap_page: id 7, table 0 || 112: 6188 71a8b000
+ ogle.android.gm-6188  [006] ...1   488.636255: do_swap_page: id 7, table 0 || 113: 6188 9e302000
+ ogle.android.gm-6188  [006] ...1   488.636280: do_swap_page: id 7, table 0 || 114: 6188 9db9a000
+ ogle.android.gm-6188  [006] ...1   488.636294: do_swap_page: id 7, table 0 || 115: 6188 7e96855000
+ ogle.android.gm-6188  [006] ...1   488.636301: do_swap_page: id 7, table 0 || 116: 6188 7eae463000
+ ogle.android.gm-6188  [006] ...1   488.636306: do_swap_page: id 7, table 0 || 117: 6188 7eae462000
+ ogle.android.gm-6188  [006] ...1   488.636311: do_swap_page: id 7, table 0 || 118: 6188 7eae461000
+ ogle.android.gm-6188  [006] ...1   488.636318: do_swap_page: id 7, table 0 || 119: 6188 7eae460000
+ ogle.android.gm-6188  [006] ...1   488.636328: do_swap_page: id 7, table 0 || 120: 6188 7e90ede000
+ ogle.android.gm-6188  [006] ...1   488.636339: do_swap_page: id 7, table 0 || 121: 6188 7f2da42000
+ ogle.android.gm-6188  [006] ...1   488.636345: do_swap_page: id 7, table 0 || 122: 6188 7eae2f7000
+ ogle.android.gm-6188  [006] ...1   488.636353: do_swap_page: id 7, table 0 || 123: 6188 7e96b97000
+ ogle.android.gm-6188  [006] ...1   488.636362: do_swap_page: id 7, table 0 || 124: 6188 7f28a63000
+ ogle.android.gm-6188  [006] ...1   488.636367: do_swap_page: id 7, table 0 || 125: 6188 7f28a62000
+ ogle.android.gm-6188  [006] ...1   488.636372: do_swap_page: id 7, table 0 || 126: 6188 7f28a61000
+ ogle.android.gm-6188  [006] ...1   488.636380: do_swap_page: id 7, table 0 || 127: 6188 7e9685b000
+ ogle.android.gm-6188  [006] ...1   488.636385: do_swap_page: id 7, table 0 || 128: 6188 7f28a5f000
+ ogle.android.gm-6188  [006] ...1   488.636395: do_swap_page: id 7, table 0 || 129: 6188 7fbe264000
+ ogle.android.gm-6188  [006] ...1   488.636405: do_swap_page: id 7, table 0 || 130: 6188 9e3f2000
+ ogle.android.gm-6188  [006] ...1   488.636426: do_swap_page: id 7, table 0 || 131: 6188 7e90edd000
+ ogle.android.gm-6188  [006] ...1   488.636437: do_swap_page: id 7, table 0 || 132: 6188 7eae3f4000
+ ogle.android.gm-6188  [006] ...1   488.636457: do_swap_page: id 7, table 0 || 133: 6188 7e72e77000
+ ogle.android.gm-6188  [006] ...1   488.636466: do_swap_page: id 7, table 0 || 134: 6188 7eae3f5000
+ ogle.android.gm-6188  [006] ...1   488.636670: do_swap_page: id 7, table 0 || 135: 6188 9e2d8000
+ ogle.android.gm-6188  [006] ...1   488.636678: do_swap_page: id 7, table 0 || 136: 6188 9e49c000
+ ogle.android.gm-6188  [006] ...1   488.636687: do_swap_page: id 7, table 0 || 137: 6188 9dc80000
+ ogle.android.gm-6188  [006] ...1   488.636705: do_swap_page: id 7, table 0 || 138: 6188 9e575000
+ ogle.android.gm-6188  [006] ...1   488.636722: do_swap_page: id 7, table 0 || 139: 6188 7fffff9000
+ ogle.android.gm-6188  [006] ...1   488.636763: do_swap_page: id 7, table 0 || 140: 6188 7f2d9c4000
+ ogle.android.gm-6188  [006] ...1   488.636783: do_swap_page: id 7, table 0 || 141: 6188 7fbe1fb000
+ ogle.android.gm-6188  [006] ...1   488.636797: do_swap_page: id 7, table 0 || 142: 6188 7f2dad6000
+ ogle.android.gm-6188  [006] ...1   488.636819: do_swap_page: id 7, table 0 || 143: 6188 7eae471000
+ ogle.android.gm-6188  [006] ...1   488.636827: do_swap_page: id 7, table 0 || 144: 6188 7fbe240000
+ ogle.android.gm-6188  [006] ...1   488.636909: do_swap_page: id 7, table 0 || 145: 6188 9dc10000
+ ogle.android.gm-6188  [006] ...1   488.636918: do_swap_page: id 7, table 0 || 146: 6188 9e3af000
+ ogle.android.gm-6188  [006] ...1   488.636925: do_swap_page: id 7, table 0 || 147: 6188 9dc45000
+ ogle.android.gm-6188  [006] ...1   488.636931: do_swap_page: id 7, table 0 || 148: 6188 9e340000
+ ogle.android.gm-6188  [006] ...1   488.636937: do_swap_page: id 7, table 0 || 149: 6188 9e4ac000
+ ogle.android.gm-6188  [006] ...1   488.636944: do_swap_page: id 7, table 0 || 150: 6188 9e476000
+ ogle.android.gm-6188  [006] ...1   488.636950: do_swap_page: id 7, table 0 || 151: 6188 9e477000
+ ogle.android.gm-6188  [006] ...1   488.636955: do_swap_page: id 7, table 0 || 152: 6188 9e2d3000
+ ogle.android.gm-6188  [006] ...1   488.636967: do_swap_page: id 7, table 0 || 153: 6188 9e460000
+ ogle.android.gm-6188  [006] ...1   488.636973: do_swap_page: id 7, table 0 || 154: 6188 9dbf0000
+ ogle.android.gm-6188  [006] ...1   488.636977: do_swap_page: id 7, table 0 || 155: 6188 9e3fe000
+ ogle.android.gm-6188  [006] ...1   488.636982: do_swap_page: id 7, table 0 || 156: 6188 9e4bc000
+ ogle.android.gm-6188  [006] ...1   488.636988: do_swap_page: id 7, table 0 || 157: 6188 9e48c000
+ ogle.android.gm-6188  [006] ...1   488.636994: do_swap_page: id 7, table 0 || 158: 6188 9dbd2000
+ ogle.android.gm-6188  [006] ...1   488.636998: do_swap_page: id 7, table 0 || 159: 6188 9e446000
+ ogle.android.gm-6188  [006] ...1   488.637003: do_swap_page: id 7, table 0 || 160: 6188 9e4c3000
+ ogle.android.gm-6188  [006] ...1   488.637008: do_swap_page: id 7, table 0 || 161: 6188 9e496000
+ ogle.android.gm-6188  [006] ...1   488.637014: do_swap_page: id 7, table 0 || 162: 6188 9dc72000
+ ogle.android.gm-6188  [006] ...1   488.637020: do_swap_page: id 7, table 0 || 163: 6188 9e2f2000
+ ogle.android.gm-6188  [006] ...1   488.637024: do_swap_page: id 7, table 0 || 164: 6188 9e4a1000
+ ogle.android.gm-6188  [006] ...1   488.637029: do_swap_page: id 7, table 0 || 165: 6188 9e467000
+ ogle.android.gm-6188  [006] ...1   488.637035: do_swap_page: id 7, table 0 || 166: 6188 9dbf6000
+ ogle.android.gm-6188  [006] ...1   488.637040: do_swap_page: id 7, table 0 || 167: 6188 9e3eb000
+ ogle.android.gm-6188  [006] ...1   488.637047: do_swap_page: id 7, table 0 || 168: 6188 9dc87000
+ ogle.android.gm-6188  [006] ...1   488.637051: do_swap_page: id 7, table 0 || 169: 6188 9e2cc000
+ ogle.android.gm-6188  [006] ...1   488.637054: do_swap_page: id 7, table 0 || 170: 6188 9e49b000
+ ogle.android.gm-6188  [006] ...1   488.637061: do_swap_page: id 7, table 0 || 171: 6188 9e45f000
+ ogle.android.gm-6188  [005] ...1   488.638687: do_swap_page: id 7, table 0 || 172: 6188 9dc1c000
+ ogle.android.gm-6188  [005] ...1   488.638735: do_swap_page: id 7, table 0 || 173: 6188 9dc22000
+           <...>-6221  [000] ...1   488.638818: do_swap_page: id 7, table 0 || 174: 6188 9e38d000
+ ogle.android.gm-6188  [007] ...1   488.638825: do_swap_page: id 7, table 0 || 175: 6188 9e3b9000
+           <...>-6221  [000] ...1   488.638846: do_swap_page: id 7, table 0 || 176: 6188 9e39c000
+ ogle.android.gm-6188  [007] ...1   488.638875: do_swap_page: id 7, table 0 || 177: 6188 7ed147f000
+ ogle.android.gm-6188  [007] ...1   488.638888: do_swap_page: id 7, table 0 || 178: 6188 9dc5a000
+ ogle.android.gm-6188  [007] ...1   488.638931: do_swap_page: id 7, table 0 || 179: 6188 9e335000
+ ogle.android.gm-6188  [007] ...1   488.638937: do_swap_page: id 7, table 0 || 180: 6188 9e4aa000
+ ogle.android.gm-6188  [007] ...1   488.638944: do_swap_page: id 7, table 0 || 181: 6188 9e474000
+ ogle.android.gm-6188  [007] ...1   488.638968: do_swap_page: id 7, table 0 || 182: 6188 9e42f000
+ ogle.android.gm-6188  [007] ...1   488.638973: do_swap_page: id 7, table 0 || 183: 6188 9e4c0000
+ ogle.android.gm-6188  [007] ...1   488.638980: do_swap_page: id 7, table 0 || 184: 6188 9e492000
+ ogle.android.gm-6188  [007] ...1   488.639026: do_swap_page: id 7, table 0 || 185: 6188 9dbd1000
+ ogle.android.gm-6188  [007] ...1   488.639033: do_swap_page: id 7, table 0 || 186: 6188 9e3f0000
+ ogle.android.gm-6188  [007] ...1   488.639041: do_swap_page: id 7, table 0 || 187: 6188 9dc86000
+ ogle.android.gm-6188  [007] ...1   488.639045: do_swap_page: id 7, table 0 || 188: 6188 9e2cd000
+ ogle.android.gm-6188  [007] ...1   488.639065: do_swap_page: id 7, table 0 || 189: 6188 7ed1481000
+ ogle.android.gm-6188  [007] ...1   488.639080: do_swap_page: id 7, table 0 || 190: 6188 9dbd9000
+ ogle.android.gm-6188  [007] ...1   488.639089: do_swap_page: id 7, table 0 || 191: 6188 9dbfa000
+ ogle.android.gm-6188  [007] ...1   488.639093: do_swap_page: id 7, table 0 || 192: 6188 9e3e1000
+ ogle.android.gm-6188  [007] ...1   488.639105: do_swap_page: id 7, table 0 || 193: 6188 9e3ae000
+ ogle.android.gm-6188  [007] ...1   488.639151: do_swap_page: id 7, table 0 || 194: 6188 7e5d459000
+ ogle.android.gm-6188  [005] ...1   488.639454: do_swap_page: id 7, table 0 || 195: 6188 9dbf9000
+ ogle.android.gm-6188  [005] ...1   488.639465: do_swap_page: id 7, table 0 || 196: 6188 9dbec000
+ ogle.android.gm-6188  [005] ...1   488.639471: do_swap_page: id 7, table 0 || 197: 6188 9e40a000
+ ogle.android.gm-6188  [005] ...1   488.639501: do_swap_page: id 7, table 0 || 198: 6188 9de9b000
+ ogle.android.gm-6188  [005] ...1   488.639514: do_swap_page: id 7, table 0 || 199: 6188 9e36c000
+ ogle.android.gm-6188  [005] ...1   488.639525: do_swap_page: id 7, table 0 || 200: 6188 9e333000
+ ogle.android.gm-6188  [005] ...1   488.639550: do_swap_page: id 7, table 0 || 201: 6188 9e3e0000
+ ogle.android.gm-6188  [005] ...1   488.639568: do_swap_page: id 7, table 0 || 202: 6188 9e397000
+ ogle.android.gm-6188  [005] ...1   488.639583: do_swap_page: id 7, table 0 || 203: 6188 9e31b000
+ ogle.android.gm-6188  [005] ...1   488.639683: do_swap_page: id 7, table 0 || 204: 6188 7f2d988000
+ ogle.android.gm-6188  [005] ...1   488.639691: do_swap_page: id 7, table 0 || 205: 6188 7f2d989000
+ ogle.android.gm-6188  [005] ...1   488.639865: do_swap_page: id 7, table 0 || 206: 6188 9dde2000
+ ogle.android.gm-6188  [005] ...1   488.639915: do_swap_page: id 7, table 0 || 207: 6188 7f28a5b000
+   services-3-39-6864  [007] ...1   488.640002: do_swap_page: id 7, table 0 || 208: 6188 9dc40000
+ ogle.android.gm-6188  [005] ...1   488.640046: do_swap_page: id 7, table 0 || 209: 6188 9ddfd000
+   services-3-39-6864  [007] ...1   488.640067: do_swap_page: id 7, table 0 || 210: 6188 9e347000
+ ogle.android.gm-6188  [005] ...1   488.640068: do_swap_page: id 7, table 0 || 211: 6188 9de2c000
+ ogle.android.gm-6188  [005] ...1   488.640149: do_swap_page: id 7, table 0 || 212: 6188 9dc00000
+ ogle.android.gm-6188  [005] ...1   488.640162: do_swap_page: id 7, table 0 || 213: 6188 9e3d3000
+   services-3-40-6865  [006] ...1   488.640207: do_swap_page: id 7, table 0 || 214: 6188 9e41d000
+ ogle.android.gm-6188  [005] ...1   488.640208: do_swap_page: id 7, table 0 || 215: 6188 7f2d98a000
+ ogle.android.gm-6188  [005] ....   488.640223: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae399000 6bfc0
+   services-3-40-6865  [006] ...1   488.640237: do_swap_page: id 7, table 0 || 216: 6188 9dc5f000
+   services-3-40-6865  [006] ...1   488.640292: do_swap_page: id 7, table 0 || 217: 6188 9e311000
+   services-3-40-6865  [006] ...1   488.640323: do_swap_page: id 7, table 0 || 218: 6188 9dbe1000
+   services-3-39-6864  [007] ...1   488.640367: do_swap_page: id 7, table 0 || 219: 6188 9e3f4000
+ ogle.android.gm-6188  [004] ...1   488.640440: do_swap_page: id 7, table 0 || 220: 6188 9e402000
+ ogle.android.gm-6188  [004] ...1   488.640470: do_swap_page: id 7, table 0 || 221: 6188 9dc0e000
+ ogle.android.gm-6188  [004] ...1   488.640487: do_swap_page: id 7, table 0 || 222: 6188 9dc7e000
+   services-3-39-6864  [007] ...1   488.640495: do_swap_page: id 7, table 0 || 223: 6188 9dbf2000
+   services-3-39-6864  [007] ...1   488.640500: do_swap_page: id 7, table 0 || 224: 6188 9e3f8000
+ ogle.android.gm-6188  [004] ...1   488.640531: do_swap_page: id 7, table 0 || 225: 6188 7e72f01000
+ ogle.android.gm-6188  [004] ...1   488.640544: do_swap_page: id 7, table 0 || 226: 6188 7e731d3000
+ ogle.android.gm-6188  [004] ...1   488.640557: do_swap_page: id 7, table 0 || 227: 6188 7f288d6000
+ ogle.android.gm-6188  [004] ...1   488.640570: do_swap_page: id 7, table 0 || 228: 6188 7e6d88a000
+ ogle.android.gm-6188  [004] ...1   488.640580: do_swap_page: id 7, table 0 || 229: 6188 7e730b0000
+ ogle.android.gm-6188  [004] ...1   488.640607: do_swap_page: id 7, table 0 || 230: 6188 7f288c6000
+ ogle.android.gm-6188  [004] ...1   488.640615: do_swap_page: id 7, table 0 || 231: 6188 7e6d96d000
+ ogle.android.gm-6188  [004] ...1   488.640620: do_swap_page: id 7, table 0 || 232: 6188 7e6d962000
+ ogle.android.gm-6188  [004] ...1   488.640628: do_swap_page: id 7, table 0 || 233: 6188 7f28982000
+   services-3-39-6864  [007] ...1   488.640638: do_swap_page: id 7, table 0 || 234: 6188 9e332000
+   services-3-39-6864  [007] ...1   488.640647: do_swap_page: id 7, table 0 || 235: 6188 9e3d0000
+ ogle.android.gm-6188  [004] ...1   488.640686: do_swap_page: id 7, table 0 || 236: 6188 7e7256b000
+ ogle.android.gm-6188  [004] ...1   488.640702: do_swap_page: id 7, table 0 || 237: 6188 7f39869000
+ ogle.android.gm-6188  [004] ...1   488.640712: do_swap_page: id 7, table 0 || 238: 6188 7fba179000
+ ogle.android.gm-6188  [004] ...1   488.640720: do_swap_page: id 7, table 0 || 239: 6188 7f3984b000
+ ogle.android.gm-6188  [004] ...1   488.640727: do_swap_page: id 7, table 0 || 240: 6188 7fba17a000
+ ogle.android.gm-6188  [004] ...1   488.640769: do_swap_page: id 7, table 0 || 241: 6188 9e35e000
+ ogle.android.gm-6188  [004] ...1   488.640776: do_swap_page: id 7, table 0 || 242: 6188 9e4b0000
+ ogle.android.gm-6188  [004] ...1   488.640782: do_swap_page: id 7, table 0 || 243: 6188 9e47c000
+ ogle.android.gm-6188  [004] ...1   488.640788: do_swap_page: id 7, table 0 || 244: 6188 9e4ad000
+ ogle.android.gm-6188  [004] ...1   488.640793: do_swap_page: id 7, table 0 || 245: 6188 9e478000
+   Binder:6188_4-6363  [006] ...1   488.640794: do_swap_page: id 7, table 0 || 246: 6188 7e5d376000
+ ogle.android.gm-6188  [004] ...1   488.640800: do_swap_page: id 7, table 0 || 247: 6188 9e4b9000
+ ogle.android.gm-6188  [004] ...1   488.640805: do_swap_page: id 7, table 0 || 248: 6188 9e488000
+   Binder:6188_4-6363  [006] ...1   488.640813: do_swap_page: id 7, table 0 || 249: 6188 7e6de2a000
+ ogle.android.gm-6188  [004] ...1   488.640827: do_swap_page: id 7, table 0 || 250: 6188 9dc78000
+ ogle.android.gm-6188  [004] ...1   488.640886: do_swap_page: id 7, table 0 || 251: 6188 9e3a5000
+ ogle.android.gm-6188  [004] ...1   488.640897: do_swap_page: id 7, table 0 || 252: 6188 9e4b5000
+ ogle.android.gm-6188  [004] ...1   488.640903: do_swap_page: id 7, table 0 || 253: 6188 9e483000
+ ogle.android.gm-6188  [004] ...1   488.640912: do_swap_page: id 7, table 0 || 254: 6188 9dc55000
+ ogle.android.gm-6188  [004] ...1   488.640919: do_swap_page: id 7, table 0 || 255: 6188 9e323000
+ ogle.android.gm-6188  [004] ...1   488.640926: do_swap_page: id 7, table 0 || 256: 6188 9e2cb000
+ ogle.android.gm-6188  [004] ...1   488.640932: do_swap_page: id 7, table 0 || 257: 6188 9e592000
+ ogle.android.gm-6188  [004] ...1   488.640939: do_swap_page: id 7, table 0 || 258: 6188 9e45e000
+    BG Thread #1-6226  [006] ...1   488.640969: do_swap_page: id 7, table 0 || 259: 6188 7ec4007000
+    BG Thread #1-6226  [006] ...1   488.640981: do_swap_page: id 7, table 0 || 260: 6188 7ec4004000
+ ogle.android.gm-6188  [004] ...1   488.640984: do_swap_page: id 7, table 0 || 261: 6188 9de23000
+ ogle.android.gm-6188  [004] ...1   488.640993: do_swap_page: id 7, table 0 || 262: 6188 9e349000
+    BG Thread #1-6226  [006] ...1   488.640997: do_swap_page: id 7, table 0 || 263: 6188 9e36d000
+ ogle.android.gm-6188  [004] ...1   488.641003: do_swap_page: id 7, table 0 || 264: 6188 9e346000
+ ogle.android.gm-6188  [004] ...1   488.641009: do_swap_page: id 7, table 0 || 265: 6188 9e2dd000
+ ogle.android.gm-6188  [004] ...1   488.641018: do_swap_page: id 7, table 0 || 267: 6188 9e462000
+    BG Thread #1-6226  [006] ...1   488.641018: do_swap_page: id 7, table 0 || 266: 6188 7f2d967000
+ ogle.android.gm-6188  [004] ...1   488.641024: do_swap_page: id 7, table 0 || 268: 6188 9e2db000
+ ogle.android.gm-6188  [004] ...1   488.641053: do_swap_page: id 7, table 0 || 269: 6188 9dc2f000
+ ogle.android.gm-6188  [004] ...1   488.641058: do_swap_page: id 7, table 0 || 270: 6188 9e36b000
+ ogle.android.gm-6188  [004] ...1   488.641065: do_swap_page: id 7, table 0 || 271: 6188 9dc36000
+ ogle.android.gm-6188  [004] ...1   488.641073: do_swap_page: id 7, table 0 || 272: 6188 9e356000
+ ogle.android.gm-6188  [004] ...1   488.641088: do_swap_page: id 7, table 0 || 273: 6188 7f2d9ca000
+ ogle.android.gm-6188  [004] ...1   488.641099: do_swap_page: id 7, table 0 || 274: 6188 7f2d9cb000
+ ogle.android.gm-6188  [004] ...1   488.641186: do_swap_page: id 7, table 0 || 275: 6188 9e309000
+ ogle.android.gm-6188  [004] ...1   488.641214: do_swap_page: id 7, table 0 || 276: 6188 9de40000
+ GAC_Executor[8]-6868  [007] ...1   488.641240: do_swap_page: id 7, table 0 || 277: 6188 9e3e7000
+ GAC_Executor[8]-6868  [007] ...1   488.641311: do_swap_page: id 7, table 0 || 278: 6188 7fbe176000
+ GAC_Executor[8]-6868  [007] ...1   488.641323: do_swap_page: id 7, table 0 || 279: 6188 7f39865000
+ GAC_Executor[8]-6868  [007] ...1   488.641330: do_swap_page: id 7, table 0 || 280: 6188 7f28a1f000
+ GAC_Executor[8]-6868  [007] ...1   488.641356: do_swap_page: id 7, table 0 || 281: 6188 7f28a47000
+ GAC_Executor[8]-6868  [007] ...1   488.641593: do_swap_page: id 7, table 0 || 282: 6188 7fbe231000
+ ogle.android.gm-6188  [004] ...1   488.641731: do_swap_page: id 7, table 0 || 283: 6188 9debe000
+ ogle.android.gm-6188  [004] ...1   488.641754: do_swap_page: id 7, table 0 || 284: 6188 9dc4c000
+ ogle.android.gm-6188  [004] ...1   488.641764: do_swap_page: id 7, table 0 || 285: 6188 9e585000
+ ogle.android.gm-6188  [004] ...1   488.641789: do_swap_page: id 7, table 0 || 286: 6188 9e33d000
+ ogle.android.gm-6188  [004] ...1   488.641804: do_swap_page: id 7, table 0 || 287: 6188 9e473000
+ ogle.android.gm-6188  [004] ...1   488.641827: do_swap_page: id 7, table 0 || 288: 6188 9e458000
+ GAC_Executor[8]-6868  [006] ...1   488.641914: do_swap_page: id 7, table 0 || 289: 6188 9dc48000
+ GAC_Executor[8]-6868  [006] ...1   488.641922: do_swap_page: id 7, table 0 || 290: 6188 9e33c000
+ GAC_Executor[8]-6868  [006] ...1   488.641942: do_swap_page: id 7, table 0 || 291: 6188 7f3985e000
+ GAC_Executor[8]-6868  [006] ...1   488.641952: do_swap_page: id 7, table 0 || 292: 6188 7f39848000
+ GAC_Executor[8]-6868  [006] ...1   488.641958: do_swap_page: id 7, table 0 || 293: 6188 7f39853000
+ GAC_Executor[8]-6868  [006] ...1   488.641963: do_swap_page: id 7, table 0 || 294: 6188 7f3985c000
+ GAC_Executor[8]-6868  [006] ....   488.641973: do_swap_page: Exception touched after marked : 6188 "GAC_Executor[8]" 7eae3e3000 6bfcd
+ GAC_Executor[8]-6868  [006] ...1   488.642002: do_swap_page: id 7, table 0 || 295: 6188 9e4b1000
+ ogle.android.gm-6188  [005] ...1   488.642003: do_swap_page: id 7, table 0 || 296: 6188 9e3ff000
+ GAC_Executor[8]-6868  [006] ...1   488.642011: do_swap_page: id 7, table 0 || 297: 6188 9e47e000
+ ogle.android.gm-6188  [005] ...1   488.642115: do_swap_page: id 7, table 0 || 298: 6188 7fbe23d000
+ ogle.android.gm-6188  [005] ...1   488.642125: do_swap_page: id 7, table 0 || 299: 6188 7f28a31000
+ ogle.android.gm-6188  [005] ...1   488.642196: do_swap_page: id 7, table 0 || 300: 6188 7fbf6fb000
+ ogle.android.gm-6188  [005] ...1   488.642265: do_swap_page: id 7, table 0 || 301: 6188 7f2d9d8000
+ GAC_Executor[8]-6868  [006] ...1   488.642417: do_swap_page: id 7, table 0 || 302: 6188 9dc43000
+ ogle.android.gm-6188  [005] ...1   488.642443: do_swap_page: id 7, table 0 || 303: 6188 7fbe1f2000
+ GAC_Executor[8]-6868  [006] ...1   488.642451: do_swap_page: id 7, table 0 || 304: 6188 7f39846000
+ GAC_Executor[8]-6868  [006] ...1   488.642459: do_swap_page: id 7, table 0 || 305: 6188 7f39845000
+ GAC_Executor[8]-6868  [006] ...1   488.642465: do_swap_page: id 7, table 0 || 306: 6188 7f39844000
+ GAC_Executor[8]-6868  [006] ...1   488.642470: do_swap_page: id 7, table 0 || 307: 6188 7f3983f000
+ GAC_Executor[8]-6868  [006] ...1   488.642481: do_swap_page: id 7, table 0 || 308: 6188 7f3984c000
+ GAC_Executor[8]-6868  [006] ...1   488.642488: do_swap_page: id 7, table 0 || 309: 6188 7f39840000
+ ogle.android.gm-6188  [005] ...1   488.642490: do_swap_page: id 7, table 0 || 310: 6188 9e4a5000
+ ogle.android.gm-6188  [005] ...1   488.642501: do_swap_page: id 7, table 0 || 311: 6188 9e46d000
+ GAC_Executor[8]-6868  [006] ...1   488.642503: do_swap_page: id 7, table 0 || 312: 6188 7f2d936000
+ ogle.android.gm-6188  [005] ...1   488.642513: do_swap_page: id 7, table 0 || 313: 6188 9dbc7000
+ ogle.android.gm-6188  [005] ...1   488.642524: do_swap_page: id 7, table 0 || 314: 6188 9e45c000
+ ogle.android.gm-6188  [005] ...1   488.642531: do_swap_page: id 7, table 0 || 315: 6188 9dbc6000
+ GAC_Executor[8]-6868  [006] ...1   488.642562: do_swap_page: id 7, table 0 || 316: 6188 7f39856000
+ GAC_Executor[8]-6868  [006] ...1   488.642593: do_swap_page: id 7, table 0 || 317: 6188 7f39864000
+ GAC_Executor[8]-6868  [006] ...1   488.642601: do_swap_page: id 7, table 0 || 318: 6188 7f39852000
+ GAC_Executor[8]-6868  [006] ...1   488.642606: do_swap_page: id 7, table 0 || 319: 6188 7f39859000
+ GAC_Executor[8]-6868  [006] ...1   488.642616: do_swap_page: id 7, table 0 || 320: 6188 7f28894000
+ ogle.android.gm-6188  [005] ...1   488.642630: do_swap_page: id 7, table 0 || 321: 6188 9dc5c000
+ ogle.android.gm-6188  [005] ...1   488.642637: do_swap_page: id 7, table 0 || 322: 6188 9e316000
+ ogle.android.gm-6188  [005] ...1   488.642644: do_swap_page: id 7, table 0 || 323: 6188 9e46c000
+ queued-work-loo-6214  [000] ...1   488.642650: do_swap_page: id 7, table 0 || 324: 6188 7f28c24000
+ ogle.android.gm-6188  [005] ...1   488.642652: do_swap_page: id 7, table 0 || 325: 6188 9e40b000
+ queued-work-loo-6214  [000] ...1   488.642676: do_swap_page: id 7, table 0 || 326: 6188 7f2d420000
+ BackgroundSingl-6228  [004] ...1   488.642690: do_swap_page: id 7, table 0 || 327: 6188 7ec1df5000
+ BackgroundSingl-6228  [004] ...1   488.642703: do_swap_page: id 7, table 0 || 328: 6188 7ec1df2000
+ BackgroundSingl-6228  [004] ...1   488.642714: do_swap_page: id 7, table 0 || 329: 6188 9dc57000
+ BackgroundSingl-6228  [004] ...1   488.642719: do_swap_page: id 7, table 0 || 330: 6188 9e320000
+ ogle.android.gm-6188  [005] ...1   488.642729: do_swap_page: id 7, table 0 || 331: 6188 9dc6f000
+ BackgroundSingl-6228  [004] ...1   488.642760: do_swap_page: id 7, table 0 || 332: 6188 7f2d9e7000
+ BackgroundSingl-6228  [004] ...1   488.642767: do_swap_page: id 7, table 0 || 333: 6188 7f2d9e8000
+ BackgroundSingl-6228  [004] ...1   488.642777: do_swap_page: id 7, table 0 || 334: 6188 7f28a05000
+ ogle.android.gm-6188  [005] ...1   488.642779: do_swap_page: id 7, table 0 || 335: 6188 9e305000
+ BackgroundSingl-6228  [004] ...1   488.642783: do_swap_page: id 7, table 0 || 336: 6188 7f2d972000
+ BackgroundSingl-6228  [004] ...1   488.642797: do_swap_page: id 7, table 0 || 337: 6188 7ec1df3000
+ BackgroundSingl-6228  [004] ...1   488.642806: do_swap_page: id 7, table 0 || 338: 6188 7eae4a9000
+ ogle.android.gm-6188  [005] ...1   488.642807: do_swap_page: id 7, table 0 || 339: 6188 7f28ab3000
+ BackgroundSingl-6228  [004] ...1   488.642835: do_swap_page: id 7, table 0 || 340: 6188 7eae3cf000
+ ObjectCursorLoa-6869  [007] ...1   488.642938: do_swap_page: id 7, table 0 || 341: 6188 7eae252000
+ ObjectCursorLoa-6869  [007] ...1   488.642946: do_swap_page: id 7, table 0 || 342: 6188 7eae253000
+ ObjectCursorLoa-6869  [007] ...1   488.642951: do_swap_page: id 7, table 0 || 343: 6188 7eae254000
+ ogle.android.gm-6188  [004] ...1   488.642955: do_swap_page: id 7, table 0 || 344: 6188 9e3dd000
+ ogle.android.gm-6188  [004] ...1   488.642965: do_swap_page: id 7, table 0 || 345: 6188 9e2c9000
+ ObjectCursorLoa-6869  [007] ...1   488.642968: do_swap_page: id 7, table 0 || 346: 6188 7fbda7f000
+ ogle.android.gm-6188  [004] ...1   488.642971: do_swap_page: id 7, table 0 || 347: 6188 9e2f9000
+ ogle.android.gm-6188  [004] ...1   488.642977: do_swap_page: id 7, table 0 || 348: 6188 9e45a000
+ ObjectCursorLoa-6869  [007] ...1   488.642977: do_swap_page: id 7, table 0 || 349: 6188 7fbe1d4000
+ ogle.android.gm-6188  [004] ...1   488.643017: do_swap_page: id 7, table 0 || 350: 6188 9dbca000
+ ogle.android.gm-6188  [004] ...1   488.643025: do_swap_page: id 7, table 0 || 351: 6188 9dbcb000
+ ogle.android.gm-6188  [004] ...1   488.643031: do_swap_page: id 7, table 0 || 352: 6188 9dbc9000
+ ogle.android.gm-6188  [004] ...1   488.643037: do_swap_page: id 7, table 0 || 353: 6188 9dbdd000
+ ogle.android.gm-6188  [004] ...1   488.643049: do_swap_page: id 7, table 0 || 354: 6188 9dc88000
+ Blocking Thread-6822  [000] ...1   488.643099: do_swap_page: id 7, table 0 || 355: 6188 7f297db000
+ ObjectCursorLoa-6869  [007] ...1   488.643102: do_swap_page: id 7, table 0 || 356: 6188 9e3a4000
+ Blocking Thread-6822  [000] ...1   488.643127: do_swap_page: id 7, table 0 || 357: 6188 9e2e9000
+ Blocking Thread-6822  [000] ...1   488.643144: do_swap_page: id 7, table 0 || 358: 6188 9e49f000
+ ogle.android.gm-6188  [004] ...1   488.643163: do_swap_page: id 7, table 0 || 359: 6188 7f2dabb000
+ Blocking Thread-6822  [000] ...1   488.643169: do_swap_page: id 7, table 0 || 360: 6188 9e591000
+ ogle.android.gm-6188  [004] ...1   488.643170: do_swap_page: id 7, table 0 || 361: 6188 7f2dabc000
+ ObjectCursorLoa-6869  [007] ...1   488.643177: do_swap_page: id 7, table 0 || 362: 6188 7f2d479000
+ ogle.android.gm-6188  [004] ...1   488.643178: do_swap_page: id 7, table 0 || 363: 6188 7f2dabd000
+ Blocking Thread-6822  [000] ...1   488.643191: do_swap_page: id 7, table 0 || 364: 6188 9e465000
+ Blocking Thread-6822  [000] ...1   488.643277: do_swap_page: id 7, table 0 || 365: 6188 9e459000
+  Lite Thread #1-6245  [004] ...1   488.643279: do_swap_page: id 7, table 0 || 366: 6188 7eb5189000
+  Lite Thread #1-6245  [004] ...1   488.643341: do_swap_page: id 7, table 0 || 367: 6188 7eb5186000
+ Blocking Thread-6822  [000] ...1   488.643371: do_swap_page: id 7, table 0 || 368: 6188 9e32a000
+ ogle.android.gm-6188  [004] ...1   488.643414: do_swap_page: id 7, table 0 || 369: 6188 9e3ea000
+ ogle.android.gm-6188  [004] ...1   488.643457: do_swap_page: id 7, table 0 || 370: 6188 9dc69000
+ ogle.android.gm-6188  [004] ...1   488.643531: do_swap_page: id 7, table 0 || 371: 6188 9e589000
+ ogle.android.gm-6188  [004] ...1   488.643633: do_swap_page: id 7, table 0 || 372: 6188 7e5d427000
+  Lite Thread #1-6245  [004] ...1   488.643697: do_swap_page: id 7, table 0 || 373: 6188 7eb5187000
+  Lite Thread #1-6245  [004] ...1   488.643713: do_swap_page: id 7, table 0 || 374: 6188 71a43000
+  Lite Thread #1-6245  [004] ...1   488.643722: do_swap_page: id 7, table 0 || 375: 6188 7fbc5b0000
+  Lite Thread #1-6245  [004] ...1   488.643733: do_swap_page: id 7, table 0 || 376: 6188 7fbe211000
+  Lite Thread #1-6245  [004] ...1   488.643744: do_swap_page: id 7, table 0 || 377: 6188 7f2892b000
+  Lite Thread #1-6245  [004] ...1   488.643753: do_swap_page: id 7, table 0 || 378: 6188 7f2da8e000
+  Lite Thread #1-6245  [004] ...1   488.643757: do_swap_page: id 7, table 0 || 379: 6188 7f2da8f000
+  Lite Thread #1-6245  [004] ...1   488.643808: do_swap_page: id 7, table 0 || 380: 6188 7f2d48b000
+  Lite Thread #1-6245  [004] ...1   488.643819: do_swap_page: id 7, table 0 || 381: 6188 7fbd8bf000
+  Lite Thread #1-6245  [004] ...1   488.643894: do_swap_page: id 7, table 0 || 382: 6188 7f2da6f000
+  Lite Thread #1-6245  [004] ...1   488.643907: do_swap_page: id 7, table 0 || 383: 6188 9dbeb000
+  Lite Thread #1-6245  [004] ...1   488.643914: do_swap_page: id 7, table 0 || 384: 6188 9e40c000
+  Lite Thread #2-6247  [004] ...1   488.643941: do_swap_page: id 7, table 0 || 385: 6188 7eb7292000
+  Lite Thread #2-6247  [004] ...1   488.643953: do_swap_page: id 7, table 0 || 386: 6188 7eb728f000
+ Blocking Thread-6822  [004] ...1   488.644015: do_swap_page: id 7, table 0 || 387: 6188 9dbf7000
+ BackgroundSingl-6228  [004] ...1   488.644042: do_swap_page: id 7, table 0 || 388: 6188 7ec1df1000
+ Blocking Thread-6822  [004] ...1   488.644093: do_swap_page: id 7, table 0 || 389: 6188 9e4c6000
+ Blocking Thread-6822  [004] ...1   488.644101: do_swap_page: id 7, table 0 || 390: 6188 9e499000
+ Blocking Thread-6822  [004] ...1   488.644116: do_swap_page: id 7, table 0 || 391: 6188 9e2ca000
+ Blocking Thread-6822  [004] ...1   488.644132: do_swap_page: id 7, table 0 || 392: 6188 9e3d6000
+ Blocking Thread-6822  [004] ...1   488.644145: do_swap_page: id 7, table 0 || 393: 6188 7f297d9000
+ Blocking Thread-6822  [004] ...1   488.644162: do_swap_page: id 7, table 0 || 394: 6188 7f2d4f6000
+    BG Thread #3-6231  [004] ...1   488.644189: do_swap_page: id 7, table 0 || 395: 6188 7ebfbe3000
+    BG Thread #3-6231  [004] ...1   488.644198: do_swap_page: id 7, table 0 || 396: 6188 7ebfbe0000
+    BG Thread #3-6231  [004] ...1   488.645045: do_swap_page: id 7, table 0 || 397: 6188 9e3d7000
+    BG Thread #3-6231  [004] ...1   488.645078: do_swap_page: id 7, table 0 || 398: 6188 9e3d8000
+    BG Thread #3-6231  [004] ...1   488.645102: do_swap_page: id 7, table 0 || 399: 6188 9e440000
+    BG Thread #3-6231  [004] ...1   488.645118: do_swap_page: id 7, table 0 || 400: 6188 9e4c2000
+ ObjectCursorLoa-6870  [004] ...1   488.645160: do_swap_page: id 7, table 0 || 401: 6188 7f39858000
+ ObjectCursorLoa-6870  [004] ...1   488.645169: do_swap_page: id 7, table 0 || 402: 6188 7f39837000
+ ObjectCursorLoa-6870  [004] ...1   488.645179: do_swap_page: id 7, table 0 || 403: 6188 7eae259000
+ ObjectCursorLoa-6870  [004] ...1   488.645185: do_swap_page: id 7, table 0 || 404: 6188 7eae25a000
+ ObjectCursorLoa-6870  [004] ...1   488.645210: do_swap_page: id 7, table 0 || 405: 6188 7eae25b000
+    BG Thread #3-6231  [004] ...1   488.645275: do_swap_page: id 7, table 0 || 406: 6188 9e494000
+    BG Thread #3-6231  [004] ...1   488.645283: do_swap_page: id 7, table 0 || 407: 6188 9e385000
+    BG Thread #3-6231  [004] ...1   488.645294: do_swap_page: id 7, table 0 || 408: 6188 9dc7a000
+    BG Thread #3-6231  [004] ...1   488.645300: do_swap_page: id 7, table 0 || 409: 6188 9e456000
+    BG Thread #3-6231  [004] ...1   488.645323: do_swap_page: id 7, table 0 || 410: 6188 7ebfbe1000
+    BG Thread #3-6231  [004] ...1   488.645337: do_swap_page: id 7, table 0 || 411: 6188 7f2d973000
+ Blocking Thread-6822  [004] ...1   488.645363: do_swap_page: id 7, table 0 || 412: 6188 9e3e8000
+ Blocking Thread-6822  [004] ...1   488.645376: do_swap_page: id 7, table 0 || 413: 6188 7f2da08000
+ Blocking Thread-6822  [004] ...1   488.645396: do_swap_page: id 7, table 0 || 414: 6188 9e2e2000
+ ObjectCursorLoa-6870  [004] ...1   488.645525: do_swap_page: id 7, table 0 || 415: 6188 7eae2eb000
+ ogle.android.gm-6188  [006] ...1   488.645965: do_swap_page: id 7, table 0 || 416: 6188 9dbe8000
+ ogle.android.gm-6188  [006] ...1   488.645973: do_swap_page: id 7, table 0 || 417: 6188 9e417000
+ BackgroundSingl-6228  [004] ...1   488.647196: do_swap_page: id 7, table 0 || 418: 6188 7e96866000
+ BackgroundSingl-6228  [005] ...1   488.648048: do_swap_page: id 7, table 0 || 419: 6188 9dbf1000
+ BackgroundSingl-6228  [005] ...1   488.648058: do_swap_page: id 7, table 0 || 420: 6188 9e3fb000
+ BackgroundSingl-6228  [005] ...1   488.648076: do_swap_page: id 7, table 0 || 421: 6188 9dbe5000
+ BackgroundSingl-6228  [005] ...1   488.648218: do_swap_page: id 7, table 0 || 422: 6188 9dc89000
+ BackgroundSingl-6228  [005] ...1   488.648261: do_swap_page: id 7, table 0 || 423: 6188 7f28908000
+ BackgroundSingl-6228  [005] ...1   488.648275: do_swap_page: id 7, table 0 || 424: 6188 7f2db69000
+ BackgroundSingl-6228  [005] ...1   488.648283: do_swap_page: id 7, table 0 || 425: 6188 7eae255000
+ BackgroundSingl-6228  [005] ...1   488.648337: do_swap_page: id 7, table 0 || 426: 6188 7fbab78000
+ ogle.android.gm-6188  [004] ...1   488.648675: do_swap_page: id 7, table 0 || 427: 6188 9e41e000
+ ogle.android.gm-6188  [004] ...1   488.648919: do_swap_page: id 7, table 0 || 428: 6188 9dbdb000
+ ogle.android.gm-6188  [004] ...1   488.648927: do_swap_page: id 7, table 0 || 429: 6188 9e435000
+ ogle.android.gm-6188  [004] ...1   488.648940: do_swap_page: id 7, table 0 || 430: 6188 9dc32000
+   Binder:6188_4-6363  [006] ....   488.648958: do_swap_page: Exception touched after marked : 6188 "Binder:6188_4" 7e5d398000 53fcd
+ ogle.android.gm-6188  [004] ...1   488.648969: do_swap_page: id 7, table 0 || 431: 6188 9ddf2000
+ ogle.android.gm-6188  [004] ...1   488.648986: do_swap_page: id 7, table 0 || 432: 6188 9e374000
+ ogle.android.gm-6188  [004] ...1   488.649007: do_swap_page: id 7, table 0 || 433: 6188 9e598000
+ gm counters ini-6266  [004] ...1   488.649163: do_swap_page: id 7, table 0 || 434: 6188 7eae13f000
+ ogle.android.gm-6188  [004] ...1   488.649411: do_swap_page: id 7, table 0 || 435: 6188 9e3b2000
+ ogle.android.gm-6188  [004] ...1   488.649538: do_swap_page: id 7, table 0 || 436: 6188 9e418000
+ ogle.android.gm-6188  [004] ...1   488.649585: do_swap_page: id 7, table 0 || 437: 6188 7e9682f000
+ ogle.android.gm-6188  [004] ...1   488.649596: do_swap_page: id 7, table 0 || 438: 6188 7fbe23f000
+ ogle.android.gm-6188  [004] ...1   488.649729: do_swap_page: id 7, table 0 || 439: 6188 9e3e9000
+ ogle.android.gm-6188  [004] ...1   488.649793: do_swap_page: id 7, table 0 || 440: 6188 9dc73000
+ ogle.android.gm-6188  [004] ...1   488.649810: do_swap_page: id 7, table 0 || 441: 6188 9e2f0000
+ ogle.android.gm-6188  [004] ...1   488.650058: do_swap_page: id 7, table 0 || 442: 6188 9e597000
+ ogle.android.gm-6188  [004] ...1   488.650152: do_swap_page: id 7, table 0 || 443: 6188 7fbe23e000
+  Lite Thread #4-6248  [000] ...1   488.650175: do_swap_page: id 7, table 0 || 444: 6188 7eb4080000
+  Lite Thread #4-6248  [000] ...1   488.650208: do_swap_page: id 7, table 0 || 445: 6188 7eb407d000
+ ogle.android.gm-6188  [004] ...1   488.650223: do_swap_page: id 7, table 0 || 446: 6188 9db10000
+ ogle.android.gm-6188  [004] ...1   488.650261: do_swap_page: id 7, table 0 || 447: 6188 9dbc4000
+  Lite Thread #4-6248  [000] ...1   488.650340: do_swap_page: id 7, table 0 || 448: 6188 7eb407e000
+  Lite Thread #4-6248  [000] ...1   488.650388: do_swap_page: id 7, table 0 || 449: 6188 7f2da94000
+  Lite Thread #4-6248  [000] ...1   488.650411: do_swap_page: id 7, table 0 || 450: 6188 7f2da95000
+  Lite Thread #4-6248  [000] ...1   488.650435: do_swap_page: id 7, table 0 || 451: 6188 7e5d475000
+  Lite Thread #4-6248  [000] ...1   488.650453: do_swap_page: id 7, table 0 || 452: 6188 7e5d379000
+  Lite Thread #4-6248  [000] ...1   488.650467: do_swap_page: id 7, table 0 || 453: 6188 7f2da93000
+  Lite Thread #4-6248  [000] ...1   488.650492: do_swap_page: id 7, table 0 || 454: 6188 7e6de15000
+  Lite Thread #4-6248  [000] ...1   488.650516: do_swap_page: id 7, table 0 || 455: 6188 7e5d45c000
+  Lite Thread #4-6248  [000] ...1   488.650544: do_swap_page: id 7, table 0 || 456: 6188 7f2da88000
+ ogle.android.gm-6188  [004] ...1   488.650586: do_swap_page: id 7, table 0 || 457: 6188 9dbe7000
+ ogle.android.gm-6188  [004] ...1   488.650598: do_swap_page: id 7, table 0 || 458: 6188 9e442000
+ ogle.android.gm-6188  [004] ...1   488.650608: do_swap_page: id 7, table 0 || 459: 6188 9e495000
+ ogle.android.gm-6188  [004] ...1   488.650615: do_swap_page: id 7, table 0 || 460: 6188 9e42e000
+ ogle.android.gm-6188  [004] ...1   488.650628: do_swap_page: id 7, table 0 || 461: 6188 9dbd4000
+ ogle.android.gm-6188  [004] ...1   488.650645: do_swap_page: id 7, table 0 || 462: 6188 7e6d96f000
+ ogle.android.gm-6188  [004] ...1   488.650653: do_swap_page: id 7, table 0 || 464: 6188 7e72f02000
+           <...>-6221  [000] ...1   488.650654: do_swap_page: id 7, table 0 || 463: 6188 9e3f6000
+ ogle.android.gm-6188  [004] ...1   488.650660: do_swap_page: id 7, table 0 || 465: 6188 7e6d94c000
+ ogle.android.gm-6188  [004] ...1   488.650689: do_swap_page: id 7, table 0 || 466: 6188 7f28aa0000
+           <...>-6221  [000] ...1   488.650697: do_swap_page: id 7, table 0 || 467: 6188 9e345000
+  Lite Thread #4-6248  [005] ...1   488.650700: do_swap_page: id 7, table 0 || 468: 6188 9e43c000
+ ogle.android.gm-6188  [004] ...1   488.650752: do_swap_page: id 7, table 0 || 469: 6188 7fbbfbd000
+  Lite Thread #4-6248  [005] ...1   488.650757: do_swap_page: id 7, table 0 || 470: 6188 7eb407c000
+ ogle.android.gm-6188  [004] ...1   488.650764: do_swap_page: id 7, table 0 || 471: 6188 7fbe1d3000
+  Lite Thread #4-6248  [005] ...1   488.650769: do_swap_page: id 7, table 0 || 472: 6188 9e2e0000
+  Lite Thread #4-6248  [005] ...1   488.650774: do_swap_page: id 7, table 0 || 473: 6188 9e49e000
+  Lite Thread #4-6248  [005] ...1   488.650782: do_swap_page: id 7, table 0 || 474: 6188 9e463000
+ ogle.android.gm-6188  [004] ...1   488.650785: do_swap_page: id 7, table 0 || 475: 6188 7fba178000
+ ogle.android.gm-6188  [004] ...1   488.650796: do_swap_page: id 7, table 0 || 476: 6188 7f2da1d000
+  Lite Thread #4-6248  [005] ...1   488.650798: do_swap_page: id 7, table 0 || 477: 6188 9dbcd000
+ ogle.android.gm-6188  [004] ...1   488.650799: do_swap_page: id 7, table 0 || 478: 6188 7f2da1e000
+ ogle.android.gm-6188  [004] ...1   488.650830: do_swap_page: id 7, table 0 || 479: 6188 7f2da1f000
+  Lite Thread #4-6248  [005] ...1   488.650832: do_swap_page: id 7, table 0 || 480: 6188 9e451000
+ ogle.android.gm-6188  [004] ...1   488.650833: do_swap_page: id 7, table 0 || 481: 6188 7f2da20000
+ ogle.android.gm-6188  [004] ...1   488.650836: do_swap_page: id 7, table 0 || 482: 6188 7f2da21000
+ ogle.android.gm-6188  [004] ...1   488.650839: do_swap_page: id 7, table 0 || 483: 6188 7f2da22000
+ ogle.android.gm-6188  [004] ...1   488.650842: do_swap_page: id 7, table 0 || 484: 6188 7f2da23000
+ ogle.android.gm-6188  [004] ...1   488.650850: do_swap_page: id 7, table 0 || 485: 6188 7f2da24000
+ ogle.android.gm-6188  [004] ...1   488.650853: do_swap_page: id 7, table 0 || 486: 6188 7f2da25000
+ ogle.android.gm-6188  [004] ...1   488.650864: do_swap_page: id 7, table 0 || 487: 6188 7e96a5c000
+ ogle.android.gm-6188  [004] ...1   488.650866: do_swap_page: id 7, table 0 || 488: 6188 7e96a5d000
+ ogle.android.gm-6188  [004] ...1   488.650869: do_swap_page: id 7, table 0 || 489: 6188 7e96a5e000
+ ogle.android.gm-6188  [004] ...1   488.650872: do_swap_page: id 7, table 0 || 490: 6188 7e96a5f000
+ ogle.android.gm-6188  [004] ...1   488.650876: do_swap_page: id 7, table 0 || 491: 6188 7e96a60000
+ ogle.android.gm-6188  [004] ...1   488.650879: do_swap_page: id 7, table 0 || 492: 6188 7e96a61000
+ ogle.android.gm-6188  [004] ...1   488.650881: do_swap_page: id 7, table 0 || 494: 6188 7e96a62000
+  Lite Thread #4-6248  [005] ...1   488.650881: do_swap_page: id 7, table 0 || 493: 6188 9dc2c000
+ ogle.android.gm-6188  [004] ...1   488.650884: do_swap_page: id 7, table 0 || 495: 6188 7e96a63000
+ ogle.android.gm-6188  [004] ...1   488.650887: do_swap_page: id 7, table 0 || 496: 6188 7e96a64000
+  Lite Thread #4-6248  [005] ...1   488.650889: do_swap_page: id 7, table 0 || 497: 6188 9e373000
+ ogle.android.gm-6188  [004] ...1   488.650897: do_swap_page: id 7, table 0 || 498: 6188 7eae3fe000
+    BG Thread #0-6225  [006] ...1   488.650898: do_swap_page: id 7, table 0 || 499: 6188 7ec5110000
+ ogle.android.gm-6188  [004] ...1   488.650907: do_swap_page: id 7, table 0 || 500: 6188 7eae3ff000
+    BG Thread #0-6225  [006] ...1   488.650916: do_swap_page: id 7, table 0 || 501: 6188 7ec510d000
+ ogle.android.gm-6188  [004] ...1   488.650934: do_swap_page: id 7, table 0 || 502: 6188 7e90f78000
+ ogle.android.gm-6188  [004] ...1   488.650941: do_swap_page: id 7, table 0 || 503: 6188 7e5d425000
+ ogle.android.gm-6188  [004] ...1   488.650952: do_swap_page: id 7, table 0 || 504: 6188 7e5d426000
+ ogle.android.gm-6188  [004] ...1   488.650960: do_swap_page: id 7, table 0 || 505: 6188 7e90f81000
+ ogle.android.gm-6188  [004] ...1   488.651015: do_swap_page: id 7, table 0 || 506: 6188 7e7256d000
+ ogle.android.gm-6188  [004] ...1   488.651051: do_swap_page: id 7, table 0 || 507: 6188 7e6d977000
+ ogle.android.gm-6188  [004] ...1   488.651065: do_swap_page: id 7, table 0 || 508: 6188 7e72f1c000
+ ogle.android.gm-6188  [004] ...1   488.651080: do_swap_page: id 7, table 0 || 509: 6188 7f28983000
+ ogle.android.gm-6188  [004] ...1   488.651086: do_swap_page: id 7, table 0 || 510: 6188 7e6d96e000
+ ogle.android.gm-6188  [004] ...1   488.651093: do_swap_page: id 7, table 0 || 511: 6188 7e6d94b000
+ ogle.android.gm-6188  [004] ...1   488.651102: do_swap_page: id 7, table 0 || 512: 6188 7e6dad8000
+ ogle.android.gm-6188  [004] ...1   488.651107: do_swap_page: id 7, table 0 || 513: 6188 7e6dae8000
+ ogle.android.gm-6188  [004] ...1   488.651114: do_swap_page: id 7, table 0 || 514: 6188 7e6dae9000
+ ogle.android.gm-6188  [004] ...1   488.651118: do_swap_page: id 7, table 0 || 515: 6188 7e6daea000
+ ogle.android.gm-6188  [004] ...1   488.651123: do_swap_page: id 7, table 0 || 516: 6188 7e6daeb000
+ ogle.android.gm-6188  [004] ...1   488.651128: do_swap_page: id 7, table 0 || 517: 6188 7e6d978000
+ ogle.android.gm-6188  [004] ...1   488.651132: do_swap_page: id 7, table 0 || 518: 6188 7e6daef000
+ ogle.android.gm-6188  [004] ...1   488.651138: do_swap_page: id 7, table 0 || 519: 6188 7e6daf0000
+ ogle.android.gm-6188  [004] ...1   488.651143: do_swap_page: id 7, table 0 || 520: 6188 7e6daf2000
+ ogle.android.gm-6188  [004] ...1   488.651148: do_swap_page: id 7, table 0 || 521: 6188 7e6daf3000
+ ogle.android.gm-6188  [004] ...1   488.651158: do_swap_page: id 7, table 0 || 522: 6188 7e6daf5000
+ ogle.android.gm-6188  [004] ...1   488.651163: do_swap_page: id 7, table 0 || 523: 6188 7e6daf8000
+ ogle.android.gm-6188  [004] ...1   488.651209: do_swap_page: id 7, table 0 || 524: 6188 7e6d970000
+ ogle.android.gm-6188  [004] ...1   488.651250: do_swap_page: id 7, table 0 || 525: 6188 7e6daf6000
+ ogle.android.gm-6188  [004] ...1   488.651307: do_swap_page: id 7, table 0 || 526: 6188 7f28a9e000
+ ogle.android.gm-6188  [004] ....   488.651352: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f03000 5bf88
+ ogle.android.gm-6188  [004] ...1   488.651370: do_swap_page: id 7, table 0 || 527: 6188 7f2daed000
+ ogle.android.gm-6188  [004] ...1   488.651398: do_swap_page: id 7, table 0 || 528: 6188 7e5d53d000
+ ogle.android.gm-6188  [004] ...1   488.651408: do_swap_page: id 7, table 0 || 529: 6188 7e5d4cf000
+ ogle.android.gm-6188  [004] ...1   488.651474: do_swap_page: id 7, table 0 || 530: 6188 9e491000
+ ogle.android.gm-6188  [004] ...1   488.651496: do_swap_page: id 7, table 0 || 531: 6188 9dbcf000
+ ogle.android.gm-6188  [004] ...1   488.651502: do_swap_page: id 7, table 0 || 532: 6188 9e44c000
+    BG Thread #0-6225  [006] ...1   488.651505: do_swap_page: id 7, table 0 || 533: 6188 7f2d4e2000
+ ogle.android.gm-6188  [004] ...1   488.651533: do_swap_page: id 7, table 0 || 534: 6188 7f28aa4000
+    BG Thread #2-6227  [006] ...1   488.651560: do_swap_page: id 7, table 0 || 535: 6188 7ec2efe000
+ ogle.android.gm-6188  [004] ....   488.651618: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7fbe2fb000 4016
+    BG Thread #2-6227  [006] ...1   488.651618: do_swap_page: id 7, table 0 || 536: 6188 7ec2efb000
+ ogle.android.gm-6188  [004] ....   488.651626: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7fbe2fc000 4017
+ ogle.android.gm-6188  [004] ...1   488.651634: do_swap_page: id 7, table 0 || 537: 6188 7e5d545000
+ ogle.android.gm-6188  [004] ...1   488.651697: do_swap_page: id 7, table 0 || 538: 6188 7e6de24000
+ ogle.android.gm-6188  [004] ...1   488.651707: do_swap_page: id 7, table 0 || 539: 6188 7e6d973000
+ ogle.android.gm-6188  [004] ...1   488.651712: do_swap_page: id 7, table 0 || 540: 6188 7e6de04000
+ ogle.android.gm-6188  [004] ...1   488.651721: do_swap_page: id 7, table 0 || 541: 6188 7e72ea8000
+ ogle.android.gm-6188  [004] ...1   488.651732: do_swap_page: id 7, table 0 || 542: 6188 9e42c000
+ ogle.android.gm-6188  [004] ...1   488.651747: do_swap_page: id 7, table 0 || 543: 6188 7e6daf7000
+ ogle.android.gm-6188  [004] ....   488.651782: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae3e4000 6bfce
+ ogle.android.gm-6188  [004] ...1   488.651793: do_swap_page: id 7, table 0 || 544: 6188 7fbccd6000
+ ogle.android.gm-6188  [004] ...1   488.651811: do_swap_page: id 7, table 0 || 545: 6188 7e6d88d000
+ ogle.android.gm-6188  [004] ...1   488.651829: do_swap_page: id 7, table 0 || 546: 6188 7e6daec000
+ ogle.android.gm-6188  [004] ...1   488.651842: do_swap_page: id 7, table 0 || 547: 6188 7e6daed000
+ ogle.android.gm-6188  [004] ...1   488.651847: do_swap_page: id 7, table 0 || 548: 6188 7e6daee000
+ ogle.android.gm-6188  [004] ...1   488.651856: do_swap_page: id 7, table 0 || 549: 6188 7e72f5a000
+ ogle.android.gm-6188  [004] ...1   488.651893: do_swap_page: id 7, table 0 || 550: 6188 7e6daf1000
+ ogle.android.gm-6188  [004] ...1   488.651952: do_swap_page: id 7, table 0 || 551: 6188 7e6d972000
+ ogle.android.gm-6188  [004] ...1   488.651963: do_swap_page: id 7, table 0 || 552: 6188 7e6de03000
+ ogle.android.gm-6188  [004] ...1   488.651983: do_swap_page: id 7, table 0 || 553: 6188 7e967f7000
+ ogle.android.gm-6188  [004] ...1   488.651989: do_swap_page: id 7, table 0 || 554: 6188 7e6d942000
+ ogle.android.gm-6188  [004] ...1   488.652022: do_swap_page: id 7, table 0 || 555: 6188 7f28a9c000
+ ogle.android.gm-6188  [004] ...1   488.652093: do_swap_page: id 7, table 0 || 556: 6188 7e6d904000
+ ogle.android.gm-6188  [004] ...1   488.652126: do_swap_page: id 7, table 0 || 557: 6188 7f28aa6000
+ ogle.android.gm-6188  [004] ...1   488.652157: do_swap_page: id 7, table 0 || 558: 6188 7f28893000
+ ogle.android.gm-6188  [004] ...1   488.652220: do_swap_page: id 7, table 0 || 559: 6188 7f2889b000
+ ogle.android.gm-6188  [004] ...1   488.652300: do_swap_page: id 7, table 0 || 560: 6188 7e6d94d000
+ ogle.android.gm-6188  [004] ...1   488.652364: do_swap_page: id 7, table 0 || 561: 6188 7e6daf4000
+ ogle.android.gm-6188  [004] ...1   488.652500: do_swap_page: id 7, table 0 || 562: 6188 7f28aaa000
+ ogle.android.gm-6188  [004] ...1   488.652540: do_swap_page: id 7, table 0 || 563: 6188 7e5d4ff000
+ ogle.android.gm-6188  [004] ...1   488.652551: do_swap_page: id 7, table 0 || 564: 6188 7f2dbe6000
+ ogle.android.gm-6188  [004] ...1   488.652619: do_swap_page: id 7, table 0 || 565: 6188 7fb9f6a000
+ ogle.android.gm-6188  [004] ...1   488.652734: do_swap_page: id 7, table 0 || 566: 6188 7f2db54000
+ ogle.android.gm-6188  [004] ...1   488.652763: do_swap_page: id 7, table 0 || 567: 6188 7f28a4b000
+ ogle.android.gm-6188  [004] ...1   488.652781: do_swap_page: id 7, table 0 || 568: 6188 7f2dc26000
+ ogle.android.gm-6188  [004] ...1   488.652819: do_swap_page: id 7, table 0 || 569: 6188 7f28a4e000
+ ogle.android.gm-6188  [004] ...1   488.652834: do_swap_page: id 7, table 0 || 570: 6188 7eae3c3000
+ ogle.android.gm-6188  [004] ...1   488.652897: do_swap_page: id 7, table 0 || 571: 6188 7eae4a8000
+ ogle.android.gm-6188  [004] ...1   488.652909: do_swap_page: id 7, table 0 || 572: 6188 7e90c6d000
+ ogle.android.gm-6188  [004] ...1   488.652919: do_swap_page: id 7, table 0 || 573: 6188 7fbccd3000
+ ogle.android.gm-6188  [004] ...1   488.652927: do_swap_page: id 7, table 0 || 574: 6188 7f28906000
+ ogle.android.gm-6188  [004] ...1   488.652936: do_swap_page: id 7, table 0 || 575: 6188 7fbe244000
+ ogle.android.gm-6188  [004] ...1   488.652948: do_swap_page: id 7, table 0 || 576: 6188 7e7317e000
+ ogle.android.gm-6188  [004] ...1   488.652955: do_swap_page: id 7, table 0 || 577: 6188 7e90c4e000
+ ogle.android.gm-6188  [004] ...1   488.652962: do_swap_page: id 7, table 0 || 578: 6188 7e90e4a000
+ ogle.android.gm-6188  [004] ...1   488.652970: do_swap_page: id 7, table 0 || 579: 6188 7e72fd1000
+ ogle.android.gm-6188  [004] ...1   488.652974: do_swap_page: id 7, table 0 || 580: 6188 7e72fd2000
+ ogle.android.gm-6188  [004] ...1   488.652981: do_swap_page: id 7, table 0 || 581: 6188 7e90d50000
+ ogle.android.gm-6188  [004] ...1   488.652986: do_swap_page: id 7, table 0 || 582: 6188 7e72fd3000
+ ogle.android.gm-6188  [004] ...1   488.652993: do_swap_page: id 7, table 0 || 583: 6188 7e90e49000
+ ogle.android.gm-6188  [004] ...1   488.652999: do_swap_page: id 7, table 0 || 584: 6188 7e72d90000
+ ogle.android.gm-6188  [004] ...1   488.653005: do_swap_page: id 7, table 0 || 585: 6188 7e90d4f000
+ ogle.android.gm-6188  [004] ...1   488.653012: do_swap_page: id 7, table 0 || 586: 6188 7e72cb1000
+ ogle.android.gm-6188  [004] ...1   488.653055: do_swap_page: id 7, table 0 || 587: 6188 9e2c8000
+ ogle.android.gm-6188  [004] ...1   488.653066: do_swap_page: id 7, table 0 || 588: 6188 9e49a000
+ ogle.android.gm-6188  [004] ...1   488.653079: do_swap_page: id 7, table 0 || 589: 6188 9e393000
+ ogle.android.gm-6188  [004] ...1   488.653091: do_swap_page: id 7, table 0 || 590: 6188 7e90c19000
+ ogle.android.gm-6188  [004] ...1   488.653119: do_swap_page: id 7, table 0 || 591: 6188 7e90d5b000
+ ogle.android.gm-6188  [004] ...1   488.653286: do_swap_page: id 7, table 0 || 592: 6188 9dc3f000
+ ogle.android.gm-6188  [004] ...1   488.653316: do_swap_page: id 7, table 0 || 593: 6188 9dc2b000
+ ogle.android.gm-6188  [004] ...1   488.653323: do_swap_page: id 7, table 0 || 594: 6188 9e4b2000
+ ogle.android.gm-6188  [004] ...1   488.653328: do_swap_page: id 7, table 0 || 595: 6188 9e480000
+ ogle.android.gm-6188  [004] ...1   488.653355: do_swap_page: id 7, table 0 || 596: 6188 7e72d15000
+ ogle.android.gm-6188  [004] ...1   488.653380: do_swap_page: id 7, table 0 || 597: 6188 9e4bf000
+ ogle.android.gm-6188  [004] ...1   488.653388: do_swap_page: id 7, table 0 || 598: 6188 9e490000
+ ogle.android.gm-6188  [004] ...1   488.653396: do_swap_page: id 7, table 0 || 599: 6188 9e47f000
+ ogle.android.gm-6188  [004] ...1   488.653408: do_swap_page: id 7, table 0 || 600: 6188 7e72d19000
+ ogle.android.gm-6188  [004] ...1   488.653434: do_swap_page: id 7, table 0 || 601: 6188 7e72d2a000
+ ogle.android.gm-6188  [004] ...1   488.653450: do_swap_page: id 7, table 0 || 602: 6188 9dbda000
+ ogle.android.gm-6188  [004] ...1   488.653458: do_swap_page: id 7, table 0 || 603: 6188 9e437000
+ ogle.android.gm-6188  [004] ...1   488.653463: do_swap_page: id 7, table 0 || 604: 6188 9e4c1000
+ ogle.android.gm-6188  [004] ...1   488.653469: do_swap_page: id 7, table 0 || 605: 6188 9e493000
+ ogle.android.gm-6188  [004] ...1   488.653493: do_swap_page: id 7, table 0 || 606: 6188 9dbee000
+ ogle.android.gm-6188  [004] ...1   488.653526: do_swap_page: id 7, table 0 || 607: 6188 7e72d2e000
+ ogle.android.gm-6188  [004] ...1   488.653547: do_swap_page: id 7, table 0 || 608: 6188 7e72d6a000
+ ogle.android.gm-6188  [004] ...1   488.653556: do_swap_page: id 7, table 0 || 609: 6188 7e72d69000
+ ogle.android.gm-6188  [004] ...1   488.653570: do_swap_page: id 7, table 0 || 610: 6188 7e72d6b000
+ ogle.android.gm-6188  [004] ...1   488.653592: do_swap_page: id 7, table 0 || 611: 6188 7e72d6c000
+ ogle.android.gm-6188  [004] ...1   488.653614: do_swap_page: id 7, table 0 || 612: 6188 9e32f000
+ ogle.android.gm-6188  [004] ...1   488.653626: do_swap_page: id 7, table 0 || 613: 6188 7e90fa8000
+ ogle.android.gm-6188  [004] ...1   488.653645: do_swap_page: id 7, table 0 || 614: 6188 9dc34000
+ ogle.android.gm-6188  [004] ...1   488.653661: do_swap_page: id 7, table 0 || 615: 6188 9db0d000
+ ogle.android.gm-6188  [004] ...1   488.653675: do_swap_page: id 7, table 0 || 616: 6188 7e72e24000
+ ogle.android.gm-6188  [004] ...1   488.653683: do_swap_page: id 7, table 0 || 617: 6188 7e72e23000
+ ogle.android.gm-6188  [004] ...1   488.653706: do_swap_page: id 7, table 0 || 618: 6188 7e72e26000
+ ogle.android.gm-6188  [004] ...1   488.653723: do_swap_page: id 7, table 0 || 619: 6188 7e90fa2000
+ ogle.android.gm-6188  [004] ...1   488.653747: do_swap_page: id 7, table 0 || 620: 6188 7e90f9d000
+ ogle.android.gm-6188  [004] ...1   488.653755: do_swap_page: id 7, table 0 || 621: 6188 7e90f9c000
+ ogle.android.gm-6188  [004] ...1   488.653778: do_swap_page: id 7, table 0 || 622: 6188 9dc7c000
+ ogle.android.gm-6188  [004] ...1   488.653789: do_swap_page: id 7, table 0 || 623: 6188 9e479000
+ ogle.android.gm-6188  [004] ...1   488.653825: do_swap_page: id 7, table 0 || 624: 6188 9dbed000
+ ogle.android.gm-6188  [004] ...1   488.653832: do_swap_page: id 7, table 0 || 625: 6188 9e405000
+ ogle.android.gm-6188  [004] ...1   488.653838: do_swap_page: id 7, table 0 || 626: 6188 9e48d000
+ ogle.android.gm-6188  [004] ...1   488.653862: do_swap_page: id 7, table 0 || 627: 6188 7eae3e5000
+ ogle.android.gm-6188  [004] ...1   488.653879: do_swap_page: id 7, table 0 || 628: 6188 7eae49a000
+ ogle.android.gm-6188  [004] ...1   488.653887: do_swap_page: id 7, table 0 || 629: 6188 7e90ebf000
+ ogle.android.gm-6188  [004] ...1   488.653918: do_swap_page: id 7, table 0 || 630: 6188 9dc4d000
+ ogle.android.gm-6188  [004] ...1   488.653936: do_swap_page: id 7, table 0 || 631: 6188 7eae3f6000
+ ogle.android.gm-6188  [004] ...1   488.653958: do_swap_page: id 7, table 0 || 632: 6188 7eae2f8000
+ ogle.android.gm-6188  [004] ...1   488.653976: do_swap_page: id 7, table 0 || 633: 6188 7eae2f9000
+ ogle.android.gm-6188  [004] ...1   488.653992: do_swap_page: id 7, table 0 || 634: 6188 9dc74000
+ ogle.android.gm-6188  [004] ...1   488.653999: do_swap_page: id 7, table 0 || 635: 6188 9e2ec000
+ ogle.android.gm-6188  [004] ...1   488.654003: do_swap_page: id 7, table 0 || 636: 6188 9e4a0000
+ ogle.android.gm-6188  [004] ...1   488.654014: do_swap_page: id 7, table 0 || 637: 6188 7eae3f2000
+ ogle.android.gm-6188  [004] ...1   488.654028: do_swap_page: id 7, table 0 || 638: 6188 7e90d5c000
+ ogle.android.gm-6188  [004] ...1   488.654045: do_swap_page: id 7, table 0 || 639: 6188 7e90df2000
+ ogle.android.gm-6188  [004] ...1   488.654058: do_swap_page: id 7, table 0 || 640: 6188 7e90d5e000
+ ogle.android.gm-6188  [004] ...1   488.654074: do_swap_page: id 7, table 0 || 641: 6188 7e90e1a000
+ ogle.android.gm-6188  [004] ...1   488.654088: do_swap_page: id 7, table 0 || 642: 6188 7e96859000
+ ogle.android.gm-6188  [004] ...1   488.654329: do_swap_page: id 7, table 0 || 643: 6188 7f2cf6e000
+ BackgroundSingl-6228  [006] ...1   488.655803: do_swap_page: id 7, table 0 || 644: 6188 9e3ac000
+ ogle.android.gm-6188  [004] ...1   488.656783: do_swap_page: id 7, table 0 || 645: 6188 7e9683f000
+ ogle.android.gm-6188  [004] ...1   488.656799: do_swap_page: id 7, table 0 || 646: 6188 7fbe1d5000
+ ogle.android.gm-6188  [004] ...1   488.656816: do_swap_page: id 7, table 0 || 647: 6188 7f28a04000
+ ogle.android.gm-6188  [004] ...1   488.656824: do_swap_page: id 7, table 0 || 648: 6188 7e96869000
+ ogle.android.gm-6188  [004] ...1   488.656831: do_swap_page: id 7, table 0 || 649: 6188 7fbd43e000
+           <...>-6258  [004] ...1   488.656937: do_swap_page: id 7, table 0 || 650: 6188 7fba8b2000
+           <...>-6258  [004] ...1   488.656949: do_swap_page: id 7, table 0 || 651: 6188 7f209bf000
+           <...>-6258  [004] ...1   488.656963: do_swap_page: id 7, table 0 || 652: 6188 7e96b12000
+           <...>-6258  [004] ...1   488.657031: do_swap_page: id 7, table 0 || 653: 6188 7e96a8a000
+           <...>-6258  [004] ...1   488.657133: do_swap_page: id 7, table 0 || 654: 6188 7f28965000
+           <...>-6258  [004] ...1   488.657142: do_swap_page: id 7, table 0 || 655: 6188 7e96b08000
+           <...>-6258  [004] ...1   488.657173: do_swap_page: id 7, table 0 || 656: 6188 7e96937000
+           <...>-6258  [004] ...1   488.657185: do_swap_page: id 7, table 0 || 657: 6188 7eaa628000
+           <...>-6258  [004] ...1   488.657203: do_swap_page: id 7, table 0 || 658: 6188 7fbf5e4000
+           <...>-6258  [004] ...1   488.657217: do_swap_page: id 7, table 0 || 659: 6188 7e72ec2000
+           <...>-6258  [004] ....   488.657284: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90e2c000 63fc4
+           <...>-6258  [004] ...1   488.657299: do_swap_page: id 7, table 0 || 660: 6188 7e96b8f000
+ ogle.android.gm-6188  [004] ...1   488.658155: do_swap_page: id 7, table 0 || 661: 6188 7e968f0000
+ ogle.android.gm-6188  [004] ...1   488.658171: do_swap_page: id 7, table 0 || 662: 6188 7e96b0e000
+ ogle.android.gm-6188  [004] ...1   488.658176: do_swap_page: id 7, table 0 || 663: 6188 7e96b0f000
+ ogle.android.gm-6188  [004] ...1   488.658198: do_swap_page: id 7, table 0 || 664: 6188 7f2da57000
+ ogle.android.gm-6188  [004] ...1   488.658208: do_swap_page: id 7, table 0 || 665: 6188 7f28921000
+ ogle.android.gm-6188  [004] ...1   488.658215: do_swap_page: id 7, table 0 || 666: 6188 7f2da14000
+ ogle.android.gm-6188  [004] ...1   488.658226: do_swap_page: id 7, table 0 || 667: 6188 7f2da15000
+ ogle.android.gm-6188  [004] ...1   488.658252: do_swap_page: id 7, table 0 || 668: 6188 7f2da16000
+ ogle.android.gm-6188  [005] ...1   488.658308: do_swap_page: id 7, table 0 || 669: 6188 7f28a2c000
+ ogle.android.gm-6188  [005] ...1   488.658322: do_swap_page: id 7, table 0 || 670: 6188 7f2da17000
+ ogle.android.gm-6188  [005] ...1   488.658337: do_swap_page: id 7, table 0 || 671: 6188 7e96b10000
+ ogle.android.gm-6188  [005] ...1   488.658348: do_swap_page: id 7, table 0 || 672: 6188 7f2daef000
+ ogle.android.gm-6188  [005] ...1   488.658354: do_swap_page: id 7, table 0 || 673: 6188 7f2da18000
+ ogle.android.gm-6188  [005] ...1   488.658361: do_swap_page: id 7, table 0 || 674: 6188 7e96b11000
+ ogle.android.gm-6188  [005] ...1   488.658370: do_swap_page: id 7, table 0 || 675: 6188 7f28a2d000
+ ogle.android.gm-6188  [005] ...1   488.658375: do_swap_page: id 7, table 0 || 676: 6188 7f2da19000
+ ogle.android.gm-6188  [005] ...1   488.658387: do_swap_page: id 7, table 0 || 677: 6188 7e90c1a000
+ ogle.android.gm-6188  [005] ...1   488.658393: do_swap_page: id 7, table 0 || 678: 6188 7e90c1b000
+ ogle.android.gm-6188  [005] ...1   488.658401: do_swap_page: id 7, table 0 || 679: 6188 7f2da1a000
+ ogle.android.gm-6188  [005] ...1   488.658407: do_swap_page: id 7, table 0 || 680: 6188 7e90c1c000
+ ogle.android.gm-6188  [005] ...1   488.658422: do_swap_page: id 7, table 0 || 681: 6188 7eae466000
+ ogle.android.gm-6188  [005] ...1   488.658431: do_swap_page: id 7, table 0 || 682: 6188 7e6d7e4000
+ ogle.android.gm-6188  [005] ...1   488.658443: do_swap_page: id 7, table 0 || 683: 6188 7e90c1d000
+ ogle.android.gm-6188  [005] ...1   488.658451: do_swap_page: id 7, table 0 || 684: 6188 7e6d7e5000
+ ogle.android.gm-6188  [005] ...1   488.658458: do_swap_page: id 7, table 0 || 685: 6188 7e90c1e000
+ ogle.android.gm-6188  [005] ...1   488.658475: do_swap_page: id 7, table 0 || 686: 6188 7e90db2000
+ ogle.android.gm-6188  [005] ...1   488.658482: do_swap_page: id 7, table 0 || 687: 6188 7e90c1f000
+ ogle.android.gm-6188  [005] ...1   488.658487: do_swap_page: id 7, table 0 || 688: 6188 7e90c20000
+ ogle.android.gm-6188  [005] ...1   488.658494: do_swap_page: id 7, table 0 || 689: 6188 7e90db3000
+ ogle.android.gm-6188  [005] ...1   488.658500: do_swap_page: id 7, table 0 || 690: 6188 7e90c21000
+ ogle.android.gm-6188  [005] ...1   488.658510: do_swap_page: id 7, table 0 || 691: 6188 7e90c24000
+ ogle.android.gm-6188  [005] ...1   488.658517: do_swap_page: id 7, table 0 || 692: 6188 7e90d51000
+ ogle.android.gm-6188  [005] ...1   488.658523: do_swap_page: id 7, table 0 || 693: 6188 7e90db4000
+ ogle.android.gm-6188  [005] ...1   488.658529: do_swap_page: id 7, table 0 || 694: 6188 7e90c22000
+ ogle.android.gm-6188  [005] ...1   488.658534: do_swap_page: id 7, table 0 || 695: 6188 7e90c23000
+ ogle.android.gm-6188  [005] ...1   488.658540: do_swap_page: id 7, table 0 || 696: 6188 7e90fae000
+ ogle.android.gm-6188  [005] ...1   488.658548: do_swap_page: id 7, table 0 || 697: 6188 7e96a2d000
+ ogle.android.gm-6188  [005] ...1   488.658564: do_swap_page: id 7, table 0 || 698: 6188 7e72f86000
+ ogle.android.gm-6188  [005] ...1   488.658570: do_swap_page: id 7, table 0 || 699: 6188 7e72fa5000
+ ogle.android.gm-6188  [005] ...1   488.658578: do_swap_page: id 7, table 0 || 700: 6188 7e72fa6000
+ ogle.android.gm-6188  [005] ...1   488.658583: do_swap_page: id 7, table 0 || 701: 6188 7e730dc000
+ ogle.android.gm-6188  [005] ...1   488.658619: do_swap_page: id 7, table 0 || 702: 6188 9de07000
+ ogle.android.gm-6188  [005] ...1   488.658637: do_swap_page: id 7, table 0 || 703: 6188 7fffff8000
+ ogle.android.gm-6188  [005] ...1   488.658649: do_swap_page: id 7, table 0 || 704: 6188 7e968c5000
+ ogle.android.gm-6188  [005] ....   488.658659: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae467000 6bffc
+ ogle.android.gm-6188  [005] ...1   488.658665: do_swap_page: id 7, table 0 || 705: 6188 7e72c93000
+ ogle.android.gm-6188  [005] ...1   488.658676: do_swap_page: id 7, table 0 || 706: 6188 7e90c31000
+ ogle.android.gm-6188  [005] ...1   488.658682: do_swap_page: id 7, table 0 || 707: 6188 7e90c32000
+ ogle.android.gm-6188  [005] ...1   488.658706: do_swap_page: id 7, table 0 || 708: 6188 7e72d92000
+ ogle.android.gm-6188  [005] ...1   488.658712: do_swap_page: id 7, table 0 || 709: 6188 7e72f0f000
+ ogle.android.gm-6188  [005] ...1   488.658721: do_swap_page: id 7, table 0 || 710: 6188 7e90c33000
+ ogle.android.gm-6188  [005] ...1   488.658729: do_swap_page: id 7, table 0 || 711: 6188 7e72c85000
+ ogle.android.gm-6188  [005] ...1   488.658733: do_swap_page: id 7, table 0 || 712: 6188 7e72c86000
+ ogle.android.gm-6188  [005] ...1   488.658738: do_swap_page: id 7, table 0 || 713: 6188 7e72ed9000
+ ogle.android.gm-6188  [005] ...1   488.658746: do_swap_page: id 7, table 0 || 714: 6188 7e72c58000
+ ogle.android.gm-6188  [005] ...1   488.658751: do_swap_page: id 7, table 0 || 715: 6188 7e72f10000
+ ogle.android.gm-6188  [005] ...1   488.658757: do_swap_page: id 7, table 0 || 716: 6188 7e72ed8000
+ ogle.android.gm-6188  [005] ...1   488.658765: do_swap_page: id 7, table 0 || 717: 6188 7e72c9b000
+ ogle.android.gm-6188  [005] ...1   488.658769: do_swap_page: id 7, table 0 || 718: 6188 7e72f11000
+ ogle.android.gm-6188  [005] ...1   488.658773: do_swap_page: id 7, table 0 || 719: 6188 7e72f12000
+ ogle.android.gm-6188  [005] ...1   488.658798: do_swap_page: id 7, table 0 || 720: 6188 7eae468000
+ ogle.android.gm-6188  [005] ...1   488.658809: do_swap_page: id 7, table 0 || 721: 6188 7e72ca2000
+ ogle.android.gm-6188  [005] ...1   488.658821: do_swap_page: id 7, table 0 || 722: 6188 7e72f28000
+ ogle.android.gm-6188  [005] ...1   488.658828: do_swap_page: id 7, table 0 || 723: 6188 7e72f13000
+ ogle.android.gm-6188  [005] ...1   488.658835: do_swap_page: id 7, table 0 || 724: 6188 7e72ca3000
+ ogle.android.gm-6188  [005] ...1   488.658840: do_swap_page: id 7, table 0 || 725: 6188 7e72c87000
+ ogle.android.gm-6188  [005] ...1   488.658852: do_swap_page: id 7, table 0 || 726: 6188 7e72c59000
+ ogle.android.gm-6188  [005] ...1   488.658860: do_swap_page: id 7, table 0 || 727: 6188 7e72f14000
+ ogle.android.gm-6188  [005] ...1   488.658895: do_swap_page: id 7, table 0 || 728: 6188 7fbdc32000
+ ogle.android.gm-6188  [005] ...1   488.658903: do_swap_page: id 7, table 0 || 729: 6188 7e90d4b000
+ ogle.android.gm-6188  [005] ...1   488.658912: do_swap_page: id 7, table 0 || 730: 6188 7e90e71000
+ ogle.android.gm-6188  [005] ...1   488.658920: do_swap_page: id 7, table 0 || 731: 6188 7e90e35000
+ ogle.android.gm-6188  [005] ...1   488.658926: do_swap_page: id 7, table 0 || 732: 6188 7e72c99000
+ ogle.android.gm-6188  [005] ...1   488.658936: do_swap_page: id 7, table 0 || 733: 6188 7f28a3a000
+ ogle.android.gm-6188  [005] ....   488.658943: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e6de8f000 57fc4
+ ogle.android.gm-6188  [005] ...1   488.658950: do_swap_page: id 7, table 0 || 734: 6188 7e6de8e000
+ ogle.android.gm-6188  [005] ....   488.658956: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c5d000 57fe2
+ ogle.android.gm-6188  [005] ...1   488.658962: do_swap_page: id 7, table 0 || 735: 6188 7e90e37000
+ ogle.android.gm-6188  [005] ....   488.658972: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f28887000 73f1f
+ ogle.android.gm-6188  [005] ....   488.658994: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f15000 5bf97
+ ogle.android.gm-6188  [005] ....   488.659004: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f16000 5bf98
+ ogle.android.gm-6188  [005] ....   488.659023: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730dd000 5ff2f
+ ogle.android.gm-6188  [005] ....   488.659044: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c5a000 57fe0
+ ogle.android.gm-6188  [005] ....   488.659060: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730de000 5ff30
+ ogle.android.gm-6188  [005] ....   488.659066: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730df000 5ff31
+ ogle.android.gm-6188  [005] ...1   488.659073: do_swap_page: id 7, table 0 || 736: 6188 7eae469000
+ ogle.android.gm-6188  [005] ....   488.659080: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d16000 5bf2d
+ ogle.android.gm-6188  [005] ....   488.659091: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f2e000 5bfa7
+ ogle.android.gm-6188  [005] ....   488.659098: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c88000 57feb
+ ogle.android.gm-6188  [005] ....   488.659115: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ce6000 5bf23
+ ogle.android.gm-6188  [005] ....   488.659121: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f2f000 5bfa8
+ ogle.android.gm-6188  [005] ...1   488.659130: do_swap_page: id 7, table 0 || 737: 6188 7e968bd000
+ ogle.android.gm-6188  [005] ...1   488.659139: do_swap_page: id 7, table 0 || 738: 6188 7e72f18000
+ ogle.android.gm-6188  [005] ....   488.659151: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f30000 5bfa9
+ ogle.android.gm-6188  [005] ....   488.659165: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f31000 5bfaa
+ ogle.android.gm-6188  [005] ....   488.659181: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d5a000 5bf35
+ ogle.android.gm-6188  [005] ...1   488.659209: do_swap_page: id 7, table 0 || 739: 6188 7eae419000
+ ogle.android.gm-6188  [005] ....   488.659216: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e72000 63fe8
+ ogle.android.gm-6188  [005] ...1   488.659224: do_swap_page: id 7, table 0 || 740: 6188 7e90d42000
+ ogle.android.gm-6188  [005] ...1   488.659234: do_swap_page: id 7, table 0 || 741: 6188 7e72f00000
+ ogle.android.gm-6188  [005] ....   488.659241: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e33000 5bf4f
+ ogle.android.gm-6188  [005] ...1   488.659248: do_swap_page: id 7, table 0 || 742: 6188 7e72ec1000
+ ogle.android.gm-6188  [005] ....   488.659254: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ccd000 5bf1a
+ ogle.android.gm-6188  [005] ....   488.659267: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae39c000 6bfc3
+ ogle.android.gm-6188  [005] ...1   488.659273: do_swap_page: id 7, table 0 || 743: 6188 7e96831000
+ ogle.android.gm-6188  [005] ....   488.659302: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c89000 57fec
+ ogle.android.gm-6188  [005] ....   488.659313: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f32000 5bfab
+ ogle.android.gm-6188  [005] ....   488.659328: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d59000 5bf34
+ ogle.android.gm-6188  [005] ....   488.659341: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7fffff7000 4033
+ ogle.android.gm-6188  [005] ....   488.659352: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f22000 5bfa0
+ ogle.android.gm-6188  [005] ....   488.659371: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e96a40000 67fde
+ ogle.android.gm-6188  [005] ....   488.659420: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f2b000 5bfa6
+ ogle.android.gm-6188  [005] ....   488.659448: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e96b0c000 6bf01
+ ogle.android.gm-6188  [005] ....   488.659691: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae39a000 6bfc1
+ ogle.android.gm-6188  [005] ....   488.659780: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f33000 5bfac
+ ogle.android.gm-6188  [005] ....   488.659787: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f34000 5bfad
+ ogle.android.gm-6188  [005] ....   488.659813: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c17000 5fff7
+ ogle.android.gm-6188  [005] ...1   488.659836: do_swap_page: id 7, table 0 || 744: 6188 7e90c38000
+ ogle.android.gm-6188  [005] ....   488.659845: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e96bbf000 6bf2e
+ ogle.android.gm-6188  [005] ...1   488.659854: do_swap_page: id 7, table 0 || 745: 6188 7f28a38000
+ ogle.android.gm-6188  [005] ....   488.659887: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e78000 5bf61
+ ogle.android.gm-6188  [005] ....   488.659899: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72eda000 5bf80
+ ogle.android.gm-6188  [005] ....   488.659939: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f29000 5bfa4
+ ogle.android.gm-6188  [005] ....   488.659945: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f35000 5bfae
+ ogle.android.gm-6188  [005] ....   488.659950: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d5f000 5bf37
+ ogle.android.gm-6188  [005] ....   488.659955: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d60000 5bf38
+ ogle.android.gm-6188  [005] ....   488.659969: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d61000 5bf39
+ ogle.android.gm-6188  [005] ....   488.659977: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f39000 5bfb2
+ ogle.android.gm-6188  [005] ....   488.659982: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f3a000 5bfb3
+ ogle.android.gm-6188  [005] ....   488.660152: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f3b000 5bfb4
+ ogle.android.gm-6188  [005] ....   488.660169: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f3c000 5bfb5
+ ogle.android.gm-6188  [005] ....   488.660176: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f3d000 5bfb6
+ ogle.android.gm-6188  [005] ...1   488.660184: do_swap_page: id 7, table 0 || 746: 6188 7e90d43000
+ ogle.android.gm-6188  [005] ....   488.660195: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f3e000 5bfb7
+ ogle.android.gm-6188  [005] ....   488.660205: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d2b000 5bf30
+ ogle.android.gm-6188  [005] ....   488.660215: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f3f000 5bfb8
+ ogle.android.gm-6188  [005] ....   488.660224: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e6d90e000 57f73
+ ogle.android.gm-6188  [005] ....   488.660233: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e6d90f000 57f74
+ ogle.android.gm-6188  [005] ....   488.660241: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7318e000 5ff6c
+ ogle.android.gm-6188  [005] ....   488.660248: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90d46000 63f69
+ ogle.android.gm-6188  [005] ....   488.660252: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f40000 5bfb9
+ ogle.android.gm-6188  [005] ....   488.660258: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d2c000 5bf31
+ ogle.android.gm-6188  [005] ....   488.660264: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e6d910000 57f75
+ ogle.android.gm-6188  [005] ....   488.660271: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f06000 5bf8b
+ ogle.android.gm-6188  [005] ....   488.660280: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c75000 57fe6
+ ogle.android.gm-6188  [005] ....   488.660285: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f41000 5bfba
+ ogle.android.gm-6188  [005] ....   488.660297: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e20000 5bf47
+ ogle.android.gm-6188  [005] ...1   488.660318: do_swap_page: id 7, table 0 || 747: 6188 7e72cca000
+ ogle.android.gm-6188  [005] ....   488.660327: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72da7000 5bf42
+ ogle.android.gm-6188  [005] ....   488.660335: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c5e000 57fe3
+ ogle.android.gm-6188  [005] ....   488.660340: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cce000 5bf1b
+ ogle.android.gm-6188  [005] ...1   488.660349: do_swap_page: id 7, table 0 || 748: 6188 7e72e32000
+ ogle.android.gm-6188  [005] ...1   488.660359: do_swap_page: id 7, table 0 || 749: 6188 7e90d2d000
+ ogle.android.gm-6188  [005] ....   488.660375: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f42000 5bfbb
+ ogle.android.gm-6188  [005] ....   488.660392: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f4a000 5bfc3
+ ogle.android.gm-6188  [005] ...1   488.660453: do_swap_page: id 7, table 0 || 750: 6188 7e6d889000
+ ogle.android.gm-6188  [005] ....   488.660492: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e96900000 67fc7
+ ogle.android.gm-6188  [005] ....   488.660518: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e35000 5bf51
+ ogle.android.gm-6188  [005] ....   488.660543: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f4b000 5bfc4
+ ogle.android.gm-6188  [005] ...1   488.660559: do_swap_page: id 7, table 0 || 751: 6188 7e6de8d000
+ ogle.android.gm-6188  [005] ...1   488.660570: do_swap_page: id 7, table 0 || 752: 6188 7f2d9d7000
+ ogle.android.gm-6188  [005] ....   488.660584: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f43000 5bfbc
+ ogle.android.gm-6188  [005] ....   488.660593: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f44000 5bfbd
+ ogle.android.gm-6188  [005] ....   488.660607: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f2a000 5bfa5
+ ogle.android.gm-6188  [005] ....   488.660613: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f45000 5bfbe
+ ogle.android.gm-6188  [005] ....   488.660623: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d2d000 5bf32
+ ogle.android.gm-6188  [005] ....   488.660631: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f46000 5bfbf
+ ogle.android.gm-6188  [005] ....   488.660646: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d65000 5bf3a
+ ogle.android.gm-6188  [005] ....   488.660658: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f47000 5bfc0
+ ogle.android.gm-6188  [005] ....   488.660666: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e968be000 67f9c
+ ogle.android.gm-6188  [005] ....   488.660678: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f48000 5bfc1
+ ogle.android.gm-6188  [005] ....   488.660690: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f49000 5bfc2
+ ogle.android.gm-6188  [005] ....   488.660709: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c5f000 57fe4
+ ogle.android.gm-6188  [005] ....   488.660717: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e6dc91000 57f88
+ ogle.android.gm-6188  [005] ...1   488.660736: do_swap_page: id 7, table 0 || 753: 6188 7f2daa6000
+ ogle.android.gm-6188  [005] ....   488.660743: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72edb000 5bf81
+ ogle.android.gm-6188  [005] ....   488.660755: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e1f000 5bf46
+ ogle.android.gm-6188  [005] ....   488.660766: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730e6000 5ff35
+ ogle.android.gm-6188  [005] ....   488.660772: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730e3000 5ff32
+ ogle.android.gm-6188  [005] ....   488.660782: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730e4000 5ff33
+ ogle.android.gm-6188  [005] ....   488.660788: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730e5000 5ff34
+ ogle.android.gm-6188  [005] ....   488.660804: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f61000 5bfc6
+ ogle.android.gm-6188  [005] ....   488.660817: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f62000 5bfc7
+ ogle.android.gm-6188  [005] ....   488.660828: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f63000 5bfc8
+ ogle.android.gm-6188  [005] ....   488.660838: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f64000 5bfc9
+ ogle.android.gm-6188  [005] ....   488.660846: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f65000 5bfca
+ ogle.android.gm-6188  [005] ...1   488.660864: do_swap_page: id 7, table 0 || 754: 6188 7e6d90b000
+ ogle.android.gm-6188  [005] ....   488.660885: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730ec000 5ff38
+ ogle.android.gm-6188  [005] ....   488.660897: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730ed000 5ff39
+ ogle.android.gm-6188  [005] ....   488.660902: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730ee000 5ff3a
+ ogle.android.gm-6188  [005] ....   488.660923: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f68000 5bfcb
+ ogle.android.gm-6188  [005] ....   488.660930: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f6c000 5bfce
+ ogle.android.gm-6188  [005] ....   488.660941: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f6d000 5bfcf
+ ogle.android.gm-6188  [005] ....   488.660955: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c77000 57fe7
+ ogle.android.gm-6188  [005] ....   488.660969: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f75000 5bfd6
+ ogle.android.gm-6188  [005] ....   488.661005: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f7b000 5bfd9
+ ogle.android.gm-6188  [005] ...1   488.661198: do_swap_page: id 7, table 0 || 755: 6188 7e96822000
+ ogle.android.gm-6188  [005] ....   488.661341: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f6e000 5bfd0
+ ogle.android.gm-6188  [005] ....   488.661355: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f6f000 5bfd1
+ ogle.android.gm-6188  [005] ....   488.661391: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f70000 5bfd2
+ ogle.android.gm-6188  [005] ....   488.661403: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f7c000 5bfda
+ ogle.android.gm-6188  [005] ....   488.661413: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f71000 5bfd3
+ ogle.android.gm-6188  [005] ....   488.661426: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72dbb000 5bf43
+ ogle.android.gm-6188  [005] ....   488.661591: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72dbc000 5bf44
+ ogle.android.gm-6188  [005] ...1   488.661675: do_swap_page: id 7, table 0 || 756: 6188 7e90d48000
+ ogle.android.gm-6188  [005] ...1   488.661698: do_swap_page: id 7, table 0 || 757: 6188 7e90d49000
+ ogle.android.gm-6188  [005] ....   488.661778: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f72000 5bfd4
+ ogle.android.gm-6188  [005] ....   488.661786: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f73000 5bfd5
+ ogle.android.gm-6188  [005] ....   488.661982: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f7d000 5bfdb
+ ogle.android.gm-6188  [005] ....   488.662010: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f76000 5bfd7
+ ogle.android.gm-6188  [005] ....   488.662020: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730e7000 5ff36
+ ogle.android.gm-6188  [005] ....   488.662026: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730f5000 5ff3b
+ ogle.android.gm-6188  [005] ....   488.662042: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7311a000 5ff41
+ ogle.android.gm-6188  [005] ....   488.662049: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7311b000 5ff42
+ ogle.android.gm-6188  [005] ....   488.662087: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e43000 63fd6
+ ogle.android.gm-6188  [005] ....   488.662101: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e5a000 5bf55
+ ogle.android.gm-6188  [005] ....   488.662126: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e21000 5bf48
+ ogle.android.gm-6188  [005] ...1   488.662175: do_swap_page: id 7, table 0 || 758: 6188 7e90d4a000
+ ogle.android.gm-6188  [005] ....   488.662189: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e96bcc000 6bf34
+ ogle.android.gm-6188  [005] ...1   488.662204: do_swap_page: id 7, table 0 || 759: 6188 7e72d91000
+ ogle.android.gm-6188  [005] ....   488.662220: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e36000 5bf52
+ ogle.android.gm-6188  [005] ....   488.662246: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f23000 5bfa1
+ ogle.android.gm-6188  [005] ....   488.662284: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90fa9000 67f41
+ ogle.android.gm-6188  [005] ....   488.662298: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e96a2f000 67fdc
+ ogle.android.gm-6188  [005] ...1   488.662308: do_swap_page: id 7, table 0 || 760: 6188 7e5d36f000
+ ogle.android.gm-6188  [005] ....   488.662324: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e5d3c6000 53fd1
+ ogle.android.gm-6188  [005] ...1   488.662382: do_swap_page: id 7, table 0 || 761: 6188 7eae499000
+ ogle.android.gm-6188  [005] ...1   488.662401: do_swap_page: id 7, table 0 || 762: 6188 7e90ec3000
+ ogle.android.gm-6188  [005] ...1   488.662408: do_swap_page: id 7, table 0 || 763: 6188 7e72e34000
+ ogle.android.gm-6188  [005] ....   488.662413: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72eb6000 5bf6c
+ ogle.android.gm-6188  [005] ...1   488.662420: do_swap_page: id 7, table 0 || 764: 6188 7e72e76000
+ ogle.android.gm-6188  [005] ....   488.662427: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90f28000 67f24
+ ogle.android.gm-6188  [005] ...1   488.662434: do_swap_page: id 7, table 0 || 765: 6188 7e90e80000
+ ogle.android.gm-6188  [005] ....   488.662453: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90faa000 67f42
+ ogle.android.gm-6188  [005] ....   488.662467: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e5d44e000 53fd8
+ ogle.android.gm-6188  [005] ....   488.662486: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72eb8000 5bf6e
+ ogle.android.gm-6188  [005] ....   488.662496: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d5b000 5bf36
+ ogle.android.gm-6188  [005] ....   488.662503: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cd1000 5bf1d
+ ogle.android.gm-6188  [005] ....   488.662518: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90fab000 67f43
+ ogle.android.gm-6188  [005] ....   488.662528: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f69000 5bfcc
+ ogle.android.gm-6188  [005] ....   488.662534: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e5e000 5bf56
+ ogle.android.gm-6188  [005] ....   488.662544: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e967f6000 67f55
+ ogle.android.gm-6188  [005] ....   488.662553: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90ec1000 63ff6
+ ogle.android.gm-6188  [005] ....   488.662559: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90d9b000 63f94
+ ogle.android.gm-6188  [005] ....   488.662572: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e5f000 5bf57
+ ogle.android.gm-6188  [005] ....   488.662622: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90fac000 67f44
+ ogle.android.gm-6188  [005] ....   488.662633: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e60000 5bf58
+ ogle.android.gm-6188  [005] ....   488.662666: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f28acd000 73f9b
+ ogle.android.gm-6188  [005] ....   488.662674: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f28ace000 73f9c
+ ogle.android.gm-6188  [005] ...1   488.662691: do_swap_page: id 7, table 0 || 766: 6188 7f28984000
+ ogle.android.gm-6188  [005] ....   488.662702: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90bff000 5ffec
+ ogle.android.gm-6188  [005] ....   488.662707: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e96bcb000 6bf33
+ ogle.android.gm-6188  [005] ....   488.662712: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e96bc9000 6bf32
+ ogle.android.gm-6188  [005] ...1   488.662724: do_swap_page: id 7, table 0 || 767: 6188 7eae3b4000
+ ogle.android.gm-6188  [005] ....   488.662735: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae3b8000 6bfc4
+ ogle.android.gm-6188  [005] ....   488.662745: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f28a4c000 73f6d
+ ogle.android.gm-6188  [005] ...1   488.662770: do_swap_page: id 7, table 0 || 768: 6188 7f288ff000
+ ogle.android.gm-6188  [005] ...1   488.662775: do_swap_page: id 7, table 0 || 769: 6188 7f28900000
+ ogle.android.gm-6188  [005] ...1   488.662793: do_swap_page: id 7, table 0 || 770: 6188 7f288f7000
+ ogle.android.gm-6188  [005] ....   488.662799: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ec4000 5bf75
+ ogle.android.gm-6188  [005] ....   488.662803: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ec5000 5bf76
+ ogle.android.gm-6188  [005] ....   488.662809: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f1f000 5bf9f
+ ogle.android.gm-6188  [005] ....   488.662818: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ebf000 5bf71
+ ogle.android.gm-6188  [005] ....   488.662841: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f28a30000 73f63
+ ogle.android.gm-6188  [005] ....   488.662865: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e6e000 5bf5b
+ ogle.android.gm-6188  [005] ....   488.662876: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7fbe34f000 402c
+ ogle.android.gm-6188  [005] ....   488.662887: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7fbe350000 402d
+ ogle.android.gm-6188  [005] ....   488.662911: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c73000 57fe5
+ ogle.android.gm-6188  [005] ....   488.662918: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ec0000 5bf72
+ ogle.android.gm-6188  [005] ....   488.662931: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90f56000 67f30
+ ogle.android.gm-6188  [005] ...1   488.662964: do_swap_page: id 7, table 0 || 771: 6188 7eae41f000
+ ogle.android.gm-6188  [005] ...1   488.663028: do_swap_page: id 7, table 0 || 772: 6188 7e73008000
+ ogle.android.gm-6188  [005] ....   488.663047: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90fad000 67f45
+ ogle.android.gm-6188  [005] ....   488.663061: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e44000 63fd7
+ ogle.android.gm-6188  [005] ....   488.663076: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e61000 5bf59
+ ogle.android.gm-6188  [005] ....   488.663090: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72d6d000 5bf3f
+ ogle.android.gm-6188  [005] ....   488.663103: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e45000 63fd8
+ ogle.android.gm-6188  [005] ....   488.663108: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e7a000 5bf62
+ ogle.android.gm-6188  [005] ....   488.663119: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7311c000 5ff43
+ ogle.android.gm-6188  [005] ....   488.663127: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7311d000 5ff44
+ ogle.android.gm-6188  [005] ....   488.663133: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7311e000 5ff45
+ ogle.android.gm-6188  [005] ....   488.663144: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e7e000 5bf63
+ ogle.android.gm-6188  [005] ....   488.663155: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ec9000 5bf7a
+ ogle.android.gm-6188  [005] ....   488.663163: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72eb7000 5bf6d
+ ogle.android.gm-6188  [005] ....   488.663169: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e968bf000 67f9d
+ ogle.android.gm-6188  [005] ....   488.663194: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f6a000 5bfcd
+ ogle.android.gm-6188  [005] ....   488.663202: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e7f000 5bf64
+ ogle.android.gm-6188  [005] ....   488.663211: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e25000 5bf4b
+ ogle.android.gm-6188  [005] ....   488.663223: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e46000 63fd9
+ ogle.android.gm-6188  [005] ....   488.663228: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e80000 5bf65
+ ogle.android.gm-6188  [005] ....   488.663236: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e81000 5bf66
+ ogle.android.gm-6188  [005] ....   488.663281: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ea9000 5bf68
+ ogle.android.gm-6188  [005] ....   488.663297: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72eaa000 5bf69
+ ogle.android.gm-6188  [005] ....   488.663306: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72eab000 5bf6a
+ ogle.android.gm-6188  [005] ....   488.663320: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e6f000 5bf5c
+ ogle.android.gm-6188  [005] ....   488.663349: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7311f000 5ff46
+ ogle.android.gm-6188  [005] ....   488.663359: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f77000 5bfd8
+ ogle.android.gm-6188  [005] ....   488.663384: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ed4000 5bf7b
+ ogle.android.gm-6188  [005] ....   488.663394: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90faf000 67f47
+ ogle.android.gm-6188  [005] ....   488.663400: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e73120000 5ff47
+ ogle.android.gm-6188  [005] ....   488.663411: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e73121000 5ff48
+ ogle.android.gm-6188  [005] ....   488.663450: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72eaf000 5bf6b
+ ogle.android.gm-6188  [005] ....   488.663467: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e73122000 5ff49
+ ogle.android.gm-6188  [005] ....   488.663485: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e73123000 5ff4a
+ ogle.android.gm-6188  [005] ....   488.663493: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e73125000 5ff4c
+ ogle.android.gm-6188  [005] ....   488.663527: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90fa3000 67f3b
+ ogle.android.gm-6188  [005] ....   488.663538: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f82000 5bfdd
+ ogle.android.gm-6188  [005] ....   488.663592: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ed5000 5bf7c
+ ogle.android.gm-6188  [005] ....   488.663622: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90fa4000 67f3c
+ ogle.android.gm-6188  [005] ....   488.663636: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f83000 5bfde
+ ogle.android.gm-6188  [005] ....   488.663686: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f84000 5bfdf
+ ogle.android.gm-6188  [005] ....   488.663694: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f87000 5bfe2
+ ogle.android.gm-6188  [005] ...1   488.663713: do_swap_page: id 7, table 0 || 773: 6188 7e73208000
+ ogle.android.gm-6188  [005] ....   488.663734: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90fa5000 67f3d
+ ogle.android.gm-6188  [005] ....   488.663744: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f88000 5bfe3
+ ogle.android.gm-6188  [005] ....   488.663762: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f89000 5bfe4
+ ogle.android.gm-6188  [005] ...1   488.663797: do_swap_page: id 7, table 0 || 774: 6188 7f39851000
+ ogle.android.gm-6188  [005] ....   488.663814: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72eba000 5bf70
+ ogle.android.gm-6188  [005] ....   488.663823: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cd2000 5bf1e
+ ogle.android.gm-6188  [005] ....   488.663843: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90fa6000 67f3e
+ ogle.android.gm-6188  [005] ....   488.663859: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f8a000 5bfe5
+ ogle.android.gm-6188  [005] ....   488.663879: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72eb9000 5bf6f
+ ogle.android.gm-6188  [005] ....   488.663897: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c00000 5ffed
+ ogle.android.gm-6188  [005] ....   488.663911: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7fbe356000 402e
+ ogle.android.gm-6188  [005] ....   488.663927: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f28899000 73f23
+ ogle.android.gm-6188  [005] ....   488.663932: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f2887e000 73f1e
+ ogle.android.gm-6188  [005] ....   488.663941: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f288a5000 73f24
+ ogle.android.gm-6188  [005] ...1   488.663957: do_swap_page: id 7, table 0 || 775: 6188 7e90e47000
+ ogle.android.gm-6188  [005] ....   488.663966: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90d23000 63f5a
+ ogle.android.gm-6188  [005] ....   488.663974: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f2db42000 7bf2c
+ ogle.android.gm-6188  [005] ....   488.663989: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f2db00000 7bf20
+ ogle.android.gm-6188  [005] ....   488.663996: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f2db01000 7bf21
+ ogle.android.gm-6188  [005] ....   488.664005: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f0e000 5bf90
+ ogle.android.gm-6188  [005] ....   488.664010: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72e73000 5bf5e
+ ogle.android.gm-6188  [005] ....   488.664020: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e96868000 67f87
+ ogle.android.gm-6188  [005] ....   488.664066: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e36000 63fcc
+ ogle.android.gm-6188  [005] ....   488.664180: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90fa7000 67f3f
+ ogle.android.gm-6188  [005] ....   488.664191: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f8b000 5bfe6
+ ogle.android.gm-6188  [005] ....   488.664211: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e73126000 5ff4d
+ ogle.android.gm-6188  [005] ....   488.664229: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e73127000 5ff4e
+ ogle.android.gm-6188  [005] ....   488.664234: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e73128000 5ff4f
+ ogle.android.gm-6188  [005] ....   488.664261: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f8f000 5bfe7
+ ogle.android.gm-6188  [005] ....   488.664323: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90f9e000 67f36
+ ogle.android.gm-6188  [005] ....   488.664337: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e96a2e000 67fdb
+ ogle.android.gm-6188  [005] ....   488.664345: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f90000 5bfe8
+ ogle.android.gm-6188  [005] ....   488.664382: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90f9f000 67f37
+ ogle.android.gm-6188  [005] ....   488.664394: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f91000 5bfe9
+ ogle.android.gm-6188  [005] ....   488.664419: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f85000 5bfe0
+ ogle.android.gm-6188  [005] ....   488.664428: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f92000 5bfea
+ ogle.android.gm-6188  [005] ....   488.664438: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f7e000 5bfdc
+ ogle.android.gm-6188  [005] ....   488.664450: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90fa0000 67f38
+ ogle.android.gm-6188  [005] ....   488.664460: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f93000 5bfeb
+ ogle.android.gm-6188  [005] ....   488.664496: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90fa1000 67f39
+ ogle.android.gm-6188  [005] ....   488.664515: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f94000 5bfec
+ ogle.android.gm-6188  [005] ...1   488.664688: do_swap_page: id 7, table 0 || 776: 6188 7f2d971000
+ ogle.android.gm-6188  [005] ....   488.664712: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c9c000 57ff8
+ ogle.android.gm-6188  [005] ....   488.664719: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f95000 5bfed
+ ogle.android.gm-6188  [005] ....   488.664748: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9dc76000 4bf62
+ ogle.android.gm-6188  [005] ....   488.664762: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e2e5000 53f4f
+ ogle.android.gm-6188  [005] ....   488.664771: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e464000 53f5e
+ ogle.android.gm-6188  [005] ....   488.664818: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae301000 6bf9b
+ ogle.android.gm-6188  [005] ....   488.664837: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f96000 5bfee
+ ogle.android.gm-6188  [005] ....   488.664852: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c95000 57ff1
+ ogle.android.gm-6188  [005] ....   488.664880: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c96000 57ff2
+ ogle.android.gm-6188  [005] ....   488.664897: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c97000 57ff3
+ ogle.android.gm-6188  [005] ....   488.664903: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c98000 57ff4
+ ogle.android.gm-6188  [005] ....   488.664916: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ca1000 57ffc
+ ogle.android.gm-6188  [005] ....   488.664924: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ca6000 57fff
+ ogle.android.gm-6188  [005] ....   488.664937: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae3f7000 6bfd6
+ ogle.android.gm-6188  [005] ....   488.664944: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae3f8000 6bfd7
+ ogle.android.gm-6188  [005] ....   488.664965: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c9a000 57ff6
+ ogle.android.gm-6188  [005] ...1   488.665008: do_swap_page: id 7, table 0 || 777: 6188 7e72596000
+ ogle.android.gm-6188  [005] ....   488.665169: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ca7000 5bf00
+ ogle.android.gm-6188  [005] ....   488.665176: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ca8000 5bf01
+ ogle.android.gm-6188  [005] ....   488.665185: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c9d000 57ff9
+ ogle.android.gm-6188  [005] ....   488.665201: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ca9000 5bf02
+ ogle.android.gm-6188  [005] ....   488.665210: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72caa000 5bf03
+ ogle.android.gm-6188  [005] ....   488.665215: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cab000 5bf04
+ ogle.android.gm-6188  [005] ....   488.665229: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae2ea000 6bf91
+ ogle.android.gm-6188  [005] ....   488.665238: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90ec0000 63ff5
+ ogle.android.gm-6188  [005] ....   488.665244: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90d9a000 63f93
+ ogle.android.gm-6188  [005] ....   488.665261: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cb0000 5bf07
+ ogle.android.gm-6188  [005] ....   488.665267: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cac000 5bf05
+ ogle.android.gm-6188  [005] ....   488.665284: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c5b000 57fe1
+ ogle.android.gm-6188  [005] ....   488.665306: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cad000 5bf06
+ ogle.android.gm-6188  [005] ....   488.665328: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90f30000 67f29
+ ogle.android.gm-6188  [005] ....   488.665337: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e73129000 5ff50
+ ogle.android.gm-6188  [005] ....   488.665349: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7312a000 5ff51
+ ogle.android.gm-6188  [005] ....   488.665363: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cb3000 5bf09
+ ogle.android.gm-6188  [005] ....   488.665373: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cb4000 5bf0a
+ ogle.android.gm-6188  [005] ....   488.665381: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cb5000 5bf0b
+ ogle.android.gm-6188  [005] ....   488.665389: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72c9f000 57ffa
+ ogle.android.gm-6188  [005] ....   488.665405: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7312b000 5ff52
+ ogle.android.gm-6188  [005] ....   488.665423: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90f42000 67f2b
+ ogle.android.gm-6188  [005] ....   488.665437: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae3e6000 6bfd0
+ ogle.android.gm-6188  [005] ....   488.665449: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cb7000 5bf0c
+ ogle.android.gm-6188  [005] ....   488.665454: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cb8000 5bf0d
+ ogle.android.gm-6188  [005] ....   488.665466: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7312c000 5ff53
+ ogle.android.gm-6188  [005] ....   488.665476: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7312d000 5ff54
+ ogle.android.gm-6188  [005] ....   488.665491: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cbb000 5bf0e
+ ogle.android.gm-6188  [005] ....   488.665506: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cbc000 5bf0f
+ ogle.android.gm-6188  [005] ....   488.665518: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cc2000 5bf13
+ ogle.android.gm-6188  [005] ....   488.665526: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cc3000 5bf14
+ ogle.android.gm-6188  [005] ....   488.665532: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cc4000 5bf15
+ ogle.android.gm-6188  [005] ....   488.665537: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cc5000 5bf16
+ ogle.android.gm-6188  [005] ....   488.665548: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7312e000 5ff55
+ ogle.android.gm-6188  [005] ....   488.665559: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90db5000 63fa2
+ ogle.android.gm-6188  [005] ....   488.665568: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae2f6000 6bf93
+ ogle.android.gm-6188  [005] ...1   488.665577: do_swap_page: id 7, table 0 || 778: 6188 7e96b91000
+ ogle.android.gm-6188  [005] ....   488.665582: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c28000 63f07
+ ogle.android.gm-6188  [005] ....   488.665594: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90db6000 63fa3
+ ogle.android.gm-6188  [005] ....   488.665610: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae4a7000 6ff0a
+ ogle.android.gm-6188  [005] ...1   488.665839: do_swap_page: id 7, table 0 || 779: 6188 7e90c37000
+ ogle.android.gm-6188  [005] ....   488.665925: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e39000 63fcf
+ ogle.android.gm-6188  [005] ....   488.665932: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e3a000 63fd0
+ ogle.android.gm-6188  [005] ....   488.665945: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae45d000 6bff8
+ ogle.android.gm-6188  [005] ....   488.665954: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae3c5000 6bfc7
+ ogle.android.gm-6188  [005] ....   488.665991: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c47000 63f1b
+ ogle.android.gm-6188  [005] ....   488.666004: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c46000 63f1a
+ ogle.android.gm-6188  [005] ....   488.666009: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c45000 63f19
+ ogle.android.gm-6188  [005] ....   488.666023: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c09000 5fff3
+ ogle.android.gm-6188  [005] ....   488.666052: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae2ff000 6bf9a
+ ogle.android.gm-6188  [005] ....   488.666059: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c44000 63f18
+ ogle.android.gm-6188  [005] ....   488.666071: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c43000 63f17
+ ogle.android.gm-6188  [005] ....   488.666077: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c42000 63f16
+ ogle.android.gm-6188  [005] ....   488.666094: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e96b92000 6bf21
+ ogle.android.gm-6188  [005] ....   488.666101: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c41000 63f15
+ ogle.android.gm-6188  [005] ....   488.666113: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c40000 63f14
+ ogle.android.gm-6188  [005] ....   488.666120: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c3f000 63f13
+ ogle.android.gm-6188  [005] ....   488.666146: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f2da3f000 77fe1
+ ogle.android.gm-6188  [005] ....   488.666161: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c3e000 63f12
+ ogle.android.gm-6188  [005] ....   488.666171: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7f2da40000 77fe2
+ ogle.android.gm-6188  [005] ....   488.666177: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e3b000 63fd1
+ ogle.android.gm-6188  [005] ....   488.666187: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e3c000 63fd2
+ ogle.android.gm-6188  [005] ...1   488.666198: do_swap_page: id 7, table 0 || 780: 6188 7e6d7e6000
+ ogle.android.gm-6188  [005] ....   488.666207: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e30000 63fc8
+ ogle.android.gm-6188  [005] ....   488.666223: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e34000 63fca
+ ogle.android.gm-6188  [005] ....   488.666248: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e38000 63fce
+ ogle.android.gm-6188  [005] ...1   488.666347: do_swap_page: id 7, table 0 || 781: 6188 7eae1b6000
+ ogle.android.gm-6188  [005] ...1   488.666355: do_swap_page: id 7, table 0 || 782: 6188 7e6d7e7000
+ ogle.android.gm-6188  [005] ...1   488.666368: do_swap_page: id 7, table 0 || 783: 6188 7e6d7e8000
+ ogle.android.gm-6188  [005] ...1   488.666373: do_swap_page: id 7, table 0 || 784: 6188 7e6d7e9000
+ ogle.android.gm-6188  [005] ....   488.666384: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7eae3f3000 6bfd2
+ ogle.android.gm-6188  [005] ...1   488.666393: do_swap_page: id 7, table 0 || 785: 6188 7e6d7ea000
+ ogle.android.gm-6188  [005] ...1   488.666402: do_swap_page: id 7, table 0 || 786: 6188 7e6d7eb000
+ ogle.android.gm-6188  [005] ....   488.666414: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72f04000 5bf89
+ ogle.android.gm-6188  [005] ...1   488.666418: do_swap_page: id 7, table 0 || 787: 6188 7e6d7ec000
+ ogle.android.gm-6188  [005] ....   488.666426: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e31000 63fc9
+ ogle.android.gm-6188  [005] ...1   488.666438: do_swap_page: id 7, table 0 || 788: 6188 7e90e17000
+ ogle.android.gm-6188  [005] ....   488.666616: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e48000 63fdb
+ ogle.android.gm-6188  [005] ....   488.666623: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e4c000 63fdf
+ ogle.android.gm-6188  [005] ....   488.666634: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e4d000 63fe0
+ ogle.android.gm-6188  [005] ....   488.666640: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e4e000 63fe1
+ ogle.android.gm-6188  [005] ...1   488.666650: do_swap_page: id 7, table 0 || 789: 6188 7e6d7ed000
+ ogle.android.gm-6188  [005] ....   488.666660: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90d5d000 63f7e
+ ogle.android.gm-6188  [005] ....   488.666670: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72cc7000 5bf17
+ ogle.android.gm-6188  [005] ....   488.666677: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90d4c000 63f6f
+ ogle.android.gm-6188  [005] ....   488.666682: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90d97000 63f91
+ ogle.android.gm-6188  [005] ....   488.666690: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ccc000 5bf19
+ ogle.android.gm-6188  [005] ....   488.666732: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e5d404000 53fd3
+ ogle.android.gm-6188  [005] ...1   488.666783: do_swap_page: id 7, table 0 || 790: 6188 7f28985000
+ ogle.android.gm-6188  [005] ....   488.666854: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e5d405000 53fd4
+ ogle.android.gm-6188  [005] ....   488.666868: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e5d399000 53fce
+ ogle.android.gm-6188  [005] ...1   488.666891: do_swap_page: id 7, table 0 || 791: 6188 7e6d7ee000
+ ogle.android.gm-6188  [005] ...1   488.666905: do_swap_page: id 7, table 0 || 792: 6188 7e72f05000
+ ogle.android.gm-6188  [005] ...1   488.666910: do_swap_page: id 7, table 0 || 793: 6188 7e6d7ef000
+ ogle.android.gm-6188  [005] ...1   488.666922: do_swap_page: id 7, table 0 || 794: 6188 7eae1b7000
+ ogle.android.gm-6188  [005] ...1   488.666930: do_swap_page: id 7, table 0 || 795: 6188 7e6d7f0000
+ ogle.android.gm-6188  [005] ...1   488.666949: do_swap_page: id 7, table 0 || 796: 6188 7e6d7f1000
+ ogle.android.gm-6188  [005] ...1   488.666960: do_swap_page: id 7, table 0 || 797: 6188 7e6d7f2000
+ ogle.android.gm-6188  [005] ....   488.666973: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e730d3000 5ff25
+ ogle.android.gm-6188  [005] ...1   488.666978: do_swap_page: id 7, table 0 || 798: 6188 7e6d7f3000
+ ogle.android.gm-6188  [005] ...1   488.666988: do_swap_page: id 7, table 0 || 799: 6188 7e730d4000
+ ogle.android.gm-6188  [005] ...1   488.666993: do_swap_page: id 7, table 0 || 800: 6188 7e6d7f4000
+ ogle.android.gm-6188  [005] ....   488.667151: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e58000 63fe4
+ ogle.android.gm-6188  [005] ....   488.667165: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e59000 63fe5
+ ogle.android.gm-6188  [005] ....   488.667172: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e5a000 63fe6
+ ogle.android.gm-6188  [005] ...1   488.667181: do_swap_page: id 7, table 0 || 801: 6188 7e6d7f5000
+ ogle.android.gm-6188  [005] ....   488.667189: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e2f000 63fc7
+ ogle.android.gm-6188  [005] ....   488.667203: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90e5c000 63fe7
+ ogle.android.gm-6188  [005] ....   488.667212: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90d98000 63f92
+ ogle.android.gm-6188  [005] ...1   488.667223: do_swap_page: id 7, table 0 || 802: 6188 7e6d7f6000
+ ogle.android.gm-6188  [005] ...1   488.667239: do_swap_page: id 7, table 0 || 803: 6188 7f3986c000
+ ogle.android.gm-6188  [005] ...1   488.667249: do_swap_page: id 7, table 0 || 804: 6188 7fbe218000
+ ogle.android.gm-6188  [005] ...1   488.667260: do_swap_page: id 7, table 0 || 805: 6188 7fbe296000
+ ogle.android.gm-6188  [005] ...1   488.667283: do_swap_page: id 7, table 0 || 806: 6188 7fbe297000
+ ogle.android.gm-6188  [005] ...1   488.667298: do_swap_page: id 7, table 0 || 807: 6188 7f28a0b000
+ ogle.android.gm-6188  [005] ...1   488.667306: do_swap_page: id 7, table 0 || 808: 6188 7f28a0c000
+ ogle.android.gm-6188  [005] ...1   488.667324: do_swap_page: id 7, table 0 || 809: 6188 7f28a0d000
+ ogle.android.gm-6188  [005] ...1   488.667331: do_swap_page: id 7, table 0 || 810: 6188 7f28ac3000
+ ogle.android.gm-6188  [005] ...1   488.667339: do_swap_page: id 7, table 0 || 811: 6188 7f28ac4000
+ ogle.android.gm-6188  [005] ....   488.667358: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c2f000 63f09
+ ogle.android.gm-6188  [005] ....   488.667367: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c48000 63f1c
+ ogle.android.gm-6188  [005] ....   488.667372: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c49000 63f1d
+ ogle.android.gm-6188  [005] ....   488.667384: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c0a000 5fff4
+ ogle.android.gm-6188  [005] ....   488.667391: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c4a000 63f1e
+ ogle.android.gm-6188  [005] ....   488.667397: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c4b000 63f1f
+ ogle.android.gm-6188  [005] ....   488.667401: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c4c000 63f20
+ ogle.android.gm-6188  [005] ....   488.667413: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c4d000 63f21
+ ogle.android.gm-6188  [005] ....   488.667419: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e90c2a000 63f08
+           <...>-6258  [005] ....   488.667612: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2db5c000 7bf38
+           <...>-6258  [005] ....   488.667624: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b78000 6bf18
+           <...>-6258  [005] ....   488.667630: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b74000 6bf15
+           <...>-6258  [005] ...1   488.667636: do_swap_page: id 7, table 0 || 812: 6188 7eae417000
+           <...>-6258  [005] ....   488.667643: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90bbe000 5ffea
+           <...>-6258  [005] ....   488.667646: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90bde000 5ffeb
+           <...>-6258  [005] ....   488.667651: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b56000 6bf13
+           <...>-6258  [005] ....   488.667656: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e9682a000 67f62
+           <...>-6258  [005] ....   488.667664: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72fb4000 5bff2
+           <...>-6258  [005] ....   488.667672: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e9682b000 67f63
+           <...>-6258  [005] ....   488.667698: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2daeb000 7bf11
+           <...>-6258  [005] ....   488.667717: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa623000 6bf68
+           <...>-6258  [005] ....   488.667729: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96a4a000 67fdf
+           <...>-6258  [005] ....   488.667735: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa622000 6bf67
+           <...>-6258  [005] ....   488.667751: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d59000 63f7b
+           <...>-6258  [005] ....   488.667756: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72c8a000 57fed
+           <...>-6258  [005] ....   488.667774: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90eba000 63fef
+           <...>-6258  [005] ....   488.667779: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72c8b000 57fee
+           <...>-6258  [005] ....   488.667786: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa621000 6bf66
+           <...>-6258  [005] ....   488.667796: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72cd0000 5bf1c
+           <...>-6258  [005] ....   488.667812: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72ed6000 5bf7d
+           <...>-6258  [005] ....   488.667817: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90f43000 67f2c
+           <...>-6258  [005] ...1   488.667844: do_swap_page: id 7, table 0 || 813: 6188 7e90f2c000
+           <...>-6258  [005] ....   488.667850: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d4e000 63f70
+           <...>-6258  [005] ....   488.667868: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b96000 6bf22
+           <...>-6258  [005] ....   488.667877: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c04000 5ffee
+           <...>-6258  [005] ....   488.667884: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2d9c2000 77f93
+           <...>-6258  [005] ...1   488.667893: do_swap_page: id 7, table 0 || 814: 6188 7e96b90000
+           <...>-6258  [005] ....   488.667902: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96a50000 67fe0
+           <...>-6258  [005] ....   488.667912: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa61e000 6bf63
+           <...>-6258  [005] ....   488.667921: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa61d000 6bf62
+           <...>-6258  [005] ...1   488.667941: do_swap_page: id 7, table 0 || 815: 6188 7e73017000
+           <...>-6258  [005] ....   488.667968: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f20b1b000 6ffda
+           <...>-6258  [005] ....   488.667977: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e9685c000 67f82
+           <...>-6258  [005] ....   488.667986: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa61c000 6bf61
+           <...>-6258  [005] ....   488.667994: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72d0d000 5bf24
+           <...>-6258  [005] ....   488.667999: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72d0e000 5bf25
+           <...>-6258  [005] ....   488.668004: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72d0f000 5bf26
+           <...>-6258  [005] ....   488.668008: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72d10000 5bf27
+           <...>-6258  [005] ....   488.668013: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72d11000 5bf28
+           <...>-6258  [005] ....   488.668017: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72d12000 5bf29
+           <...>-6258  [005] ....   488.668021: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72d13000 5bf2a
+           <...>-6258  [005] ....   488.668025: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72d14000 5bf2b
+           <...>-6258  [005] ...1   488.668060: do_swap_page: id 7, table 0 || 816: 6188 7e90eb9000
+           <...>-6258  [005] ....   488.668077: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c18000 5fff8
+           <...>-6258  [005] ....   488.668087: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90e18000 63fbf
+           <...>-6258  [005] ....   488.668280: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f20dae000 73f10
+           <...>-6258  [005] ....   488.668296: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa620000 6bf65
+           <...>-6258  [005] ....   488.668318: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f1f5d4000 6ffb2
+           <...>-6258  [005] ....   488.668326: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae37c000 6bfbf
+           <...>-6258  [005] ...1   488.668356: do_swap_page: id 7, table 0 || 817: 6188 7f2dadb000
+           <...>-6258  [005] ...1   488.668377: do_swap_page: id 7, table 0 || 818: 6188 7e6d94f000
+           <...>-6258  [005] ....   488.668387: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96af3000 67ff5
+           <...>-6258  [005] ....   488.668397: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae24c000 6bf78
+           <...>-6258  [005] ....   488.668402: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae24d000 6bf79
+           <...>-6258  [005] ....   488.668427: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa61f000 6bf64
+           <...>-6258  [005] ....   488.668436: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa61b000 6bf60
+           <...>-6258  [005] ....   488.668443: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa61a000 6bf5f
+           <...>-6258  [005] ....   488.668449: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa619000 6bf5e
+           <...>-6258  [005] ....   488.668457: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa618000 6bf5d
+           <...>-6258  [005] ....   488.668464: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa617000 6bf5c
+           <...>-6258  [005] ....   488.668471: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa616000 6bf5b
+           <...>-6258  [005] ....   488.668478: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa615000 6bf5a
+           <...>-6258  [005] ....   488.668485: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c65000 63f30
+           <...>-6258  [005] ....   488.668496: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa614000 6bf59
+           <...>-6258  [005] ...1   488.668504: do_swap_page: id 7, table 0 || 819: 6188 7e968b4000
+           <...>-6258  [005] ....   488.668510: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa613000 6bf58
+           <...>-6258  [005] ....   488.668516: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa612000 6bf57
+           <...>-6258  [005] ....   488.668522: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa611000 6bf56
+           <...>-6258  [005] ....   488.668532: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa610000 6bf55
+           <...>-6258  [005] ....   488.668542: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90cb3000 63f50
+           <...>-6258  [005] ...1   488.668550: do_swap_page: id 7, table 0 || 820: 6188 7eae307000
+           <...>-6258  [005] ....   488.668571: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d54000 63f76
+           <...>-6258  [005] ....   488.668577: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73020000 5ff07
+           <...>-6258  [005] ....   488.668583: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e7308a000 5ff14
+           <...>-6258  [005] ....   488.668590: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90dc2000 63fa7
+           <...>-6258  [005] ....   488.668601: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73021000 5ff08
+           <...>-6258  [005] ....   488.668623: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa60f000 6bf54
+           <...>-6258  [005] ....   488.668634: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b76000 6bf16
+           <...>-6258  [005] ....   488.668651: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96a8b000 67fee
+           <...>-6258  [005] ....   488.668665: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa60e000 6bf53
+           <...>-6258  [005] ....   488.668677: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90cb4000 63f51
+           <...>-6258  [005] ....   488.668685: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2db4f000 7bf30
+           <...>-6258  [005] ....   488.668696: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d32000 63f5d
+           <...>-6258  [005] ....   488.668701: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96af8000 67ff6
+           <...>-6258  [005] ....   488.668707: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73038000 5ff0b
+           <...>-6258  [005] ....   488.668712: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c6a000 63f35
+           <...>-6258  [005] ....   488.668720: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c66000 63f31
+           <...>-6258  [005] ....   488.668729: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72f07000 5bf8c
+           <...>-6258  [005] ....   488.668735: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73022000 5ff09
+           <...>-6258  [005] ....   488.668741: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72f0d000 5bf8f
+           <...>-6258  [005] ....   488.668750: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72ce0000 5bf22
+           <...>-6258  [005] ....   488.668759: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72ec8000 5bf79
+           <...>-6258  [005] ....   488.668765: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90cb6000 63f53
+           <...>-6258  [005] ....   488.668776: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2db41000 7bf2b
+           <...>-6258  [005] ....   488.668799: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90cb5000 63f52
+           <...>-6258  [005] ....   488.668806: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90da7000 63f98
+           <...>-6258  [005] ...1   488.668815: do_swap_page: id 7, table 0 || 821: 6188 7e72ff7000
+           <...>-6258  [005] ....   488.668837: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa60d000 6bf52
+           <...>-6258  [005] ....   488.668844: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa60c000 6bf51
+           <...>-6258  [005] ....   488.668851: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa60b000 6bf50
+           <...>-6258  [005] ....   488.668859: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73037000 5ff0a
+           <...>-6258  [005] ....   488.668866: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eaa60a000 6bf4f
+           <...>-6258  [005] ....   488.668875: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72ec7000 5bf78
+           <...>-6258  [005] ....   488.668889: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72ec6000 5bf77
+           <...>-6258  [005] ....   488.668897: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2db62000 7bf3c
+           <...>-6258  [005] ....   488.668912: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2db61000 7bf3b
+           <...>-6258  [005] ...1   488.668924: do_swap_page: id 7, table 0 || 822: 6188 7e72cd8000
+           <...>-6258  [005] ....   488.668931: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae258000 6bf7e
+           <...>-6258  [005] ....   488.668936: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73069000 5ff0c
+           <...>-6258  [005] ...1   488.668958: do_swap_page: id 7, table 0 || 823: 6188 7f39875000
+           <...>-6258  [005] ...1   488.668966: do_swap_page: id 7, table 0 || 824: 6188 7f39854000
+           <...>-6258  [005] ....   488.668977: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2d95f000 77f7c
+           <...>-6258  [005] ....   488.668984: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d52000 63f74
+           <...>-6258  [005] ....   488.668992: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae304000 6bf9c
+           <...>-6258  [005] ....   488.669001: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae3fa000 6bfd8
+           <...>-6258  [005] ....   488.669012: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72cdc000 5bf20
+           <...>-6258  [005] ....   488.669022: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae3fb000 6bfd9
+           <...>-6258  [005] ....   488.669032: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e7306a000 5ff0d
+           <...>-6258  [005] ....   488.669042: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae3fc000 6bfda
+           <...>-6258  [005] ...1   488.669052: do_swap_page: id 7, table 0 || 825: 6188 7e72f78000
+           <...>-6258  [005] ...1   488.669072: do_swap_page: id 7, table 0 || 826: 6188 7f2d96d000
+           <...>-6258  [005] ....   488.669086: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96867000 67f86
+           <...>-6258  [005] ....   488.669097: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c80000 63f3f
+           <...>-6258  [005] ....   488.669109: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c85000 63f44
+           <...>-6258  [005] ....   488.669149: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f28acf000 73f9d
+           <...>-6258  [005] ....   488.669157: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730a9000 5ff1b
+           <...>-6258  [005] ....   488.669177: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72fda000 5bff9
+           <...>-6258  [005] ....   488.669191: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73089000 5ff13
+           <...>-6258  [005] ....   488.669219: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c67000 63f32
+           <...>-6258  [005] ....   488.669226: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72cdf000 5bf21
+           <...>-6258  [005] ...1   488.669236: do_swap_page: id 7, table 0 || 827: 6188 7f39841000
+           <...>-6258  [005] ....   488.669247: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e7306b000 5ff0e
+           <...>-6258  [005] ...1   488.669262: do_swap_page: id 7, table 0 || 828: 6188 7f2d96e000
+           <...>-6258  [005] ....   488.669280: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73088000 5ff12
+           <...>-6258  [005] ....   488.669295: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c81000 63f40
+           <...>-6258  [005] ....   488.669305: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e7316d000 5ff60
+           <...>-6258  [005] ....   488.669311: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e7309f000 5ff15
+           <...>-6258  [005] ....   488.669322: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730a8000 5ff1a
+           <...>-6258  [005] ....   488.669343: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730a6000 5ff18
+           <...>-6258  [005] ...1   488.669351: do_swap_page: id 7, table 0 || 829: 6188 7f39863000
+           <...>-6258  [005] ....   488.669362: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c83000 63f42
+           <...>-6258  [005] ....   488.669371: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2db5f000 7bf39
+           <...>-6258  [005] ....   488.669386: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2db20000 7bf29
+           <...>-6258  [005] ....   488.669391: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730b4000 5ff1f
+           <...>-6258  [005] ....   488.669401: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730b8000 5ff21
+           <...>-6258  [005] ....   488.669408: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c84000 63f43
+           <...>-6258  [005] ....   488.669418: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730b5000 5ff20
+           <...>-6258  [005] ...1   488.669433: do_swap_page: id 7, table 0 || 830: 6188 7f2db4b000
+           <...>-6258  [005] ...1   488.669450: do_swap_page: id 7, table 0 || 831: 6188 7eae4bf000
+           <...>-6258  [005] ....   488.669458: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730a7000 5ff19
+           <...>-6258  [005] ....   488.669469: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73009000 5ff03
+           <...>-6258  [005] ....   488.669483: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90ed9000 63ff9
+           <...>-6258  [005] ....   488.669491: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c68000 63f33
+           <...>-6258  [005] ....   488.669498: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90eda000 63ffa
+           <...>-6258  [005] ....   488.669507: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2db60000 7bf3a
+           <...>-6258  [005] ...1   488.669528: do_swap_page: id 7, table 0 || 832: 6188 7e72fb7000
+           <...>-6258  [005] ....   488.669540: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90edb000 63ffb
+           <...>-6258  [005] ...1   488.669551: do_swap_page: id 7, table 0 || 833: 6188 7e9683a000
+           <...>-6258  [005] ....   488.669560: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90f54000 67f2e
+           <...>-6258  [005] ...1   488.669570: do_swap_page: id 7, table 0 || 834: 6188 7e90e41000
+           <...>-6258  [005] ....   488.669588: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90f55000 67f2f
+           <...>-6258  [005] ....   488.669602: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e9681e000 67f5c
+           <...>-6258  [005] ...1   488.669609: do_swap_page: id 7, table 0 || 835: 6188 7e9681f000
+           <...>-6258  [005] ...1   488.669617: do_swap_page: id 7, table 0 || 836: 6188 7e72f79000
+           <...>-6258  [005] ....   488.669632: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72cbe000 5bf10
+           <...>-6258  [005] ....   488.669645: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2db65000 7bf3d
+           <...>-6258  [005] ....   488.669653: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b03000 67ffc
+           <...>-6258  [005] ....   488.669661: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72cbf000 5bf11
+           <...>-6258  [005] ....   488.669670: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e7316a000 5ff5e
+           <...>-6258  [005] ....   488.669678: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d33000 63f5e
+           <...>-6258  [005] ....   488.669683: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d37000 63f60
+           <...>-6258  [005] ....   488.669694: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d36000 63f5f
+           <...>-6258  [005] ....   488.669743: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae305000 6bf9d
+           <...>-6258  [005] ....   488.669750: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730d0000 5ff24
+           <...>-6258  [005] ...1   488.669757: do_swap_page: id 7, table 0 || 837: 6188 7e730ce000
+           <...>-6258  [005] ....   488.669763: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c69000 63f34
+           <...>-6258  [005] ....   488.669772: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72cc0000 5bf12
+           <...>-6258  [005] ....   488.669779: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73115000 5ff3e
+           <...>-6258  [005] ....   488.669786: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73116000 5ff3f
+           <...>-6258  [005] ....   488.669801: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7fbccd7000 7ff7e
+           <...>-6258  [005] ....   488.669813: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730f6000 5ff3c
+           <...>-6258  [005] ....   488.669819: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730f7000 5ff3d
+           <...>-6258  [005] ...1   488.669843: do_swap_page: id 7, table 0 || 838: 6188 7e90c39000
+           <...>-6258  [005] ....   488.669850: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c6c000 63f36
+           <...>-6258  [005] ....   488.669857: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7fbe2fd000 4018
+           <...>-6258  [005] ....   488.669863: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b05000 67ffd
+           <...>-6258  [005] ....   488.669880: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96afa000 67ff7
+           <...>-6258  [005] ....   488.669905: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b02000 67ffb
+           <...>-6258  [005] ....   488.669912: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96850000 67f78
+           <...>-6258  [005] ...1   488.669974: do_swap_page: id 7, table 0 || 839: 6188 7eae306000
+           <...>-6258  [005] ...1   488.669986: do_swap_page: id 7, table 0 || 840: 6188 7e5d4b6000
+           <...>-6258  [005] ....   488.669992: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73187000 5ff67
+           <...>-6258  [005] ....   488.670000: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73117000 5ff40
+           <...>-6258  [005] ...1   488.670017: do_swap_page: id 7, table 0 || 841: 6188 7f2db99000
+           <...>-6258  [005] ...1   488.670034: do_swap_page: id 7, table 0 || 842: 6188 7e90da6000
+           <...>-6258  [005] ...1   488.670056: do_swap_page: id 7, table 0 || 843: 6188 7e90e3d000
+           <...>-6258  [005] ....   488.670069: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae3c9000 6bfca
+           <...>-6258  [005] ....   488.670076: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90f26000 67f23
+           <...>-6258  [005] ...1   488.670083: do_swap_page: id 7, table 0 || 844: 6188 7e90f27000
+           <...>-6258  [005] ....   488.670104: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c9d000 63f47
+           <...>-6258  [005] ....   488.670109: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90ca8000 63f49
+           <...>-6258  [005] ....   488.670129: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e5d4a1000 53fe1
+           <...>-6258  [005] ....   488.670140: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96bc0000 6bf2f
+           <...>-6258  [005] ....   488.670147: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96bc1000 6bf30
+           <...>-6258  [005] ....   488.670157: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90ca9000 63f4a
+           <...>-6258  [005] ....   488.670172: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90caa000 63f4b
+           <...>-6258  [005] ....   488.670189: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90cab000 63f4c
+           <...>-6258  [005] ....   488.670205: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90cac000 63f4d
+           <...>-6258  [005] ....   488.670219: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90cad000 63f4e
+           <...>-6258  [005] ....   488.670234: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b06000 67ffe
+           <...>-6258  [005] ....   488.670241: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96afb000 67ff8
+           <...>-6258  [005] ....   488.670246: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c9e000 63f48
+           <...>-6258  [005] ....   488.670252: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90cae000 63f4f
+           <...>-6258  [005] ....   488.670395: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96aed000 67ff0
+           <...>-6258  [005] ....   488.670401: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c74000 63f39
+           <...>-6258  [005] ....   488.670413: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96afc000 67ff9
+           <...>-6258  [005] ....   488.670427: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b1f000 6bf0e
+           <...>-6258  [005] ....   488.670442: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96aee000 67ff1
+           <...>-6258  [005] ....   488.670452: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c75000 63f3a
+           <...>-6258  [005] ....   488.670460: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96af2000 67ff4
+           <...>-6258  [005] ....   488.670465: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96829000 67f61
+           <...>-6258  [005] ....   488.670473: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d41000 63f65
+           <...>-6258  [005] ...1   488.670495: do_swap_page: id 7, table 0 || 845: 6188 7e90e7f000
+           <...>-6258  [005] ...1   488.670510: do_swap_page: id 7, table 0 || 846: 6188 7e96bc3000
+           <...>-6258  [005] ....   488.670535: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73124000 5ff4b
+           <...>-6258  [005] ....   488.670543: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2d9c3000 77f94
+           <...>-6258  [005] ....   488.670549: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b2c000 6bf10
+           <...>-6258  [005] ....   488.670554: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c77000 63f3c
+           <...>-6258  [005] ....   488.670559: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c79000 63f3e
+           <...>-6258  [005] ....   488.670566: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c07000 5fff1
+           <...>-6258  [005] ....   488.670570: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e9693b000 67fd3
+           <...>-6258  [005] ....   488.670577: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae46a000 6bfff
+           <...>-6258  [005] ....   488.670582: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c50000 63f24
+           <...>-6258  [005] ....   488.670588: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c08000 5fff2
+           <...>-6258  [005] ....   488.670598: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e9686a000 67f89
+           <...>-6258  [005] ....   488.670603: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d2e000 63f5c
+           <...>-6258  [005] ....   488.670609: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b6e000 6bf14
+           <...>-6258  [005] ....   488.670625: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b7c000 6bf1a
+           <...>-6258  [005] ....   488.670636: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae309000 6bfa1
+           <...>-6258  [005] ....   488.670642: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c06000 5fff0
+           <...>-6258  [005] ....   488.670648: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae48d000 6ff04
+           <...>-6258  [005] ....   488.670654: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2dada000 7bf0a
+           <...>-6258  [005] ....   488.670662: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96af0000 67ff2
+           <...>-6258  [005] ....   488.670670: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c78000 63f3d
+           <...>-6258  [005] ....   488.670708: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73072000 5ff10
+           <...>-6258  [005] ...1   488.670717: do_swap_page: id 7, table 0 || 847: 6188 7e72fdc000
+           <...>-6258  [005] ....   488.670724: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72fdd000 5bffb
+           <...>-6258  [005] ....   488.670738: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730d5000 5ff27
+           <...>-6258  [005] ....   488.670749: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72ffe000 5bfff
+           <...>-6258  [005] ....   488.670763: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73073000 5ff11
+           <...>-6258  [005] ....   488.670769: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b18000 6bf0c
+           <...>-6258  [005] ....   488.670772: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b1b000 6bf0d
+           <...>-6258  [005] ....   488.670778: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72f38000 5bfb1
+           <...>-6258  [005] ....   488.670786: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730ac000 5ff1d
+           <...>-6258  [005] ....   488.670791: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730ab000 5ff1c
+           <...>-6258  [005] ....   488.670809: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d3d000 63f61
+           <...>-6258  [005] ....   488.670817: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d55000 63f77
+           <...>-6258  [005] ....   488.670824: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b38000 6bf11
+           <...>-6258  [005] ....   488.670851: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90e7a000 63fe9
+           <...>-6258  [005] ....   488.670857: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d3e000 63f62
+           <...>-6258  [005] ....   488.670870: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae30b000 6bfa3
+           <...>-6258  [005] ....   488.670878: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae30a000 6bfa2
+           <...>-6258  [005] ....   488.670928: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73181000 5ff64
+           <...>-6258  [005] ....   488.670937: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72feb000 5bffd
+           <...>-6258  [005] ....   488.670945: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e7316e000 5ff61
+           <...>-6258  [005] ....   488.670953: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730d6000 5ff28
+           <...>-6258  [005] ....   488.670961: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73182000 5ff65
+           <...>-6258  [005] ....   488.670967: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72fde000 5bffc
+           <...>-6258  [005] ....   488.671050: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73196000 5ff6f
+           <...>-6258  [005] ....   488.671057: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e7318b000 5ff6a
+           <...>-6258  [005] ...1   488.671064: do_swap_page: id 7, table 0 || 848: 6188 7e7317f000
+           <...>-6258  [005] ....   488.671076: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72e37000 5bf53
+           <...>-6258  [005] ...1   488.671086: do_swap_page: id 7, table 0 || 849: 6188 7e7318a000
+           <...>-6258  [005] ....   488.671094: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e72fff000 5ff00
+           <...>-6258  [005] ....   488.671103: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e730ad000 5ff1e
+           <...>-6258  [005] ....   488.671110: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90da9000 63f9a
+           <...>-6258  [005] ....   488.671119: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73183000 5ff66
+           <...>-6258  [005] ...1   488.671125: do_swap_page: id 7, table 0 || 850: 6188 7e73189000
+           <...>-6258  [005] ....   488.671145: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e7316f000 5ff62
+           <...>-6258  [005] ....   488.671156: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90c76000 63f3b
+           <...>-6258  [005] ...1   488.671165: do_swap_page: id 7, table 0 || 851: 6188 7e90c05000
+           <...>-6258  [005] ...1   488.671206: do_swap_page: id 7, table 0 || 852: 6188 7e96851000
+           <...>-6258  [005] ....   488.671225: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90e88000 63fed
+           <...>-6258  [005] ....   488.671234: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90e7e000 63fea
+           <...>-6258  [005] ....   488.671243: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d53000 63f75
+           <...>-6258  [005] ....   488.671254: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90da8000 63f99
+           <...>-6258  [005] ...1   488.671296: do_swap_page: id 7, table 0 || 853: 6188 7e7306f000
+           <...>-6258  [005] ...1   488.671349: do_swap_page: id 7, table 0 || 854: 6188 7e96b79000
+           <...>-6258  [005] ....   488.671439: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7eae418000 6bfef
+           <...>-6258  [005] ....   488.671452: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d3f000 63f63
+           <...>-6258  [005] ....   488.671464: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96af1000 67ff3
+           <...>-6258  [005] ....   488.671469: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e90d40000 63f64
+           <...>-6258  [005] ....   488.671494: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2db2d000 7bf2a
+           <...>-6258  [005] ....   488.671631: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e96b07000 67fff
+           <...>-6258  [005] ....   488.671643: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e5d496000 53fe0
+           <...>-6258  [005] ....   488.671649: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73198000 5ff70
+           <...>-6258  [005] ....   488.671655: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7e73199000 5ff71
+           <...>-6258  [005] ....   488.671899: do_swap_page: Exception touched after marked : 6188 "RenderThread" 7f2db03000 7bf23
+ ogle.android.gm-6188  [006] ....   488.672636: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9dc47000 4bf61
+ ogle.android.gm-6188  [006] ....   488.672648: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9dc2d000 4bf5e
+ ogle.android.gm-6188  [006] ....   488.672663: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9dc44000 4bf60
+ ogle.android.gm-6188  [006] ....   488.672670: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e344000 53f54
+ ogle.android.gm-6188  [006] ....   488.672709: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e434000 53f5d
+ ogle.android.gm-6188  [006] ....   488.672769: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e36a000 53f57
+ ogle.android.gm-6188  [006] ....   488.672807: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e432000 53f5c
+ ogle.android.gm-6188  [006] ....   488.672926: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e33e000 53f53
+ ogle.android.gm-6188  [006] ....   488.673017: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9dbe0000 4bf5c
+ ogle.android.gm-6188  [006] ....   488.673057: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9ddde000 4ffb4
+ ogle.android.gm-6188  [006] ....   488.673129: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e2ee000 53f51
+ ogle.android.gm-6188  [006] ....   488.673229: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e3a9000 53f5a
+ ogle.android.gm-6188  [006] ....   488.673252: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e392000 53f59
+ ogle.android.gm-6188  [006] ....   488.673310: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e599000 53f87
+ ogle.android.gm-6188  [006] ....   488.673402: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e2f7000 53f52
+ ogle.android.gm-6188  [006] ....   488.673854: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9dc28000 4bf5d
+ ogle.android.gm-6188  [006] ....   488.673862: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e378000 53f58
+ ogle.android.gm-6188  [006] ....   488.673969: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e407000 53f5b
+ ogle.android.gm-6188  [006] ....   488.674000: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9de0c000 4ffb5
+  Lite Thread #3-6249  [004] ...1   488.674142: do_swap_page: id 7, table 0 || 855: 6188 7eb2f77000
+  Lite Thread #3-6249  [004] ...1   488.674156: do_swap_page: id 7, table 0 || 856: 6188 7eb2f74000
+  Lite Thread #3-6249  [004] ...1   488.674207: do_swap_page: id 7, table 0 || 857: 6188 7eb2f75000
+  Lite Thread #3-6249  [004] ...1   488.674227: do_swap_page: id 7, table 0 || 858: 6188 7f2da90000
+  Lite Thread #3-6249  [004] ...1   488.674233: do_swap_page: id 7, table 0 || 859: 6188 7f2da92000
+  Lite Thread #3-6249  [004] ...1   488.674247: do_swap_page: id 7, table 0 || 860: 6188 7e8a8d1000
+  Lite Thread #3-6249  [004] ...1   488.674312: do_swap_page: id 7, table 0 || 861: 6188 7f2d51b000
+  Lite Thread #3-6249  [004] ...1   488.674329: do_swap_page: id 7, table 0 || 862: 6188 9e3fa000
+  Lite Thread #3-6249  [004] ...1   488.674382: do_swap_page: id 7, table 0 || 863: 6188 9e2f5000
+ ogle.android.gm-6188  [006] ...1   488.674383: do_swap_page: id 7, table 0 || 864: 6188 7f28ac5000
+  Lite Thread #5-6250  [004] ...1   488.674408: do_swap_page: id 7, table 0 || 865: 6188 7eb1e6e000
+ ogle.android.gm-6188  [006] ...1   488.674420: do_swap_page: id 7, table 0 || 866: 6188 7e73209000
+  Lite Thread #5-6250  [004] ...1   488.674422: do_swap_page: id 7, table 0 || 867: 6188 7eb1e6b000
+           <...>-6258  [007] ...1   488.674898: do_swap_page: id 7, table 0 || 868: 6188 7f39857000
+ ogle.android.gm-6188  [006] ....   488.675034: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e35b000 53f56
+ ogle.android.gm-6188  [006] ....   488.675041: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e4af000 53f61
+ ogle.android.gm-6188  [006] ....   488.675049: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e47b000 53f60
+ ogle.android.gm-6188  [006] ....   488.675102: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e72ee4000 5bf83
+ ogle.android.gm-6188  [006] ....   488.675127: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 7e7319a000 5ff72
+ ogle.android.gm-6188  [006] ....   488.675147: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e2ea000 53f50
+ ogle.android.gm-6188  [006] ....   488.675157: do_swap_page: Exception touched after marked : 6188 "ogle.android.gm" 9e466000 53f5f
+ ogle.android.gm-6188  [006] ...1   488.675186: do_swap_page: id 7, table 0 || 869: 6188 7e731e6000
+ ogle.android.gm-6188  [006] ...1   488.675204: do_swap_page: id 7, table 0 || 870: 6188 7e72ee5000
+ ogle.android.gm-6188  [006] ...1   488.675231: do_swap_page: id 7, table 0 || 871: 6188 7f28a4f000
+ ogle.android.gm-6188  [006] ...1   488.675315: do_swap_page: id 7, table 0 || 872: 6188 9e31f000
+ ogle.android.gm-6188  [006] ...1   488.675327: do_swap_page: id 7, table 0 || 873: 6188 9e46e000
+ ogle.android.gm-6188  [006] ...1   488.675354: do_swap_page: id 7, table 0 || 874: 6188 9e31c000
+ BackgroundSingl-6228  [005] ...1   488.675500: do_swap_page: id 7, table 0 || 875: 6188 9dbd7000
+           <...>-6258  [007] ...1   488.675623: do_swap_page: id 7, table 0 || 876: 6188 7eae1b5000
+   Binder:6188_4-6363  [004] ...1   488.675789: do_swap_page: id 7, table 0 || 877: 6188 7e6dc97000
+   Binder:6188_4-6363  [004] ...1   488.675802: do_swap_page: id 7, table 0 || 878: 6188 7e7256e000
+ ogle.android.gm-6188  [006] ...1   488.676173: do_swap_page: id 7, table 0 || 879: 6188 9e403000
+ ogle.android.gm-6188  [006] ...1   488.676260: do_swap_page: id 7, table 0 || 880: 6188 9e33a000
+ ogle.android.gm-6188  [006] ...1   488.676271: do_swap_page: id 7, table 0 || 881: 6188 9e32c000
+ ogle.android.gm-6188  [006] ...1   488.676301: do_swap_page: id 7, table 0 || 882: 6188 9dc24000
+ ogle.android.gm-6188  [006] ...1   488.676365: do_swap_page: id 7, table 0 || 883: 6188 9dc07000
+ ogle.android.gm-6188  [006] ...1   488.676386: do_swap_page: id 7, table 0 || 884: 6188 9de54000
+ ogle.android.gm-6188  [006] ...1   488.676671: do_swap_page: id 7, table 0 || 885: 6188 9dc31000
+ ogle.android.gm-6188  [006] ...1   488.676688: do_swap_page: id 7, table 0 || 886: 6188 9e366000
+ ogle.android.gm-6188  [006] ...1   488.676813: do_swap_page: id 7, table 0 || 887: 6188 7eae42c000
+              sh-6858  [007] ....   488.677291: update_to_nbd_flag: appid 7: table 0 is latter, total target 108 max idx e, l -> 1689 887
+              sh-6858  [007] ....   488.677293: miss_page_handler: miss page handler start! target(id,table): 7,1
+     kworker/1:1-88    [001] ....   488.677449: lookup_swap_cache: prefetch miss id 7: 88 "kworker/1:1" 7e90d30000 7793
+     kworker/1:1-88    [001] ....   488.677478: lookup_swap_cache: prefetch miss id 7: 88 "kworker/1:1" 7e73016000 77c1
+     kworker/1:1-88    [001] ....   488.677495: lookup_swap_cache: prefetch miss id 7: 88 "kworker/1:1" 7f39860000 77e3
+     kworker/1:1-88    [001] ....   488.677512: lookup_swap_cache: prefetch miss id 7: 88 "kworker/1:1" 7e9681d000 77fd
+ TaskSchedulerFo-6877  [007] d..4   490.179484: __free_cluster: [REMOTE __free_cluster] free cluster 1982
+ send_target_man-200   [003] d..2   496.053499: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [003] d..2   506.080117: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [003] d..2   516.108399: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [003] d..2   526.135060: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [003] d..2   536.160499: send_target_manager: send target manager - id, which_table : 7, 0
+              sh-6884  [007] ....   538.703064: swap_counter_dump_handler: pid 6188: counter 0 = 1055
+              sh-6884  [007] ....   538.703068: swap_counter_dump_handler: pid 6188: counter 1 = 168
+              sh-6884  [007] ....   538.703069: swap_counter_dump_handler: pid 6188: counter 2 = 5886
+              sh-6884  [007] ....   538.703070: swap_counter_dump_handler: pid 6188: counter 3 = 0
+              sh-6884  [007] ....   538.703071: swap_counter_dump_handler: pid 6188: counter 4 = 0
+              sh-6884  [007] ....   538.703073: swap_counter_dump_handler: pid 6188: counter 5 = 0
+              sh-6884  [007] ....   538.703074: swap_counter_dump_handler: pid 6188: counter >5 = 0
+              sh-6884  [007] ....   538.703075: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-6884  [007] ....   538.703077: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-6884  [007] ....   538.703078: swap_counter_dump_handler: remote: total excepted page: 0

@@ -1,0 +1,554 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 543/543   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-200   [003] ....  3467.572923: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [003] d..2  3467.572945: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [003] d..2  3467.572957: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [003] d..2  3467.572967: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [003] d..2  3467.572976: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [003] d..2  3467.572983: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [003] d..2  3467.572992: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [003] d..2  3467.573000: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [003] d..2  3467.573007: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [003] d..2  3467.573014: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [003] ....  3467.573021: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-19516 [001] ....  3470.149876: read_swap_cache_async: remote readpage 7130 "TaskSchedulerFo" 7ed38a4000 55ae9
+           <...>-19610 [007] ....  3515.005531: app_switch_start_handler: ###########switch start! foreground 10135#############
+           <...>-19610 [007] ....  3515.005537: prefetch_handler: prefetch handler start! target(id,table): 0,1
+           <...>-6242  [002] ....  3515.034509: read_swap_cache_async: remote readpage 6242 "droid.apps.maps" 7ecdbe0000 35a30
+           <...>-6242  [005] ....  3515.084274: read_swap_cache_async: remote readpage 6242 "droid.apps.maps" 7ecdc0e000 35a35
+           <...>-6313  [006] ....  3515.086702: read_swap_cache_async: remote readpage 6242 "ChromiumNet" 7e84e53000 6da99
+           <...>-6242  [004] ....  3515.086718: read_swap_cache_async: remote readpage 6242 "droid.apps.maps" 7ecdc0f000 71ab2
+           <...>-6313  [007] d..4  3515.089236: __free_cluster: [REMOTE __free_cluster] free cluster 757
+           <...>-6313  [007] ....  3515.091223: read_swap_cache_async: remote readpage 6242 "ChromiumNet" 7f2e3cb000 3daf4
+           <...>-19618 [007] ....  3515.122147: read_swap_cache_async: remote readpage 6242 "ScionFrontendAp" 7f2d6fa000 3da37
+           <...>-19638 [004] ....  3515.122287: read_swap_cache_async: remote readpage 6242 "Measurement Wor" 7ea4977000 2da28
+           <...>-19638 [004] ....  3515.124815: read_swap_cache_async: remote readpage 6242 "Measurement Wor" 7ea4978000 2da29
+           <...>-19610 [006] ....  3515.170525: update_to_nbd_flag: appid 0: table 0 is latter, total target 0 max idx e, l -> 17 9
+           <...>-19610 [004] ....  3515.177098: miss_page_handler: miss page handler start! target(id,table): 0,1
+           <...>-200   [004] ....  3515.177231: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] d..2  3515.177233: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [004] d..2  3515.177234: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [004] d..2  3515.177235: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [004] d..2  3515.177236: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [004] d..2  3515.177237: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [004] d..2  3515.177238: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [004] d..2  3515.177239: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [004] d..2  3515.177240: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [004] d..2  3515.177241: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [004] ....  3515.177241: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-19648 [007] ....  3515.184675: read_swap_cache_async: remote readpage 6242 "Sensors" 7e544a4000 69a88
+           <...>-19648 [007] ....  3515.187894: read_swap_cache_async: remote readpage 6242 "Sensors" 7e544a5000 69a89
+           <...>-19649 [007] ....  3515.197175: read_swap_cache_async: remote readpage 6242 "droid.apps.maps" 7e544a6000 69a8a
+           <...>-6242  [004] ....  3515.260649: read_swap_cache_async: remote readpage 6242 "droid.apps.maps" 7ecdddb000 71ab3
+           <...>-6282  [007] ....  3515.269568: read_swap_cache_async: remote readpage 6242 "DefaultPool4" 7e88a41000 19ab2
+           <...>-6282  [007] ....  3515.303800: read_swap_cache_async: remote readpage 6242 "DefaultPool4" 7e88a42000 19ab3
+           <...>-6290  [007] ....  3515.307854: read_swap_cache_async: remote readpage 6242 "RenderThread" 7ecdc77000 35a81
+           <...>-6282  [007] ....  3515.310736: read_swap_cache_async: remote readpage 6242 "DefaultPool4" 7e88a96000 19ad1
+           <...>-6282  [007] ....  3515.314438: read_swap_cache_async: remote readpage 6242 "DefaultPool4" 7e88a97000 19ad2
+           <...>-6313  [004] ....  3515.403140: read_swap_cache_async: remote readpage 6242 "ChromiumNet" 7f2e281000 3daa1
+           <...>-6313  [004] d..4  3515.404786: __free_cluster: [REMOTE __free_cluster] free cluster 440
+           <...>-6290  [007] ....  3516.839520: read_swap_cache_async: remote readpage 6242 "RenderThread" 7e88e24000 1da95
+           <...>-6738  [004] ....  3536.899831: read_swap_cache_async: remote readpage 6242 "Binder:6242_6" 7e8ec5f000 29a25
+           <...>-19747 [007] ....  3538.453118: app_switch_start_handler: ###########switch start! foreground 10126#############
+           <...>-19747 [007] ....  3538.453123: prefetch_handler: prefetch handler start! target(id,table): 1,1
+           <...>-6984  [005] ....  3538.498803: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e764c8000 8da57
+           <...>-6875  [004] ....  3538.499536: read_swap_cache_async: remote readpage 6841 "BG Thread #2" 7f2d6d4000 a1abc
+           <...>-19754 [005] ....  3538.504588: read_swap_cache_async: remote readpage 6242 "Measurement Wor" 7e766ef000 6da79
+           <...>-6880  [005] ....  3538.508587: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7ebbaa4000 95a20
+           <...>-6984  [005] ....  3538.512390: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e764c9000 8da58
+           <...>-19638 [000] ....  3538.513861: read_swap_cache_async: remote readpage 6242 "Measurement Wor" 7ea4979000 2da2a
+           <...>-6880  [007] ....  3538.514538: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7ebbaa1000 95a1e
+           <...>-6984  [005] ....  3538.514895: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e764ca000 8da59
+           <...>-6984  [005] ....  3538.518442: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e764c7000 8da56
+           <...>-6984  [005] ....  3538.520667: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e764cc000 8da5b
+           <...>-6984  [005] ....  3538.522862: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e764cb000 8da5a
+           <...>-6880  [006] ....  3538.525331: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7ebbaa2000 95a1f
+           <...>-6984  [005] ....  3538.525959: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e764d8000 8da62
+           <...>-6880  [006] ....  3538.529111: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7ecba09000 95a40
+           <...>-6880  [004] ....  3538.534577: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7ecba0a000 95a41
+           <...>-6984  [004] ....  3538.534853: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e764d9000 8da63
+           <...>-6880  [004] ....  3538.537066: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7ebbaa0000 95a1d
+           <...>-6880  [005] ....  3538.539407: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7ecba0b000 95a42
+           <...>-6880  [003] ....  3538.542233: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7e74903000 89a73
+           <...>-19747 [007] ....  3538.542908: update_to_nbd_flag: appid 1: table 0 is latter, total target 0 max idx e, l -> 28 20
+           <...>-6880  [005] ....  3538.544320: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7f29c53000 9daff
+           <...>-19747 [007] ....  3538.547771: miss_page_handler: miss page handler start! target(id,table): 1,1
+           <...>-200   [007] ....  3538.547872: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  3538.547874: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [007] d..2  3538.547876: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [007] d..2  3538.547876: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [007] d..2  3538.547877: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [007] d..2  3538.547878: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [007] d..2  3538.547879: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [007] d..2  3538.547880: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [007] d..2  3538.547881: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [007] d..2  3538.547882: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [007] ....  3538.547883: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6880  [005] ....  3538.549593: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7f29c52000 9dafe
+           <...>-6880  [005] ....  3538.552189: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7eb2f47000 91a89
+           <...>-6880  [005] ....  3538.556777: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7eb2f46000 91a88
+           <...>-6984  [004] ....  3538.566793: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e7647b000 8da4b
+           <...>-6880  [005] ....  3538.568444: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7ecba26000 95a4d
+           <...>-6880  [004] ....  3538.573848: read_swap_cache_async: remote readpage 6841 "BG Thread #7" 7f29af2000 9dac9
+           <...>-6284  [001] ....  3539.201196: read_swap_cache_async: remote readpage 6242 "DefaultPool5" 7e84e73000 6dab6
+           <...>-6279  [001] ....  3539.228465: read_swap_cache_async: remote readpage 6242 "GoogleApiHandle" 7eb43c4000 31a6b
+           <...>-6857  [006] d..4  3559.785136: __free_cluster: [REMOTE __free_cluster] free cluster 812
+           <...>-19872 [007] ....  3562.201221: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-19872 [007] ....  3562.201227: prefetch_handler: prefetch handler start! target(id,table): 4,1
+           <...>-7191  [004] ....  3562.241158: read_swap_cache_async: remote readpage 7130 "GLThread 473" 7ec76d9000 1d1aa2
+           <...>-19756 [006] ....  3562.249581: read_swap_cache_async: remote readpage 6841 "Measurement Wor" 7e5d7a6000 79a2b
+           <...>-19886 [007] ....  3562.273476: read_swap_cache_async: remote readpage 7130 "AudioTrack" 7e301ab000 e1a4c
+           <...>-19888 [007] ....  3562.282827: read_swap_cache_async: remote readpage 7130 "AudioTrack" 7e30635000 eda4a
+           <...>-19888 [007] ....  3562.284818: read_swap_cache_async: remote readpage 7130 "AudioTrack" 7e30636000 eda4b
+           <...>-19889 [006] ....  3562.287186: read_swap_cache_async: remote readpage 7130 "AudioTrack" 7e9d394000 111abc
+           <...>-19889 [006] ....  3562.288945: read_swap_cache_async: remote readpage 7130 "AudioTrack" 7e9d395000 111abd
+           <...>-19890 [007] ....  3562.290831: read_swap_cache_async: remote readpage 7130 "AudioTrack" 7ed24d1000 1edac6
+           <...>-19890 [007] ....  3562.292556: read_swap_cache_async: remote readpage 7130 "AudioTrack" 7ed24d2000 1edac7
+           <...>-19890 [007] ....  3562.294403: read_swap_cache_async: remote readpage 7130 "AudioTrack" 7ed24d3000 1edac8
+           <...>-19891 [004] ....  3562.296379: read_swap_cache_async: remote readpage 7130 "AudioTrack" 7e9d808000 119a6e
+           <...>-19911 [004] ....  3562.339453: read_swap_cache_async: remote readpage 7130 "AudioTrack" 7e8d622000 f9a9b
+           <...>-7130  [005] ....  3562.386335: read_swap_cache_async: remote readpage 7130 ".candycrushsaga" 7ed38ae000 55af1
+           <...>-7176  [007] ....  3562.412398: read_swap_cache_async: remote readpage 7130 "pool-7-thread-1" 7e9d328000 111a89
+           <...>-7176  [007] ....  3562.414033: read_swap_cache_async: remote readpage 7130 "pool-7-thread-1" 7e9d329000 111a8a
+           <...>-7130  [007] ....  3562.424153: read_swap_cache_async: remote readpage 7130 ".candycrushsaga" 7e8d1fa000 f1afd
+           <...>-19872 [007] ....  3562.435842: update_to_nbd_flag: appid 4: table 0 is latter, total target 0 max idx e, l -> 21 18
+           <...>-19872 [007] ....  3562.440179: miss_page_handler: miss page handler start! target(id,table): 4,1
+           <...>-200   [004] ....  3562.440374: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] d..2  3562.440376: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [004] d..2  3562.440378: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [004] d..2  3562.440379: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [004] d..2  3562.440380: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [004] d..2  3562.440381: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [004] d..2  3562.440382: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [004] d..2  3562.440383: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [004] d..2  3562.440383: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [004] d..2  3562.440384: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [004] ....  3562.440385: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7247  [007] ....  3562.765532: read_swap_cache_async: remote readpage 7130 "GLThread 473" 7ec7756000 1d1ad8
+           <...>-7247  [007] ....  3562.767841: read_swap_cache_async: remote readpage 7130 "GLThread 473" 7e9d796000 119a45
+           <...>-7247  [007] ....  3562.769869: read_swap_cache_async: remote readpage 7130 "GLThread 473" 7e9d8ed000 119aa4
+           <...>-7247  [007] ....  3562.778361: read_swap_cache_async: remote readpage 7130 "GLThread 473" 7e9d78d000 119a41
+           <...>-19912 [004] ....  3563.092926: read_swap_cache_async: remote readpage 7130 "pool-11-thread-" 7e9e90c000 11daaa
+           <...>-19912 [005] ....  3563.096189: read_swap_cache_async: remote readpage 7130 "pool-11-thread-" 7e9e90d000 11daab
+           <...>-19912 [004] ....  3563.098445: read_swap_cache_async: remote readpage 7130 "pool-11-thread-" 7e9d07c000 10da7e
+           <...>-5430  [000] d..4  3572.292539: __free_cluster: [REMOTE __free_cluster] free cluster 425
+           <...>-5418  [000] d..4  3572.308429: __free_cluster: [REMOTE __free_cluster] free cluster 1767
+           <...>-5418  [000] d..4  3572.308446: __free_cluster: [REMOTE __free_cluster] free cluster 1703
+           <...>-5418  [000] d..4  3572.315483: __free_cluster: [REMOTE __free_cluster] free cluster 1639
+           <...>-6874  [001] ....  3598.592704: read_swap_cache_async: remote readpage 6841 "BG Thread #1" 7eb3107000 91ada
+           <...>-6874  [001] ....  3598.594413: read_swap_cache_async: remote readpage 6841 "BG Thread #1" 7eb3106000 91ad9
+           <...>-6310  [001] ....  3612.814427: read_swap_cache_async: remote readpage 6242 "CronetInit" 7eb4612000 31a7b
+           <...>-12421 [004] ....  3612.814986: read_swap_cache_async: remote readpage 7130 "Binder:7130_9" 717ce000 a5aa2
+           <...>-6905  [001] ....  3612.816350: read_swap_cache_async: remote readpage 6841 "CronetInit" 7ea2d88000 8dade
+           <...>-7148  [004] ....  3612.816581: read_swap_cache_async: remote readpage 7130 "Binder:7130_2" 7e8d45b000 f5ad6
+           <...>-12421 [004] ....  3612.816803: read_swap_cache_async: remote readpage 7130 "Binder:7130_9" 7ed25af000 1edaf7
+           <...>-6310  [001] ....  3612.818088: read_swap_cache_async: remote readpage 6242 "CronetInit" 7eb460f000 31a79
+           <...>-7256  [006] ....  3612.818735: read_swap_cache_async: remote readpage 7130 "ConnectivityThr" 7ea550b000 131af0
+           <...>-8928  [000] ....  3612.819282: read_swap_cache_async: remote readpage 8557 "Binder:8557_5" 7d559e5000 381a94
+           <...>-8575  [000] ....  3612.819434: read_swap_cache_async: remote readpage 8557 "Binder:8557_2" 7eb95ed000 521ae7
+           <...>-8712  [000] ....  3612.819535: read_swap_cache_async: remote readpage 8557 "Binder:8557_3" 7d60b11000 3ada7e
+           <...>-11630 [000] ....  3612.819546: read_swap_cache_async: remote readpage 8557 "Binder:8557_6" 7eb96b2000 525a14
+           <...>-8587  [000] ....  3612.820424: read_swap_cache_async: remote readpage 8557 "ConnectivityThr" 7ecce6b000 365a88
+           <...>-6905  [001] ....  3612.821034: read_swap_cache_async: remote readpage 6841 "CronetInit" 7ea2d85000 8dadc
+           <...>-7130  [006] ....  3612.821137: read_swap_cache_async: remote readpage 7130 ".candycrushsaga" 716fa000 a5a9d
+           <...>-7256  [006] ....  3612.822765: read_swap_cache_async: remote readpage 7130 "ConnectivityThr" 7ea5509000 131aef
+           <...>-8712  [000] ....  3612.822846: read_swap_cache_async: remote readpage 8557 "Binder:8557_3" 7eb952f000 521aba
+           <...>-6310  [001] ....  3612.823423: read_swap_cache_async: remote readpage 6242 "CronetInit" 7eb4610000 31a7a
+           <...>-8574  [001] ....  3612.824243: read_swap_cache_async: remote readpage 8557 "Binder:8557_1" 7d55ba7000 385a58
+           <...>-11630 [001] ....  3612.824876: read_swap_cache_async: remote readpage 8557 "Binder:8557_6" 7eb95eb000 521ae6
+           <...>-8575  [001] ....  3612.825429: read_swap_cache_async: remote readpage 8557 "Binder:8557_2" 7ecc859000 55da85
+           <...>-8587  [001] ....  3612.825613: read_swap_cache_async: remote readpage 8557 "ConnectivityThr" 7ecce68000 55daf4
+           <...>-7256  [004] ....  3612.828472: read_swap_cache_async: remote readpage 7130 "ConnectivityThr" 7ea5508000 131aee
+           <...>-6905  [001] ....  3612.828631: read_swap_cache_async: remote readpage 6841 "CronetInit" 7ea2d86000 8dadd
+           <...>-8712  [001] ....  3612.828905: read_swap_cache_async: remote readpage 8557 "Binder:8557_3" 7d60b0f000 3ada7d
+           <...>-6310  [000] ....  3612.831472: read_swap_cache_async: remote readpage 6242 "CronetInit" 7ea483b000 29ac9
+           <...>-7130  [007] ....  3612.835035: read_swap_cache_async: remote readpage 7130 ".candycrushsaga" 7ed23d3000 1eda28
+           <...>-8587  [001] ....  3612.835530: read_swap_cache_async: remote readpage 8557 "ConnectivityThr" 7ecce69000 365a87
+           <...>-7256  [004] ....  3612.835573: read_swap_cache_async: remote readpage 7130 "ConnectivityThr" 7ed2699000 1f1a34
+           <...>-8712  [001] ....  3612.835594: read_swap_cache_async: remote readpage 8557 "Binder:8557_3" 7eb9674000 525a02
+           <...>-6905  [001] ....  3612.835763: read_swap_cache_async: remote readpage 6841 "CronetInit" 7ecbb0a000 95a68
+           <...>-6310  [000] ....  3612.837549: read_swap_cache_async: remote readpage 6242 "CronetInit" 7eb460e000 31a78
+           <...>-7256  [004] ....  3612.838905: read_swap_cache_async: remote readpage 7130 "ConnectivityThr" 7ed2631000 1f1a21
+           <...>-8587  [000] ....  3612.838983: read_swap_cache_async: remote readpage 8557 "ConnectivityThr" 7f28bc7000 365abe
+           <...>-8712  [000] ....  3612.839506: read_swap_cache_async: remote readpage 8557 "Binder:8557_3" 7d60b55000 3ada85
+           <...>-6310  [000] ....  3612.840704: read_swap_cache_async: remote readpage 6242 "CronetInit" 7ea483a000 29ac8
+           <...>-8587  [000] ....  3612.840967: read_swap_cache_async: remote readpage 8557 "ConnectivityThr" 7f28b4c000 561a82
+           <...>-6905  [001] ....  3612.843352: read_swap_cache_async: remote readpage 6841 "CronetInit" 7f2e269000 a5a42
+           <...>-7256  [006] ....  3612.845743: read_swap_cache_async: remote readpage 7130 "ConnectivityThr" 7f2d7c8000 1f5a7d
+           <...>-8587  [000] ....  3612.846429: read_swap_cache_async: remote readpage 8557 "ConnectivityThr" 71726000 36dad3
+           <...>-8587  [000] ....  3612.849397: read_swap_cache_async: remote readpage 8557 "ConnectivityThr" 7178f000 36dad6
+           <...>-10935 [004] ....  3613.417201: read_swap_cache_async: remote readpage 7130 "Binder:7130_8" 7ed3806000 1f1a9b
+           <...>-200   [007] ....  3617.759509: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  3617.759518: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [007] d..2  3617.759522: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [007] d..2  3617.759525: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [007] d..2  3617.759527: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [007] d..2  3617.759530: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [007] d..2  3617.759532: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [007] d..2  3617.759535: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [007] d..2  3617.759539: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [007] d..2  3617.759541: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [007] ....  3617.759544: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-8712  [000] ....  3624.812611: read_swap_cache_async: remote readpage 8557 "Binder:8557_3" 7eb9526000 521ab8
+           <...>-20077 [007] ....  3626.107430: app_switch_start_handler: ###########switch start! foreground 10124#############
+           <...>-20077 [007] ....  3626.107434: prefetch_handler: prefetch handler start! target(id,table): 8,1
+           <...>-7191  [004] ....  3626.139693: read_swap_cache_async: remote readpage 7130 "GLThread 473" 7e9fa01000 129a3c
+           <...>-7400  [004] ....  3626.170761: read_swap_cache_async: remote readpage 7383 "Binder:7383_1" c819f000 1a5a96
+       CrGpuMain-7914  [001] ....  3626.210606: read_swap_cache_async: remote readpage 7891 "CrGpuMain" f7ace000 1a1a89
+ .android.chrome-7383  [005] ....  3626.231406: read_swap_cache_async: remote readpage 7383 ".android.chrome" e20b7000 1b9a61
+           <...>-20077 [004] ....  3626.360582: update_to_nbd_flag: appid 8: table 0 is latter, total target 0 max idx e, l -> 2 4
+           <...>-20077 [004] ....  3626.367505: miss_page_handler: miss page handler start! target(id,table): 8,1
+           <...>-200   [004] ....  3626.371511: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] d..2  3626.371515: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [004] d..2  3626.371516: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [004] d..2  3626.371518: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [004] d..2  3626.371519: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [004] d..2  3626.371520: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [004] d..2  3626.371521: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [004] d..2  3626.371522: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [004] d..2  3626.371523: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [004] d..2  3626.371524: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [004] ....  3626.371525: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7404  [007] ....  3626.494097: read_swap_cache_async: remote readpage 7383 "Profile Saver" eb426000 1bda77
+           <...>-7404  [007] ....  3626.505243: read_swap_cache_async: remote readpage 7383 "Profile Saver" c754e000 199a52
+           <...>-7404  [007] ....  3626.507057: read_swap_cache_async: remote readpage 7383 "Profile Saver" c754f000 199a55
+           <...>-7404  [004] ....  3626.509479: read_swap_cache_async: remote readpage 7383 "Profile Saver" c7550000 199a58
+           <...>-7404  [004] ....  3626.513825: read_swap_cache_async: remote readpage 7383 "Profile Saver" c7551000 199a5b
+           <...>-7404  [004] ....  3626.515606: read_swap_cache_async: remote readpage 7383 "Profile Saver" c7552000 199a5e
+           <...>-7404  [004] ....  3626.517885: read_swap_cache_async: remote readpage 7383 "Profile Saver" c7553000 199a61
+           <...>-7404  [004] ....  3626.523350: read_swap_cache_async: remote readpage 7383 "Profile Saver" eb427000 1bda79
+           <...>-7404  [004] ....  3626.527168: read_swap_cache_async: remote readpage 7383 "Profile Saver" eb428000 1bda7b
+           <...>-7404  [006] ....  3626.529070: read_swap_cache_async: remote readpage 7383 "Profile Saver" eb429000 1bda7d
+           <...>-20189 [007] ....  3650.239646: app_switch_start_handler: ###########switch start! foreground 10133#############
+           <...>-20189 [007] ....  3650.239649: prefetch_handler: prefetch handler start! target(id,table): 3,0
+ .android.chrome-7383  [004] ....  3650.260747: read_swap_cache_async: remote readpage 7383 ".android.chrome" cab1e000 1a9a08
+           <...>-8165  [003] ....  3650.318553: read_swap_cache_async: remote readpage 8093 "RenderThread" 7f28bbb000 22da17
+           <...>-8112  [004] ....  3650.325275: read_swap_cache_async: remote readpage 8093 "Binder:8093_3" 7f3982b000 231a05
+           <...>-20200 [000] ....  3650.327326: read_swap_cache_async: remote readpage 8093 "o.twimg.com/..." 7ea2883000 21da7f
+           <...>-20195 [004] ....  3650.345655: read_swap_cache_async: remote readpage 8093 "ScionFrontendAp" 7eaa2f6000 225ae8
+ io-core-Thread--8140  [006] ....  3650.348266: read_swap_cache_async: remote readpage 8093 "io-core-Thread-" 7e869e0000 205ab7
+ api.twitter.com-20207 [004] ....  3650.379038: read_swap_cache_async: remote readpage 8093 "OkHttp TaskRunn" 7ea25cd000 215af8
+           <...>-20189 [006] ....  3650.384982: update_to_nbd_flag: appid 3: table 1 is latter, total target 0 max idx e, l -> 5 8
+           <...>-20189 [006] ....  3650.389190: miss_page_handler: miss page handler start! target(id,table): 3,0
+           <...>-200   [006] ....  3650.389872: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [006] d..2  3650.389876: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [006] d..2  3650.389877: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [006] d..2  3650.389878: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [006] d..2  3650.389879: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [006] d..2  3650.389880: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [006] d..2  3650.389881: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [006] d..2  3650.389882: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [006] d..2  3650.389883: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [006] d..2  3650.389884: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [006] ....  3650.389885: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-8193  [004] ....  3650.412497: read_swap_cache_async: remote readpage 8093 "mainNetwork-cor" 7ea25d3000 215afc
+           <...>-8182  [004] ....  3650.560819: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e86bc1000 205adc
+           <...>-8182  [005] ....  3650.563127: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e86b9d000 205adb
+           <...>-8182  [005] ....  3650.565442: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e9347d000 215a89
+           <...>-8182  [007] ....  3650.585692: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e86a70000 205ac4
+           <...>-8182  [007] ....  3650.591543: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7f2e438000 22dae1
+           <...>-20200 [007] ....  3650.594655: read_swap_cache_async: remote readpage 8093 "o.twimg.com/..." 7eaa149000 225a51
+           <...>-8182  [007] ....  3650.604272: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e86b44000 205ad0
+           <...>-8182  [007] ....  3650.606399: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e86b52000 205ad3
+           <...>-8182  [007] ....  3650.608754: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e869de000 205ab6
+           <...>-8182  [007] ....  3650.615087: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e86b64000 205ad5
+           <...>-8182  [007] ....  3650.620774: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7ea2af2000 221a4e
+           <...>-8182  [007] ....  3650.623662: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e9347c000 215a88
+           <...>-8182  [007] ....  3650.628798: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e86b53000 205ad4
+           <...>-8182  [007] ....  3650.630410: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e86c27000 205ade
+ .twimg.com ping-20211 [004] ....  3650.635634: read_swap_cache_async: remote readpage 8093 "OkHttp TaskRunn" 7e7783b000 205a9c
+ mainNetwork-cor-8190  [007] ....  3650.943584: read_swap_cache_async: remote readpage 8093 "mainNetwork-cor" 7f2d7fc000 22da8a
+ twitter.android-8093  [004] ....  3650.989467: read_swap_cache_async: remote readpage 8093 "twitter.android" 7e7730e000 201a6a
+           <...>-8277  [007] ....  3651.130061: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7e86c9b000 205ae2
+           <...>-20196 [005] ....  3651.161257: read_swap_cache_async: remote readpage 8093 "io-variable-Thr" 7e773a0000 201a71
+           <...>-8270  [006] ....  3652.567688: read_swap_cache_async: remote readpage 8093 "longRunning-Thr" 7f2e37e000 22dabb
+           <...>-6984  [000] ....  3678.289993: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7f2e1ec000 a5a0b
+           <...>-20356 [004] ....  3684.012146: app_switch_start_handler: ###########switch start! foreground 10122#############
+           <...>-20356 [004] ....  3684.012150: prefetch_handler: prefetch handler start! target(id,table): 5,0
+ gle.android.gms-2557  [001] dn.4  3684.074877: __free_cluster: [REMOTE __free_cluster] free cluster 1462
+           <...>-20356 [007] ....  3684.121411: update_to_nbd_flag: appid 5: table 1 is latter, total target 0 max idx e, l -> 4 20
+           <...>-20356 [007] ....  3684.127305: miss_page_handler: miss page handler start! target(id,table): 5,0
+           <...>-200   [006] ....  3684.127427: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [006] d..2  3684.127430: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [006] d..2  3684.127431: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [006] d..2  3684.127432: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [006] d..2  3684.127433: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [006] d..2  3684.127434: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [006] d..2  3684.127435: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [006] d..2  3684.127437: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [006] d..2  3684.127438: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [006] d..2  3684.127439: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [006] ....  3684.127440: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-8611  [007] ....  3684.169472: read_swap_cache_async: remote readpage 8557 "UnityMain" 7dd084b000 46da13
+           <...>-8611  [007] ....  3684.171736: read_swap_cache_async: remote readpage 8557 "UnityMain" 7dd084d000 46da15
+           <...>-8611  [007] ....  3684.173541: read_swap_cache_async: remote readpage 8557 "UnityMain" 7dd084c000 46da14
+           <...>-20383 [007] ....  3684.194449: read_swap_cache_async: remote readpage 8557 "pool-5-thread-1" 7eb973a000 525a25
+           <...>-20383 [007] ....  3684.198533: read_swap_cache_async: remote readpage 8557 "pool-5-thread-1" 7eb97df000 525a82
+           <...>-18082 [000] ....  3684.299790: cold_page_sender_work: remote: total sent cold page: 88386
+           <...>-18082 [000] ....  3684.299797: cold_page_sender_work: remote: total faulted cold page: 392
+           <...>-7357  [001] ....  3707.700031: read_swap_cache_async: remote readpage 7130 "TaskSchedulerSi" 7e9d278000 111a4b
+           <...>-7357  [001] ....  3707.708937: read_swap_cache_async: remote readpage 7130 "TaskSchedulerSi" 7e9d826000 119a82
+           <...>-7569  [001] ....  3710.237618: read_swap_cache_async: remote readpage 7130 "TaskSchedulerFo" 7e30708000 edaca
+           <...>-8112  [000] ....  3710.358890: read_swap_cache_async: remote readpage 8093 "Binder:8093_3" 7e7753c000 201acb
+ io-core-Thread--8140  [001] ....  3710.637508: read_swap_cache_async: remote readpage 8093 "io-core-Thread-" 7f2e2c6000 22daa9
+ io-core-Thread--8140  [001] ....  3710.639416: read_swap_cache_async: remote readpage 8093 "io-core-Thread-" 7f2e2c7000 22daaa
+           <...>-7148  [001] ....  3745.544041: read_swap_cache_async: remote readpage 7130 "Binder:7130_2" 7f2d649000 5da18
+           <...>-20538 [007] ....  3747.529566: app_switch_start_handler: ###########switch start! foreground 10136#############
+           <...>-20538 [007] ....  3747.529570: prefetch_handler: prefetch handler start! target(id,table): 7,0
+           <...>-20545 [006] ....  3747.550856: read_swap_cache_async: remote readpage 8557 "Measurement Wor" 7dd0722000 469a51
+           <...>-20545 [004] ....  3747.565783: read_swap_cache_async: remote readpage 8557 "Measurement Wor" 7d937d9000 3cda97
+           <...>-20545 [005] ....  3747.568712: read_swap_cache_async: remote readpage 8557 "Measurement Wor" 7d937da000 3cda98
+           <...>-20545 [005] ....  3747.570593: read_swap_cache_async: remote readpage 8557 "Measurement Wor" 7d5e48f000 389a7c
+           <...>-20545 [007] ....  3747.573017: read_swap_cache_async: remote readpage 8557 "Measurement Wor" 7d5e777000 391ae4
+           <...>-7148  [000] ....  3747.677638: read_swap_cache_async: remote readpage 7130 "Binder:7130_2" 7ed254b000 1edaec
+           <...>-7148  [000] ....  3747.682025: read_swap_cache_async: remote readpage 7130 "Binder:7130_2" 7ed2549000 1edaea
+           <...>-20538 [004] ....  3747.728909: update_to_nbd_flag: appid 7: table 1 is latter, total target 0 max idx e, l -> 14 23
+           <...>-8628  [000] ....  3747.729750: read_swap_cache_async: remote readpage 8557 "Thread-193" 7eb9fe9000 531a9d
+           <...>-20538 [007] ....  3747.738394: miss_page_handler: miss page handler start! target(id,table): 7,0
+           <...>-200   [005] ....  3747.738490: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [005] d..2  3747.738493: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [005] d..2  3747.738495: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [005] d..2  3747.738495: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [005] d..2  3747.738496: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [005] d..2  3747.738497: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [005] d..2  3747.738498: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [005] d..2  3747.738499: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [005] d..2  3747.738500: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [005] d..2  3747.738501: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [005] ....  3747.738502: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-18082 [000] ...1  3747.891499: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22170
+           <...>-8632  [000] ....  3747.919880: read_swap_cache_async: remote readpage 8557 "Thread-192" 7ec65fb000 53dae0
+           <...>-8632  [000] ....  3747.991388: read_swap_cache_async: remote readpage 8557 "Thread-192" 7eb3336000 329a27
+           <...>-18082 [000] ...1  3748.444638: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22234
+           <...>-18082 [000] ...1  3749.010630: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22298
+           <...>-18082 [000] ...1  3749.684087: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22362
+           <...>-18082 [000] ...1  3750.220556: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22426
+           <...>-18082 [000] ...1  3750.781827: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22490
+           <...>-18082 [000] ...1  3751.355895: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22554
+           <...>-18082 [000] ...1  3751.890698: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22618
+           <...>-18082 [000] ...1  3752.444091: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22682
+           <...>-18082 [000] ...1  3752.946532: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22746
+           <...>-18082 [000] ...1  3753.475756: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22810
+           <...>-18082 [000] ...1  3753.982888: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22874
+           <...>-18082 [000] ...1  3754.523365: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 22938
+           <...>-18082 [000] ...1  3755.106355: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23002
+           <...>-18082 [000] dn.4  3755.463064: __free_cluster: [REMOTE __free_cluster] free cluster 761
+           <...>-18082 [000] ...1  3755.614706: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23066
+           <...>-18082 [000] ...1  3756.126707: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23130
+           <...>-18082 [000] ...1  3756.706267: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23194
+           <...>-18082 [000] ...1  3757.305328: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23258
+           <...>-18082 [000] ...1  3757.841620: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23322
+           <...>-18082 [000] ...1  3758.389929: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23386
+           <...>-18082 [000] ...1  3758.892192: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23450
+           <...>-18082 [000] d..4  3759.256469: __free_cluster: [REMOTE __free_cluster] free cluster 1848
+           <...>-18082 [000] ...1  3759.431776: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23514
+           <...>-18082 [000] ...1  3759.963212: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23578
+           <...>-18082 [000] d..4  3760.203107: __free_cluster: [REMOTE __free_cluster] free cluster 1912
+           <...>-18082 [000] ...1  3760.550920: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23642
+           <...>-18082 [000] ...1  3761.104565: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23706
+           <...>-18082 [000] ...1  3761.686496: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23770
+           <...>-18082 [000] d..4  3761.914368: __free_cluster: [REMOTE __free_cluster] free cluster 953
+           <...>-18082 [000] ...1  3762.251570: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23834
+           <...>-18082 [000] ...1  3762.821652: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23898
+           <...>-18082 [000] d..4  3763.054678: __free_cluster: [REMOTE __free_cluster] free cluster 569
+           <...>-18082 [000] ...1  3763.380603: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 23962
+           <...>-18082 [000] d..4  3763.476128: __free_cluster: [REMOTE __free_cluster] free cluster 633
+           <...>-18082 [000] d..4  3763.618419: __free_cluster: [REMOTE __free_cluster] free cluster 697
+           <...>-18082 [000] ...1  3763.927991: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24026
+           <...>-18082 [000] ...1  3764.451243: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24090
+           <...>-18082 [000] ....  3764.570960: cold_page_sender_work: remote: total sent cold page: 96151
+           <...>-18082 [000] ....  3764.570971: cold_page_sender_work: remote: total faulted cold page: 409
+           <...>-200   [007] ....  3767.946790: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  3767.946800: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [007] d..2  3767.946805: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [007] d..2  3767.946807: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [007] d..2  3767.946811: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [007] d..2  3767.946814: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [007] d..2  3767.946818: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [007] d..2  3767.946821: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [007] d..2  3767.946824: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [007] d..2  3767.946827: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [007] ....  3767.946831: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-8687  [001] ....  3795.680327: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSe" 7eba092000 531ab6
+           <...>-8688  [001] ....  3795.695770: read_swap_cache_async: remote readpage 8557 "TaskSchedulerFo" 7eb9580000 521aca
+           <...>-20678 [007] ....  3811.461525: app_switch_start_handler: ###########switch start! foreground 10127#############
+           <...>-20678 [007] ....  3811.461530: prefetch_handler: prefetch handler start! target(id,table): 2,0
+           <...>-20678 [007] ....  3811.562447: update_to_nbd_flag: appid 2: table 1 is latter, total target 0 max idx e, l -> 15 17
+           <...>-20678 [006] ....  3811.569101: miss_page_handler: miss page handler start! target(id,table): 2,0
+           <...>-200   [006] ....  3811.569207: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [006] d..2  3811.569209: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [006] d..2  3811.569210: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [006] d..2  3811.569211: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [006] d..2  3811.569212: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [006] d..2  3811.569213: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [006] d..2  3811.569214: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [006] d..2  3811.569215: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [006] d..2  3811.569216: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [006] d..2  3811.569217: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [006] ....  3811.569218: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-18082 [000] ...1  3812.017547: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24154
+           <...>-18082 [000] ...1  3812.595474: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24218
+           <...>-18082 [000] ...1  3813.175008: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24282
+           <...>-18082 [000] ...1  3813.744872: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24346
+           <...>-18082 [000] ...1  3814.309525: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24410
+           <...>-18082 [000] ...1  3814.906199: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24474
+           <...>-6280  [000] ....  3815.152485: read_swap_cache_async: remote readpage 6242 "DefaultPool2" 7f2d65c000 3da32
+           <...>-6299  [000] ....  3815.153392: read_swap_cache_async: remote readpage 6242 "NetworkPool3" 7e88fb4000 1dae9
+           <...>-18082 [000] ...1  3815.444082: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24538
+           <...>-18082 [000] ...1  3815.998060: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24602
+           <...>-18082 [000] d..4  3816.548010: __free_cluster: [REMOTE __free_cluster] free cluster 954
+           <...>-18082 [000] ...1  3816.555814: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24666
+           <...>-18082 [000] ...1  3817.228911: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24730
+           <...>-2573  [000] d..4  3817.554471: __free_cluster: [REMOTE __free_cluster] free cluster 106
+           <...>-18082 [000] ...1  3817.763663: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24794
+           <...>-18082 [000] ...1  3818.341492: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24858
+           <...>-18082 [000] ...1  3818.914511: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24922
+           <...>-18082 [000] ...1  3819.489523: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 24986
+           <...>-18082 [000] ...1  3820.007486: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25050
+           <...>-18082 [000] ...1  3820.537304: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25114
+           <...>-18082 [000] ...1  3821.046901: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25178
+           <...>-18082 [000] ...1  3821.571249: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25242
+           <...>-18082 [000] ...1  3822.111095: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25306
+           <...>-9117  [000] ....  3822.177120: read_swap_cache_async: remote readpage 9034 "Primes-2" 7e6df7b000 605a59
+           <...>-18082 [000] ...1  3822.647673: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25370
+           <...>-18082 [000] d..4  3822.712768: __free_cluster: [REMOTE __free_cluster] free cluster 186
+           <...>-18082 [000] d..4  3822.712791: __free_cluster: [REMOTE __free_cluster] free cluster 378
+           <...>-18082 [000] ....  3822.902662: cold_page_sender_work: remote: total sent cold page: 101324
+           <...>-18082 [000] ....  3822.902673: cold_page_sender_work: remote: total faulted cold page: 414
+           <...>-20851 [007] ....  3839.978639: app_switch_start_handler: ###########switch start! foreground 10159#############
+           <...>-20851 [007] ....  3839.978644: prefetch_handler: prefetch handler start! target(id,table): 6,1
+           <...>-20851 [007] ....  3840.057149: update_to_nbd_flag: appid 6: table 0 is latter, total target 0 max idx e, l -> 2 1
+           <...>-20851 [007] ....  3840.068727: miss_page_handler: miss page handler start! target(id,table): 6,1
+           <...>-200   [007] ....  3840.069309: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  3840.069312: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [007] d..2  3840.069314: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [007] d..2  3840.069315: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [007] d..2  3840.069315: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [007] d..2  3840.069316: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [007] d..2  3840.069317: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [007] d..2  3840.069318: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [007] d..2  3840.069319: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [007] d..2  3840.069320: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [007] ....  3840.069321: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-20699 [000] ....  3840.139865: cold_page_sender_work: remote: total sent cold page: 101330
+           <...>-20699 [000] ....  3840.139871: cold_page_sender_work: remote: total faulted cold page: 414
+           <...>-18082 [000] d..4  3840.195314: __free_cluster: [REMOTE __free_cluster] free cluster 442
+           <...>-18082 [000] ...1  3840.498814: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25434
+           <...>-18082 [000] ...1  3841.151502: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25498
+           <...>-18082 [000] ...1  3841.715676: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25562
+           <...>-18082 [000] ...1  3842.355612: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25626
+           <...>-18082 [000] d..4  3842.710125: __free_cluster: [REMOTE __free_cluster] free cluster 1978
+           <...>-18082 [000] ...1  3842.973029: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25690
+           <...>-18082 [000] ...1  3843.581813: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25754
+           <...>-18082 [000] ...1  3844.203061: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 25818
+           <...>-18082 [000] ....  3844.897837: cold_page_sender_work: remote: total sent cold page: 103260
+           <...>-18082 [000] ....  3844.897852: cold_page_sender_work: remote: total faulted cold page: 414
+           <...>-9781  [001] ....  3845.081476: read_swap_cache_async: remote readpage 9380 "IgExecutorV2 #1" 7ea8f0d000 63dabc
+           <...>-8687  [000] ....  3855.688626: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSe" 7eb959e000 521ad8
+           <...>-8687  [000] ....  3855.707399: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSe" 7eb955a000 521ac4
+           <...>-8687  [000] ....  3855.709947: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSe" 7eb95a2000 521ada
+           <...>-8705  [001] ....  3855.713599: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7d65d05000 3ada9b
+           <...>-8705  [001] ....  3855.715761: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7eb963a000 521af1
+           <...>-8705  [001] ....  3855.718080: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7ee3fb4000 561a4d
+           <...>-8705  [000] ....  3855.720310: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7ee3b41000 561a22
+           <...>-8705  [000] ....  3855.723093: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7eb9636000 521aed
+           <...>-8705  [000] ....  3855.725151: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7eb9638000 521aef
+           <...>-8705  [000] ....  3855.727134: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7eb8e58000 51dad0
+           <...>-8705  [000] ....  3855.729205: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7d9377a000 3cda6c
+           <...>-8705  [000] ....  3855.731227: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7d9377e000 3cda6f
+           <...>-8705  [000] ....  3855.733037: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7d55c63000 385a83
+           <...>-8705  [000] ....  3855.736328: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7d55c57000 385a77
+           <...>-8705  [000] ....  3855.742883: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7d55dcc000 56da71
+           <...>-8705  [000] ....  3855.745379: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7eb95e8000 521ae3
+           <...>-8705  [000] ....  3855.748154: read_swap_cache_async: remote readpage 8557 "TaskSchedulerSi" 7eb960b000 521aec
+           <...>-9194  [000] ....  3869.328558: read_swap_cache_async: remote readpage 9034 "TaskSchedulerSe" 7e907e0000 611a44
+           <...>-20996 [007] ....  3893.788255: swap_counter_dump_handler: pid 6242: counter 0 = 0
+           <...>-20996 [007] ....  3893.788257: swap_counter_dump_handler: pid 6242: counter 1 = 0
+           <...>-20996 [007] ....  3893.788258: swap_counter_dump_handler: pid 6242: counter 2 = 0
+           <...>-20996 [007] ....  3893.788259: swap_counter_dump_handler: pid 6242: counter 3 = 1
+           <...>-20996 [007] ....  3893.788260: swap_counter_dump_handler: pid 6242: counter 4 = 0
+           <...>-20996 [007] ....  3893.788260: swap_counter_dump_handler: pid 6242: counter 5 = 0
+           <...>-20996 [007] ....  3893.788260: swap_counter_dump_handler: pid 6242: counter >5 = 0
+           <...>-20996 [007] ....  3893.788261: swap_counter_dump_handler: remote: total sent cold page: 103241
+           <...>-20996 [007] ....  3893.788262: swap_counter_dump_handler: remote: total faulted cold page: 433
+           <...>-20998 [007] ....  3893.803738: swap_counter_dump_handler: pid 6841: counter 0 = 0
+           <...>-20998 [007] ....  3893.803741: swap_counter_dump_handler: pid 6841: counter 1 = 0
+           <...>-20998 [007] ....  3893.803742: swap_counter_dump_handler: pid 6841: counter 2 = 0
+           <...>-20998 [007] ....  3893.803743: swap_counter_dump_handler: pid 6841: counter 3 = 0
+           <...>-20998 [007] ....  3893.803743: swap_counter_dump_handler: pid 6841: counter 4 = 0
+           <...>-20998 [007] ....  3893.803744: swap_counter_dump_handler: pid 6841: counter 5 = 0
+           <...>-20998 [007] ....  3893.803744: swap_counter_dump_handler: pid 6841: counter >5 = 0
+           <...>-20998 [007] ....  3893.803745: swap_counter_dump_handler: remote: total sent cold page: 103241
+           <...>-20998 [007] ....  3893.803746: swap_counter_dump_handler: remote: total faulted cold page: 433
+              sh-21000 [007] ....  3893.818306: swap_counter_dump_handler: pid 7130: counter 0 = 1
+              sh-21000 [007] ....  3893.818308: swap_counter_dump_handler: pid 7130: counter 1 = 2
+              sh-21000 [007] ....  3893.818309: swap_counter_dump_handler: pid 7130: counter 2 = 0
+              sh-21000 [007] ....  3893.818310: swap_counter_dump_handler: pid 7130: counter 3 = 11
+              sh-21000 [007] ....  3893.818310: swap_counter_dump_handler: pid 7130: counter 4 = 0
+              sh-21000 [007] ....  3893.818311: swap_counter_dump_handler: pid 7130: counter 5 = 0
+              sh-21000 [007] ....  3893.818312: swap_counter_dump_handler: pid 7130: counter >5 = 0
+              sh-21000 [007] ....  3893.818312: swap_counter_dump_handler: remote: total sent cold page: 103241
+              sh-21000 [007] ....  3893.818313: swap_counter_dump_handler: remote: total faulted cold page: 433
+              sh-21002 [007] ....  3893.828892: swap_counter_dump_handler: pid 7383: counter 0 = 0
+              sh-21002 [007] ....  3893.828894: swap_counter_dump_handler: pid 7383: counter 1 = 0
+              sh-21002 [007] ....  3893.828895: swap_counter_dump_handler: pid 7383: counter 2 = 0
+              sh-21002 [007] ....  3893.828896: swap_counter_dump_handler: pid 7383: counter 3 = 0
+              sh-21002 [007] ....  3893.828896: swap_counter_dump_handler: pid 7383: counter 4 = 0
+              sh-21002 [007] ....  3893.828897: swap_counter_dump_handler: pid 7383: counter 5 = 0
+              sh-21002 [007] ....  3893.828897: swap_counter_dump_handler: pid 7383: counter >5 = 0
+              sh-21002 [007] ....  3893.828898: swap_counter_dump_handler: remote: total sent cold page: 103241
+              sh-21002 [007] ....  3893.828899: swap_counter_dump_handler: remote: total faulted cold page: 433
+              sh-21004 [007] ....  3893.845480: swap_counter_dump_handler: pid 8093: counter 0 = 0
+              sh-21004 [007] ....  3893.845483: swap_counter_dump_handler: pid 8093: counter 1 = 0
+              sh-21004 [007] ....  3893.845484: swap_counter_dump_handler: pid 8093: counter 2 = 0
+              sh-21004 [007] ....  3893.845485: swap_counter_dump_handler: pid 8093: counter 3 = 17
+              sh-21004 [007] ....  3893.845486: swap_counter_dump_handler: pid 8093: counter 4 = 0
+              sh-21004 [007] ....  3893.845486: swap_counter_dump_handler: pid 8093: counter 5 = 0
+              sh-21004 [007] ....  3893.845487: swap_counter_dump_handler: pid 8093: counter >5 = 0
+              sh-21004 [007] ....  3893.845488: swap_counter_dump_handler: remote: total sent cold page: 103241
+              sh-21004 [007] ....  3893.845489: swap_counter_dump_handler: remote: total faulted cold page: 433
+              sh-21006 [007] ....  3893.865423: swap_counter_dump_handler: pid 8557: counter 0 = 0
+              sh-21006 [007] ....  3893.865426: swap_counter_dump_handler: pid 8557: counter 1 = 0
+              sh-21006 [007] ....  3893.865427: swap_counter_dump_handler: pid 8557: counter 2 = 0
+              sh-21006 [007] ....  3893.865428: swap_counter_dump_handler: pid 8557: counter 3 = 0
+              sh-21006 [007] ....  3893.865428: swap_counter_dump_handler: pid 8557: counter 4 = 0
+              sh-21006 [007] ....  3893.865428: swap_counter_dump_handler: pid 8557: counter 5 = 0
+              sh-21006 [007] ....  3893.865429: swap_counter_dump_handler: pid 8557: counter >5 = 0
+              sh-21006 [007] ....  3893.865430: swap_counter_dump_handler: remote: total sent cold page: 103241
+              sh-21006 [007] ....  3893.865431: swap_counter_dump_handler: remote: total faulted cold page: 433
+              sh-21008 [007] ....  3893.881406: swap_counter_dump_handler: pid 9034: counter 0 = 0
+              sh-21008 [007] ....  3893.881410: swap_counter_dump_handler: pid 9034: counter 1 = 4
+              sh-21008 [007] ....  3893.881411: swap_counter_dump_handler: pid 9034: counter 2 = 0
+              sh-21008 [007] ....  3893.881412: swap_counter_dump_handler: pid 9034: counter 3 = 7
+              sh-21008 [007] ....  3893.881413: swap_counter_dump_handler: pid 9034: counter 4 = 0
+              sh-21008 [007] ....  3893.881413: swap_counter_dump_handler: pid 9034: counter 5 = 0
+              sh-21008 [007] ....  3893.881414: swap_counter_dump_handler: pid 9034: counter >5 = 0
+              sh-21008 [007] ....  3893.881414: swap_counter_dump_handler: remote: total sent cold page: 103241
+              sh-21008 [007] ....  3893.881415: swap_counter_dump_handler: remote: total faulted cold page: 433
+              sh-21010 [007] ....  3893.894679: swap_counter_dump_handler: pid 9380: counter 0 = 0
+              sh-21010 [007] ....  3893.894681: swap_counter_dump_handler: pid 9380: counter 1 = 6
+              sh-21010 [007] ....  3893.894683: swap_counter_dump_handler: pid 9380: counter 2 = 0
+              sh-21010 [007] ....  3893.894683: swap_counter_dump_handler: pid 9380: counter 3 = 7279
+              sh-21010 [007] ....  3893.894684: swap_counter_dump_handler: pid 9380: counter 4 = 0
+              sh-21010 [007] ....  3893.894684: swap_counter_dump_handler: pid 9380: counter 5 = 0
+              sh-21010 [007] ....  3893.894685: swap_counter_dump_handler: pid 9380: counter >5 = 0
+              sh-21010 [007] ....  3893.894686: swap_counter_dump_handler: remote: total sent cold page: 103241
+              sh-21010 [007] ....  3893.894686: swap_counter_dump_handler: remote: total faulted cold page: 433
+              sh-21012 [007] ....  3893.907405: swap_counter_dump_handler: pid 10094: counter 0 = 3477
+              sh-21012 [007] ....  3893.907407: swap_counter_dump_handler: pid 10094: counter 1 = 4187
+              sh-21012 [007] ....  3893.907408: swap_counter_dump_handler: pid 10094: counter 2 = 701
+              sh-21012 [007] ....  3893.907409: swap_counter_dump_handler: pid 10094: counter 3 = 6
+              sh-21012 [007] ....  3893.907409: swap_counter_dump_handler: pid 10094: counter 4 = 0
+              sh-21012 [007] ....  3893.907410: swap_counter_dump_handler: pid 10094: counter 5 = 0
+              sh-21012 [007] ....  3893.907410: swap_counter_dump_handler: pid 10094: counter >5 = 0
+              sh-21012 [007] ....  3893.907411: swap_counter_dump_handler: remote: total sent cold page: 103241
+              sh-21012 [007] ....  3893.907412: swap_counter_dump_handler: remote: total faulted cold page: 433

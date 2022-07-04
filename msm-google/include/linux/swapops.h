@@ -409,6 +409,22 @@ static inline pte_t swp_entry_and_counter_to_pte(swp_entry_t entry, u64 counter)
 	return __swp_entry_to_pte(arch_entry);
 }
 
+static inline bool pte_to_swp_excepted(pte_t pte)
+{
+	swp_entry_t arch_entry;
+	arch_entry = __pte_to_swp_entry(pte);
+	return __swp_excepted(arch_entry);
+}
+
+static inline pte_t swp_entry_with_excepted(swp_entry_t entry)
+{
+	swp_entry_t arch_entry;
+	arch_entry = __swp_entry_with_excepted(swp_type(entry), swp_offset(entry), 0UL, 1UL);
+	return __swp_entry_to_pte(arch_entry);
+}
+
+
+
 
 #endif
 

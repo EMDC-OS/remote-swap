@@ -1,0 +1,1117 @@
+[22496.697814] CPU: 2 PID: 609 Comm: composer@2.3-se Tainted: G S  B      O    4.14.170_audio #51
+[22496.697816] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22496.697819] Call trace:
+[22496.697831] dump_backtrace+0x0/0x1e4
+[22496.697835] show_stack+0x18/0x24
+[22496.697841] dump_stack+0xbc/0xf8
+[22496.697847] bad_page+0x114/0x168
+[22496.697851] free_pcppages_bulk+0x530/0x588
+[22496.697854] free_hot_cold_page+0x250/0x29c
+[22496.697857] free_pages+0x64/0x70
+[22496.697862] sg_free_table+0x28/0x88
+[22496.697868] ion_dma_buf_detatch+0x60/0x80
+[22496.697875] dma_buf_detach+0x70/0x9c
+[22496.697880] drm_prime_gem_destroy+0x34/0x4c
+[22496.697886] msm_gem_free_object+0x13c/0x27c
+[22496.697892] drm_gem_object_put_unlocked+0xa4/0xdc
+[22496.697895] msm_framebuffer_destroy+0x5c/0xa0
+[22496.697899] drm_framebuffer_free+0x30/0x40
+[22496.697903] drm_mode_object_put+0x58/0x68
+[22496.697907] msm_ioctl_rmfb2+0xb4/0xdc
+[22496.697910] drm_ioctl_kernel+0x110/0x130
+[22496.697913] drm_ioctl+0x20c/0x39c
+[22496.697918] do_vfs_ioctl+0x5d0/0x91c
+[22496.697920] SyS_ioctl+0x90/0x9c
+[22496.697923] el0_svc_naked+0x34/0x38
+[22496.697927] BUG: Bad page state in process composer@2.3-se  pfn:184ebb
+[22496.697933] page:ffffffbff313aec0 count:0 mapcount:0 mapping:fffffffc4147cf40 index:0x1
+[22496.697940] flags: 0x4000000000000000()
+[22496.697947] raw: 4000000000000000 fffffffc4147cf40 0000000000000001 00000000ffffffff
+[22496.697954] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22496.697959] page dumped because: non-NULL mapping
+[22496.697964] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22496.697999] CPU: 2 PID: 609 Comm: composer@2.3-se Tainted: G S  B      O    4.14.170_audio #51
+[22496.698001] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22496.698002] Call trace:
+[22496.698005] dump_backtrace+0x0/0x1e4
+[22496.698008] show_stack+0x18/0x24
+[22496.698010] dump_stack+0xbc/0xf8
+[22496.698013] bad_page+0x114/0x168
+[22496.698015] free_pcppages_bulk+0x530/0x588
+[22496.698018] free_hot_cold_page+0x250/0x29c
+[22496.698020] free_pages+0x64/0x70
+[22496.698023] sg_free_table+0x28/0x88
+[22496.698026] ion_dma_buf_detatch+0x60/0x80
+[22496.698028] dma_buf_detach+0x70/0x9c
+[22496.698031] drm_prime_gem_destroy+0x34/0x4c
+[22496.698035] msm_gem_free_object+0x13c/0x27c
+[22496.698038] drm_gem_object_put_unlocked+0xa4/0xdc
+[22496.698041] msm_framebuffer_destroy+0x5c/0xa0
+[22496.698043] drm_framebuffer_free+0x30/0x40
+[22496.698046] drm_mode_object_put+0x58/0x68
+[22496.698048] msm_ioctl_rmfb2+0xb4/0xdc
+[22496.698051] drm_ioctl_kernel+0x110/0x130
+[22496.698054] drm_ioctl+0x20c/0x39c
+[22496.698057] do_vfs_ioctl+0x5d0/0x91c
+[22496.698059] SyS_ioctl+0x90/0x9c
+[22496.698061] el0_svc_naked+0x34/0x38
+[22497.520548] type=1400 audit(1656343540.289:10173): avc: denied { write } for comm="kworker/2:1H" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22497.521049] type=1400 audit(1656343541.759:10176): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[22497.521280] type=1400 audit(1656343541.759:10176): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[22497.522695] type=1400 audit(1656343541.759:10177): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[22500.511137] type=1400 audit(1656343541.759:10177): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[22500.512363] type=1400 audit(1656343544.749:10178): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22500.512690] type=1400 audit(1656343544.749:10178): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22500.514148] type=1400 audit(1656343544.749:10179): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22503.544791] msm_vidc:   fw: <VFW_F:VppCr0:264d:ee7e367c:6> h264HWProgVpp(1035): WPT wrap-around happened, wpt 0xb1c2b400 len 0x00000190 beg 0xb1c0a800 size 0x00020d00
+[22503.544797] msm_vidc:   fw: <VFW_F:VppCr0:264d:ee7e367c:6> 
+[22505.165473] healthd: battery l=100 v=4346 t=39.4 h=2 st=4 c=1 fc=2723000 cc=14 chg=u
+[22505.985277] type=1400 audit(1656343544.749:10179): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22505.985839] type=1400 audit(1656343550.222:10180): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22505.986055] type=1400 audit(1656343550.222:10180): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22505.986760] type=1400 audit(1656343550.222:10181): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22507.146054] BUG: Bad page state in process kswapd0  pfn:1159f8
+[22507.146067] page:ffffffbff1567e00 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22507.146073] flags: 0x4000000000000000()
+[22507.146081] raw: 4000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22507.146085] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.146090] page dumped because: non-NULL mapping
+[22507.146093] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.146135] CPU: 4 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22507.146136] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.146138] Call trace:
+[22507.146150] dump_backtrace+0x0/0x1e4
+[22507.146153] show_stack+0x18/0x24
+[22507.146161] dump_stack+0xbc/0xf8
+[22507.146165] bad_page+0x114/0x168
+[22507.146169] free_pcppages_bulk+0x530/0x588
+[22507.146171] free_hot_cold_page+0x250/0x29c
+[22507.146173] __put_page+0x38/0x6c
+[22507.146176] __free_zspage+0x5c/0x13c
+[22507.146177] zs_compact+0x78c/0x858
+[22507.146179] zs_shrinker_scan+0x1c/0x34
+[22507.146182] shrink_slab+0x31c/0x4e4
+[22507.146184] shrink_node+0x18c/0x2f8
+[22507.146186] kswapd+0x7d0/0x924
+[22507.146189] kthread+0x11c/0x12c
+[22507.146191] ret_from_fork+0x10/0x18
+[22507.152514] BUG: Bad page state in process kswapd0  pfn:c3248
+[22507.152527] page:ffffffbff00c9200 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22507.152533] flags: 0x0()
+[22507.152540] raw: 0000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22507.152545] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.152548] page dumped because: non-NULL mapping
+[22507.152552] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.152594] CPU: 4 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22507.152596] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.152598] Call trace:
+[22507.152608] dump_backtrace+0x0/0x1e4
+[22507.152611] show_stack+0x18/0x24
+[22507.152618] dump_stack+0xbc/0xf8
+[22507.152622] bad_page+0x114/0x168
+[22507.152625] free_pcppages_bulk+0x530/0x588
+[22507.152627] free_hot_cold_page+0x250/0x29c
+[22507.152629] free_hot_cold_page_list+0xf0/0x118
+[22507.152632] shrink_page_list+0xd88/0xe80
+[22507.152634] shrink_inactive_list+0x510/0x918
+[22507.152636] shrink_node_memcg+0x2d0/0x7f4
+[22507.152638] shrink_node+0x10c/0x2f8
+[22507.152640] kswapd+0x7d0/0x924
+[22507.152643] kthread+0x11c/0x12c
+[22507.152645] ret_from_fork+0x10/0x18
+[22507.164166] BUG: Bad page state in process kswapd0  pfn:10d56e
+[22507.164178] page:ffffffbff1355b80 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22507.164183] flags: 0x4000000000000000()
+[22507.164190] raw: 4000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22507.164194] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.164198] page dumped because: non-NULL mapping
+[22507.164201] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.164239] CPU: 4 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22507.164241] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.164242] Call trace:
+[22507.164254] dump_backtrace+0x0/0x1e4
+[22507.164256] show_stack+0x18/0x24
+[22507.164265] dump_stack+0xbc/0xf8
+[22507.164268] bad_page+0x114/0x168
+[22507.164272] free_pcppages_bulk+0x530/0x588
+[22507.164274] free_hot_cold_page+0x250/0x29c
+[22507.164276] free_hot_cold_page_list+0xf0/0x118
+[22507.164278] shrink_page_list+0xd88/0xe80
+[22507.164281] shrink_inactive_list+0x510/0x918
+[22507.164282] shrink_node_memcg+0x340/0x7f4
+[22507.164284] shrink_node+0x10c/0x2f8
+[22507.164286] kswapd+0x7d0/0x924
+[22507.164288] kthread+0x11c/0x12c
+[22507.164291] ret_from_fork+0x10/0x18
+[22507.188100] BUG: Bad page state in process kswapd0  pfn:10f6bd
+[22507.188113] page:ffffffbff13daf40 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22507.188119] flags: 0x4000000000000000()
+[22507.188127] raw: 4000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22507.188132] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.188135] page dumped because: non-NULL mapping
+[22507.188139] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.188188] CPU: 4 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22507.188189] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.188191] Call trace:
+[22507.188204] dump_backtrace+0x0/0x1e4
+[22507.188207] show_stack+0x18/0x24
+[22507.188215] dump_stack+0xbc/0xf8
+[22507.188219] bad_page+0x114/0x168
+[22507.188223] free_pcppages_bulk+0x530/0x588
+[22507.188225] free_hot_cold_page+0x250/0x29c
+[22507.188228] free_hot_cold_page_list+0xf0/0x118
+[22507.188230] shrink_page_list+0xd88/0xe80
+[22507.188233] shrink_inactive_list+0x510/0x918
+[22507.188235] shrink_node_memcg+0x2d0/0x7f4
+[22507.188237] shrink_node+0x10c/0x2f8
+[22507.188239] kswapd+0x7d0/0x924
+[22507.188242] kthread+0x11c/0x12c
+[22507.188245] ret_from_fork+0x10/0x18
+[22507.191943] BUG: Bad page state in process kswapd0  pfn:de575
+[22507.191955] page:ffffffbff0795d40 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22507.191962] flags: 0x0()
+[22507.191969] raw: 0000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22507.191974] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.191978] page dumped because: non-NULL mapping
+[22507.191982] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.192024] CPU: 4 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22507.192026] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.192028] Call trace:
+[22507.192039] dump_backtrace+0x0/0x1e4
+[22507.192042] show_stack+0x18/0x24
+[22507.192050] dump_stack+0xbc/0xf8
+[22507.192055] bad_page+0x114/0x168
+[22507.192058] free_pcppages_bulk+0x530/0x588
+[22507.192061] free_hot_cold_page+0x250/0x29c
+[22507.192063] free_hot_cold_page_list+0xf0/0x118
+[22507.192066] shrink_page_list+0xd88/0xe80
+[22507.192069] shrink_inactive_list+0x510/0x918
+[22507.192071] shrink_node_memcg+0x340/0x7f4
+[22507.192073] shrink_node+0x10c/0x2f8
+[22507.192075] kswapd+0x7d0/0x924
+[22507.192078] kthread+0x11c/0x12c
+[22507.192081] ret_from_fork+0x10/0x18
+[22507.253022] BUG: Bad page state in process kswapd0  pfn:b5b6c
+[22507.253037] page:ffffffbfefd6db00 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22507.253044] flags: 0x0()
+[22507.253053] raw: 0000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22507.253059] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.253063] page dumped because: non-NULL mapping
+[22507.253067] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.253117] CPU: 5 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22507.253119] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.253121] Call trace:
+[22507.253133] dump_backtrace+0x0/0x1e4
+[22507.253136] show_stack+0x18/0x24
+[22507.253147] dump_stack+0xbc/0xf8
+[22507.253151] bad_page+0x114/0x168
+[22507.253154] free_pcppages_bulk+0x530/0x588
+[22507.253157] free_hot_cold_page+0x250/0x29c
+[22507.253160] free_hot_cold_page_list+0xf0/0x118
+[22507.253163] shrink_page_list+0xd88/0xe80
+[22507.253165] shrink_inactive_list+0x510/0x918
+[22507.253168] shrink_node_memcg+0x340/0x7f4
+[22507.253170] shrink_node+0x10c/0x2f8
+[22507.253172] kswapd+0x7d0/0x924
+[22507.253175] kthread+0x11c/0x12c
+[22507.253179] ret_from_fork+0x10/0x18
+[22507.265389] BUG: Bad page state in process kswapd0  pfn:19fd4f
+[22507.265403] page:ffffffbff37f53c0 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22507.265410] flags: 0x4000000000000000()
+[22507.265417] raw: 4000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22507.265423] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.265427] page dumped because: non-NULL mapping
+[22507.265431] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.265475] CPU: 5 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22507.265477] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.265479] Call trace:
+[22507.265490] dump_backtrace+0x0/0x1e4
+[22507.265494] show_stack+0x18/0x24
+[22507.265503] dump_stack+0xbc/0xf8
+[22507.265507] bad_page+0x114/0x168
+[22507.265511] free_pcppages_bulk+0x530/0x588
+[22507.265514] free_hot_cold_page+0x250/0x29c
+[22507.265516] free_hot_cold_page_list+0xf0/0x118
+[22507.265519] shrink_page_list+0xd88/0xe80
+[22507.265522] shrink_inactive_list+0x510/0x918
+[22507.265524] shrink_node_memcg+0x340/0x7f4
+[22507.265527] shrink_node+0x10c/0x2f8
+[22507.265529] kswapd+0x7d0/0x924
+[22507.265532] kthread+0x11c/0x12c
+[22507.265535] ret_from_fork+0x10/0x18
+[22507.303760] BUG: Bad page state in process Binder:14602_3  pfn:1bc033
+[22507.303771] page:ffffffbff3f00cc0 count:0 mapcount:0 mapping:fffffffc4147cff0 index:0x0
+[22507.303775] flags: 0x4000000000000000()
+[22507.303781] raw: 4000000000000000 fffffffc4147cff0 0000000000000000 00000000ffffffff
+[22507.303785] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.303788] page dumped because: non-NULL mapping
+[22507.303790] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.303825] CPU: 7 PID: 14621 Comm: Binder:14602_3 Tainted: G S  B      O    4.14.170_audio #51
+[22507.303826] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.303828] Call trace:
+[22507.303838] dump_backtrace+0x0/0x1e4
+[22507.303840] show_stack+0x18/0x24
+[22507.303848] dump_stack+0xbc/0xf8
+[22507.303857] bad_page+0x114/0x168
+[22507.303860] free_pcppages_bulk+0x530/0x588
+[22507.303862] free_hot_cold_page+0x250/0x29c
+[22507.303863] free_hot_cold_page_list+0xf0/0x118
+[22507.303867] release_pages+0x2ec/0x328
+[22507.303869] free_pages_and_swap_cache+0xac/0xc4
+[22507.303871] tlb_flush_mmu+0xfc/0x120
+[22507.303873] zap_page_range+0x188/0x1f0
+[22507.303874] SyS_madvise+0x1d8/0x84c
+[22507.303876] __sys_trace_return+0x0/0x4
+[22507.304955] BUG: Bad page state in process Binder:14602_3  pfn:b52aa
+[22507.304959] page:ffffffbfefd4aa80 count:0 mapcount:0 mapping:fffffffc4147cff0 index:0x0
+[22507.304962] flags: 0x0()
+[22507.304966] raw: 0000000000000000 fffffffc4147cff0 0000000000000000 00000000ffffffff
+[22507.304969] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.304972] page dumped because: non-NULL mapping
+[22507.304974] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.304993] CPU: 7 PID: 14621 Comm: Binder:14602_3 Tainted: G S  B      O    4.14.170_audio #51
+[22507.304994] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.304994] Call trace:
+[22507.304997] dump_backtrace+0x0/0x1e4
+[22507.304999] show_stack+0x18/0x24
+[22507.305001] dump_stack+0xbc/0xf8
+[22507.305003] bad_page+0x114/0x168
+[22507.305004] free_pcppages_bulk+0x530/0x588
+[22507.305006] free_hot_cold_page+0x250/0x29c
+[22507.305007] free_hot_cold_page_list+0xf0/0x118
+[22507.305009] release_pages+0x2ec/0x328
+[22507.305011] free_pages_and_swap_cache+0xac/0xc4
+[22507.305013] tlb_flush_mmu+0xfc/0x120
+[22507.305014] zap_page_range+0x188/0x1f0
+[22507.305015] SyS_madvise+0x1d8/0x84c
+[22507.305017] __sys_trace_return+0x0/0x4
+[22507.529427] BUG: Bad page state in process RenderThread  pfn:110a23
+[22507.529440] page:ffffffbff14288c0 count:0 mapcount:0 mapping:fffffffc4147cff0 index:0x0
+[22507.529446] flags: 0x4000000000000000()
+[22507.529453] raw: 4000000000000000 fffffffc4147cff0 0000000000000000 00000000ffffffff
+[22507.529457] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.529460] page dumped because: non-NULL mapping
+[22507.529463] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.529504] CPU: 4 PID: 14754 Comm: RenderThread Tainted: G S  B      O    4.14.170_audio #51
+[22507.529506] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.529507] Call trace:
+[22507.529519] dump_backtrace+0x0/0x1e4
+[22507.529522] show_stack+0x18/0x24
+[22507.529530] dump_stack+0xbc/0xf8
+[22507.529541] bad_page+0x114/0x168
+[22507.529544] free_pcppages_bulk+0x530/0x588
+[22507.529546] free_hot_cold_page+0x250/0x29c
+[22507.529548] free_pages+0x64/0x70
+[22507.529551] sg_free_table+0x28/0x88
+[22507.529556] ion_dma_buf_detatch+0x60/0x80
+[22507.529560] dma_buf_detach+0x70/0x9c
+[22507.529563] kgsl_destroy_ion+0xb4/0xd8
+[22507.529565] kgsl_mem_entry_destroy+0x90/0x14c
+[22507.529567] kgsl_ioctl_gpuobj_free+0x334/0x3c0
+[22507.529569] kgsl_ioctl_helper+0x120/0x150
+[22507.529571] kgsl_ioctl+0x34/0xc4
+[22507.529574] do_vfs_ioctl+0x5d0/0x91c
+[22507.529575] SyS_ioctl+0x90/0x9c
+[22507.529577] __sys_trace_return+0x0/0x4
+[22507.529580] BUG: Bad page state in process RenderThread  pfn:1e792d
+[22507.529584] page:ffffffbff49e4b40 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22507.529588] flags: 0x4000000000000000()
+[22507.529592] raw: 4000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22507.529595] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.529598] page dumped because: non-NULL mapping
+[22507.529601] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.529621] CPU: 4 PID: 14754 Comm: RenderThread Tainted: G S  B      O    4.14.170_audio #51
+[22507.529622] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.529622] Call trace:
+[22507.529625] dump_backtrace+0x0/0x1e4
+[22507.529627] show_stack+0x18/0x24
+[22507.529629] dump_stack+0xbc/0xf8
+[22507.529631] bad_page+0x114/0x168
+[22507.529632] free_pcppages_bulk+0x530/0x588
+[22507.529634] free_hot_cold_page+0x250/0x29c
+[22507.529636] free_pages+0x64/0x70
+[22507.529638] sg_free_table+0x28/0x88
+[22507.529640] ion_dma_buf_detatch+0x60/0x80
+[22507.529642] dma_buf_detach+0x70/0x9c
+[22507.529644] kgsl_destroy_ion+0xb4/0xd8
+[22507.529645] kgsl_mem_entry_destroy+0x90/0x14c
+[22507.529647] kgsl_ioctl_gpuobj_free+0x334/0x3c0
+[22507.529648] kgsl_ioctl_helper+0x120/0x150
+[22507.529649] kgsl_ioctl+0x34/0xc4
+[22507.529651] do_vfs_ioctl+0x5d0/0x91c
+[22507.529652] SyS_ioctl+0x90/0x9c
+[22507.529654] __sys_trace_return+0x0/0x4
+[22507.529655] BUG: Bad page state in process RenderThread  pfn:10c68e
+[22507.529658] page:ffffffbff131a380 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22507.529662] flags: 0x4000000000000000()
+[22507.529666] raw: 4000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22507.529669] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.529672] page dumped because: non-NULL mapping
+[22507.529674] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.529694] CPU: 4 PID: 14754 Comm: RenderThread Tainted: G S  B      O    4.14.170_audio #51
+[22507.529695] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.529696] Call trace:
+[22507.529698] dump_backtrace+0x0/0x1e4
+[22507.529700] show_stack+0x18/0x24
+[22507.529701] dump_stack+0xbc/0xf8
+[22507.529703] bad_page+0x114/0x168
+[22507.529705] free_pcppages_bulk+0x530/0x588
+[22507.529707] free_hot_cold_page+0x250/0x29c
+[22507.529708] free_pages+0x64/0x70
+[22507.529710] sg_free_table+0x28/0x88
+[22507.529713] ion_dma_buf_detatch+0x60/0x80
+[22507.529715] dma_buf_detach+0x70/0x9c
+[22507.529716] kgsl_destroy_ion+0xb4/0xd8
+[22507.529718] kgsl_mem_entry_destroy+0x90/0x14c
+[22507.529720] kgsl_ioctl_gpuobj_free+0x334/0x3c0
+[22507.529721] kgsl_ioctl_helper+0x120/0x150
+[22507.529722] kgsl_ioctl+0x34/0xc4
+[22507.529724] do_vfs_ioctl+0x5d0/0x91c
+[22507.529725] SyS_ioctl+0x90/0x9c
+[22507.529726] __sys_trace_return+0x0/0x4
+[22507.672120] BUG: Bad page state in process Binder:19845_3  pfn:af31d
+[22507.672145] page:ffffffbfefbcc740 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22507.672154] flags: 0x0()
+[22507.672164] raw: 0000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22507.672172] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22507.672178] page dumped because: non-NULL mapping
+[22507.672183] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22507.672252] CPU: 1 PID: 19864 Comm: Binder:19845_3 Tainted: G S  B      O    4.14.170_audio #51
+[22507.672254] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22507.672257] Call trace:
+[22507.672273] dump_backtrace+0x0/0x1e4
+[22507.672276] show_stack+0x18/0x24
+[22507.672284] dump_stack+0xbc/0xf8
+[22507.672290] bad_page+0x114/0x168
+[22507.672296] free_pcppages_bulk+0x530/0x588
+[22507.672299] free_hot_cold_page+0x250/0x29c
+[22507.672301] free_hot_cold_page_list+0xf0/0x118
+[22507.672307] release_pages+0x2ec/0x328
+[22507.672314] free_pages_and_swap_cache+0xac/0xc4
+[22507.672320] tlb_flush_mmu+0xfc/0x120
+[22507.672323] zap_page_range+0x188/0x1f0
+[22507.672326] SyS_madvise+0x1d8/0x84c
+[22507.672330] __sys_trace_return+0x0/0x4
+[22508.147401] type=1400 audit(1656343550.222:10181): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22508.147425] type=1400 audit(1656343552.385:10182): avc: denied { write } for comm="kworker/6:1H" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22508.148725] type=1400 audit(1656343552.385:10182): avc: denied { write } for comm="kworker/6:1H" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22508.148738] type=1400 audit(1656343552.385:10183): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22508.258914] backgrounded_uid 10127
+[22508.267214] backgrounded_uid 10127
+[22508.307304] BUG: Bad page state in process kswapd0  pfn:1471fa
+[22508.307315] page:ffffffbff21c7e80 count:0 mapcount:0 mapping:fffffffc4147d200 index:0x0
+[22508.307320] flags: 0x4000000000000000()
+[22508.307326] raw: 4000000000000000 fffffffc4147d200 0000000000000000 00000000ffffffff
+[22508.307329] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.307332] page dumped because: non-NULL mapping
+[22508.307335] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.307369] CPU: 7 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22508.307370] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.307372] Call trace:
+[22508.307382] dump_backtrace+0x0/0x1e4
+[22508.307385] show_stack+0x18/0x24
+[22508.307391] dump_stack+0xbc/0xf8
+[22508.307398] bad_page+0x114/0x168
+[22508.307401] free_pcppages_bulk+0x530/0x588
+[22508.307403] free_hot_cold_page+0x250/0x29c
+[22508.307404] free_hot_cold_page_list+0xf0/0x118
+[22508.307407] shrink_page_list+0xd88/0xe80
+[22508.307409] shrink_inactive_list+0x510/0x918
+[22508.307410] shrink_node_memcg+0x340/0x7f4
+[22508.307412] shrink_node+0x10c/0x2f8
+[22508.307413] kswapd+0x7d0/0x924
+[22508.307415] kthread+0x11c/0x12c
+[22508.307417] ret_from_fork+0x10/0x18
+[22508.345336] BUG: Bad page state in process kswapd0  pfn:b5ed9
+[22508.345346] page:ffffffbfefd7b640 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22508.345351] flags: 0x0()
+[22508.345356] raw: 0000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22508.345359] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.345362] page dumped because: non-NULL mapping
+[22508.345365] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.345396] CPU: 7 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22508.345397] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.345399] Call trace:
+[22508.345407] dump_backtrace+0x0/0x1e4
+[22508.345409] show_stack+0x18/0x24
+[22508.345416] dump_stack+0xbc/0xf8
+[22508.345419] bad_page+0x114/0x168
+[22508.345421] free_pcppages_bulk+0x530/0x588
+[22508.345423] free_hot_cold_page+0x250/0x29c
+[22508.345425] __free_pages+0x48/0x54
+[22508.345427] ion_page_pool_shrink+0xec/0x16c
+[22508.345429] ion_system_heap_shrink+0x164/0x1a8
+[22508.345430] ion_system_secure_heap_shrink+0x1c/0x28
+[22508.345432] ion_heap_shrink_scan+0x74/0x90
+[22508.345433] shrink_slab+0x31c/0x4e4
+[22508.345435] shrink_node+0x18c/0x2f8
+[22508.345436] kswapd+0x7d0/0x924
+[22508.345438] kthread+0x11c/0x12c
+[22508.345440] ret_from_fork+0x10/0x18
+[22508.345441] BUG: Bad page state in process kswapd0  pfn:d0384
+[22508.345444] page:ffffffbff040e100 count:0 mapcount:0 mapping:fffffffc4147d0a0 index:0x0
+[22508.345447] flags: 0x0()
+[22508.345450] raw: 0000000000000000 fffffffc4147d0a0 0000000000000000 00000000ffffffff
+[22508.345453] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.345456] page dumped because: non-NULL mapping
+[22508.345458] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.345475] CPU: 7 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22508.345476] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.345476] Call trace:
+[22508.345478] dump_backtrace+0x0/0x1e4
+[22508.345480] show_stack+0x18/0x24
+[22508.345481] dump_stack+0xbc/0xf8
+[22508.345483] bad_page+0x114/0x168
+[22508.345485] free_pcppages_bulk+0x530/0x588
+[22508.345486] free_hot_cold_page+0x250/0x29c
+[22508.345487] __free_pages+0x48/0x54
+[22508.345489] ion_page_pool_shrink+0xec/0x16c
+[22508.345490] ion_system_heap_shrink+0x164/0x1a8
+[22508.345491] ion_system_secure_heap_shrink+0x1c/0x28
+[22508.345493] ion_heap_shrink_scan+0x74/0x90
+[22508.345494] shrink_slab+0x31c/0x4e4
+[22508.345495] shrink_node+0x18c/0x2f8
+[22508.345496] kswapd+0x7d0/0x924
+[22508.345498] kthread+0x11c/0x12c
+[22508.345499] ret_from_fork+0x10/0x18
+[22508.356067] BUG: Bad page state in process HeapTaskDaemon  pfn:b0e50
+[22508.356077] page:ffffffbfefc39400 count:0 mapcount:0 mapping:fffffffc4147d200 index:0x0
+[22508.356082] flags: 0x0()
+[22508.356088] raw: 0000000000000000 fffffffc4147d200 0000000000000000 00000000ffffffff
+[22508.356091] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.356094] page dumped because: non-NULL mapping
+[22508.356097] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.356133] CPU: 5 PID: 1687 Comm: HeapTaskDaemon Tainted: G S  B      O    4.14.170_audio #51
+[22508.356134] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.356136] Call trace:
+[22508.356145] dump_backtrace+0x0/0x1e4
+[22508.356148] show_stack+0x18/0x24
+[22508.356156] dump_stack+0xbc/0xf8
+[22508.356164] bad_page+0x114/0x168
+[22508.356167] free_pcppages_bulk+0x530/0x588
+[22508.356169] free_hot_cold_page+0x250/0x29c
+[22508.356171] free_hot_cold_page_list+0xf0/0x118
+[22508.356174] release_pages+0x2ec/0x328
+[22508.356177] free_pages_and_swap_cache+0xac/0xc4
+[22508.356179] tlb_flush_mmu+0xfc/0x120
+[22508.356181] zap_page_range+0x188/0x1f0
+[22508.356182] SyS_madvise+0x1d8/0x84c
+[22508.356184] __sys_trace_return+0x0/0x4
+[22508.370334] BUG: Bad page state in process kworker/2:0  pfn:dad9f
+[22508.370352] page:ffffffbff06b67c0 count:0 mapcount:0 mapping:fffffffc4147cff0 index:0x0
+[22508.370362] flags: 0x0()
+[22508.370372] raw: 0000000000000000 fffffffc4147cff0 0000000000000000 00000000ffffffff
+[22508.370379] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.370385] page dumped because: non-NULL mapping
+[22508.370391] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.370453] CPU: 2 PID: 8803 Comm: kworker/2:0 Tainted: G S  B      O    4.14.170_audio #51
+[22508.370455] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.370467] Workqueue: mm_percpu_wq drain_local_pages_wq
+[22508.370470] Call trace:
+[22508.370477] dump_backtrace+0x0/0x1e4
+[22508.370480] show_stack+0x18/0x24
+[22508.370485] dump_stack+0xbc/0xf8
+[22508.370489] bad_page+0x114/0x168
+[22508.370491] free_pcppages_bulk+0x530/0x588
+[22508.370494] drain_local_pages_wq+0x7c/0xcc
+[22508.370499] process_one_work+0x1f8/0x450
+[22508.370502] worker_thread+0x308/0x478
+[22508.370506] kthread+0x11c/0x12c
+[22508.370509] ret_from_fork+0x10/0x18
+[22508.370592] BUG: Bad page state in process kworker/2:0  pfn:115d82
+[22508.370598] page:ffffffbff1576080 count:0 mapcount:0 mapping:fffffffc4147d200 index:0x0
+[22508.370605] flags: 0x4000000000000000()
+[22508.370611] raw: 4000000000000000 fffffffc4147d200 0000000000000000 00000000ffffffff
+[22508.370618] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.370623] page dumped because: non-NULL mapping
+[22508.370628] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.370662] CPU: 2 PID: 8803 Comm: kworker/2:0 Tainted: G S  B      O    4.14.170_audio #51
+[22508.370664] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.370667] Workqueue: mm_percpu_wq drain_local_pages_wq
+[22508.370669] Call trace:
+[22508.370672] dump_backtrace+0x0/0x1e4
+[22508.370675] show_stack+0x18/0x24
+[22508.370678] dump_stack+0xbc/0xf8
+[22508.370680] bad_page+0x114/0x168
+[22508.370683] free_pcppages_bulk+0x530/0x588
+[22508.370685] drain_local_pages_wq+0x7c/0xcc
+[22508.370688] process_one_work+0x1f8/0x450
+[22508.370690] worker_thread+0x308/0x478
+[22508.370693] kthread+0x11c/0x12c
+[22508.370695] ret_from_fork+0x10/0x18
+[22508.370729] BUG: Bad page state in process kworker/0:1  pfn:ae0fb
+[22508.370738] page:ffffffbfefb83ec0 count:0 mapcount:0 mapping:fffffffc4147ce90 index:0x2
+[22508.370745] flags: 0x0()
+[22508.370752] raw: 0000000000000000 fffffffc4147ce90 0000000000000002 00000000ffffffff
+[22508.370759] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.370764] page dumped because: non-NULL mapping
+[22508.370769] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.370809] CPU: 0 PID: 9718 Comm: kworker/0:1 Tainted: G S  B      O    4.14.170_audio #51
+[22508.370811] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.370817] Workqueue: mm_percpu_wq drain_local_pages_wq
+[22508.370819] Call trace:
+[22508.370823] dump_backtrace+0x0/0x1e4
+[22508.370826] show_stack+0x18/0x24
+[22508.370830] dump_stack+0xbc/0xf8
+[22508.370833] bad_page+0x114/0x168
+[22508.370835] free_pcppages_bulk+0x530/0x588
+[22508.370838] drain_local_pages_wq+0x7c/0xcc
+[22508.370841] process_one_work+0x1f8/0x450
+[22508.370844] worker_thread+0x2b0/0x478
+[22508.370847] kthread+0x11c/0x12c
+[22508.370850] ret_from_fork+0x10/0x18
+[22508.370872] BUG: Bad page state in process kworker/0:1  pfn:d682c
+[22508.370878] page:ffffffbff05a0b00 count:0 mapcount:0 mapping:fffffffc4147ce90 index:0x0
+[22508.370885] flags: 0x0()
+[22508.370892] raw: 0000000000000000 fffffffc4147ce90 0000000000000000 00000000ffffffff
+[22508.370899] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.370904] page dumped because: non-NULL mapping
+[22508.370908] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.370944] CPU: 0 PID: 9718 Comm: kworker/0:1 Tainted: G S  B      O    4.14.170_audio #51
+[22508.370945] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.370949] Workqueue: mm_percpu_wq drain_local_pages_wq
+[22508.370951] Call trace:
+[22508.370954] dump_backtrace+0x0/0x1e4
+[22508.370957] show_stack+0x18/0x24
+[22508.370959] dump_stack+0xbc/0xf8
+[22508.370962] bad_page+0x114/0x168
+[22508.370964] free_pcppages_bulk+0x530/0x588
+[22508.370967] drain_local_pages_wq+0x7c/0xcc
+[22508.370969] process_one_work+0x1f8/0x450
+[22508.370972] worker_thread+0x2b0/0x478
+[22508.370974] kthread+0x11c/0x12c
+[22508.370977] ret_from_fork+0x10/0x18
+[22508.371190] BUG: Bad page state in process kworker/0:1  pfn:16dd70
+[22508.371198] page:ffffffbff2b75c00 count:0 mapcount:0 mapping:fffffffc4147d2b0 index:0x0
+[22508.371204] flags: 0x4000000000000000()
+[22508.371211] raw: 4000000000000000 fffffffc4147d2b0 0000000000000000 00000000ffffffff
+[22508.371219] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.371224] page dumped because: non-NULL mapping
+[22508.371228] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.371264] CPU: 0 PID: 9718 Comm: kworker/0:1 Tainted: G S  B      O    4.14.170_audio #51
+[22508.371265] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.371269] Workqueue: mm_percpu_wq drain_local_pages_wq
+[22508.371271] Call trace:
+[22508.371274] dump_backtrace+0x0/0x1e4
+[22508.371277] show_stack+0x18/0x24
+[22508.371280] dump_stack+0xbc/0xf8
+[22508.371282] bad_page+0x114/0x168
+[22508.371285] free_pcppages_bulk+0x530/0x588
+[22508.371288] drain_local_pages_wq+0x7c/0xcc
+[22508.371290] process_one_work+0x1f8/0x450
+[22508.371293] worker_thread+0x2b0/0x478
+[22508.371295] kthread+0x11c/0x12c
+[22508.371298] ret_from_fork+0x10/0x18
+[22508.371308] BUG: Bad page state in process kworker/0:1  pfn:10f359
+[22508.371314] page:ffffffbff13cd640 count:0 mapcount:0 mapping:fffffffc4147d200 index:0x0
+[22508.371320] flags: 0x4000000000000000()
+[22508.371327] raw: 4000000000000000 fffffffc4147d200 0000000000000000 00000000ffffffff
+[22508.371334] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.371339] page dumped because: non-NULL mapping
+[22508.371343] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.371378] CPU: 0 PID: 9718 Comm: kworker/0:1 Tainted: G S  B      O    4.14.170_audio #51
+[22508.371380] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.371383] Workqueue: mm_percpu_wq drain_local_pages_wq
+[22508.371385] Call trace:
+[22508.371388] dump_backtrace+0x0/0x1e4
+[22508.371390] show_stack+0x18/0x24
+[22508.371393] dump_stack+0xbc/0xf8
+[22508.371395] bad_page+0x114/0x168
+[22508.371398] free_pcppages_bulk+0x530/0x588
+[22508.371401] drain_local_pages_wq+0x7c/0xcc
+[22508.371404] process_one_work+0x1f8/0x450
+[22508.371406] worker_thread+0x2b0/0x478
+[22508.371408] kthread+0x11c/0x12c
+[22508.371411] ret_from_fork+0x10/0x18
+[22508.372315] BUG: Bad page state in process kworker/0:1  pfn:b827a
+[22508.372324] page:ffffffbfefe09e80 count:0 mapcount:0 mapping:fffffffc4147d200 index:0x0
+[22508.372331] flags: 0x0()
+[22508.372338] raw: 0000000000000000 fffffffc4147d200 0000000000000000 00000000ffffffff
+[22508.372345] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.372350] page dumped because: non-NULL mapping
+[22508.372355] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.372393] CPU: 0 PID: 9718 Comm: kworker/0:1 Tainted: G S  B      O    4.14.170_audio #51
+[22508.372394] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.372400] Workqueue: mm_percpu_wq drain_local_pages_wq
+[22508.372403] Call trace:
+[22508.372406] dump_backtrace+0x0/0x1e4
+[22508.372409] show_stack+0x18/0x24
+[22508.372412] dump_stack+0xbc/0xf8
+[22508.372415] bad_page+0x114/0x168
+[22508.372418] free_pcppages_bulk+0x530/0x588
+[22508.372420] drain_local_pages_wq+0x7c/0xcc
+[22508.372423] process_one_work+0x1f8/0x450
+[22508.372426] worker_thread+0x2b0/0x478
+[22508.372428] kthread+0x11c/0x12c
+[22508.372431] ret_from_fork+0x10/0x18
+[22508.383356] afe_tdm_port_start: top_id:10001ccc acdb_id:512 port_id:0x9021
+[22508.391298] snd_pcm_hw_constraint_integer failed
+[22508.391305] msm_pcm_open: P buffer bytes minmax constraint ret 1
+[22508.417106] afe_tdm_port_start: top_id:10000ccc acdb_id:513 port_id:0x9020
+[22508.450298] BUG: Bad page state in process kswapd0  pfn:10d641
+[22508.450308] page:ffffffbff1359040 count:0 mapcount:0 mapping:fffffffc4147d200 index:0x0
+[22508.450312] flags: 0x4000000000000000()
+[22508.450318] raw: 4000000000000000 fffffffc4147d200 0000000000000000 00000000ffffffff
+[22508.450321] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.450324] page dumped because: non-NULL mapping
+[22508.450326] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.450358] CPU: 7 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22508.450359] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.450360] Call trace:
+[22508.450369] dump_backtrace+0x0/0x1e4
+[22508.450371] show_stack+0x18/0x24
+[22508.450378] dump_stack+0xbc/0xf8
+[22508.450385] bad_page+0x114/0x168
+[22508.450388] free_pcppages_bulk+0x530/0x588
+[22508.450390] free_hot_cold_page+0x250/0x29c
+[22508.450391] free_hot_cold_page_list+0xf0/0x118
+[22508.450393] shrink_page_list+0xd88/0xe80
+[22508.450395] shrink_inactive_list+0x510/0x918
+[22508.450397] shrink_node_memcg+0x340/0x7f4
+[22508.450398] shrink_node+0x10c/0x2f8
+[22508.450400] kswapd+0x7d0/0x924
+[22508.450402] kthread+0x11c/0x12c
+[22508.450404] ret_from_fork+0x10/0x18
+[22508.953410] BUG: Bad page state in process kswapd0  pfn:193326
+[22508.953424] page:ffffffbff34cc980 count:0 mapcount:0 mapping:fffffffc4147d200 index:0x0
+[22508.953431] flags: 0x4000000000000000()
+[22508.953439] raw: 4000000000000000 fffffffc4147d200 0000000000000000 00000000ffffffff
+[22508.953443] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22508.953447] page dumped because: non-NULL mapping
+[22508.953450] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22508.953496] CPU: 5 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22508.953497] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22508.953499] Call trace:
+[22508.953513] dump_backtrace+0x0/0x1e4
+[22508.953516] show_stack+0x18/0x24
+[22508.953528] dump_stack+0xbc/0xf8
+[22508.953535] bad_page+0x114/0x168
+[22508.953539] free_pcppages_bulk+0x530/0x588
+[22508.953542] free_hot_cold_page+0x250/0x29c
+[22508.953544] free_hot_cold_page_list+0xf0/0x118
+[22508.953546] shrink_page_list+0xd88/0xe80
+[22508.953549] shrink_inactive_list+0x510/0x918
+[22508.953551] shrink_node_memcg+0x340/0x7f4
+[22508.953553] shrink_node+0x10c/0x2f8
+[22508.953554] kswapd+0x7d0/0x924
+[22508.953557] kthread+0x11c/0x12c
+[22508.953560] ret_from_fork+0x10/0x18
+[22509.033981] type=1400 audit(1656343552.385:10183): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22509.035186] type=1400 audit(1656343553.272:10184): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[22509.035370] type=1400 audit(1656343553.272:10184): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[22509.036347] type=1400 audit(1656343553.272:10185): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[22509.146702] type=1400 audit(1656343553.272:10185): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[22509.147417] type=1400 audit(1656343553.385:10186): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22509.147573] type=1400 audit(1656343553.385:10186): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22509.148695] type=1400 audit(1656343553.385:10187): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22509.717703] type=1400 audit(1656343553.385:10187): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22509.718802] type=1400 audit(1656343553.955:10188): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22509.719079] type=1400 audit(1656343553.955:10188): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22509.720311] type=1400 audit(1656343553.955:10189): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22509.720434] type=1400 audit(1656343553.955:10189): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22509.721452] type=1400 audit(1656343553.955:10190): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22509.919636] audit: audit_lost=1528 audit_rate_limit=5 audit_backlog_limit=64
+[22509.919643] audit: rate limit exceeded
+[22510.819048] logd: logdr: UID=10052 GID=10052 PID=5132 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[22511.911363] type=1400 audit(1656343553.955:10190): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22511.912033] type=1400 audit(1656343556.149:10195): avc: denied { call } for comm="Thread-498" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[22511.950430] type=1400 audit(1656343556.149:10195): avc: denied { call } for comm="Thread-498" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[22511.950466] type=1400 audit(1656343556.189:10196): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22511.950822] type=1400 audit(1656343556.189:10196): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22511.950847] type=1400 audit(1656343556.189:10197): avc: denied { write } for comm="kworker/0:2H" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22511.960975] type=1400 audit(1656343556.189:10197): avc: denied { write } for comm="kworker/0:2H" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22511.961005] type=1400 audit(1656343556.199:10198): avc: denied { associate } for comm="Binder:791_3" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[22512.207694] audit: audit_lost=1532 audit_rate_limit=5 audit_backlog_limit=64
+[22512.207707] audit: rate limit exceeded
+[22512.207847] type=1400 audit(1656343556.199:10198): avc: denied { associate } for comm="Binder:791_3" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[22512.208534] type=1400 audit(1656343556.445:10199): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22513.346662] BUG: Bad page state in process kswapd0  pfn:114e09
+[22513.346685] page:ffffffbff1538240 count:0 mapcount:0 mapping:fffffffc4147d570 index:0x0
+[22513.346694] flags: 0x4000000000000000()
+[22513.346704] raw: 4000000000000000 fffffffc4147d570 0000000000000000 00000000ffffffff
+[22513.346711] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22513.346718] page dumped because: non-NULL mapping
+[22513.346723] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22513.346791] CPU: 0 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22513.346793] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22513.346796] Call trace:
+[22513.346811] dump_backtrace+0x0/0x1e4
+[22513.346814] show_stack+0x18/0x24
+[22513.346822] dump_stack+0xbc/0xf8
+[22513.346828] bad_page+0x114/0x168
+[22513.346833] free_pcppages_bulk+0x530/0x588
+[22513.346835] free_hot_cold_page+0x250/0x29c
+[22513.346838] free_hot_cold_page_list+0xf0/0x118
+[22513.346841] shrink_page_list+0xd88/0xe80
+[22513.346844] shrink_inactive_list+0x510/0x918
+[22513.346847] shrink_node_memcg+0x340/0x7f4
+[22513.346849] shrink_node+0x10c/0x2f8
+[22513.346852] kswapd+0x7d0/0x924
+[22513.346857] kthread+0x11c/0x12c
+[22513.346861] ret_from_fork+0x10/0x18
+[22513.758066] type=1400 audit(1656343556.445:10199): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22513.759393] type=1400 audit(1656343557.995:10206): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22513.759544] type=1400 audit(1656343557.995:10206): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22513.760131] type=1400 audit(1656343557.995:10207): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22513.760220] type=1400 audit(1656343557.995:10207): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22513.761361] type=1400 audit(1656343557.995:10208): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22514.034590] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[22514.034596] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[22514.034601] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[22514.034605] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[22514.039464] msm_vidc: info: Closed video instance: 0000000000000000
+[22514.040573] msm_vidc: info: Closed video instance: 0000000000000000
+[22530.376227] type=1400 audit(1656343557.995:10208): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22530.378448] type=1400 audit(1656343574.615:10209): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22530.379360] type=1400 audit(1656343574.615:10209): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22530.380488] type=1400 audit(1656343574.615:10210): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22547.866591] type=1400 audit(1656343574.615:10210): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22547.868822] type=1400 audit(1656343592.105:10211): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22547.869275] type=1400 audit(1656343592.105:10211): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22547.870953] type=1400 audit(1656343592.105:10212): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22551.590536] type=1400 audit(1656343592.105:10212): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22551.592115] type=1400 audit(1656343595.829:10213): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22551.592623] type=1400 audit(1656343595.829:10213): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22551.593872] type=1400 audit(1656343595.829:10214): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22552.228174] CPU5: update max cpu_capacity 690
+[22552.313041] CPU7: update max cpu_capacity 691
+[22554.237197] CPU4: update max cpu_capacity 725
+[22554.384942] CPU7: update max cpu_capacity 726
+[22556.235896] CPU6: update max cpu_capacity 767
+[22556.337145] CPU7: update max cpu_capacity 768
+[22559.425757] type=1400 audit(1656343595.829:10214): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22559.426592] type=1400 audit(1656343603.662:10215): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22559.426981] type=1400 audit(1656343603.662:10215): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22559.427764] type=1400 audit(1656343603.662:10216): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22560.512099] type=1400 audit(1656343603.662:10216): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22560.514384] type=1400 audit(1656343604.749:10217): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22560.515013] type=1400 audit(1656343604.749:10217): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22560.517252] type=1400 audit(1656343604.749:10218): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22565.186413] healthd: battery l=100 v=4345 t=39.5 h=2 st=4 c=0 fc=2723000 cc=14 chg=u
+[22566.425321] type=1400 audit(1656343604.749:10218): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22566.427986] type=1400 audit(1656343610.662:10219): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22566.428450] type=1400 audit(1656343610.662:10219): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22566.430537] type=1400 audit(1656343610.662:10220): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22566.431157] type=1400 audit(1656343610.662:10220): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22566.433094] type=1400 audit(1656343610.662:10221): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22567.704363] google_charger: MSC_THERM_DC lvl=2 dc_icl=250000 (0)
+[22569.059713] BUG: Bad page state in process Lacrima_startup  pfn:d840d
+[22569.059747] page:ffffffbff0610340 count:0 mapcount:0 mapping:fffffffc4147d620 index:0x0
+[22569.059758] flags: 0x0()
+[22569.059772] raw: 0000000000000000 fffffffc4147d620 0000000000000000 00000000ffffffff
+[22569.059780] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22569.059788] page dumped because: non-NULL mapping
+[22569.059794] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22569.059884] CPU: 0 PID: 14649 Comm: Lacrima_startup Tainted: G S  B      O    4.14.170_audio #51
+[22569.059887] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22569.059891] Call trace:
+[22569.059911] dump_backtrace+0x0/0x1e4
+[22569.059916] show_stack+0x18/0x24
+[22569.059927] dump_stack+0xbc/0xf8
+[22569.059936] bad_page+0x114/0x168
+[22569.059942] free_pcppages_bulk+0x530/0x588
+[22569.059946] free_hot_cold_page+0x250/0x29c
+[22569.059950] free_pages+0x64/0x70
+[22569.059959] inode_doinit_with_dentry+0x3f4/0x4f8
+[22569.059964] selinux_d_instantiate+0x20/0x2c
+[22569.059968] security_d_instantiate+0x4c/0x6c
+[22569.059977] d_add+0x30/0x218
+[22569.059986] proc_lookup_de+0x100/0x110
+[22569.059989] proc_lookup+0x20/0x2c
+[22569.059994] proc_root_lookup+0x38/0x4c
+[22569.060001] path_openat+0xda0/0x1368
+[22569.060005] do_filp_open+0x78/0x124
+[22569.060012] do_sys_open+0x134/0x248
+[22569.060015] SyS_openat+0x14/0x20
+[22569.060020] __sys_trace_return+0x0/0x4
+[22570.139265] type=1400 audit(1656343610.662:10221): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22570.140513] type=1400 audit(1656343614.375:10222): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22570.141209] type=1400 audit(1656343614.375:10222): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22570.144006] type=1400 audit(1656343614.375:10223): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22570.144304] type=1400 audit(1656343614.375:10223): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22570.145533] type=1400 audit(1656343614.379:10224): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22590.376064] type=1400 audit(1656343614.379:10224): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22590.376882] type=1400 audit(1656343634.615:10225): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22590.377162] type=1400 audit(1656343634.615:10225): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22590.377725] type=1400 audit(1656343634.615:10226): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22592.380305] type=1400 audit(1656343634.615:10226): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22592.383112] type=1400 audit(1656343636.619:10227): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22592.383524] type=1400 audit(1656343636.619:10227): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22592.385340] type=1400 audit(1656343636.619:10228): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22594.611236] type=1400 audit(1656343636.619:10228): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22594.612012] type=1400 audit(1656343638.849:10229): avc: denied { getattr } for comm="liblmkd_detecto" path="/postinstall" dev="dm-0" ino=48 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:postinstall_mnt_dir:s0 tclass=dir permissive=1 app=com.facebook.katana
+[22601.735872] CPU6: update max cpu_capacity 801
+[22602.528841] CPU7: update max cpu_capacity 802
+[22603.736890] CPU4: update max cpu_capacity 836
+[22603.863374] CPU7: update max cpu_capacity 837
+[22605.748940] CPU6: update max cpu_capacity 871
+[22607.860983] CPU7: update max cpu_capacity 913
+[22609.745746] CPU7: update max cpu_capacity 954
+[22610.968420] type=1400 audit(1656343638.849:10229): avc: denied { getattr } for comm="liblmkd_detecto" path="/postinstall" dev="dm-0" ino=48 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:postinstall_mnt_dir:s0 tclass=dir permissive=1 app=com.facebook.katana
+[22610.969931] type=1400 audit(1656343655.205:10230): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22610.970370] type=1400 audit(1656343655.205:10230): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22610.971813] type=1400 audit(1656343655.205:10231): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22611.589917] type=1400 audit(1656343655.205:10231): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22611.592141] type=1400 audit(1656343655.829:10232): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22611.592796] type=1400 audit(1656343655.829:10232): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22611.594513] type=1400 audit(1656343655.829:10233): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22612.315703] CPU7: update max cpu_capacity 989
+[22613.862939] CPU7: update max cpu_capacity 1024
+[22619.107657] type=1400 audit(1656343655.829:10233): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22619.110366] type=1400 audit(1656343663.345:10234): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22619.110851] type=1400 audit(1656343663.345:10234): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22619.113962] type=1400 audit(1656343663.345:10235): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22619.114196] type=1400 audit(1656343663.345:10235): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22619.115965] type=1400 audit(1656343663.345:10236): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22620.512186] type=1400 audit(1656343663.345:10236): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22620.515041] type=1400 audit(1656343664.749:10237): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22620.515462] type=1400 audit(1656343664.749:10237): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22620.518134] type=1400 audit(1656343664.749:10238): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22625.169321] healthd: battery l=100 v=4347 t=39.5 h=2 st=4 c=0 fc=2723000 cc=14 chg=u
+[22625.891674] type=1400 audit(1656343664.749:10238): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22625.893153] type=1400 audit(1656343670.129:10239): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22625.893488] type=1400 audit(1656343670.129:10239): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22625.894525] type=1400 audit(1656343670.129:10240): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22625.894924] type=1400 audit(1656343670.129:10240): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22625.897242] type=1400 audit(1656343670.129:10241): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22648.482940] type=1400 audit(1656343670.129:10241): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22648.483633] type=1400 audit(1656343692.722:10242): avc: denied { call } for comm="Thread-23" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[22650.377070] type=1400 audit(1656343692.722:10242): avc: denied { call } for comm="Thread-23" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[22650.377638] type=1400 audit(1656343694.615:10243): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22650.377892] type=1400 audit(1656343694.615:10243): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22650.378224] type=1400 audit(1656343694.615:10244): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22651.975496] google_charger: MSC_THERM_DC lvl=1 dc_icl=500000 (0)
+[22651.975975] google_charger: MSC_THERM_FCC lvl=2 (0)
+[22651.981300] google_charger: usbchg=USB typec=C usbv=4978 usbc=297 usbMv=5000 usbMc=500
+[22651.981422] sm8150_bms: MSC_PCS chg_state=1f4110001040003 [0x3:1:4:4352:500] chg=u
+[22651.981440] google_battery: MSC_DIN chg_state=1f4110001040003 f=0x3 chg_s=Full chg_t=None vchg=4352 icl=500
+[22651.985196] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4344687 ibatt=5312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[22651.985209] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[22651.985214] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[22667.867605] type=1400 audit(1656343694.615:10244): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22667.870225] type=1400 audit(1656343712.105:10245): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22667.870903] type=1400 audit(1656343712.105:10245): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22667.873096] type=1400 audit(1656343712.105:10246): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22680.512141] type=1400 audit(1656343712.105:10246): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22680.517094] type=1400 audit(1656343724.749:10247): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22680.517505] type=1400 audit(1656343724.749:10247): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22680.521166] type=1400 audit(1656343724.749:10248): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22685.169571] healthd: battery l=100 v=4346 t=39.4 h=2 st=4 c=2 fc=2723000 cc=14 chg=u
+[22685.751197] type=1400 audit(1656343724.749:10248): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22685.753833] type=1400 audit(1656343729.989:10249): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22685.754263] type=1400 audit(1656343729.989:10249): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22685.756678] type=1400 audit(1656343729.989:10250): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22689.250198] type=1400 audit(1656343729.989:10250): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22689.250220] type=1400 audit(1656343733.489:10251): avc: denied { write } for comm="kworker/6:1H" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22689.252840] type=1400 audit(1656343733.489:10251): avc: denied { write } for comm="kworker/6:1H" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22689.252865] type=1400 audit(1656343733.489:10252): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22690.015070] BUG: Bad page state in process RenderThread  pfn:10de42
+[22690.015088] page:ffffffbff1379080 count:0 mapcount:0 mapping:fffffffc41470940 index:0x0
+[22690.015096] flags: 0x4000000000000000()
+[22690.015105] raw: 4000000000000000 fffffffc41470940 0000000000000000 00000000ffffffff
+[22690.015112] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22690.015118] page dumped because: non-NULL mapping
+[22690.015122] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22690.015176] CPU: 0 PID: 19880 Comm: RenderThread Tainted: G S  B      O    4.14.170_audio #51
+[22690.015178] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22690.015180] Call trace:
+[22690.015190] dump_backtrace+0x0/0x1e4
+[22690.015193] show_stack+0x18/0x24
+[22690.015198] dump_stack+0xbc/0xf8
+[22690.015203] bad_page+0x114/0x168
+[22690.015207] free_pcppages_bulk+0x530/0x588
+[22690.015210] free_hot_cold_page+0x250/0x29c
+[22690.015212] free_pages+0x64/0x70
+[22690.015217] sg_free_table+0x28/0x88
+[22690.015222] ion_dma_buf_detatch+0x60/0x80
+[22690.015228] dma_buf_detach+0x70/0x9c
+[22690.015233] kgsl_destroy_ion+0xb4/0xd8
+[22690.015236] kgsl_mem_entry_destroy+0x90/0x14c
+[22690.015239] kgsl_ioctl_gpuobj_free+0x334/0x3c0
+[22690.015242] kgsl_ioctl_helper+0x120/0x150
+[22690.015245] kgsl_ioctl+0x34/0xc4
+[22690.015249] do_vfs_ioctl+0x5d0/0x91c
+[22690.015252] SyS_ioctl+0x90/0x9c
+[22690.015255] __sys_trace_return+0x0/0x4
+[22690.015259] BUG: Bad page state in process RenderThread  pfn:10fa24
+[22690.015266] page:ffffffbff13e8900 count:0 mapcount:0 mapping:fffffffc4147d2b0 index:0x0
+[22690.015272] flags: 0x4000000000000000()
+[22690.015279] raw: 4000000000000000 fffffffc4147d2b0 0000000000000000 00000000ffffffff
+[22690.015285] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22690.015290] page dumped because: non-NULL mapping
+[22690.015295] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22690.015329] CPU: 0 PID: 19880 Comm: RenderThread Tainted: G S  B      O    4.14.170_audio #51
+[22690.015331] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22690.015332] Call trace:
+[22690.015335] dump_backtrace+0x0/0x1e4
+[22690.015337] show_stack+0x18/0x24
+[22690.015340] dump_stack+0xbc/0xf8
+[22690.015343] bad_page+0x114/0x168
+[22690.015345] free_pcppages_bulk+0x530/0x588
+[22690.015348] free_hot_cold_page+0x250/0x29c
+[22690.015350] free_pages+0x64/0x70
+[22690.015352] sg_free_table+0x28/0x88
+[22690.015355] ion_dma_buf_detatch+0x60/0x80
+[22690.015358] dma_buf_detach+0x70/0x9c
+[22690.015360] kgsl_destroy_ion+0xb4/0xd8
+[22690.015363] kgsl_mem_entry_destroy+0x90/0x14c
+[22690.015365] kgsl_ioctl_gpuobj_free+0x334/0x3c0
+[22690.015368] kgsl_ioctl_helper+0x120/0x150
+[22690.015370] kgsl_ioctl+0x34/0xc4
+[22690.015372] do_vfs_ioctl+0x5d0/0x91c
+[22690.015375] SyS_ioctl+0x90/0x9c
+[22690.015377] __sys_trace_return+0x0/0x4
+[22693.043059] type=1400 audit(1656343733.489:10252): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22693.043744] type=1400 audit(1656343737.282:10253): avc: denied { call } for comm="Thread-313" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[22693.101540] msm_crus_store_imped: left impedance 7.64528114 ohms
+[22693.103624] msm_crus_store_imped: right impedance 6.77086060 ohms
+[22693.118125] afe_close: port_id = 0x9020
+[22693.128614] afe_close: port_id = 0x9021
+[22693.368673] type=1400 audit(1656343737.282:10253): avc: denied { call } for comm="Thread-313" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[22693.369230] type=1400 audit(1656343737.605:10254): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22693.369476] type=1400 audit(1656343737.605:10254): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22693.369817] type=1400 audit(1656343737.605:10255): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22710.378063] type=1400 audit(1656343737.605:10255): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22710.378626] type=1400 audit(1656343754.615:10256): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22710.378826] type=1400 audit(1656343754.615:10256): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22710.379380] type=1400 audit(1656343754.615:10257): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22715.988154] BUG: Bad page state in process lowpool[3]  pfn:10ff6f
+[22715.988177] page:ffffffbff13fdbc0 count:0 mapcount:0 mapping:fffffffc41443e40 index:0x0
+[22715.988188] flags: 0x4000000000000000()
+[22715.988203] raw: 4000000000000000 fffffffc41443e40 0000000000000000 00000000ffffffff
+[22715.988211] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22715.988219] page dumped because: non-NULL mapping
+[22715.988225] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22715.988319] CPU: 0 PID: 7043 Comm: lowpool[3] Tainted: G S  B      O    4.14.170_audio #51
+[22715.988324] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22715.988328] Call trace:
+[22715.988344] dump_backtrace+0x0/0x1e4
+[22715.988347] show_stack+0x18/0x24
+[22715.988357] dump_stack+0xbc/0xf8
+[22715.988364] bad_page+0x114/0x168
+[22715.988369] free_pcppages_bulk+0x530/0x588
+[22715.988371] free_hot_cold_page+0x250/0x29c
+[22715.988375] __put_page+0x38/0x6c
+[22715.988381] __free_zspage+0x5c/0x13c
+[22715.988383] zs_free+0x1a8/0x258
+[22715.988391] zram_free_page+0x98/0x170
+[22715.988394] zram_slot_free_notify+0x64/0xe0
+[22715.988400] swapcache_free_entries+0x340/0x378
+[22715.988408] free_swap_slot+0xac/0x174
+[22715.988411] free_swap_and_cache+0x1bc/0x2e0
+[22715.988415] zap_pte_range+0x49c/0x784
+[22715.988418] unmap_page_range+0xf0/0x1ec
+[22715.988420] unmap_vmas+0x94/0xb4
+[22715.988426] exit_mmap+0x90/0x18c
+[22715.988432] mmput+0x4c/0x104
+[22715.988436] do_exit+0x2c0/0x968
+[22715.988439] do_group_exit+0x90/0xa4
+[22715.988444] get_signal+0x260/0x860
+[22715.988447] do_notify_resume+0x4f4/0xc7c
+[22715.988450] work_pending+0x8/0x10
+[22719.764363] type=1400 audit(1656343754.615:10257): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22719.764810] type=1400 audit(1656343764.002:10258): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22719.764976] type=1400 audit(1656343764.002:10258): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22719.765270] type=1400 audit(1656343764.002:10259): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22719.765349] type=1400 audit(1656343764.002:10259): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22719.765778] type=1400 audit(1656343764.002:10260): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22720.666652] BUG: Bad page state in process kswapd0  pfn:c40a6
+[22720.666685] page:ffffffbff0102980 count:0 mapcount:0 mapping:fffffffc4147d200 index:0x0
+[22720.666697] flags: 0x0()
+[22720.666711] raw: 0000000000000000 fffffffc4147d200 0000000000000000 00000000ffffffff
+[22720.666719] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[22720.666727] page dumped because: non-NULL mapping
+[22720.666732] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[22720.666819] CPU: 2 PID: 146 Comm: kswapd0 Tainted: G S  B      O    4.14.170_audio #51
+[22720.666822] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[22720.666826] Call trace:
+[22720.666847] dump_backtrace+0x0/0x1e4
+[22720.666851] show_stack+0x18/0x24
+[22720.666861] dump_stack+0xbc/0xf8
+[22720.666869] bad_page+0x114/0x168
+[22720.666874] free_pcppages_bulk+0x530/0x588
+[22720.666877] free_hot_cold_page+0x250/0x29c
+[22720.666880] free_hot_cold_page_list+0xf0/0x118
+[22720.666884] shrink_page_list+0xd88/0xe80
+[22720.666887] shrink_inactive_list+0x510/0x918
+[22720.666890] shrink_node_memcg+0x340/0x7f4
+[22720.666893] shrink_node+0x10c/0x2f8
+[22720.666895] kswapd+0x7d0/0x924
+[22720.666901] kthread+0x11c/0x12c
+[22720.666905] ret_from_fork+0x10/0x18
+[22721.620001] type=1400 audit(1656343764.002:10260): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22721.620827] type=1400 audit(1656343765.859:10261): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22721.621055] type=1400 audit(1656343765.859:10261): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22721.621760] type=1400 audit(1656343765.859:10262): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22727.867071] type=1400 audit(1656343765.859:10262): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22727.867951] type=1400 audit(1656343772.105:10263): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22727.868174] type=1400 audit(1656343772.105:10263): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22727.869347] type=1400 audit(1656343772.105:10264): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22729.650704] type=1400 audit(1656343772.105:10264): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22729.650759] type=1400 audit(1656343773.889:10265): avc: denied { write } for comm="kworker/7:1H" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22729.661178] type=1400 audit(1656343773.889:10265): avc: denied { write } for comm="kworker/7:1H" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22729.661201] type=1400 audit(1656343773.899:10266): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22731.591156] type=1400 audit(1656343773.899:10266): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22731.591884] type=1400 audit(1656343775.829:10267): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22731.592102] type=1400 audit(1656343775.829:10267): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22731.593039] type=1400 audit(1656343775.829:10268): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22732.506984] type=1400 audit(1656343775.829:10268): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22732.507537] type=1400 audit(1656343776.745:10269): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22732.507769] type=1400 audit(1656343776.745:10269): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22732.508492] type=1400 audit(1656343776.745:10270): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22740.513160] type=1400 audit(1656343776.745:10270): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22740.514176] type=1400 audit(1656343784.749:10271): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22740.514379] type=1400 audit(1656343784.749:10271): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22740.515188] type=1400 audit(1656343784.749:10272): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22744.902827] type=1400 audit(1656343784.749:10272): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22744.903714] type=1400 audit(1656343789.142:10273): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22744.903860] type=1400 audit(1656343789.142:10273): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22744.904647] type=1400 audit(1656343789.142:10274): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22744.904726] type=1400 audit(1656343789.142:10274): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22744.905307] type=1400 audit(1656343789.142:10275): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22745.164411] healthd: battery l=100 v=4347 t=39.2 h=2 st=4 c=-1 fc=2723000 cc=14 chg=u
+[22745.203753] type=1400 audit(1656343789.142:10275): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+[22745.204175] type=1400 audit(1656343789.442:10276): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22745.204342] type=1400 audit(1656343789.442:10276): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22745.204940] type=1400 audit(1656343789.442:10277): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22745.205025] type=1400 audit(1656343789.442:10277): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22745.205328] type=1400 audit(1656343789.442:10278): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22746.244135] type=1400 audit(1656343789.442:10278): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=3712732 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[22746.245087] type=1400 audit(1656343790.482:10279): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22746.245313] type=1400 audit(1656343790.482:10279): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22746.246036] type=1400 audit(1656343790.482:10280): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22770.378851] type=1400 audit(1656343790.482:10280): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+[22770.379625] type=1400 audit(1656343814.615:10281): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22770.379868] type=1400 audit(1656343814.615:10281): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22770.380522] type=1400 audit(1656343814.615:10282): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22787.867661] type=1400 audit(1656343814.615:10282): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[22787.868567] type=1400 audit(1656343832.105:10283): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22787.868795] type=1400 audit(1656343832.105:10283): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22787.869925] type=1400 audit(1656343832.105:10284): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22791.590508] type=1400 audit(1656343832.105:10284): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[22791.591135] type=1400 audit(1656343835.829:10285): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22791.591385] type=1400 audit(1656343835.829:10285): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22791.592111] type=1400 audit(1656343835.829:10286): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22800.513217] type=1400 audit(1656343835.829:10286): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[22800.514370] type=1400 audit(1656343844.749:10287): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22800.514563] type=1400 audit(1656343844.749:10287): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22800.515594] type=1400 audit(1656343844.752:10288): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22805.185922] healthd: battery l=100 v=4347 t=39.0 h=2 st=4 c=5 fc=2723000 cc=14 chg=u
+[22811.900871] type=1400 audit(1656343844.752:10288): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[22811.901633] type=1400 audit(1656343856.139:10289): avc: denied { call } for comm="Thread-500" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[22812.726648] type=1400 audit(1656343856.139:10289): avc: denied { call } for comm="Thread-500" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[22812.727275] type=1400 audit(1656343856.965:10290): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22812.727497] type=1400 audit(1656343856.965:10290): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22812.728189] type=1400 audit(1656343856.965:10291): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22813.973500] type=1400 audit(1656343856.965:10291): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[22813.973523] type=1400 audit(1656343858.212:10292): avc: denied { write } for comm="kworker/0:2H" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22813.975439] type=1400 audit(1656343858.212:10292): avc: denied { write } for comm="kworker/0:2H" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22813.975454] type=1400 audit(1656343858.212:10293): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=44352 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[22823.556492] google_charger: MSC_THERM_DC lvl=0 dc_icl=-1 (0)
+[22823.556710] google_charger: MSC_THERM_FCC lvl=1 (0)
+[22823.558692] google_charger: usbchg=USB typec=C usbv=4944 usbc=208 usbMv=5000 usbMc=500
+[22823.558815] sm8150_bms: MSC_PCS chg_state=1f4110201040003 [0x3:1:4:4354:500] chg=u
+[22823.558826] google_battery: MSC_DIN chg_state=1f4110201040003 f=0x3 chg_s=Full chg_t=None vchg=4354 icl=500
+[22823.561850] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4347500 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[22823.561859] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[22823.561863] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1

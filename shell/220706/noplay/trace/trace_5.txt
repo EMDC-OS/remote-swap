@@ -1,0 +1,628 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 617/617   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-6864  [001] ....  2520.662489: read_swap_cache_async: remote readpage 6841 "BG Thread #0" 7ecb94f000 41ad2
+           <...>-16541 [007] ....  2551.146949: app_switch_start_handler: ###########switch start! foreground 10135#############
+           <...>-16541 [007] ....  2551.146953: prefetch_handler: prefetch handler start! target(id,table): 0,1
+           <...>-6295  [004] ....  2551.241695: read_swap_cache_async: remote readpage 6242 "Sensors" 7ea4a4d000 2da49
+           <...>-6295  [005] ....  2551.245215: read_swap_cache_async: remote readpage 6242 "Sensors" 7ea4a4e000 2da4a
+           <...>-6286  [004] ....  2551.255904: read_swap_cache_async: remote readpage 6242 "DefaultPool7" 7f2d7f6000 3da77
+           <...>-6284  [001] ....  2551.295144: read_swap_cache_async: remote readpage 6242 "DefaultPool5" 7fbc2c7000 41a44
+           <...>-16541 [004] ....  2551.339780: update_to_nbd_flag: appid 0: table 0 is latter, total target 0 max idx e, l -> 21 11
+           <...>-16541 [006] ....  2551.346943: miss_page_handler: miss page handler start! target(id,table): 0,1
+           <...>-200   [006] ....  2551.347106: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [006] d..2  2551.347109: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [006] d..2  2551.347110: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [006] d..2  2551.347111: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [006] d..2  2551.347112: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [006] d..2  2551.347113: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [006] d..2  2551.347114: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [006] d..2  2551.347115: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [006] d..2  2551.347117: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [006] d..2  2551.347118: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [006] ....  2551.347119: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6286  [007] ....  2551.476381: read_swap_cache_async: remote readpage 6242 "DefaultPool7" 7f2e431000 41a05
+           <...>-6313  [004] ....  2551.625209: read_swap_cache_async: remote readpage 6242 "ChromiumNet" 7f2e2f6000 3dab1
+           <...>-6327  [007] ....  2553.093808: read_swap_cache_async: remote readpage 6242 "Location" 7ea4a60000 2da56
+           <...>-6242  [007] ....  2553.376106: read_swap_cache_async: remote readpage 6242 "droid.apps.maps" 7ea4a2c000 2da46
+           <...>-6242  [007] ....  2553.378230: read_swap_cache_async: remote readpage 6242 "droid.apps.maps" 7ea4a2a000 2da44
+           <...>-200   [007] ....  2566.452969: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  2566.452974: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [007] d..2  2566.452977: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [007] d..2  2566.452979: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [007] d..2  2566.452980: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [007] d..2  2566.452982: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [007] d..2  2566.452984: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [007] d..2  2566.452987: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [007] d..2  2566.452989: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [007] d..2  2566.452991: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [007] ....  2566.452994: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-16680 [007] ....  2574.614821: app_switch_start_handler: ###########switch start! foreground 10126#############
+           <...>-16680 [007] ....  2574.614826: prefetch_handler: prefetch handler start! target(id,table): 1,1
+ android.youtube-6841  [004] ....  2574.754408: read_swap_cache_async: remote readpage 6841 "android.youtube" 7fbc3aa000 45a4e
+ android.youtube-6841  [004] ....  2574.801659: read_swap_cache_async: remote readpage 6841 "android.youtube" 7f2da17000 45a20
+           <...>-16680 [005] ....  2574.866172: update_to_nbd_flag: appid 1: table 0 is latter, total target 0 max idx e, l -> 18 35
+           <...>-16680 [004] ....  2574.873183: miss_page_handler: miss page handler start! target(id,table): 1,1
+           <...>-200   [004] ....  2574.873294: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] d..2  2574.873296: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [004] d..2  2574.873298: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [004] d..2  2574.873299: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [004] d..2  2574.873300: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [004] d..2  2574.873301: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [004] d..2  2574.873302: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [004] d..2  2574.873304: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [004] d..2  2574.873305: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [004] d..2  2574.873306: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [004] ....  2574.873308: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-15568 [000] ...1  2575.025707: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 1562
+           <...>-16694 [000] ....  2575.534301: read_swap_cache_async: remote readpage 6242 "droid.apps.maps" 7e762d1000 15a0b
+           <...>-15568 [000] ...1  2575.714672: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 1626
+ android.youtube-6841  [004] ....  2575.975997: read_swap_cache_async: remote readpage 6841 "android.youtube" 7f28bae000 45a06
+ android.youtube-6841  [006] ....  2576.002829: read_swap_cache_async: remote readpage 6841 "android.youtube" 7f28ba7000 45a01
+ android.youtube-6841  [006] ....  2576.009573: read_swap_cache_async: remote readpage 6841 "android.youtube" 7f28bb0000 45a07
+ android.youtube-6841  [006] ....  2576.014176: read_swap_cache_async: remote readpage 6841 "android.youtube" 7f28bb6000 45a0a
+ android.youtube-6841  [007] ....  2576.036508: read_swap_cache_async: remote readpage 6841 "android.youtube" 7f28ba3000 41afe
+           <...>-7021  [005] ....  2576.059707: read_swap_cache_async: remote readpage 6841 "ComponentLayout" 7ecb944000 41ad1
+           <...>-15568 [000] ...1  2576.527578: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 1690
+           <...>-6858  [005] ....  2576.561597: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbdf39000 45a59
+           <...>-6858  [004] ....  2576.564497: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbdcd6000 45a57
+           <...>-6858  [005] ....  2576.567621: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbdcc1000 45a56
+           <...>-6858  [005] ....  2576.571910: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbf6fd000 45a7a
+           <...>-6858  [005] ....  2576.578324: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbe4bd000 45a72
+           <...>-6858  [005] ....  2576.581855: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbe4be000 45a73
+           <...>-6858  [004] ....  2576.585447: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbe4c7000 45a74
+           <...>-6858  [005] ....  2576.588402: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbde95000 45a58
+           <...>-6858  [005] ....  2576.591891: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbe4e0000 45a76
+           <...>-6858  [005] ....  2576.594825: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbc54f000 45a4f
+           <...>-6858  [006] ....  2576.599342: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbe584000 45a78
+           <...>-6858  [006] ....  2576.603727: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbc550000 45a50
+           <...>-6858  [006] ....  2576.606488: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbc551000 45a51
+           <...>-6858  [006] ....  2576.610449: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbe3c0000 45a6a
+           <...>-6858  [006] ....  2576.614032: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbe3c1000 45a6b
+           <...>-6858  [005] ....  2576.616570: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbc552000 45a52
+           <...>-6858  [005] ....  2576.623233: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbe4df000 45a75
+           <...>-6858  [005] ....  2576.679691: read_swap_cache_async: remote readpage 6841 "FinalizerDaemon" 7fbe48b000 45a6e
+           <...>-15568 [000] ...1  2577.884375: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 1754
+           <...>-15568 [000] ...1  2578.500247: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 1818
+           <...>-15568 [000] ....  2578.991935: cold_page_sender_work: remote: total sent cold page: 7606
+           <...>-15568 [000] ....  2578.991947: cold_page_sender_work: remote: total faulted cold page: 51
+           <...>-16800 [007] ....  2598.397410: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-16800 [007] ....  2598.397414: prefetch_handler: prefetch handler start! target(id,table): 4,1
+           <...>-7251  [004] ....  2598.591009: read_swap_cache_async: remote readpage 7130 "Thread-5" 7f2d613000 5da15
+           <...>-7251  [004] ....  2598.592911: read_swap_cache_async: remote readpage 7130 "Thread-5" 7f2d612000 5da14
+           <...>-7191  [006] ....  2598.633512: read_swap_cache_async: remote readpage 7130 "GLThread 473" 7f2d6d0000 5da2e
+           <...>-16800 [007] ....  2598.669535: update_to_nbd_flag: appid 4: table 0 is latter, total target 0 max idx e, l -> 37 35
+           <...>-16800 [007] ....  2598.677886: miss_page_handler: miss page handler start! target(id,table): 4,1
+           <...>-200   [007] ....  2598.678575: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  2598.678578: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [007] d..2  2598.678579: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [007] d..2  2598.678581: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [007] d..2  2598.678582: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [007] d..2  2598.678582: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [007] d..2  2598.678584: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [007] d..2  2598.678585: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [007] d..2  2598.678586: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [007] d..2  2598.678587: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [007] ....  2598.678589: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-15568 [000] ...1  2598.748447: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 1882
+           <...>-15568 [000] ...1  2599.373647: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 1946
+           <...>-15568 [000] ...1  2599.955795: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2010
+           <...>-15568 [000] ...1  2600.700139: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2074
+           <...>-15568 [000] ...1  2601.194339: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2138
+           <...>-15568 [000] ...1  2601.689935: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2202
+           <...>-15568 [000] ...1  2602.227305: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2266
+           <...>-15568 [000] ...1  2602.719549: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2330
+           <...>-15568 [000] ...1  2603.214151: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2394
+           <...>-15568 [000] ...1  2603.820314: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2458
+           <...>-15568 [000] ...1  2604.414007: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2522
+           <...>-15568 [000] ...1  2604.921875: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2586
+           <...>-15568 [000] ...1  2605.452951: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2650
+           <...>-6939  [000] ....  2605.563023: read_swap_cache_async: remote readpage 6841 "ChromiumNet" 7e5d701000 75afd
+           <...>-15568 [000] ....  2605.725137: cold_page_sender_work: remote: total sent cold page: 10832
+           <...>-15568 [000] ....  2605.725146: cold_page_sender_work: remote: total faulted cold page: 55
+           <...>-16986 [007] ....  2662.276397: app_switch_start_handler: ###########switch start! foreground 10124#############
+           <...>-16986 [007] ....  2662.276401: prefetch_handler: prefetch handler start! target(id,table): 8,1
+           <...>-16986 [005] ....  2662.562232: update_to_nbd_flag: appid 8: table 0 is latter, total target 0 max idx e, l -> 26 6
+           <...>-16986 [005] ....  2662.571496: miss_page_handler: miss page handler start! target(id,table): 8,1
+           <...>-200   [004] ....  2662.571515: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] d..2  2662.571519: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [004] d..2  2662.571521: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [004] d..2  2662.571523: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [004] d..2  2662.571524: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [004] d..2  2662.571525: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [004] d..2  2662.571527: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [004] d..2  2662.571528: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [004] d..2  2662.571529: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [004] d..2  2662.571531: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [004] ....  2662.571532: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-15568 [000] ...1  2662.812626: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2714
+           <...>-15568 [000] ...1  2663.441313: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2778
+           <...>-15568 [000] ...1  2663.980167: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2842
+           <...>-15568 [000] ...1  2664.481642: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2906
+           <...>-15568 [000] ...1  2664.979000: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 2970
+           <...>-15568 [000] ...1  2665.509593: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3034
+           <...>-15568 [000] ...1  2666.030048: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3098
+           <...>-15568 [000] ...1  2666.530938: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3162
+           <...>-15568 [000] ...1  2667.061620: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3226
+           <...>-15568 [000] ...1  2667.576210: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3290
+           <...>-15568 [000] ...1  2668.113365: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3354
+           <...>-15568 [000] ...1  2668.583352: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3418
+           <...>-15568 [000] ...1  2669.075917: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3482
+           <...>-15568 [000] d..4  2669.525375: __free_cluster: [REMOTE __free_cluster] free cluster 1391
+           <...>-15568 [000] ...1  2669.601326: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3546
+           <...>-15568 [000] ...1  2670.113548: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3610
+           <...>-15568 [000] ...1  2670.598193: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3674
+           <...>-15568 [000] d..4  2671.037151: __free_cluster: [REMOTE __free_cluster] free cluster 431
+           <...>-15568 [000] ...1  2671.133907: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3738
+           <...>-15568 [000] ...1  2671.625707: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3802
+           <...>-15568 [000] ...1  2672.121472: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3866
+           <...>-15568 [000] ...1  2672.621082: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3930
+           <...>-15568 [000] ...1  2673.145027: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 3994
+           <...>-15568 [000] ...1  2673.624302: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4058
+           <...>-15568 [000] ...1  2674.109168: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4122
+           <...>-15568 [000] ...1  2674.598132: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4186
+           <...>-15568 [000] ...1  2675.147323: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4250
+           <...>-15568 [000] ...1  2675.698385: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4314
+           <...>-15568 [000] ...1  2676.317192: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4378
+           <...>-15568 [000] ...1  2676.922819: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4442
+           <...>-15568 [000] ...1  2677.469964: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4506
+           <...>-15568 [000] ...1  2677.997037: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4570
+           <...>-15568 [000] d..4  2678.189094: __free_cluster: [REMOTE __free_cluster] free cluster 2030
+           <...>-15568 [000] d..4  2678.189255: __free_cluster: [REMOTE __free_cluster] free cluster 47
+           <...>-15568 [000] ...1  2678.531279: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4634
+           <...>-15568 [000] ...1  2679.053627: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4698
+           <...>-15568 [000] ...1  2679.569332: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4762
+           <...>-15568 [000] ...1  2680.072090: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4826
+           <...>-15568 [000] ...1  2680.552142: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4890
+           <...>-15568 [000] ...1  2681.049737: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 4954
+           <...>-15568 [000] ...1  2681.525861: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5018
+           <...>-15568 [000] ...1  2682.014111: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5082
+           <...>-15568 [000] ...1  2682.513960: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5146
+           <...>-15568 [000] ...1  2682.991742: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5210
+           <...>-15568 [000] d..4  2683.156019: __free_cluster: [REMOTE __free_cluster] free cluster 173
+           <...>-15568 [000] ...1  2683.439559: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5274
+           <...>-15568 [000] ...1  2683.894150: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5338
+           <...>-15568 [000] ...1  2684.359556: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5402
+           <...>-15568 [000] ...1  2684.810473: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5466
+           <...>-15568 [000] ...1  2685.289352: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5530
+           <...>-15568 [000] ...1  2685.736522: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5594
+           <...>-15568 [000] ...1  2686.188171: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5658
+           <...>-17089 [007] ....  2686.435722: app_switch_start_handler: ###########switch start! foreground 10133#############
+           <...>-17089 [007] ....  2686.435725: prefetch_handler: prefetch handler start! target(id,table): 3,0
+           <...>-17089 [007] ....  2686.600383: update_to_nbd_flag: appid 3: table 1 is latter, total target 0 max idx e, l -> 11 9
+           <...>-17089 [007] ....  2686.604332: miss_page_handler: miss page handler start! target(id,table): 3,0
+           <...>-200   [005] ....  2686.604360: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [005] d..2  2686.604364: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [005] d..2  2686.604366: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [005] d..2  2686.604367: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [005] d..2  2686.604367: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [005] d..2  2686.604368: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [005] d..2  2686.604369: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [005] d..2  2686.604371: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [005] d..2  2686.604372: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [005] d..2  2686.604373: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [005] ....  2686.604374: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-17109 [000] ...1  2686.634185: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5722
+           <...>-17109 [000] ...1  2686.802692: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5786
+           <...>-15568 [000] ...1  2687.012338: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5850
+           <...>-17109 [000] ...1  2687.208880: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5914
+           <...>-13428 [000] ...1  2687.384875: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 5978
+           <...>-8108  [004] d..4  2687.522655: __free_cluster: [REMOTE __free_cluster] free cluster 1387
+           <...>-16692 [000] ...1  2687.551996: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6042
+           <...>-13428 [000] ...1  2687.704110: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6106
+           <...>-13428 [000] ...1  2687.873349: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6170
+           <...>-13428 [000] ....  2687.994082: cold_page_sender_work: remote: total sent cold page: 11319
+           <...>-13428 [000] ....  2687.994091: cold_page_sender_work: remote: total faulted cold page: 55
+           <...>-16692 [000] ...1  2688.062391: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6234
+           <...>-16692 [000] ...1  2688.349569: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6298
+           <...>-16692 [000] ...1  2688.545935: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6362
+           <...>-15568 [000] d..4  2688.563425: __free_cluster: [REMOTE __free_cluster] free cluster 1324
+           <...>-16692 [000] d..4  2688.657556: __free_cluster: [REMOTE __free_cluster] free cluster 429
+           <...>-15568 [000] ...1  2688.722774: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6426
+           <...>-15568 [000] ...1  2688.998714: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6490
+           <...>-17109 [000] d..4  2689.199933: __free_cluster: [REMOTE __free_cluster] free cluster 1772
+           <...>-15568 [000] ...1  2689.226431: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6554
+           <...>-17109 [000] ...1  2689.409040: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6618
+           <...>-16692 [000] ...1  2689.584761: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6682
+           <...>-16692 [000] d..4  2689.728903: __free_cluster: [REMOTE __free_cluster] free cluster 944
+           <...>-17109 [000] ...1  2689.756452: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6746
+           <...>-17109 [000] ....  2689.799568: cold_page_sender_work: remote: total sent cold page: 12545
+           <...>-17109 [000] ....  2689.799576: cold_page_sender_work: remote: total faulted cold page: 55
+           <...>-16692 [000] ...1  2690.023839: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6810
+           <...>-16692 [000] ...1  2690.264728: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6874
+           <...>-15568 [000] ...1  2690.539677: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 6938
+           <...>-16692 [000] ...1  2690.817688: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7002
+           <...>-15568 [000] ...1  2691.104105: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7066
+           <...>-15568 [000] ...1  2691.460558: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7130
+           <...>-16692 [000] d..4  2691.481692: __free_cluster: [REMOTE __free_cluster] free cluster 1196
+           <...>-16692 [000] ...1  2691.712302: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7194
+           <...>-16692 [000] ....  2691.729160: cold_page_sender_work: remote: total sent cold page: 14656
+           <...>-16692 [000] ....  2691.729164: cold_page_sender_work: remote: total faulted cold page: 55
+           <...>-15568 [000] d..4  2691.855004: __free_cluster: [REMOTE __free_cluster] free cluster 1644
+           <...>-15568 [000] d..4  2691.989123: __free_cluster: [REMOTE __free_cluster] free cluster 303
+           <...>-15568 [000] ...1  2692.206535: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7258
+           <...>-15568 [000] ...1  2692.684122: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7322
+           <...>-15568 [000] ...1  2693.196391: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7386
+           <...>-15568 [000] ...1  2693.702268: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7450
+           <...>-15568 [000] d..4  2693.751506: __free_cluster: [REMOTE __free_cluster] free cluster 876
+           <...>-15568 [000] d..4  2694.120192: __free_cluster: [REMOTE __free_cluster] free cluster 685
+           <...>-15568 [000] ...1  2694.197088: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7514
+           <...>-8277  [005] d..4  2694.349514: __free_cluster: [REMOTE __free_cluster] free cluster 1707
+           <...>-15568 [000] ...1  2694.697114: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7578
+           <...>-15568 [000] ...1  2695.229873: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7642
+           <...>-15568 [000] d..4  2695.659419: __free_cluster: [REMOTE __free_cluster] free cluster 172
+           <...>-15568 [000] ...1  2695.736012: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7706
+           <...>-15568 [000] d..4  2696.158772: __free_cluster: [REMOTE __free_cluster] free cluster 236
+           <...>-15568 [000] ...1  2696.235042: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7770
+           <...>-15568 [000] d..4  2696.686968: __free_cluster: [REMOTE __free_cluster] free cluster 300
+           <...>-15568 [000] ...1  2696.770639: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7834
+           <...>-15568 [000] ...1  2697.269008: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7898
+           <...>-15568 [000] d..4  2697.596320: __free_cluster: [REMOTE __free_cluster] free cluster 364
+           <...>-15568 [000] ...1  2697.792439: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 7962
+           <...>-15568 [000] d..4  2697.831527: __free_cluster: [REMOTE __free_cluster] free cluster 1580
+           <...>-15568 [000] ...1  2698.249010: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8026
+           <...>-15568 [000] d..4  2698.693794: __free_cluster: [REMOTE __free_cluster] free cluster 556
+           <...>-15568 [000] d..4  2698.693829: __free_cluster: [REMOTE __free_cluster] free cluster 748
+           <...>-15568 [000] d..4  2698.693851: __free_cluster: [REMOTE __free_cluster] free cluster 940
+           <...>-15568 [000] d..4  2698.693868: __free_cluster: [REMOTE __free_cluster] free cluster 1004
+           <...>-15568 [000] d..4  2698.693873: __free_cluster: [REMOTE __free_cluster] free cluster 1068
+           <...>-15568 [000] d..4  2698.693888: __free_cluster: [REMOTE __free_cluster] free cluster 1388
+           <...>-15568 [000] d..4  2698.693893: __free_cluster: [REMOTE __free_cluster] free cluster 1452
+           <...>-15568 [000] d..4  2698.693900: __free_cluster: [REMOTE __free_cluster] free cluster 1836
+           <...>-15568 [000] d..4  2698.693907: __free_cluster: [REMOTE __free_cluster] free cluster 1708
+           <...>-15568 [000] d..4  2698.693954: __free_cluster: [REMOTE __free_cluster] free cluster 365
+           <...>-15568 [000] d..4  2698.693972: __free_cluster: [REMOTE __free_cluster] free cluster 493
+           <...>-15568 [000] ...1  2698.760251: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8090
+           <...>-15568 [000] d..4  2698.809295: __free_cluster: [REMOTE __free_cluster] free cluster 684
+           <...>-15568 [000] d..4  2698.809357: __free_cluster: [REMOTE __free_cluster] free cluster 1327
+           <...>-15568 [000] d..4  2698.809407: __free_cluster: [REMOTE __free_cluster] free cluster 367
+           <...>-15568 [000] ....  2698.885298: cold_page_sender_work: remote: total sent cold page: 32518
+           <...>-15568 [000] ....  2698.885307: cold_page_sender_work: remote: total faulted cold page: 55
+           <...>-200   [007] ....  2716.639680: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  2716.639687: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [007] d..2  2716.639690: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [007] d..2  2716.639693: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [007] d..2  2716.639696: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [007] d..2  2716.639698: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [007] d..2  2716.639701: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [007] d..2  2716.639705: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [007] d..2  2716.639708: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [007] d..2  2716.639712: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [007] ....  2716.639715: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-17275 [007] ....  2720.219804: app_switch_start_handler: ###########switch start! foreground 10122#############
+           <...>-17275 [007] ....  2720.219809: prefetch_handler: prefetch handler start! target(id,table): 5,0
+           <...>-7130  [001] ....  2720.353665: read_swap_cache_async: remote readpage 7130 ".candycrushsaga" 7f289a2000 59ae6
+           <...>-17275 [007] ....  2720.375768: update_to_nbd_flag: appid 5: table 1 is latter, total target 0 max idx e, l -> 47 79
+           <...>-17275 [007] ....  2720.380506: miss_page_handler: miss page handler start! target(id,table): 5,0
+           <...>-200   [007] ....  2720.380616: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  2720.380618: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [007] d..2  2720.380619: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [007] d..2  2720.380620: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [007] d..2  2720.380621: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [007] d..2  2720.380622: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [007] d..2  2720.380623: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [007] d..2  2720.380625: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [007] d..2  2720.380626: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [007] d..2  2720.380627: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [007] ....  2720.380628: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-15568 [000] ...1  2720.863424: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8154
+           <...>-15568 [000] ...1  2721.414500: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8218
+           <...>-15568 [000] d..4  2721.570857: __free_cluster: [REMOTE __free_cluster] free cluster 49
+           <...>-15568 [000] ...1  2721.938151: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8282
+           <...>-15568 [000] ...1  2722.466610: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8346
+           <...>-15568 [000] ...1  2722.980113: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8410
+           <...>-15568 [000] ...1  2723.499375: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8474
+           <...>-15568 [000] ...1  2724.008964: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8538
+           <...>-15568 [000] ...1  2724.515359: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8602
+           <...>-15568 [000] ...1  2725.018082: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8666
+           <...>-15568 [000] ...1  2725.548117: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8730
+           <...>-15568 [000] ...1  2726.091026: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8794
+           <...>-15568 [000] ...1  2726.645051: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8858
+           <...>-15568 [000] ...1  2727.187848: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8922
+           <...>-15568 [000] ...1  2727.706451: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 8986
+           <...>-15568 [000] ....  2727.910265: cold_page_sender_work: remote: total sent cold page: 36140
+           <...>-15568 [000] ....  2727.910317: cold_page_sender_work: remote: total faulted cold page: 56
+ io-core-Thread--8139  [000] ....  2746.598560: read_swap_cache_async: remote readpage 8093 "io-core-Thread-" 7e73f11000 201a43
+ io-core-Thread--8139  [000] ....  2746.602929: read_swap_cache_async: remote readpage 8093 "io-core-Thread-" 7e73f13000 201a44
+ io-core-Thread--8139  [000] ....  2746.605216: read_swap_cache_async: remote readpage 8093 "io-core-Thread-" 7e73f1a000 201a45
+ io-core-Thread--8139  [000] ....  2746.607363: read_swap_cache_async: remote readpage 8093 "io-core-Thread-" 7e73f09000 201a41
+ io-core-Thread--8139  [001] ....  2746.802574: read_swap_cache_async: remote readpage 8093 "io-core-Thread-" 7e73f06000 201a40
+           <...>-12681 [000] ....  2766.178707: read_swap_cache_async: remote readpage 7383 "Binder:7383_9" c752e000 199a1f
+           <...>-6960  [001] ....  2769.988712: read_swap_cache_async: remote readpage 6841 "BG Thread #10" 7eb30db000 91ad7
+   BG Thread #11-6984  [000] ....  2780.001524: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e5d799000 79a23
+   BG Thread #11-6984  [000] ....  2780.015993: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e5d77b000 79a1c
+   BG Thread #11-6984  [000] ....  2780.018199: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e5d77c000 79a1d
+           <...>-17415 [007] ....  2783.748330: app_switch_start_handler: ###########switch start! foreground 10136#############
+           <...>-17415 [007] ....  2783.748333: prefetch_handler: prefetch handler start! target(id,table): 7,0
+           <...>-17415 [007] ....  2783.969696: update_to_nbd_flag: appid 7: table 1 is latter, total target 0 max idx e, l -> 53 80
+           <...>-17415 [004] ....  2783.981787: miss_page_handler: miss page handler start! target(id,table): 7,0
+           <...>-200   [006] ....  2783.982428: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [006] d..2  2783.982430: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [006] d..2  2783.982432: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [006] d..2  2783.982433: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [006] d..2  2783.982434: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [006] d..2  2783.982434: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [006] d..2  2783.982436: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [006] d..2  2783.982437: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [006] d..2  2783.982438: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [006] d..2  2783.982440: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [006] ....  2783.982441: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-8786  [000] d..4  2784.029201: __free_cluster: [REMOTE __free_cluster] free cluster 1201
+           <...>-15568 [000] ...1  2784.402712: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9050
+           <...>-15568 [000] ...1  2784.916830: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9114
+           <...>-15568 [000] d..4  2785.383556: __free_cluster: [REMOTE __free_cluster] free cluster 1522
+           <...>-15568 [000] ...1  2785.408444: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9178
+           <...>-15568 [000] d..4  2785.979436: __free_cluster: [REMOTE __free_cluster] free cluster 1586
+           <...>-15568 [000] ...1  2786.005524: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9242
+           <...>-15568 [000] d..4  2786.454410: __free_cluster: [REMOTE __free_cluster] free cluster 1650
+           <...>-15568 [000] ...1  2786.476752: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9306
+           <...>-15568 [000] d..4  2786.928640: __free_cluster: [REMOTE __free_cluster] free cluster 1714
+           <...>-15568 [000] ...1  2786.952586: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9370
+           <...>-15568 [000] d..4  2787.492635: __free_cluster: [REMOTE __free_cluster] free cluster 1778
+           <...>-15568 [000] ...1  2787.518124: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9434
+           <...>-15568 [000] d..4  2787.986992: __free_cluster: [REMOTE __free_cluster] free cluster 1842
+           <...>-15568 [000] ...1  2788.010158: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9498
+           <...>-15568 [000] d..4  2788.467226: __free_cluster: [REMOTE __free_cluster] free cluster 1906
+           <...>-15568 [000] ...1  2788.494367: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9562
+           <...>-15568 [000] ...1  2789.018450: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9626
+           <...>-15568 [000] ...1  2789.542291: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9690
+           <...>-15568 [000] d..4  2789.897144: __free_cluster: [REMOTE __free_cluster] free cluster 627
+           <...>-15568 [000] ...1  2790.043336: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9754
+           <...>-15568 [000] d..4  2790.385660: __free_cluster: [REMOTE __free_cluster] free cluster 691
+           <...>-15568 [000] ...1  2790.599726: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9818
+           <...>-15568 [000] d..4  2790.931687: __free_cluster: [REMOTE __free_cluster] free cluster 755
+           <...>-15568 [000] ...1  2791.090424: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9882
+           <...>-15568 [000] d..4  2791.463172: __free_cluster: [REMOTE __free_cluster] free cluster 819
+           <...>-15568 [000] ...1  2791.624996: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 9946
+           <...>-15568 [000] d..4  2791.971966: __free_cluster: [REMOTE __free_cluster] free cluster 883
+           <...>-15568 [000] ...1  2792.115089: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10010
+           <...>-15568 [000] d..4  2792.457013: __free_cluster: [REMOTE __free_cluster] free cluster 947
+           <...>-15568 [000] ...1  2792.609268: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10074
+           <...>-15568 [000] d..4  2792.945838: __free_cluster: [REMOTE __free_cluster] free cluster 1011
+           <...>-15568 [000] ...1  2793.091485: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10138
+           <...>-15568 [000] d..4  2793.445079: __free_cluster: [REMOTE __free_cluster] free cluster 1075
+           <...>-15568 [000] ...1  2793.586909: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10202
+           <...>-15568 [000] ...1  2794.099336: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10266
+           <...>-15568 [000] ...1  2794.568325: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10330
+           <...>-15568 [000] dn.4  2794.908959: __free_cluster: [REMOTE __free_cluster] free cluster 1267
+           <...>-15568 [000] ...1  2795.068156: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10394
+           <...>-15568 [000] ...1  2795.567757: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10458
+           <...>-15568 [000] d..4  2795.911217: __free_cluster: [REMOTE __free_cluster] free cluster 1395
+           <...>-15568 [000] ...1  2796.063138: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10522
+           <...>-15568 [000] ...1  2796.544636: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10586
+           <...>-15568 [000] ...1  2797.082839: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10650
+           <...>-15568 [000] ...1  2797.630838: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10714
+           <...>-15568 [000] ...1  2798.118083: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10778
+           <...>-15568 [000] ...1  2798.610553: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10842
+           <...>-15568 [000] ...1  2799.083450: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10906
+           <...>-15568 [000] ...1  2799.574268: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 10970
+           <...>-15568 [000] ...1  2800.094951: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11034
+           <...>-15568 [000] d..4  2800.195012: __free_cluster: [REMOTE __free_cluster] free cluster 51
+           <...>-15568 [000] ...1  2800.636584: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11098
+           <...>-15568 [000] ...1  2801.130328: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11162
+           <...>-15568 [000] ...1  2801.692763: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11226
+           <...>-15568 [000] ...1  2802.191977: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11290
+           <...>-15568 [000] ...1  2802.736679: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11354
+           <...>-15568 [000] d..4  2802.830600: __free_cluster: [REMOTE __free_cluster] free cluster 435
+           <...>-15568 [000] ...1  2803.205022: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11418
+           <...>-15568 [000] d..4  2803.552245: __free_cluster: [REMOTE __free_cluster] free cluster 563
+           <...>-15568 [000] ...1  2803.717057: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11482
+           <...>-15568 [000] d..4  2804.075285: __free_cluster: [REMOTE __free_cluster] free cluster 1587
+           <...>-15568 [000] ...1  2804.230907: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11546
+           <...>-15568 [000] ...1  2804.763214: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11610
+           <...>-15568 [000] ...1  2805.284359: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11674
+           <...>-15568 [000] d..4  2805.515406: __free_cluster: [REMOTE __free_cluster] free cluster 1843
+           <...>-15568 [000] ...1  2805.792731: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11738
+           <...>-15568 [000] ...1  2806.267524: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11802
+           <...>-15568 [000] ...1  2806.775818: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11866
+           <...>-15568 [000] ...1  2807.296342: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11930
+           <...>-15568 [000] d..4  2807.398719: __free_cluster: [REMOTE __free_cluster] free cluster 1907
+           <...>-15568 [000] ...1  2807.808780: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 11994
+           <...>-15568 [000] d..4  2808.024538: __free_cluster: [REMOTE __free_cluster] free cluster 2033
+           <...>-15568 [000] ...1  2808.293045: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12058
+           <...>-15568 [000] ...1  2808.767199: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12122
+           <...>-15568 [000] ...1  2809.313477: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12186
+           <...>-15568 [000] ...1  2809.829191: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12250
+           <...>-15568 [000] ...1  2810.316857: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12314
+           <...>-15568 [000] d..4  2810.410813: __free_cluster: [REMOTE __free_cluster] free cluster 308
+           <...>-15568 [000] ...1  2810.788250: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12378
+           <...>-15568 [000] d..4  2811.325106: __free_cluster: [REMOTE __free_cluster] free cluster 244
+           <...>-15568 [000] ...1  2811.365105: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12442
+           <...>-15568 [000] ...1  2811.903067: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12506
+           <...>-15568 [000] ...1  2812.407204: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12570
+           <...>-15568 [000] ...1  2812.971857: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12634
+           <...>-15568 [000] d..4  2813.201261: __free_cluster: [REMOTE __free_cluster] free cluster 1330
+           <...>-15568 [000] d..4  2813.322911: __free_cluster: [REMOTE __free_cluster] free cluster 1458
+           <...>-15568 [000] d..4  2813.322929: __free_cluster: [REMOTE __free_cluster] free cluster 1394
+           <...>-15568 [000] d..4  2813.462655: __free_cluster: [REMOTE __free_cluster] free cluster 2034
+           <...>-15568 [000] d..4  2813.462839: __free_cluster: [REMOTE __free_cluster] free cluster 1970
+           <...>-15568 [000] ...1  2813.485875: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12698
+           <...>-15568 [000] d..4  2813.887408: __free_cluster: [REMOTE __free_cluster] free cluster 243
+           <...>-15568 [000] d..4  2814.026351: __free_cluster: [REMOTE __free_cluster] free cluster 371
+           <...>-15568 [000] d..4  2814.026415: __free_cluster: [REMOTE __free_cluster] free cluster 307
+           <...>-15568 [000] ...1  2814.050007: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12762
+           <...>-15568 [000] ...1  2814.553442: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12826
+           <...>-15568 [000] ...1  2815.047180: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12890
+           <...>-15568 [000] ...1  2815.633154: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 12954
+           <...>-15568 [000] ...1  2816.138773: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13018
+           <...>-15568 [000] d..4  2816.348530: __free_cluster: [REMOTE __free_cluster] free cluster 372
+           <...>-15568 [000] d..4  2816.348575: __free_cluster: [REMOTE __free_cluster] free cluster 1651
+           <...>-15568 [000] ...1  2816.657903: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13082
+           <...>-15568 [000] ...1  2817.182766: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13146
+           <...>-15568 [000] ...1  2817.681909: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13210
+           <...>-15568 [000] ...1  2818.192979: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13274
+           <...>-15568 [000] ...1  2818.669755: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13338
+           <...>-15568 [000] d..4  2818.902235: __free_cluster: [REMOTE __free_cluster] free cluster 370
+           <...>-15568 [000] ...1  2819.196868: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13402
+           <...>-15568 [000] d..4  2819.540818: __free_cluster: [REMOTE __free_cluster] free cluster 564
+           <...>-15568 [000] ...1  2819.686033: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13466
+           <...>-15568 [000] ...1  2820.178132: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13530
+           <...>-15568 [000] d..4  2820.556626: __free_cluster: [REMOTE __free_cluster] free cluster 48
+           <...>-15568 [000] ...1  2820.745900: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13594
+           <...>-15568 [000] d..4  2820.968341: __free_cluster: [REMOTE __free_cluster] free cluster 179
+           <...>-15568 [000] ...1  2821.224477: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13658
+           <...>-15568 [000] ...1  2821.692965: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13722
+           <...>-15568 [000] ...1  2822.229622: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13786
+           <...>-15568 [000] d..4  2822.479387: __free_cluster: [REMOTE __free_cluster] free cluster 434
+           <...>-15568 [000] d..4  2822.479416: __free_cluster: [REMOTE __free_cluster] free cluster 306
+           <...>-15568 [000] ...1  2822.767053: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13850
+           <...>-15568 [000] ...1  2823.260370: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13914
+           <...>-15568 [000] d..4  2823.478307: __free_cluster: [REMOTE __free_cluster] free cluster 242
+           <...>-15568 [000] ...1  2823.747876: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 13978
+           <...>-15568 [000] d..4  2823.950022: __free_cluster: [REMOTE __free_cluster] free cluster 115
+           <...>-15568 [000] d..4  2823.950251: __free_cluster: [REMOTE __free_cluster] free cluster 50
+           <...>-15568 [000] ...1  2824.222434: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 9: alloc new cluster 14042
+           <...>-15568 [000] d..4  2824.301579: __free_cluster: [REMOTE __free_cluster] free cluster 1971
+           <...>-15568 [000] d..4  2824.301600: __free_cluster: [REMOTE __free_cluster] free cluster 1266
+           <...>-15568 [000] d..4  2824.418284: __free_cluster: [REMOTE __free_cluster] free cluster 1777
+           <...>-15568 [000] d..4  2824.418320: __free_cluster: [REMOTE __free_cluster] free cluster 1138
+           <...>-15568 [000] d..4  2824.418340: __free_cluster: [REMOTE __free_cluster] free cluster 1202
+           <...>-15568 [000] d..4  2824.418360: __free_cluster: [REMOTE __free_cluster] free cluster 1074
+           <...>-15568 [000] d..4  2824.545111: __free_cluster: [REMOTE __free_cluster] free cluster 946
+           <...>-15568 [000] ....  2824.588260: cold_page_sender_work: remote: total sent cold page: 56452
+           <...>-15568 [000] ....  2824.588267: cold_page_sender_work: remote: total faulted cold page: 66
+   BG Thread #11-6984  [000] ....  2829.990667: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e5f101000 81ac9
+   BG Thread #11-6984  [000] ....  2830.005823: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e5f100000 81ac8
+   BG Thread #11-6984  [000] ....  2830.007496: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e5f0ff000 81ac7
+   BG Thread #11-6984  [000] ....  2830.009291: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e76404000 8da23
+   BG Thread #11-6984  [000] ....  2830.012978: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e76465000 8da3f
+   BG Thread #11-6984  [000] ....  2830.014649: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e764d1000 8da5f
+   BG Thread #11-6984  [000] ....  2830.027038: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e62a39000 85a93
+   BG Thread #11-6984  [000] ....  2830.037138: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e764d3000 8da61
+   BG Thread #11-6984  [000] ....  2830.049170: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e5d5cb000 75ade
+   BG Thread #11-6984  [000] ....  2830.051064: read_swap_cache_async: remote readpage 6841 "BG Thread #11" 7e5d5cc000 75adf
+           <...>-17554 [007] ....  2847.595743: app_switch_start_handler: ###########switch start! foreground 10127#############
+           <...>-17554 [007] ....  2847.595746: prefetch_handler: prefetch handler start! target(id,table): 2,0
+           <...>-17554 [007] ....  2847.736978: update_to_nbd_flag: appid 2: table 1 is latter, total target 0 max idx e, l -> 2 21
+           <...>-17554 [007] ....  2847.742115: miss_page_handler: miss page handler start! target(id,table): 2,0
+           <...>-200   [006] ....  2847.742611: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [006] d..2  2847.742614: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [006] d..2  2847.742616: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [006] d..2  2847.742617: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [006] d..2  2847.742618: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [006] d..2  2847.742619: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [006] d..2  2847.742620: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [006] d..2  2847.742622: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [006] d..2  2847.742623: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [006] d..2  2847.742625: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [006] ....  2847.742625: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-15568 [000] ....  2847.794347: cold_page_sender_work: remote: total sent cold page: 56449
+           <...>-15568 [000] ....  2847.794352: cold_page_sender_work: remote: total faulted cold page: 76
+           <...>-6278  [001] ....  2851.735056: read_swap_cache_async: remote readpage 6242 "DefaultPool1" 7e7667f000 19a6f
+           <...>-6278  [001] ....  2851.737153: read_swap_cache_async: remote readpage 6242 "DefaultPool1" 7e76680000 19a70
+           <...>-200   [007] ....  2866.826357: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  2866.826365: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [007] d..2  2866.826369: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [007] d..2  2866.826373: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [007] d..2  2866.826377: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [007] d..2  2866.826379: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [007] d..2  2866.826384: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [007] d..2  2866.826391: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [007] d..2  2866.826394: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [007] d..2  2866.826399: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [007] ....  2866.826402: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-17744 [007] ....  2876.234581: app_switch_start_handler: ###########switch start! foreground 10159#############
+           <...>-17744 [007] ....  2876.234585: prefetch_handler: prefetch handler start! target(id,table): 6,0
+           <...>-17744 [005] ....  2876.335433: update_to_nbd_flag: appid 6: table 0 is latter, total target 0 max idx e, l -> 3 14
+           <...>-17744 [005] ....  2876.347466: miss_page_handler: miss page handler start! target(id,table): 6,1
+           <...>-200   [007] ....  2876.348759: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  2876.348763: send_target_manager: send target manager - id, which_table : 0, 0
+           <...>-200   [007] d..2  2876.348764: send_target_manager: send target manager - id, which_table : 1, 0
+           <...>-200   [007] d..2  2876.348765: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [007] d..2  2876.348766: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [007] d..2  2876.348767: send_target_manager: send target manager - id, which_table : 4, 0
+           <...>-200   [007] d..2  2876.348768: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [007] d..2  2876.348770: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [007] d..2  2876.348771: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [007] d..2  2876.348773: send_target_manager: send target manager - id, which_table : 8, 0
+           <...>-200   [007] ....  2876.348774: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6944  [000] ....  2929.614810: read_swap_cache_async: remote readpage 6841 "Network File Th" 7e80d00000 8dad4
+           <...>-17891 [007] ....  2930.058963: swap_counter_dump_handler: pid 6242: counter 0 = 0
+           <...>-17891 [007] ....  2930.058966: swap_counter_dump_handler: pid 6242: counter 1 = 2
+           <...>-17891 [007] ....  2930.058968: swap_counter_dump_handler: pid 6242: counter 2 = 0
+           <...>-17891 [007] ....  2930.058968: swap_counter_dump_handler: pid 6242: counter 3 = 0
+           <...>-17891 [007] ....  2930.058969: swap_counter_dump_handler: pid 6242: counter 4 = 0
+           <...>-17891 [007] ....  2930.058969: swap_counter_dump_handler: pid 6242: counter 5 = 0
+           <...>-17891 [007] ....  2930.058970: swap_counter_dump_handler: pid 6242: counter >5 = 0
+           <...>-17891 [007] ....  2930.058971: swap_counter_dump_handler: remote: total sent cold page: 56446
+           <...>-17891 [007] ....  2930.058972: swap_counter_dump_handler: remote: total faulted cold page: 79
+           <...>-17893 [007] ....  2930.074381: swap_counter_dump_handler: pid 6841: counter 0 = 0
+           <...>-17893 [007] ....  2930.074385: swap_counter_dump_handler: pid 6841: counter 1 = 0
+           <...>-17893 [007] ....  2930.074386: swap_counter_dump_handler: pid 6841: counter 2 = 0
+           <...>-17893 [007] ....  2930.074387: swap_counter_dump_handler: pid 6841: counter 3 = 0
+           <...>-17893 [007] ....  2930.074387: swap_counter_dump_handler: pid 6841: counter 4 = 0
+           <...>-17893 [007] ....  2930.074388: swap_counter_dump_handler: pid 6841: counter 5 = 0
+           <...>-17893 [007] ....  2930.074389: swap_counter_dump_handler: pid 6841: counter >5 = 0
+           <...>-17893 [007] ....  2930.074390: swap_counter_dump_handler: remote: total sent cold page: 56446
+           <...>-17893 [007] ....  2930.074391: swap_counter_dump_handler: remote: total faulted cold page: 79
+           <...>-17895 [007] ....  2930.088274: swap_counter_dump_handler: pid 7130: counter 0 = 0
+           <...>-17895 [007] ....  2930.088276: swap_counter_dump_handler: pid 7130: counter 1 = 11
+           <...>-17895 [007] ....  2930.088277: swap_counter_dump_handler: pid 7130: counter 2 = 0
+           <...>-17895 [007] ....  2930.088278: swap_counter_dump_handler: pid 7130: counter 3 = 0
+           <...>-17895 [007] ....  2930.088279: swap_counter_dump_handler: pid 7130: counter 4 = 0
+           <...>-17895 [007] ....  2930.088279: swap_counter_dump_handler: pid 7130: counter 5 = 0
+           <...>-17895 [007] ....  2930.088280: swap_counter_dump_handler: pid 7130: counter >5 = 0
+           <...>-17895 [007] ....  2930.088280: swap_counter_dump_handler: remote: total sent cold page: 56446
+           <...>-17895 [007] ....  2930.088281: swap_counter_dump_handler: remote: total faulted cold page: 79
+              sh-17897 [007] ....  2930.098287: swap_counter_dump_handler: pid 7383: counter 0 = 0
+              sh-17897 [007] ....  2930.098290: swap_counter_dump_handler: pid 7383: counter 1 = 0
+              sh-17897 [007] ....  2930.098291: swap_counter_dump_handler: pid 7383: counter 2 = 0
+              sh-17897 [007] ....  2930.098291: swap_counter_dump_handler: pid 7383: counter 3 = 0
+              sh-17897 [007] ....  2930.098292: swap_counter_dump_handler: pid 7383: counter 4 = 0
+              sh-17897 [007] ....  2930.098292: swap_counter_dump_handler: pid 7383: counter 5 = 0
+              sh-17897 [007] ....  2930.098292: swap_counter_dump_handler: pid 7383: counter >5 = 0
+              sh-17897 [007] ....  2930.098293: swap_counter_dump_handler: remote: total sent cold page: 56446
+              sh-17897 [007] ....  2930.098294: swap_counter_dump_handler: remote: total faulted cold page: 79
+              sh-17899 [007] ....  2930.112885: swap_counter_dump_handler: pid 8093: counter 0 = 0
+              sh-17899 [007] ....  2930.112888: swap_counter_dump_handler: pid 8093: counter 1 = 18
+              sh-17899 [007] ....  2930.112889: swap_counter_dump_handler: pid 8093: counter 2 = 42
+              sh-17899 [007] ....  2930.112892: swap_counter_dump_handler: pid 8093: counter 3 = 1
+              sh-17899 [007] ....  2930.112892: swap_counter_dump_handler: pid 8093: counter 4 = 0
+              sh-17899 [007] ....  2930.112892: swap_counter_dump_handler: pid 8093: counter 5 = 0
+              sh-17899 [007] ....  2930.112893: swap_counter_dump_handler: pid 8093: counter >5 = 0
+              sh-17899 [007] ....  2930.112894: swap_counter_dump_handler: remote: total sent cold page: 56446
+              sh-17899 [007] ....  2930.112895: swap_counter_dump_handler: remote: total faulted cold page: 79
+              sh-17901 [007] ....  2930.134896: swap_counter_dump_handler: pid 8557: counter 0 = 0
+              sh-17901 [007] ....  2930.134900: swap_counter_dump_handler: pid 8557: counter 1 = 0
+              sh-17901 [007] ....  2930.134900: swap_counter_dump_handler: pid 8557: counter 2 = 7908
+              sh-17901 [007] ....  2930.134901: swap_counter_dump_handler: pid 8557: counter 3 = 32274
+              sh-17901 [007] ....  2930.134902: swap_counter_dump_handler: pid 8557: counter 4 = 0
+              sh-17901 [007] ....  2930.134902: swap_counter_dump_handler: pid 8557: counter 5 = 0
+              sh-17901 [007] ....  2930.134903: swap_counter_dump_handler: pid 8557: counter >5 = 0
+              sh-17901 [007] ....  2930.134904: swap_counter_dump_handler: remote: total sent cold page: 56446
+              sh-17901 [007] ....  2930.134905: swap_counter_dump_handler: remote: total faulted cold page: 79
+              sh-17903 [007] ....  2930.149675: swap_counter_dump_handler: pid 9034: counter 0 = 0
+              sh-17903 [007] ....  2930.149677: swap_counter_dump_handler: pid 9034: counter 1 = 7
+              sh-17903 [007] ....  2930.149678: swap_counter_dump_handler: pid 9034: counter 2 = 5332
+              sh-17903 [007] ....  2930.149679: swap_counter_dump_handler: pid 9034: counter 3 = 0
+              sh-17903 [007] ....  2930.149679: swap_counter_dump_handler: pid 9034: counter 4 = 0
+              sh-17903 [007] ....  2930.149680: swap_counter_dump_handler: pid 9034: counter 5 = 0
+              sh-17903 [007] ....  2930.149680: swap_counter_dump_handler: pid 9034: counter >5 = 0
+              sh-17903 [007] ....  2930.149681: swap_counter_dump_handler: remote: total sent cold page: 56446
+              sh-17903 [007] ....  2930.149682: swap_counter_dump_handler: remote: total faulted cold page: 79
+              sh-17905 [007] ....  2930.162932: swap_counter_dump_handler: pid 9380: counter 0 = 0
+              sh-17905 [007] ....  2930.162935: swap_counter_dump_handler: pid 9380: counter 1 = 7611
+              sh-17905 [007] ....  2930.162936: swap_counter_dump_handler: pid 9380: counter 2 = 1935
+              sh-17905 [007] ....  2930.162937: swap_counter_dump_handler: pid 9380: counter 3 = 0
+              sh-17905 [007] ....  2930.162937: swap_counter_dump_handler: pid 9380: counter 4 = 0
+              sh-17905 [007] ....  2930.162938: swap_counter_dump_handler: pid 9380: counter 5 = 0
+              sh-17905 [007] ....  2930.162938: swap_counter_dump_handler: pid 9380: counter >5 = 0
+              sh-17905 [007] ....  2930.162939: swap_counter_dump_handler: remote: total sent cold page: 56446
+              sh-17905 [007] ....  2930.162940: swap_counter_dump_handler: remote: total faulted cold page: 79
+              sh-17907 [007] ....  2930.177904: swap_counter_dump_handler: pid 10094: counter 0 = 671
+              sh-17907 [007] ....  2930.177907: swap_counter_dump_handler: pid 10094: counter 1 = 6
+              sh-17907 [007] ....  2930.177908: swap_counter_dump_handler: pid 10094: counter 2 = 0
+              sh-17907 [007] ....  2930.177909: swap_counter_dump_handler: pid 10094: counter 3 = 0
+              sh-17907 [007] ....  2930.177910: swap_counter_dump_handler: pid 10094: counter 4 = 0
+              sh-17907 [007] ....  2930.177910: swap_counter_dump_handler: pid 10094: counter 5 = 0
+              sh-17907 [007] ....  2930.177911: swap_counter_dump_handler: pid 10094: counter >5 = 0
+              sh-17907 [007] ....  2930.177912: swap_counter_dump_handler: remote: total sent cold page: 56446
+              sh-17907 [007] ....  2930.177913: swap_counter_dump_handler: remote: total faulted cold page: 79

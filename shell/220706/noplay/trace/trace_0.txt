@@ -1,0 +1,66 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 55/55   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-200   [006] ....     0.527588: send_target_manager: 3[REMOTE send_target_manager] target manager started
+           <...>-200   [006] ....     0.527602: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [003] ....     0.527650: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [003] ....     0.527661: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6236  [007] ....    36.144588: app_switch_start_handler: ###########switch start! foreground 10135#############
+           <...>-6236  [007] ....    36.144592: prefetch_handler: prefetch handler start! target(id,table): 0,0
+           <...>-6236  [006] ....    36.839735: miss_page_handler: miss page handler start! target(id,table): 0,1
+           <...>-200   [005] ....    36.840467: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [005] ....    36.840472: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6834  [007] ....    68.433184: app_switch_start_handler: ###########switch start! foreground 10126#############
+           <...>-6834  [007] ....    68.433187: prefetch_handler: prefetch handler start! target(id,table): 1,0
+           <...>-6834  [004] ....    69.583495: miss_page_handler: miss page handler start! target(id,table): 1,1
+           <...>-200   [004] ....    69.583602: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] ....    69.583605: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7122  [007] ....   101.681039: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-7122  [007] ....   101.681044: prefetch_handler: prefetch handler start! target(id,table): 4,0
+           <...>-7122  [006] ....   102.317094: miss_page_handler: miss page handler start! target(id,table): 4,1
+           <...>-200   [004] ....   102.317120: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] ....   102.317123: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [004] ....   163.466695: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] ....   163.466700: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7822  [007] ....   174.995753: app_switch_start_handler: ###########switch start! foreground 10124#############
+           <...>-7822  [007] ....   174.995757: prefetch_handler: prefetch handler start! target(id,table): 8,0
+           <...>-7822  [005] ....   175.245824: miss_page_handler: miss page handler start! target(id,table): 8,1
+           <...>-200   [005] ....   175.245945: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [005] ....   175.245948: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-8087  [007] ....   209.067660: app_switch_start_handler: ###########switch start! foreground 10133#############
+           <...>-8087  [007] ....   209.067665: prefetch_handler: prefetch handler start! target(id,table): 3,0
+           <...>-8087  [005] ....   209.884589: miss_page_handler: miss page handler start! target(id,table): 3,1
+           <...>-200   [005] ....   209.885170: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [005] ....   209.885173: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-8543  [007] ....   253.653173: app_switch_start_handler: ###########switch start! foreground 10122#############
+           <...>-8543  [007] ....   253.653180: prefetch_handler: prefetch handler start! target(id,table): 5,0
+           <...>-8543  [006] ....   254.143957: miss_page_handler: miss page handler start! target(id,table): 5,1
+           <...>-200   [006] ....   254.144645: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [006] ....   254.144649: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [003] ....   313.653825: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [003] ....   313.653841: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-9022  [007] ....   328.190336: app_switch_start_handler: ###########switch start! foreground 10136#############
+           <...>-9022  [007] ....   328.190339: prefetch_handler: prefetch handler start! target(id,table): 7,0
+           <...>-9022  [004] ....   328.970284: miss_page_handler: miss page handler start! target(id,table): 7,1
+           <...>-200   [004] ....   328.970939: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] ....   328.970943: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-9374  [007] ....   403.820685: app_switch_start_handler: ###########switch start! foreground 10127#############
+           <...>-9374  [007] ....   403.820689: prefetch_handler: prefetch handler start! target(id,table): 2,0
+           <...>-9374  [006] ....   404.888675: miss_page_handler: miss page handler start! target(id,table): 2,1
+           <...>-200   [004] ....   404.888695: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] ....   404.888699: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-10086 [007] ....   445.224108: app_switch_start_handler: ###########switch start! foreground 10159#############
+           <...>-10086 [007] ....   445.224113: prefetch_handler: prefetch handler start! target(id,table): 6,0
+           <...>-10086 [004] ....   446.061633: miss_page_handler: miss page handler start! target(id,table): 6,1
+           <...>-200   [004] ....   446.061744: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] ....   446.061747: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [004] ....   463.840096: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] ....   463.840107: send_target_manager: 3[REMOTE send_target_manager] target manager slept

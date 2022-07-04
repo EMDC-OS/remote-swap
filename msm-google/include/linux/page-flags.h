@@ -107,6 +107,9 @@ enum pageflags {
 	PG_young,
 	PG_idle,
 #endif
+#ifdef CONFIG_APP_AWARE
+	PG_excepted,
+#endif
 	__NR_PAGEFLAGS,
 
 	/* Filesystems */
@@ -376,6 +379,12 @@ SETPAGEFLAG(Young, young, PF_ANY)
 TESTCLEARFLAG(Young, young, PF_ANY)
 PAGEFLAG(Idle, idle, PF_ANY)
 #endif
+
+
+#ifdef CONFIG_APP_AWARE
+PAGEFLAG(Excepted, excepted, PF_ANY)
+#endif
+
 
 /*
  * On an anonymous page mapped into a user virtual memory area,

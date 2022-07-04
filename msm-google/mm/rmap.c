@@ -1644,7 +1644,12 @@ static bool try_to_unmap_one(struct page *page, struct vm_area_struct *vma,
 			}
 			dec_mm_counter(mm, MM_ANONPAGES);
 			inc_mm_counter(mm, MM_SWAPENTS);
+
 			swp_pte = swp_entry_to_pte(entry);
+#ifdef CONFIG_APP_AWARE
+			if(swp_type(entry)==ZRAM_TYPE && PageExcepted(page))
+				swp_pte = swp_entry_with_excepted(entry);
+#endif
 			if (pte_soft_dirty(pteval))
 				swp_pte = pte_swp_mksoft_dirty(swp_pte);
 			set_pte_at(mm, address, pvmw.pte, swp_pte);

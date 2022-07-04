@@ -1,0 +1,990 @@
+[ 4814.482907] type=1400 audit(1656325858.717:2551): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4814.483035] type=1400 audit(1656325858.717:2551): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4814.483344] type=1400 audit(1656325858.717:2552): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4814.521339] google_charger: usbchg=USB typec=C usbv=4870 usbc=487 usbMv=5000 usbMc=500
+[ 4814.521436] sm8150_bms: MSC_PCS chg_state=1f410ce01030011 [0x11:1:3:4302:500] chg=u
+[ 4814.521442] google_battery: MSC_DIN chg_state=1f410ce01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4302 icl=500
+[ 4814.524295] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4302187 ibatt=29687 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4814.524300] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4814.524303] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4814.524318] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4815.507487] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4815.599063] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4815.602068] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4815.602071] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4815.602074] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4815.602076] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4815.602170] msm_vidc:  err: This control 980928 is not supported yet
+[ 4815.604597] msm_vidc:  err: This control 980928 is not supported yet
+[ 4815.604613] msm_vidc:  err: This control 980927 is not supported yet
+[ 4815.616719] msm_vidc:  err: This control 980927 is not supported yet
+[ 4816.526336] google_charger: usbchg=USB typec=C usbv=4866 usbc=489 usbMv=5000 usbMc=500
+[ 4816.526434] sm8150_bms: MSC_PCS chg_state=1f410de01030011 [0x11:1:3:4318:500] chg=u
+[ 4816.526438] google_battery: MSC_DIN chg_state=1f410de01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4318 icl=500
+[ 4816.529497] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4310156 ibatt=73750 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4816.529501] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4816.529503] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4816.529513] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4816.839050] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4817.023102] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4817.025848] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4817.025853] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4817.025857] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4817.025860] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4817.025920] msm_vidc:  err: This control 980928 is not supported yet
+[ 4817.028819] msm_vidc:  err: This control 980928 is not supported yet
+[ 4817.028836] msm_vidc:  err: This control 980927 is not supported yet
+[ 4817.041804] msm_vidc:  err: This control 980927 is not supported yet
+[ 4818.333797] type=1400 audit(1656325858.717:2552): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4818.333825] type=1400 audit(1656325862.570:2553): avc: denied { associate } for comm="Binder:791_3" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[ 4818.530980] google_charger: usbchg=USB typec=C usbv=4870 usbc=487 usbMv=5000 usbMc=500
+[ 4818.531076] sm8150_bms: MSC_PCS chg_state=1f410d601030011 [0x11:1:3:4310:500] chg=u
+[ 4818.531080] google_battery: MSC_DIN chg_state=1f410d601030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4310 icl=500
+[ 4818.533708] google_battery: MSC_LAST vbatt=4311562 ibatt=-11250 fv_uv=4400000
+[ 4818.533712] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4818.533714] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4818.533724] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4819.684849] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4819.687682] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4819.687686] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4819.687689] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4819.687691] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4819.687758] msm_vidc:  err: This control 980928 is not supported yet
+[ 4819.690360] msm_vidc:  err: This control 980928 is not supported yet
+[ 4819.690380] msm_vidc:  err: This control 980927 is not supported yet
+[ 4819.711761] msm_vidc:  err: This control 980927 is not supported yet
+[ 4819.907180] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4820.535395] google_charger: usbchg=USB typec=C usbv=4955 usbc=340 usbMv=5000 usbMc=500
+[ 4820.535505] sm8150_bms: MSC_PCS chg_state=1f410d601030001 [0x1:1:3:4310:500] chg=u
+[ 4820.535511] google_battery: MSC_DIN chg_state=1f410d601030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4310 icl=500
+[ 4820.542862] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4302031 ibatt=110937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4820.542869] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4820.542873] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4820.542891] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4821.248478] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4822.544435] google_charger: usbchg=USB typec=C usbv=4881 usbc=487 usbMv=5000 usbMc=500
+[ 4822.544541] sm8150_bms: MSC_PCS chg_state=1f410dd01030011 [0x11:1:3:4317:500] chg=u
+[ 4822.544548] google_battery: MSC_DIN chg_state=1f410dd01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4317 icl=500
+[ 4822.547450] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4313593 ibatt=80312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4822.547457] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4822.547460] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4822.547478] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4823.928221] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4823.934770] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4823.934773] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4823.934776] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4823.934778] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4823.934780] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4823.934782] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4823.934783] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4823.934785] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4823.934851] msm_vidc:  err: This control 980928 is not supported yet
+[ 4823.938805] msm_vidc:  err: This control 980928 is not supported yet
+[ 4823.938822] msm_vidc:  err: This control 980927 is not supported yet
+[ 4823.952603] msm_vidc:  err: This control 980927 is not supported yet
+[ 4824.551304] google_charger: usbchg=USB typec=C usbv=4872 usbc=487 usbMv=5000 usbMc=500
+[ 4824.551399] sm8150_bms: MSC_PCS chg_state=1f410da01030011 [0x11:1:3:4314:500] chg=u
+[ 4824.551404] google_battery: MSC_DIN chg_state=1f410da01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4314 icl=500
+[ 4824.553946] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4307656 ibatt=87500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4824.553952] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4824.553954] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4824.553966] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4826.555572] google_charger: usbchg=USB typec=C usbv=4874 usbc=488 usbMv=5000 usbMc=500
+[ 4826.555692] sm8150_bms: MSC_PCS chg_state=1f410fa01030011 [0x11:1:3:4346:500] chg=u
+[ 4826.555702] google_battery: MSC_DIN chg_state=1f410fa01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4346 icl=500
+[ 4826.558017] max1720x 2-0036: s=2->1 c=-168125 avg_c=67500 ichgt=140000 vfsoc=97 soc=98 fullsocthr=90
+[ 4826.559010] google_battery: MSC_LAST vbatt=4339062 ibatt=-168125 fv_uv=4400000
+[ 4826.559020] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4826.559024] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4826.559045] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4828.561496] google_charger: usbchg=USB typec=C usbv=4947 usbc=178 usbMv=5000 usbMc=500
+[ 4828.561621] sm8150_bms: MSC_PCS chg_state=1f410e801030001 [0x1:1:3:4328:500] chg=u
+[ 4828.561636] google_battery: MSC_DIN chg_state=1f410e801030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4328 icl=500
+[ 4828.564174] max1720x 2-0036: s=1->2 c=312 avg_c=66875 ichgt=140000 vfsoc=97 soc=98 fullsocthr=90
+[ 4828.565183] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4323750 ibatt=312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4828.565192] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4828.565196] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4828.565217] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4830.318046] type=1400 audit(1656325862.570:2553): avc: denied { associate } for comm="Binder:791_3" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[ 4830.318612] type=1400 audit(1656325874.554:2554): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4830.318859] type=1400 audit(1656325874.554:2554): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4830.319518] type=1400 audit(1656325874.554:2555): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4830.566913] google_charger: usbchg=USB typec=C usbv=4876 usbc=487 usbMv=5000 usbMc=500
+[ 4830.567012] sm8150_bms: MSC_PCS chg_state=1f410e901030011 [0x11:1:3:4329:500] chg=u
+[ 4830.567019] google_battery: MSC_DIN chg_state=1f410e901030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4329 icl=500
+[ 4830.569691] google_battery: MSC_LAST vbatt=4328906 ibatt=-2812 fv_uv=4400000
+[ 4830.569695] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4830.569698] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4830.569707] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4831.004523] type=1400 audit(1656325874.554:2555): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4831.005194] type=1400 audit(1656325875.240:2556): avc: denied { call } for comm="Thread-15" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[ 4831.497710] type=1400 audit(1656325875.240:2556): avc: denied { call } for comm="Thread-15" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[ 4831.498350] type=1400 audit(1656325875.734:2557): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4831.498526] type=1400 audit(1656325875.734:2557): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4831.498825] type=1400 audit(1656325875.734:2558): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4831.815080] type=1400 audit(1656325875.734:2558): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4831.819436] type=1400 audit(1656325876.050:2559): avc: denied { call } for comm="SIMPLE_WORKER7" scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.instagram.android
+[ 4832.327708] CPU6: update max cpu_capacity 801
+[ 4832.382888] CPU7: update max cpu_capacity 802
+[ 4832.571238] google_charger: usbchg=USB typec=C usbv=4874 usbc=486 usbMv=5000 usbMc=500
+[ 4832.571344] sm8150_bms: MSC_PCS chg_state=1f410ec01030011 [0x11:1:3:4332:500] chg=u
+[ 4832.571354] google_battery: MSC_DIN chg_state=1f410ec01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4832.574042] google_battery: MSC_LAST vbatt=4336718 ibatt=-102187 fv_uv=4400000
+[ 4832.574050] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4832.574055] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4832.574075] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4834.322581] CPU6: update max cpu_capacity 836
+[ 4834.323188] CPU7: update max cpu_capacity 837
+[ 4834.575787] google_charger: usbchg=USB typec=C usbv=4953 usbc=228 usbMv=5000 usbMc=500
+[ 4834.575882] sm8150_bms: MSC_PCS chg_state=1f410eb01030001 [0x1:1:3:4331:500] chg=u
+[ 4834.575886] google_battery: MSC_DIN chg_state=1f410eb01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4331 icl=500
+[ 4834.578455] google_battery: MSC_LAST vbatt=4325156 ibatt=-5000 fv_uv=4400000
+[ 4834.578458] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4834.578460] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4834.578470] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4834.815945] type=1400 audit(1656325876.050:2559): avc: denied { call } for comm="SIMPLE_WORKER7" scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.instagram.android
+[ 4834.816311] type=1400 audit(1656325879.054:2560): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4834.816440] type=1400 audit(1656325879.054:2560): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4834.816964] type=1400 audit(1656325879.054:2561): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4834.977960] backgrounded_uid 10127
+[ 4834.985421] backgrounded_uid 10127
+[ 4835.126824] afe_tdm_port_start: top_id:10001ccc acdb_id:512 port_id:0x9021
+[ 4835.137202] snd_pcm_hw_constraint_integer failed
+[ 4835.137210] msm_pcm_open: P buffer bytes minmax constraint ret 1
+[ 4835.161078] afe_tdm_port_start: top_id:10000ccc acdb_id:513 port_id:0x9020
+[ 4835.654162] type=1400 audit(1656325879.054:2561): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4835.656002] type=1400 audit(1656325879.890:2562): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4835.657421] type=1400 audit(1656325879.890:2562): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4835.657777] type=1400 audit(1656325879.890:2563): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4836.323914] CPU6: update max cpu_capacity 871
+[ 4836.579987] google_charger: usbchg=USB typec=C usbv=4920 usbc=306 usbMv=5000 usbMc=500
+[ 4836.580091] sm8150_bms: MSC_PCS chg_state=1f410da01030001 [0x1:1:3:4314:500] chg=u
+[ 4836.580099] google_battery: MSC_DIN chg_state=1f410da01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4314 icl=500
+[ 4836.582806] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4317031 ibatt=3125 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4836.582811] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4836.582814] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4836.582829] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4838.327516] CPU7: update max cpu_capacity 913
+[ 4838.584403] google_charger: usbchg=USB typec=C usbv=4915 usbc=444 usbMv=5000 usbMc=500
+[ 4838.584514] sm8150_bms: MSC_PCS chg_state=1f410e401030001 [0x1:1:3:4324:500] chg=u
+[ 4838.584522] google_battery: MSC_DIN chg_state=1f410e401030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4324 icl=500
+[ 4838.587558] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4321875 ibatt=1250 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4838.587565] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4838.587569] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4838.587586] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4839.782321] type=1400 audit(1656325879.890:2563): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4839.784106] type=1400 audit(1656325884.017:2564): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4839.784958] type=1400 audit(1656325884.017:2564): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4839.786086] type=1400 audit(1656325884.017:2565): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4840.125857] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4840.125864] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4840.125868] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4840.125872] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4840.131193] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4840.345866] CPU7: update max cpu_capacity 954
+[ 4840.589120] google_charger: usbchg=USB typec=C usbv=4865 usbc=487 usbMv=5000 usbMc=500
+[ 4840.589273] sm8150_bms: MSC_PCS chg_state=1f410d601030011 [0x11:1:3:4310:500] chg=u
+[ 4840.589281] google_battery: MSC_DIN chg_state=1f410d601030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4310 icl=500
+[ 4840.592159] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4309843 ibatt=86250 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4840.592166] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4840.592171] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4840.592191] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4842.421339] CPU7: update max cpu_capacity 989
+[ 4842.594917] google_charger: usbchg=USB typec=C usbv=4882 usbc=488 usbMv=5000 usbMc=500
+[ 4842.595050] sm8150_bms: MSC_PCS chg_state=1f410eb01030011 [0x11:1:3:4331:500] chg=u
+[ 4842.595066] google_battery: MSC_DIN chg_state=1f410eb01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4331 icl=500
+[ 4842.598588] google_battery: MSC_LAST vbatt=4333281 ibatt=-106250 fv_uv=4400000
+[ 4842.598601] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4842.598609] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4842.598639] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4844.600300] google_charger: usbchg=USB typec=C usbv=4946 usbc=247 usbMv=5000 usbMc=500
+[ 4844.600420] sm8150_bms: MSC_PCS chg_state=1f410ea01030001 [0x1:1:3:4330:500] chg=u
+[ 4844.600432] google_battery: MSC_DIN chg_state=1f410ea01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4330 icl=500
+[ 4844.603925] google_battery: MSC_LAST vbatt=4323906 ibatt=0 fv_uv=4400000
+[ 4844.603934] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4844.603939] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4844.603965] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4845.043347] CPU7: update max cpu_capacity 1024
+[ 4846.605511] google_charger: usbchg=USB typec=C usbv=4887 usbc=469 usbMv=5000 usbMc=500
+[ 4846.605623] sm8150_bms: MSC_PCS chg_state=1f410e901030001 [0x1:1:3:4329:500] chg=u
+[ 4846.605632] google_battery: MSC_DIN chg_state=1f410e901030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4329 icl=500
+[ 4846.608722] google_battery: MSC_LAST vbatt=4324687 ibatt=0 fv_uv=4400000
+[ 4846.608730] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4846.608735] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4846.608753] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4847.780348] type=1400 audit(1656325884.017:2565): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4847.783233] type=1400 audit(1656325892.017:2566): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4847.783816] type=1400 audit(1656325892.017:2566): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4847.786002] type=1400 audit(1656325892.017:2567): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4848.610367] google_charger: usbchg=USB typec=C usbv=4946 usbc=284 usbMv=5000 usbMc=500
+[ 4848.610487] sm8150_bms: MSC_PCS chg_state=1f410e901030001 [0x1:1:3:4329:500] chg=u
+[ 4848.610498] google_battery: MSC_DIN chg_state=1f410e901030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4329 icl=500
+[ 4848.613810] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325625 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4848.613818] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4848.613823] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4848.613845] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4850.040118] google_charger: MSC_THERM_DC lvl=1 dc_icl=500000 (0)
+[ 4850.040446] google_charger: MSC_THERM_FCC lvl=2 (0)
+[ 4850.042197] google_charger: usbchg=USB typec=C usbv=4873 usbc=488 usbMv=5000 usbMc=500
+[ 4850.042321] sm8150_bms: MSC_PCS chg_state=1f410ea01030011 [0x11:1:3:4330:500] chg=u
+[ 4850.042342] google_battery: MSC_DIN chg_state=1f410ea01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4330 icl=500
+[ 4850.047101] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325625 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4850.047118] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4850.047125] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4850.047173] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4851.500155] type=1400 audit(1656325892.017:2567): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4851.500879] type=1400 audit(1656325895.737:2568): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.501445] type=1400 audit(1656325895.737:2568): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.502018] type=1400 audit(1656325895.737:2569): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.502172] type=1400 audit(1656325895.737:2569): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.503570] type=1400 audit(1656325895.737:2570): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.521789] type=1400 audit(1656325895.737:2570): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.522808] type=1400 audit(1656325895.757:2571): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4851.523178] type=1400 audit(1656325895.757:2571): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4851.523830] type=1400 audit(1656325895.757:2572): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4852.049720] google_charger: usbchg=USB typec=C usbv=4966 usbc=231 usbMv=5000 usbMc=500
+[ 4852.049867] sm8150_bms: MSC_PCS chg_state=1f410e901030001 [0x1:1:3:4329:500] chg=u
+[ 4852.049893] google_battery: MSC_DIN chg_state=1f410e901030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4329 icl=500
+[ 4852.054379] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325625 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4852.054401] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4852.054409] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4852.054466] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4854.056322] google_charger: usbchg=USB typec=C usbv=4973 usbc=185 usbMv=5000 usbMc=500
+[ 4854.056638] sm8150_bms: MSC_PCS chg_state=1f410e901030001 [0x1:1:3:4329:500] chg=u
+[ 4854.056659] google_battery: MSC_DIN chg_state=1f410e901030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4329 icl=500
+[ 4854.060874] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4324531 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4854.060893] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4854.060901] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4854.060949] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4856.062892] google_charger: usbchg=USB typec=C usbv=4964 usbc=215 usbMv=5000 usbMc=500
+[ 4856.063084] sm8150_bms: MSC_PCS chg_state=1f410ea01030001 [0x1:1:3:4330:500] chg=u
+[ 4856.063107] google_battery: MSC_DIN chg_state=1f410ea01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4330 icl=500
+[ 4856.068326] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4324531 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4856.068349] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4856.068358] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4856.068413] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4858.073307] google_charger: usbchg=USB typec=C usbv=4953 usbc=265 usbMv=5000 usbMc=500
+[ 4858.073448] sm8150_bms: MSC_PCS chg_state=1f410e901030001 [0x1:1:3:4329:500] chg=u
+[ 4858.073470] google_battery: MSC_DIN chg_state=1f410e901030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4329 icl=500
+[ 4858.077873] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4324531 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4858.077895] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4858.077905] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4858.077968] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4860.082836] google_charger: usbchg=USB typec=C usbv=4868 usbc=333 usbMv=5000 usbMc=500
+[ 4860.083215] sm8150_bms: MSC_PCS chg_state=1f410ea01030001 [0x1:1:3:4330:500] chg=u
+[ 4860.083242] google_battery: MSC_DIN chg_state=1f410ea01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4330 icl=500
+[ 4860.087233] google_battery: MSC_LAST vbatt=4325625 ibatt=-3125 fv_uv=4400000
+[ 4860.087253] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4860.087261] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4860.087315] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4860.444104] type=1400 audit(1656325895.757:2572): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4860.446750] type=1400 audit(1656325904.680:2573): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4860.447431] type=1400 audit(1656325904.680:2573): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4860.450123] type=1400 audit(1656325904.680:2574): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4862.089264] google_charger: usbchg=USB typec=C usbv=4932 usbc=213 usbMv=5000 usbMc=500
+[ 4862.089481] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4862.089503] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4862.094532] google_battery: MSC_LAST vbatt=4325625 ibatt=-3125 fv_uv=4400000
+[ 4862.094557] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4862.094567] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4862.094625] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4864.099892] google_charger: usbchg=USB typec=C usbv=4888 usbc=266 usbMv=5000 usbMc=500
+[ 4864.100035] sm8150_bms: MSC_PCS chg_state=1f410f601030001 [0x1:1:3:4342:500] chg=u
+[ 4864.100066] google_battery: MSC_DIN chg_state=1f410f601030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4342 icl=500
+[ 4864.103942] google_battery: MSC_LAST vbatt=4325625 ibatt=-3125 fv_uv=4400000
+[ 4864.103958] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4864.103965] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4864.104013] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4865.183585] healthd: battery l=100 v=4325 t=35.9 h=2 st=4 c=0 fc=2723000 cc=14 chg=u
+[ 4866.108765] google_charger: usbchg=USB typec=C usbv=4967 usbc=301 usbMv=5000 usbMc=500
+[ 4866.108903] sm8150_bms: MSC_PCS chg_state=1f410eb01030001 [0x1:1:3:4331:500] chg=u
+[ 4866.108927] google_battery: MSC_DIN chg_state=1f410eb01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4331 icl=500
+[ 4866.113801] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325781 ibatt=312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4866.113820] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4866.113828] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4866.113878] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4868.119400] google_charger: usbchg=USB typec=C usbv=4935 usbc=422 usbMv=5000 usbMc=500
+[ 4868.119644] sm8150_bms: MSC_PCS chg_state=1f410f001030001 [0x1:1:3:4336:500] chg=u
+[ 4868.119669] google_battery: MSC_DIN chg_state=1f410f001030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4336 icl=500
+[ 4868.123713] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325781 ibatt=312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4868.123740] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4868.123752] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4868.123824] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4870.125496] google_charger: usbchg=USB typec=C usbv=4870 usbc=488 usbMv=5000 usbMc=500
+[ 4870.125619] sm8150_bms: MSC_PCS chg_state=1f410eb01030011 [0x11:1:3:4331:500] chg=u
+[ 4870.125637] google_battery: MSC_DIN chg_state=1f410eb01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4331 icl=500
+[ 4870.129164] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327812 ibatt=17187 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4870.129285] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4870.129349] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4870.129405] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4872.134471] google_charger: usbchg=USB typec=C usbv=4978 usbc=203 usbMv=5000 usbMc=500
+[ 4872.134621] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4872.134645] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4872.138593] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327812 ibatt=17187 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4872.138615] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4872.138624] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4872.138676] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4874.140673] google_charger: usbchg=USB typec=C usbv=4937 usbc=264 usbMv=5000 usbMc=500
+[ 4874.140815] sm8150_bms: MSC_PCS chg_state=1f410ea01030001 [0x1:1:3:4330:500] chg=u
+[ 4874.140838] google_battery: MSC_DIN chg_state=1f410ea01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4330 icl=500
+[ 4874.144929] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327812 ibatt=17187 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4874.144952] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4874.144963] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4874.145027] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4876.149917] google_charger: usbchg=USB typec=C usbv=4964 usbc=172 usbMv=5000 usbMc=500
+[ 4876.150072] sm8150_bms: MSC_PCS chg_state=1f410eb01030001 [0x1:1:3:4331:500] chg=u
+[ 4876.150102] google_battery: MSC_DIN chg_state=1f410eb01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4331 icl=500
+[ 4876.154433] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325000 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4876.154452] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4876.154461] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4876.154509] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4878.156340] google_charger: usbchg=USB typec=C usbv=4962 usbc=196 usbMv=5000 usbMc=500
+[ 4878.156485] sm8150_bms: MSC_PCS chg_state=1f410f201030001 [0x1:1:3:4338:500] chg=u
+[ 4878.156509] google_battery: MSC_DIN chg_state=1f410f201030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4338 icl=500
+[ 4878.161253] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325000 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4878.161271] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4878.161278] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4878.161323] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4880.163274] google_charger: usbchg=USB typec=C usbv=4963 usbc=483 usbMv=5000 usbMc=500
+[ 4880.163417] sm8150_bms: MSC_PCS chg_state=1f410f301030001 [0x1:1:3:4339:500] chg=u
+[ 4880.163439] google_battery: MSC_DIN chg_state=1f410f301030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4339 icl=500
+[ 4880.168054] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325000 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4880.168076] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4880.168085] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4880.168146] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4882.169967] google_charger: usbchg=USB typec=C usbv=4976 usbc=212 usbMv=5000 usbMc=500
+[ 4882.170111] sm8150_bms: MSC_PCS chg_state=1f410eb01030001 [0x1:1:3:4331:500] chg=u
+[ 4882.170135] google_battery: MSC_DIN chg_state=1f410eb01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4331 icl=500
+[ 4882.174809] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327031 ibatt=2500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4882.174834] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4882.174844] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4882.174960] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4884.176936] google_charger: usbchg=USB typec=C usbv=4982 usbc=191 usbMv=5000 usbMc=500
+[ 4884.177095] sm8150_bms: MSC_PCS chg_state=1f410eb01030001 [0x1:1:3:4331:500] chg=u
+[ 4884.177126] google_battery: MSC_DIN chg_state=1f410eb01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4331 icl=500
+[ 4884.181346] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327031 ibatt=2500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4884.181365] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4884.181374] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4884.181420] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4886.183166] google_charger: usbchg=USB typec=C usbv=4971 usbc=195 usbMv=5000 usbMc=500
+[ 4886.183299] sm8150_bms: MSC_PCS chg_state=1f410ea01030001 [0x1:1:3:4330:500] chg=u
+[ 4886.183318] google_battery: MSC_DIN chg_state=1f410ea01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4330 icl=500
+[ 4886.186913] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327031 ibatt=2500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4886.186926] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4886.187046] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4886.187180] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4888.189140] google_charger: usbchg=USB typec=C usbv=4976 usbc=189 usbMv=5000 usbMc=500
+[ 4888.189412] sm8150_bms: MSC_PCS chg_state=1f410ef01030001 [0x1:1:3:4335:500] chg=u
+[ 4888.189436] google_battery: MSC_DIN chg_state=1f410ef01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4335 icl=500
+[ 4888.193394] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326875 ibatt=2812 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4888.193414] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4888.193423] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4888.193474] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4890.196038] google_charger: usbchg=USB typec=C usbv=4942 usbc=380 usbMv=5000 usbMc=500
+[ 4890.196181] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 4890.196205] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 4890.200537] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326875 ibatt=2812 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4890.200563] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4890.200575] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4890.200647] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4890.317532] type=1400 audit(1656325904.680:2574): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4890.318796] type=1400 audit(1656325934.554:2575): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4890.319382] type=1400 audit(1656325934.554:2575): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4890.320427] type=1400 audit(1656325934.554:2576): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4892.202820] google_charger: usbchg=USB typec=C usbv=4987 usbc=206 usbMv=5000 usbMc=500
+[ 4892.202975] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4892.203001] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4892.208066] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326875 ibatt=2812 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4892.208091] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4892.208101] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4892.208162] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4894.210137] google_charger: usbchg=USB typec=C usbv=4976 usbc=193 usbMv=5000 usbMc=500
+[ 4894.210276] sm8150_bms: MSC_PCS chg_state=1f410eb01030001 [0x1:1:3:4331:500] chg=u
+[ 4894.210299] google_battery: MSC_DIN chg_state=1f410eb01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4331 icl=500
+[ 4894.216759] google_battery: MSC_LAST vbatt=4329531 ibatt=-937 fv_uv=4400000
+[ 4894.216782] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4894.216791] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4894.216956] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4896.220110] google_charger: usbchg=USB typec=C usbv=4962 usbc=205 usbMv=5000 usbMc=500
+[ 4896.220256] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4896.220277] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4896.225133] google_battery: MSC_LAST vbatt=4329531 ibatt=-937 fv_uv=4400000
+[ 4896.225155] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4896.225162] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4896.225218] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4898.227072] google_charger: usbchg=USB typec=C usbv=4977 usbc=192 usbMv=5000 usbMc=500
+[ 4898.227229] sm8150_bms: MSC_PCS chg_state=1f410eb01030001 [0x1:1:3:4331:500] chg=u
+[ 4898.227260] google_battery: MSC_DIN chg_state=1f410eb01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4331 icl=500
+[ 4898.232083] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326406 ibatt=1250 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4898.232103] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4898.232113] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4898.232166] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4900.234092] google_charger: usbchg=USB typec=C usbv=4968 usbc=199 usbMv=5000 usbMc=500
+[ 4900.234402] sm8150_bms: MSC_PCS chg_state=1f410ef01030001 [0x1:1:3:4335:500] chg=u
+[ 4900.234424] google_battery: MSC_DIN chg_state=1f410ef01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4335 icl=500
+[ 4900.240009] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326406 ibatt=1250 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4900.240029] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4900.240036] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4900.240084] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4902.243388] google_charger: usbchg=USB typec=C usbv=4968 usbc=252 usbMv=5000 usbMc=500
+[ 4902.243533] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4902.243557] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4902.248890] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326406 ibatt=1250 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4902.248917] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4902.248928] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4902.248997] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4903.690951] google_charger: MSC_THERM_DC lvl=0 dc_icl=-1 (0)
+[ 4903.695790] google_charger: MSC_THERM_FCC lvl=1 (0)
+[ 4903.697717] google_charger: usbchg=USB typec=C usbv=4880 usbc=487 usbMv=5000 usbMc=500
+[ 4903.697837] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4903.697853] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4903.701553] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326093 ibatt=2187 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4903.701567] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4903.701571] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4903.701604] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4905.703445] google_charger: usbchg=USB typec=C usbv=4978 usbc=209 usbMv=5000 usbMc=500
+[ 4905.703587] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4905.703609] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4905.708621] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326093 ibatt=2187 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4905.708644] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4905.708654] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4905.708715] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4907.710516] google_charger: usbchg=USB typec=C usbv=4976 usbc=249 usbMv=5000 usbMc=500
+[ 4907.710851] sm8150_bms: MSC_PCS chg_state=1f410ef01030001 [0x1:1:3:4335:500] chg=u
+[ 4907.710876] google_battery: MSC_DIN chg_state=1f410ef01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4335 icl=500
+[ 4907.715538] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326093 ibatt=2187 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4907.715559] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4907.715567] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4907.715622] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4909.719329] google_charger: usbchg=USB typec=C usbv=4968 usbc=229 usbMv=5000 usbMc=500
+[ 4909.719524] sm8150_bms: MSC_PCS chg_state=1f410eb01030001 [0x1:1:3:4331:500] chg=u
+[ 4909.719549] google_battery: MSC_DIN chg_state=1f410eb01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4331 icl=500
+[ 4909.724025] google_battery: MSC_LAST vbatt=4326562 ibatt=-1250 fv_uv=4400000
+[ 4909.724046] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4909.724054] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4909.724112] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4911.725656] google_charger: usbchg=USB typec=C usbv=4875 usbc=487 usbMv=5000 usbMc=500
+[ 4911.725809] sm8150_bms: MSC_PCS chg_state=1f410ec01030011 [0x11:1:3:4332:500] chg=u
+[ 4911.725818] google_battery: MSC_DIN chg_state=1f410ec01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4911.728576] google_battery: MSC_LAST vbatt=4326562 ibatt=-1250 fv_uv=4400000
+[ 4911.728583] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4911.728586] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4911.728604] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4913.730426] google_charger: usbchg=USB typec=C usbv=4957 usbc=267 usbMv=5000 usbMc=500
+[ 4913.730552] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4913.730572] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4913.734408] google_battery: MSC_LAST vbatt=4326562 ibatt=-1250 fv_uv=4400000
+[ 4913.734421] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4913.734426] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4913.734462] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4915.736220] google_charger: usbchg=USB typec=C usbv=4922 usbc=357 usbMv=5000 usbMc=500
+[ 4915.736410] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4915.736431] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4915.740482] google_battery: MSC_LAST vbatt=4324687 ibatt=-625 fv_uv=4400000
+[ 4915.740551] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4915.740557] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4915.741332] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4917.743258] google_charger: usbchg=USB typec=C usbv=4969 usbc=229 usbMv=5000 usbMc=500
+[ 4917.743403] sm8150_bms: MSC_PCS chg_state=1f410ef01030001 [0x1:1:3:4335:500] chg=u
+[ 4917.743427] google_battery: MSC_DIN chg_state=1f410ef01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4335 icl=500
+[ 4917.749771] google_battery: MSC_LAST vbatt=4324687 ibatt=-625 fv_uv=4400000
+[ 4917.749799] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4917.749808] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4917.749865] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4919.751814] google_charger: usbchg=USB typec=C usbv=4968 usbc=205 usbMv=5000 usbMc=500
+[ 4919.751962] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4919.751988] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4919.756358] google_battery: MSC_LAST vbatt=4324687 ibatt=-625 fv_uv=4400000
+[ 4919.756378] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4919.756388] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4919.756442] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4921.758362] google_charger: usbchg=USB typec=C usbv=4971 usbc=203 usbMv=5000 usbMc=500
+[ 4921.758513] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4921.758535] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4921.763701] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4330156 ibatt=312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4921.763721] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4921.763730] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4921.763782] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4923.765401] google_charger: usbchg=USB typec=C usbv=4874 usbc=487 usbMv=5000 usbMc=500
+[ 4923.765517] sm8150_bms: MSC_PCS chg_state=1f410ec01030011 [0x11:1:3:4332:500] chg=u
+[ 4923.765530] google_battery: MSC_DIN chg_state=1f410ec01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4923.769776] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4330156 ibatt=312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4923.769790] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4923.769795] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4923.769830] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4925.170713] healthd: battery l=100 v=4330 t=36.1 h=2 st=4 c=0 fc=2723000 cc=14 chg=u
+[ 4925.773458] google_charger: usbchg=USB typec=C usbv=4968 usbc=237 usbMv=5000 usbMc=500
+[ 4925.773605] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4925.773629] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4925.777863] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4330156 ibatt=312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4925.777883] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4925.777893] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4925.777957] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4927.780012] google_charger: usbchg=USB typec=C usbv=4983 usbc=171 usbMv=5000 usbMc=500
+[ 4927.780171] sm8150_bms: MSC_PCS chg_state=1f410f301030001 [0x1:1:3:4339:500] chg=u
+[ 4927.780199] google_battery: MSC_DIN chg_state=1f410f301030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4339 icl=500
+[ 4927.785231] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327968 ibatt=2500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4927.785250] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4927.785259] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4927.785308] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4929.786951] google_charger: usbchg=USB typec=C usbv=4930 usbc=267 usbMv=5000 usbMc=500
+[ 4929.787068] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4929.787082] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4929.790492] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327968 ibatt=2500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4929.790504] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4929.790507] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4929.790536] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4930.258017] type=1400 audit(1656325934.554:2576): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4930.258935] type=1400 audit(1656325974.494:2577): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4930.259302] type=1400 audit(1656325974.494:2577): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4930.261588] type=1400 audit(1656325974.494:2578): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4930.261784] type=1400 audit(1656325974.494:2578): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4930.262444] type=1400 audit(1656325974.494:2579): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4930.262598] type=1400 audit(1656325974.494:2579): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4930.263055] type=1400 audit(1656325974.494:2580): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4930.263169] type=1400 audit(1656325974.494:2580): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4930.263610] type=1400 audit(1656325974.494:2581): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4931.792615] google_charger: usbchg=USB typec=C usbv=4950 usbc=246 usbMv=5000 usbMc=500
+[ 4931.792761] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4931.792782] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4931.798126] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325937 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4931.798146] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4931.798154] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4931.798203] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4933.800837] google_charger: usbchg=USB typec=C usbv=4952 usbc=226 usbMv=5000 usbMc=500
+[ 4933.801074] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4933.801099] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4933.805291] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325937 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4933.805311] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4933.805321] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4933.805380] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4935.807157] google_charger: usbchg=USB typec=C usbv=4985 usbc=216 usbMv=5000 usbMc=500
+[ 4935.807291] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4935.807312] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4935.811278] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325937 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4935.811298] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4935.811305] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4935.811353] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4937.813403] google_charger: usbchg=USB typec=C usbv=4969 usbc=243 usbMv=5000 usbMc=500
+[ 4937.813653] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4937.813679] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4937.817695] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326093 ibatt=937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4937.817716] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4937.817726] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4937.817782] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4939.819590] google_charger: usbchg=USB typec=C usbv=4979 usbc=236 usbMv=5000 usbMc=500
+[ 4939.819738] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4939.819763] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4939.824153] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326093 ibatt=937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4939.824174] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4939.824183] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4939.824233] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4941.829424] google_charger: usbchg=USB typec=C usbv=4959 usbc=252 usbMv=5000 usbMc=500
+[ 4941.829616] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 4941.829642] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 4941.833738] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4326093 ibatt=937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4941.833764] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4941.833775] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4941.833847] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4943.838594] google_charger: usbchg=USB typec=C usbv=4985 usbc=159 usbMv=5000 usbMc=500
+[ 4943.838739] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4943.838762] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4943.843656] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327500 ibatt=312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4943.843678] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4943.843688] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4943.843743] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4945.849398] google_charger: usbchg=USB typec=C usbv=4962 usbc=278 usbMv=5000 usbMc=500
+[ 4945.849541] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4945.849563] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4945.853311] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327500 ibatt=312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4945.853331] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4945.853340] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4945.853398] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4947.858339] google_charger: usbchg=USB typec=C usbv=4959 usbc=356 usbMv=5000 usbMc=500
+[ 4947.858485] sm8150_bms: MSC_PCS chg_state=1f410f201030001 [0x1:1:3:4338:500] chg=u
+[ 4947.858510] google_battery: MSC_DIN chg_state=1f410f201030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4338 icl=500
+[ 4947.863783] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327500 ibatt=312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4947.863807] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4947.863817] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4947.863879] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4949.868719] google_charger: usbchg=USB typec=C usbv=4991 usbc=229 usbMv=5000 usbMc=500
+[ 4949.869263] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4949.869300] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4949.874190] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4328906 ibatt=2500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4949.874211] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4949.874222] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4949.874284] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4950.317558] type=1400 audit(1656325974.494:2581): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4950.318669] type=1400 audit(1656325994.554:2582): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4950.319406] type=1400 audit(1656325994.554:2582): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4950.320813] type=1400 audit(1656325994.554:2583): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4951.880052] google_charger: usbchg=USB typec=C usbv=4986 usbc=258 usbMv=5000 usbMc=500
+[ 4951.880194] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 4951.880219] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 4951.885431] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4328906 ibatt=2500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4951.885449] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4951.885454] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4951.885494] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4953.890189] google_charger: usbchg=USB typec=C usbv=4964 usbc=190 usbMv=5000 usbMc=500
+[ 4953.890329] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4953.890351] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4953.895944] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4328906 ibatt=2500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4953.895967] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4953.895977] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4953.896041] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4955.900956] google_charger: usbchg=USB typec=C usbv=4921 usbc=376 usbMv=5000 usbMc=500
+[ 4955.901079] sm8150_bms: MSC_PCS chg_state=1f410ec01030001 [0x1:1:3:4332:500] chg=u
+[ 4955.901232] google_battery: MSC_DIN chg_state=1f410ec01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4332 icl=500
+[ 4955.906471] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327500 ibatt=3125 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4955.906574] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4955.906581] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4955.906621] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4957.910861] google_charger: usbchg=USB typec=C usbv=4985 usbc=258 usbMv=5000 usbMc=500
+[ 4957.911003] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4957.911027] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4957.917413] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327500 ibatt=3125 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4957.917436] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4957.917445] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4957.917505] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4959.944056] google_charger: usbchg=USB typec=C usbv=4969 usbc=208 usbMv=5000 usbMc=500
+[ 4959.944201] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4959.944230] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4959.948851] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327968 ibatt=2500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4959.948965] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4959.948975] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4959.949276] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4961.951364] google_charger: usbchg=USB typec=C usbv=4920 usbc=360 usbMv=5000 usbMc=500
+[ 4961.951706] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4961.951724] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4961.955479] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327968 ibatt=2500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4961.955493] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4961.955498] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4961.955532] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4963.957499] google_charger: usbchg=USB typec=C usbv=4963 usbc=251 usbMv=5000 usbMc=500
+[ 4963.957644] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4963.957670] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4963.962304] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327968 ibatt=2500 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4963.962329] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4963.962339] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4963.962472] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4965.964445] google_charger: usbchg=USB typec=C usbv=4957 usbc=218 usbMv=5000 usbMc=500
+[ 4965.964601] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4965.964625] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4965.969837] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327500 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4965.969855] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4965.969864] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4965.969917] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4967.780757] type=1400 audit(1656325994.554:2583): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4967.783560] type=1400 audit(1656326012.017:2584): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4967.783983] type=1400 audit(1656326012.017:2584): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4967.787017] type=1400 audit(1656326012.017:2585): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4967.971757] google_charger: usbchg=USB typec=C usbv=4976 usbc=229 usbMv=5000 usbMc=500
+[ 4967.971897] sm8150_bms: MSC_PCS chg_state=1f410ed01030001 [0x1:1:3:4333:500] chg=u
+[ 4967.971919] google_battery: MSC_DIN chg_state=1f410ed01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4333 icl=500
+[ 4967.976800] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327500 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4967.976822] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4967.976831] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4967.976885] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4969.978604] google_charger: usbchg=USB typec=C usbv=4882 usbc=488 usbMv=5000 usbMc=500
+[ 4969.979124] sm8150_bms: MSC_PCS chg_state=1f410fd01030011 [0x11:1:3:4349:500] chg=u
+[ 4969.979147] google_battery: MSC_DIN chg_state=1f410fd01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4349 icl=500
+[ 4969.985032] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327500 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4969.985054] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4969.985062] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4969.985228] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 4971.522173] type=1400 audit(1656326012.017:2585): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4971.523893] type=1400 audit(1656326015.757:2586): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4971.524222] type=1400 audit(1656326015.757:2586): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4971.526286] type=1400 audit(1656326015.757:2587): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4971.987280] google_charger: usbchg=USB typec=C usbv=4878 usbc=488 usbMv=5000 usbMc=500
+[ 4971.987405] sm8150_bms: MSC_PCS chg_state=1f410fe01040013 [0x13:1:4:4350:500] chg=u
+[ 4971.987426] google_battery: MSC_DIN chg_state=1f410fe01040013 f=0x13 chg_s=Full chg_t=None vchg=4350 icl=500
+[ 4971.991970] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4337031 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 4971.991989] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4971.991997] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 4980.444153] type=1400 audit(1656326015.757:2587): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4980.447908] type=1400 audit(1656326024.680:2588): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4980.448332] type=1400 audit(1656326024.680:2588): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4980.450932] type=1400 audit(1656326024.680:2589): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4985.172759] healthd: battery l=100 v=4331 t=36.1 h=2 st=4 c=0 fc=2723000 cc=14 chg=u
+[ 5016.360007] type=1400 audit(1656326024.680:2589): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5016.360657] type=1400 audit(1656326060.597:2590): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5016.360863] type=1400 audit(1656326060.597:2590): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5016.361344] type=1400 audit(1656326060.597:2591): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5017.440209] type=1400 audit(1656326060.597:2591): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5017.440697] type=1400 audit(1656326061.677:2592): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5017.440999] type=1400 audit(1656326061.677:2592): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5017.441880] type=1400 audit(1656326061.677:2593): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5017.441974] type=1400 audit(1656326061.677:2593): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5017.442309] type=1400 audit(1656326061.677:2594): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5019.514786] msm_crus_store_imped: left impedance 7.64528114 ohms
+[ 5019.516873] msm_crus_store_imped: right impedance 6.77086060 ohms
+[ 5019.531635] afe_close: port_id = 0x9020
+[ 5019.540135] afe_close: port_id = 0x9021
+[ 5027.780852] type=1400 audit(1656326061.677:2594): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5027.781680] type=1400 audit(1656326072.017:2595): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 5027.781867] type=1400 audit(1656326072.017:2595): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 5027.782911] type=1400 audit(1656326072.017:2596): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 5031.522557] type=1400 audit(1656326072.017:2596): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 5031.523142] type=1400 audit(1656326075.757:2597): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 5031.523396] type=1400 audit(1656326075.757:2597): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 5031.524197] type=1400 audit(1656326075.757:2598): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 5040.444796] type=1400 audit(1656326075.757:2598): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 5040.445867] type=1400 audit(1656326084.680:2599): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5040.446053] type=1400 audit(1656326084.680:2599): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5040.447073] type=1400 audit(1656326084.680:2600): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5045.166718] healthd: battery l=100 v=4327 t=36.0 h=2 st=4 c=0 fc=2723000 cc=14 chg=u
+[ 5050.648271] type=1400 audit(1656326084.680:2600): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5050.648872] type=1400 audit(1656326094.884:2601): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5050.649184] type=1400 audit(1656326094.884:2601): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5050.650021] type=1400 audit(1656326094.884:2602): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5070.319440] type=1400 audit(1656326094.884:2602): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5070.320063] type=1400 audit(1656326114.554:2603): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5070.320332] type=1400 audit(1656326114.554:2603): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5070.321183] type=1400 audit(1656326114.554:2604): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5087.781579] type=1400 audit(1656326114.554:2604): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5087.782883] type=1400 audit(1656326132.017:2605): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 5087.783152] type=1400 audit(1656326132.017:2605): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 5087.783803] type=1400 audit(1656326132.017:2606): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 5090.694236] google_charger: MSC_THERM_FCC lvl=0 (0)
+[ 5090.695789] google_charger: usbchg=USB typec=C usbv=4873 usbc=487 usbMv=5000 usbMc=500
+[ 5090.695891] sm8150_bms: MSC_PCS chg_state=1f410ef01030011 [0x11:1:3:4335:500] chg=u
+[ 5090.695905] google_battery: MSC_DIN chg_state=1f410ef01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4335 icl=500
+[ 5090.698770] google_battery: MSC_LAST vbatt=4329218 ibatt=-625 fv_uv=4400000
+[ 5090.698778] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5090.698781] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5090.698800] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5091.523442] type=1400 audit(1656326132.017:2606): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 5091.524057] type=1400 audit(1656326135.760:2607): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 5091.524258] type=1400 audit(1656326135.760:2607): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 5091.524696] type=1400 audit(1656326135.760:2608): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 5092.700426] google_charger: usbchg=USB typec=C usbv=4983 usbc=184 usbMv=5000 usbMc=500
+[ 5092.700549] sm8150_bms: MSC_PCS chg_state=1f410f901030001 [0x1:1:3:4345:500] chg=u
+[ 5092.700561] google_battery: MSC_DIN chg_state=1f410f901030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4345 icl=500
+[ 5092.703999] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327812 ibatt=937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5092.704005] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5092.704010] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5092.704029] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5094.706454] google_charger: usbchg=USB typec=C usbv=4986 usbc=199 usbMv=5000 usbMc=500
+[ 5094.706577] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5094.706589] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5094.710080] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327812 ibatt=937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5094.710087] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5094.710092] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5094.710110] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5096.711696] google_charger: usbchg=USB typec=C usbv=4959 usbc=240 usbMv=5000 usbMc=500
+[ 5096.711813] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5096.711822] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5096.715155] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4327812 ibatt=937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5096.715161] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5096.715166] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5096.715185] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5098.717596] google_charger: usbchg=USB typec=C usbv=4980 usbc=177 usbMv=5000 usbMc=500
+[ 5098.717718] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5098.717732] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5098.720960] google_battery: MSC_LAST vbatt=4328593 ibatt=-1562 fv_uv=4400000
+[ 5098.720968] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5098.720971] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5098.720989] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5100.445121] type=1400 audit(1656326135.760:2608): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 5100.446235] type=1400 audit(1656326144.680:2609): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5100.446399] type=1400 audit(1656326144.680:2609): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5100.447582] type=1400 audit(1656326144.680:2610): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5100.722588] google_charger: usbchg=USB typec=C usbv=4992 usbc=180 usbMv=5000 usbMc=500
+[ 5100.722710] sm8150_bms: MSC_PCS chg_state=1f410f001030001 [0x1:1:3:4336:500] chg=u
+[ 5100.722721] google_battery: MSC_DIN chg_state=1f410f001030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4336 icl=500
+[ 5100.726165] google_battery: MSC_LAST vbatt=4328593 ibatt=-1562 fv_uv=4400000
+[ 5100.726172] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5100.726176] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5100.726194] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5102.728124] google_charger: usbchg=USB typec=C usbv=4972 usbc=186 usbMv=5000 usbMc=500
+[ 5102.728246] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5102.728259] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5102.731711] google_battery: MSC_LAST vbatt=4328593 ibatt=-1562 fv_uv=4400000
+[ 5102.731719] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5102.731723] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5102.731743] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5104.733357] google_charger: usbchg=USB typec=C usbv=4974 usbc=207 usbMv=5000 usbMc=500
+[ 5104.733479] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5104.733492] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5104.736902] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4334062 ibatt=3125 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5104.736910] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5104.736915] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5104.736935] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5105.166290] healthd: battery l=100 v=4334 t=35.9 h=2 st=4 c=3 fc=2723000 cc=14 chg=u
+[ 5106.738641] google_charger: usbchg=USB typec=C usbv=4951 usbc=247 usbMv=5000 usbMc=500
+[ 5106.738760] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5106.738769] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5106.741758] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4334062 ibatt=3125 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5106.741765] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5106.741770] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5106.741787] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5108.743414] google_charger: usbchg=USB typec=C usbv=4957 usbc=195 usbMv=5000 usbMc=500
+[ 5108.743537] sm8150_bms: MSC_PCS chg_state=1f410f001030001 [0x1:1:3:4336:500] chg=u
+[ 5108.743548] google_battery: MSC_DIN chg_state=1f410f001030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4336 icl=500
+[ 5108.746719] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4334062 ibatt=3125 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5108.746727] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5108.746731] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5108.746747] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5109.317305] type=1400 audit(1656326144.680:2610): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5109.318218] type=1400 audit(1656326153.554:2611): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5109.318476] type=1400 audit(1656326153.554:2611): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5109.318961] type=1400 audit(1656326153.554:2612): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5109.439933] type=1400 audit(1656326153.554:2612): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5109.440679] type=1400 audit(1656326153.677:2613): avc: denied { call } for comm="Thread-134" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[ 5110.748301] google_charger: usbchg=USB typec=C usbv=4873 usbc=487 usbMv=5000 usbMc=500
+[ 5110.748410] sm8150_bms: MSC_PCS chg_state=1f410ee01030011 [0x11:1:3:4334:500] chg=u
+[ 5110.748419] google_battery: MSC_DIN chg_state=1f410ee01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5110.751549] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4328750 ibatt=4062 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5110.751556] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5110.751560] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5110.751574] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5112.753185] google_charger: usbchg=USB typec=C usbv=4965 usbc=235 usbMv=5000 usbMc=500
+[ 5112.753307] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5112.753320] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5112.756359] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4328750 ibatt=4062 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5112.756366] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5112.756370] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5112.756390] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5113.561663] type=1400 audit(1656326153.677:2613): avc: denied { call } for comm="Thread-134" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[ 5113.562257] type=1400 audit(1656326157.797:2614): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5113.562589] type=1400 audit(1656326157.797:2614): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5113.563616] type=1400 audit(1656326157.797:2615): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5113.563732] type=1400 audit(1656326157.797:2615): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5113.564189] type=1400 audit(1656326157.797:2616): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5114.758021] google_charger: usbchg=USB typec=C usbv=4985 usbc=161 usbMv=5000 usbMc=500
+[ 5114.758144] sm8150_bms: MSC_PCS chg_state=1f410fb01030001 [0x1:1:3:4347:500] chg=u
+[ 5114.758156] google_battery: MSC_DIN chg_state=1f410fb01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4347 icl=500
+[ 5114.760579] max1720x 2-0036: s=2->1 c=-177187 avg_c=39062 ichgt=140000 vfsoc=97 soc=98 fullsocthr=90
+[ 5114.761568] google_battery: MSC_LAST vbatt=4342968 ibatt=-177187 fv_uv=4400000
+[ 5114.761576] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5114.761581] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5114.761600] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5116.763203] google_charger: usbchg=USB typec=C usbv=4976 usbc=202 usbMv=5000 usbMc=500
+[ 5116.763326] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5116.763338] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5116.766569] google_battery: MSC_LAST vbatt=4342968 ibatt=-177187 fv_uv=4400000
+[ 5116.766576] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5116.766579] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5116.766598] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5118.769055] google_charger: usbchg=USB typec=C usbv=4964 usbc=203 usbMv=5000 usbMc=500
+[ 5118.769173] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5118.769184] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5118.772380] google_battery: MSC_LAST vbatt=4342968 ibatt=-177187 fv_uv=4400000
+[ 5118.772386] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5118.772411] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5118.772431] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5120.774012] google_charger: usbchg=USB typec=C usbv=4931 usbc=266 usbMv=5000 usbMc=500
+[ 5120.774122] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5120.774133] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5120.776244] max1720x 2-0036: s=1->2 c=26562 avg_c=35625 ichgt=140000 vfsoc=97 soc=98 fullsocthr=90
+[ 5120.777205] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4329062 ibatt=26562 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5120.777211] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5120.777215] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5120.777229] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5122.778800] google_charger: usbchg=USB typec=C usbv=4981 usbc=185 usbMv=5000 usbMc=500
+[ 5122.778919] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5122.778928] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5122.782197] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4329062 ibatt=26562 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5122.782205] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5122.782209] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5122.782226] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5124.783856] google_charger: usbchg=USB typec=C usbv=4974 usbc=207 usbMv=5000 usbMc=500
+[ 5124.783977] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5124.783988] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5124.787457] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4329062 ibatt=26562 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5124.787464] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5124.787468] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5124.787487] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5126.789119] google_charger: usbchg=USB typec=C usbv=4987 usbc=177 usbMv=5000 usbMc=500
+[ 5126.789238] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5126.789250] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5126.792461] google_battery: MSC_LAST vbatt=4330468 ibatt=-625 fv_uv=4400000
+[ 5126.792468] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5126.792473] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5126.792490] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5128.794481] google_charger: usbchg=USB typec=C usbv=4969 usbc=244 usbMv=5000 usbMc=500
+[ 5128.794604] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5128.794616] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5128.798035] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4328750 ibatt=1250 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5128.798043] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5128.798048] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5128.798065] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5130.319497] type=1400 audit(1656326157.797:2616): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=651506 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5130.320094] type=1400 audit(1656326174.554:2617): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5130.320319] type=1400 audit(1656326174.554:2617): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5130.321081] type=1400 audit(1656326174.554:2618): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5130.799686] google_charger: usbchg=USB typec=C usbv=4968 usbc=221 usbMv=5000 usbMc=500
+[ 5130.799808] sm8150_bms: MSC_PCS chg_state=1f410f001030001 [0x1:1:3:4336:500] chg=u
+[ 5130.799820] google_battery: MSC_DIN chg_state=1f410f001030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4336 icl=500
+[ 5130.803044] google_battery: MSC_LAST vbatt=4330000 ibatt=-1250 fv_uv=4400000
+[ 5130.803051] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5130.803056] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5130.803075] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5132.804665] google_charger: usbchg=USB typec=C usbv=4984 usbc=187 usbMv=5000 usbMc=500
+[ 5132.804784] sm8150_bms: MSC_PCS chg_state=1f410ef01030001 [0x1:1:3:4335:500] chg=u
+[ 5132.804795] google_battery: MSC_DIN chg_state=1f410ef01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4335 icl=500
+[ 5132.807672] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4328906 ibatt=2187 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5132.807679] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5132.807685] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5132.807703] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5134.809328] google_charger: usbchg=USB typec=C usbv=4979 usbc=216 usbMv=5000 usbMc=500
+[ 5134.809444] sm8150_bms: MSC_PCS chg_state=1f410ef01030001 [0x1:1:3:4335:500] chg=u
+[ 5134.809454] google_battery: MSC_DIN chg_state=1f410ef01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4335 icl=500
+[ 5134.812840] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4331093 ibatt=1875 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5134.812847] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5134.812851] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5134.812867] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5136.815227] google_charger: usbchg=USB typec=C usbv=4975 usbc=327 usbMv=5000 usbMc=500
+[ 5136.815345] sm8150_bms: MSC_PCS chg_state=1f410f301030001 [0x1:1:3:4339:500] chg=u
+[ 5136.815355] google_battery: MSC_DIN chg_state=1f410f301030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4339 icl=500
+[ 5136.818438] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4331093 ibatt=937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5136.818446] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5136.818451] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5136.818469] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5138.820076] google_charger: usbchg=USB typec=C usbv=4983 usbc=172 usbMv=5000 usbMc=500
+[ 5138.820199] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5138.820211] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5138.823505] google_battery: MSC_LAST vbatt=4329687 ibatt=-625 fv_uv=4400000
+[ 5138.823512] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5138.823517] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5138.823533] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5140.825155] google_charger: usbchg=USB typec=C usbv=4989 usbc=184 usbMv=5000 usbMc=500
+[ 5140.825278] sm8150_bms: MSC_PCS chg_state=1f410f601030001 [0x1:1:3:4342:500] chg=u
+[ 5140.825291] google_battery: MSC_DIN chg_state=1f410f601030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4342 icl=500
+[ 5140.828452] google_battery: MSC_LAST vbatt=4329687 ibatt=-625 fv_uv=4400000
+[ 5140.828461] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5140.828465] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5140.828483] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5142.830117] google_charger: usbchg=USB typec=C usbv=4955 usbc=190 usbMv=5000 usbMc=500
+[ 5142.830240] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5142.830250] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5142.833650] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4328750 ibatt=1875 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5142.833657] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5142.833662] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5142.833680] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5144.835819] google_charger: usbchg=USB typec=C usbv=4936 usbc=203 usbMv=5000 usbMc=500
+[ 5144.835942] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5144.835953] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5144.838984] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4328750 ibatt=1875 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5144.838991] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5144.838997] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5144.839059] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5146.840649] google_charger: usbchg=USB typec=C usbv=4968 usbc=164 usbMv=5000 usbMc=500
+[ 5146.840772] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5146.840783] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5146.844223] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4328750 ibatt=1875 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5146.844232] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5146.844238] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5146.844256] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+[ 5147.781899] type=1400 audit(1656326174.554:2618): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5147.782945] type=1400 audit(1656326192.017:2619): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 5147.783174] type=1400 audit(1656326192.017:2619): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 5147.784387] type=1400 audit(1656326192.017:2620): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 5148.847003] google_charger: usbchg=USB typec=C usbv=4987 usbc=164 usbMv=5000 usbMc=500
+[ 5148.847125] sm8150_bms: MSC_PCS chg_state=1f410ee01030001 [0x1:1:3:4334:500] chg=u
+[ 5148.847136] google_battery: MSC_DIN chg_state=1f410ee01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4334 icl=500
+[ 5148.850345] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4329531 ibatt=937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+[ 5148.850353] google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5148.850357] google_battery: MSC_VOTE fv_uv=4400000 cc_max=0 update_interval=-1
+[ 5148.850373] google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)

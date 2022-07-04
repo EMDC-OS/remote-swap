@@ -1,0 +1,250 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 239/239   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-200   [000] ....  1064.586734: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [000] d..2  1064.586755: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [000] d..2  1064.586766: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [000] d..2  1064.586776: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [000] d..2  1064.586793: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [000] d..2  1064.586801: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [000] ....  1064.586819: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-12034 [007] ....  1100.634563: app_switch_start_handler: ###########switch start! foreground 10135#############
+           <...>-12034 [007] ....  1100.634568: prefetch_handler: prefetch handler start! target(id,table): 0,0
+           <...>-12034 [007] ....  1101.023434: update_to_nbd_flag: appid 0: table 1 is latter, total target 0 max idx e, l -> 295 39
+           <...>-12034 [007] ....  1101.027898: miss_page_handler: miss page handler start! target(id,table): 0,0
+           <...>-200   [007] ....  1101.028571: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  1101.028574: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [007] d..2  1101.028575: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [007] d..2  1101.028576: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [007] d..2  1101.028577: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [007] d..2  1101.028580: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [007] d..2  1101.028581: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [007] ....  1101.028583: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-12170 [007] ....  1124.381948: app_switch_start_handler: ###########switch start! foreground 10126#############
+           <...>-12170 [007] ....  1124.381952: prefetch_handler: prefetch handler start! target(id,table): 1,0
+           <...>-12170 [006] ....  1124.717118: update_to_nbd_flag: appid 1: table 1 is latter, total target 0 max idx e, l -> 29 52
+           <...>-12170 [004] ....  1124.722554: miss_page_handler: miss page handler start! target(id,table): 1,0
+           <...>-200   [007] ....  1124.722574: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  1124.722577: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [007] d..2  1124.722579: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [007] d..2  1124.722580: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [007] d..2  1124.722581: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [007] d..2  1124.722582: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [007] d..2  1124.722585: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [007] d..2  1124.722586: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [007] ....  1124.722589: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-12285 [007] ....  1148.415478: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-12285 [007] ....  1148.415483: prefetch_handler: prefetch handler start! target(id,table): 4,0
+           <...>-12285 [007] ....  1148.839828: update_to_nbd_flag: appid 4: table 1 is latter, total target 0 max idx e, l -> 475 66
+           <...>-12285 [007] ....  1148.844534: miss_page_handler: miss page handler start! target(id,table): 4,0
+           <...>-200   [004] ....  1148.844578: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] d..2  1148.844581: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [004] d..2  1148.844583: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [004] d..2  1148.844584: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [004] d..2  1148.844585: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [004] d..2  1148.844586: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [004] d..2  1148.844588: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [004] d..2  1148.844590: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [004] d..2  1148.844591: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [004] ....  1148.844594: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-12465 [007] ....  1212.425366: app_switch_start_handler: ###########switch start! foreground 10124#############
+           <...>-12465 [007] ....  1212.425370: prefetch_handler: prefetch handler start! target(id,table): 8,0
+           <...>-12465 [006] ....  1213.025155: update_to_nbd_flag: appid 8: table 1 is latter, total target 0 max idx e, l -> 75 197
+           <...>-12465 [006] ....  1213.032910: miss_page_handler: miss page handler start! target(id,table): 8,0
+           <...>-200   [004] ....  1213.032939: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] d..2  1213.032943: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [004] d..2  1213.032945: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [004] d..2  1213.032947: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [004] d..2  1213.032948: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [004] d..2  1213.032949: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [004] d..2  1213.032950: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [004] d..2  1213.032953: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [004] d..2  1213.032954: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [004] d..2  1213.032957: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [004] ....  1213.032959: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [007] ....  1214.773166: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  1214.773171: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [007] d..2  1214.773174: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [007] d..2  1214.773177: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [007] d..2  1214.773178: send_target_manager: send target manager - id, which_table : 3, 1
+           <...>-200   [007] d..2  1214.773180: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [007] d..2  1214.773182: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [007] d..2  1214.773190: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [007] d..2  1214.773192: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [007] d..2  1214.773200: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [007] ....  1214.773204: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-12575 [007] ....  1236.740407: app_switch_start_handler: ###########switch start! foreground 10133#############
+           <...>-12575 [007] ....  1236.740410: prefetch_handler: prefetch handler start! target(id,table): 3,1
+           <...>-12575 [005] ....  1237.072790: update_to_nbd_flag: appid 3: table 0 is latter, total target 0 max idx e, l -> 8 55
+           <...>-12575 [005] ....  1237.079338: miss_page_handler: miss page handler start! target(id,table): 3,1
+           <...>-200   [007] ....  1237.079355: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  1237.079358: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [007] d..2  1237.079360: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [007] d..2  1237.079361: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [007] d..2  1237.079362: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [007] d..2  1237.079363: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [007] d..2  1237.079365: send_target_manager: send target manager - id, which_table : 5, 1
+           <...>-200   [007] d..2  1237.079368: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [007] d..2  1237.079369: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [007] d..2  1237.079372: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [007] ....  1237.079374: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-12730 [004] ....  1270.580409: app_switch_start_handler: ###########switch start! foreground 10122#############
+           <...>-12730 [004] ....  1270.580414: prefetch_handler: prefetch handler start! target(id,table): 5,1
+           <...>-12730 [004] ....  1271.051670: update_to_nbd_flag: appid 5: table 0 is latter, total target 0 max idx e, l -> 676 64
+           <...>-12730 [004] ....  1271.057725: miss_page_handler: miss page handler start! target(id,table): 5,1
+           <...>-200   [005] ....  1271.058009: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [005] d..2  1271.058011: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [005] d..2  1271.058013: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [005] d..2  1271.058014: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [005] d..2  1271.058016: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [005] d..2  1271.058017: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [005] d..2  1271.058018: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [005] d..2  1271.058020: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [005] d..2  1271.058021: send_target_manager: send target manager - id, which_table : 7, 1
+           <...>-200   [005] d..2  1271.058024: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [005] ....  1271.058026: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-12873 [007] ....  1334.463414: app_switch_start_handler: ###########switch start! foreground 10136#############
+           <...>-12873 [007] ....  1334.463417: prefetch_handler: prefetch handler start! target(id,table): 7,1
+           <...>-12873 [004] ....  1334.775999: update_to_nbd_flag: appid 7: table 0 is latter, total target 0 max idx e, l -> 786 117
+           <...>-12873 [006] ....  1334.787336: miss_page_handler: miss page handler start! target(id,table): 7,1
+           <...>-200   [006] ....  1334.787447: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [006] d..2  1334.787449: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [006] d..2  1334.787451: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [006] d..2  1334.787453: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [006] d..2  1334.787454: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [006] d..2  1334.787455: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [006] d..2  1334.787457: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [006] d..2  1334.787458: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [006] d..2  1334.787459: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [006] d..2  1334.787461: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [006] ....  1334.787462: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [007] ....  1364.959820: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  1364.959829: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [007] d..2  1364.959834: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [007] d..2  1364.959838: send_target_manager: send target manager - id, which_table : 2, 1
+           <...>-200   [007] d..2  1364.959840: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [007] d..2  1364.959844: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [007] d..2  1364.959849: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [007] d..2  1364.959852: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [007] d..2  1364.959855: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [007] d..2  1364.959859: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [007] ....  1364.959864: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-13015 [007] ....  1398.320537: app_switch_start_handler: ###########switch start! foreground 10127#############
+           <...>-13015 [007] ....  1398.320542: prefetch_handler: prefetch handler start! target(id,table): 2,1
+           <...>-13015 [005] ....  1398.534694: update_to_nbd_flag: appid 2: table 0 is latter, total target 0 max idx e, l -> 19 4
+           <...>-13015 [005] ....  1398.544454: miss_page_handler: miss page handler start! target(id,table): 2,1
+           <...>-200   [007] ....  1398.546226: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [007] d..2  1398.546229: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [007] d..2  1398.546230: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [007] d..2  1398.546232: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [007] d..2  1398.546233: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [007] d..2  1398.546234: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [007] d..2  1398.546235: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [007] d..2  1398.546237: send_target_manager: send target manager - id, which_table : 6, 1
+           <...>-200   [007] d..2  1398.546238: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [007] d..2  1398.546239: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [007] ....  1398.546241: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-13192 [007] ....  1427.066965: app_switch_start_handler: ###########switch start! foreground 10159#############
+           <...>-13192 [007] ....  1427.066968: prefetch_handler: prefetch handler start! target(id,table): 6,1
+           <...>-13192 [007] ....  1427.184410: update_to_nbd_flag: appid 6: table 0 is latter, total target 0 max idx e, l -> 1 6
+           <...>-13192 [007] ....  1427.193134: miss_page_handler: miss page handler start! target(id,table): 6,1
+           <...>-200   [004] ....  1427.193155: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] d..2  1427.193158: send_target_manager: send target manager - id, which_table : 0, 1
+           <...>-200   [004] d..2  1427.193160: send_target_manager: send target manager - id, which_table : 1, 1
+           <...>-200   [004] d..2  1427.193161: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [004] d..2  1427.193162: send_target_manager: send target manager - id, which_table : 3, 0
+           <...>-200   [004] d..2  1427.193163: send_target_manager: send target manager - id, which_table : 4, 1
+           <...>-200   [004] d..2  1427.193165: send_target_manager: send target manager - id, which_table : 5, 0
+           <...>-200   [004] d..2  1427.193166: send_target_manager: send target manager - id, which_table : 6, 0
+           <...>-200   [004] d..2  1427.193167: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-200   [004] d..2  1427.193169: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-200   [004] ....  1427.193170: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+              sh-13394 [007] ....  1481.030562: swap_counter_dump_handler: pid 6242: counter 0 = 0
+              sh-13394 [007] ....  1481.030565: swap_counter_dump_handler: pid 6242: counter 1 = 1515
+              sh-13394 [007] ....  1481.030566: swap_counter_dump_handler: pid 6242: counter 2 = 4658
+              sh-13394 [007] ....  1481.030567: swap_counter_dump_handler: pid 6242: counter 3 = 0
+              sh-13394 [007] ....  1481.030568: swap_counter_dump_handler: pid 6242: counter 4 = 0
+              sh-13394 [007] ....  1481.030568: swap_counter_dump_handler: pid 6242: counter 5 = 0
+              sh-13394 [007] ....  1481.030569: swap_counter_dump_handler: pid 6242: counter >5 = 0
+              sh-13394 [007] ....  1481.030569: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-13394 [007] ....  1481.030570: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-13396 [007] ....  1481.042834: swap_counter_dump_handler: pid 6841: counter 0 = 1
+              sh-13396 [007] ....  1481.042837: swap_counter_dump_handler: pid 6841: counter 1 = 4585
+              sh-13396 [007] ....  1481.042837: swap_counter_dump_handler: pid 6841: counter 2 = 207
+              sh-13396 [007] ....  1481.042838: swap_counter_dump_handler: pid 6841: counter 3 = 0
+              sh-13396 [007] ....  1481.042839: swap_counter_dump_handler: pid 6841: counter 4 = 0
+              sh-13396 [007] ....  1481.042839: swap_counter_dump_handler: pid 6841: counter 5 = 0
+              sh-13396 [007] ....  1481.042840: swap_counter_dump_handler: pid 6841: counter >5 = 0
+              sh-13396 [007] ....  1481.042841: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-13396 [007] ....  1481.042841: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-13398 [007] ....  1481.058843: swap_counter_dump_handler: pid 7130: counter 0 = 0
+              sh-13398 [007] ....  1481.058847: swap_counter_dump_handler: pid 7130: counter 1 = 18019
+              sh-13398 [007] ....  1481.058848: swap_counter_dump_handler: pid 7130: counter 2 = 1622
+              sh-13398 [007] ....  1481.058849: swap_counter_dump_handler: pid 7130: counter 3 = 0
+              sh-13398 [007] ....  1481.058850: swap_counter_dump_handler: pid 7130: counter 4 = 0
+              sh-13398 [007] ....  1481.058852: swap_counter_dump_handler: pid 7130: counter 5 = 0
+              sh-13398 [007] ....  1481.058853: swap_counter_dump_handler: pid 7130: counter >5 = 0
+              sh-13398 [007] ....  1481.058854: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-13398 [007] ....  1481.058855: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-13400 [007] ....  1481.072835: swap_counter_dump_handler: pid 7383: counter 0 = 0
+              sh-13400 [007] ....  1481.072838: swap_counter_dump_handler: pid 7383: counter 1 = 2169
+              sh-13400 [007] ....  1481.072840: swap_counter_dump_handler: pid 7383: counter 2 = 3
+              sh-13400 [007] ....  1481.072841: swap_counter_dump_handler: pid 7383: counter 3 = 0
+              sh-13400 [007] ....  1481.072842: swap_counter_dump_handler: pid 7383: counter 4 = 0
+              sh-13400 [007] ....  1481.072842: swap_counter_dump_handler: pid 7383: counter 5 = 0
+              sh-13400 [007] ....  1481.072843: swap_counter_dump_handler: pid 7383: counter >5 = 0
+              sh-13400 [007] ....  1481.072845: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-13400 [007] ....  1481.072846: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-13402 [007] ....  1481.086482: swap_counter_dump_handler: pid 8093: counter 0 = 0
+              sh-13402 [007] ....  1481.086485: swap_counter_dump_handler: pid 8093: counter 1 = 3768
+              sh-13402 [007] ....  1481.086486: swap_counter_dump_handler: pid 8093: counter 2 = 0
+              sh-13402 [007] ....  1481.086487: swap_counter_dump_handler: pid 8093: counter 3 = 0
+              sh-13402 [007] ....  1481.086488: swap_counter_dump_handler: pid 8093: counter 4 = 0
+              sh-13402 [007] ....  1481.086488: swap_counter_dump_handler: pid 8093: counter 5 = 0
+              sh-13402 [007] ....  1481.086489: swap_counter_dump_handler: pid 8093: counter >5 = 0
+              sh-13402 [007] ....  1481.086489: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-13402 [007] ....  1481.086490: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-13404 [007] ....  1481.103284: swap_counter_dump_handler: pid 8557: counter 0 = 8165
+              sh-13404 [007] ....  1481.103287: swap_counter_dump_handler: pid 8557: counter 1 = 20364
+              sh-13404 [007] ....  1481.103288: swap_counter_dump_handler: pid 8557: counter 2 = 0
+              sh-13404 [007] ....  1481.103289: swap_counter_dump_handler: pid 8557: counter 3 = 0
+              sh-13404 [007] ....  1481.103290: swap_counter_dump_handler: pid 8557: counter 4 = 0
+              sh-13404 [007] ....  1481.103290: swap_counter_dump_handler: pid 8557: counter 5 = 0
+              sh-13404 [007] ....  1481.103291: swap_counter_dump_handler: pid 8557: counter >5 = 0
+              sh-13404 [007] ....  1481.103291: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-13404 [007] ....  1481.103292: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-13406 [007] ....  1481.119531: swap_counter_dump_handler: pid 9034: counter 0 = 0
+              sh-13406 [007] ....  1481.119535: swap_counter_dump_handler: pid 9034: counter 1 = 7
+              sh-13406 [007] ....  1481.119536: swap_counter_dump_handler: pid 9034: counter 2 = 0
+              sh-13406 [007] ....  1481.119537: swap_counter_dump_handler: pid 9034: counter 3 = 0
+              sh-13406 [007] ....  1481.119538: swap_counter_dump_handler: pid 9034: counter 4 = 0
+              sh-13406 [007] ....  1481.119538: swap_counter_dump_handler: pid 9034: counter 5 = 0
+              sh-13406 [007] ....  1481.119539: swap_counter_dump_handler: pid 9034: counter >5 = 0
+              sh-13406 [007] ....  1481.119540: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-13406 [007] ....  1481.119541: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-13408 [007] ....  1481.133960: swap_counter_dump_handler: pid 9380: counter 0 = 0
+              sh-13408 [007] ....  1481.133963: swap_counter_dump_handler: pid 9380: counter 1 = 0
+              sh-13408 [007] ....  1481.133963: swap_counter_dump_handler: pid 9380: counter 2 = 0
+              sh-13408 [007] ....  1481.133964: swap_counter_dump_handler: pid 9380: counter 3 = 0
+              sh-13408 [007] ....  1481.133964: swap_counter_dump_handler: pid 9380: counter 4 = 0
+              sh-13408 [007] ....  1481.133965: swap_counter_dump_handler: pid 9380: counter 5 = 0
+              sh-13408 [007] ....  1481.133965: swap_counter_dump_handler: pid 9380: counter >5 = 0
+              sh-13408 [007] ....  1481.133966: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-13408 [007] ....  1481.133967: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-13410 [007] ....  1481.146616: swap_counter_dump_handler: pid 10094: counter 0 = 0
+              sh-13410 [007] ....  1481.146619: swap_counter_dump_handler: pid 10094: counter 1 = 0
+              sh-13410 [007] ....  1481.146620: swap_counter_dump_handler: pid 10094: counter 2 = 0
+              sh-13410 [007] ....  1481.146621: swap_counter_dump_handler: pid 10094: counter 3 = 0
+              sh-13410 [007] ....  1481.146622: swap_counter_dump_handler: pid 10094: counter 4 = 0
+              sh-13410 [007] ....  1481.146622: swap_counter_dump_handler: pid 10094: counter 5 = 0
+              sh-13410 [007] ....  1481.146623: swap_counter_dump_handler: pid 10094: counter >5 = 0
+              sh-13410 [007] ....  1481.146623: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-13410 [007] ....  1481.146625: swap_counter_dump_handler: remote: total faulted cold page: 0

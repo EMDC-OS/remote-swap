@@ -15,7 +15,7 @@ setenforce 0
 
 sleep 1
 
-/data/nbdroid/nbd-client 192.168.0.4 -N export1 /dev/nbd0
+/data/nbdroid/nbd-client 192.168.0.4 -N export3 /dev/nbd0
 
 sleep 1
 
