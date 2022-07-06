@@ -3032,6 +3032,9 @@ int do_swap_page(struct vm_fault *vmf)
 				atomic_inc(&faulted_cold_page);
 				atomic_dec(&sent_cold_page);
 			}
+			else if(pte_to_swp_counter(vmf->orig_pte)==10) { //direct
+				trace_printk("Direct fault : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+			}
 			else if(switch_start && id && pte_to_swp_counter(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
 					trace_printk("prefetch fault id %d: %d \"%s\" %lx %lx\n",get_id_from_uid(foreground_uid),current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
@@ -3179,8 +3182,10 @@ int do_swap_page(struct vm_fault *vmf)
 #ifdef CONFIG_APP_AWARE
 		|| swp_type(entry)==NBD_TYPE
 #endif
-		)
+		){
 		try_to_free_swap(page);
+		trace_printk(KERN_ERR "[REMOTE %s] try_to_free_swap page %llx\n", __func__,page_to_pfn(page));
+	}
 	
 	
 	unlock_page(page);

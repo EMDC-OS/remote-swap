@@ -135,7 +135,7 @@ echo ===========================
 
 
 adb shell /data/launch/with_sysctl_launch_app.sh candycrush
-sleep 60
+sleep 20
 /home/user/hdd/kernel_flame/private/shell/play/candycrush_play.sh
 
 adb shell free -m
@@ -286,7 +286,7 @@ adb shell cat /proc/vmstat | grep pswp
 
 
 adb shell /data/launch/with_sysctl_launch_app.sh angrybirds
-sleep 60
+sleep 30
 /home/user/hdd/kernel_flame/private/shell/play/angrybirds_play.sh
 
 adb shell free -m
@@ -341,7 +341,7 @@ echo ===========================
 
 
 	adb shell /data/launch/with_sysctl_launch_app.sh gmail
-sleep 60 
+sleep 20 
 adb shell free -m
 adb shell cat /proc/swaps
 
@@ -438,7 +438,7 @@ echo ===========================
 
 
 	adb shell /data/launch/with_sysctl_launch_app.sh clashroyale
-	sleep 50
+	sleep 30
 /home/user/hdd/kernel_flame/private/shell/play/clash_play.sh
 #sleep 100
 adb shell free -m
@@ -500,10 +500,9 @@ adb shell "echo $STR9 > /proc/sys/kernel/swap_counter_dump"
 sleep 20
 adb shell cat /sys/kernel/debug/tracing/trace > ./trace/trace_$num.txt
 adb shell "echo > /sys/kernel/debug/tracing/trace"
-sleep 20
 
 
-sleep 60
+sleep 30
 adb shell dmesg > dmesg_${num}.txt
 
 adb shell dumpsys batterystats > ./trace/battery_$num.txt

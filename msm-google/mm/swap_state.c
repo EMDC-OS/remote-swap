@@ -296,8 +296,10 @@ int add_to_swap(struct page *page)
 		return 0;
 
 #ifdef CONFIG_APP_AWARE
-	if(swp_type(entry)==NBD_TYPE)
-		trace_printk("ZRAM full: nbd swapout offset %llx",swp_offset(entry));
+	if(swp_type(entry)==NBD_TYPE){
+		trace_printk("ZRAM full: nbd swapout offset %llx\n",swp_offset(entry));
+		SetPageDirect(page);
+	}
 #endif
 
 	if (mem_cgroup_try_charge_swap(page, entry))

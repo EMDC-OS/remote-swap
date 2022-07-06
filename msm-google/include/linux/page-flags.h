@@ -109,6 +109,7 @@ enum pageflags {
 #endif
 #ifdef CONFIG_APP_AWARE
 	PG_excepted,
+	PG_direct,
 #endif
 	__NR_PAGEFLAGS,
 
@@ -383,6 +384,7 @@ PAGEFLAG(Idle, idle, PF_ANY)
 
 #ifdef CONFIG_APP_AWARE
 PAGEFLAG(Excepted, excepted, PF_ANY)
+PAGEFLAG(Direct, direct, PF_ANY)
 #endif
 
 

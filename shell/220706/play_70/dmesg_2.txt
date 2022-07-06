@@ -1,0 +1,1002 @@
+[ 4772.068915] CPU: 3 PID: 31933 Comm: Shutdown thread Tainted: G S  B      O    4.14.170_audio #1
+[ 4772.068920] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4772.068923] Call trace:
+[ 4772.068937] dump_backtrace+0x0/0x1e4
+[ 4772.068940] show_stack+0x18/0x24
+[ 4772.068949] dump_stack+0xbc/0xf8
+[ 4772.068956] bad_page+0x114/0x168
+[ 4772.068962] free_pcppages_bulk+0x530/0x588
+[ 4772.068965] free_hot_cold_page+0x250/0x29c
+[ 4772.068968] free_hot_cold_page_list+0xf0/0x118
+[ 4772.068972] release_pages+0x2ec/0x328
+[ 4772.068979] free_pages_and_swap_cache+0xac/0xc4
+[ 4772.068985] tlb_flush_mmu+0xfc/0x120
+[ 4772.068987] tlb_finish_mmu+0x50/0x94
+[ 4772.068991] unmap_region+0xe4/0x118
+[ 4772.068994] do_munmap+0x2b0/0x44c
+[ 4772.068997] SyS_munmap+0x6c/0xac
+[ 4772.069001] el0_svc_naked+0x34/0x38
+[ 4772.737299] type=1400 audit(1656972358.947:2984): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[ 4772.737979] type=1400 audit(1656972361.541:2985): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4772.738446] type=1400 audit(1656972361.541:2985): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4772.739185] type=1400 audit(1656972361.541:2986): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4773.583650] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4773.586390] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4773.586393] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4773.586396] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4773.586399] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4773.586700] msm_vidc:  err: This control 980928 is not supported yet
+[ 4773.590392] msm_vidc:  err: This control 980928 is not supported yet
+[ 4773.590410] msm_vidc:  err: This control 980927 is not supported yet
+[ 4773.607959] msm_vidc:  err: This control 980927 is not supported yet
+[ 4773.880751] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4774.834836] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4774.837656] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4774.837663] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4774.837667] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4774.837671] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4774.837709] msm_vidc:  err: This control 980928 is not supported yet
+[ 4774.841242] msm_vidc:  err: This control 980928 is not supported yet
+[ 4774.841259] msm_vidc:  err: This control 980927 is not supported yet
+[ 4774.857373] msm_vidc:  err: This control 980927 is not supported yet
+[ 4775.140921] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4775.148455] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4775.151562] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4775.151570] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4775.151575] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4775.151579] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4775.151698] msm_vidc:  err: This control 980928 is not supported yet
+[ 4775.154937] msm_vidc:  err: This control 980928 is not supported yet
+[ 4775.154945] msm_vidc:  err: This control 980927 is not supported yet
+[ 4775.180367] msm_vidc:  err: This control 980927 is not supported yet
+[ 4776.153512] google_charger: usbchg=USB typec=C usbv=4870 usbc=487 usbMv=5000 usbMc=500
+[ 4776.153605] sm8150_bms: MSC_PCS chg_state=1f410f303010015 [0x15:3:1:4339:500] chg=u
+[ 4776.153616] google_battery: MSC_DIN chg_state=1f410f303010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4339 icl=500
+[ 4776.156546] google_battery: MSC_LAST vbatt=4344375 ibatt=-112812 fv_uv=4400000
+[ 4776.156559] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4776.156564] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[ 4776.156594] google_charger: MSC_CHG fv_uv=4400000, cc_max=500000, rerun in 30000 ms (0)
+[ 4776.406165] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4776.501861] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4776.504322] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4776.504330] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4776.504335] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4776.504339] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4776.504378] msm_vidc:  err: This control 980928 is not supported yet
+[ 4776.507124] msm_vidc:  err: This control 980928 is not supported yet
+[ 4776.507139] msm_vidc:  err: This control 980927 is not supported yet
+[ 4776.527806] msm_vidc:  err: This control 980927 is not supported yet
+[ 4776.822264] type=1400 audit(1656972361.541:2986): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4776.822991] type=1400 audit(1656972365.624:2987): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4776.823206] type=1400 audit(1656972365.624:2987): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4776.823704] type=1400 audit(1656972365.624:2988): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4776.927977] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4777.863136] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4777.865522] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4777.865529] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4777.865534] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4777.865537] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4777.865572] msm_vidc:  err: This control 980928 is not supported yet
+[ 4777.869186] msm_vidc:  err: This control 980928 is not supported yet
+[ 4777.869203] msm_vidc:  err: This control 980927 is not supported yet
+[ 4777.885542] msm_vidc:  err: This control 980927 is not supported yet
+[ 4778.176873] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4778.824172] type=1400 audit(1656972365.624:2988): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4778.824920] type=1400 audit(1656972367.627:2989): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4778.825198] type=1400 audit(1656972367.627:2989): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4778.826638] type=1400 audit(1656972367.627:2990): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4778.827606] type=1400 audit(1656972367.627:2990): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4778.828269] type=1400 audit(1656972367.627:2991): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4779.507231] type=1400 audit(1656972367.627:2991): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4779.507268] type=1400 audit(1656972368.311:2992): avc: denied { write } for comm="kworker/0:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4779.509701] type=1400 audit(1656972368.311:2992): avc: denied { write } for comm="kworker/0:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4779.509772] type=1400 audit(1656972368.314:2993): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4779.708333] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4779.711513] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4779.711518] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4779.711520] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4779.711523] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4779.711610] msm_vidc:  err: This control 980928 is not supported yet
+[ 4779.715222] msm_vidc:  err: This control 980928 is not supported yet
+[ 4779.715236] msm_vidc:  err: This control 980927 is not supported yet
+[ 4779.732007] msm_vidc:  err: This control 980927 is not supported yet
+[ 4779.954777] type=1400 audit(1656972368.314:2993): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4779.954810] type=1400 audit(1656972368.757:2994): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[ 4780.863514] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4782.248874] BUG: Bad page state in process Shutdown thread  pfn:185082
+[ 4782.248892] page:ffffffbf37142080 count:0 mapcount:0 mapping:ffffffcd289013f0 index:0x0
+[ 4782.248901] flags: 0x4000000000000000()
+[ 4782.248911] raw: 4000000000000000 ffffffcd289013f0 0000000000000000 00000000ffffffff
+[ 4782.248919] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[ 4782.248925] page dumped because: non-NULL mapping
+[ 4782.248931] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[ 4782.248994] CPU: 3 PID: 32119 Comm: Shutdown thread Tainted: G S  B      O    4.14.170_audio #1
+[ 4782.248996] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4782.248999] Call trace:
+[ 4782.249009] dump_backtrace+0x0/0x1e4
+[ 4782.249013] show_stack+0x18/0x24
+[ 4782.249020] dump_stack+0xbc/0xf8
+[ 4782.249025] bad_page+0x114/0x168
+[ 4782.249029] free_pcppages_bulk+0x530/0x588
+[ 4782.249032] free_hot_cold_page+0x250/0x29c
+[ 4782.249035] free_hot_cold_page_list+0xf0/0x118
+[ 4782.249038] release_pages+0x2ec/0x328
+[ 4782.249043] free_pages_and_swap_cache+0xac/0xc4
+[ 4782.249048] tlb_flush_mmu+0xfc/0x120
+[ 4782.249050] tlb_finish_mmu+0x50/0x94
+[ 4782.249053] unmap_region+0xe4/0x118
+[ 4782.249056] do_munmap+0x2b0/0x44c
+[ 4782.249059] SyS_munmap+0x6c/0xac
+[ 4782.249062] el0_svc_naked+0x34/0x38
+[ 4782.301356] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4782.304068] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4782.304076] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4782.304081] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4782.304085] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4782.304158] msm_vidc:  err: This control 980928 is not supported yet
+[ 4782.306854] msm_vidc:  err: This control 980928 is not supported yet
+[ 4782.306871] msm_vidc:  err: This control 980927 is not supported yet
+[ 4782.322321] msm_vidc:  err: This control 980927 is not supported yet
+[ 4782.712333] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4784.539826] BUG: Bad page state in process Image Decoding  pfn:175741
+[ 4784.539852] page:ffffffbf36d5d040 count:0 mapcount:0 mapping:ffffffcd289013f0 index:0x0
+[ 4784.539861] flags: 0x4000000000000000()
+[ 4784.539872] raw: 4000000000000000 ffffffcd289013f0 0000000000000000 00000000ffffffff
+[ 4784.539879] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[ 4784.539886] page dumped because: non-NULL mapping
+[ 4784.539891] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[ 4784.539950] CPU: 0 PID: 14561 Comm: Image Decoding Tainted: G S  B      O    4.14.170_audio #1
+[ 4784.539953] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4784.539955] Call trace:
+[ 4784.539969] dump_backtrace+0x0/0x1e4
+[ 4784.539972] show_stack+0x18/0x24
+[ 4784.539979] dump_stack+0xbc/0xf8
+[ 4784.539985] bad_page+0x114/0x168
+[ 4784.539991] free_pcppages_bulk+0x530/0x588
+[ 4784.539993] free_hot_cold_page+0x250/0x29c
+[ 4784.539996] free_hot_cold_page_list+0xf0/0x118
+[ 4784.540000] release_pages+0x2ec/0x328
+[ 4784.540007] free_pages_and_swap_cache+0xac/0xc4
+[ 4784.540012] tlb_flush_mmu+0xfc/0x120
+[ 4784.540015] zap_page_range+0x188/0x1f0
+[ 4784.540018] SyS_madvise+0x1d8/0x84c
+[ 4784.540021] __sys_trace_return+0x0/0x4
+[ 4785.179095] BUG: Bad page state in process Shutdown thread  pfn:b86b3
+[ 4785.179115] page:ffffffbf33e1acc0 count:0 mapcount:0 mapping:ffffffcd289014a0 index:0x0
+[ 4785.179124] flags: 0x0()
+[ 4785.179134] raw: 0000000000000000 ffffffcd289014a0 0000000000000000 00000000ffffffff
+[ 4785.179141] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[ 4785.179147] page dumped because: non-NULL mapping
+[ 4785.179152] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[ 4785.179208] CPU: 1 PID: 32157 Comm: Shutdown thread Tainted: G S  B      O    4.14.170_audio #1
+[ 4785.179211] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4785.179213] Call trace:
+[ 4785.179224] dump_backtrace+0x0/0x1e4
+[ 4785.179227] show_stack+0x18/0x24
+[ 4785.179233] dump_stack+0xbc/0xf8
+[ 4785.179239] bad_page+0x114/0x168
+[ 4785.179244] free_pcppages_bulk+0x530/0x588
+[ 4785.179247] free_hot_cold_page+0x250/0x29c
+[ 4785.179250] free_hot_cold_page_list+0xf0/0x118
+[ 4785.179253] release_pages+0x2ec/0x328
+[ 4785.179258] free_pages_and_swap_cache+0xac/0xc4
+[ 4785.179263] tlb_flush_mmu+0xfc/0x120
+[ 4785.179265] zap_page_range+0x188/0x1f0
+[ 4785.179268] SyS_madvise+0x1d8/0x84c
+[ 4785.179272] el0_svc_naked+0x34/0x38
+[ 4785.179534] BUG: Bad page state in process Shutdown thread  pfn:1b78a5
+[ 4785.179553] page:ffffffbf37de2940 count:0 mapcount:0 mapping:ffffffcd28901550 index:0x0
+[ 4785.179572] flags: 0x4000000000000000()
+[ 4785.179587] raw: 4000000000000000 ffffffcd28901550 0000000000000000 00000000ffffffff
+[ 4785.179602] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[ 4785.179617] page dumped because: non-NULL mapping
+[ 4785.179632] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[ 4785.179677] CPU: 1 PID: 32157 Comm: Shutdown thread Tainted: G S  B      O    4.14.170_audio #1
+[ 4785.179678] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4785.179680] Call trace:
+[ 4785.179683] dump_backtrace+0x0/0x1e4
+[ 4785.179686] show_stack+0x18/0x24
+[ 4785.179690] dump_stack+0xbc/0xf8
+[ 4785.179692] bad_page+0x114/0x168
+[ 4785.179695] free_pcppages_bulk+0x530/0x588
+[ 4785.179698] free_hot_cold_page+0x250/0x29c
+[ 4785.179700] free_hot_cold_page_list+0xf0/0x118
+[ 4785.179703] release_pages+0x2ec/0x328
+[ 4785.179706] free_pages_and_swap_cache+0xac/0xc4
+[ 4785.179709] tlb_flush_mmu+0xfc/0x120
+[ 4785.179711] tlb_finish_mmu+0x50/0x94
+[ 4785.179714] unmap_region+0xe4/0x118
+[ 4785.179717] do_munmap+0x2b0/0x44c
+[ 4785.179720] SyS_munmap+0x6c/0xac
+[ 4785.179722] el0_svc_naked+0x34/0x38
+[ 4785.251307] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4785.354915] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4785.357748] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4785.357756] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4785.357762] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4785.357765] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4785.357844] msm_vidc:  err: This control 980928 is not supported yet
+[ 4785.362278] msm_vidc:  err: This control 980928 is not supported yet
+[ 4785.362296] msm_vidc:  err: This control 980927 is not supported yet
+[ 4785.379310] msm_vidc:  err: This control 980927 is not supported yet
+[ 4785.706542] type=1400 audit(1656972368.757:2994): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[ 4785.707088] type=1400 audit(1656972374.511:2995): avc: denied { call } for comm="SIMPLE_WORKER7" scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.instagram.android
+[ 4788.317766] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4791.248430] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4791.254138] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4791.254142] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4791.254145] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4791.254147] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4791.254149] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4791.254151] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4791.254153] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4791.254157] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4791.254209] msm_vidc:  err: This control 980928 is not supported yet
+[ 4791.257037] msm_vidc:  err: This control 980928 is not supported yet
+[ 4791.257055] msm_vidc:  err: This control 980927 is not supported yet
+[ 4791.279741] msm_vidc:  err: This control 980927 is not supported yet
+[ 4791.815675] type=1400 audit(1656972374.511:2995): avc: denied { call } for comm="SIMPLE_WORKER7" scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.instagram.android
+[ 4791.816321] type=1400 audit(1656972380.617:2996): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4791.816723] type=1400 audit(1656972380.617:2996): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4791.817280] type=1400 audit(1656972380.617:2997): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4794.057822] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4794.060284] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4794.060292] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4794.060301] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4794.060304] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4794.060357] msm_vidc:  err: This control 980928 is not supported yet
+[ 4794.063392] msm_vidc:  err: This control 980928 is not supported yet
+[ 4794.063409] msm_vidc:  err: This control 980927 is not supported yet
+[ 4794.084060] msm_vidc:  err: This control 980927 is not supported yet
+[ 4794.334667] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4795.555316] BUG: Bad page state in process Shutdown thread  pfn:c279a
+[ 4795.555341] page:ffffffbf3409e680 count:0 mapcount:0 mapping:ffffffcd28901550 index:0x0
+[ 4795.555351] flags: 0x0()
+[ 4795.555365] raw: 0000000000000000 ffffffcd28901550 0000000000000000 00000000ffffffff
+[ 4795.555373] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[ 4795.555381] page dumped because: non-NULL mapping
+[ 4795.555388] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[ 4795.555466] CPU: 3 PID: 32283 Comm: Shutdown thread Tainted: G S  B      O    4.14.170_audio #1
+[ 4795.555468] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4795.555472] Call trace:
+[ 4795.555486] dump_backtrace+0x0/0x1e4
+[ 4795.555491] show_stack+0x18/0x24
+[ 4795.555498] dump_stack+0xbc/0xf8
+[ 4795.555506] bad_page+0x114/0x168
+[ 4795.555511] free_pcppages_bulk+0x530/0x588
+[ 4795.555514] free_hot_cold_page+0x250/0x29c
+[ 4795.555516] free_hot_cold_page_list+0xf0/0x118
+[ 4795.555521] release_pages+0x2ec/0x328
+[ 4795.555529] free_pages_and_swap_cache+0xac/0xc4
+[ 4795.555534] tlb_flush_mmu+0xfc/0x120
+[ 4795.555537] tlb_finish_mmu+0x50/0x94
+[ 4795.555542] unmap_region+0xe4/0x118
+[ 4795.555544] do_munmap+0x2b0/0x44c
+[ 4795.555548] SyS_munmap+0x6c/0xac
+[ 4795.555552] el0_svc_naked+0x34/0x38
+[ 4795.693213] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4796.840439] type=1400 audit(1656972380.617:2997): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4796.840780] type=1400 audit(1656972385.644:2998): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4796.840914] type=1400 audit(1656972385.644:2998): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4796.841430] type=1400 audit(1656972385.644:2999): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4798.842599] type=1400 audit(1656972385.644:2999): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4798.843317] type=1400 audit(1656972387.644:3000): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4798.843726] type=1400 audit(1656972387.644:3000): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4798.844194] type=1400 audit(1656972387.644:3001): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4798.844341] type=1400 audit(1656972387.644:3001): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4798.844776] type=1400 audit(1656972387.644:3002): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4799.958722] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4799.964876] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4799.964885] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4799.964890] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4799.964894] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4799.964899] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4799.964902] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4799.964906] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4799.964910] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4799.964990] msm_vidc:  err: This control 980928 is not supported yet
+[ 4799.970382] msm_vidc:  err: This control 980928 is not supported yet
+[ 4799.970401] msm_vidc:  err: This control 980927 is not supported yet
+[ 4799.988631] msm_vidc:  err: This control 980927 is not supported yet
+[ 4800.253421] type=1400 audit(1656972387.644:3002): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4800.253453] type=1400 audit(1656972389.057:3003): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[ 4802.004437] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4802.007367] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4802.007375] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4802.007382] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4802.007386] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4802.007433] msm_vidc:  err: This control 980928 is not supported yet
+[ 4802.012780] msm_vidc:  err: This control 980928 is not supported yet
+[ 4802.012800] msm_vidc:  err: This control 980927 is not supported yet
+[ 4802.028992] msm_vidc:  err: This control 980927 is not supported yet
+[ 4802.737847] type=1400 audit(1656972389.057:3003): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[ 4802.738212] type=1400 audit(1656972391.541:3004): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4802.738382] type=1400 audit(1656972391.541:3004): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4802.738716] type=1400 audit(1656972391.541:3005): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4803.043248] type=1400 audit(1656972391.541:3005): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4803.043293] type=1400 audit(1656972391.847:3006): avc: denied { write } for comm="kworker/3:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4803.045723] type=1400 audit(1656972391.847:3006): avc: denied { write } for comm="kworker/3:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4803.045815] type=1400 audit(1656972391.847:3007): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4803.054451] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4803.151851] BUG: Bad page state in process crtc_commit:127  pfn:1c7c83
+[ 4803.151876] page:ffffffbf381f20c0 count:0 mapcount:0 mapping:ffffffcd28901550 index:0x0
+[ 4803.151888] flags: 0x4000000000000000()
+[ 4803.151903] raw: 4000000000000000 ffffffcd28901550 0000000000000000 00000000ffffffff
+[ 4803.151914] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[ 4803.151923] page dumped because: non-NULL mapping
+[ 4803.151931] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[ 4803.152013] CPU: 0 PID: 279 Comm: crtc_commit:127 Tainted: G S  B      O    4.14.170_audio #1
+[ 4803.152017] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4803.152020] Call trace:
+[ 4803.152034] dump_backtrace+0x0/0x1e4
+[ 4803.152039] show_stack+0x18/0x24
+[ 4803.152046] dump_stack+0xbc/0xf8
+[ 4803.152053] bad_page+0x114/0x168
+[ 4803.152059] free_pcppages_bulk+0x530/0x588
+[ 4803.152064] free_hot_cold_page+0x250/0x29c
+[ 4803.152068] free_pages+0x64/0x70
+[ 4803.152075] sg_free_table+0x28/0x88
+[ 4803.152084] ion_dma_buf_detatch+0x60/0x80
+[ 4803.152092] dma_buf_detach+0x70/0x9c
+[ 4803.152099] drm_prime_gem_destroy+0x34/0x4c
+[ 4803.152107] msm_gem_free_object+0x13c/0x27c
+[ 4803.152114] drm_gem_object_put_unlocked+0xa4/0xdc
+[ 4803.152118] msm_framebuffer_destroy+0x5c/0xa0
+[ 4803.152123] drm_framebuffer_free+0x30/0x40
+[ 4803.152130] drm_mode_object_put+0x58/0x68
+[ 4803.152137] sde_plane_destroy_state+0x84/0x214
+[ 4803.152142] drm_atomic_state_default_clear+0x1b0/0x280
+[ 4803.152147] msm_atomic_state_clear+0x18/0x34
+[ 4803.152152] __drm_atomic_state_free+0x2c/0xa4
+[ 4803.152156] complete_commit+0x698/0x738
+[ 4803.152160] _msm_drm_commit_work_cb+0xd0/0x1b8
+[ 4803.152165] kthread_worker_fn+0xd0/0x16c
+[ 4803.152170] kthread+0x11c/0x12c
+[ 4803.152174] ret_from_fork+0x10/0x18
+[ 4803.284229] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4803.287208] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4803.287216] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4803.287222] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4803.287225] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4803.287291] msm_vidc:  err: This control 980928 is not supported yet
+[ 4803.291274] msm_vidc:  err: This control 980928 is not supported yet
+[ 4803.291290] msm_vidc:  err: This control 980927 is not supported yet
+[ 4803.309507] msm_vidc:  err: This control 980927 is not supported yet
+[ 4803.626402] healthd: battery l=100 v=4319 t=41.5 h=2 st=5 c=85 fc=2723000 cc=14 chg=u
+[ 4803.650104] BUG: Bad page state in process composer@2.3-se  pfn:14f3b7
+[ 4803.650126] page:ffffffbf363cedc0 count:0 mapcount:0 mapping:ffffffcd28901550 index:0x1
+[ 4803.650137] flags: 0x4000000000000000()
+[ 4803.650150] raw: 4000000000000000 ffffffcd28901550 0000000000000001 00000000ffffffff
+[ 4803.650160] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[ 4803.650168] page dumped because: non-NULL mapping
+[ 4803.650175] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[ 4803.650247] CPU: 2 PID: 603 Comm: composer@2.3-se Tainted: G S  B      O    4.14.170_audio #1
+[ 4803.650250] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4803.650253] Call trace:
+[ 4803.650265] dump_backtrace+0x0/0x1e4
+[ 4803.650270] show_stack+0x18/0x24
+[ 4803.650276] dump_stack+0xbc/0xf8
+[ 4803.650283] bad_page+0x114/0x168
+[ 4803.650288] free_pcppages_bulk+0x530/0x588
+[ 4803.650292] free_hot_cold_page+0x250/0x29c
+[ 4803.650296] free_pages+0x64/0x70
+[ 4803.650302] sg_free_table+0x28/0x88
+[ 4803.650309] ion_dma_buf_detatch+0x60/0x80
+[ 4803.650317] dma_buf_detach+0x70/0x9c
+[ 4803.650323] drm_prime_gem_destroy+0x34/0x4c
+[ 4803.650329] msm_gem_free_object+0x13c/0x27c
+[ 4803.650335] drm_gem_object_put_unlocked+0xa4/0xdc
+[ 4803.650340] msm_framebuffer_destroy+0x5c/0xa0
+[ 4803.650344] drm_framebuffer_free+0x30/0x40
+[ 4803.650349] drm_mode_object_put+0x58/0x68
+[ 4803.650354] msm_ioctl_rmfb2+0xb4/0xdc
+[ 4803.650358] drm_ioctl_kernel+0x110/0x130
+[ 4803.650362] drm_ioctl+0x20c/0x39c
+[ 4803.650368] do_vfs_ioctl+0x5d0/0x91c
+[ 4803.650372] SyS_ioctl+0x90/0x9c
+[ 4803.650376] el0_svc_naked+0x34/0x38
+[ 4803.865911] BUG: Bad page state in process kworker/2:2  pfn:1c7ac1
+[ 4803.865955] page:ffffffbf381eb040 count:0 mapcount:0 mapping:ffffffcd28901550 index:0x1
+[ 4803.865972] flags: 0x4000000000000000()
+[ 4803.865993] raw: 4000000000000000 ffffffcd28901550 0000000000000001 00000000ffffffff
+[ 4803.866006] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[ 4803.866018] page dumped because: non-NULL mapping
+[ 4803.866027] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[ 4803.866151] CPU: 2 PID: 9516 Comm: kworker/2:2 Tainted: G S  B      O    4.14.170_audio #1
+[ 4803.866154] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4803.866177] Workqueue: events delayed_fput
+[ 4803.866183] Call trace:
+[ 4803.866198] dump_backtrace+0x0/0x1e4
+[ 4803.866203] show_stack+0x18/0x24
+[ 4803.866214] dump_stack+0xbc/0xf8
+[ 4803.866223] bad_page+0x114/0x168
+[ 4803.866230] free_pcppages_bulk+0x530/0x588
+[ 4803.866235] free_hot_cold_page+0x250/0x29c
+[ 4803.866239] free_pages_exact+0x70/0x90
+[ 4803.866250] arm_smmu_free_pages_exact+0x44/0x150
+[ 4803.866260] io_pgtable_free_pages_exact+0x30/0x84
+[ 4803.866264] __arm_lpae_unmap+0x508/0x8e0
+[ 4803.866269] __arm_lpae_unmap+0x888/0x8e0
+[ 4803.866275] arm_lpae_unmap+0x98/0xec
+[ 4803.866280] arm_smmu_unmap+0xd4/0x134
+[ 4803.866285] __iommu_unmap+0xdc/0x224
+[ 4803.866289] iommu_unmap+0x14/0x20
+[ 4803.866294] iommu_dma_unmap_sg+0xb0/0x140
+[ 4803.866302] __iommu_unmap_sg_attrs+0xac/0xc8
+[ 4803.866307] msm_iommu_map_release+0xa0/0xe4
+[ 4803.866311] msm_dma_buf_freed+0xbc/0x168
+[ 4803.866322] _ion_buffer_destroy+0x20/0x88
+[ 4803.866328] ion_dma_buf_release+0x1c/0x34
+[ 4803.866337] dma_buf_release+0xa0/0x15c
+[ 4803.866341] __fput+0xc0/0x1b8
+[ 4803.866346] delayed_fput+0x3c/0x54
+[ 4803.866355] process_one_work+0x1f8/0x450
+[ 4803.866359] worker_thread+0x308/0x478
+[ 4803.866365] kthread+0x11c/0x12c
+[ 4803.866371] ret_from_fork+0x10/0x18
+[ 4803.866379] BUG: Bad page state in process kworker/2:2  pfn:1c7a75
+[ 4803.866391] page:ffffffbf381e9d40 count:0 mapcount:0 mapping:ffffffcd28901550 index:0x1
+[ 4803.866402] flags: 0x4000000000000000()
+[ 4803.866413] raw: 4000000000000000 ffffffcd28901550 0000000000000001 00000000ffffffff
+[ 4803.866424] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[ 4803.866433] page dumped because: non-NULL mapping
+[ 4803.866440] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[ 4803.866497] CPU: 2 PID: 9516 Comm: kworker/2:2 Tainted: G S  B      O    4.14.170_audio #1
+[ 4803.866500] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4803.866505] Workqueue: events delayed_fput
+[ 4803.866509] Call trace:
+[ 4803.866514] dump_backtrace+0x0/0x1e4
+[ 4803.866519] show_stack+0x18/0x24
+[ 4803.866522] dump_stack+0xbc/0xf8
+[ 4803.866527] bad_page+0x114/0x168
+[ 4803.866531] free_pcppages_bulk+0x530/0x588
+[ 4803.866535] free_hot_cold_page+0x250/0x29c
+[ 4803.866540] free_pages_exact+0x70/0x90
+[ 4803.866544] arm_smmu_free_pages_exact+0x44/0x150
+[ 4803.866548] io_pgtable_free_pages_exact+0x30/0x84
+[ 4803.866553] __arm_lpae_unmap+0x508/0x8e0
+[ 4803.866557] __arm_lpae_unmap+0x888/0x8e0
+[ 4803.866561] arm_lpae_unmap+0x98/0xec
+[ 4803.866565] arm_smmu_unmap+0xd4/0x134
+[ 4803.866569] __iommu_unmap+0xdc/0x224
+[ 4803.866572] iommu_unmap+0x14/0x20
+[ 4803.866576] iommu_dma_unmap_sg+0xb0/0x140
+[ 4803.866581] __iommu_unmap_sg_attrs+0xac/0xc8
+[ 4803.866586] msm_iommu_map_release+0xa0/0xe4
+[ 4803.866590] msm_dma_buf_freed+0xbc/0x168
+[ 4803.866595] _ion_buffer_destroy+0x20/0x88
+[ 4803.866600] ion_dma_buf_release+0x1c/0x34
+[ 4803.866604] dma_buf_release+0xa0/0x15c
+[ 4803.866609] __fput+0xc0/0x1b8
+[ 4803.866613] delayed_fput+0x3c/0x54
+[ 4803.866618] process_one_work+0x1f8/0x450
+[ 4803.866622] worker_thread+0x308/0x478
+[ 4803.866626] kthread+0x11c/0x12c
+[ 4803.866630] ret_from_fork+0x10/0x18
+[ 4804.385403] BUG: Bad page state in process Signal Catcher  pfn:1b0f22
+[ 4804.385422] page:ffffffbf37c3c880 count:0 mapcount:0 mapping:ffffffcd28901550 index:0x1
+[ 4804.385430] flags: 0x4000000000000000()
+[ 4804.385439] raw: 4000000000000000 ffffffcd28901550 0000000000000001 00000000ffffffff
+[ 4804.385446] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[ 4804.385452] page dumped because: non-NULL mapping
+[ 4804.385457] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[ 4804.385513] CPU: 3 PID: 32426 Comm: Signal Catcher Tainted: G S  B      O    4.14.170_audio #1
+[ 4804.385515] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4804.385517] Call trace:
+[ 4804.385528] dump_backtrace+0x0/0x1e4
+[ 4804.385531] show_stack+0x18/0x24
+[ 4804.385536] dump_stack+0xbc/0xf8
+[ 4804.385541] bad_page+0x114/0x168
+[ 4804.385545] free_pcppages_bulk+0x530/0x588
+[ 4804.385547] free_hot_cold_page+0x250/0x29c
+[ 4804.385550] free_hot_cold_page_list+0xf0/0x118
+[ 4804.385553] release_pages+0x2ec/0x328
+[ 4804.385558] free_pages_and_swap_cache+0xac/0xc4
+[ 4804.385562] tlb_flush_mmu+0xfc/0x120
+[ 4804.385565] zap_page_range+0x188/0x1f0
+[ 4804.385568] SyS_madvise+0x1d8/0x84c
+[ 4804.385571] el0_svc_naked+0x34/0x38
+[ 4804.385574] BUG: Bad page state in process Signal Catcher  pfn:1b0f23
+[ 4804.385581] page:ffffffbf37c3c8c0 count:0 mapcount:0 mapping:ffffffcd28901550 index:0x1
+[ 4804.385587] flags: 0x4000000000000000()
+[ 4804.385594] raw: 4000000000000000 ffffffcd28901550 0000000000000001 00000000ffffffff
+[ 4804.385601] raw: dead000000000100 dead000000000200 0000000000000000 0000000000000000
+[ 4804.385606] page dumped because: non-NULL mapping
+[ 4804.385611] Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+[ 4804.385646] CPU: 3 PID: 32426 Comm: Signal Catcher Tainted: G S  B      O    4.14.170_audio #1
+[ 4804.385647] Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+[ 4804.385648] Call trace:
+[ 4804.385651] dump_backtrace+0x0/0x1e4
+[ 4804.385654] show_stack+0x18/0x24
+[ 4804.385656] dump_stack+0xbc/0xf8
+[ 4804.385659] bad_page+0x114/0x168
+[ 4804.385662] free_pcppages_bulk+0x530/0x588
+[ 4804.385664] free_hot_cold_page+0x250/0x29c
+[ 4804.385666] free_hot_cold_page_list+0xf0/0x118
+[ 4804.385669] release_pages+0x2ec/0x328
+[ 4804.385672] free_pages_and_swap_cache+0xac/0xc4
+[ 4804.385674] tlb_flush_mmu+0xfc/0x120
+[ 4804.385676] zap_page_range+0x188/0x1f0
+[ 4804.385679] SyS_madvise+0x1d8/0x84c
+[ 4804.385681] el0_svc_naked+0x34/0x38
+[ 4804.409523] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4806.021268] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4806.024596] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4806.024601] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4806.024604] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4806.024607] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4806.024644] msm_vidc:  err: This control 980928 is not supported yet
+[ 4806.028006] msm_vidc:  err: This control 980928 is not supported yet
+[ 4806.028020] msm_vidc:  err: This control 980927 is not supported yet
+[ 4806.043306] msm_vidc:  err: This control 980927 is not supported yet
+[ 4806.158407] google_charger: usbchg=USB typec=C usbv=4871 usbc=486 usbMv=5000 usbMc=500
+[ 4806.158520] sm8150_bms: MSC_PCS chg_state=1f410ea03010015 [0x15:3:1:4330:500] chg=u
+[ 4806.158533] google_battery: MSC_DIN chg_state=1f410ea03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4330 icl=500
+[ 4806.162330] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4325781 ibatt=20625 fv_uv=4400000 cv_cnt=3 ov_cnt=0
+[ 4806.162342] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4806.162347] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[ 4806.162380] google_charger: MSC_CHG fv_uv=4400000, cc_max=500000, rerun in 30000 ms (0)
+[ 4807.260136] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4807.375685] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4807.378408] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4807.378412] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4807.378415] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4807.378417] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4807.378465] msm_vidc:  err: This control 980928 is not supported yet
+[ 4807.381377] msm_vidc:  err: This control 980928 is not supported yet
+[ 4807.381384] msm_vidc:  err: This control 980927 is not supported yet
+[ 4807.398508] msm_vidc:  err: This control 980927 is not supported yet
+[ 4807.774743] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4808.744104] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4808.746806] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4808.746809] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4808.746812] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4808.746815] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4808.746848] msm_vidc:  err: This control 980928 is not supported yet
+[ 4808.749444] msm_vidc:  err: This control 980928 is not supported yet
+[ 4808.749458] msm_vidc:  err: This control 980927 is not supported yet
+[ 4808.762656] msm_vidc:  err: This control 980927 is not supported yet
+[ 4809.015651] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4809.665106] type=1400 audit(1656972391.847:3007): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4809.665131] type=1400 audit(1656972398.467:3008): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[ 4809.731974] type=1400 audit(1656972398.467:3008): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[ 4809.732665] type=1400 audit(1656972398.534:3009): avc: denied { call } for comm="Thread-99" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[ 4809.855821] type=1400 audit(1656972398.534:3009): avc: denied { call } for comm="Thread-99" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[ 4809.856667] type=1400 audit(1656972398.657:3010): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4809.856853] type=1400 audit(1656972398.657:3010): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4809.857335] type=1400 audit(1656972398.657:3011): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4810.011243] type=1400 audit(1656972398.657:3011): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4810.011773] type=1400 audit(1656972398.814:3012): avc: denied { call } for comm="Thread-142" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[ 4810.207891] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4810.210623] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4810.210627] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4810.210630] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4810.210632] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4810.210698] msm_vidc:  err: This control 980928 is not supported yet
+[ 4810.216409] msm_vidc:  err: This control 980928 is not supported yet
+[ 4810.216428] msm_vidc:  err: This control 980927 is not supported yet
+[ 4810.218996] audit: audit_lost=935 audit_rate_limit=5 audit_backlog_limit=64
+[ 4810.219001] audit: rate limit exceeded
+[ 4810.230542] msm_vidc:  err: This control 980927 is not supported yet
+[ 4810.460717] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4810.857006] type=1400 audit(1656972398.814:3012): avc: denied { call } for comm="Thread-142" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+[ 4810.857796] type=1400 audit(1656972399.661:3015): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4810.858176] type=1400 audit(1656972399.661:3015): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4810.858826] type=1400 audit(1656972399.661:3016): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4810.859002] type=1400 audit(1656972399.661:3016): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4810.859682] type=1400 audit(1656972399.661:3017): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4811.858362] type=1400 audit(1656972399.661:3017): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4811.858916] type=1400 audit(1656972400.661:3018): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4811.859167] type=1400 audit(1656972400.661:3018): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4811.859941] type=1400 audit(1656972400.661:3019): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4811.958473] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4811.961559] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4811.961562] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4811.961565] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4811.961568] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4811.962235] msm_vidc:  err: This control 980928 is not supported yet
+[ 4811.967129] msm_vidc:  err: This control 980928 is not supported yet
+[ 4811.967149] msm_vidc:  err: This control 980927 is not supported yet
+[ 4811.984397] msm_vidc:  err: This control 980927 is not supported yet
+[ 4812.859144] type=1400 audit(1656972400.661:3019): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4812.859609] type=1400 audit(1656972401.661:3020): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4812.859782] type=1400 audit(1656972401.661:3020): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4812.860137] type=1400 audit(1656972401.661:3021): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4812.860249] type=1400 audit(1656972401.661:3021): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4812.860889] type=1400 audit(1656972401.661:3022): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4812.964272] type=1400 audit(1656972401.661:3022): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4812.964968] type=1400 audit(1656972401.767:3023): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4812.965101] type=1400 audit(1656972401.767:3023): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4812.965686] type=1400 audit(1656972401.767:3024): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4813.124116] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4813.242518] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4813.245129] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4813.245135] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4813.245140] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4813.245143] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4813.245199] msm_vidc:  err: This control 980928 is not supported yet
+[ 4813.248377] msm_vidc:  err: This control 980928 is not supported yet
+[ 4813.248486] msm_vidc:  err: This control 980927 is not supported yet
+[ 4813.271320] msm_vidc:  err: This control 980927 is not supported yet
+[ 4813.868689] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4814.718975] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4814.721482] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4814.721491] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4814.721496] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4814.721500] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4814.721542] msm_vidc:  err: This control 980928 is not supported yet
+[ 4814.725166] msm_vidc:  err: This control 980928 is not supported yet
+[ 4814.725185] msm_vidc:  err: This control 980927 is not supported yet
+[ 4814.741130] msm_vidc:  err: This control 980927 is not supported yet
+[ 4815.024119] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4815.831246] type=1400 audit(1656972401.767:3024): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4815.831838] type=1400 audit(1656972404.634:3025): avc: denied { call } for comm="SIMPLE_WORKER7" scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.instagram.android
+[ 4816.103780] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4816.106661] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4816.106664] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4816.106666] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4816.106668] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4816.106874] msm_vidc:  err: This control 980928 is not supported yet
+[ 4816.110618] msm_vidc:  err: This control 980928 is not supported yet
+[ 4816.110636] msm_vidc:  err: This control 980927 is not supported yet
+[ 4816.134752] msm_vidc:  err: This control 980927 is not supported yet
+[ 4816.361629] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4817.842587] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4817.845519] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4817.845523] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4817.845525] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4817.845527] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4817.845567] msm_vidc:  err: This control 980928 is not supported yet
+[ 4817.851423] msm_vidc:  err: This control 980928 is not supported yet
+[ 4817.851445] msm_vidc:  err: This control 980927 is not supported yet
+[ 4817.868263] msm_vidc:  err: This control 980927 is not supported yet
+[ 4819.031290] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4819.211579] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4819.214663] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4819.214673] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4819.214679] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4819.214683] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4819.214762] msm_vidc:  err: This control 980928 is not supported yet
+[ 4819.219595] msm_vidc:  err: This control 980928 is not supported yet
+[ 4819.219614] msm_vidc:  err: This control 980927 is not supported yet
+[ 4819.234607] msm_vidc:  err: This control 980927 is not supported yet
+[ 4820.181667] type=1400 audit(1656972404.634:3025): avc: denied { call } for comm="SIMPLE_WORKER7" scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.instagram.android
+[ 4820.181697] type=1400 audit(1656972408.984:3026): avc: denied { write } for comm="kworker/0:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4820.183854] type=1400 audit(1656972408.984:3026): avc: denied { write } for comm="kworker/0:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4820.183883] type=1400 audit(1656972408.987:3027): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4820.514024] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4821.855682] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4821.965105] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4821.967551] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4821.967557] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4821.967562] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4821.967566] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4821.967603] msm_vidc:  err: This control 980928 is not supported yet
+[ 4821.970467] msm_vidc:  err: This control 980928 is not supported yet
+[ 4821.970482] msm_vidc:  err: This control 980927 is not supported yet
+[ 4821.985604] msm_vidc:  err: This control 980927 is not supported yet
+[ 4823.733350] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4823.736108] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4823.736112] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4823.736115] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4823.736117] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4823.736168] msm_vidc:  err: This control 980928 is not supported yet
+[ 4823.741673] msm_vidc:  err: This control 980928 is not supported yet
+[ 4823.741691] msm_vidc:  err: This control 980927 is not supported yet
+[ 4823.763425] msm_vidc:  err: This control 980927 is not supported yet
+[ 4824.868721] type=1400 audit(1656972408.987:3027): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4824.869346] type=1400 audit(1656972413.671:3028): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4824.869568] type=1400 audit(1656972413.671:3028): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4824.870018] type=1400 audit(1656972413.671:3029): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4824.934339] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4825.088301] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4825.091179] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4825.091189] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4825.091197] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4825.091202] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4825.091249] msm_vidc:  err: This control 980928 is not supported yet
+[ 4825.094945] msm_vidc:  err: This control 980928 is not supported yet
+[ 4825.094960] msm_vidc:  err: This control 980927 is not supported yet
+[ 4825.109960] msm_vidc:  err: This control 980927 is not supported yet
+[ 4826.291087] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4826.436511] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4826.439588] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4826.439596] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4826.439601] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4826.439605] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4826.439685] msm_vidc:  err: This control 980928 is not supported yet
+[ 4826.443023] msm_vidc:  err: This control 980928 is not supported yet
+[ 4826.443039] msm_vidc:  err: This control 980927 is not supported yet
+[ 4826.459382] msm_vidc:  err: This control 980927 is not supported yet
+[ 4826.871532] type=1400 audit(1656972413.671:3029): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4826.872119] type=1400 audit(1656972415.674:3030): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4826.872370] type=1400 audit(1656972415.674:3030): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4826.872835] type=1400 audit(1656972415.674:3031): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4826.872969] type=1400 audit(1656972415.674:3031): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4826.873406] type=1400 audit(1656972415.674:3032): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4826.935467] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4827.759175] type=1400 audit(1656972415.674:3032): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4827.760072] type=1400 audit(1656972416.561:3033): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4827.760284] type=1400 audit(1656972416.561:3033): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4827.760951] type=1400 audit(1656972416.564:3034): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4827.903208] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4827.905645] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4827.905649] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4827.905652] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4827.905654] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4827.905680] msm_vidc:  err: This control 980928 is not supported yet
+[ 4827.908795] msm_vidc:  err: This control 980928 is not supported yet
+[ 4827.908814] msm_vidc:  err: This control 980927 is not supported yet
+[ 4827.926943] msm_vidc:  err: This control 980927 is not supported yet
+[ 4828.169354] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4829.113721] type=1400 audit(1656972416.564:3034): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4829.113752] type=1400 audit(1656972417.917:3035): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[ 4829.698242] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4829.700765] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4829.700788] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4829.700794] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4829.700811] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4829.700875] msm_vidc:  err: This control 980928 is not supported yet
+[ 4829.704471] msm_vidc:  err: This control 980928 is not supported yet
+[ 4829.704488] msm_vidc:  err: This control 980927 is not supported yet
+[ 4829.731025] msm_vidc:  err: This control 980927 is not supported yet
+[ 4830.829949] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4831.053540] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4831.057950] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4831.057958] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4831.057963] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4831.057968] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4831.058031] msm_vidc:  err: This control 980928 is not supported yet
+[ 4831.061306] msm_vidc:  err: This control 980928 is not supported yet
+[ 4831.061324] msm_vidc:  err: This control 980927 is not supported yet
+[ 4831.074351] msm_vidc:  err: This control 980927 is not supported yet
+[ 4832.290915] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4832.412141] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4832.415057] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4832.415061] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4832.415063] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4832.415066] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4832.415143] msm_vidc:  err: This control 980928 is not supported yet
+[ 4832.421497] msm_vidc:  err: This control 980928 is not supported yet
+[ 4832.421515] msm_vidc:  err: This control 980927 is not supported yet
+[ 4832.437976] msm_vidc:  err: This control 980927 is not supported yet
+[ 4832.738040] type=1400 audit(1656972417.917:3035): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+[ 4832.738620] type=1400 audit(1656972421.541:3036): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4832.738900] type=1400 audit(1656972421.541:3036): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4832.739658] type=1400 audit(1656972421.541:3037): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4833.619756] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4833.779880] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4833.782337] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4833.782346] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4833.782351] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4833.782355] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4833.782395] msm_vidc:  err: This control 980928 is not supported yet
+[ 4833.785610] msm_vidc:  err: This control 980928 is not supported yet
+[ 4833.785626] msm_vidc:  err: This control 980927 is not supported yet
+[ 4833.801762] msm_vidc:  err: This control 980927 is not supported yet
+[ 4834.266663] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4835.667075] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4835.669789] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4835.669798] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4835.669806] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4835.669811] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4835.669860] msm_vidc:  err: This control 980928 is not supported yet
+[ 4835.673246] msm_vidc:  err: This control 980928 is not supported yet
+[ 4835.673261] msm_vidc:  err: This control 980927 is not supported yet
+[ 4835.686690] msm_vidc:  err: This control 980927 is not supported yet
+[ 4836.164124] google_charger: usbchg=USB typec=C usbv=4875 usbc=487 usbMv=5000 usbMc=500
+[ 4836.164239] sm8150_bms: MSC_PCS chg_state=1f410e803010015 [0x15:3:1:4328:500] chg=u
+[ 4836.164255] google_battery: MSC_DIN chg_state=1f410e803010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4328 icl=500
+[ 4836.167952] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4316250 ibatt=134062 fv_uv=4400000 cv_cnt=3 ov_cnt=0
+[ 4836.167966] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4836.167972] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[ 4836.168009] google_charger: MSC_CHG fv_uv=4400000, cc_max=500000, rerun in 30000 ms (0)
+[ 4836.734167] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4836.933925] msm_vidc: info: Opening video instance: 0000000000000000, 1
+[ 4836.937641] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4836.937649] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4836.937654] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4836.937657] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4836.937719] msm_vidc:  err: This control 980928 is not supported yet
+[ 4836.941695] msm_vidc:  err: This control 980928 is not supported yet
+[ 4836.941713] msm_vidc:  err: This control 980927 is not supported yet
+[ 4836.955851] msm_vidc:  err: This control 980927 is not supported yet
+[ 4839.622551] type=1400 audit(1656972421.541:3037): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4839.622605] type=1400 audit(1656972428.424:3038): avc: denied { write } for comm="kworker/1:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4839.636212] type=1400 audit(1656972428.424:3038): avc: denied { write } for comm="kworker/1:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4839.636259] type=1400 audit(1656972428.437:3039): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4846.010021] type=1400 audit(1656972428.437:3039): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4846.010459] type=1400 audit(1656972434.814:3040): avc: denied { call } for comm="SIMPLE_WORKER7" scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.instagram.android
+[ 4846.893343] type=1400 audit(1656972434.814:3040): avc: denied { call } for comm="SIMPLE_WORKER7" scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.instagram.android
+[ 4846.893792] type=1400 audit(1656972435.697:3041): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4846.894030] type=1400 audit(1656972435.697:3041): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4846.894377] type=1400 audit(1656972435.697:3042): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4847.939700] type=1400 audit(1656972435.697:3042): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4847.940194] type=1400 audit(1656972436.744:3043): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4847.940323] type=1400 audit(1656972436.744:3043): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4847.940649] type=1400 audit(1656972436.744:3044): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4848.089891] type=1400 audit(1656972436.744:3044): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4848.090246] type=1400 audit(1656972436.894:3045): avc: denied { read } for comm="pool-2-thread-1" name="version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4848.090377] type=1400 audit(1656972436.894:3045): avc: denied { read } for comm="pool-2-thread-1" name="version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4848.090981] type=1400 audit(1656972436.894:3046): avc: denied { open } for comm="pool-2-thread-1" path="/proc/version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4848.091111] type=1400 audit(1656972436.894:3046): avc: denied { open } for comm="pool-2-thread-1" path="/proc/version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4848.091391] type=1400 audit(1656972436.894:3047): avc: denied { getattr } for comm="pool-2-thread-1" path="/proc/version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4848.136608] audit: audit_lost=937 audit_rate_limit=5 audit_backlog_limit=64
+[ 4848.136611] audit: rate limit exceeded
+[ 4848.136692] type=1400 audit(1656972436.894:3047): avc: denied { getattr } for comm="pool-2-thread-1" path="/proc/version" dev="proc" ino=4026532112 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_version:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4848.137509] type=1400 audit(1656972436.941:3048): avc: denied { read } for comm="Thread-6" name="drivers" dev="proc" ino=4026531853 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_tty_drivers:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4848.137660] type=1400 audit(1656972436.941:3048): avc: denied { read } for comm="Thread-6" name="drivers" dev="proc" ino=4026531853 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_tty_drivers:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4848.138718] type=1400 audit(1656972436.941:3049): avc: denied { open } for comm="Thread-6" path="/proc/tty/drivers" dev="proc" ino=4026531853 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_tty_drivers:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4849.194129] backgrounded_uid 10127
+[ 4849.205237] backgrounded_uid 10127
+[ 4849.248446] type=1400 audit(1656972436.941:3049): avc: denied { open } for comm="Thread-6" path="/proc/tty/drivers" dev="proc" ino=4026531853 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_tty_drivers:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4849.248989] type=1400 audit(1656972438.047:3057): avc: denied { getattr } for comm="Thread-7" path="/system/xbin/su" dev="overlay" ino=951800 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4849.274075] type=1400 audit(1656972438.047:3057): avc: denied { getattr } for comm="Thread-7" path="/system/xbin/su" dev="overlay" ino=951800 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:su_exec:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4849.274440] type=1400 audit(1656972438.077:3058): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4849.274570] type=1400 audit(1656972438.077:3058): avc: denied { read } for comm="Lacrima_single_" name="memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4849.274840] type=1400 audit(1656972438.077:3059): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4849.304587] afe_tdm_port_start: top_id:10001ccc acdb_id:512 port_id:0x9021
+[ 4849.313270] snd_pcm_hw_constraint_integer failed
+[ 4849.313278] msm_pcm_open: P buffer bytes minmax constraint ret 1
+[ 4849.335412] afe_tdm_port_start: top_id:10000ccc acdb_id:513 port_id:0x9020
+[ 4849.536314] type=1400 audit(1656972438.077:3059): avc: denied { open } for comm="Lacrima_single_" path="/dev/memcg/memory.usage_in_bytes" dev="cgroup" ino=8 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:cgroup:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4849.536662] type=1400 audit(1656972438.341:3060): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4849.536815] type=1400 audit(1656972438.341:3060): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4849.537096] type=1400 audit(1656972438.341:3061): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4849.936593] audit: audit_lost=944 audit_rate_limit=5 audit_backlog_limit=64
+[ 4849.936599] audit: rate limit exceeded
+[ 4849.951143] logd: logdr: UID=10052 GID=10052 PID=2535 n tail=0 logMask=4 pid=0 start=0ns timeout=0ns
+[ 4851.016962] type=1400 audit(1656972438.341:3061): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4851.017665] type=1400 audit(1656972439.821:3064): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.017941] type=1400 audit(1656972439.821:3064): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.018669] type=1400 audit(1656972439.821:3065): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.018923] type=1400 audit(1656972439.821:3065): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.019534] type=1400 audit(1656972439.821:3066): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.816855] type=1400 audit(1656972439.821:3066): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4851.818058] type=1400 audit(1656972440.621:3067): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4851.818769] type=1400 audit(1656972440.621:3067): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4851.820539] type=1400 audit(1656972440.621:3068): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4853.104422] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+[ 4853.104426] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4853.104428] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+[ 4853.104430] msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+[ 4853.116333] msm_vidc: info: Closed video instance: 0000000000000000
+[ 4853.174639] type=1400 audit(1656972440.621:3068): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4853.174665] type=1400 audit(1656972441.977:3069): avc: denied { write } for comm="kworker/2:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4853.176760] type=1400 audit(1656972441.977:3069): avc: denied { write } for comm="kworker/2:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4853.176857] type=1400 audit(1656972441.981:3070): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4863.625291] healthd: battery l=100 v=4344 t=41.5 h=2 st=5 c=-56 fc=2723000 cc=14 chg=u
+[ 4866.169896] google_charger: usbchg=USB typec=C usbv=4881 usbc=489 usbMv=5000 usbMc=500
+[ 4866.170032] sm8150_bms: MSC_PCS chg_state=1f4110a03010015 [0x15:3:1:4362:500] chg=u
+[ 4866.170055] google_battery: MSC_DIN chg_state=1f4110a03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4362 icl=500
+[ 4866.176711] google_battery: MSC_LAST vbatt=4361093 ibatt=-190312 fv_uv=4400000
+[ 4866.176806] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4866.176816] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[ 4866.176870] google_charger: MSC_CHG fv_uv=4400000, cc_max=500000, rerun in 30000 ms (0)
+[ 4872.964833] type=1400 audit(1656972441.981:3070): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4872.982885] type=1400 audit(1656972461.767:3071): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4872.983306] type=1400 audit(1656972461.767:3071): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4872.985345] type=1400 audit(1656972461.767:3072): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4887.759500] type=1400 audit(1656972461.767:3072): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4887.761341] type=1400 audit(1656972476.564:3073): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4887.761819] type=1400 audit(1656972476.564:3073): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4887.764759] type=1400 audit(1656972476.564:3074): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4891.586317] CPU4: update max cpu_capacity 690
+[ 4891.606884] CPU7: update max cpu_capacity 691
+[ 4893.442122] type=1400 audit(1656972476.564:3074): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4893.443360] type=1400 audit(1656972482.244:3075): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4893.443742] type=1400 audit(1656972482.244:3075): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4893.444604] type=1400 audit(1656972482.244:3076): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4893.586091] CPU6: update max cpu_capacity 725
+[ 4893.610057] CPU7: update max cpu_capacity 726
+[ 4895.586685] CPU5: update max cpu_capacity 767
+[ 4895.596691] CPU7: update max cpu_capacity 768
+[ 4896.179851] google_charger: usbchg=USB typec=C usbv=4876 usbc=487 usbMv=5000 usbMc=500
+[ 4896.180401] sm8150_bms: MSC_PCS chg_state=1f4110a03010015 [0x15:3:1:4362:500] chg=u
+[ 4896.180427] google_battery: MSC_DIN chg_state=1f4110a03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4362 icl=500
+[ 4896.184898] google_battery: MSC_LAST vbatt=4363125 ibatt=-157500 fv_uv=4400000
+[ 4896.184918] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4896.184929] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[ 4896.184990] google_charger: MSC_CHG fv_uv=4400000, cc_max=500000, rerun in 30000 ms (0)
+[ 4898.236056] max1720x_battery: max17x0x_reg_dump  8E:004C 8F:0046 B2:0139 B4:005E C4:005D C5:0072 CD:0086 CE:00A8 D7:011E DF:0F49
+[ 4898.254882] healthd: battery l=100 v=4372 t=41.5 h=2 st=5 c=-266 fc=2723000 cc=14 chg=u
+[ 4903.981681] type=1400 audit(1656972482.244:3076): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4903.983772] type=1400 audit(1656972492.784:3077): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4903.984642] type=1400 audit(1656972492.784:3077): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4903.985953] type=1400 audit(1656972492.784:3078): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4903.986590] type=1400 audit(1656972492.784:3078): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4903.987726] type=1400 audit(1656972492.784:3079): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4909.537095] type=1400 audit(1656972492.784:3079): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4909.538477] type=1400 audit(1656972498.341:3080): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4909.539747] type=1400 audit(1656972498.341:3080): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4909.540933] type=1400 audit(1656972498.341:3081): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4911.816672] type=1400 audit(1656972498.341:3081): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4911.817309] type=1400 audit(1656972500.621:3082): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4911.817571] type=1400 audit(1656972500.621:3082): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4911.818501] type=1400 audit(1656972500.621:3083): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4916.245710] type=1400 audit(1656972500.621:3083): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4916.245792] type=1400 audit(1656972505.047:3084): avc: denied { write } for comm="kworker/0:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4916.259564] type=1400 audit(1656972505.047:3084): avc: denied { write } for comm="kworker/0:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4916.259588] type=1400 audit(1656972505.064:3085): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4923.623607] healthd: battery l=100 v=4364 t=41.5 h=2 st=5 c=-210 fc=2723000 cc=14 chg=u
+[ 4926.190600] google_charger: usbchg=USB typec=C usbv=4875 usbc=488 usbMv=5000 usbMc=500
+[ 4926.190851] sm8150_bms: MSC_PCS chg_state=1f4110a03010015 [0x15:3:1:4362:500] chg=u
+[ 4926.190883] google_battery: MSC_DIN chg_state=1f4110a03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4362 icl=500
+[ 4926.196362] google_battery: MSC_LAST vbatt=4348437 ibatt=-43125 fv_uv=4400000
+[ 4926.196384] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4926.196395] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[ 4926.196454] google_charger: MSC_CHG fv_uv=4400000, cc_max=500000, rerun in 30000 ms (0)
+[ 4932.966807] type=1400 audit(1656972505.064:3085): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4932.970261] type=1400 audit(1656972521.771:3086): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4932.970951] type=1400 audit(1656972521.771:3086): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4932.973043] type=1400 audit(1656972521.771:3087): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4947.760095] type=1400 audit(1656972521.771:3087): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+[ 4947.763816] type=1400 audit(1656972536.564:3088): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4947.764231] type=1400 audit(1656972536.564:3088): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4947.766943] type=1400 audit(1656972536.564:3089): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4956.200245] google_charger: usbchg=USB typec=C usbv=4876 usbc=489 usbMv=5000 usbMc=500
+[ 4956.200374] sm8150_bms: MSC_PCS chg_state=1f4110f03010015 [0x15:3:1:4367:500] chg=u
+[ 4956.200398] google_battery: MSC_DIN chg_state=1f4110f03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4367 icl=500
+[ 4956.204548] google_battery: MSC_LAST vbatt=4357500 ibatt=-131875 fv_uv=4400000
+[ 4956.204570] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4956.204580] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[ 4956.204753] google_charger: MSC_CHG fv_uv=4400000, cc_max=500000, rerun in 30000 ms (0)
+[ 4969.537211] type=1400 audit(1656972536.564:3089): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 4969.538616] type=1400 audit(1656972558.341:3090): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4969.539297] type=1400 audit(1656972558.341:3090): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4969.540199] type=1400 audit(1656972558.341:3091): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4971.817196] type=1400 audit(1656972558.341:3091): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 4971.818091] type=1400 audit(1656972560.621:3092): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4971.818385] type=1400 audit(1656972560.621:3092): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4971.818896] type=1400 audit(1656972560.621:3093): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4972.105411] type=1400 audit(1656972560.621:3093): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 4972.107120] type=1400 audit(1656972560.907:3094): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4972.107588] type=1400 audit(1656972560.907:3094): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4972.108670] type=1400 audit(1656972560.907:3095): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4972.108930] type=1400 audit(1656972560.907:3095): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4972.110467] type=1400 audit(1656972560.907:3096): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4981.360162] google_charger: MSC_THERM_DC lvl=2 dc_icl=250000 (0)
+[ 4983.623354] healthd: battery l=100 v=4373 t=41.4 h=2 st=5 c=-216 fc=2723000 cc=14 chg=u
+[ 4985.344088] max1720x_battery: max17x0x_reg_dump  8E:004C 8F:0046 B2:0139 B4:005E C4:005D C5:0072 CD:0086 CE:00A8 D7:011E DF:0F4A
+[ 4985.352746] healthd: battery l=100 v=4377 t=41.4 h=2 st=5 c=-226 fc=2723000 cc=14 chg=u
+[ 4986.206790] google_charger: usbchg=USB typec=C usbv=4885 usbc=489 usbMv=5000 usbMc=500
+[ 4986.206927] sm8150_bms: MSC_PCS chg_state=1f4111303010015 [0x15:3:1:4371:500] chg=u
+[ 4986.206951] google_battery: MSC_DIN chg_state=1f4111303010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4371 icl=500
+[ 4986.212521] google_battery: MSC_LAST vbatt=4370781 ibatt=-165937 fv_uv=4400000
+[ 4986.212541] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 4986.212551] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[ 4986.212723] google_charger: MSC_CHG fv_uv=4400000, cc_max=500000, rerun in 30000 ms (0)
+[ 4994.197341] type=1400 audit(1656972560.907:3096): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4994.197381] type=1400 audit(1656972583.001:3097): avc: denied { write } for comm="kworker/0:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4994.211716] type=1400 audit(1656972583.001:3097): avc: denied { write } for comm="kworker/0:1H" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4994.211740] type=1400 audit(1656972583.014:3098): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4995.368450] type=1400 audit(1656972583.014:3098): avc: denied { read } for comm="kworker/u17:0" laddr=192.168.0.18 lport=37448 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+[ 4995.368907] type=1400 audit(1656972584.171:3099): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4995.369124] type=1400 audit(1656972584.171:3099): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4995.369429] type=1400 audit(1656972584.171:3100): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4995.369531] type=1400 audit(1656972584.171:3100): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4995.369867] type=1400 audit(1656972584.171:3101): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4995.370007] type=1400 audit(1656972584.171:3101): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=744076 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4995.370311] type=1400 audit(1656972584.171:3102): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4995.370579] type=1400 audit(1656972584.171:3102): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 4995.370864] type=1400 audit(1656972584.171:3103): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5007.760597] type=1400 audit(1656972584.171:3103): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+[ 5007.763102] type=1400 audit(1656972596.564:3104): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5007.763591] type=1400 audit(1656972596.564:3104): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5007.766741] type=1400 audit(1656972596.564:3105): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5016.216047] google_charger: usbchg=USB typec=C usbv=4882 usbc=488 usbMv=5000 usbMc=500
+[ 5016.216156] sm8150_bms: MSC_PCS chg_state=1f4110903010015 [0x15:3:1:4361:500] chg=u
+[ 5016.216173] google_battery: MSC_DIN chg_state=1f4110903010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4361 icl=500
+[ 5016.220077] google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4347187 ibatt=43437 fv_uv=4400000 cv_cnt=3 ov_cnt=0
+[ 5016.220096] google_battery: MSC_LOGIC cv_cnt=3 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+[ 5016.220106] google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+[ 5016.220151] google_charger: MSC_CHG fv_uv=4400000, cc_max=500000, rerun in 30000 ms (0)
+[ 5029.537236] type=1400 audit(1656972596.564:3105): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+[ 5029.538717] type=1400 audit(1656972618.341:3106): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5029.539205] type=1400 audit(1656972618.341:3106): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5029.541234] type=1400 audit(1656972618.341:3107): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5031.818268] type=1400 audit(1656972618.341:3107): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c159,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+[ 5031.819732] type=1400 audit(1656972620.621:3108): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 5031.820160] type=1400 audit(1656972620.621:3108): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 5031.821003] type=1400 audit(1656972620.621:3109): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+[ 5043.624224] healthd: battery l=100 v=4375 t=41.3 h=2 st=5 c=-208 fc=2723000 cc=14 chg=u

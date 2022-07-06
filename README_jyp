@@ -26,6 +26,7 @@ It SHOULD be implemented to maximize prefetching --> made roughly, so need to be
 current implementaion -> static big table
 optimization plan     -> at first, write to static big table, and then dynamically alloc the per-app table
                       -> OR, alloc application well considering offline profiling, and dynamically resizing them if it is full
+					  -> OR, make table pool! (1000 entries?)
 
 - CPU Binding!!
 using CPU bind of Prefetching with different core (current is only 1, but should increase the number of core) 
@@ -48,6 +49,8 @@ HOW about using try_to_free_swap(). similar maybe..?
 If ZRAM Pressure get higher, how about COLD_THRESHOLD dec, and target percentage inc
 and if ZRAM get full, Some pages can be swapped out to NBD. We should handle this page.
 
+- Cached Swap page
+current implementation -> continue
 
 // Implementation idea
 

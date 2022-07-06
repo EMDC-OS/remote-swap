@@ -157,9 +157,10 @@ static int send_zram_to_nbd(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned lo
 		return 0;
 	}
 	page = alloc_pages(GFP_KERNEL, 0);
-	SetPageUnevictable(page);
+	//SetPageUnevictable(page);
 					
-	//printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,(unsigned long)page_address(page));
+	trace_printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,page_to_pfn(page));
+
 		new_entry = get_swap_page_of_id(id);
 	new_pte = swp_entry_and_counter_to_pte(new_entry,id);
 	//if Prefetch target, type==1 && counter(id)==id
@@ -210,6 +211,7 @@ static int send_zram_to_nbd(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned lo
 unlock:
 	pte_unmap_unlock(orig_pte, ptl);
 //	printk(KERN_ERR "[REMOTE %s] free page %llx\n", __func__,(unsigned long)page_address(page));
+	page->mapping = NULL;
 	free_page((unsigned long)(page_address(page)));
 
 
@@ -303,12 +305,15 @@ static void cold_page_sender_work(struct work_struct *work)
 							 * Continue for now, but should delete swap cache and resume
 							 *
 							 */
+							//delete_from_swap_cache(cache_page);
+						//	trace_printk(KERN_ERR "[REMOTE %s] delete cache page and cold send \n", __func__);
 							continue;
 						}
 						page = alloc_pages(GFP_KERNEL, 0);
-						SetPageUnevictable(page);
+						//SetPageUnevictable(page);
 						
-					//	printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,(unsigned long)page_address(page));
+	
+						trace_printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,page_to_pfn(page));
 
 							new_entry = get_swap_page_of_id(9); // cold page
 
@@ -371,6 +376,8 @@ static void cold_page_sender_work(struct work_struct *work)
 unlock:
 						pte_unmap_unlock(orig_pte, ptl);
 //						printk(KERN_ERR "[REMOTE %s] free page %llx\n", __func__,(unsigned long)page_address(page));
+	
+						page->mapping = NULL;
 						free_page((unsigned long)(page_address(page)));
 
 						if(switch_start){
@@ -853,7 +860,7 @@ int ksg_handler(struct ctl_table *table, int write,
 									
                                     new_pte = swp_entry_to_pte(new_entry);
                                     
-									SetPageUnevictable(page);
+									//SetPageUnevictable(page);
 									orig_pte=pte_offset_map_lock(mm,pmd,vpage,&ptl);
                                     //struct page *test_page;
                                     /*struct writeback_control wbc = {
@@ -918,6 +925,8 @@ int ksg_handler(struct ctl_table *table, int write,
 								
 									unlock_page(page);
                                     pte_unmap_unlock(orig_pte, ptl);
+	
+									page->mapping = NULL;
 									free_pages((unsigned long)(page_address(page)), 0);
 
                                 }

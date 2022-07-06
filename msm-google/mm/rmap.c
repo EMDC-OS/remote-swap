@@ -1649,6 +1649,10 @@ static bool try_to_unmap_one(struct page *page, struct vm_area_struct *vma,
 #ifdef CONFIG_APP_AWARE
 			if(swp_type(entry)==ZRAM_TYPE && PageExcepted(page))
 				swp_pte = swp_entry_with_excepted(entry);
+
+			if(swp_type(entry)==NBD_TYPE && PageDirect(page))
+				swp_pte = swp_entry_and_counter_to_pte(entry,10);
+			//if Allocated Directly from NBD because of ZRAM FULL, type==1 && counter(id)==10 (cold id)
 #endif
 			if (pte_soft_dirty(pteval))
 				swp_pte = pte_swp_mksoft_dirty(swp_pte);

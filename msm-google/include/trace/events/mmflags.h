@@ -82,6 +82,7 @@
 
 #ifdef CONFIG_APP_AWARE
 #define IF_HAVE_PG_EXCEPTED(flag,string) ,{1UL << flag, string}
+#define IF_HAVE_PG_DIRECT(flag,string) ,{1UL << flag, string}
 #endif
 
 #define __def_pageflag_names						\
@@ -111,7 +112,8 @@ IF_HAVE_PG_UNCACHED(PG_uncached,	"uncached"	)		\
 IF_HAVE_PG_HWPOISON(PG_hwpoison,	"hwpoison"	)		\
 IF_HAVE_PG_IDLE(PG_young,		"young"		)		\
 IF_HAVE_PG_IDLE(PG_idle,		"idle"		)      \
-IF_HAVE_PG_EXCEPTED(PG_excepted,	"excepted"	)
+IF_HAVE_PG_EXCEPTED(PG_excepted,	"excepted"	)  \
+IF_HAVE_PG_DIRECT(PG_direct,	"direct"	)  
 
 #define show_page_flags(flags)						\
 	(flags) ? __print_flags(flags, "|",				\
