@@ -52,6 +52,9 @@ and if ZRAM get full, Some pages can be swapped out to NBD. We should handle thi
 - Cached Swap page
 current implementation -> continue
 
+- System-wide cold page
+inc systemwide cold counter at every 10 minutes. and if ZRAM full, swap out to NBD.
+
 // Implementation idea
 
 Should handle if the process exit--> STT free or STT clean

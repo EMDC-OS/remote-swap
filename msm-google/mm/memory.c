@@ -2924,11 +2924,11 @@ int do_swap_page(struct vm_fault *vmf)
 #ifdef CONFIG_APP_AWARE
 
 	int idx;
-	unsigned int id = 0;
+	int id = -1;
 	atomic_t *st_idx_ptr;
 	struct swap_trace_entry *swap_trace_table;
 	bool excepted = 0;
-	if(switch_start && foreground_uid)
+	if((switch_start || miss_handling) && foreground_uid)
 		id = get_id_from_uid(foreground_uid);
 
 #endif
@@ -3024,19 +3024,26 @@ int do_swap_page(struct vm_fault *vmf)
 		}
 #ifdef CONFIG_APP_AWARE
 		/*
-		 * For cold page dump
+		 * For remote page dump
 		 *
 		*/
 		if (swp_type(entry) == NBD_TYPE){
 			if(pte_to_swp_counter(vmf->orig_pte)==9) { //cold
 				atomic_inc(&faulted_cold_page);
 				atomic_dec(&sent_cold_page);
+				
+				trace_printk("cold fault : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
 			else if(pte_to_swp_counter(vmf->orig_pte)==10) { //direct
 				trace_printk("Direct fault : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
-			else if(switch_start && id && pte_to_swp_counter(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
-					trace_printk("prefetch fault id %d: %d \"%s\" %lx %lx\n",get_id_from_uid(foreground_uid),current->tgid,current->comm,vmf->address,swp_offset(entry));
+			else if(switch_start && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
+					trace_printk("prefetch fault id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
+			}
+			else if(miss_handling && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){
+
+					trace_printk("direct prefetch miss id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
+
 			}
 			else{
 				trace_printk("Exception : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
@@ -3180,13 +3187,11 @@ int do_swap_page(struct vm_fault *vmf)
 	if (mem_cgroup_swap_full(page) ||
 	    (vma->vm_flags & VM_LOCKED) || PageMlocked(page)
 #ifdef CONFIG_APP_AWARE
-		|| swp_type(entry)==NBD_TYPE
+		|| (swp_type(entry)==NBD_TYPE && swp_swapcount(entry)==0)
 #endif
 		){
 		try_to_free_swap(page);
-		trace_printk(KERN_ERR "[REMOTE %s] try_to_free_swap page %llx\n", __func__,page_to_pfn(page));
 	}
-	
 	
 	unlock_page(page);
 	if (page != swapcache) {

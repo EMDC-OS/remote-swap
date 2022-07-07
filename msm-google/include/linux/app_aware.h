@@ -9,6 +9,7 @@
 #define ZRAM_TYPE   0
 #define NBD_TYPE    1
 #define COLD_PAGE_THRESHOLD 3
+#define SYS_COLD_PAGE_THRESHOLD 6
 #define NUM_STT_ENTRIES 20000
 
 /******************************
@@ -60,10 +61,13 @@ struct per_app_swap_trace {
 };
 
 extern bool switch_start;
+extern bool miss_handling;
+extern bool zram_full;
 extern struct perapp_cluster pac[10];
 extern struct per_app_swap_trace *past[9];
 
 extern atomic_t sent_cold_page;
+extern atomic_t sent_sys_cold_page;
 extern atomic_t faulted_cold_page;
 
 extern atomic_t excepted_page;

@@ -7,7 +7,7 @@ sleep 1
 adb shell /data/dropcache.sh
 sleep 1
 #adb shell /data/lock_mem/lock_memory &
-adb shell /data/lock_mem/750K_lock_memory &
+adb shell /data/lock_mem/lock_memory &
 #adb shell /data/lock_mem/lock_memory &
 sleep 1
 sleep 1
