@@ -54,6 +54,8 @@ struct swap_trace_entry {
 struct per_app_swap_trace {
 	atomic_t st_index0;
 	atomic_t st_index1;
+	//atomic_t after_index0;
+	//atomic_t after_index1;
 	struct swap_trace_entry swap_trace_table0[NUM_STT_ENTRIES];
 	struct swap_trace_entry swap_trace_table1[NUM_STT_ENTRIES];
 	bool st_should_check; // --> per app, and keep in list

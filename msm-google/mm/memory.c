@@ -2953,6 +2953,8 @@ int do_swap_page(struct vm_fault *vmf)
 		trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);
 */
 
+		
+//	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);
 
 	if (vma_readahead)
 		page = swap_readahead_detect(vmf, &swap_ra);
@@ -2985,6 +2987,8 @@ int do_swap_page(struct vm_fault *vmf)
 		}
 		goto out;
 	}
+	
+//	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx 1\n",current->tgid,current->pid,current->comm,vmf->address);
 	delayacct_set_flag(DELAYACCT_PF_SWAPIN);
 	if (!page)
 		page = lookup_swap_cache(entry, vma_readahead ? vma : NULL,
@@ -3000,6 +3004,7 @@ int do_swap_page(struct vm_fault *vmf)
 #endif
 	
 
+//	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx 2\n",current->tgid,current->pid,current->comm,vmf->address);
 	
 	
 	if (!page) {
@@ -3075,6 +3080,7 @@ int do_swap_page(struct vm_fault *vmf)
 		goto out_release;
 	}
 
+	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx 3\n",current->tgid,current->pid,current->comm,vmf->address);
 
 
 	swapcache = page;

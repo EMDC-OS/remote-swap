@@ -296,10 +296,12 @@ int add_to_swap(struct page *page)
 		return 0;
 
 #ifdef CONFIG_APP_AWARE
-	if(swp_type(entry)==NBD_TYPE){
+//	*is_direct = false
+	if(swp_type(entry) == NBD_TYPE){
 		zram_full=1;
 		trace_printk("ZRAM full: nbd swapout offset %llx\n",swp_offset(entry));
-		SetPageDirect(page);
+//		is_direct = true;
+	//	SetPageDirect(page);
 	}
 #endif
 

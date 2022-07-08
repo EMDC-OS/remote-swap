@@ -1007,6 +1007,9 @@ static unsigned long shrink_page_list(struct list_head *page_list,
 		int may_enter_fs;
 		enum page_references references = PAGEREF_RECLAIM;
 		bool dirty, writeback;
+#ifdef CONFIG_APP_AWARE
+		//bool is_direct;
+#endif
 
 		cond_resched();
 

@@ -41,6 +41,7 @@
 #include <asm/tlb.h>
 #include <asm/tlbflush.h>
 #include <asm/pgtable.h>
+#include <asm/delay.h>
 
 
 #ifdef CONFIG_APP_AWARE
@@ -59,6 +60,7 @@
 
 
 bool switch_start;
+bool switch_after;
 bool miss_handling;
 bool zram_full;
 
@@ -210,7 +212,6 @@ static int _send_target_page(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned l
 		goto unlock;
 	}
 
-	
 	lock_page(page);
 	add_to_swap_cache(page, new_entry,
 			__GFP_HIGH|__GFP_NOMEMALLOC|__GFP_NOWARN);
@@ -218,6 +219,7 @@ static int _send_target_page(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned l
 	set_page_dirty(page);
 	mapping = page_mapping(page);
 	page->mapping = mapping;
+	
 	
 	write_one_page(page);
 	delete_from_swap_cache(page);
@@ -243,7 +245,8 @@ unlock:
 	pte_unmap_unlock(orig_pte, ptl);
 //	printk(KERN_ERR "[REMOTE %s] free page %llx\n", __func__,(unsigned long)page_address(page));
 	page->mapping = NULL;
-	free_page((unsigned long)(page_address(page)));
+	//free_page((unsigned long)(page_address(page)));								
+	__free_page(page);
 
 
 
@@ -409,8 +412,8 @@ unlock:
 //						printk(KERN_ERR "[REMOTE %s] free page %llx\n", __func__,(unsigned long)page_address(page));
 	
 						page->mapping = NULL;
-						free_page((unsigned long)(page_address(page)));
-
+						//free_page((unsigned long)(page_address(page)));
+						__free_page(page);
 						if(switch_start){
 							trace_printk(KERN_ERR "[REMOTE %s] switch started during cold work. preempted! \n", __func__);
 							atomic_add(cnt, &sent_cold_page);
@@ -431,7 +434,8 @@ unlock:
 	trace_printk("remote: total faulted cold page: %d\n", faulted_cold_page);
 	kfree(tew);
 
-	preempted_cold_task = NULL;
+	if(task == preempted_cold_task)
+		preempted_cold_task = NULL;
 
 }
 
@@ -594,7 +598,8 @@ unlock:
 //						printk(KERN_ERR "[REMOTE %s] free page %llx\n", __func__,(unsigned long)page_address(page));
 	
 						page->mapping = NULL;
-						free_page((unsigned long)(page_address(page)));
+						//free_page((unsigned long)(page_address(page)));
+						__free_page(page);
 
 						if(switch_start){
 							trace_printk(KERN_ERR "[REMOTE %s] switch started during system cold work. preempted! \n", __func__);
@@ -652,7 +657,7 @@ static int fault_target_page(pid_t tgid, unsigned long va){
     }
     
 					
-	//trace_printk("miss handling start %d %llx\n", tgid, va);
+//	trace_printk("miss handling start %d %llx\n", tgid, va);
         
 	if(task->mm && task->mm->mmap) 
     {
@@ -832,7 +837,9 @@ static void prefetch_work(struct work_struct *work)
 
 	struct prefetch_work *tew;
 	int max_idx_l;
+	int max_idx_e;
 	struct swap_trace_entry *swap_trace_table_l;
+	struct swap_trace_entry *swap_trace_table_e;
 	pid_t tgid;
 	unsigned long va;
 	struct blk_plug plug;
@@ -845,13 +852,18 @@ static void prefetch_work(struct work_struct *work)
 	
 
 	if(target_table){
+		max_idx_e = atomic_read(&past[id]->st_index0);
+		swap_trace_table_e = past[id]->swap_trace_table0;
 		max_idx_l = atomic_read(&past[id]->st_index1);
 		swap_trace_table_l = past[id]->swap_trace_table1;
 	}
 	else{
+		max_idx_e = atomic_read(&past[id]->st_index1);
+		swap_trace_table_e = past[id]->swap_trace_table1;
 		max_idx_l = atomic_read(&past[id]->st_index0);
 		swap_trace_table_l = past[id]->swap_trace_table0;
 	}
+
 
 	blk_start_plug(&plug);
 	for( i = 0 ; i < max_idx_l ; i++ ){
@@ -860,6 +872,17 @@ static void prefetch_work(struct work_struct *work)
 			tgid = swap_trace_table_l[i].tgid;
 			va = swap_trace_table_l[i].va;
 			prefetch_target_page(tgid,va);
+			swap_trace_table_l[i].swapped = 0;
+		}
+	}
+
+
+	for( i = 0 ; i < max_idx_e ; i++ ){
+		if(swap_trace_table_e[i].to_nbd && swap_trace_table_e[i].swapped){
+			tgid = swap_trace_table_e[i].tgid;
+			va = swap_trace_table_e[i].va;
+			prefetch_target_page(tgid,va);
+			swap_trace_table_e[i].swapped = 0;
 		}
 	}
 	blk_finish_plug(&plug);
@@ -873,7 +896,9 @@ static void miss_page_work(struct work_struct *work)
 
 	struct miss_page_work *tew;
 	int max_idx_l;
+	int max_idx_e;
 	struct swap_trace_entry *swap_trace_table_l;
+	struct swap_trace_entry *swap_trace_table_e;
 	pid_t tgid;
 	unsigned long va;
 	int i;
@@ -883,24 +908,39 @@ static void miss_page_work(struct work_struct *work)
 	target_table = tew->target_table;
 	id = tew->id;
 	
-
 	if(target_table){
+		max_idx_e = atomic_read(&past[id]->st_index0);
+		swap_trace_table_e = past[id]->swap_trace_table0;
 		max_idx_l = atomic_read(&past[id]->st_index1);
 		swap_trace_table_l = past[id]->swap_trace_table1;
 	}
 	else{
+		max_idx_e = atomic_read(&past[id]->st_index1);
+		swap_trace_table_e = past[id]->swap_trace_table1;
 		max_idx_l = atomic_read(&past[id]->st_index0);
 		swap_trace_table_l = past[id]->swap_trace_table0;
 	}
 
 //	blk_start_plug(&plug);
 	for( i = 0 ; i < max_idx_l ; i++ ){
-		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
+		if(swap_trace_table_l[i].to_nbd) // && swapped
+		{
 			tgid = swap_trace_table_l[i].tgid;
 			va = swap_trace_table_l[i].va;
 			fault_target_page(tgid,va);
 		}
 	}
+
+
+	for( i = 0 ; i < max_idx_e ; i++ ){
+		if(swap_trace_table_e[i].to_nbd) // && swapped
+		{
+			tgid = swap_trace_table_e[i].tgid;
+			va = swap_trace_table_e[i].va;
+			fault_target_page(tgid,va);
+		}
+	}
+
 //	blk_finish_plug(&plug);
 	lru_add_drain();
 
@@ -1177,7 +1217,9 @@ int ksg_handler(struct ctl_table *table, int write,
                                     pte_unmap_unlock(orig_pte, ptl);
 	
 									page->mapping = NULL;
-									free_pages((unsigned long)(page_address(page)), 0);
+									//free_pages((unsigned long)(page_address(page)), 0);
+						
+									__free_page(page);
 
                                 }
                             }
@@ -1403,6 +1445,10 @@ int update_to_nbd_flag(unsigned int id, int percentage){
 	idx_l = max_idx_l * percentage/100;
 
 
+
+	/* AND version!*/
+	
+/*
 	while(idx_l <= max_idx_l){
 		idx_e = max_idx_e * percentage/100;
 		while(idx_e <= max_idx_e){
@@ -1416,6 +1462,34 @@ int update_to_nbd_flag(unsigned int id, int percentage){
 		}
 		idx_l++;
 	}
+*/
+
+	/* OR version! */
+	while(idx_e <= max_idx_e){
+		swap_trace_table_e[idx_e].to_nbd = 1;
+		idx_e++;
+		cnt++;
+	}
+	while(idx_l <= max_idx_l){
+		swap_trace_table_l[idx_l].to_nbd = 1;
+		idx_l++;
+		cnt++;
+	}
+	idx_e = max_idx_e * percentage/100;
+	while(idx_e <= max_idx_e){
+		idx_l = max_idx_l * percentage/100;
+		while(idx_l <= max_idx_l){
+			if( swap_trace_table_e[idx_e].va == swap_trace_table_l[idx_l].va &&
+				swap_trace_table_e[idx_e].tgid == swap_trace_table_l[idx_l].tgid){
+				swap_trace_table_e[idx_e].to_nbd = 0;
+				cnt--;
+				break;
+			}
+			idx_l++;
+		}
+		idx_e++;
+	}
+
 
 	
 	// for dump
@@ -1458,7 +1532,6 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 		switch_start = 0;
 		spin_unlock_irqrestore(&switch_start_lock,flags);
 
-
 		/*
 		 * Update to_nbd flag of st
 		 */
@@ -1467,7 +1540,7 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 			id = get_id_from_uid(foreground_uid);
 
 
-		if(foreground_uid && atomic_read(&past[id]->st_index0)!=-1 && atomic_read(&past[id]->st_index1)!=-1){
+		if(foreground_uid && (atomic_read(&past[id]->st_index0)!=-1 || atomic_read(&past[id]->st_index1)!=-1)){
 			update_to_nbd_flag(id, 100-target_percentage); //<--app_number or uid
 			past[id]->st_should_check = 1 ; // --> per app, and keep in list
 		}
@@ -1507,8 +1580,122 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 	return 0;
 }
 
+int app_switch_after_1;
+
+int app_switch_after_1_handler(struct ctl_table *table, int write,
+			   void __user *buffer, size_t *length, loff_t *ppos)
+{
 
 
+	int rc = proc_dointvec_minmax(table,write,buffer,length,ppos);
+	unsigned long flags;
+	unsigned int id;
+	if(rc)
+		return rc;
+	if(write){
+	
+		struct task_struct *p;
+		/*
+		 * Switch finished
+		 */
+		spin_lock_irqsave(&switch_start_lock,flags);
+		switch_start = 0;
+		spin_unlock_irqrestore(&switch_start_lock,flags);
+
+
+		/* for after page dump */
+
+
+
+		if(foreground_uid){
+			id = get_id_from_uid(foreground_uid);
+			spin_lock_irqsave(&switch_start_lock,flags);
+			switch_after = 1;
+			spin_unlock_irqrestore(&switch_start_lock,flags);
+
+			trace_printk("foreground %d switch after start",foreground_uid);
+		}
+
+
+
+	}
+	return 0;
+
+
+}
+
+int app_switch_after_2;
+
+int app_switch_after_2_handler(struct ctl_table *table, int write,
+			   void __user *buffer, size_t *length, loff_t *ppos)
+{
+
+
+
+	int rc = proc_dointvec_minmax(table,write,buffer,length,ppos);
+	unsigned long flags;
+	unsigned int id;
+	if(rc)
+		return rc;
+	if(write){
+	
+		struct task_struct *p;
+		/*
+		 * Switch finished
+		 */
+		spin_lock_irqsave(&switch_start_lock,flags);
+		switch_after = 0;
+		spin_unlock_irqrestore(&switch_start_lock,flags);
+
+
+		/*
+		 * Update to_nbd flag of st
+		 */
+
+		if(foreground_uid)
+			id = get_id_from_uid(foreground_uid);
+
+
+		if(foreground_uid && (atomic_read(&past[id]->st_index0)!=-1 || atomic_read(&past[id]->st_index1)!=-1)){
+			update_to_nbd_flag(id, 100-target_percentage); //<--app_number or uid
+			past[id]->st_should_check = 1 ; // --> per app, and keep in list
+		}
+
+		/*
+		 * Cold page handling
+		 */
+	
+		if(backgrounded_uid){
+			rcu_read_lock();
+			for_each_process(p){
+				if(!p)
+					continue;
+				if(backgrounded_uid && p->cred->uid.val == backgrounded_uid){
+					printk("backgrounded_uid %d",backgrounded_uid);
+					if(task_swap_counter_inc(p))
+						cold_page_sender_handler(p);
+					/* for preempted task */
+					if(preempted_cold_task){
+						trace_printk("preempted cold task recheck\n");
+						cold_page_sender_handler(preempted_cold_task);
+					}
+				}
+			}
+			rcu_read_unlock();
+		}
+
+		if(foreground_uid){
+			miss_handling = 1;
+			miss_page_handler(id,!past[id]->which_table); //--> forcing pagefault and ((madvise))
+		}
+		wake_up_send_target_manager();
+
+		backgrounded_uid = foreground_uid;
+
+	}
+	return 0;
+
+}
 
 
 
@@ -1731,12 +1918,14 @@ static int send_target_manager(void *arg)
 
 	int i;
 	int max_idx_l;
+	int max_idx_e;
 	int target_table;
 	pid_t tgid;
 	unsigned long va;
 	unsigned long flags;
 	unsigned long flags2;
 	struct swap_trace_entry *swap_trace_table_l;
+	struct swap_trace_entry *swap_trace_table_e;
 	set_user_nice(current, MAX_NICE);
 	
 
@@ -1771,6 +1960,19 @@ static int send_target_manager(void *arg)
 			}
 			spin_unlock_irqrestore(&switch_start_lock,flags);
 	
+	if(target_table){
+		max_idx_e = atomic_read(&past[id]->st_index0);
+		swap_trace_table_e = past[id]->swap_trace_table0;
+		max_idx_l = atomic_read(&past[id]->st_index1);
+		swap_trace_table_l = past[id]->swap_trace_table1;
+	}
+	else{
+		max_idx_e = atomic_read(&past[id]->st_index1);
+		swap_trace_table_e = past[id]->swap_trace_table1;
+		max_idx_l = atomic_read(&past[id]->st_index0);
+		swap_trace_table_l = past[id]->swap_trace_table0;
+	}
+	/*
 			if(target_table){
 				max_idx_l = atomic_read(&past[id]->st_index1);
 				swap_trace_table_l = past[id]->swap_trace_table1;
@@ -1779,7 +1981,7 @@ static int send_target_manager(void *arg)
 				max_idx_l = atomic_read(&past[id]->st_index0);
 				swap_trace_table_l = past[id]->swap_trace_table0;
 			}
-	
+	*/
 			for( i = 0 ; i < max_idx_l ; i++ ){
 				if(switch_start){
 					target_flag = 0;
@@ -1797,6 +1999,22 @@ static int send_target_manager(void *arg)
 				}
 			}
 
+			for (i = 0 ; i < max_idx_e ; i++){
+				if(switch_start){
+					target_flag = 0;
+					trace_printk(KERN_ERR "[REMOTE %s] switch started during sent\n", __func__);
+					goto sleep;
+				}
+				if(swap_trace_table_e[i].to_nbd && !swap_trace_table_e[i].swapped){
+						
+					target_flag=1;
+					tgid = swap_trace_table_e[i].tgid;
+					va = swap_trace_table_e[i].va;
+					if(send_target_page(id/* ID */,tgid,va)){
+						swap_trace_table_e[i].swapped=1;
+					}
+				}
+			}
 			/***for direct page***/
 
 			
