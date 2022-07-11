@@ -10,7 +10,10 @@ do
 		hit=`cat $file | grep "prefetch hit id $id" | wc -l`
 		fault=`cat $file | grep "prefetch fault id $id" | awk -F "do_swap_page:" '{print $2}' | awk '!x[$0]++ {print $0}' |  wc -l`
 		miss=`cat $file | grep "prefetch miss id $id"  |  wc -l`
-		echo "$file id $id: $target $hit $fault $miss"
+		table=`cat $file | grep "id $id, table ."  |  wc -l`
+		after=`cat $file | grep "id $id.*after!!"  |  wc -l`
+
+		echo "$file id $id: $target $hit $fault $miss, after $after/$table"
 
 	done
 
@@ -28,7 +31,9 @@ do
 		hit=`cat $file | grep "prefetch hit id $id" | wc -l`
 		fault=`cat $file | grep "prefetch fault id $id" | awk -F "do_swap_page:" '{print $2}' | awk '!x[$0]++ {print $0}' |  wc -l`
 		miss=`cat $file | grep "prefetch miss id $id"  |  wc -l`
-		echo "$file id $id: $target $hit $fault $miss"
+		table=`cat $file | grep "id $id, table ."  |  wc -l`
+		after=`cat $file | grep "id $id.*after!!"  |  wc -l`
+		echo "$file id $id: $target $hit $fault $miss, after $after/$table"
 	done
 done
 

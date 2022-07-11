@@ -54,8 +54,8 @@ struct swap_trace_entry {
 struct per_app_swap_trace {
 	atomic_t st_index0;
 	atomic_t st_index1;
-	//atomic_t after_index0;
-	//atomic_t after_index1;
+	atomic_t after_index0;
+	atomic_t after_index1;
 	struct swap_trace_entry swap_trace_table0[NUM_STT_ENTRIES];
 	struct swap_trace_entry swap_trace_table1[NUM_STT_ENTRIES];
 	bool st_should_check; // --> per app, and keep in list
@@ -63,9 +63,10 @@ struct per_app_swap_trace {
 };
 
 extern bool switch_start;
+extern bool switch_after;
 extern bool miss_handling;
 extern bool zram_full;
-extern struct perapp_cluster pac[10];
+extern struct perapp_cluster pac[19];
 extern struct per_app_swap_trace *past[9];
 
 extern atomic_t sent_cold_page;
@@ -117,6 +118,14 @@ extern int app_switch_start_handler(struct ctl_table *table, int write,
 
 extern int app_switch_fin;
 extern int app_switch_fin_handler(struct ctl_table *table, int write,
+                 void __user *buffer, size_t *length, loff_t *ppos);
+
+extern int app_switch_after_1;
+extern int app_switch_after_1_handler(struct ctl_table *table, int write,
+                 void __user *buffer, size_t *length, loff_t *ppos);
+
+extern int app_switch_after_2;
+extern int app_switch_after_2_handler(struct ctl_table *table, int write,
                  void __user *buffer, size_t *length, loff_t *ppos);
 
 extern unsigned int get_id_from_uid(int uid);

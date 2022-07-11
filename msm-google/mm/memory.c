@@ -3080,7 +3080,7 @@ int do_swap_page(struct vm_fault *vmf)
 		goto out_release;
 	}
 
-	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx 3\n",current->tgid,current->pid,current->comm,vmf->address);
+//	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx 3\n",current->tgid,current->pid,current->comm,vmf->address);
 
 
 	swapcache = page;
@@ -3141,6 +3141,7 @@ int do_swap_page(struct vm_fault *vmf)
 #ifdef CONFIG_APP_AWARE
 
 	if(switch_start && foreground_uid && !excepted){
+	printk(KERN_ERR "1!!\n");
 		if(past[id]->which_table){
 			st_idx_ptr = &past[id]->st_index1;
 			swap_trace_table = past[id]->swap_trace_table1;
@@ -3150,14 +3151,52 @@ int do_swap_page(struct vm_fault *vmf)
 			swap_trace_table = past[id]->swap_trace_table0;
 		}
 
+	printk(KERN_ERR "2!!\n");
 		idx = atomic_inc_return(st_idx_ptr);
+	printk(KERN_ERR "3!!\n");
+		if(idx<NUM_STT_ENTRIES-1){
+	printk(KERN_ERR "4!!\n");
 		swap_trace_table[idx].tgid = current->tgid;
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
 		trace_printk("id %d, table %d || %d: %d %llx\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
-
+		}
+		else
+			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);
+	printk(KERN_ERR "5!!\n");
 	}
+	
+	if(switch_after && foreground_uid){
+	printk(KERN_ERR "6!!\n");
+		
+		id = get_id_from_uid(foreground_uid);
+	printk(KERN_ERR "7!!\n");
+		
+		if(past[id]->which_table){
+			st_idx_ptr = &past[id]->after_index1;
+			swap_trace_table = past[id]->swap_trace_table1;
+		}
+		else{
+			st_idx_ptr = &past[id]->after_index0;
+			swap_trace_table = past[id]->swap_trace_table0;
+		}
+	printk(KERN_ERR "8!!\n");
+		if(idx<NUM_STT_ENTRIES-1){
+	printk(KERN_ERR "9!!\n");
+		idx = atomic_inc_return(st_idx_ptr);
+		swap_trace_table[idx].tgid = current->tgid;
+		swap_trace_table[idx].va = vmf->address;
+		swap_trace_table[idx].to_nbd = 0;
+		swap_trace_table[idx].swapped = 0;
+		trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
+		}
+		else
+			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);
+	
+		printk(KERN_ERR "10!!\n");
+	}
+
 
 
 #endif

@@ -42,7 +42,7 @@ adb shell free -m
 adb shell cat /proc/swaps
 adb shell /data/screen_unlock.sh
 adb shell cd /data/launch/
-adb shell /data/launch/with_sysctl_launch_app.sh googlemaps
+adb shell /data/launch/after_launch_app.sh googlemaps
 sleep 10
 adb shell free -m
 adb shell cat /proc/swaps
@@ -83,59 +83,11 @@ echo ===========================
 
 
 
-adb shell /data/launch/with_sysctl_launch_app.sh youtube
+adb shell /data/launch/after_launch_app.sh youtube
 sleep 10
 adb shell free -m
 adb shell cat /proc/swaps
 
-
-echo ===========================
-adb shell cat /proc/$STR0/status | grep RssAnon
-adb shell cat /proc/$STR1/status | grep RssAnon
-adb shell cat /proc/$STR2/status | grep RssAnon
-adb shell cat /proc/$STR3/status | grep RssAnon
-adb shell cat /proc/$STR4/status | grep RssAnon
-adb shell cat /proc/$STR5/status | grep RssAnon
-adb shell cat /proc/$STR6/status | grep RssAnon
-adb shell cat /proc/$STR7/status | grep RssAnon
-adb shell cat /proc/$STR8/status | grep RssAnon
-adb shell cat /proc/$STR9/status | grep RssAnon
-echo ===========================
-echo ===========================
-adb shell cat /proc/$STR0/status | grep RssFile
-adb shell cat /proc/$STR1/status | grep RssFile
-adb shell cat /proc/$STR2/status | grep RssFile
-adb shell cat /proc/$STR3/status | grep RssFile
-adb shell cat /proc/$STR4/status | grep RssFile
-adb shell cat /proc/$STR5/status | grep RssFile
-adb shell cat /proc/$STR6/status | grep RssFile
-adb shell cat /proc/$STR7/status | grep RssFile
-adb shell cat /proc/$STR8/status | grep RssFile
-adb shell cat /proc/$STR9/status | grep RssFile
-echo ===========================
-
-echo ===========================
-adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
-adb shell dumpsys meminfo $STR1 | grep TOTAL | grep -v SWAP
-adb shell dumpsys meminfo $STR2 | grep TOTAL | grep -v SWAP
-adb shell dumpsys meminfo $STR3 | grep TOTAL | grep -v SWAP
-adb shell dumpsys meminfo $STR4 | grep TOTAL | grep -v SWAP
-adb shell dumpsys meminfo $STR5 | grep TOTAL | grep -v SWAP
-adb shell dumpsys meminfo $STR6 | grep TOTAL | grep -v SWAP
-adb shell dumpsys meminfo $STR7 | grep TOTAL | grep -v SWAP
-adb shell dumpsys meminfo $STR8 | grep TOTAL | grep -v SWAP
-adb shell dumpsys meminfo $STR9 | grep TOTAL | grep -v SWAP
-echo ===========================
-adb shell cat /proc/meminfo | grep Mem
-adb shell cat /proc/meminfo | grep Cached
-echo ===========================
-
-
-adb shell /data/launch/with_sysctl_launch_app.sh candycrush
-sleep 10
-
-adb shell free -m
-adb shell cat /proc/swaps
 
 echo ===========================
 adb shell cat /proc/$STR0/status | grep RssAnon
@@ -161,6 +113,7 @@ adb shell cat /proc/$STR7/status | grep RssFile
 adb shell cat /proc/$STR8/status | grep RssFile
 adb shell cat /proc/$STR9/status | grep RssFile
 echo ===========================
+
 echo ===========================
 adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
 adb shell dumpsys meminfo $STR1 | grep TOTAL | grep -v SWAP
@@ -178,11 +131,11 @@ adb shell cat /proc/meminfo | grep Cached
 echo ===========================
 
 
-	adb shell /data/launch/with_sysctl_launch_app.sh chrome
+adb shell /data/launch/after_launch_app.sh candycrush
 sleep 10
+
 adb shell free -m
 adb shell cat /proc/swaps
-
 
 echo ===========================
 adb shell cat /proc/$STR0/status | grep RssAnon
@@ -225,7 +178,54 @@ adb shell cat /proc/meminfo | grep Cached
 echo ===========================
 
 
-adb shell /data/launch/with_sysctl_launch_app.sh twitter
+	adb shell /data/launch/after_launch_app.sh chrome
+sleep 10
+adb shell free -m
+adb shell cat /proc/swaps
+
+
+echo ===========================
+adb shell cat /proc/$STR0/status | grep RssAnon
+adb shell cat /proc/$STR1/status | grep RssAnon
+adb shell cat /proc/$STR2/status | grep RssAnon
+adb shell cat /proc/$STR3/status | grep RssAnon
+adb shell cat /proc/$STR4/status | grep RssAnon
+adb shell cat /proc/$STR5/status | grep RssAnon
+adb shell cat /proc/$STR6/status | grep RssAnon
+adb shell cat /proc/$STR7/status | grep RssAnon
+adb shell cat /proc/$STR8/status | grep RssAnon
+adb shell cat /proc/$STR9/status | grep RssAnon
+echo ===========================
+echo ===========================
+adb shell cat /proc/$STR0/status | grep RssFile
+adb shell cat /proc/$STR1/status | grep RssFile
+adb shell cat /proc/$STR2/status | grep RssFile
+adb shell cat /proc/$STR3/status | grep RssFile
+adb shell cat /proc/$STR4/status | grep RssFile
+adb shell cat /proc/$STR5/status | grep RssFile
+adb shell cat /proc/$STR6/status | grep RssFile
+adb shell cat /proc/$STR7/status | grep RssFile
+adb shell cat /proc/$STR8/status | grep RssFile
+adb shell cat /proc/$STR9/status | grep RssFile
+echo ===========================
+echo ===========================
+adb shell dumpsys meminfo $STR0 | grep TOTAL | grep -v SWAP
+adb shell dumpsys meminfo $STR1 | grep TOTAL | grep -v SWAP
+adb shell dumpsys meminfo $STR2 | grep TOTAL | grep -v SWAP
+adb shell dumpsys meminfo $STR3 | grep TOTAL | grep -v SWAP
+adb shell dumpsys meminfo $STR4 | grep TOTAL | grep -v SWAP
+adb shell dumpsys meminfo $STR5 | grep TOTAL | grep -v SWAP
+adb shell dumpsys meminfo $STR6 | grep TOTAL | grep -v SWAP
+adb shell dumpsys meminfo $STR7 | grep TOTAL | grep -v SWAP
+adb shell dumpsys meminfo $STR8 | grep TOTAL | grep -v SWAP
+adb shell dumpsys meminfo $STR9 | grep TOTAL | grep -v SWAP
+echo ===========================
+adb shell cat /proc/meminfo | grep Mem
+adb shell cat /proc/meminfo | grep Cached
+echo ===========================
+
+
+adb shell /data/launch/after_launch_app.sh twitter
 sleep 10
 adb shell free -m
 adb shell cat /proc/swaps
@@ -278,7 +278,7 @@ adb shell cat /proc/vmstat | grep pg.*fault
 adb shell cat /proc/vmstat | grep pswp
 
 
-adb shell /data/launch/with_sysctl_launch_app.sh angrybirds
+adb shell /data/launch/after_launch_app.sh angrybirds
 sleep 30
 
 adb shell free -m
@@ -332,7 +332,7 @@ echo ===========================
 
 
 
-	adb shell /data/launch/with_sysctl_launch_app.sh gmail
+	adb shell /data/launch/after_launch_app.sh gmail
 sleep 10 
 adb shell free -m
 adb shell cat /proc/swaps
@@ -380,7 +380,7 @@ echo ===========================
 
 
 
-	adb shell /data/launch/with_sysctl_launch_app.sh instagram
+	adb shell /data/launch/after_launch_app.sh instagram
 sleep 10
 adb shell free -m
 adb shell cat /proc/swaps
@@ -426,7 +426,7 @@ adb shell cat /proc/meminfo | grep Cached
 echo ===========================
 
 
-	adb shell /data/launch/with_sysctl_launch_app.sh clashroyale
+	adb shell /data/launch/after_launch_app.sh clashroyale
 	sleep 10
 #sleep 100
 adb shell free -m
