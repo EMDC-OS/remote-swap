@@ -78,7 +78,7 @@ int target_percentage;
 
 struct task_struct *preempted_cold_task;
 
-struct perapp_cluster pac[10];
+struct perapp_cluster pac[19];
 
 struct task_struct *send_target_manager_thread;
 struct task_struct *send_target_alarm_thread;
@@ -2157,13 +2157,13 @@ static int __init remote_swap_init(void)
 	target_percentage = 50;
 
 
-
-	//per_app structs init
-	for(i=0;i<9;i++){
+	for(i=0;i<19;i++){
 		struct perapp_cluster *cluster;
 		cluster=&pac[i];
 		cluster_set_null_1(&cluster->index);
-
+	}
+	//per_app structs init
+	for(i=0;i<9;i++){
 		past[i]=(struct per_app_swap_trace *)vmalloc(sizeof(struct per_app_swap_trace));
 		init_past(past[i]);
 	}
@@ -2184,10 +2184,12 @@ static int __init remote_swap_init(void)
 static void __exit remote_swap_exit(void){
 
 	int i;
-	for(i=0;i<9;i++){
+	for(i=0;i<19;i++){
 		struct perapp_cluster *cluster;
 		cluster=&pac[i];
 		cluster_set_null_1(&cluster->index);
+	}
+	for(i=0;i<9;i++){
 		vfree(past[i]);
 	}
 	kthread_stop(send_target_manager_thread);
