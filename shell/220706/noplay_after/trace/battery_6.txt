@@ -1,11 +1,28 @@
 Battery History (0% used, 0 used of 4096KB, 0 strings using 0):
 
 Per-PID Stats:
-  PID 1341 wake time: +16ms
-  PID 1885 wake time: +40ms
-  PID 1885 wake time: +196ms
-  PID 2256 wake time: +5s39ms
-  PID 1341 wake time: +952ms
+  PID 1360 wake time: +4s52ms
+  PID 1921 wake time: +137ms
+  PID 1921 wake time: +46ms
+  PID 5730 wake time: +1ms
+  PID 0 wake time: +12s57ms
+  PID 1360 wake time: +43ms
+  PID 2298 wake time: +14s904ms
+  PID 0 wake time: +45s667ms
+  PID 1360 wake time: +680ms
+  PID 1360 wake time: +461ms
+  PID 1360 wake time: +716ms
+  PID 1360 wake time: +1s253ms
+  PID 0 wake time: +25s300ms
+  PID 1360 wake time: +586ms
+  PID 0 wake time: +25s331ms
+  PID 1360 wake time: +888ms
+  PID 1360 wake time: +1s7ms
+  PID 1921 wake time: +141ms
+  PID 2298 wake time: +373ms
+  PID 1360 wake time: +588ms
+  PID 1360 wake time: +81ms
+  PID 1360 wake time: +982ms
 
 Daily stats:
   Current start time: 2022-07-12-04-40-19
@@ -245,19 +262,19 @@ Daily stats:
 Statistics since last charge:
   System starts: 0, currently on battery: false
   Estimated battery capacity: 2800 mAh
-  Min learned battery capacity: 2710 mAh
-  Max learned battery capacity: 2710 mAh
+  Min learned battery capacity: 2712 mAh
+  Max learned battery capacity: 2712 mAh
   Time on battery: 0ms (0.0%) realtime, 0ms (--%) uptime
   Time on battery screen off: 0ms (--%) realtime, 0ms (--%) uptime
   Time on battery screen doze: 0ms (--%)
-  Total run time: 3m 21s 404ms realtime, 3m 21s 404ms uptime
+  Total run time: 4m 40s 722ms realtime, 4m 40s 722ms uptime
   Discharge: 0 mAh
   Screen off discharge: 0 mAh
   Screen doze discharge: 0 mAh
   Screen on discharge: 0 mAh
   Device light doze discharge: 0 mAh
   Device deep doze discharge: 0 mAh
-  Start clock time: 2022-07-12-12-27-59
+  Start clock time: 2022-07-12-18-31-57
   Screen on: 0ms (--%) 0x, Interactive: 0ms (--%)
   Screen brightnesses: (no activity)
 
@@ -321,10 +338,21 @@ Statistics since last charge:
     Wake lock *alarm* realtime
     Wake lock NetworkStats realtime
     Wake lock *telephony-radio* realtime
+    Wake lock *location* realtime
+    Wake lock GnssLocationProvider realtime
+    Wake lock SyncLoopWakeLock realtime
+    Wake lock SCREEN_FROZEN realtime
+    Sensor 51: (not used)
+    Sensor 11081: (not used)
+    Sensor 32783: (not used)
   1001:
     Wake lock *telephony-radio* realtime
+  1002:
+    Wake lock bluetooth_timer realtime
   1027:
     (nothing executed)
+  1041:
+    Wake lock AudioMix realtime
   1068:
     (nothing executed)
   1073:
@@ -332,14 +360,28 @@ Statistics since last charge:
   u0a47:
     (nothing executed)
   u0a48:
-    (nothing executed)
+    Apk com.android.vending:
+      (nothing executed)
   u0a52:
     Wake lock GCoreFlp realtime
+    Wake lock NlpWakeLock realtime
+    Wake lock *gms_scheduler*:internal realtime
+    Wake lock *alarm* realtime
     Wake lock IntentOp:.common.broadcast.BackgroundBroadcastReceiverSupport$PersistentReceiverIntentOperation realtime
+    Wake lock GCM_READ realtime
+    Wake lock GCM_HB_ALARM realtime
+    Wake lock *gms_scheduler*/com.google.android.gms/.clearcut.uploader.QosUploaderService realtime
+    Wake lock CMWakeLock realtime
+    Sensor 11: (not used)
+    Sensor 21: (not used)
     Sensor 61: (not used)
+    Sensor 141: (not used)
+    Sensor 161: (not used)
     Apk com.google.android.gms:
       (nothing executed)
   u0a55:
+    (nothing executed)
+  u0a56:
     (nothing executed)
   u0a64:
     (nothing executed)
@@ -347,31 +389,75 @@ Statistics since last charge:
     (nothing executed)
   u0a73:
     (nothing executed)
-  u0a94:
-    (nothing executed)
   u0a98:
     (nothing executed)
   u0a106:
     (nothing executed)
+  u0a116:
+    (nothing executed)
   u0a117:
     (nothing executed)
+  u0a122:
+    Wake lock AudioMix realtime
+    Wake lock *launch* realtime
+    Wake lock WindowManager realtime
+    Sensor 11: (not used)
+  u0a124:
+    Wake lock *launch* realtime
   u0a126:
-    (nothing executed)
+    Wake lock *alarm* realtime
+    Wake lock *launch* realtime
+    Wake lock *job*/com.google.android.youtube/androidx.work.impl.background.systemjob.SystemJobService realtime
+    Job com.google.android.youtube/androidx.work.impl.background.systemjob.SystemJobService: (not used)
+    Sensor 11: (not used)
+    Apk com.google.android.youtube:
+      (nothing executed)
   u0a127:
     Wake lock *alarm* realtime
+    Wake lock *launch* realtime
+    Wake lock VideoPlayerImpl:IgVideoPlayerlockTag realtime
     Apk com.instagram.android:
-      (nothing executed)
+      Service com.facebook.rti.push.service.FbnsService:
+        Created for: 0ms uptime
+        Starts: 1, launches: 1
+  u0a128:
+    Wake lock AudioMix realtime
+    Wake lock *launch* realtime
+    Wake lock WindowManager realtime
   u0a133:
-    (nothing executed)
-  u0a134:
-    (nothing executed)
+    Wake lock *job*/com.twitter.android/androidx.work.impl.background.systemjob.SystemJobService realtime
+    Wake lock AudioMix realtime
+    Wake lock *launch* realtime
+    Wake lock *job*/com.twitter.android/com.openback.service.OpenBackService realtime
+    Job com.twitter.android/com.openback.service.OpenBackService: (not used)
+    Job com.twitter.android/androidx.work.impl.background.systemjob.SystemJobService: (not used)
+    Apk com.twitter.android:
+      (nothing executed)
+  u0a135:
+    Wake lock GCoreFlp realtime
+    Wake lock NlpWakeLock realtime
+    Wake lock FusedLocation realtime
+    Wake lock *alarm* realtime
+    Wake lock *launch* realtime
+    Wake lock *telephony-radio* realtime
+    Sensor GPS: (not used)
+    Sensor 11: (not used)
+    Sensor 141: (not used)
+    Sensor 161: (not used)
+    Sensor 32775: (not used)
+    Sensor 32776: (not used)
   u0a136:
-    (nothing executed)
+    Wake lock *launch* realtime
+    Sensor 11: (not used)
   u0a137:
+    Wake lock *alarm* realtime
+  u0a155:
     (nothing executed)
+  u0a159:
+    Wake lock *launch* realtime
 
 Total cpu time reads: 0
 Batched cpu time reads: 0
-Batching Duration (min): 7
+Batching Duration (min): 35
 All UID cpu time reads since the later of device start or stats reset: 8
-UIDs removed since the later of device start or stats reset: 4
+UIDs removed since the later of device start or stats reset: 0

@@ -10,7 +10,7 @@
 #define NBD_TYPE    1
 #define COLD_PAGE_THRESHOLD 3
 #define SYS_COLD_PAGE_THRESHOLD 6
-#define NUM_STT_ENTRIES 20000
+#define NUM_STT_ENTRIES 40000
 
 /******************************
  * APPLICATION UID DEFINITION *
@@ -21,7 +21,7 @@
 #define TW_UID 10133
 #define CC_UID 10128
 #define AB_UID 10122
-#define CR_UID 10159
+#define CR_UID 10169
 #define MAIL_UID 10136
 #define CH_UID 10124 
 
@@ -74,6 +74,7 @@ extern atomic_t sent_sys_cold_page;
 extern atomic_t faulted_cold_page;
 
 extern atomic_t excepted_page;
+extern atomic_t nbd_direct_page;
 
 
 extern int swapcache_flush;
@@ -137,6 +138,7 @@ extern int swapin_vma_tracking;
 extern int swapin_anon_tracking;
 extern int prefetch_on;
 extern int target_percentage;
+extern int nbd_client_pid;
 
 
 

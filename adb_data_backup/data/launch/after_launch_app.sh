@@ -48,7 +48,7 @@ elif [ "${app}" = "facebook" ]; then
 elif [ "${app}" = "pubg" ]; then
 	echo 10158 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "clashroyale" ]; then
-	echo 10159 > /proc/sys/kernel/foreground_uid
+	echo 10169 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "gmail" ]; then
 	echo 10136 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "chrome" ]; then

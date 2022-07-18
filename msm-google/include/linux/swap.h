@@ -480,6 +480,7 @@ extern int init_swap_address_space(unsigned int type, unsigned long nr_pages);
 extern void exit_swap_address_space(unsigned int type);
 #ifdef CONFIG_APP_AWARE
 extern swp_entry_t get_swap_page_of_id(unsigned int id);
+extern int zram_remain(void);
 #endif
 
 #else /* CONFIG_SWAP */

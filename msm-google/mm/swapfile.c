@@ -4033,6 +4033,16 @@ swp_entry_t get_swap_page_of_id(unsigned int id)
 
 
 
+int zram_remain(void){
+
+	struct swap_info_struct *si;
+
+	si = swap_info[ZRAM_TYPE];
+
+	return si->pages - si->inuse_pages;
+
+
+}
 
 
 

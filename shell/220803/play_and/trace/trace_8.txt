@@ -1,0 +1,16 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 5/5   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+ send_target_man-200   [005] ....     0.530676: send_target_manager: 3[REMOTE send_target_manager] target manager started
+ send_target_man-200   [005] ....     0.530694: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+ send_target_man-200   [005] ....     0.530722: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [005] ....     0.530723: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+ sys_cold_manage-202   [004] ....     0.530939: sys_cold_manager: 3[REMOTE sys_cold_manager] sys_cold_manager wake up

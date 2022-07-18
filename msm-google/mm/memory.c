@@ -2928,9 +2928,13 @@ int do_swap_page(struct vm_fault *vmf)
 	atomic_t *st_idx_ptr;
 	struct swap_trace_entry *swap_trace_table;
 	bool excepted = 0;
-	if((switch_start || miss_handling) && foreground_uid)
+	if((switch_start || miss_handling || switch_after) && foreground_uid)
 		id = get_id_from_uid(foreground_uid);
 
+		
+	if(nbd_client_pid!=0 && current->tgid == nbd_client_pid)
+		excepted = 1;
+		
 #endif
 
 	
@@ -2966,6 +2970,7 @@ int do_swap_page(struct vm_fault *vmf)
 
 
 
+//	printk(KERN_ERR "1!!\n");
 	entry = pte_to_swp_entry(vmf->orig_pte);
 	if (unlikely(non_swap_entry(entry))) {
 		if (is_migration_entry(entry)) {
@@ -3006,6 +3011,8 @@ int do_swap_page(struct vm_fault *vmf)
 
 //	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx 2\n",current->tgid,current->pid,current->comm,vmf->address);
 	
+			
+//	printk(KERN_ERR "2!!\n");
 	
 	if (!page) {
 		if (vma_readahead)
@@ -3041,9 +3048,13 @@ int do_swap_page(struct vm_fault *vmf)
 			}
 			else if(pte_to_swp_counter(vmf->orig_pte)==10) { //direct
 				trace_printk("Direct fault : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+				atomic_dec(&nbd_direct_page);
 			}
 			else if(switch_start && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
 					trace_printk("prefetch fault id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
+			}
+			else if(switch_after && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
+					trace_printk("after prefetch fault id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
 			else if(miss_handling && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){
 
@@ -3083,6 +3094,7 @@ int do_swap_page(struct vm_fault *vmf)
 //	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx 3\n",current->tgid,current->pid,current->comm,vmf->address);
 
 
+//	printk(KERN_ERR "3!!\n");
 	swapcache = page;
 	locked = lock_page_or_retry(page, vma->vm_mm, vmf->flags);
 
@@ -3152,17 +3164,18 @@ int do_swap_page(struct vm_fault *vmf)
 
 		idx = atomic_inc_return(st_idx_ptr);
 		if(idx<NUM_STT_ENTRIES-1){
+//			printk(KERN_ERR "idx %d\n", idx);
 		swap_trace_table[idx].tgid = current->tgid;
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
-		trace_printk("id %d, table %d || %d: %d %llx\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
+		//trace_printk("id %d, table %d || %d: %d %llx\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
 		}
 		else
 			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);
 	}
 	
-	if(switch_after && foreground_uid){
+	if(switch_after && foreground_uid && !excepted){
 		
 		id = get_id_from_uid(foreground_uid);
 		
@@ -3176,11 +3189,12 @@ int do_swap_page(struct vm_fault *vmf)
 		}
 		idx = atomic_inc_return(st_idx_ptr);
 		if(idx<NUM_STT_ENTRIES-1){
+//			printk(KERN_ERR "idx %d in after\n", idx);
 		swap_trace_table[idx].tgid = current->tgid;
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
-		trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
+		//trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
 		}
 		else
 			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);
@@ -3191,6 +3205,7 @@ int do_swap_page(struct vm_fault *vmf)
 
 #endif
 
+//	printk(KERN_ERR "4!!\n");
 
 	inc_mm_counter_fast(vma->vm_mm, MM_ANONPAGES);
 	dec_mm_counter_fast(vma->vm_mm, MM_SWAPENTS);

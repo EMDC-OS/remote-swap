@@ -1,0 +1,1255 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 1244/1244   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-17336 [007] ....  1760.512853: app_switch_start_handler: ###########switch start! foreground 10135#############
+           <...>-17336 [007] ....  1760.512858: prefetch_handler: prefetch handler start! target(id,table): 0,0
+           <...>-17336 [007] ....  1760.512871: app_switch_start_handler: foreground 10135 switch start , total_time = 13us
+     kworker/1:1-17134 [001] ....  1760.512888: prefetch_work: prefetch work: foreground 10135, maxidx -1, afteridx -1
+           <...>-17336 [007] ....  1761.661109: app_switch_after_1_handler: foreground 10135 switch after start
+           <...>-17336 [007] ....  1771.748799: app_switch_after_2_handler: foreground 10135 switch after end
+           <...>-17336 [007] ....  1771.748838: update_to_nbd_flag: appid 0: table 0 is latter, total target 0 max idx e, l -> -1 4403, after 0 8817
+           <...>-17336 [007] ....  1771.760339: miss_page_handler: miss page handler start! target(id,table): 0,1
+     kworker/1:1-17134 [001] ....  1771.760366: miss_page_work: miss work: foreground 10135, maxidx -1, afteridx -1
+ send_target_man-200   [007] ....  1771.760596: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [007] d..2  1771.760600: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  1771.760657: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [007] d..2  1771.760668: send_target_manager: send target manager - id, which_table : 3, 0
+ send_target_man-200   [007] d..2  1771.760671: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [007] d..2  1771.760677: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  1771.760688: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [007] d..2  1771.760699: send_target_manager: send target manager - id, which_table : 8, 0
+ send_target_man-200   [007] ....  1771.760703: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+ send_target_man-200   [005] ....  1815.519716: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [005] d..2  1815.519720: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [005] d..2  1815.519755: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [005] d..2  1815.519762: send_target_manager: send target manager - id, which_table : 3, 0
+ send_target_man-200   [005] d..2  1815.519764: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [005] d..2  1815.519767: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [005] d..2  1815.519775: send_target_manager: send target manager - id, which_table : 7, 0
+           <...>-202   [007] ....  1815.519779: sys_cold_manager: 3[REMOTE sys_cold_manager] sys_cold_manager wake up
+ send_target_man-200   [005] d..2  1815.519783: send_target_manager: send target manager - id, which_table : 8, 0
+ send_target_man-200   [005] ....  1815.519785: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6038  [000] d..4  1837.312770: __free_cluster: [REMOTE __free_cluster] free cluster 276
+           <...>-6038  [000] dn.4  1837.313245: __free_cluster: [REMOTE __free_cluster] free cluster 340
+           <...>-6038  [000] d..3  1837.319263: __free_cluster: [REMOTE __free_cluster] free cluster 404
+           <...>-6038  [000] d..4  1837.320833: __free_cluster: [REMOTE __free_cluster] free cluster 1301
+           <...>-6038  [000] d..4  1837.320847: __free_cluster: [REMOTE __free_cluster] free cluster 1365
+           <...>-6038  [000] d..4  1837.320861: __free_cluster: [REMOTE __free_cluster] free cluster 1429
+           <...>-6038  [000] d..4  1837.320878: __free_cluster: [REMOTE __free_cluster] free cluster 1557
+           <...>-6038  [000] d..4  1837.320889: __free_cluster: [REMOTE __free_cluster] free cluster 1621
+           <...>-6038  [000] d..4  1837.322101: __free_cluster: [REMOTE __free_cluster] free cluster 1685
+           <...>-18759 [004] ....  1911.789377: swap_counter_dump_handler: pid 6791: counter 0 = 4941
+           <...>-18759 [004] ....  1911.789380: swap_counter_dump_handler: pid 6791: counter 1 = 0
+           <...>-18759 [004] ....  1911.789381: swap_counter_dump_handler: pid 6791: counter 2 = 0
+           <...>-18759 [004] ....  1911.789381: swap_counter_dump_handler: pid 6791: counter 3 = 0
+           <...>-18759 [004] ....  1911.789382: swap_counter_dump_handler: pid 6791: counter 4 = 0
+           <...>-18759 [004] ....  1911.789383: swap_counter_dump_handler: pid 6791: counter 5 = 0
+           <...>-18759 [004] ....  1911.789383: swap_counter_dump_handler: pid 6791: counter >5 = 0
+           <...>-18759 [004] ....  1911.789384: swap_counter_dump_handler: remote: total sent cold page: 0
+           <...>-18759 [004] ....  1911.789385: swap_counter_dump_handler: remote: total faulted cold page: 0
+           <...>-18759 [004] ....  1911.789385: swap_counter_dump_handler: remote: total excepted page: 0
+           <...>-18759 [004] ....  1911.789386: swap_counter_dump_handler: remote: sent system page: 0
+           <...>-18759 [004] ....  1911.789386: swap_counter_dump_handler: remote: ZRAM remain: 405500 KB / 2097148 KB
+           <...>-18759 [004] ....  1911.789387: swap_counter_dump_handler: remote: total direct page: 0
+           <...>-14686 [001] d..4  1915.406851: __free_cluster: [REMOTE __free_cluster] free cluster 1469
+           <...>-18835 [006] ....  1916.301152: app_switch_start_handler: ###########switch start! foreground 10126#############
+           <...>-18835 [006] ....  1916.301157: prefetch_handler: prefetch handler start! target(id,table): 1,0
+           <...>-18835 [006] ....  1916.301169: app_switch_start_handler: foreground 10126 switch start , total_time = 13us
+     kworker/1:1-17134 [001] ....  1916.301177: prefetch_work: prefetch work: foreground 10126, maxidx -1, afteridx -1
+           <...>-18835 [007] ....  1916.984172: app_switch_after_1_handler: foreground 10126 switch after start
+           <...>-18835 [004] ....  1926.991743: app_switch_after_2_handler: foreground 10126 switch after end
+           <...>-18835 [004] ....  1926.991757: update_to_nbd_flag: appid 1: table 0 is latter, total target 0 max idx e, l -> -1 5373, after 0 2145
+           <...>-18835 [004] ....  1926.999457: miss_page_handler: miss page handler start! target(id,table): 1,1
+     kworker/1:1-17134 [001] ....  1926.999485: miss_page_work: miss work: foreground 10126, maxidx -1, afteridx -1
+ send_target_man-200   [005] ....  1926.999738: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [005] d..2  1926.999743: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [005] d..2  1926.999803: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [005] d..2  1926.999837: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [005] d..2  1926.999846: send_target_manager: send target manager - id, which_table : 3, 0
+ send_target_man-200   [005] d..2  1926.999850: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [005] d..2  1926.999854: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [005] d..2  1926.999865: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [005] d..2  1926.999877: send_target_manager: send target manager - id, which_table : 8, 0
+ send_target_man-200   [005] ....  1926.999880: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-2296  [001] d..4  1946.874254: __free_cluster: [REMOTE __free_cluster] free cluster 83
+ send_target_man-200   [007] ....  1965.707035: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [007] d..2  1965.707045: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  1965.707118: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [007] d..2  1965.707162: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [007] d..2  1965.707176: send_target_manager: send target manager - id, which_table : 3, 0
+ send_target_man-200   [007] d..2  1965.707181: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [007] d..2  1965.707188: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  1965.707203: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [007] d..2  1965.707219: send_target_manager: send target manager - id, which_table : 8, 0
+ send_target_man-200   [007] ....  1965.707224: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-5305  [006] d..4  1978.481559: __free_cluster: [REMOTE __free_cluster] free cluster 212
+ send_target_man-200   [007] ....  2115.893334: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [007] d..2  2115.893345: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  2115.893417: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [007] d..2  2115.893460: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [007] d..2  2115.893475: send_target_manager: send target manager - id, which_table : 3, 0
+ send_target_man-200   [007] d..2  2115.893480: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [007] d..2  2115.893486: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  2115.893501: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [007] d..2  2115.893518: send_target_manager: send target manager - id, which_table : 8, 0
+ send_target_man-200   [007] ....  2115.893523: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+ android.youtube-8742  [007] d..4  2232.921597: __free_cluster: [REMOTE __free_cluster] free cluster 1306
+           <...>-19076 [006] d..4  2243.137267: __free_cluster: [REMOTE __free_cluster] free cluster 660
+ send_target_man-200   [007] ....  2266.079672: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [007] d..2  2266.079680: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  2266.079749: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [007] d..2  2266.079789: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [007] d..2  2266.079803: send_target_manager: send target manager - id, which_table : 3, 0
+ send_target_man-200   [007] d..2  2266.079808: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [007] d..2  2266.079814: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  2266.079828: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [007] d..2  2266.079844: send_target_manager: send target manager - id, which_table : 8, 0
+ send_target_man-200   [007] ....  2266.079848: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-19189 [005] ....  2409.246791: swap_counter_dump_handler: pid 8742: counter 0 = 7890
+           <...>-19189 [005] ....  2409.246796: swap_counter_dump_handler: pid 8742: counter 1 = 0
+           <...>-19189 [005] ....  2409.246797: swap_counter_dump_handler: pid 8742: counter 2 = 0
+           <...>-19189 [005] ....  2409.246798: swap_counter_dump_handler: pid 8742: counter 3 = 0
+           <...>-19189 [005] ....  2409.246799: swap_counter_dump_handler: pid 8742: counter 4 = 0
+           <...>-19189 [005] ....  2409.246799: swap_counter_dump_handler: pid 8742: counter 5 = 0
+           <...>-19189 [005] ....  2409.246800: swap_counter_dump_handler: pid 8742: counter >5 = 0
+           <...>-19189 [005] ....  2409.246801: swap_counter_dump_handler: remote: total sent cold page: 0
+           <...>-19189 [005] ....  2409.246802: swap_counter_dump_handler: remote: total faulted cold page: 0
+           <...>-19189 [005] ....  2409.246803: swap_counter_dump_handler: remote: total excepted page: 0
+           <...>-19189 [005] ....  2409.246804: swap_counter_dump_handler: remote: sent system page: 0
+           <...>-19189 [005] ....  2409.246805: swap_counter_dump_handler: remote: ZRAM remain: 286972 KB / 2097148 KB
+           <...>-19189 [005] ....  2409.246806: swap_counter_dump_handler: remote: total direct page: 0
+           <...>-19276 [007] ....  2413.994853: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-19276 [007] ....  2413.994859: prefetch_handler: prefetch handler start! target(id,table): 4,0
+           <...>-19276 [007] ....  2413.994875: app_switch_start_handler: foreground 10128 switch start , total_time = 16us
+     kworker/1:1-17134 [001] ....  2413.994890: prefetch_work: prefetch work: foreground 10128, maxidx -1, afteridx -1
+           <...>-19276 [007] ....  2414.701987: app_switch_after_1_handler: foreground 10128 switch after start
+ android.youtube-8742  [000] d..4  2415.379593: __free_cluster: [REMOTE __free_cluster] free cluster 1755
+ android.youtube-8742  [000] d..3  2415.382321: __free_cluster: [REMOTE __free_cluster] free cluster 1753
+           <...>-202   [000] ....  2416.266293: sys_cold_manager: 3[REMOTE sys_cold_manager] sys_cold_manager wake up
+ send_target_man-200   [004] ....  2416.266545: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [004] d..2  2416.266550: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [004] d..2  2416.266603: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [004] d..2  2416.266634: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [004] d..2  2416.266643: send_target_manager: send target manager - id, which_table : 3, 0
+ send_target_man-200   [004] d..2  2416.266647: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [004] d..2  2416.266650: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [004] d..2  2416.266659: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [004] d..2  2416.266670: send_target_manager: send target manager - id, which_table : 8, 0
+ send_target_man-200   [004] ....  2416.266672: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-2551  [001] d..4  2420.657300: __free_cluster: [REMOTE __free_cluster] free cluster 1429
+           <...>-2551  [001] d..4  2420.657308: __free_cluster: [REMOTE __free_cluster] free cluster 1557
+           <...>-2551  [001] d..4  2420.657313: __free_cluster: [REMOTE __free_cluster] free cluster 1621
+           <...>-2551  [001] d..4  2420.657318: __free_cluster: [REMOTE __free_cluster] free cluster 1685
+           <...>-2551  [001] d..4  2420.657322: __free_cluster: [REMOTE __free_cluster] free cluster 1469
+           <...>-2551  [001] d..4  2420.657334: __free_cluster: [REMOTE __free_cluster] free cluster 212
+           <...>-2551  [001] d..4  2420.657341: __free_cluster: [REMOTE __free_cluster] free cluster 1306
+           <...>-2551  [001] d..4  2420.657343: __free_cluster: [REMOTE __free_cluster] free cluster 1365
+           <...>-19276 [007] ....  2424.757308: app_switch_after_2_handler: foreground 10128 switch after end
+           <...>-19276 [007] ....  2424.757340: update_to_nbd_flag: appid 4: table 0 is latter, total target 0 max idx e, l -> -1 5667, after 0 6657
+           <...>-19276 [007] ....  2424.774136: miss_page_handler: miss page handler start! target(id,table): 4,1
+     kworker/1:1-17134 [001] ....  2424.774166: miss_page_work: miss work: foreground 10128, maxidx -1, afteridx -1
+ send_target_man-200   [007] ....  2424.774381: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [007] d..2  2424.774386: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  2424.774447: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [007] d..2  2424.774482: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [007] d..2  2424.774494: send_target_manager: send target manager - id, which_table : 3, 0
+ send_target_man-200   [007] d..2  2424.774498: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [007] d..2  2424.774551: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [007] d..2  2424.774556: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  2424.774568: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [007] d..2  2424.774582: send_target_manager: send target manager - id, which_table : 8, 0
+ send_target_man-200   [007] ....  2424.774585: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-19698 [004] ....  2501.032547: swap_counter_dump_handler: pid 9286: counter 0 = 24632
+           <...>-19698 [004] ....  2501.032551: swap_counter_dump_handler: pid 9286: counter 1 = 0
+           <...>-19698 [004] ....  2501.032552: swap_counter_dump_handler: pid 9286: counter 2 = 0
+           <...>-19698 [004] ....  2501.032553: swap_counter_dump_handler: pid 9286: counter 3 = 0
+           <...>-19698 [004] ....  2501.032554: swap_counter_dump_handler: pid 9286: counter 4 = 0
+           <...>-19698 [004] ....  2501.032554: swap_counter_dump_handler: pid 9286: counter 5 = 0
+           <...>-19698 [004] ....  2501.032555: swap_counter_dump_handler: pid 9286: counter >5 = 0
+           <...>-19698 [004] ....  2501.032556: swap_counter_dump_handler: remote: total sent cold page: 0
+           <...>-19698 [004] ....  2501.032557: swap_counter_dump_handler: remote: total faulted cold page: 0
+           <...>-19698 [004] ....  2501.032558: swap_counter_dump_handler: remote: total excepted page: 0
+           <...>-19698 [004] ....  2501.032559: swap_counter_dump_handler: remote: sent system page: 0
+           <...>-19698 [004] ....  2501.032560: swap_counter_dump_handler: remote: ZRAM remain: 284332 KB / 2097148 KB
+           <...>-19698 [004] ....  2501.032561: swap_counter_dump_handler: remote: total direct page: 0
+           <...>-19786 [007] ....  2505.326373: app_switch_start_handler: ###########switch start! foreground 10124#############
+           <...>-19786 [007] ....  2505.326377: prefetch_handler: prefetch handler start! target(id,table): 8,0
+           <...>-19786 [007] ....  2505.326391: app_switch_start_handler: foreground 10124 switch start , total_time = 14us
+     kworker/1:1-17134 [001] ....  2505.326399: prefetch_work: prefetch work: foreground 10124, maxidx 51, afteridx 133
+           <...>-19786 [006] ....  2505.972846: app_switch_after_1_handler: foreground 10124 switch after start
+           <...>-19786 [007] ....  2516.019272: app_switch_after_2_handler: foreground 10124 switch after end
+           <...>-19786 [007] ....  2516.020561: update_to_nbd_flag: appid 8: table 1 is latter, total target 0 max idx e, l -> 51 7201, after 82 4274
+           <...>-19786 [007] ....  2516.028864: miss_page_handler: miss page handler start! target(id,table): 8,0
+     kworker/1:1-17134 [001] ....  2516.028883: miss_page_work: miss work: foreground 10124, maxidx 51, afteridx 133
+ send_target_man-200   [005] ....  2516.028892: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [005] d..2  2516.028900: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [005] d..2  2516.028963: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [005] d..2  2516.029000: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [005] d..2  2516.029013: send_target_manager: send target manager - id, which_table : 3, 0
+ send_target_man-200   [005] d..2  2516.029017: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [005] d..2  2516.029076: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [005] d..2  2516.029083: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [005] d..2  2516.029096: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [005] d..2  2516.029110: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [005] ....  2516.029166: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+ send_target_man-200   [003] ....  2566.452992: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [003] d..2  2566.453008: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [003] d..2  2566.453164: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [003] d..2  2566.453251: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [003] d..2  2566.453279: send_target_manager: send target manager - id, which_table : 3, 0
+ send_target_man-200   [003] d..2  2566.453285: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [003] d..2  2566.453462: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [003] d..2  2566.453474: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [003] d..2  2566.453499: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [003] d..2  2566.453529: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [003] ....  2566.453648: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+ send_target_man-200   [003] ....  2716.639629: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [003] d..2  2716.639643: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [003] d..2  2716.639756: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [003] d..2  2716.639823: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [003] d..2  2716.639844: send_target_manager: send target manager - id, which_table : 3, 0
+ send_target_man-200   [003] d..2  2716.639849: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [003] d..2  2716.639957: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [003] d..2  2716.639966: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [003] d..2  2716.639988: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [003] d..2  2716.640014: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [003] ....  2716.640113: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-21355 [005] ....  2787.531697: swap_counter_dump_handler: pid 9529: counter 0 = 4239
+           <...>-21355 [005] ....  2787.531700: swap_counter_dump_handler: pid 9529: counter 1 = 0
+           <...>-21355 [005] ....  2787.531701: swap_counter_dump_handler: pid 9529: counter 2 = 0
+           <...>-21355 [005] ....  2787.531702: swap_counter_dump_handler: pid 9529: counter 3 = 0
+           <...>-21355 [005] ....  2787.531703: swap_counter_dump_handler: pid 9529: counter 4 = 0
+           <...>-21355 [005] ....  2787.531703: swap_counter_dump_handler: pid 9529: counter 5 = 0
+           <...>-21355 [005] ....  2787.531704: swap_counter_dump_handler: pid 9529: counter >5 = 0
+           <...>-21355 [005] ....  2787.531705: swap_counter_dump_handler: remote: total sent cold page: 0
+           <...>-21355 [005] ....  2787.531706: swap_counter_dump_handler: remote: total faulted cold page: 0
+           <...>-21355 [005] ....  2787.531707: swap_counter_dump_handler: remote: total excepted page: 0
+           <...>-21355 [005] ....  2787.531708: swap_counter_dump_handler: remote: sent system page: 0
+           <...>-21355 [005] ....  2787.531709: swap_counter_dump_handler: remote: ZRAM remain: 102184 KB / 2097148 KB
+           <...>-21355 [005] ....  2787.531710: swap_counter_dump_handler: remote: total direct page: 0
+           <...>-21441 [007] ....  2792.923411: app_switch_start_handler: ###########switch start! foreground 10133#############
+           <...>-21441 [007] ....  2792.923419: prefetch_handler: prefetch handler start! target(id,table): 3,0
+           <...>-21441 [007] ....  2792.923436: app_switch_start_handler: foreground 10133 switch start , total_time = 18us
+     kworker/1:1-17134 [001] ....  2792.923446: prefetch_work: prefetch work: foreground 10133, maxidx 117, afteridx 179
+           <...>-21441 [005] ....  2793.675933: app_switch_after_1_handler: foreground 10133 switch after start
+           <...>-21441 [007] ....  2803.719643: app_switch_after_2_handler: foreground 10133 switch after end
+           <...>-21441 [007] ....  2803.722781: update_to_nbd_flag: appid 3: table 1 is latter, total target 9 max idx e, l -> 117 6219, after 62 3283
+           <...>-21441 [007] ....  2803.735182: miss_page_handler: miss page handler start! target(id,table): 3,0
+     kworker/1:1-17134 [001] ....  2803.735206: miss_page_work: miss work: foreground 10133, maxidx 117, afteridx 179
+ send_target_man-200   [007] ....  2803.735516: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [007] d..2  2803.735520: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  2803.735577: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [007] d..2  2803.735608: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [007] d..2  2803.735618: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [007] d..2  2803.735664: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [007] d..2  2803.735711: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [007] d..2  2803.735716: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  2803.735726: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [007] d..2  2803.735738: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [007] d..2  2813.919512: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  2813.919586: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [007] d..2  2813.919632: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [007] d..2  2813.919646: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [007] d..2  2813.919712: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [007] d..2  2813.919788: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [007] d..2  2813.919795: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  2813.919811: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [007] d..2  2813.919829: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [007] d..2  2823.946143: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  2823.946181: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [007] d..2  2823.946207: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [007] d..2  2823.946214: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [007] d..2  2823.946242: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [007] d..2  2823.946276: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [007] d..2  2823.946279: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  2823.946287: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [007] d..2  2823.946295: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [007] d..2  2833.972845: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  2833.972926: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [007] d..2  2833.972975: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [007] d..2  2833.972990: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [007] d..2  2833.973056: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [007] d..2  2833.973137: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [007] d..2  2833.973143: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  2833.973160: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [007] d..2  2833.973178: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [005] d..2  2843.999474: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [005] d..2  2843.999506: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [005] d..2  2843.999523: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [005] d..2  2843.999529: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [005] d..2  2843.999554: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [005] d..2  2843.999583: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [005] d..2  2843.999585: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [005] d..2  2843.999591: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [005] d..2  2843.999599: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [000] d..2  2854.026210: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [000] d..2  2854.026275: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [000] d..2  2854.026313: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [000] d..2  2854.026326: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [000] d..2  2854.026461: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [000] d..2  2854.026521: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [000] d..2  2854.026528: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [000] d..2  2854.026541: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [000] d..2  2854.026554: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  2864.052860: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2864.052920: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2864.052954: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2864.052966: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2864.053015: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2864.053070: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [002] d..2  2864.053076: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2864.053088: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2864.053101: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  2874.079495: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2874.079666: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2874.079775: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2874.079798: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2874.079922: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2874.080115: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [002] d..2  2874.080128: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2874.080151: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2874.080183: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  2884.106170: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2884.106293: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2884.106359: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2884.106380: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2884.106466: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2884.106601: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [002] d..2  2884.106612: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2884.106635: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2884.106663: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  2894.132831: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2894.132981: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2894.133037: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2894.133054: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2894.133127: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2894.133213: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [002] d..2  2894.133221: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2894.133239: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2894.133259: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  2904.159505: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2904.159617: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2904.159679: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2904.159698: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2904.160062: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2904.160162: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [002] d..2  2904.160171: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2904.160191: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2904.160214: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  2914.186168: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2914.186251: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2914.186295: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2914.186308: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2914.186408: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2914.186500: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [002] d..2  2914.186507: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2914.186520: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2914.186534: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-23092 [004] ....  2923.180667: swap_counter_dump_handler: pid 11981: counter 0 = 8772
+           <...>-23092 [004] ....  2923.180672: swap_counter_dump_handler: pid 11981: counter 1 = 0
+           <...>-23092 [004] ....  2923.180673: swap_counter_dump_handler: pid 11981: counter 2 = 0
+           <...>-23092 [004] ....  2923.180674: swap_counter_dump_handler: pid 11981: counter 3 = 0
+           <...>-23092 [004] ....  2923.180675: swap_counter_dump_handler: pid 11981: counter 4 = 0
+           <...>-23092 [004] ....  2923.180676: swap_counter_dump_handler: pid 11981: counter 5 = 0
+           <...>-23092 [004] ....  2923.180677: swap_counter_dump_handler: pid 11981: counter >5 = 0
+           <...>-23092 [004] ....  2923.180678: swap_counter_dump_handler: remote: total sent cold page: 0
+           <...>-23092 [004] ....  2923.180679: swap_counter_dump_handler: remote: total faulted cold page: 0
+           <...>-23092 [004] ....  2923.180680: swap_counter_dump_handler: remote: total excepted page: 0
+           <...>-23092 [004] ....  2923.180682: swap_counter_dump_handler: remote: sent system page: 0
+           <...>-23092 [004] ....  2923.180683: swap_counter_dump_handler: remote: ZRAM remain: 96156 KB / 2097148 KB
+           <...>-23092 [004] ....  2923.180685: swap_counter_dump_handler: remote: total direct page: 0
+ send_target_man-200   [002] d..2  2924.212854: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2924.212969: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2924.213032: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2924.213053: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2924.213142: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2924.213242: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [002] d..2  2924.213251: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2924.213272: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2924.213295: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  2934.239743: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2934.239879: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2934.239959: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2934.239984: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2934.240093: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2934.240217: send_target_manager: send target manager - id, which_table : 5, 0
+ send_target_man-200   [002] d..2  2934.240229: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2934.240254: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2934.240282: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-23185 [007] ....  2938.038495: app_switch_start_handler: ###########switch start! foreground 10122#############
+           <...>-23185 [007] ....  2938.038501: prefetch_handler: prefetch handler start! target(id,table): 5,0
+           <...>-23185 [007] ....  2938.038513: app_switch_start_handler: foreground 10122 switch start , total_time = 12us
+     kworker/1:1-17134 [001] ....  2938.038521: prefetch_work: prefetch work: foreground 10122, maxidx 272, afteridx 539
+           <...>-23185 [004] ....  2938.674004: app_switch_after_1_handler: foreground 10122 switch after start
+ send_target_man-200   [002] d..2  2944.266155: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2944.266331: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2944.266438: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2944.266455: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2944.266515: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2944.266591: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  2944.266838: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2944.266854: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2944.266870: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-23185 [007] ....  2948.761186: app_switch_after_2_handler: foreground 10122 switch after end
+           <...>-23185 [007] ....  2948.789111: update_to_nbd_flag: appid 5: table 1 is latter, total target 206 max idx e, l -> 272 9046, after 267 29118
+           <...>-23185 [007] ....  2948.797934: miss_page_handler: miss page handler start! target(id,table): 5,0
+     kworker/1:1-17134 [001] .n..  2948.797954: miss_page_work: miss work: foreground 10122, maxidx 272, afteridx 539
+ send_target_man-200   [002] d..2  2954.292810: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2954.292929: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2954.292989: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2954.293008: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2954.293092: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2954.293173: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  2954.293547: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2954.293571: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2954.293596: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  2964.319479: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2964.319583: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2964.319686: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2964.319710: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2964.319840: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2964.320033: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  2964.320707: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2964.320733: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2964.320758: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] dn.2  2974.346198: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2974.346423: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2974.346491: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2974.346508: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2974.346571: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2974.346728: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  2974.347261: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2974.347290: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2974.347312: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  2984.376156: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2984.376270: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2984.376334: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2984.376355: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2984.376475: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2984.376547: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  2984.376839: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2984.376856: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2984.376873: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  2994.399474: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  2994.399579: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  2994.399640: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  2994.399658: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  2994.399778: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  2994.399862: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  2994.400202: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  2994.400395: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  2994.400417: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-13822 [007] d..4  3000.323226: __free_cluster: [REMOTE __free_cluster] free cluster 887
+           <...>-13822 [007] d..4  3000.324420: __free_cluster: [REMOTE __free_cluster] free cluster 1015
+           <...>-13822 [007] d..4  3000.357046: __free_cluster: [REMOTE __free_cluster] free cluster 184
+           <...>-13822 [007] d..4  3000.358577: __free_cluster: [REMOTE __free_cluster] free cluster 248
+           <...>-13822 [007] d..4  3000.360211: __free_cluster: [REMOTE __free_cluster] free cluster 312
+           <...>-13822 [007] d..4  3000.361760: __free_cluster: [REMOTE __free_cluster] free cluster 376
+           <...>-13864 [007] d..4  3001.721734: __free_cluster: [REMOTE __free_cluster] free cluster 823
+           <...>-13850 [007] d..4  3002.020694: __free_cluster: [REMOTE __free_cluster] free cluster 759
+           <...>-13851 [007] d..4  3002.497615: __free_cluster: [REMOTE __free_cluster] free cluster 951
+           <...>-13850 [007] d..4  3003.852548: __free_cluster: [REMOTE __free_cluster] free cluster 569
+           <...>-13850 [007] d..4  3003.856660: __free_cluster: [REMOTE __free_cluster] free cluster 633
+           <...>-13850 [007] d..4  3003.860882: __free_cluster: [REMOTE __free_cluster] free cluster 697
+           <...>-13850 [007] d..4  3003.865070: __free_cluster: [REMOTE __free_cluster] free cluster 761
+           <...>-13850 [007] d..4  3003.871290: __free_cluster: [REMOTE __free_cluster] free cluster 825
+           <...>-13850 [007] d..4  3003.898538: __free_cluster: [REMOTE __free_cluster] free cluster 1722
+           <...>-13864 [005] d..4  3004.271803: __free_cluster: [REMOTE __free_cluster] free cluster 1786
+           <...>-13850 [005] d..4  3004.289310: __free_cluster: [REMOTE __free_cluster] free cluster 566
+           <...>-13850 [005] d..4  3004.292207: __free_cluster: [REMOTE __free_cluster] free cluster 630
+ send_target_man-200   [002] d..2  3004.426149: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3004.426436: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3004.426521: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3004.426544: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] ...1  3004.426587: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 3: alloc new cluster 48
+ send_target_man-200   [002] ...1  3004.428987: _send_target_page: target sent id 3: cluster 3, 11981 7fbe240000 3000
+ send_target_man-200   [002] d..2  3004.429068: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3004.429138: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3004.429468: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3004.429486: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  3004.429503: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-13822 [007] d..4  3005.192907: __free_cluster: [REMOTE __free_cluster] free cluster 695
+           <...>-13822 [007] d..4  3005.278139: __free_cluster: [REMOTE __free_cluster] free cluster 1516
+           <...>-13822 [007] d..4  3005.279506: __free_cluster: [REMOTE __free_cluster] free cluster 1580
+           <...>-13822 [006] d..4  3008.775244: __free_cluster: [REMOTE __free_cluster] free cluster 1644
+ send_target_man-200   [002] d..2  3014.452808: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3014.452891: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3014.452936: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3014.452950: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3014.453011: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3014.453080: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3014.453370: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3014.453385: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  3014.453401: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-202   [004] ....  3017.012800: sys_cold_manager: 3[REMOTE sys_cold_manager] sys_cold_manager wake up
+ send_target_man-200   [002] d..2  3024.479496: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3024.479690: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3024.479801: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3024.479834: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3024.479991: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3024.480216: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3024.481303: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3024.481348: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  3024.481380: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3034.506213: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3034.506456: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3034.506532: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3034.506545: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3034.506598: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3034.506652: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3034.506884: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3034.506896: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  3034.506910: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3044.532798: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3044.532872: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3044.532947: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3044.532962: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3044.533016: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3044.533076: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3044.533333: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3044.533347: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  3044.533361: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3054.559463: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3054.559555: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3054.559607: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3054.559624: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3054.559705: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3054.559825: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3054.560535: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3054.560563: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  3054.560592: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3064.586131: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3064.586491: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3064.586567: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3064.586589: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3064.586683: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3064.586794: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3064.587236: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3064.587260: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  3064.587285: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3074.612789: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3074.612859: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3074.612900: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3074.612913: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3074.612970: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3074.613035: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3074.613298: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3074.613314: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  3074.613329: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] dn.2  3084.639458: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3084.639583: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3084.639639: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3084.639699: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3084.639831: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3084.639961: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3084.640469: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3084.640490: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  3084.640512: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-23393 [005] ....  3089.814908: swap_counter_dump_handler: pid 13765: counter 0 = 51143
+           <...>-23393 [005] ....  3089.814912: swap_counter_dump_handler: pid 13765: counter 1 = 0
+           <...>-23393 [005] ....  3089.814913: swap_counter_dump_handler: pid 13765: counter 2 = 0
+           <...>-23393 [005] ....  3089.814913: swap_counter_dump_handler: pid 13765: counter 3 = 0
+           <...>-23393 [005] ....  3089.814914: swap_counter_dump_handler: pid 13765: counter 4 = 0
+           <...>-23393 [005] ....  3089.814915: swap_counter_dump_handler: pid 13765: counter 5 = 0
+           <...>-23393 [005] ....  3089.814915: swap_counter_dump_handler: pid 13765: counter >5 = 0
+           <...>-23393 [005] ....  3089.814916: swap_counter_dump_handler: remote: total sent cold page: 0
+           <...>-23393 [005] ....  3089.814917: swap_counter_dump_handler: remote: total faulted cold page: 0
+           <...>-23393 [005] ....  3089.814918: swap_counter_dump_handler: remote: total excepted page: 0
+           <...>-23393 [005] ....  3089.814918: swap_counter_dump_handler: remote: sent system page: 0
+           <...>-23393 [005] ....  3089.814919: swap_counter_dump_handler: remote: ZRAM remain: 205220 KB / 2097148 KB
+           <...>-23393 [005] ....  3089.814920: swap_counter_dump_handler: remote: total direct page: 0
+ send_target_man-200   [002] d..2  3094.666127: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3094.666302: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3094.666339: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3094.666351: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3094.666397: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3094.666450: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3094.666671: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3094.666683: send_target_manager: send target manager - id, which_table : 7, 0
+ send_target_man-200   [002] d..2  3094.666696: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-23483 [007] ....  3095.488058: app_switch_start_handler: ###########switch start! foreground 10136#############
+           <...>-23483 [007] ....  3095.488061: prefetch_handler: prefetch handler start! target(id,table): 7,0
+           <...>-23483 [007] ....  3095.488069: app_switch_start_handler: foreground 10136 switch start , total_time = 8us
+     kworker/1:1-17134 [001] ....  3095.488079: prefetch_work: prefetch work: foreground 10136, maxidx 987, afteridx 2511
+           <...>-23483 [005] ....  3096.571177: app_switch_after_1_handler: foreground 10136 switch after start
+ send_target_man-200   [002] d..2  3104.692836: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3104.692976: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3104.693055: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3104.693081: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3104.693186: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3104.693309: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] ...1  3104.693436: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 5: alloc new cluster 112
+ send_target_man-200   [002] ...1  3104.709862: _send_target_page: target sent id 5: cluster 5, 13765 7fbe23f000 7000
+ send_target_man-200   [002] d..2  3104.710197: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3104.710222: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2  3104.710357: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-23483 [007] ....  3106.688510: app_switch_after_2_handler: foreground 10136 switch after end
+           <...>-23483 [007] ....  3106.735577: update_to_nbd_flag: appid 7: table 1 is latter, total target 79 max idx e, l -> 987 6467, after 1524 6696
+           <...>-23483 [007] ....  3106.756836: miss_page_handler: miss page handler start! target(id,table): 7,0
+     kworker/1:1-17134 [001] ....  3106.756863: miss_page_work: miss work: foreground 10136, maxidx 987, afteridx 2511
+ send_target_man-200   [002] d..2  3114.719470: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3114.719608: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3114.719687: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3114.719712: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3114.719815: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3114.719969: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3114.720475: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3114.720504: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2  3114.720684: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3124.746589: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3124.746729: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3124.746805: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2  3124.746829: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] ...1  3124.763733: _send_target_page: target sent id 3: cluster 3, 11981 7fbc4ef000 3001
+ send_target_man-200   [002] ...1  3124.765469: _send_target_page: target sent id 3: cluster 3, 11981 7fbc4c4000 3002
+ send_target_man-200   [002] ...1  3124.767215: _send_target_page: target sent id 3: cluster 3, 11981 7fbc4ec000 3003
+ send_target_man-200   [002] ...1  3124.768926: _send_target_page: target sent id 3: cluster 3, 11981 7fbbc7a000 3004
+ send_target_man-200   [002] ...1  3124.770540: _send_target_page: target sent id 3: cluster 3, 11981 7fbcff6000 3005
+ send_target_man-200   [002] ...1  3124.772140: _send_target_page: target sent id 3: cluster 3, 11981 7fbcff0000 3006
+ send_target_man-200   [002] ...1  3124.773795: _send_target_page: target sent id 3: cluster 3, 11981 7fbe192000 3007
+ send_target_man-200   [002] d..2  3124.773833: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3124.773908: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3124.774219: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3124.774236: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2  3124.774346: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-23531 [004] ....  3126.888166: swap_counter_dump_handler: pid 14331: counter 0 = 5809
+           <...>-23531 [004] ....  3126.888169: swap_counter_dump_handler: pid 14331: counter 1 = 0
+           <...>-23531 [004] ....  3126.888170: swap_counter_dump_handler: pid 14331: counter 2 = 0
+           <...>-23531 [004] ....  3126.888171: swap_counter_dump_handler: pid 14331: counter 3 = 0
+           <...>-23531 [004] ....  3126.888172: swap_counter_dump_handler: pid 14331: counter 4 = 0
+           <...>-23531 [004] ....  3126.888172: swap_counter_dump_handler: pid 14331: counter 5 = 0
+           <...>-23531 [004] ....  3126.888173: swap_counter_dump_handler: pid 14331: counter >5 = 0
+           <...>-23531 [004] ....  3126.888174: swap_counter_dump_handler: remote: total sent cold page: 0
+           <...>-23531 [004] ....  3126.888175: swap_counter_dump_handler: remote: total faulted cold page: 0
+           <...>-23531 [004] ....  3126.888175: swap_counter_dump_handler: remote: total excepted page: 0
+           <...>-23531 [004] ....  3126.888176: swap_counter_dump_handler: remote: sent system page: 0
+           <...>-23531 [004] ....  3126.888177: swap_counter_dump_handler: remote: ZRAM remain: 281252 KB / 2097148 KB
+           <...>-23531 [004] ....  3126.888179: swap_counter_dump_handler: remote: total direct page: 0
+           <...>-23618 [007] ....  3131.924195: app_switch_start_handler: ###########switch start! foreground 10127#############
+           <...>-23618 [007] ....  3131.924201: prefetch_handler: prefetch handler start! target(id,table): 2,0
+           <...>-23618 [007] ....  3131.924215: app_switch_start_handler: foreground 10127 switch start , total_time = 14us
+     kworker/1:1-17134 [001] ....  3131.924232: prefetch_work: prefetch work: foreground 10127, maxidx 930, afteridx 1967
+           <...>-23618 [007] ....  3132.423551: app_switch_after_1_handler: foreground 10127 switch after start
+ send_target_man-200   [002] d..2  3134.772781: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3134.772940: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3134.773044: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3134.773149: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3134.773241: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3134.773349: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] ...1  3134.783752: _send_target_page: target sent id 5: cluster 5, 13765 7fbe236000 7001
+ send_target_man-200   [002] ...1  3134.785687: _send_target_page: target sent id 5: cluster 5, 13765 7052c000 7002
+ send_target_man-200   [002] ...1  3134.787628: _send_target_page: target sent id 5: cluster 5, 13765 7fbc4ee000 7003
+ send_target_man-200   [002] ...1  3134.789515: _send_target_page: target sent id 5: cluster 5, 13765 7fbc4c4000 7004
+ send_target_man-200   [002] ...1  3134.789685: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 15: alloc new cluster 176
+ send_target_man-200   [002] ...1  3134.792761: _send_target_page: target sent id 5: cluster 15, 13765 7fbdc7a000 b000
+ send_target_man-200   [002] ...1  3134.794677: _send_target_page: target sent id 5: cluster 15, 821 7fb9603000 b001
+ send_target_man-200   [002] ...1  3134.800798: _send_target_page: target sent id 5: cluster 15, 13765 7fba1f6000 b002
+ send_target_man-200   [002] d..2  3134.800983: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3134.801008: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2  3134.801181: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-23618 [005] ....  3142.436581: app_switch_after_2_handler: foreground 10127 switch after end
+           <...>-23618 [005] ....  3142.463309: update_to_nbd_flag: appid 2: table 1 is latter, total target 142 max idx e, l -> 930 6146, after 1037 6085
+           <...>-23618 [005] ....  3142.472165: miss_page_handler: miss page handler start! target(id,table): 2,0
+     kworker/1:1-17134 [001] ....  3142.472205: miss_page_work: miss work: foreground 10127, maxidx 930, afteridx 1967
+ send_target_man-200   [002] d..2  3144.801489: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3144.801627: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3144.801706: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3144.801930: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3144.802030: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3144.802153: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3144.802665: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3144.802690: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2  3144.802931: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3154.826296: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3154.826435: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3154.826514: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3154.826733: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3154.826832: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3154.826954: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3154.827484: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3154.827512: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2  3154.827689: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-14683 [005] d..4  3163.788055: __free_cluster: [REMOTE __free_cluster] free cluster 770
+           <...>-14683 [005] d..4  3163.788224: __free_cluster: [REMOTE __free_cluster] free cluster 834
+           <...>-14683 [005] d..4  3163.788457: __free_cluster: [REMOTE __free_cluster] free cluster 898
+ send_target_man-200   [002] d..2  3164.852817: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3164.852913: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3164.852965: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3164.853110: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3164.853178: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3164.853261: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3164.853595: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3164.853613: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2  3164.853737: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3174.879442: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3174.879507: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3174.879544: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3174.879655: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3174.879702: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3174.879759: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3174.880007: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3174.880020: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2  3174.880113: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3184.906108: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3184.906177: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3184.906219: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3184.906332: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3184.906384: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3184.906450: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3184.906747: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3184.906765: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2  3184.906878: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-14683 [007] d..4  3192.824256: __free_cluster: [REMOTE __free_cluster] free cluster 1921
+           <...>-14683 [007] d..4  3192.824450: __free_cluster: [REMOTE __free_cluster] free cluster 1985
+           <...>-14683 [007] d..4  3192.824630: __free_cluster: [REMOTE __free_cluster] free cluster 2
+           <...>-14683 [007] d..4  3192.824989: __free_cluster: [REMOTE __free_cluster] free cluster 130
+           <...>-14683 [007] d..4  3192.825855: __free_cluster: [REMOTE __free_cluster] free cluster 514
+           <...>-14683 [007] d..4  3192.826082: __free_cluster: [REMOTE __free_cluster] free cluster 578
+           <...>-14683 [007] d..4  3192.826737: __free_cluster: [REMOTE __free_cluster] free cluster 1026
+           <...>-14683 [007] d..4  3192.826920: __free_cluster: [REMOTE __free_cluster] free cluster 1090
+           <...>-14683 [007] d..4  3192.827105: __free_cluster: [REMOTE __free_cluster] free cluster 1154
+           <...>-14683 [007] d..4  3192.827284: __free_cluster: [REMOTE __free_cluster] free cluster 1218
+           <...>-14683 [007] d..3  3192.827970: __free_cluster: [REMOTE __free_cluster] free cluster 1602
+           <...>-14683 [007] d..3  3192.828117: __free_cluster: [REMOTE __free_cluster] free cluster 1666
+ send_target_man-200   [002] d..2  3194.932761: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3194.932870: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3194.932928: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3194.933091: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3194.933232: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3194.933332: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] ...1  3194.937292: _send_target_page: target sent id 5: cluster 5, 13765 7fbbc7a000 7005
+ send_target_man-200   [002] ...1  3194.939268: _send_target_page: target sent id 5: cluster 5, 13765 7fbe1c7000 7006
+ send_target_man-200   [002] ...1  3194.941221: _send_target_page: target sent id 5: cluster 15, 13765 7fbcff0000 b003
+ send_target_man-200   [002] d..2  3194.941398: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3194.941410: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] ...1  3194.941431: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 7: alloc new cluster 240
+ send_target_man-200   [002] ...1  3194.943590: _send_target_page: target sent id 7: cluster 7, 14331 7fbe187000 f000
+ send_target_man-200   [002] d..2  3194.943680: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3204.959440: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3204.959565: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3204.959650: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3204.959988: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3204.960047: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3204.960117: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3204.960404: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3204.960420: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2  3204.960602: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [004] d..2  3214.986354: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [004] d..2  3214.986398: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [004] d..2  3214.986423: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [004] d..2  3214.986513: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [004] d..2  3214.986545: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [004] d..2  3214.986583: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [004] ...1  3214.988845: _send_target_page: target sent id 5: cluster 15, 821 7fbcabc000 b004
+ send_target_man-200   [003] ...1  3214.990637: _send_target_page: target sent id 5: cluster 15, 821 7fbc65d000 b005
+ send_target_man-200   [003] ...1  3214.992561: _send_target_page: target sent id 5: cluster 15, 837 555555a000 b006
+ send_target_man-200   [003] ...1  3214.995238: _send_target_page: target sent id 5: cluster 15, 840 5555588000 b007
+ send_target_man-200   [005] ...1  3214.997372: _send_target_page: target sent id 5: cluster 15, 988 7fbd9a6000 b008
+ send_target_man-200   [005] ...1  3214.999065: _send_target_page: target sent id 5: cluster 15, 843 555555b000 b009
+ send_target_man-200   [002] ...1  3215.000729: _send_target_page: target sent id 5: cluster 15, 857 7fbd04e000 b00a
+ send_target_man-200   [007] .n.1  3215.002534: _send_target_page: target sent id 5: cluster 15, 839 7fbdbd9000 b00b
+ send_target_man-200   [007] ...1  3215.004478: _send_target_page: target sent id 5: cluster 15, 843 7fbb807000 b00c
+ send_target_man-200   [007] ...1  3215.006195: _send_target_page: target sent id 5: cluster 15, 988 7f3c60a000 b00d
+ send_target_man-200   [007] d..2  3215.006249: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  3215.006258: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [007] d..2  3215.006347: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [006] d..2  3225.012736: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [006] d..2  3225.012780: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [006] d..2  3225.012806: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [006] d..2  3225.012893: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [006] d..2  3225.012927: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [006] d..2  3225.012965: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [006] d..2  3225.013151: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [006] d..2  3225.013160: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [006] d..2  3225.013237: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3235.040165: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3235.040329: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3235.040397: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3235.040576: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3235.040660: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3235.040844: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3235.041561: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [002] d..2  3235.041586: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [007] ...1  3235.044783: _send_target_page: target sent id 7: cluster 7, 14331 7f28a84000 f001
+ send_target_man-200   [007] d..2  3235.044852: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [007] d..2  3245.066080: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  3245.066139: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [007] d..2  3245.066171: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [007] d..2  3245.066292: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [007] d..2  3245.066336: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [007] d..2  3245.066386: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [007] d..2  3245.066619: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  3245.066630: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [007] d..2  3245.066733: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [007] d..2  3255.092752: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  3255.092811: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [007] d..2  3255.092845: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [007] d..2  3255.092963: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [007] d..2  3255.093009: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [007] d..2  3255.093062: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [007] d..2  3255.093297: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  3255.093309: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [007] d..2  3255.093414: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-25284 [005] ....  3262.705504: swap_counter_dump_handler: pid 14669: counter 0 = 10161
+           <...>-25284 [005] ....  3262.705509: swap_counter_dump_handler: pid 14669: counter 1 = 0
+           <...>-25284 [005] ....  3262.705510: swap_counter_dump_handler: pid 14669: counter 2 = 0
+           <...>-25284 [005] ....  3262.705511: swap_counter_dump_handler: pid 14669: counter 3 = 0
+           <...>-25284 [005] ....  3262.705511: swap_counter_dump_handler: pid 14669: counter 4 = 0
+           <...>-25284 [005] ....  3262.705512: swap_counter_dump_handler: pid 14669: counter 5 = 0
+           <...>-25284 [005] ....  3262.705513: swap_counter_dump_handler: pid 14669: counter >5 = 0
+           <...>-25284 [005] ....  3262.705513: swap_counter_dump_handler: remote: total sent cold page: 0
+           <...>-25284 [005] ....  3262.705515: swap_counter_dump_handler: remote: total faulted cold page: 0
+           <...>-25284 [005] ....  3262.705515: swap_counter_dump_handler: remote: total excepted page: 0
+           <...>-25284 [005] ....  3262.705516: swap_counter_dump_handler: remote: sent system page: 0
+           <...>-25284 [005] ....  3262.705517: swap_counter_dump_handler: remote: ZRAM remain: 116576 KB / 2097148 KB
+           <...>-25284 [005] ....  3262.705518: swap_counter_dump_handler: remote: total direct page: 0
+ send_target_man-200   [007] d..2  3265.119434: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [007] d..2  3265.119524: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [007] d..2  3265.119580: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [007] d..2  3265.119735: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [007] d..2  3265.119805: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [007] d..2  3265.119893: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [007] d..2  3265.120231: send_target_manager: send target manager - id, which_table : 6, 0
+ send_target_man-200   [007] d..2  3265.120252: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [007] d..2  3265.120417: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-25371 [004] ....  3273.060740: app_switch_start_handler: ###########switch start! foreground 10169#############
+           <...>-25371 [004] ....  3273.060745: prefetch_handler: prefetch handler start! target(id,table): 6,0
+           <...>-25371 [004] ....  3273.060756: app_switch_start_handler: foreground 10169 switch start , total_time = 11us
+     kworker/1:1-17134 [001] ....  3273.060770: prefetch_work: prefetch work: foreground 10169, maxidx 541, afteridx 2116
+           <...>-25371 [004] ....  3273.453086: app_switch_after_1_handler: foreground 10169 switch after start
+           <...>-6741  [005] d..4  3273.456665: __free_cluster: [REMOTE __free_cluster] free cluster 1921
+        Thread-8-16921 [007] d..4  3274.354499: __free_cluster: [REMOTE __free_cluster] free cluster 454
+ send_target_man-200   [000] d..2  3275.146116: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [000] d..2  3275.146253: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [000] d..2  3275.146332: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [000] ...1  3275.146439: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 12: alloc new cluster 304
+ send_target_man-200   [000] ...1  3275.161640: _send_target_page: target sent id 2: cluster 12, 6927 7ebb5f4000 13000
+ send_target_man-200   [000] d..2  3275.161751: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [000] d..2  3275.161826: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [000] d..2  3275.161921: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [000] ...1  3275.165324: _send_target_page: target sent id 5: cluster 5, 604 7faa5e8000 7007
+ send_target_man-200   [000] ...1  3275.167428: _send_target_page: target sent id 5: cluster 5, 13765 70f33000 7008
+ send_target_man-200   [003] ...1  3275.169729: _send_target_page: target sent id 5: cluster 5, 13765 7fbe191000 7009
+ send_target_man-200   [003] ...1  3275.171604: _send_target_page: target sent id 5: cluster 5, 13765 7fbe239000 700a
+ send_target_man-200   [003] ...1  3275.173396: _send_target_page: target sent id 5: cluster 5, 13765 70526000 700b
+ send_target_man-200   [003] ...1  3275.175608: _send_target_page: target sent id 5: cluster 5, 13765 70f34000 700c
+ send_target_man-200   [003] ...1  3275.177376: _send_target_page: target sent id 5: cluster 5, 13765 70f39000 700d
+ send_target_man-200   [001] ...1  3275.180469: _send_target_page: target sent id 5: cluster 5, 13765 7fbe237000 700e
+ send_target_man-200   [001] ...1  3275.183116: _send_target_page: target sent id 5: cluster 5, 13765 70f48000 700f
+ send_target_man-200   [003] ...1  3275.184995: _send_target_page: target sent id 5: cluster 15, 13765 7fbdae0000 b00e
+ send_target_man-200   [003] ...1  3275.187781: _send_target_page: target sent id 5: cluster 15, 821 7fbc64b000 b00f
+ send_target_man-200   [001] ...1  3275.189637: _send_target_page: target sent id 5: cluster 15, 821 7fbe422000 b010
+ send_target_man-200   [001] .n.1  3275.191410: _send_target_page: target sent id 5: cluster 15, 821 7fbc63e000 b011
+ send_target_man-200   [001] ...1  3275.193175: _send_target_page: target sent id 5: cluster 15, 821 7fbcabd000 b012
+ send_target_man-200   [003] ...1  3275.194880: _send_target_page: target sent id 5: cluster 15, 821 7fbf700000 b013
+ send_target_man-200   [003] ...1  3275.197182: _send_target_page: target sent id 5: cluster 15, 821 7fbd8be000 b014
+ send_target_man-200   [003] ...1  3275.198893: _send_target_page: target sent id 5: cluster 15, 821 7fbcabe000 b015
+ send_target_man-200   [002] ...1  3275.200663: _send_target_page: target sent id 5: cluster 15, 821 7fbc608000 b016
+ send_target_man-200   [002] ...1  3275.203079: _send_target_page: target sent id 5: cluster 15, 821 7fbcabb000 b017
+ send_target_man-200   [002] ...1  3275.204813: _send_target_page: target sent id 5: cluster 15, 821 7fbcba7000 b018
+ send_target_man-200   [002] ...1  3275.206521: _send_target_page: target sent id 5: cluster 15, 821 7fbd77a000 b019
+ send_target_man-200   [003] ...1  3275.208370: _send_target_page: target sent id 5: cluster 15, 821 7fbcc16000 b01a
+ send_target_man-200   [003] ...1  3275.210082: _send_target_page: target sent id 5: cluster 15, 821 7fffffe000 b01b
+ send_target_man-200   [002] .n.1  3275.212208: _send_target_page: target sent id 5: cluster 15, 821 7fbda27000 b01c
+ send_target_man-200   [002] ...1  3275.214084: _send_target_page: target sent id 5: cluster 15, 821 7fbda26000 b01d
+ send_target_man-200   [003] .n.1  3275.216700: _send_target_page: target sent id 5: cluster 15, 821 7fbc601000 b01e
+ send_target_man-200   [003] ...1  3275.218546: _send_target_page: target sent id 5: cluster 15, 821 7fbc600000 b01f
+ send_target_man-200   [003] ...1  3275.220443: _send_target_page: target sent id 5: cluster 15, 821 7fbc674000 b020
+ send_target_man-200   [003] ...1  3275.222360: _send_target_page: target sent id 5: cluster 15, 821 7fbdeb2000 b021
+ send_target_man-200   [003] ...1  3275.225044: _send_target_page: target sent id 5: cluster 15, 821 7fbdeb1000 b022
+ send_target_man-200   [003] ...1  3275.226751: _send_target_page: target sent id 5: cluster 15, 821 7fbdc1b000 b023
+ send_target_man-200   [003] ...1  3275.228496: _send_target_page: target sent id 5: cluster 15, 821 7fbf5e3000 b024
+ send_target_man-200   [002] ...1  3275.231461: _send_target_page: target sent id 5: cluster 15, 821 7fbf6ff000 b025
+ send_target_man-200   [003] ...1  3275.233715: _send_target_page: target sent id 5: cluster 15, 821 7fbf6ef000 b026
+ send_target_man-200   [002] ...1  3275.235582: _send_target_page: target sent id 5: cluster 15, 821 7fbe2b2000 b027
+ send_target_man-200   [003] ...1  3275.237470: _send_target_page: target sent id 5: cluster 15, 821 7fbf5e5000 b028
+ send_target_man-200   [003] ...1  3275.241338: _send_target_page: target sent id 5: cluster 15, 837 7fbd80c000 b029
+ send_target_man-200   [003] ...1  3275.243166: _send_target_page: target sent id 5: cluster 15, 837 7fbe420000 b02a
+ send_target_man-200   [003] ...1  3275.245230: _send_target_page: target sent id 5: cluster 15, 837 5555559000 b02b
+ send_target_man-200   [003] ...1  3275.249869: _send_target_page: target sent id 5: cluster 15, 837 7fbe04d000 b02c
+ send_target_man-200   [003] ...1  3275.252316: _send_target_page: target sent id 5: cluster 15, 837 7fbd80a000 b02d
+ send_target_man-200   [003] ...1  3275.254030: _send_target_page: target sent id 5: cluster 15, 837 7fbd80b000 b02e
+ send_target_man-200   [002] ...1  3275.255775: _send_target_page: target sent id 5: cluster 15, 837 7fffffe000 b02f
+ send_target_man-200   [000] ...1  3275.257799: _send_target_page: target sent id 5: cluster 15, 837 7fbe047000 b030
+ send_target_man-200   [000] ...1  3275.259826: _send_target_page: target sent id 5: cluster 15, 837 7fbe03f000 b031
+ send_target_man-200   [000] ...1  3275.262053: _send_target_page: target sent id 5: cluster 15, 837 7fbe049000 b032
+ send_target_man-200   [003] ...1  3275.265217: _send_target_page: target sent id 5: cluster 15, 837 7fbe04a000 b033
+ send_target_man-200   [003] ...1  3275.267353: _send_target_page: target sent id 5: cluster 15, 837 7fbd801000 b034
+ send_target_man-200   [001] .n.1  3275.269526: _send_target_page: target sent id 5: cluster 15, 837 7fbd800000 b035
+ send_target_man-200   [001] ...1  3275.271405: _send_target_page: target sent id 5: cluster 15, 837 7fbd807000 b036
+ send_target_man-200   [001] ...1  3275.273118: _send_target_page: target sent id 5: cluster 15, 837 7fbd811000 b037
+ send_target_man-200   [001] ...1  3275.274805: _send_target_page: target sent id 5: cluster 15, 837 7fbd813000 b038
+ send_target_man-200   [001] ...1  3275.276903: _send_target_page: target sent id 5: cluster 15, 837 7fbd812000 b039
+ send_target_man-200   [001] ...1  3275.279311: _send_target_page: target sent id 5: cluster 15, 837 7fbd806000 b03a
+ send_target_man-200   [001] ...1  3275.282542: _send_target_page: target sent id 5: cluster 15, 837 7fbd5ec000 b03b
+ send_target_man-200   [001] ...1  3275.285167: _send_target_page: target sent id 5: cluster 15, 837 7fbda00000 b03c
+ send_target_man-200   [001] ...1  3275.287090: _send_target_page: target sent id 5: cluster 15, 840 5555587000 b03d
+ send_target_man-200   [001] ...1  3275.289193: _send_target_page: target sent id 5: cluster 15, 840 7fbe420000 b03e
+ send_target_man-200   [001] ...1  3275.291387: _send_target_page: target sent id 5: cluster 15, 857 7fbb7e7000 b03f
+ send_target_man-200   [001] ...1  3275.293212: _send_target_page: target sent id 5: cluster 15, 857 7fbb7e8000 b040
+ send_target_man-200   [003] ...1  3275.294985: _send_target_page: target sent id 5: cluster 15, 988 7fbe420000 b041
+ send_target_man-200   [003] ...1  3275.296837: _send_target_page: target sent id 5: cluster 15, 843 7fbd554000 b042
+ send_target_man-200   [003] ...1  3275.300087: _send_target_page: target sent id 5: cluster 15, 843 7fbd555000 b043
+ send_target_man-200   [003] ...1  3275.301947: _send_target_page: target sent id 5: cluster 15, 839 7fbe420000 b044
+ send_target_man-200   [003] ...1  3275.303914: _send_target_page: target sent id 5: cluster 15, 840 5555571000 b045
+ send_target_man-200   [003] ...1  3275.305690: _send_target_page: target sent id 5: cluster 15, 840 5555589000 b046
+ send_target_man-200   [003] ...1  3275.307659: _send_target_page: target sent id 5: cluster 15, 840 5555586000 b047
+ send_target_man-200   [002] .n.1  3275.310115: _send_target_page: target sent id 5: cluster 15, 840 5555576000 b048
+ send_target_man-200   [002] ...1  3275.312177: _send_target_page: target sent id 5: cluster 15, 857 5555561000 b049
+ send_target_man-200   [002] ...1  3275.314242: _send_target_page: target sent id 5: cluster 15, 988 5555586000 b04a
+ send_target_man-200   [002] ...1  3275.316217: _send_target_page: target sent id 5: cluster 15, 988 5555582000 b04b
+ send_target_man-200   [002] ...1  3275.318041: _send_target_page: target sent id 5: cluster 15, 988 5555584000 b04c
+ send_target_man-200   [003] ...1  3275.320332: _send_target_page: target sent id 5: cluster 15, 988 5555585000 b04d
+ send_target_man-200   [003] ...1  3275.322260: _send_target_page: target sent id 5: cluster 15, 839 555555f000 b04e
+ send_target_man-200   [003] ...1  3275.324175: _send_target_page: target sent id 5: cluster 15, 839 555555e000 b04f
+ send_target_man-200   [002] ...1  3275.326014: _send_target_page: target sent id 5: cluster 15, 988 7fbf6ff000 b050
+ send_target_man-200   [002] ...1  3275.328266: _send_target_page: target sent id 5: cluster 15, 988 7fffffe000 b051
+ send_target_man-200   [002] ...1  3275.330813: _send_target_page: target sent id 5: cluster 15, 988 7fbf700000 b052
+ send_target_man-200   [001] .n.1  3275.332895: _send_target_page: target sent id 5: cluster 15, 988 7fbd9ac000 b053
+ send_target_man-200   [001] ...1  3275.335430: _send_target_page: target sent id 5: cluster 15, 988 7fbd0dd000 b054
+ send_target_man-200   [001] ...1  3275.337540: _send_target_page: target sent id 5: cluster 15, 988 7fbd0d8000 b055
+ send_target_man-200   [001] ...1  3275.339838: _send_target_page: target sent id 5: cluster 15, 988 7fbd226000 b056
+ send_target_man-200   [003] ...1  3275.343899: _send_target_page: target sent id 5: cluster 15, 988 7fbd0df000 b057
+ send_target_man-200   [000] ...1  3275.345792: _send_target_page: target sent id 5: cluster 15, 988 7fbd0e0000 b058
+ send_target_man-200   [002] ...1  3275.347775: _send_target_page: target sent id 5: cluster 15, 988 7fbd0e1000 b059
+ send_target_man-200   [001] ...1  3275.352848: _send_target_page: target sent id 5: cluster 15, 857 7fbdf9a000 b05a
+ send_target_man-200   [001] ...1  3275.354791: _send_target_page: target sent id 5: cluster 15, 857 7fbdf9b000 b05b
+ send_target_man-200   [001] ...1  3275.356686: _send_target_page: target sent id 5: cluster 15, 857 7fb8000000 b05c
+ send_target_man-200   [001] ...1  3275.358523: _send_target_page: target sent id 5: cluster 15, 857 7fb8005000 b05d
+ send_target_man-200   [003] ...1  3275.360353: _send_target_page: target sent id 5: cluster 15, 857 7fb8006000 b05e
+ send_target_man-200   [002] ...1  3275.362141: _send_target_page: target sent id 5: cluster 15, 857 7fbdf99000 b05f
+ send_target_man-200   [002] ...1  3275.365706: _send_target_page: target sent id 5: cluster 15, 857 7fb8007000 b060
+ send_target_man-200   [003] ...1  3275.367576: _send_target_page: target sent id 5: cluster 15, 857 7fbdccc000 b061
+ send_target_man-200   [003] ...1  3275.369704: _send_target_page: target sent id 5: cluster 15, 857 7fbdcbe000 b062
+ send_target_man-200   [002] ...1  3275.371601: _send_target_page: target sent id 5: cluster 15, 857 7fbdcc6000 b063
+ send_target_man-200   [002] ...1  3275.373333: _send_target_page: target sent id 5: cluster 15, 857 7fbdcc8000 b064
+ send_target_man-200   [003] ...1  3275.375457: _send_target_page: target sent id 5: cluster 15, 857 7fbdcc9000 b065
+ send_target_man-200   [003] ...1  3275.377265: _send_target_page: target sent id 5: cluster 15, 857 7fbd04d000 b066
+ send_target_man-200   [003] ...1  3275.379060: _send_target_page: target sent id 5: cluster 15, 821 7fb9605000 b067
+ send_target_man-200   [003] ...1  3275.381077: _send_target_page: target sent id 5: cluster 15, 857 7fbcdc0000 b068
+ send_target_man-200   [000] ...1  3275.382917: _send_target_page: target sent id 5: cluster 15, 857 7fbd200000 b069
+ send_target_man-200   [000] ...1  3275.384752: _send_target_page: target sent id 5: cluster 15, 839 7fbe1b5000 b06a
+ send_target_man-200   [000] ...1  3275.386569: _send_target_page: target sent id 5: cluster 15, 839 7fbe1b6000 b06b
+ send_target_man-200   [002] ...1  3275.388466: _send_target_page: target sent id 5: cluster 15, 839 7fbf6ff000 b06c
+ send_target_man-200   [001] ...1  3275.390836: _send_target_page: target sent id 5: cluster 15, 839 7fbd42b000 b06d
+ send_target_man-200   [001] ...1  3275.394121: _send_target_page: target sent id 5: cluster 15, 839 7fbd409000 b06e
+ send_target_man-200   [002] ...1  3275.396141: _send_target_page: target sent id 5: cluster 15, 839 7fbd42a000 b06f
+ send_target_man-200   [002] ...1  3275.399298: _send_target_page: target sent id 5: cluster 15, 839 7fbe1b4000 b070
+ send_target_man-200   [000] ...1  3275.401140: _send_target_page: target sent id 5: cluster 15, 839 7fbd40a000 b071
+ send_target_man-200   [000] ...1  3275.403116: _send_target_page: target sent id 5: cluster 15, 839 7fbdbdd000 b072
+ send_target_man-200   [000] ...1  3275.404922: _send_target_page: target sent id 5: cluster 15, 839 7fbdbcf000 b073
+ send_target_man-200   [000] ...1  3275.406858: _send_target_page: target sent id 5: cluster 15, 839 7fbdbd7000 b074
+ send_target_man-200   [000] ...1  3275.408675: _send_target_page: target sent id 5: cluster 15, 839 7fbdbda000 b075
+ send_target_man-200   [000] ...1  3275.412104: _send_target_page: target sent id 5: cluster 15, 839 7fbd401000 b076
+ send_target_man-200   [000] ...1  3275.414510: _send_target_page: target sent id 5: cluster 15, 839 7fbd400000 b077
+ send_target_man-200   [000] ...1  3275.416343: _send_target_page: target sent id 5: cluster 15, 839 7fbd430000 b078
+ send_target_man-200   [002] ...1  3275.418190: _send_target_page: target sent id 5: cluster 15, 839 7fbf700000 b079
+ send_target_man-200   [001] ...1  3275.420199: _send_target_page: target sent id 5: cluster 15, 839 7fbd1ea000 b07a
+ send_target_man-200   [001] ...1  3275.422008: _send_target_page: target sent id 5: cluster 15, 839 7fbd600000 b07b
+ send_target_man-200   [001] ...1  3275.423779: _send_target_page: target sent id 5: cluster 15, 843 7fbd83c000 b07c
+ send_target_man-200   [001] ...1  3275.425509: _send_target_page: target sent id 5: cluster 15, 843 7fbd83d000 b07d
+ send_target_man-200   [001] ...1  3275.427263: _send_target_page: target sent id 5: cluster 15, 843 7fbb800000 b07e
+ send_target_man-200   [001] ...1  3275.430643: _send_target_page: target sent id 5: cluster 15, 843 7fbb805000 b07f
+ send_target_man-200   [001] ...1  3275.432602: _send_target_page: target sent id 5: cluster 15, 843 7fbb806000 b080
+ send_target_man-200   [002] ...1  3275.434605: _send_target_page: target sent id 5: cluster 15, 843 7fbd83b000 b081
+ send_target_man-200   [002] ...1  3275.436738: _send_target_page: target sent id 5: cluster 15, 843 7fbe021000 b082
+ send_target_man-200   [002] ...1  3275.438525: _send_target_page: target sent id 5: cluster 15, 843 7fbe013000 b083
+ send_target_man-200   [002] ...1  3275.440364: _send_target_page: target sent id 5: cluster 15, 843 7fbe01b000 b084
+ send_target_man-200   [000] .n.1  3275.442155: _send_target_page: target sent id 5: cluster 15, 843 7fbe01d000 b085
+ send_target_man-200   [000] ...1  3275.445136: _send_target_page: target sent id 5: cluster 15, 843 7fbe01e000 b086
+ send_target_man-200   [000] ...1  3275.447293: _send_target_page: target sent id 5: cluster 15, 843 7fbd04e000 b087
+ send_target_man-200   [000] ...1  3275.448998: _send_target_page: target sent id 5: cluster 15, 843 7fbd04f000 b088
+ send_target_man-200   [003] ...1  3275.451173: _send_target_page: target sent id 5: cluster 15, 843 7fbb80a000 b089
+ send_target_man-200   [002] ...1  3275.453108: _send_target_page: target sent id 5: cluster 15, 843 7fbb814000 b08a
+ send_target_man-200   [002] ...1  3275.454892: _send_target_page: target sent id 5: cluster 15, 843 7fbcddc000 b08b
+ send_target_man-200   [002] ...1  3275.456653: _send_target_page: target sent id 5: cluster 15, 843 7fbd200000 b08c
+ send_target_man-200   [002] ...1  3275.458381: _send_target_page: target sent id 5: cluster 15, 988 7fbf6ef000 b08d
+ send_target_man-200   [002] ...1  3275.460166: _send_target_page: target sent id 5: cluster 15, 988 7fbd3a8000 b08e
+ send_target_man-200   [002] ...1  3275.461897: _send_target_page: target sent id 5: cluster 15, 988 7fbd3a9000 b08f
+ send_target_man-200   [003] ...1  3275.465346: _send_target_page: target sent id 5: cluster 15, 988 7f3c623000 b090
+ send_target_man-200   [001] ...1  3275.468111: _send_target_page: target sent id 5: cluster 15, 988 7f3c609000 b091
+ send_target_man-200   [001] ...1  3275.469957: _send_target_page: target sent id 5: cluster 15, 988 7f3c639000 b092
+ send_target_man-200   [001] ...1  3275.471895: _send_target_page: target sent id 5: cluster 15, 988 7fbd3a7000 b093
+ send_target_man-200   [001] ...1  3275.473680: _send_target_page: target sent id 5: cluster 15, 988 7fbd99e000 b094
+ send_target_man-200   [001] ...1  3275.476261: _send_target_page: target sent id 5: cluster 15, 988 7fbd9a8000 b095
+ send_target_man-200   [001] ...1  3275.477957: _send_target_page: target sent id 5: cluster 15, 988 7fbd9a9000 b096
+ send_target_man-200   [001] ...1  3275.480930: _send_target_page: target sent id 5: cluster 15, 988 7f3c601000 b097
+ send_target_man-200   [000] ...1  3275.482767: _send_target_page: target sent id 5: cluster 15, 988 7f3c600000 b098
+ send_target_man-200   [003] ...1  3275.484573: _send_target_page: target sent id 5: cluster 15, 988 7f3c6a8000 b099
+ send_target_man-200   [003] ...1  3275.486442: _send_target_page: target sent id 5: cluster 15, 988 7f3c3e3000 b09a
+ send_target_man-200   [003] ...1  3275.489098: _send_target_page: target sent id 5: cluster 15, 988 7f3c800000 b09b
+ send_target_man-200   [003] ...1  3275.490906: _send_target_page: target sent id 5: cluster 15, 988 5555581000 b09c
+ send_target_man-200   [003] ...1  3275.493226: _send_target_page: target sent id 5: cluster 15, 821 7fbd51c000 b09d
+ send_target_man-200   [003] ...1  3275.495002: _send_target_page: target sent id 5: cluster 15, 821 7fbd433000 b09e
+ send_target_man-200   [000] ...1  3275.497381: _send_target_page: target sent id 5: cluster 15, 821 7fbc644000 b09f
+ send_target_man-200   [000] ...1  3275.499173: _send_target_page: target sent id 5: cluster 15, 821 7fbd435000 b0a0
+ send_target_man-200   [000] ...1  3275.501040: _send_target_page: target sent id 5: cluster 15, 821 7fbde28000 b0a1
+ send_target_man-200   [000] ...1  3275.503105: _send_target_page: target sent id 5: cluster 15, 821 7fbc806000 b0a2
+ send_target_man-200   [000] ...1  3275.504979: _send_target_page: target sent id 5: cluster 15, 821 7fbc807000 b0a3
+ send_target_man-200   [000] ...1  3275.506889: _send_target_page: target sent id 5: cluster 15, 821 7fbc804000 b0a4
+ send_target_man-200   [000] ...1  3275.509228: _send_target_page: target sent id 5: cluster 15, 821 7fb9800000 b0a5
+ send_target_man-200   [000] ...1  3275.511614: _send_target_page: target sent id 5: cluster 15, 821 7fbc802000 b0a6
+ send_target_man-200   [002] ...1  3275.516172: _send_target_page: target sent id 5: cluster 15, 821 7fbc803000 b0a7
+ send_target_man-200   [000] ...1  3275.519212: _send_target_page: target sent id 5: cluster 15, 821 7fbde30000 b0a8
+ send_target_man-200   [000] ...1  3275.521580: _send_target_page: target sent id 5: cluster 15, 821 7fbde35000 b0a9
+ send_target_man-200   [002] ...1  3275.523481: _send_target_page: target sent id 5: cluster 15, 821 7fbcbd1000 b0aa
+ send_target_man-200   [002] ...1  3275.525503: _send_target_page: target sent id 5: cluster 15, 821 7fbde31000 b0ab
+ send_target_man-200   [002] ...1  3275.527593: _send_target_page: target sent id 5: cluster 15, 821 7fbc809000 b0ac
+ send_target_man-200   [001] ...1  3275.529527: _send_target_page: target sent id 5: cluster 15, 821 7fbc808000 b0ad
+ send_target_man-200   [003] ...1  3275.531784: _send_target_page: target sent id 5: cluster 15, 821 7fbc805000 b0ae
+ send_target_man-200   [003] ...1  3275.535018: _send_target_page: target sent id 5: cluster 15, 821 7fbde33000 b0af
+ send_target_man-200   [003] d..2  3275.535158: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [003] d..2  3275.535251: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [003] ...1  3275.537639: _send_target_page: target sent id 7: cluster 7, 14331 7f28a18000 f002
+ send_target_man-200   [003] ...1  3275.540249: _send_target_page: target sent id 7: cluster 7, 14331 7fbe188000 f003
+ send_target_man-200   [003] ...1  3275.542373: _send_target_page: target sent id 7: cluster 7, 14331 7f289dc000 f004
+ send_target_man-200   [003] d..2  3275.542978: send_target_manager: send target manager - id, which_table : 8, 1
+        Thread-7-16913 [005] d..4  3276.345450: __free_cluster: [REMOTE __free_cluster] free cluster 1412
+           <...>-25371 [004] ....  3283.463832: app_switch_after_2_handler: foreground 10169 switch after end
+           <...>-25371 [004] ....  3283.528231: update_to_nbd_flag: appid 6: table 1 is latter, total target 685 max idx e, l -> 541 1234, after 1575 16334
+           <...>-25371 [004] ....  3283.543300: miss_page_handler: miss page handler start! target(id,table): 6,0
+     kworker/1:1-17134 [001] ....  3283.543326: miss_page_work: miss work: foreground 10169, maxidx 541, afteridx 2116
+ send_target_man-200   [002] dn.2  3285.599547: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3285.599829: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3285.600065: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3285.600354: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3285.600483: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3285.600639: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3285.601158: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [002] d..2  3285.601865: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [002] d..2  3285.602157: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [003] d..2  3295.626427: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [003] d..2  3295.626659: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [003] d..2  3295.626759: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [003] d..2  3295.627056: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [003] d..2  3295.627185: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [003] d..2  3295.627363: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [003] d..2  3295.627916: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [003] d..2  3295.628543: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [003] d..2  3295.628773: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [003] d..2  3305.652799: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [003] d..2  3305.652971: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [003] d..2  3305.653069: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [003] d..2  3305.653348: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [003] d..2  3305.653472: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [003] d..2  3305.653625: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [001] d..2  3305.654209: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [001] d..2  3305.654896: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [001] d..2  3305.655133: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [001] d..2  3315.679465: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [001] d..2  3315.679659: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [001] d..2  3315.679773: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [001] d..2  3315.680030: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [001] d..2  3315.680274: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [001] d..2  3315.680609: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [001] d..2  3315.681094: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [001] d..2  3315.681961: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [003] ...1  3315.760078: _send_target_page: target sent id 7: cluster 7, 1682 7f2dc89000 f005
+ send_target_man-200   [003] ...1  3315.762694: _send_target_page: target sent id 7: cluster 7, 1682 7f2dc86000 f006
+ send_target_man-200   [003] ...1  3315.765000: _send_target_page: target sent id 7: cluster 7, 1682 7f2dc87000 f007
+ send_target_man-200   [003] ...1  3315.767083: _send_target_page: target sent id 7: cluster 7, 1682 7f28d1c000 f008
+ send_target_man-200   [002] ...1  3315.770374: _send_target_page: target sent id 7: cluster 7, 1682 7f28d1d000 f009
+ send_target_man-200   [002] ...1  3315.772619: _send_target_page: target sent id 7: cluster 7, 14331 7f28a79000 f00a
+ send_target_man-200   [002] ...1  3315.775005: _send_target_page: target sent id 7: cluster 7, 2253 15237000 f00b
+ send_target_man-200   [002] ...1  3315.777086: _send_target_page: target sent id 7: cluster 7, 2253 1523a000 f00c
+ send_target_man-200   [002] ...1  3315.779134: _send_target_page: target sent id 7: cluster 7, 2253 7eafdbd000 f00d
+ send_target_man-200   [002] d..2  3315.779314: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-2269  [003] ....  3319.356628: read_swap_cache_async: remote readpage 2253 "HeapTaskDaemon" 15237000 f00b
+           <...>-2269  [003] ....  3319.356639: do_swap_page: Exception : 2253 "HeapTaskDaemon" 15237000 f00b
+           <...>-2269  [003] ....  3319.371747: read_swap_cache_async: remote readpage 2253 "HeapTaskDaemon" 1523a000 f00c
+           <...>-2269  [003] ....  3319.371758: do_swap_page: Exception : 2253 "HeapTaskDaemon" 1523a000 f00c
+           <...>-2269  [000] ....  3319.440770: read_swap_cache_async: remote readpage 2253 "HeapTaskDaemon" 7eafdbd000 f00d
+           <...>-2269  [000] ....  3319.440780: do_swap_page: Exception : 2253 "HeapTaskDaemon" 7eafdbd000 f00d
+ send_target_man-200   [002] d..2  3325.919518: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3325.919699: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3325.919799: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3325.920070: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3325.920191: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3325.920341: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3325.920982: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [002] d..2  3325.921675: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [000] ...1  3325.934364: _send_target_page: target sent id 7: cluster 7, 14331 70c94000 f00e
+ send_target_man-200   [000] ...1  3325.936832: _send_target_page: target sent id 7: cluster 7, 14331 70f42000 f00f
+ send_target_man-200   [000] ...1  3325.940347: _send_target_page: target sent id 7: cluster 7, 14331 7fbe23e000 f010
+ send_target_man-200   [002] ...1  3325.942901: _send_target_page: target sent id 7: cluster 7, 14331 7f28b28000 f011
+ send_target_man-200   [002] ...1  3325.945073: _send_target_page: target sent id 7: cluster 7, 14331 7fbe1f2000 f012
+ send_target_man-200   [002] ...1  3325.947295: _send_target_page: target sent id 7: cluster 7, 14331 7052a000 f013
+ send_target_man-200   [002] d..2  3325.947461: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [002] d..2  3335.946119: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3335.946312: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3335.946577: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3335.946877: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3335.946980: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3335.947103: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [001] ...1  3335.963799: _send_target_page: target sent id 5: cluster 15, 821 7fbd42f000 b0b0
+ send_target_man-200   [001] d..2  3335.963896: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [001] d..2  3335.964450: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [001] ...1  3335.966543: _send_target_page: target sent id 7: cluster 7, 14331 7fbb934000 f014
+ send_target_man-200   [000] ...1  3335.968980: _send_target_page: target sent id 7: cluster 7, 14331 7fbdc7a000 f015
+ send_target_man-200   [000] ...1  3335.970936: _send_target_page: target sent id 7: cluster 7, 1338 7e6feb7000 f016
+ send_target_man-200   [000] ...1  3335.972911: _send_target_page: target sent id 7: cluster 7, 1338 7e6feb4000 f017
+ send_target_man-200   [000] ...1  3335.974956: _send_target_page: target sent id 7: cluster 7, 1338 7e6feb5000 f018
+ send_target_man-200   [000] ...1  3335.976816: _send_target_page: target sent id 7: cluster 7, 14331 7fbe23f000 f019
+ send_target_man-200   [000] ...1  3335.978737: _send_target_page: target sent id 7: cluster 7, 14331 7fbc4c4000 f01a
+ send_target_man-200   [000] ...1  3335.981395: _send_target_page: target sent id 7: cluster 7, 14331 7fbc4ef000 f01b
+ send_target_man-200   [000] ...1  3335.983914: _send_target_page: target sent id 7: cluster 7, 14331 7fbc4ec000 f01c
+ send_target_man-200   [002] ...1  3335.986761: _send_target_page: target sent id 7: cluster 7, 14331 7f28afc000 f01d
+ send_target_man-200   [000] ...1  3335.988701: _send_target_page: target sent id 7: cluster 7, 14331 7fbbc7a000 f01e
+ send_target_man-200   [000] ...1  3335.990643: _send_target_page: target sent id 7: cluster 7, 14331 7fbcff6000 f01f
+ send_target_man-200   [002] ...1  3335.992763: _send_target_page: target sent id 7: cluster 7, 14331 7f208d9000 f020
+ send_target_man-200   [002] ...1  3335.994543: _send_target_page: target sent id 7: cluster 7, 14331 7fbcff0000 f021
+ send_target_man-200   [003] ...1  3335.996578: _send_target_page: target sent id 7: cluster 7, 14331 70f48000 f022
+ send_target_man-200   [003] ...1  3335.998505: _send_target_page: target sent id 7: cluster 7, 14331 7f20897000 f023
+ send_target_man-200   [001] ...1  3336.000423: _send_target_page: target sent id 7: cluster 7, 14331 7fffff8000 f024
+ send_target_man-200   [001] ...1  3336.002318: _send_target_page: target sent id 7: cluster 7, 14331 7fbb27c000 f025
+ send_target_man-200   [002] ...1  3336.004630: _send_target_page: target sent id 7: cluster 7, 14331 7f28a7b000 f026
+ send_target_man-200   [000] ...1  3336.007749: _send_target_page: target sent id 7: cluster 7, 14331 7f28990000 f027
+ send_target_man-200   [002] ...1  3336.009916: _send_target_page: target sent id 7: cluster 7, 14331 7f28975000 f028
+ send_target_man-200   [002] ...1  3336.011757: _send_target_page: target sent id 7: cluster 7, 14331 7f2899c000 f029
+ send_target_man-200   [002] ...1  3336.014618: _send_target_page: target sent id 7: cluster 7, 14331 7fffff7000 f02a
+ send_target_man-200   [000] ...1  3336.016917: _send_target_page: target sent id 7: cluster 7, 14331 70f3b000 f02b
+ send_target_man-200   [000] ...1  3336.018871: _send_target_page: target sent id 7: cluster 7, 14331 70f35000 f02c
+ send_target_man-200   [000] ...1  3336.020907: _send_target_page: target sent id 7: cluster 7, 14331 70f3a000 f02d
+ send_target_man-200   [000] ...1  3336.023011: _send_target_page: target sent id 7: cluster 7, 14331 7f289ed000 f02e
+ send_target_man-200   [000] ...1  3336.025108: _send_target_page: target sent id 7: cluster 7, 14331 7f289ee000 f02f
+ send_target_man-200   [000] ...1  3336.027039: _send_target_page: target sent id 7: cluster 7, 14331 7f28b27000 f030
+ send_target_man-200   [000] d..2  3336.027147: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [000] d..2  3346.186157: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [000] d..2  3346.186457: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [000] d..2  3346.186567: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [000] d..2  3346.187010: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [000] d..2  3346.187148: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [000] d..2  3346.187307: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [000] d..2  3346.187971: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [000] d..2  3346.188927: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [000] d..2  3346.189212: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [000] d..2  3356.212792: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [000] d..2  3356.212968: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [000] d..2  3356.213066: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [000] d..2  3356.213353: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [000] d..2  3356.213480: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [000] d..2  3356.213634: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [000] d..2  3356.214317: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [000] d..2  3356.215080: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [000] d..2  3356.215296: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [000] d..2  3366.239530: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [000] d..2  3366.239704: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [000] d..2  3366.239802: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [000] d..2  3366.240092: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [000] d..2  3366.240219: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [000] d..2  3366.240374: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [000] d..2  3366.241012: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [000] d..2  3366.241655: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [000] d..2  3366.241862: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [000] d..2  3376.266119: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [000] d..2  3376.266302: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [000] d..2  3376.266416: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [000] d..2  3376.266879: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [000] d..2  3376.267057: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [000] d..2  3376.267233: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [000] d..2  3376.267783: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [000] d..2  3376.268608: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [000] ...1  3376.289087: _send_target_page: target sent id 7: cluster 7, 14331 7f289f6000 f031
+ send_target_man-200   [000] ...1  3376.291466: _send_target_page: target sent id 7: cluster 7, 14331 7f289f7000 f032
+ send_target_man-200   [000] ...1  3376.293868: _send_target_page: target sent id 7: cluster 7, 14331 7f28a82000 f033
+ send_target_man-200   [000] ...1  3376.296539: _send_target_page: target sent id 7: cluster 7, 14331 7f28a83000 f034
+ send_target_man-200   [003] ...1  3376.299025: _send_target_page: target sent id 7: cluster 7, 14331 7f28abe000 f035
+ send_target_man-200   [003] ...1  3376.301725: _send_target_page: target sent id 7: cluster 7, 14331 7f289f8000 f036
+ send_target_man-200   [003] ...1  3376.304013: _send_target_page: target sent id 7: cluster 7, 14331 7f20a55000 f037
+ send_target_man-200   [003] d..2  3376.304110: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-1975  [002] ....  3379.192236: read_swap_cache_async: remote readpage 1682 "AsyncTask #1" 7f2dc89000 f005
+           <...>-1975  [002] ....  3379.192248: do_swap_page: Exception : 1682 "AsyncTask #1" 7f2dc89000 f005
+           <...>-1975  [002] ....  3379.207728: read_swap_cache_async: remote readpage 1682 "AsyncTask #1" 7f2dc86000 f006
+           <...>-1975  [002] ....  3379.207742: do_swap_page: Exception : 1682 "AsyncTask #1" 7f2dc86000 f006
+           <...>-1975  [001] ....  3379.212016: read_swap_cache_async: remote readpage 1682 "AsyncTask #1" 7f28d1c000 f008
+           <...>-1975  [001] ....  3379.212031: do_swap_page: Exception : 1682 "AsyncTask #1" 7f28d1c000 f008
+           <...>-1975  [002] ....  3379.215652: read_swap_cache_async: remote readpage 1682 "AsyncTask #1" 7f28d1d000 f009
+           <...>-1975  [002] ....  3379.215666: do_swap_page: Exception : 1682 "AsyncTask #1" 7f28d1d000 f009
+           <...>-1975  [000] ....  3379.218785: read_swap_cache_async: remote readpage 1682 "AsyncTask #1" 7f2dc87000 f007
+           <...>-1975  [000] ....  3379.218799: do_swap_page: Exception : 1682 "AsyncTask #1" 7f2dc87000 f007
+ send_target_man-200   [002] d..2  3386.506174: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [002] d..2  3386.506556: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [002] d..2  3386.506710: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2  3386.506955: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [002] d..2  3386.507065: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2  3386.507201: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [002] d..2  3386.507666: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [002] d..2  3386.508426: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [001] ...1  3386.524087: _send_target_page: target sent id 7: cluster 7, 14331 7f289a0000 f038
+ send_target_man-200   [003] ...1  3386.526491: _send_target_page: target sent id 7: cluster 7, 14331 7052c000 f039
+ send_target_man-200   [003] d..2  3386.526588: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [003] d..2  3396.533029: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [003] d..2  3396.533283: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [003] d..2  3396.533379: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [003] d..2  3396.533685: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [003] d..2  3396.533849: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [000] d..2  3396.534066: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [000] d..2  3396.534798: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [000] d..2  3396.536787: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [000] d..2  3396.536974: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [003] dn.2  3406.559505: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [003] d..2  3406.559982: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [003] d..2  3406.560082: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [003] d..2  3406.560335: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [003] d..2  3406.560457: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [003] d..2  3406.560604: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [003] d..2  3406.561084: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [003] d..2  3406.561670: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [003] ...1  3406.561802: scan_swap_map_try_cluster_id: [REMOTE scan_swap_map_try_cluster_id] id 17: alloc new cluster 368
+ send_target_man-200   [001] ...1  3406.567624: _send_target_page: target sent id 7: cluster 17, 14331 7fbe24a000 17000
+ send_target_man-200   [001] ...1  3406.569924: _send_target_page: target sent id 7: cluster 17, 2253 7eafdad000 17001
+ send_target_man-200   [001] ...1  3406.572228: _send_target_page: target sent id 7: cluster 17, 2253 7e9aefe000 17002
+ send_target_man-200   [001] ...1  3406.574345: _send_target_page: target sent id 7: cluster 17, 2253 7ea8375000 17003
+ send_target_man-200   [001] d..2  3406.574560: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [003] d..2  3416.586204: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [003] d..2  3416.586566: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [003] d..2  3416.586668: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [003] d..2  3416.586960: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [003] d..2  3416.587075: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [003] d..2  3416.587213: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [003] d..2  3416.587683: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [003] d..2  3416.588293: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [003] d..2  3416.588508: send_target_manager: send target manager - id, which_table : 8, 1
+           <...>-17512 [000] ....  3417.201264: read_swap_cache_async: remote readpage 2253 "lowpool[46]" 7ea8375000 17003
+           <...>-17512 [000] ....  3417.201282: do_swap_page: Exception : 2253 "lowpool[46]" 7ea8375000 17003
+           <...>-17512 [000] ....  3417.219883: read_swap_cache_async: remote readpage 2253 "lowpool[46]" 7e9aefe000 17002
+           <...>-17512 [000] ....  3417.219898: do_swap_page: Exception : 2253 "lowpool[46]" 7e9aefe000 17002
+           <...>-25643 [007] ....  3424.899839: swap_counter_dump_handler: pid 16863: counter 0 = 17514
+           <...>-25643 [007] ....  3424.899844: swap_counter_dump_handler: pid 16863: counter 1 = 2
+           <...>-25643 [007] ....  3424.899845: swap_counter_dump_handler: pid 16863: counter 2 = 0
+           <...>-25643 [007] ....  3424.899846: swap_counter_dump_handler: pid 16863: counter 3 = 0
+           <...>-25643 [007] ....  3424.899847: swap_counter_dump_handler: pid 16863: counter 4 = 0
+           <...>-25643 [007] ....  3424.899848: swap_counter_dump_handler: pid 16863: counter 5 = 0
+           <...>-25643 [007] ....  3424.899849: swap_counter_dump_handler: pid 16863: counter >5 = 0
+           <...>-25643 [007] ....  3424.899849: swap_counter_dump_handler: remote: total sent cold page: 0
+           <...>-25643 [007] ....  3424.899851: swap_counter_dump_handler: remote: total faulted cold page: 0
+           <...>-25643 [007] ....  3424.899851: swap_counter_dump_handler: remote: total excepted page: 10
+           <...>-25643 [007] ....  3424.899853: swap_counter_dump_handler: remote: sent system page: 0
+           <...>-25643 [007] ....  3424.899854: swap_counter_dump_handler: remote: ZRAM remain: 148208 KB / 2097148 KB
+           <...>-25643 [007] ....  3424.899855: swap_counter_dump_handler: remote: total direct page: 0
+ send_target_man-200   [003] d..2  3426.612716: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [003] d..2  3426.612806: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [003] d..2  3426.612856: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [003] d..2  3426.612995: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [003] d..2  3426.613060: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [003] d..2  3426.613140: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [003] d..2  3426.613466: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [003] d..2  3426.613755: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [003] d..2  3426.613854: send_target_manager: send target manager - id, which_table : 8, 1
+ send_target_man-200   [003] d..2  3436.639579: send_target_manager: send target manager - id, which_table : 0, 0
+ send_target_man-200   [003] d..2  3436.639752: send_target_manager: send target manager - id, which_table : 1, 0
+ send_target_man-200   [003] d..2  3436.639850: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [003] d..2  3436.640461: send_target_manager: send target manager - id, which_table : 3, 1
+ send_target_man-200   [003] d..2  3436.640591: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [003] d..2  3436.640745: send_target_manager: send target manager - id, which_table : 5, 1
+ send_target_man-200   [003] d..2  3436.641254: send_target_manager: send target manager - id, which_table : 6, 1
+ send_target_man-200   [003] d..2  3436.641880: send_target_manager: send target manager - id, which_table : 7, 1
+ send_target_man-200   [003] d..2  3436.642078: send_target_manager: send target manager - id, which_table : 8, 1

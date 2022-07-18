@@ -24,7 +24,13 @@ swapon /dev/nbd0
 
 sleep 1
 
-echo "--nbdmount finished--"
+nbd_client_pid=`ps -ef | grep "nbd-client" | grep -v "grep" | awk '{print $2}'`
+
+sleep 1
+echo ${nbd_client_pid} > /proc/sys/kernel/nbd_client_pid
+sleep 1
+
+echo "-- nbdmount finished with pid ${nbd_client_pid} --"
 
 
 

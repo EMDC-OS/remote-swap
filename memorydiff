@@ -1,0 +1,317 @@
+diff --git a/../../../vanilla_kernel/private/msm-google/mm/memory.c b/mm/memory.c
+index ec25aafe3..edb98e090 100644
+--- a/../../../vanilla_kernel/private/msm-google/mm/memory.c
++++ b/mm/memory.c
+@@ -83,6 +83,11 @@
+ 
+ #include "internal.h"
+ 
++#ifdef CONFIG_APP_AWARE
++#include <linux/kernel.h>
++#include <linux/app_aware.h>
++#endif
++
+ #if defined(LAST_CPUPID_NOT_IN_PAGE_FLAGS) && !defined(CONFIG_COMPILE_TEST)
+ #warning Unfortunate NUMA and NUMA Balancing config, growing page-frame for last_cpupid.
+ #endif
+@@ -1302,6 +1307,11 @@ int copy_page_range(struct mm_struct *dst_mm, struct mm_struct *src_mm,
+ 	return ret;
+ }
+ 
++#ifdef CONFIG_APP_AWARE
++int swapin_vma_tracking;
++int foreground_pid;
++#endif
++
+ static unsigned long zap_pte_range(struct mmu_gather *tlb,
+ 				struct vm_area_struct *vma, pmd_t *pmd,
+ 				unsigned long addr, unsigned long end,
+@@ -1412,8 +1422,16 @@ static unsigned long zap_pte_range(struct mmu_gather *tlb,
+ 			page = migration_entry_to_page(entry);
+ 			rss[mm_counter(page)]--;
+ 		}
++		
++	
+ 		if (unlikely(!free_swap_and_cache(entry)))
+ 			print_bad_pte(vma, addr, ptent, NULL);
++		else{
++#ifdef CONFIG_APP_AWARE
++		if(swapin_vma_tracking!=0 && mm && !non_swap_entry(entry) && swp_swapcount(entry)==0)
++			trace_printk("unmap va %lx %lx %d\n",addr,swp_offset(entry),swp_swapcount(entry));
++#endif
++		}
+ 		pte_clear_not_present_full(mm, addr, pte, tlb->fullmm);
+ 	} while (pte++, addr += PAGE_SIZE, addr != end);
+ 
+@@ -2887,6 +2905,8 @@ EXPORT_SYMBOL(unmap_mapping_range);
+  * We return with the mmap_sem locked or unlocked in the same cases
+  * as does filemap_fault().
+  */
++
++
+ int do_swap_page(struct vm_fault *vmf)
+ {
+ 	struct vm_area_struct *vma = vmf->vma;
+@@ -2900,6 +2920,42 @@ int do_swap_page(struct vm_fault *vmf)
+ 	int ret = 0;
+ 	bool vma_readahead = swap_use_vma_readahead();
+ 
++
++#ifdef CONFIG_APP_AWARE
++
++	int idx;
++	int id = -1;
++	atomic_t *st_idx_ptr;
++	struct swap_trace_entry *swap_trace_table;
++	bool excepted = 0;
++	if((switch_start || miss_handling) && foreground_uid)
++		id = get_id_from_uid(foreground_uid);
++
++#endif
++
++	
++	/*
++	if(swapin_vma_tracking==1 && foreground_uid==current->cred->uid.val)
++		printk(KERN_CRIT"before: swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);
++	else if(swapin_vma_tracking==2 && foreground_uid==current->cred->uid.val)
++		printk(KERN_CRIT"after: swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);	
++	*/
++	
++	/*
++
++	if(swapin_vma_tracking!=0 && current->cred->uid.val!=10135 && current->cred->uid.val!=10126 && current->cred->uid.val!=10127 && current->cred->uid.val!=10133 && current->cred->uid.val!=10128 && current->cred->uid.val!=10122 && current->cred->uid.val!=10159 && current->cred->uid.val!=10136 && current->cred->uid.val!=10124)
++		trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);
++
++*/
++
++	/*
++	if(swapin_vma_tracking!=0 && (current->cred->uid.val==10135 || current->cred->uid.val==10126 || current->cred->uid.val==10127 || current->cred->uid.val==10133 || current->cred->uid.val==10128|| current->cred->uid.val==10122 || current->cred->uid.val==10159 || current->cred->uid.val==10136 || current->cred->uid.val==10124))
++		trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);
++*/
++
++		
++//	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);
++
+ 	if (vma_readahead)
+ 		page = swap_readahead_detect(vmf, &swap_ra);
+ 	if (!pte_unmap_same(vma->vm_mm, vmf->pmd, vmf->pte, vmf->orig_pte)) {
+@@ -2908,6 +2964,8 @@ int do_swap_page(struct vm_fault *vmf)
+ 		goto out;
+ 	}
+ 
++
++
+ 	entry = pte_to_swp_entry(vmf->orig_pte);
+ 	if (unlikely(non_swap_entry(entry))) {
+ 		if (is_migration_entry(entry)) {
+@@ -2929,10 +2987,26 @@ int do_swap_page(struct vm_fault *vmf)
+ 		}
+ 		goto out;
+ 	}
++	
++//	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx 1\n",current->tgid,current->pid,current->comm,vmf->address);
+ 	delayacct_set_flag(DELAYACCT_PF_SWAPIN);
+ 	if (!page)
+ 		page = lookup_swap_cache(entry, vma_readahead ? vma : NULL,
+ 					 vmf->address);
++	#ifdef CONFIG_APP_AWARE
++	if(swapin_vma_tracking!=0){
++
++			if (!non_swap_entry(entry)) 
++				trace_printk("swapin tgid %d %d \"%s\" %lx %lx %d %d\n",current->tgid,current->pid,current->comm,vmf->address,swp_offset(entry),!!page,swp_swapcount(entry));
++	}
++	// tgid pid name va offset has_swapcache? count
++
++#endif
++	
++
++//	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx 2\n",current->tgid,current->pid,current->comm,vmf->address);
++	
++	
+ 	if (!page) {
+ 		if (vma_readahead)
+ 			page = do_swap_page_readahead(entry,
+@@ -2947,12 +3021,50 @@ int do_swap_page(struct vm_fault *vmf)
+ 			 */
+ 			vmf->pte = pte_offset_map_lock(vma->vm_mm, vmf->pmd,
+ 					vmf->address, &vmf->ptl);
+-			if (likely(pte_same(*vmf->pte, vmf->orig_pte)))
++			if (likely(pte_same(*vmf->pte, vmf->orig_pte))){
+ 				ret = VM_FAULT_OOM;
++			}
+ 			delayacct_clear_flag(DELAYACCT_PF_SWAPIN);
+ 			goto unlock;
+ 		}
++#ifdef CONFIG_APP_AWARE
++		/*
++		 * For remote page dump
++		 *
++		*/
++		if (swp_type(entry) == NBD_TYPE){
++			if(pte_to_swp_counter(vmf->orig_pte)==9) { //cold
++				atomic_inc(&faulted_cold_page);
++				atomic_dec(&sent_cold_page);
++				
++				trace_printk("cold fault : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
++			}
++			else if(pte_to_swp_counter(vmf->orig_pte)==10) { //direct
++				trace_printk("Direct fault : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
++			}
++			else if(switch_start && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
++					trace_printk("prefetch fault id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
++			}
++			else if(miss_handling && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){
++
++					trace_printk("direct prefetch miss id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
+ 
++			}
++			else{
++				trace_printk("Exception : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
++				atomic_inc(&excepted_page);
++				SetPageExcepted(page);
++				excepted = 1;
++			}
++		}
++		else{ // ZRAM_TYPE
++			if(pte_to_swp_excepted(vmf->orig_pte)){
++				trace_printk("Exception touched after marked : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
++				SetPageExcepted(page);
++				excepted = 1;
++			}
++		}
++#endif
+ 		/* Had to read the page from swap area: Major fault */
+ 		ret = VM_FAULT_MAJOR;
+ 		count_vm_event(PGMAJFAULT);
+@@ -2968,6 +3080,9 @@ int do_swap_page(struct vm_fault *vmf)
+ 		goto out_release;
+ 	}
+ 
++//	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx 3\n",current->tgid,current->pid,current->comm,vmf->address);
++
++
+ 	swapcache = page;
+ 	locked = lock_page_or_retry(page, vma->vm_mm, vmf->flags);
+ 
+@@ -3022,6 +3137,61 @@ int do_swap_page(struct vm_fault *vmf)
+ 	 * must be called after the swap_free(), or it will never succeed.
+ 	 */
+ 
++
++#ifdef CONFIG_APP_AWARE
++
++	if(switch_start && foreground_uid && !excepted){
++		if(past[id]->which_table){
++			st_idx_ptr = &past[id]->st_index1;
++			swap_trace_table = past[id]->swap_trace_table1;
++		}
++		else{
++			st_idx_ptr = &past[id]->st_index0;
++			swap_trace_table = past[id]->swap_trace_table0;
++		}
++
++		idx = atomic_inc_return(st_idx_ptr);
++		if(idx<NUM_STT_ENTRIES-1){
++		swap_trace_table[idx].tgid = current->tgid;
++		swap_trace_table[idx].va = vmf->address;
++		swap_trace_table[idx].to_nbd = 0;
++		swap_trace_table[idx].swapped = 0;
++		trace_printk("id %d, table %d || %d: %d %llx\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
++		}
++		else
++			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);
++	}
++	
++	if(switch_after && foreground_uid){
++		
++		id = get_id_from_uid(foreground_uid);
++		
++		if(past[id]->which_table){
++			st_idx_ptr = &past[id]->after_index1;
++			swap_trace_table = past[id]->swap_trace_table1;
++		}
++		else{
++			st_idx_ptr = &past[id]->after_index0;
++			swap_trace_table = past[id]->swap_trace_table0;
++		}
++		idx = atomic_inc_return(st_idx_ptr);
++		if(idx<NUM_STT_ENTRIES-1){
++		swap_trace_table[idx].tgid = current->tgid;
++		swap_trace_table[idx].va = vmf->address;
++		swap_trace_table[idx].to_nbd = 0;
++		swap_trace_table[idx].swapped = 0;
++		trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
++		}
++		else
++			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);
++	
++	}
++
++
++
++#endif
++
++
+ 	inc_mm_counter_fast(vma->vm_mm, MM_ANONPAGES);
+ 	dec_mm_counter_fast(vma->vm_mm, MM_SWAPENTS);
+ 	pte = mk_pte(page, vma->vm_page_prot);
+@@ -3047,9 +3217,17 @@ int do_swap_page(struct vm_fault *vmf)
+ 	}
+ 
+ 	swap_free(entry);
++
++
+ 	if (mem_cgroup_swap_full(page) ||
+-	    (vma->vm_flags & VM_LOCKED) || PageMlocked(page))
++	    (vma->vm_flags & VM_LOCKED) || PageMlocked(page)
++#ifdef CONFIG_APP_AWARE
++		|| (swp_type(entry)==NBD_TYPE && swp_swapcount(entry)==0)
++#endif
++		){
+ 		try_to_free_swap(page);
++	}
++	
+ 	unlock_page(page);
+ 	if (page != swapcache) {
+ 		/*
+@@ -3096,6 +3274,11 @@ int do_swap_page(struct vm_fault *vmf)
+  * but allow concurrent faults), and pte mapped but not yet locked.
+  * We return with mmap_sem still held, but pte unmapped and unlocked.
+  */
++
++#ifdef CONFIG_APP_AWARE
++int swapin_anon_tracking;
++#endif
++
+ static int do_anonymous_page(struct vm_fault *vmf)
+ {
+ 	struct vm_area_struct *vma = vmf->vma;
+@@ -3108,6 +3291,11 @@ static int do_anonymous_page(struct vm_fault *vmf)
+ 	if (vma->vm_flags & VM_SHARED)
+ 		return VM_FAULT_SIGBUS;
+ 
++	#ifdef CONFIG_APP_AWARE
++	if(swapin_anon_tracking!=0){
++				trace_printk("anonymous tgid %d %d \"%s\" %lx\n",current->tgid,current->pid,current->comm,vmf->address);
++	}
++#endif
+ 	/*
+ 	 * Use pte_alloc() instead of pte_alloc_map().  We can't run
+ 	 * pte_offset_map() on pmds where a huge pmd might be created
+@@ -3975,6 +4163,8 @@ static int handle_pte_fault(struct vm_fault *vmf)
+ {
+ 	pte_t entry;
+ 
++
++
+ 	if (unlikely(pmd_none(*vmf->pmd))) {
+ 		/*
+ 		 * Leave __pte_alloc() until later: because vm_ops->fault may
+@@ -4018,6 +4208,7 @@ static int handle_pte_fault(struct vm_fault *vmf)
+ 			return do_fault(vmf);
+ 	}
+ 
++
+ 	if (!pte_present(vmf->orig_pte))
+ 		return do_swap_page(vmf);
+ 

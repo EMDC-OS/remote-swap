@@ -1,0 +1,1135 @@
+Panic#2 Part1
+<6>[ 3247.364073] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4231562 ibatt=220937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3247.364080] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3247.364083] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3247.364104] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3247.938547] c7  20939 CPU7: update max cpu_capacity 581
+<38>[ 3248.517948] c3    586 type=1400 audit(1657727468.833:2321): avc: denied { associate } for comm="Binder:788_4" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3248.523411] c3    586 type=1400 audit(1657727500.283:2322): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=695991 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3248.523723] c3    586 type=1400 audit(1657727500.283:2322): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=695991 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3248.524040] c3    586 type=1400 audit(1657727500.283:2323): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=695991 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3248.524196] c3    586 type=1400 audit(1657727500.283:2323): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=695991 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3248.524563] c3    586 type=1400 audit(1657727500.283:2324): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=695991 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3248.893314] c2    586 type=1400 audit(1657727500.283:2324): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=695991 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3248.893992] c2    586 type=1400 audit(1657727500.673:2325): avc: denied { read } for comm="AppInit9" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3248.894198] c2    586 type=1400 audit(1657727500.673:2325): avc: denied { read } for comm="AppInit9" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3248.895187] c2    586 type=1400 audit(1657727500.673:2326): avc: denied { open } for comm="AppInit9" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3249.161763] c2    586 type=1400 audit(1657727500.673:2326): avc: denied { open } for comm="AppInit9" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3249.161851] c2    586 type=1400 audit(1657727500.940:2327): avc: denied { write } for comm="kworker/0:0H" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<4>[ 3249.175754] c6   1129 audit: audit_lost=880 audit_rate_limit=5 audit_backlog_limit=64
+<3>[ 3249.175758] c6   1129 audit: rate limit exceeded
+<6>[ 3249.365606] c7  21784 google_charger: usbchg=USB typec=C usbv=4926 usbc=333 usbMv=5000 usbMc=500
+<6>[ 3249.365687] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109a01030001 [0x1:1:3:4250:500] chg=u
+<6>[ 3249.365694] c7  21784 google_battery: MSC_DIN chg_state=1f4109a01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4250 icl=500
+<6>[ 3249.368496] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4248437 ibatt=4687 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3249.368502] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3249.368506] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3249.368523] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3249.947125] c6  12690 CPU6: update max cpu_capacity 614
+<4>[ 3249.951543] c7  21760 CPU7: update max cpu_capacity 615
+<6>[ 3251.370014] c7  21784 google_charger: usbchg=USB typec=C usbv=4869 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3251.370091] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4108b01030011 [0x11:1:3:4235:500] chg=u
+<6>[ 3251.370097] c7  21784 google_battery: MSC_DIN chg_state=1f4108b01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4235 icl=500
+<6>[ 3251.372692] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4240625 ibatt=241875 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3251.372696] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3251.372698] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3251.372738] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3251.647228] c2    586 type=1400 audit(1657727500.940:2327): avc: denied { write } for comm="kworker/0:0H" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3251.647733] c2    586 type=1400 audit(1657727503.426:2329): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3251.648087] c2    586 type=1400 audit(1657727503.426:2329): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3251.648671] c2    586 type=1400 audit(1657727503.426:2330): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<4>[ 3251.946230] c5  16263 CPU5: update max cpu_capacity 648
+<4>[ 3251.946447] c7  12666 CPU7: update max cpu_capacity 650
+<6>[ 3253.374255] c7  21784 google_charger: usbchg=USB typec=C usbv=4864 usbc=486 usbMv=5000 usbMc=500
+<6>[ 3253.374335] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109601030011 [0x11:1:3:4246:500] chg=u
+<6>[ 3253.374342] c7  21784 google_battery: MSC_DIN chg_state=1f4109601030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4246 icl=500
+<6>[ 3253.377481] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4242812 ibatt=165000 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3253.377488] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3253.377491] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3253.377508] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3255.379019] c7  21784 google_charger: usbchg=USB typec=C usbv=4876 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3255.379100] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4108201030011 [0x11:1:3:4226:500] chg=u
+<6>[ 3255.379108] c7  21784 google_battery: MSC_DIN chg_state=1f4108201030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4226 icl=500
+<6>[ 3255.381798] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4245312 ibatt=39375 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3255.381804] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3255.381807] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3255.381825] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3257.383338] c7  21784 google_charger: usbchg=USB typec=C usbv=4874 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3257.383420] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109701030011 [0x11:1:3:4247:500] chg=u
+<6>[ 3257.383428] c7  21784 google_battery: MSC_DIN chg_state=1f4109701030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4247 icl=500
+<6>[ 3257.386154] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4248593 ibatt=140937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3257.386159] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3257.386163] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3257.386178] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3259.387654] c7  21784 google_charger: usbchg=USB typec=C usbv=4873 usbc=486 usbMv=5000 usbMc=500
+<6>[ 3259.387730] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109401030011 [0x11:1:3:4244:500] chg=u
+<6>[ 3259.387735] c7  21784 google_battery: MSC_DIN chg_state=1f4109401030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4244 icl=500
+<6>[ 3259.390374] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4238281 ibatt=188750 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3259.390379] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3259.390382] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3259.390395] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3261.391979] c7  21784 google_charger: usbchg=USB typec=C usbv=4869 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3261.392055] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4108101030011 [0x11:1:3:4225:500] chg=u
+<6>[ 3261.392062] c7  21784 google_battery: MSC_DIN chg_state=1f4108101030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4225 icl=500
+<6>[ 3261.394733] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4245468 ibatt=11875 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3261.394738] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3261.394740] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3261.394754] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3263.396259] c7  21784 google_charger: usbchg=USB typec=C usbv=4869 usbc=486 usbMv=5000 usbMc=500
+<6>[ 3263.396338] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109101030011 [0x11:1:3:4241:500] chg=u
+<6>[ 3263.396345] c7  21784 google_battery: MSC_DIN chg_state=1f4109101030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4241 icl=500
+<6>[ 3263.398947] c7  21784 google_battery: MSC_DSG vbatt_idx:2->1 vbatt=4207968 ibatt=496562 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3263.398953] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3263.398956] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3263.398980] c7  21784 sm8150_bms: CHARGE_PAUSE : pause=1 -> val=1 (0)
+<6>[ 3263.398995] c7  21784 sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=0, val=0 pause=1 (0)
+<6>[ 3263.399006] c7  21784 sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+<6>[ 3263.399008] c7  21784 google_charger: MSC_CHG fv_uv=4400000->4300000 cc_max=0->0 rc=0
+<6>[ 3263.399013] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3264.308566] c3    586 type=1400 audit(1657727503.426:2330): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3264.308633] c3    586 type=1400 audit(1657727516.086:2331): avc: denied { associate } for comm="Binder:788_4" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<6>[ 3265.400476] c7  21784 google_charger: usbchg=USB typec=C usbv=4886 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3265.400555] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4104401030011 [0x11:1:3:4164:500] chg=u
+<6>[ 3265.400560] c7  21784 google_battery: MSC_DIN chg_state=1f4104401030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4164 icl=500
+<6>[ 3265.403196] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4185000 ibatt=426562 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3265.403200] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3265.403202] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3265.403215] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3267.404752] c7  21784 google_charger: usbchg=USB typec=C usbv=4879 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3267.404835] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4107401030011 [0x11:1:3:4212:500] chg=u
+<6>[ 3267.404843] c7  21784 google_battery: MSC_DIN chg_state=1f4107401030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4212 icl=500
+<6>[ 3267.407713] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4224687 ibatt=206562 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3267.407731] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3267.407735] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3267.407750] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3269.409249] c7  21784 google_charger: usbchg=USB typec=C usbv=4876 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3269.409330] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4108301030011 [0x11:1:3:4227:500] chg=u
+<6>[ 3269.409337] c7  21784 google_battery: MSC_DIN chg_state=1f4108301030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4227 icl=500
+<6>[ 3269.413298] c7  21784 google_battery: MSC_DSG vbatt_idx:1->2 vbatt=4230468 ibatt=222812 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3269.413304] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3269.413308] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3269.413335] c7  21784 sm8150_bms: CHARGE_PAUSE : pause=1 -> val=1 (0)
+<6>[ 3269.413351] c7  21784 sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=0, val=0 pause=1 (0)
+<6>[ 3269.413362] c7  21784 sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4400000, val=80 (0)
+<6>[ 3269.413364] c7  21784 google_charger: MSC_CHG fv_uv=4300000->4400000 cc_max=0->0 rc=0
+<6>[ 3269.413370] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3271.414879] c7  21784 google_charger: usbchg=USB typec=C usbv=4874 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3271.414960] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4106f01030011 [0x11:1:3:4207:500] chg=u
+<6>[ 3271.414968] c7  21784 google_battery: MSC_DIN chg_state=1f4106f01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4207 icl=500
+<6>[ 3271.419029] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4233281 ibatt=70000 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3271.419036] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3271.419039] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3271.419057] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3273.420566] c7  21784 google_charger: usbchg=USB typec=C usbv=4875 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3273.420646] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4108901030011 [0x11:1:3:4233:500] chg=u
+<6>[ 3273.420654] c7  21784 google_battery: MSC_DIN chg_state=1f4108901030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4233 icl=500
+<6>[ 3273.423474] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4240312 ibatt=71562 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3273.423480] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3273.423483] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3273.423505] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3275.425071] c7  21784 google_charger: usbchg=USB typec=C usbv=4883 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3275.425150] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109301030011 [0x11:1:3:4243:500] chg=u
+<6>[ 3275.425158] c7  21784 google_battery: MSC_DIN chg_state=1f4109301030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4243 icl=500
+<6>[ 3275.428073] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4241875 ibatt=101250 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3275.428081] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3275.428084] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3275.428101] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3277.429609] c7  21784 google_charger: usbchg=USB typec=C usbv=4867 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3277.429690] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109301030011 [0x11:1:3:4243:500] chg=u
+<6>[ 3277.429698] c7  21784 google_battery: MSC_DIN chg_state=1f4109301030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4243 icl=500
+<6>[ 3277.433790] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4234843 ibatt=125312 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3277.433797] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3277.433801] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3277.433820] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3278.006619] c7  12669 CPU7: update max cpu_capacity 615
+<6>[ 3279.435298] c7  21784 google_charger: usbchg=USB typec=C usbv=4874 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3279.435373] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4108c01030011 [0x11:1:3:4236:500] chg=u
+<6>[ 3279.435380] c7  21784 google_battery: MSC_DIN chg_state=1f4108c01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4236 icl=500
+<6>[ 3279.439980] c7  21784 google_battery: MSC_DSG vbatt_idx:2->1 vbatt=4222187 ibatt=157187 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3279.439986] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3279.439989] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3279.440015] c7  21784 sm8150_bms: CHARGE_PAUSE : pause=1 -> val=1 (0)
+<6>[ 3279.440030] c7  21784 sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=0, val=0 pause=1 (0)
+<6>[ 3279.440040] c7  21784 sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+<6>[ 3279.440042] c7  21784 google_charger: MSC_CHG fv_uv=4400000->4300000 cc_max=0->0 rc=0
+<6>[ 3279.440046] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3280.012048] c7    264 CPU7: update max cpu_capacity 581
+<6>[ 3281.441563] c7  21784 google_charger: usbchg=USB typec=C usbv=4883 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3281.441647] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109a01030001 [0x1:1:3:4250:500] chg=u
+<6>[ 3281.441656] c7  21784 google_battery: MSC_DIN chg_state=1f4109a01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4250 icl=500
+<6>[ 3281.444880] c7  21784 google_battery: MSC_DSG vbatt_idx:1->2 vbatt=4252343 ibatt=625 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3281.444887] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3281.444891] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3281.444925] c7  21784 sm8150_bms: CHARGE_PAUSE : pause=1 -> val=1 (0)
+<6>[ 3281.444941] c7  21784 sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=0, val=0 pause=1 (0)
+<6>[ 3281.444952] c7  21784 sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4400000, val=80 (0)
+<6>[ 3281.444955] c7  21784 google_charger: MSC_CHG fv_uv=4300000->4400000 cc_max=0->0 rc=0
+<6>[ 3281.444961] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3282.016273] c7    264 CPU7: update max cpu_capacity 539
+<6>[ 3283.446572] c7  21784 google_charger: usbchg=USB typec=C usbv=4879 usbc=489 usbMv=5000 usbMc=500
+<6>[ 3283.446653] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a001030011 [0x11:1:3:4256:500] chg=u
+<6>[ 3283.446663] c7  21784 google_battery: MSC_DIN chg_state=1f410a001030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4256 icl=500
+<6>[ 3283.449906] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4249843 ibatt=35937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3283.449913] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3283.449916] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3283.449936] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3284.018042] c7  12667 CPU7: update max cpu_capacity 505
+<6>[ 3285.451458] c7  21784 google_charger: usbchg=USB typec=C usbv=4967 usbc=364 usbMv=5000 usbMc=500
+<6>[ 3285.451538] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a101030001 [0x1:1:3:4257:500] chg=u
+<6>[ 3285.451546] c7  21784 google_battery: MSC_DIN chg_state=1f410a101030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4257 icl=500
+<6>[ 3285.454392] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4245781 ibatt=116250 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3285.454399] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3285.454403] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3285.454424] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3287.455944] c7  21784 google_charger: usbchg=USB typec=C usbv=4912 usbc=413 usbMv=5000 usbMc=500
+<6>[ 3287.456030] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a101030001 [0x1:1:3:4257:500] chg=u
+<6>[ 3287.456100] c7  21784 google_battery: MSC_DIN chg_state=1f410a101030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4257 icl=500
+<6>[ 3287.458985] c7  21784 google_battery: MSC_LAST vbatt=4257968 ibatt=-43437 fv_uv=4400000
+<6>[ 3287.458995] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3287.458998] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3287.459016] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3288.027403] c5  12690 CPU5: update max cpu_capacity 538
+<4>[ 3288.029144] c7  12690 CPU7: update max cpu_capacity 539
+<6>[ 3289.460518] c7  21784 google_charger: usbchg=USB typec=C usbv=4873 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3289.460599] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a301030011 [0x11:1:3:4259:500] chg=u
+<6>[ 3289.460606] c7  21784 google_battery: MSC_DIN chg_state=1f410a301030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4259 icl=500
+<6>[ 3289.463398] c7  21784 google_battery: MSC_LAST vbatt=4254843 ibatt=-56875 fv_uv=4400000
+<6>[ 3289.463404] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3289.463407] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3289.463422] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3290.026320] c7  16263 CPU7: update max cpu_capacity 581
+<38>[ 3290.754888] c2    586 type=1400 audit(1657727516.086:2331): avc: denied { associate } for comm="Binder:788_4" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3290.762681] c2    586 type=1400 audit(1657727542.533:2332): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3290.763839] c2    586 type=1400 audit(1657727542.533:2332): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3290.764293] c2    586 type=1400 audit(1657727542.533:2333): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<6>[ 3291.464961] c7  21784 google_charger: usbchg=USB typec=C usbv=4869 usbc=300 usbMv=5000 usbMc=500
+<6>[ 3291.465043] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109c01030001 [0x1:1:3:4252:500] chg=u
+<6>[ 3291.465053] c7  21784 google_battery: MSC_DIN chg_state=1f4109c01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4252 icl=500
+<6>[ 3291.467761] c7  21784 google_battery: MSC_LAST vbatt=4261718 ibatt=-102187 fv_uv=4400000
+<6>[ 3291.467768] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3291.467773] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3291.467790] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3292.026212] c7  16263 CPU7: update max cpu_capacity 615
+<38>[ 3292.647548] c3    586 type=1400 audit(1657727542.533:2333): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3292.648346] c3    586 type=1400 audit(1657727544.426:2334): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3292.648505] c3    586 type=1400 audit(1657727544.426:2334): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3292.649600] c3    586 type=1400 audit(1657727544.426:2335): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<6>[ 3293.469309] c7  21784 google_charger: usbchg=USB typec=C usbv=4877 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3293.469424] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a101030011 [0x11:1:3:4257:500] chg=u
+<6>[ 3293.469433] c7  21784 google_battery: MSC_DIN chg_state=1f410a101030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4257 icl=500
+<6>[ 3293.472414] c7  21784 google_battery: MSC_LAST vbatt=4259062 ibatt=-70625 fv_uv=4400000
+<6>[ 3293.472422] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3293.472425] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3293.472447] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3294.036177] c7  20939 CPU7: update max cpu_capacity 650
+<6>[ 3295.473909] c7  21784 google_charger: usbchg=USB typec=C usbv=4881 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3295.473987] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a101030011 [0x11:1:3:4257:500] chg=u
+<6>[ 3295.473993] c7  21784 google_battery: MSC_DIN chg_state=1f410a101030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4257 icl=500
+<6>[ 3295.476663] c7  21784 google_battery: MSC_DSG vbatt_idx:2->1 vbatt=4203750 ibatt=500000 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3295.476666] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3295.476668] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3295.476686] c7  21784 sm8150_bms: CHARGE_PAUSE : pause=1 -> val=1 (0)
+<6>[ 3295.476697] c7  21784 sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=0, val=0 pause=1 (0)
+<6>[ 3295.476706] c7  21784 sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+<6>[ 3295.476707] c7  21784 google_charger: MSC_CHG fv_uv=4400000->4300000 cc_max=0->0 rc=0
+<6>[ 3295.476710] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3296.246139] c2    586 type=1400 audit(1657727544.426:2335): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3296.246531] c2    586 type=1400 audit(1657727548.023:2336): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3296.246705] c2    586 type=1400 audit(1657727548.023:2336): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3296.247393] c2    586 type=1400 audit(1657727548.023:2337): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3297.262205] c3    586 type=1400 audit(1657727548.023:2337): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3297.264087] c3    586 type=1400 audit(1657727549.040:2338): avc: denied { write } for comm="kworker/6:1H" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3297.264446] c3    586 type=1400 audit(1657727549.040:2338): avc: denied { write } for comm="kworker/6:1H" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3297.264459] c3    586 type=1400 audit(1657727549.040:2339): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<6>[ 3297.478223] c7  21784 google_charger: usbchg=USB typec=C usbv=4875 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3297.478303] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4108201030011 [0x11:1:3:4226:500] chg=u
+<6>[ 3297.478311] c7  21784 google_battery: MSC_DIN chg_state=1f4108201030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4226 icl=500
+<6>[ 3297.481349] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4196093 ibatt=464375 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3297.481356] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3297.481359] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3297.481376] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3299.482857] c7  21784 google_charger: usbchg=USB typec=C usbv=4877 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3299.482933] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4108901030011 [0x11:1:3:4233:500] chg=u
+<6>[ 3299.482938] c7  21784 google_battery: MSC_DIN chg_state=1f4108901030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4233 icl=500
+<6>[ 3299.485552] c7  21784 google_battery: MSC_DSG vbatt_idx:1->2 vbatt=4234687 ibatt=175312 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3299.485555] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3299.485557] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3299.485575] c7  21784 sm8150_bms: CHARGE_PAUSE : pause=1 -> val=1 (0)
+<6>[ 3299.485587] c7  21784 sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=0, val=0 pause=1 (0)
+<6>[ 3299.485597] c7  21784 sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4400000, val=80 (0)
+<6>[ 3299.485598] c7  21784 google_charger: MSC_CHG fv_uv=4300000->4400000 cc_max=0->0 rc=0
+<6>[ 3299.485602] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3301.490737] c7  21784 google_charger: usbchg=USB typec=C usbv=4876 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3301.490814] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4106601030011 [0x11:1:3:4198:500] chg=u
+<6>[ 3301.490823] c7  21784 google_battery: MSC_DIN chg_state=1f4106601030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4198 icl=500
+<6>[ 3301.493512] c7  21784 google_battery: MSC_DSG vbatt_idx:2->1 vbatt=4224375 ibatt=164375 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3301.493517] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3301.493519] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3301.493546] c7  21784 sm8150_bms: CHARGE_PAUSE : pause=1 -> val=1 (0)
+<6>[ 3301.493562] c7  21784 sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=0, val=0 pause=1 (0)
+<6>[ 3301.493573] c7  21784 sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+<6>[ 3301.493574] c7  21784 google_charger: MSC_CHG fv_uv=4400000->4300000 cc_max=0->0 rc=0
+<6>[ 3301.493579] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3302.489853] c1    586 type=1400 audit(1657727549.040:2339): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3302.492477] c1    586 type=1400 audit(1657727554.270:2340): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3302.492802] c1    586 type=1400 audit(1657727554.270:2340): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3302.493464] c1    586 type=1400 audit(1657727554.270:2341): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<6>[ 3303.495070] c7  21784 google_charger: usbchg=USB typec=C usbv=4885 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3303.495148] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109501030011 [0x11:1:3:4245:500] chg=u
+<6>[ 3303.495156] c7  21784 google_battery: MSC_DIN chg_state=1f4109501030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4245 icl=500
+<6>[ 3303.497837] c7  21784 google_battery: MSC_TYPE vt=4300000 vb=4246250 fv_uv=4300000 chg_type=1
+<6>[ 3303.497841] c7  21784 google_battery: MSC_NYET ibatt=-20000 cc_next_max=1400000 t_cnt=1
+<6>[ 3303.497845] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3303.497848] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+<6>[ 3303.497864] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3303.808646] c3    586 type=1400 audit(1657727554.270:2341): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3303.809516] c3    586 type=1400 audit(1657727555.586:2342): avc: denied { read } for comm="AppInit9" name="file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3303.809686] c3    586 type=1400 audit(1657727555.586:2342): avc: denied { read } for comm="AppInit9" name="file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3303.810800] c3    586 type=1400 audit(1657727555.586:2343): avc: denied { open } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3303.810943] c3    586 type=1400 audit(1657727555.586:2343): avc: denied { open } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3303.811660] c3    586 type=1400 audit(1657727555.586:2344): avc: denied { getattr } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<12>[ 3304.131794] c6    811 healthd: battery l=99 v=4249 t=40.4 h=2 st=4 c=-27 fc=2711000 cc=16 chg=u
+<6>[ 3305.499393] c7  21784 google_charger: usbchg=USB typec=C usbv=4887 usbc=489 usbMv=5000 usbMc=500
+<6>[ 3305.499470] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4108e01030011 [0x11:1:3:4238:500] chg=u
+<6>[ 3305.499476] c7  21784 google_battery: MSC_DIN chg_state=1f4108e01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4238 icl=500
+<6>[ 3305.502057] c7  21784 google_battery: MSC_TYPE vt=4300000 vb=4243750 fv_uv=4300000 chg_type=1
+<6>[ 3305.502060] c7  21784 google_battery: MSC_NYET ibatt=-67500 cc_next_max=1400000 t_cnt=2
+<6>[ 3305.502063] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3305.502066] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+<6>[ 3305.502079] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3307.503563] c7  21784 google_charger: usbchg=USB typec=C usbv=4946 usbc=486 usbMv=5000 usbMc=500
+<6>[ 3307.503639] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109701030001 [0x1:1:3:4247:500] chg=u
+<6>[ 3307.503645] c7  21784 google_battery: MSC_DIN chg_state=1f4109701030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4247 icl=500
+<6>[ 3307.506557] c7  21784 google_battery: MSC_TYPE vt=4300000 vb=4245781 fv_uv=4300000 chg_type=1
+<6>[ 3307.506561] c7  21784 google_battery: MSC_NYET ibatt=-7187 cc_next_max=1400000 t_cnt=3
+<6>[ 3307.506564] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3307.506567] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+<6>[ 3307.506582] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3308.844816] c3    586 type=1400 audit(1657727555.586:2344): avc: denied { getattr } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3308.845751] c3    586 type=1400 audit(1657727560.623:2345): avc: denied { call } for comm="Thread-76" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+<6>[ 3309.508077] c7  21784 google_charger: usbchg=USB typec=C usbv=4868 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3309.508154] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109501030011 [0x11:1:3:4245:500] chg=u
+<6>[ 3309.508161] c7  21784 google_battery: MSC_DIN chg_state=1f4109501030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4245 icl=500
+<6>[ 3309.511049] c7  21784 google_battery: MSC_DSG vbatt_idx:1->2 vbatt=4233593 ibatt=138750 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3309.511055] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3309.511058] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3309.511086] c7  21784 sm8150_bms: CHARGE_PAUSE : pause=1 -> val=1 (0)
+<6>[ 3309.511099] c7  21784 sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=0, val=0 pause=1 (0)
+<6>[ 3309.511109] c7  21784 sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4400000, val=80 (0)
+<6>[ 3309.511111] c7  21784 google_charger: MSC_CHG fv_uv=4300000->4400000 cc_max=0->0 rc=0
+<6>[ 3309.511116] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3310.015212] c2    586 type=1400 audit(1657727560.623:2345): avc: denied { call } for comm="Thread-76" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+<38>[ 3310.015592] c2    586 type=1400 audit(1657727561.793:2346): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3310.015739] c2    586 type=1400 audit(1657727561.793:2346): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3310.016444] c2    586 type=1400 audit(1657727561.793:2347): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3310.016533] c2    586 type=1400 audit(1657727561.793:2347): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3310.016819] c2    586 type=1400 audit(1657727561.793:2348): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3311.429135] c2    586 type=1400 audit(1657727561.793:2348): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=723731 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3311.429171] c2    586 type=1400 audit(1657727563.206:2349): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3311.429548] c2    586 type=1400 audit(1657727563.206:2349): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3311.429567] c2    586 type=1400 audit(1657727563.206:2350): avc: denied { write } for comm="kworker/1:1H" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<6>[ 3311.512673] c7  21784 google_charger: usbchg=USB typec=C usbv=4878 usbc=486 usbMv=5000 usbMc=500
+<6>[ 3311.512788] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4107e01030011 [0x11:1:3:4222:500] chg=u
+<6>[ 3311.512794] c7  21784 google_battery: MSC_DIN chg_state=1f4107e01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4222 icl=500
+<6>[ 3311.517762] c7  21784 google_battery: MSC_DSG vbatt_idx:2->1 vbatt=4197500 ibatt=498437 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3311.517767] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3311.517770] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3311.517796] c7  21784 sm8150_bms: CHARGE_PAUSE : pause=1 -> val=1 (0)
+<6>[ 3311.517809] c7  21784 sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=0, val=0 pause=1 (0)
+<6>[ 3311.517819] c7  21784 sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4300000, val=70 (0)
+<6>[ 3311.517821] c7  21784 google_charger: MSC_CHG fv_uv=4400000->4300000 cc_max=0->0 rc=0
+<6>[ 3311.517826] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3311.647581] c3    586 type=1400 audit(1657727563.206:2350): avc: denied { write } for comm="kworker/1:1H" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3311.647974] c3    586 type=1400 audit(1657727563.426:2351): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3311.648104] c3    586 type=1400 audit(1657727563.426:2351): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3311.648451] c3    586 type=1400 audit(1657727563.426:2352): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<4>[ 3311.897079] c0   6338 audit: audit_lost=881 audit_rate_limit=5 audit_backlog_limit=64
+<3>[ 3311.897085] c0   6338 audit: rate limit exceeded
+<38>[ 3311.897343] c3    586 type=1400 audit(1657727563.426:2352): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3311.898004] c3    586 type=1400 audit(1657727563.676:2353): avc: denied { read } for comm="AppInit9" name="file-nr" dev="proc" ino=745590 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3312.520971] c3    586 type=1400 audit(1657727563.676:2353): avc: denied { read } for comm="AppInit9" name="file-nr" dev="proc" ino=745590 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3312.522266] c3    586 type=1400 audit(1657727564.300:2357): avc: denied { read } for comm="AppInit9" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3312.522425] c3    586 type=1400 audit(1657727564.300:2357): avc: denied { read } for comm="AppInit9" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3312.523994] c3    586 type=1400 audit(1657727564.300:2358): avc: denied { open } for comm="AppInit9" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<6>[ 3313.519740] c7  21784 google_charger: usbchg=USB typec=C usbv=4882 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3313.519819] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4105401030011 [0x11:1:3:4180:500] chg=u
+<6>[ 3313.519826] c7  21784 google_battery: MSC_DIN chg_state=1f4105401030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4180 icl=500
+<6>[ 3313.522805] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4200000 ibatt=120625 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3313.522810] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3313.522814] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3313.522828] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3314.165254] c3    586 type=1400 audit(1657727564.300:2358): avc: denied { open } for comm="AppInit9" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3314.165286] c3    586 type=1400 audit(1657727565.943:2359): avc: denied { associate } for comm="Binder:788_4" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3314.333616] c2    586 type=1400 audit(1657727565.943:2359): avc: denied { associate } for comm="Binder:788_4" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3314.334008] c2    586 type=1400 audit(1657727566.113:2360): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=745590 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3314.334212] c2    586 type=1400 audit(1657727566.113:2360): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=745590 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3314.334788] c2    586 type=1400 audit(1657727566.113:2361): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=745590 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3314.334891] c2    586 type=1400 audit(1657727566.113:2361): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=745590 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3314.335326] c2    586 type=1400 audit(1657727566.113:2362): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=745590 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<6>[ 3315.524326] c7  21784 google_charger: usbchg=USB typec=C usbv=4882 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3315.524402] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4107101030011 [0x11:1:3:4209:500] chg=u
+<6>[ 3315.524408] c7  21784 google_battery: MSC_DIN chg_state=1f4107101030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4209 icl=500
+<6>[ 3315.526963] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4222187 ibatt=204375 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3315.526967] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3315.526968] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3315.526980] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3317.528477] c7  21784 google_charger: usbchg=USB typec=C usbv=4882 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3317.528556] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4107701030011 [0x11:1:3:4215:500] chg=u
+<6>[ 3317.528563] c7  21784 google_battery: MSC_DIN chg_state=1f4107701030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4215 icl=500
+<6>[ 3317.531261] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4211718 ibatt=528437 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3317.531268] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3317.531271] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3317.531287] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3319.532860] c7  21784 google_charger: usbchg=USB typec=C usbv=4885 usbc=491 usbMv=5000 usbMc=500
+<6>[ 3319.532936] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4107301030011 [0x11:1:3:4211:500] chg=u
+<6>[ 3319.532943] c7  21784 google_battery: MSC_DIN chg_state=1f4107301030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4211 icl=500
+<6>[ 3319.535754] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4199218 ibatt=157500 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3319.535761] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3319.535765] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3319.535783] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3321.537252] c7  21784 google_charger: usbchg=USB typec=C usbv=4885 usbc=489 usbMv=5000 usbMc=500
+<6>[ 3321.537326] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4106f01030011 [0x11:1:3:4207:500] chg=u
+<6>[ 3321.537332] c7  21784 google_battery: MSC_DIN chg_state=1f4106f01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4207 icl=500
+<6>[ 3321.540087] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4213906 ibatt=107187 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3321.540093] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3321.540096] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3321.540111] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3323.541593] c7  21784 google_charger: usbchg=USB typec=C usbv=4884 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3323.541671] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4106901030011 [0x11:1:3:4201:500] chg=u
+<6>[ 3323.541677] c7  21784 google_battery: MSC_DIN chg_state=1f4106901030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4201 icl=500
+<6>[ 3323.544378] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4220468 ibatt=287500 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3323.544383] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3323.544386] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3323.544399] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3325.548610] c7  21784 google_charger: usbchg=USB typec=C usbv=4877 usbc=489 usbMv=5000 usbMc=500
+<6>[ 3325.548690] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4106901030011 [0x11:1:3:4201:500] chg=u
+<6>[ 3325.548698] c7  21784 google_battery: MSC_DIN chg_state=1f4106901030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4201 icl=500
+<6>[ 3325.551307] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4210937 ibatt=231875 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3325.551314] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3325.551317] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3325.551336] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3327.554787] c7  21784 google_charger: usbchg=USB typec=C usbv=4874 usbc=486 usbMv=5000 usbMc=500
+<6>[ 3327.554862] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4107a01030011 [0x11:1:3:4218:500] chg=u
+<6>[ 3327.554867] c7  21784 google_battery: MSC_DIN chg_state=1f4107a01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4218 icl=500
+<6>[ 3327.557461] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4216562 ibatt=119062 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3327.557464] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3327.557466] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3327.557475] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3328.127625] c2    586 type=1400 audit(1657727566.113:2362): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=745590 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3328.143142] c1    586 type=1400 audit(1657727579.906:2363): avc: denied { call } for comm="Thread-25" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+<6>[ 3329.561435] c7  21784 google_charger: usbchg=USB typec=C usbv=4873 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3329.561521] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4106801030011 [0x11:1:3:4200:500] chg=u
+<6>[ 3329.561526] c7  21784 google_battery: MSC_DIN chg_state=1f4106801030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4200 icl=500
+<6>[ 3329.564470] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4214062 ibatt=24375 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3329.564474] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3329.564476] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3329.564489] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3331.566770] c7  21784 google_charger: usbchg=USB typec=C usbv=4876 usbc=486 usbMv=5000 usbMc=500
+<6>[ 3331.566847] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4105001030011 [0x11:1:3:4176:500] chg=u
+<6>[ 3331.566853] c7  21784 google_battery: MSC_DIN chg_state=1f4105001030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4176 icl=500
+<6>[ 3331.569652] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4206093 ibatt=214375 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3331.569657] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3331.569660] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3331.569676] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3332.175822] c7  12667 CPU7: update max cpu_capacity 615
+<6>[ 3333.572739] c7  21784 google_charger: usbchg=USB typec=C usbv=4887 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3333.572816] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4107301030011 [0x11:1:3:4211:500] chg=u
+<6>[ 3333.572822] c7  21784 google_battery: MSC_DIN chg_state=1f4107301030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4211 icl=500
+<6>[ 3333.575394] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4202812 ibatt=158437 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3333.575398] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3333.575400] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3333.575412] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3334.122948] c7   2824 CPU7: update max cpu_capacity 581
+<6>[ 3335.578524] c7  21784 google_charger: usbchg=USB typec=C usbv=4875 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3335.578598] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4106901030011 [0x11:1:3:4201:500] chg=u
+<6>[ 3335.578605] c7  21784 google_battery: MSC_DIN chg_state=1f4106901030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4201 icl=500
+<6>[ 3335.581390] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4192656 ibatt=410937 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3335.581395] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3335.581398] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3335.581413] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3335.680497] c0    586 type=1400 audit(1657727579.906:2363): avc: denied { call } for comm="Thread-25" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+<38>[ 3335.682185] c0    586 type=1400 audit(1657727587.460:2364): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3335.682426] c0    586 type=1400 audit(1657727587.460:2364): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3335.682816] c0    586 type=1400 audit(1657727587.460:2365): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3335.967995] c0    586 type=1400 audit(1657727587.460:2365): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3335.968059] c0    586 type=1400 audit(1657727587.746:2366): avc: denied { write } for comm="kworker/0:0H" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3335.968996] c2    586 type=1400 audit(1657727587.746:2366): avc: denied { write } for comm="kworker/0:0H" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3335.969015] c2    586 type=1400 audit(1657727587.746:2367): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3336.103900] c3    586 type=1400 audit(1657727587.746:2367): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3336.110938] c3    586 type=1400 audit(1657727587.883:2368): avc: denied { read } for comm="AppInit9" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3336.111354] c3    586 type=1400 audit(1657727587.883:2368): avc: denied { read } for comm="AppInit9" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3336.112267] c3    586 type=1400 audit(1657727587.883:2369): avc: denied { open } for comm="AppInit9" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<4>[ 3336.163135] c0   6338 audit: audit_lost=884 audit_rate_limit=5 audit_backlog_limit=64
+<3>[ 3336.163140] c0   6338 audit: rate limit exceeded
+<38>[ 3336.164773] c2    586 type=1400 audit(1657727587.883:2369): avc: denied { open } for comm="AppInit9" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3336.171090] c2    586 type=1400 audit(1657727587.943:2370): avc: denied { read } for comm="AppInit9" name="file-nr" dev="proc" ino=745762 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3336.171383] c2    586 type=1400 audit(1657727587.943:2370): avc: denied { read } for comm="AppInit9" name="file-nr" dev="proc" ino=745762 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3336.172652] c2    586 type=1400 audit(1657727587.943:2371): avc: denied { open } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=745762 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<4>[ 3336.534946] c7    146 CPU7: update max cpu_capacity 539
+<38>[ 3337.383990] c2    586 type=1400 audit(1657727587.943:2371): avc: denied { open } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=745762 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3337.384053] c2    586 type=1400 audit(1657727589.156:2373): avc: denied { associate } for comm="Binder:788_4" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<6>[ 3337.584611] c7  21784 google_charger: usbchg=USB typec=C usbv=4881 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3337.584687] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4104a01030011 [0x11:1:3:4170:500] chg=u
+<6>[ 3337.584692] c7  21784 google_battery: MSC_DIN chg_state=1f4104a01030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4170 icl=500
+<6>[ 3337.587246] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4176875 ibatt=536250 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3337.587249] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3337.587251] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3337.587261] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3337.848572] c3    586 type=1400 audit(1657727589.156:2373): avc: denied { associate } for comm="Binder:788_4" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3337.852596] c3    586 type=1400 audit(1657727589.626:2374): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3337.852818] c3    586 type=1400 audit(1657727589.626:2374): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3337.853402] c3    586 type=1400 audit(1657727589.626:2375): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3337.853511] c3    586 type=1400 audit(1657727589.626:2375): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3337.853783] c3    586 type=1400 audit(1657727589.626:2376): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<4>[ 3338.210905] c3  15645 CPU7: update max cpu_capacity 505
+<6>[ 3339.035849] c6  15645 msm_crus_store_imped: left impedance 7.64528114 ohms
+<6>[ 3339.037918] c6  15645 msm_crus_store_imped: right impedance 6.77086060 ohms
+<6>[ 3339.051703] c6  15645 afe_close: port_id = 0x9020
+<6>[ 3339.323018] c5  15645 afe_close: port_id = 0x9021
+<6>[ 3339.554424] c5   1124 abc,airbrush-sm soc:abc-sm: Cooling state updated: ext=3, bcl=0, int=0, ready=1
+<6>[ 3339.554433] c5   1124 abc,airbrush-sm soc:abc-sm: Throttle state updated to 3
+<6>[ 3339.590739] c7  21784 google_charger: usbchg=USB typec=C usbv=4886 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3339.590822] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4103801030011 [0x11:1:3:4152:500] chg=u
+<6>[ 3339.590833] c7  21784 google_battery: MSC_DIN chg_state=1f4103801030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4152 icl=500
+<6>[ 3339.593787] c7  21784 google_battery: MSC_DSG vbatt_idx:1->1 vbatt=4210781 ibatt=398437 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3339.593793] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3339.593797] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=30000
+<6>[ 3339.593820] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3339.648702] c7   1358 CPU7: update max cpu_capacity 380
+<38>[ 3339.999289] c3    586 type=1400 audit(1657727589.626:2376): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3340.000824] c3    586 type=1400 audit(1657727591.776:2377): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3340.001130] c3    586 type=1400 audit(1657727591.776:2377): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3340.001679] c3    586 type=1400 audit(1657727591.776:2378): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3341.583700] c3    586 type=1400 audit(1657727591.776:2378): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3341.583738] c3    586 type=1400 audit(1657727593.363:2379): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3341.588070] c2    586 type=1400 audit(1657727593.363:2379): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3341.588111] c2    586 type=1400 audit(1657727593.363:2380): avc: denied { write } for comm="kworker/7:0H" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<6>[ 3341.597471] c7  21784 google_charger: usbchg=USB typec=C usbv=4880 usbc=489 usbMv=5000 usbMc=500
+<6>[ 3341.597548] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a001030011 [0x11:1:3:4256:500] chg=u
+<6>[ 3341.597555] c7  21784 google_battery: MSC_DIN chg_state=1f410a001030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4256 icl=500
+<6>[ 3341.601494] c7  21784 google_battery: MSC_TYPE vt=4300000 vb=4248281 fv_uv=4300000 chg_type=1
+<6>[ 3341.601500] c7  21784 google_battery: MSC_NYET ibatt=-107187 cc_next_max=1400000 t_cnt=1
+<6>[ 3341.601505] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3341.601509] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+<6>[ 3341.601528] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3343.603805] c7  21784 google_charger: usbchg=USB typec=C usbv=4884 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3343.603894] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a001030011 [0x11:1:3:4256:500] chg=u
+<6>[ 3343.603907] c7  21784 google_battery: MSC_DIN chg_state=1f410a001030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4256 icl=500
+<6>[ 3343.606809] c7  21784 google_battery: MSC_TYPE vt=4300000 vb=4258750 fv_uv=4300000 chg_type=1
+<6>[ 3343.606813] c7  21784 google_battery: MSC_NYET ibatt=-133750 cc_next_max=1400000 t_cnt=2
+<6>[ 3343.606821] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3343.606825] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+<6>[ 3343.606842] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3345.610051] c7  21784 google_charger: usbchg=USB typec=C usbv=4974 usbc=190 usbMv=5000 usbMc=500
+<6>[ 3345.610152] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a101030001 [0x1:1:3:4257:500] chg=u
+<6>[ 3345.610163] c7  21784 google_battery: MSC_DIN chg_state=1f410a101030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4257 icl=500
+<6>[ 3345.613262] c7  21784 google_battery: MSC_TYPE vt=4300000 vb=4258125 fv_uv=4300000 chg_type=1
+<6>[ 3345.613267] c7  21784 google_battery: MSC_NYET ibatt=-118437 cc_next_max=1400000 t_cnt=3
+<6>[ 3345.613273] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:1->1, fv=4300000->4300000, cc_max=1975000
+<6>[ 3345.613277] c7  21784 google_battery: MSC_VOTE fv_uv=4300000 cc_max=1975000 update_interval=2000
+<6>[ 3345.613298] c7  21784 google_charger: MSC_CHG fv_uv=4300000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3347.616271] c7  21784 google_charger: usbchg=USB typec=C usbv=4968 usbc=220 usbMv=5000 usbMc=500
+<6>[ 3347.616368] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109b01030001 [0x1:1:3:4251:500] chg=u
+<6>[ 3347.616379] c7  21784 google_battery: MSC_DIN chg_state=1f4109b01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4251 icl=500
+<6>[ 3347.619719] c7  21784 google_battery: MSC_DSG vbatt_idx:1->2 vbatt=4246406 ibatt=1875 fv_uv=4300000 cv_cnt=0 ov_cnt=0
+<6>[ 3347.619725] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3347.619729] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3347.619757] c7  21784 sm8150_bms: CHARGE_PAUSE : pause=1 -> val=1 (0)
+<6>[ 3347.619772] c7  21784 sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=0, val=0 pause=1 (0)
+<6>[ 3347.619786] c7  21784 sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4400000, val=80 (0)
+<6>[ 3347.619789] c7  21784 google_charger: MSC_CHG fv_uv=4300000->4400000 cc_max=0->0 rc=0
+<6>[ 3347.619796] c5  22095 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3348.036506] c5  22095 backgrounded_uid 10122
+<38>[ 3348.310406] c3    586 type=1400 audit(1657727593.363:2380): avc: denied { write } for comm="kworker/7:0H" laddr=192.168.0.18 lport=43484 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3348.311767] c3    586 type=1400 audit(1657727600.090:2381): avc: denied { read } for comm="AppInit9" name="file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3348.312321] c3    586 type=1400 audit(1657727600.090:2381): avc: denied { read } for comm="AppInit9" name="file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3348.314499] c3    586 type=1400 audit(1657727600.090:2382): avc: denied { open } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3348.314640] c3    586 type=1400 audit(1657727600.090:2382): avc: denied { open } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3348.315887] c3    586 type=1400 audit(1657727600.090:2383): avc: denied { getattr } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<6>[ 3349.622459] c7  21784 google_charger: usbchg=USB typec=C usbv=4984 usbc=155 usbMv=5000 usbMc=500
+<6>[ 3349.622555] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109c01030001 [0x1:1:3:4252:500] chg=u
+<6>[ 3349.622564] c7  21784 google_battery: MSC_DIN chg_state=1f4109c01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4252 icl=500
+<6>[ 3349.625826] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4247500 ibatt=625 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3349.625833] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3349.625838] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3349.625860] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3350.551428] c4   1124 abc,airbrush-sm soc:abc-sm: Cooling state updated: ext=0, bcl=0, int=0, ready=1
+<6>[ 3350.551436] c4   1124 abc,airbrush-sm soc:abc-sm: Throttle state updated to 0
+<38>[ 3350.771181] c2    586 type=1400 audit(1657727600.090:2383): avc: denied { getattr } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3350.772254] c3    586 type=1400 audit(1657727602.550:2384): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3350.772579] c3    586 type=1400 audit(1657727602.550:2384): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3350.773332] c3    586 type=1400 audit(1657727602.550:2385): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<6>[ 3351.628750] c7  21784 google_charger: usbchg=USB typec=C usbv=4979 usbc=178 usbMv=5000 usbMc=500
+<6>[ 3351.628851] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109f01030001 [0x1:1:3:4255:500] chg=u
+<6>[ 3351.628859] c7  21784 google_battery: MSC_DIN chg_state=1f4109f01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4255 icl=500
+<6>[ 3351.632217] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4249843 ibatt=1250 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3351.632223] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3351.632228] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3351.632249] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<38>[ 3352.664036] c2    586 type=1400 audit(1657727602.550:2385): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3352.665409] c2    586 type=1400 audit(1657727604.443:2386): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3352.665802] c2    586 type=1400 audit(1657727604.443:2386): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3352.667628] c2    586 type=1400 audit(1657727604.443:2387): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<6>[ 3353.635019] c7  21784 google_charger: usbchg=USB typec=C usbv=4980 usbc=180 usbMv=5000 usbMc=500
+<6>[ 3353.635120] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a201030001 [0x1:1:3:4258:500] chg=u
+<6>[ 3353.635130] c7  21784 google_battery: MSC_DIN chg_state=1f410a201030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4258 icl=500
+<6>[ 3353.638361] c7  21784 google_battery: MSC_LAST vbatt=4249062 ibatt=-1562 fv_uv=4400000
+<6>[ 3353.638368] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3353.638372] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3353.638391] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3355.641085] c7  21784 google_charger: usbchg=USB typec=C usbv=4984 usbc=189 usbMv=5000 usbMc=500
+<6>[ 3355.641184] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109d01030001 [0x1:1:3:4253:500] chg=u
+<6>[ 3355.641196] c7  21784 google_battery: MSC_DIN chg_state=1f4109d01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4253 icl=500
+<6>[ 3355.644540] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4248906 ibatt=937 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3355.644548] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3355.644552] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3355.644575] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3357.646964] c7  21784 google_charger: usbchg=USB typec=C usbv=4977 usbc=247 usbMv=5000 usbMc=500
+<6>[ 3357.647065] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109d01030001 [0x1:1:3:4253:500] chg=u
+<6>[ 3357.647078] c7  21784 google_battery: MSC_DIN chg_state=1f4109d01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4253 icl=500
+<6>[ 3357.650166] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4250625 ibatt=1250 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3357.650172] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3357.650176] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3357.650193] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3358.206434] c5  16153 CPU5: update max cpu_capacity 538
+<4>[ 3358.346855] c7  21784 CPU7: update max cpu_capacity 539
+<6>[ 3359.651722] c7  21784 google_charger: usbchg=USB typec=C usbv=4878 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3359.651804] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a001030001 [0x1:1:3:4256:500] chg=u
+<6>[ 3359.651813] c7  21784 google_battery: MSC_DIN chg_state=1f410a001030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4256 icl=500
+<6>[ 3359.654590] c7  21784 google_battery: MSC_LAST vbatt=4251718 ibatt=-59687 fv_uv=4400000
+<6>[ 3359.654597] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3359.654601] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3359.654617] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3360.183595] c5   9047 CPU5: update max cpu_capacity 580
+<4>[ 3361.655193] c7  21784 CPU7: update max cpu_capacity 581
+<6>[ 3361.656584] c7  21784 google_charger: usbchg=USB typec=C usbv=4986 usbc=181 usbMv=5000 usbMc=500
+<6>[ 3361.656682] c7  21784 sm8150_bms: MSC_PCS chg_state=1f410a001030001 [0x1:1:3:4256:500] chg=u
+<6>[ 3361.656693] c7  21784 google_battery: MSC_DIN chg_state=1f410a001030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4256 icl=500
+<6>[ 3361.659717] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4252500 ibatt=3125 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3361.659724] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3361.659728] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3361.659745] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<4>[ 3362.180265] c6      9 CPU6: update max cpu_capacity 614
+<4>[ 3362.369791] c7   2846 CPU7: update max cpu_capacity 615
+<38>[ 3362.504980] c2    586 type=1400 audit(1657727604.443:2387): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3362.505672] c2    586 type=1400 audit(1657727614.267:2388): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3362.505830] c2    586 type=1400 audit(1657727614.267:2388): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3362.506829] c2    586 type=1400 audit(1657727614.267:2389): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3362.933154] c2    586 type=1400 audit(1657727614.267:2389): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3362.934188] c2    586 type=1400 audit(1657727614.713:2390): avc: denied { read } for comm="AppInit9" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3362.934364] c2    586 type=1400 audit(1657727614.713:2390): avc: denied { read } for comm="AppInit9" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3362.935465] c2    586 type=1400 audit(1657727614.713:2391): avc: denied { open } for comm="AppInit9" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<6>[ 3363.662155] c7  21784 google_charger: usbchg=USB typec=C usbv=4985 usbc=200 usbMv=5000 usbMc=500
+<6>[ 3363.662257] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109f01030001 [0x1:1:3:4255:500] chg=u
+<6>[ 3363.662269] c7  21784 google_battery: MSC_DIN chg_state=1f4109f01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4255 icl=500
+<6>[ 3363.665514] c7  21784 google_battery: MSC_LAST vbatt=4263281 ibatt=-625 fv_uv=4400000
+<6>[ 3363.665520] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3363.665525] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3363.665543] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<12>[ 3364.130448] c1    811 healthd: battery l=99 v=4249 t=40.5 h=2 st=4 c=2 fc=2711000 cc=16 chg=u
+<4>[ 3364.186097] c4   2076 CPU4: update max cpu_capacity 648
+<4>[ 3364.189409] c7     54 CPU7: update max cpu_capacity 650
+<38>[ 3365.491413] c2    586 type=1400 audit(1657727614.713:2391): avc: denied { open } for comm="AppInit9" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3365.491954] c2    586 type=1400 audit(1657727617.270:2392): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3365.492357] c2    586 type=1400 audit(1657727617.270:2392): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3365.493099] c2    586 type=1400 audit(1657727617.270:2393): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3365.493214] c2    586 type=1400 audit(1657727617.270:2393): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3365.493787] c2    586 type=1400 audit(1657727617.270:2394): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<6>[ 3365.667125] c7  21784 google_charger: usbchg=USB typec=C usbv=4937 usbc=372 usbMv=5000 usbMc=500
+<6>[ 3365.667225] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109e01030001 [0x1:1:3:4254:500] chg=u
+<6>[ 3365.667236] c7  21784 google_battery: MSC_DIN chg_state=1f4109e01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4254 icl=500
+<6>[ 3365.670286] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4249531 ibatt=2187 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3365.670293] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3365.670297] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3365.670317] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3367.672657] c7  21784 google_charger: usbchg=USB typec=C usbv=4956 usbc=244 usbMv=5000 usbMc=500
+<6>[ 3367.672787] c7  21784 sm8150_bms: MSC_PCS chg_state=1f4109e01030001 [0x1:1:3:4254:500] chg=u
+<6>[ 3367.672796] c7  21784 google_battery: MSC_DIN chg_state=1f4109e01030001 f=0x1 chg_s=Not Charging chg_t=None vchg=4254 icl=500
+<6>[ 3367.675721] c7  21784 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4252968 ibatt=1875 fv_uv=4400000 cv_cnt=0 ov_cnt=0
+<6>[ 3367.675727] c7  21784 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3367.675731] c7  21784 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3367.675747] c7  21784 google_charger: MSC_CHG fv_uv=4400000, cc_max=0, rerun in 2000 ms (0)
+<6>[ 3368.739067] c5   1124 sm8150_bms: CHARGE_DISABLE : disable=0 -> val=1 (0)
+<6>[ 3368.739071] c5   1124 google_charger: MSC_THERM_FCC lvl=3 (0)
+<6>[ 3368.740533] c5  16153 google_charger: usbchg=USB typec=C usbv=4885 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3368.740607] c5  16153 sm8150_bms: MSC_PCS chg_state=1f410a101030011 [0x11:1:3:4257:500] chg=u
+<6>[ 3368.740612] c5  16153 google_battery: MSC_DIN chg_state=1f410a101030011 f=0x11 chg_s=Not Charging chg_t=None vchg=4257 icl=500
+<6>[ 3368.743164] c5  16153 google_battery: MSC_LAST vbatt=4251562 ibatt=0 fv_uv=4400000
+<6>[ 3368.743168] c5  16153 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3368.743170] c5  16153 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3368.743218] c5  16153 sm8150_bms: CHARGE_PAUSE : pause=0 -> val=0 (0)
+<6>[ 3368.743235] c5  16153 sm8150_bms: CHARGE_DISABLE : disable=1 -> val=0 (0)
+<6>[ 3368.743255] c5  16153 sm8150_bms: CHARGE_DISABLE : disable=0 -> val=1 (0)
+<6>[ 3368.743256] c5  16153 sm8150_bms: CONSTANT_CHARGE_CURRENT_MAX : ivalue=487500, val=9 pause=0 (0)
+<6>[ 3368.743265] c5  16153 sm8150_bms: CONSTANT_CHARGE_VOLTAGE_MAX : ivalue=4400000, val=80 (0)
+<6>[ 3368.743267] c5  16153 google_charger: MSC_CHG fv_uv=4400000->4400000 cc_max=0->500000 rc=0
+<6>[ 3368.743271] c5  16153 google_charger: MSC_CHG fv_uv=4400000, cc_max=500000, rerun in 2000 ms (0)
+<6>[ 3369.052564] c2  13350 sm8150_bms: MSC_PCS chg_state=1f410a103010005 [0x5:3:1:4257:500] chg=u
+<6>[ 3369.055808] c2  13350 google_charger: usbchg=USB typec=C usbv=4883 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3369.055926] c2  13350 sm8150_bms: MSC_PCS chg_state=1f410a103010005 [0x5:3:1:4257:500] chg=u
+<6>[ 3369.055937] c2  13350 google_battery: MSC_DIN chg_state=1f410a103010005 f=0x5 chg_s=Charging chg_t=Fast vchg=4257 icl=500
+<6>[ 3369.062466] c2  13350 google_battery: MSC_LAST vbatt=4253437 ibatt=-58125 fv_uv=4400000
+<6>[ 3369.062476] c2  13350 google_battery: MSC_LOGIC cv_cnt=0 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3369.062480] c2  13350 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3369.062522] c2  13350 google_charger: MSC_CHG fv_uv=4400000, cc_max=500000, rerun in 30000 ms (0)
+<12>[ 3369.066766] c7    811 healthd: battery l=99 v=4253 t=40.5 h=2 st=4 c=-58 fc=2711000 cc=16 chg=u
+<38>[ 3369.710931] c2    586 type=1400 audit(1657727617.270:2394): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3369.711333] c2    586 type=1400 audit(1657727621.490:2395): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3369.711471] c2    586 type=1400 audit(1657727621.490:2395): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3369.711799] c2    586 type=1400 audit(1657727621.490:2396): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3370.549975] c2    586 type=1400 audit(1657727621.490:2396): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3370.550829] c3    586 type=1400 audit(1657727622.330:2397): avc: denied { read } for comm="AppInit9" name="file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3370.551190] c3    586 type=1400 audit(1657727622.330:2397): avc: denied { read } for comm="AppInit9" name="file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3370.551857] c3    586 type=1400 audit(1657727622.330:2398): avc: denied { open } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3370.552045] c3    586 type=1400 audit(1657727622.330:2398): avc: denied { open } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3370.552687] c3    586 type=1400 audit(1657727622.330:2399): avc: denied { getattr } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3371.648768] c2    586 type=1400 audit(1657727622.330:2399): avc: denied { getattr } for comm="AppInit9" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3371.649300] c2    586 type=1400 audit(1657727623.427:2400): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3371.649597] c2    586 type=1400 audit(1657727623.427:2400): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3371.650452] c2    586 type=1400 audit(1657727623.427:2401): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3371.944126] c2    586 type=1400 audit(1657727623.427:2401): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3371.944154] c2    586 type=1400 audit(1657727623.723:2402): avc: denied { associate } for comm="Binder:788_4" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3373.254017] c2    586 type=1400 audit(1657727623.723:2402): avc: denied { associate } for comm="Binder:788_4" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3373.254745] c2    586 type=1400 audit(1657727625.033:2403): avc: denied { read } for comm="AppInit9" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3373.254986] c2    586 type=1400 audit(1657727625.033:2403): avc: denied { read } for comm="AppInit9" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3373.256230] c2    586 type=1400 audit(1657727625.033:2404): avc: denied { open } for comm="AppInit9" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3378.336909] c2    586 type=1400 audit(1657727625.033:2404): avc: denied { open } for comm="AppInit9" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3378.337307] c2    586 type=1400 audit(1657727630.117:2405): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3378.337450] c2    586 type=1400 audit(1657727630.117:2405): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3378.337718] c2    586 type=1400 audit(1657727630.117:2406): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3378.337786] c2    586 type=1400 audit(1657727630.117:2406): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3378.338050] c2    586 type=1400 audit(1657727630.117:2407): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3380.691924] c2    586 type=1400 audit(1657727630.117:2407): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=740931 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3380.691959] c2    586 type=1400 audit(1657727632.470:2408): avc: denied { associate } for comm="Binder:788_4" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<1>[ 3383.966229] c0  13689 Unable to handle kernel paging request at virtual address 001d4c11
+<1>[ 3383.966252] c0  13689 Mem abort info:
+<1>[ 3383.966260] c0  13689   Exception class = DABT (current EL), IL = 32 bits
+<1>[ 3383.966290] c0  13689   SET = 0, FnV = 0
+<1>[ 3383.966296] c0  13689   EA = 0, S1PTW = 0
+<1>[ 3383.966302] c0  13689   FSC = 6
+<1>[ 3383.966308] c0  13689 Data abort info:
+<1>[ 3383.966313] c0  13689   ISV = 0, ISS = 0x00000006
+<1>[ 3383.966320] c0  13689   CM = 0, WnR = 0
+<1>[ 3383.966330] c0  13689 user pgtable: 4k pages, 39-bit VAs, pgd = 00000000f8a8a582
+<1>[ 3383.966338] c0  13689 [00000000001d4c11] *pgd=00000000af591003, *pud=00000000af591003, *pmd=0000000000000000
+<0>[ 3383.966357] c0  13689 Internal error: Oops: 96000006 [#1] PREEMPT SMP
+<4>[ 3383.966366] c0  13689 Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+<0>[ 3383.966446] c0  13689 Process Binder:13449_6 (pid: 13689, stack limit = 0x000000000fe04dd5)
+<4>[ 3383.966456] c0  13689 CPU: 0 PID: 13689 Comm: Binder:13449_6 Tainted: G S      W  O    4.14.170_audio #48
+<4>[ 3383.966464] c0  13689 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.966473] c0  13689 task: 00000000df3d681f task.stack: 000000000fe04dd5
+<4>[ 3383.966490] c0  13689 pc : do_swap_page+0x6d4/0xacc
+<4>[ 3383.966497] c0  13689 lr : do_swap_page+0x5c4/0xacc
+<4>[ 3383.966504] c0  13689 sp : ffffff801a063c00 pstate : 20400145
+<4>[ 3383.966509] c0  13689 x29: ffffff801a063ca0 x28: 0000000000000004 
+<4>[ 3383.966517] c0  13689 x27: 0000000000000007 x26: ffffffdf45017b80 
+<4>[ 3383.966525] c0  13689 x25: 0000000000000070 x24: ffffffbf00000000 
+<4>[ 3383.966533] c0  13689 x23: ffffff9e18be0000 x22: ffffffde30afb5a0 
+<4>[ 3383.966541] c0  13689 x21: ffffffbf7aee8c40 x20: 0000000000000000 
+<4>[ 3383.966549] c0  13689 x19: ffffff801a063cb0 x18: ffffffdeb4d94028 
+<4>[ 3383.966556] c0  13689 x17: 0000000000000000 x16: 000000000000007e 
+<4>[ 3383.966564] c0  13689 x15: 0000000000000254 x14: 0000000000714435 
+<4>[ 3383.966572] c0  13689 x13: 0000000000000004 x12: fffffffffe280000 
+<4>[ 3383.966580] c0  13689 x11: 00000000000ea610 x10: 0000000000000000 
+<4>[ 3383.966588] c0  13689 x9 : 00000000001d4c11 x8 : ffffff9e19397000 
+<4>[ 3383.966596] c0  13689 x7 : 0000000000000000 x6 : ffffff801bee3b50 
+<4>[ 3383.966604] c0  13689 x5 : 0000000000000028 x4 : 0000000000000000 
+<4>[ 3383.966611] c0  13689 x3 : ffffff801a063c40 x2 : 0000000000000001 
+<4>[ 3383.966619] c0  13689 x1 : 00000000014000c0 x0 : ffffffbf78c2bef0 
+<4>[ 3383.966628] c0  13689 
+<4>[ 3383.966628] c0  13689 PC: 0xffffff9e17621f68:
+<4>[ 3383.966635] c0  13689 1f68  7100013f 1a9f17e9 7100015f 1a9f17ea 2a0a0129 b9400fea 2a090149 37000449
+<4>[ 3383.966653] c0  13689 1f88  f9400bea b000ec69 91380129 5294c20b f86ad92a 52898229 72a003a9 72a001cb
+<4>[ 3383.966668] c0  13689 1fa8  38696949 529387cc 9100114d 8b0b014b 9100414e 7100013f 320003e0 9a8b01c9
+<4>[ 3383.966683] c0  13689 1fc8  9a8d0141 b8e0003e 0b1e0000 6b0c001f 5400014c d538410a b945c54a 321d07eb
+<4>[ 3383.966699] c0  13689 
+<4>[ 3383.966699] c0  13689 LR: 0xffffff9e17621e58:
+<4>[ 3383.966706] c0  13689 1e58  f9400108 934cfd2c d349fd6b d34cbd4a d37ae54a cb0c194a f2fffff8 92746508
+<4>[ 3383.966720] c0  13689 1e78  927d216b aa080168 8b18014a cb090108 b27c0540 b25a6516 f9002e60 943d1d8a
+<4>[ 3383.966735] c0  13689 1e98  f9002a76 f94002c8 f9401a69 eb09011f 54000101 f94012a8 d1000509 f240011f
+<4>[ 3383.966749] c0  13689 1eb8  9a8902a8 f9400108 371004a8 321f03f4 f94023e1 aa1503e0 2a1f03e2 9400b488
+<4>[ 3383.966765] c0  13689 
+<4>[ 3383.966765] c0  13689 SP: 0xffffff801a063bc0:
+<4>[ 3383.966772] c0  13689 3bc0  17621fa8 ffffff9e 20400145 00000000 014000c0 00000000 00000000 ffffffbf
+<4>[ 3383.966786] c0  13689 3be0  ffffffff 0000007f 0081ab00 d83b2719 1a063ca0 ffffff80 17621fa8 ffffff9e
+<4>[ 3383.966800] c0  13689 3c00  00000000 ffffffbf 00000001 00000000 ffffffff 00000000 00000001 00000000
+<4>[ 3383.966817] c0  13689 3c20  1a063c50 ffffff80 01fae99a 02000000 385a0001 ffffffde 175f44b4 ffffff9e
+<4>[ 3383.966833] c0  13689 
+<4>[ 3383.966840] c0  13689 Call trace:
+<4>[ 3383.966850] c0  13689  do_swap_page+0x6d4/0xacc
+<4>[ 3383.966858] c0  13689  handle_mm_fault+0x40c/0xb60
+<4>[ 3383.966870] c0  13689  do_page_fault+0x23c/0x3bc
+<4>[ 3383.966878] c0  13689  do_translation_fault+0x48/0xa0
+<4>[ 3383.966888] c0  13689  do_mem_abort+0x50/0xd8
+<4>[ 3383.966897] c0  13689  el0_da+0x20/0x24
+<0>[ 3383.966909] c0  13689 Code: f86ad92a 52898229 72a003a9 72a001cb (38696949) 
+<4>[ 3383.966919] c0  13689 ---[ end trace 32a0b944c269b154 ]---
+<0>[ 3383.976874] c0  13689 Kernel panic - not syncing: Fatal exception
+<2>[ 3383.976890] c0  13689 SMP: stopping secondary CPUs
+<2>[ 3383.976901] c1  15624 CPU1: stopping
+<4>[ 3383.976915] c1  15624 CPU: 1 PID: 15624 Comm: Thread-7 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.976922] c1  15624 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.976930] c1  15624 task: 000000006a7f1554 task.stack: 00000000346e5483
+<4>[ 3383.976938] c1  15624 pc : 0x7f39198598
+<4>[ 3383.976944] c1  15624 lr : 0x7ec5559fa0
+<4>[ 3383.976949] c1  15624 sp : 0000007ec69fbc30 pstate : 60000000
+<4>[ 3383.976955] c1  15624 x29: 0000007ec69fbca0 x28: 0000000000000000 
+<4>[ 3383.976964] c1  15624 x27: 0000007fbe491020 x26: 0000007ec69fc020 
+<4>[ 3383.976971] c1  15624 x25: 0000007ec69fbd50 x24: 0000007ec69fbd50 
+<4>[ 3383.976979] c1  15624 x23: 0000007ec69fbdd8 x22: 0000007ec69fc020 
+<4>[ 3383.976987] c1  15624 x21: 0000007ec69fbc80 x20: 0000007ec5b398e0 
+<4>[ 3383.976994] c1  15624 x19: 0000007ec69fc020 x18: 0000007ec0754000 
+<4>[ 3383.977002] c1  15624 x17: 0000007fbcd67018 x16: 0000007ecfb99c18 
+<4>[ 3383.977009] c1  15624 x15: 0000007f38f5d010 x14: 0000007f38f5cf20 
+<4>[ 3383.977017] c1  15624 x13: 0000007f38f5d700 x12: 0000007f38f5d600 
+<4>[ 3383.977025] c1  15624 x11: 0000000000000000 x10: 0000000000000001 
+<4>[ 3383.977032] c1  15624 x9 : d2c870e69a2ad9bc x8 : d2c870e69a2ad9bc 
+<4>[ 3383.977040] c1  15624 x7 : 0000007f38f5c620 x6 : 0000000000000000 
+<4>[ 3383.977047] c1  15624 x5 : 0000000000000000 x4 : 0000000000000000 
+<4>[ 3383.977055] c1  15624 x3 : 0000000000000000 x2 : 0000000000000000 
+<4>[ 3383.977062] c1  15624 x1 : 0000007ec69fbc80 x0 : 0000000000000000 
+<4>[ 3383.977069] c1  15624 
+<4>[ 3383.977076] c1  15624 CPU: 1 PID: 15624 Comm: Thread-7 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.977081] c1  15624 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.977087] c1  15624 Call trace:
+<4>[ 3383.977101] c1  15624  dump_backtrace+0x0/0x1e4
+<4>[ 3383.977107] c1  15624  show_stack+0x18/0x24
+<4>[ 3383.977118] c1  15624  dump_stack+0xbc/0xf8
+<4>[ 3383.977126] c1  15624  ipi_cpu_stop+0x78/0xa0
+<4>[ 3383.977132] c1  15624  ipi_cpu_stop+0x0/0xa0
+<4>[ 3383.977139] c1  15624  gic_handle_irq+0x134/0x1d4
+<4>[ 3383.977145] c1  15624  el0_irq_naked+0x60/0x6c
+<2>[ 3383.977152] c4  22130 CPU4: stopping
+<4>[ 3383.977161] c4  22130 CPU: 4 PID: 22130 Comm: kworker/u16:7 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.977165] c4  22130 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.977185] c4  22130 Workqueue: devfreq_wq devfreq_monitor
+<4>[ 3383.977190] c4  22130 task: 00000000befbc9bd task.stack: 000000002a94df8f
+<4>[ 3383.977201] c4  22130 pc : smp_call_function_single+0xe4/0x1a8
+<4>[ 3383.977206] c4  22130 lr : smp_call_function_single+0xb8/0x1a8
+<4>[ 3383.977209] c4  22130 sp : ffffff801c1e3ae0 pstate : 60c00145
+<4>[ 3383.977213] c4  22130 x29: ffffff801c1e3b40 x28: 0000000000000000 
+<4>[ 3383.977218] c4  22130 x27: ffffffdf69015280 x26: ffffffdf69015080 
+<4>[ 3383.977223] c4  22130 x25: 0000000000000064 x24: 0000000000000000 
+<4>[ 3383.977228] c4  22130 x23: ffffffde01b3e900 x22: ffffffdeed648400 
+<4>[ 3383.977232] c4  22130 x21: ffffff801c1e3c00 x20: ffffffde01b3e900 
+<4>[ 3383.977237] c4  22130 x19: 0000000000000000 x18: ffffffdeaf328850 
+<4>[ 3383.977241] c4  22130 x17: 0000000000000000 x16: 0000000000000000 
+<4>[ 3383.977246] c4  22130 x15: 0000000000000022 x14: 0000000000000001 
+<4>[ 3383.977250] c4  22130 x13: 0000000000000000 x12: 0000000000000003 
+<4>[ 3383.977255] c4  22130 x11: 0000000000000001 x10: 0000000000000000 
+<4>[ 3383.977260] c4  22130 x9 : 0000000000000003 x8 : ffffff801c1e3af8 
+<4>[ 3383.977264] c4  22130 x7 : 0005000800000001 x6 : ffffffdf745b214c 
+<4>[ 3383.977269] c4  22130 x5 : 0000000000000040 x4 : 0000000000000001 
+<4>[ 3383.977273] c4  22130 x3 : ffffff801c1e3b58 x2 : 0000000000000001 
+<4>[ 3383.977278] c4  22130 x1 : 0000000000000008 x0 : 0000000000000000 
+<4>[ 3383.977283] c4  22130 
+<4>[ 3383.977283] c4  22130 PC: 0xffffff9e1755cfbc:
+<4>[ 3383.977288] c4  22130 cfbc  340002a3 910003e1 aa0803e3 910003f3 9400003d b27d0668 88dffd09 2a0003f3
+<4>[ 3383.977298] c4  22130 cfdc  360004a9 2a0903e9 d50320bf d503205f 885f7d0a 4a09014a 3500004a d503205f
+<4>[ 3383.977307] c4  22130 cffc  88dffd09 3707ff09 1400001b d4210000 35fffda3 f000c02a 9112014a d538d089
+<4>[ 3383.977316] c4  22130 d01c  8b0a0121 91006029 88dffd29 36000169 2a0903e9 9100602a d50320bf d503205f
+<4>[ 3383.977326] c4  22130 
+<4>[ 3383.977326] c4  22130 LR: 0xffffff9e1755cf90:
+<4>[ 3383.977330] c4  22130 cf90  f86ad96a 320003eb 9ac92169 aa0103e2 ea0a013f 540000c0 d53b4229 36380089
+<4>[ 3383.977339] c4  22130 cfb0  9000f089 b94d4929 34000289 340002a3 910003e1 aa0803e3 910003f3 9400003d
+<4>[ 3383.977348] c4  22130 cfd0  b27d0668 88dffd09 2a0003f3 360004a9 2a0903e9 d50320bf d503205f 885f7d0a
+<4>[ 3383.977357] c4  22130 cff0  4a09014a 3500004a d503205f 88dffd09 3707ff09 1400001b d4210000 35fffda3
+<4>[ 3383.977366] c4  22130 
+<4>[ 3383.977366] c4  22130 SP: 0xffffff801c1e3aa0:
+<4>[ 3383.977371] c4  22130 3aa0  1755cffc ffffff9e 60c00145 00000000 1c1e3ad0 ffffff80 1755d184 ffffff9e
+<4>[ 3383.977382] c4  22130 3ac0  ffffffff ffffffff 1c1e3ae0 ffffff80 1c1e3b40 ffffff80 1755cffc ffffff9e
+<4>[ 3383.977391] c4  22130 3ae0  00000000 00000000 175d424c ffffff9e 1c1e3b58 ffffff80 00000003 00000000
+<4>[ 3383.977401] c4  22130 3b00  00000000 00000000 00000000 00000000 00000005 00000000 0081ab00 d83b2719
+<4>[ 3383.977411] c4  22130 
+<4>[ 3383.977416] c4  22130 CPU: 4 PID: 22130 Comm: kworker/u16:7 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.977421] c4  22130 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.977427] c4  22130 Workqueue: devfreq_wq devfreq_monitor
+<4>[ 3383.977431] c4  22130 Call trace:
+<4>[ 3383.977438] c4  22130  dump_backtrace+0x0/0x1e4
+<4>[ 3383.977444] c4  22130  show_stack+0x18/0x24
+<4>[ 3383.977449] c4  22130  dump_stack+0xbc/0xf8
+<4>[ 3383.977454] c4  22130  ipi_cpu_stop+0x78/0xa0
+<4>[ 3383.977458] c4  22130  ipi_cpu_stop+0x0/0xa0
+<4>[ 3383.977463] c4  22130  gic_handle_irq+0x134/0x1d4
+<4>[ 3383.977467] c4  22130  el1_irq+0xc4/0x13c
+<4>[ 3383.977471] c4  22130  smp_call_function_single+0xe4/0x1a8
+<4>[ 3383.977479] c4  22130  perf_event_read+0x2d0/0x2f0
+<4>[ 3383.977484] c4  22130  perf_event_read_value+0x44/0x10c
+<4>[ 3383.977489] c4  22130  get_cnt+0xb8/0x230
+<4>[ 3383.977495] c4  22130  devfreq_memlat_get_freq+0x4c/0x3b8
+<4>[ 3383.977500] c4  22130  update_devfreq+0x60/0x278
+<4>[ 3383.977504] c4  22130  devfreq_monitor+0x30/0x8c
+<4>[ 3383.977510] c4  22130  process_one_work+0x1f8/0x450
+<4>[ 3383.977514] c4  22130  worker_thread+0x308/0x478
+<4>[ 3383.977520] c4  22130  kthread+0x11c/0x12c
+<4>[ 3383.977526] c4  22130  ret_from_fork+0x10/0x18
+<2>[ 3383.977538] c2      0 CPU2: stopping
+<4>[ 3383.977561] c2      0 CPU: 2 PID: 0 Comm: swapper/2 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.977568] c2      0 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.977579] c2      0 task: 000000007bf25b15 task.stack: 000000001e268c3b
+<4>[ 3383.977596] c2      0 pc : lpm_cpuidle_enter+0x4a8/0x4f0
+<4>[ 3383.977603] c2      0 lr : lpm_cpuidle_enter+0x46c/0x4f0
+<4>[ 3383.977609] c2      0 sp : ffffff80080dbe60 pstate : a0c00145
+<4>[ 3383.977616] c2      0 x29: ffffff80080dbed0 x28: ffffffdf76700000 
+<4>[ 3383.977626] c2      0 x27: ffffffdf7d783f88 x26: ffffff9e1910f718 
+<4>[ 3383.977634] c2      0 x25: 0000000000000352 x24: 0000000000000000 
+<4>[ 3383.977643] c2      0 x23: ffffff9e19253000 x22: 0000000000000000 
+<4>[ 3383.977651] c2      0 x21: ffffffdf6866f080 x20: ffffffdf6866f780 
+<4>[ 3383.977659] c2      0 x19: 0000000000000000 x18: ffffffdf765cd430 
+<4>[ 3383.977668] c2      0 x17: 0000000000000000 x16: ffffffdf68e6dcfc 
+<4>[ 3383.977676] c2      0 x15: 0000000000000022 x14: 0000000000000005 
+<4>[ 3383.977685] c2      0 x13: 00000000001e3224 x12: 000000000000ea03 
+<4>[ 3383.977693] c2      0 x11: 00000000341555ac x10: 002d1ef54527aeb7 
+<4>[ 3383.977702] c2      0 x9 : 0000000000000001 x8 : 0000000000000000 
+<4>[ 3383.977710] c2      0 x7 : 0000000000000000 x6 : ffffff80148cbaac 
+<4>[ 3383.977718] c2      0 x5 : 0000000000000001 x4 : 00000313e4c2741a 
+<4>[ 3383.977726] c2      0 x3 : 0000000000000001 x2 : 0000000000000001 
+<4>[ 3383.977734] c2      0 x1 : 00000000000001c0 x0 : fffffcec1b3d8738 
+<4>[ 3383.977744] c2      0 
+<4>[ 3383.977744] c2      0 PC: 0xffffff9e180597e8:
+<4>[ 3383.977752] c2      0 97e8  97d3ad84 f10fa01f 5400006b aa1403e0 97d3acd2 f9433aa8 b4000128 911c0100
+<4>[ 3383.977774] c2      0 9808  2a1f03e1 97d3ad7b f10fa01f 5400008b f9433aa8 911c0100 97d3acc8 d50342ff
+<4>[ 3383.977790] c2      0 9828  a9477bfd 2a1303e0 a9464ff4 a94557f6 a9445ff8 a94367fa a9426ffc f85f8e5e
+<4>[ 3383.977807] c2      0 9848  910203ff d65f03c0 9414288c 17ffff18 9414288a 397842e8 35fff8e8 17fffff0
+<4>[ 3383.977824] c2      0 
+<4>[ 3383.977824] c2      0 LR: 0xffffff9e180597ac:
+<4>[ 3383.977832] c2      0 97ac  aa1403e0 97d3ad92 f10fa01f 5400006b aa1403e0 97d3ace0 d538d088 b8b56908
+<4>[ 3383.977848] c2      0 97cc  f9400be9 2a1f03e1 f8687b48 f8696908 f940c115 911c02b4 aa1403e0 97d3ad84
+<4>[ 3383.977863] c2      0 97ec  f10fa01f 5400006b aa1403e0 97d3acd2 f9433aa8 b4000128 911c0100 2a1f03e1
+<4>[ 3383.977878] c2      0 980c  97d3ad7b f10fa01f 5400008b f9433aa8 911c0100 97d3acc8 d50342ff a9477bfd
+<4>[ 3383.977894] c2      0 
+<4>[ 3383.977894] c2      0 SP: 0xffffff80080dbe20:
+<4>[ 3383.977901] c2      0 be20  18059828 ffffff9e a0c00145 00000000 00000000 00000000 6866f080 ffffffdf
+<4>[ 3383.977916] c2      0 be40  ffffffff ffffffff 00000000 00000000 080dbed0 ffffff80 18059828 ffffff9e
+<4>[ 3383.977931] c2      0 be60  7d780940 ffffffdf 7d783d98 ffffffdf 18d61f80 ffffff9e 68e6dc80 ffffffdf
+<4>[ 3383.977946] c2      0 be80  1910f000 ffffff9e 18d61d90 ffffff9e 1910e000 ffffff9e 192c1000 ffffff9e
+<4>[ 3383.977962] c2      0 
+<4>[ 3383.977971] c2      0 CPU: 2 PID: 0 Comm: swapper/2 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.977977] c2      0 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.977985] c2      0 Call trace:
+<4>[ 3383.978002] c2      0  dump_backtrace+0x0/0x1e4
+<4>[ 3383.978011] c2      0  show_stack+0x18/0x24
+<4>[ 3383.978023] c2      0  dump_stack+0xbc/0xf8
+<4>[ 3383.978032] c2      0  ipi_cpu_stop+0x78/0xa0
+<4>[ 3383.978039] c2      0  ipi_cpu_stop+0x0/0xa0
+<4>[ 3383.978047] c2      0  gic_handle_irq+0x134/0x1d4
+<4>[ 3383.978055] c2      0  el1_irq+0xc4/0x13c
+<4>[ 3383.978061] c2      0  lpm_cpuidle_enter+0x4a8/0x4f0
+<4>[ 3383.978072] c2      0  cpuidle_enter_state+0x1c4/0x340
+<4>[ 3383.978079] c2      0  cpuidle_enter+0x1c/0x28
+<4>[ 3383.978090] c2      0  do_idle+0x1a4/0x290
+<4>[ 3383.978096] c2      0  cpu_startup_entry+0x24/0x28
+<4>[ 3383.978105] c2      0  secondary_start_kernel+0x120/0x130
+<2>[ 3383.978115] c6  22231 CPU6: stopping
+<4>[ 3383.978124] c6  22231 CPU: 6 PID: 22231 Comm: cmd Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.978129] c6  22231 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.978134] c6  22231 task: 000000005d4c3da4 task.stack: 000000002040a5c6
+<4>[ 3383.978138] c6  22231 pc : 0x7fbf622fa0
+<4>[ 3383.978142] c6  22231 lr : 0x7fbf622f60
+<4>[ 3383.978146] c6  22231 sp : 0000007fffffdef0 pstate : 80000000
+<4>[ 3383.978149] c6  22231 x29: 0000007fffffdf80 x28: 0000000000000005 
+<4>[ 3383.978155] c6  22231 x27: 000000006ffffef4 x26: 0000007fbf5f6320 
+<4>[ 3383.978160] c6  22231 x25: 0000007fbf6fb000 x24: 0000000040000000 
+<4>[ 3383.978165] c6  22231 x23: 0000007fbf5ebe0c x22: 0000007fbf5e9cd1 
+<4>[ 3383.978169] c6  22231 x21: 0000007fbdad81d0 x20: 0000007fbdad81d8 
+<4>[ 3383.978174] c6  22231 x19: 0000007fbe4c0760 x18: 0000007fbee7a000 
+<4>[ 3383.978178] c6  22231 x17: 8630dd4f5955e50f x16: 0000000000000000 
+<4>[ 3383.978182] c6  22231 x15: 09bb85527d708451 x14: 0000000000000004 
+<4>[ 3383.978187] c6  22231 x13: 0000000000000011 x12: 0000000000000003 
+<4>[ 3383.978191] c6  22231 x11: 0000007fbf5f6376 x10: 000000000000008c 
+<4>[ 3383.978196] c6  22231 x9 : 0000007fbdad3668 x8 : 0000000000000000 
+<4>[ 3383.978201] c6  22231 x7 : 0000007fbe35c650 x6 : 0000007fbe35c380 
+<4>[ 3383.978205] c6  22231 x5 : 0000000000000000 x4 : 0000000000000000 
+<4>[ 3383.978210] c6  22231 x3 : 0000007fffffdf00 x2 : 00000000000005b2 
+<4>[ 3383.978214] c6  22231 x1 : 0000007fbdad3696 x0 : 0000007fbe4c0760 
+<4>[ 3383.978219] c6  22231 
+<4>[ 3383.978224] c6  22231 CPU: 6 PID: 22231 Comm: cmd Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.978228] c6  22231 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.978232] c6  22231 Call trace:
+<4>[ 3383.978242] c6  22231  dump_backtrace+0x0/0x1e4
+<4>[ 3383.978248] c6  22231  show_stack+0x18/0x24
+<4>[ 3383.978256] c6  22231  dump_stack+0xbc/0xf8
+<4>[ 3383.978262] c6  22231  ipi_cpu_stop+0x78/0xa0
+<4>[ 3383.978266] c6  22231  ipi_cpu_stop+0x0/0xa0
+<4>[ 3383.978271] c6  22231  gic_handle_irq+0x134/0x1d4
+<4>[ 3383.978276] c6  22231  el0_irq_naked+0x60/0x6c
+<2>[ 3383.978282] c5      0 CPU5: stopping
+<4>[ 3383.978297] c5      0 CPU: 5 PID: 0 Comm: swapper/5 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.978302] c5      0 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.978308] c5      0 task: 000000009ff6a7e6 task.stack: 00000000ed62bf67
+<4>[ 3383.978317] c5      0 pc : lpm_cpuidle_enter+0x4a8/0x4f0
+<4>[ 3383.978322] c5      0 lr : lpm_cpuidle_enter+0x46c/0x4f0
+<4>[ 3383.978326] c5      0 sp : ffffff80080f3e60 pstate : a0c00145
+<4>[ 3383.978330] c5      0 x29: ffffff80080f3ed0 x28: ffffffdf76702d00 
+<4>[ 3383.978336] c5      0 x27: ffffffdf7d7c5f88 x26: ffffff9e1910f718 
+<4>[ 3383.978340] c5      0 x25: 000000000000027c x24: 0000000000000000 
+<4>[ 3383.978345] c5      0 x23: ffffff9e19253000 x22: 0000000000000000 
+<4>[ 3383.978349] c5      0 x21: ffffffdf6866f080 x20: ffffffdf6866f780 
+<4>[ 3383.978353] c5      0 x19: 0000000000000000 x18: ffffffdf765ce030 
+<4>[ 3383.978358] c5      0 x17: 0000000000000000 x16: ffffffdf68e6e0fc 
+<4>[ 3383.978362] c5      0 x15: 0000000000000022 x14: 0000000000000005 
+<4>[ 3383.978367] c5      0 x13: 00000000001e3224 x12: 000000000000ea18 
+<4>[ 3383.978373] c5      0 x11: 00000000341555ac x10: 002d1ef54527aeb7 
+<4>[ 3383.978379] c5      0 x9 : 0000000000000001 x8 : 0000000000000000 
+<4>[ 3383.978385] c5      0 x7 : 0000000000000000 x6 : ffffffdeaf0d234c 
+<4>[ 3383.978390] c5      0 x5 : 0000000000000001 x4 : 00000313e4c27a01 
+<4>[ 3383.978395] c5      0 x3 : 0000000000000001 x2 : 0000000000000001 
+<4>[ 3383.978400] c5      0 x1 : 00000000000001c0 x0 : fffffcec1b3d82f2 
+<4>[ 3383.978407] c5      0 
+<4>[ 3383.978407] c5      0 PC: 0xffffff9e180597e8:
+<4>[ 3383.978412] c5      0 97e8  97d3ad84 f10fa01f 5400006b aa1403e0 97d3acd2 f9433aa8 b4000128 911c0100
+<4>[ 3383.978424] c5      0 9808  2a1f03e1 97d3ad7b f10fa01f 5400008b f9433aa8 911c0100 97d3acc8 d50342ff
+<4>[ 3383.978435] c5      0 9828  a9477bfd 2a1303e0 a9464ff4 a94557f6 a9445ff8 a94367fa a9426ffc f85f8e5e
+<4>[ 3383.978445] c5      0 9848  910203ff d65f03c0 9414288c 17ffff18 9414288a 397842e8 35fff8e8 17fffff0
+<4>[ 3383.978455] c5      0 
+<4>[ 3383.978455] c5      0 LR: 0xffffff9e180597ac:
+<4>[ 3383.978459] c5      0 97ac  aa1403e0 97d3ad92 f10fa01f 5400006b aa1403e0 97d3ace0 d538d088 b8b56908
+<4>[ 3383.978469] c5      0 97cc  f9400be9 2a1f03e1 f8687b48 f8696908 f940c115 911c02b4 aa1403e0 97d3ad84
+<4>[ 3383.978480] c5      0 97ec  f10fa01f 5400006b aa1403e0 97d3acd2 f9433aa8 b4000128 911c0100 2a1f03e1
+<4>[ 3383.978490] c5      0 980c  97d3ad7b f10fa01f 5400008b f9433aa8 911c0100 97d3acc8 d50342ff a9477bfd
+<4>[ 3383.978501] c5      0 
+<4>[ 3383.978501] c5      0 SP: 0xffffff80080f3e20:
+<4>[ 3383.978505] c5      0 3e20  18059828 ffffff9e a0c00145 00000000 00000000 00000000 6866f080 ffffffdf
+<4>[ 3383.978515] c5      0 3e40  ffffffff ffffffff 00000000 00000000 080f3ed0 ffffff80 18059828 ffffff9e
+<4>[ 3383.978525] c5      0 3e60  7d7c2940 ffffffdf 7d7c5d98 ffffffdf 18d61f80 ffffff9e 68e6e080 ffffffdf
+<4>[ 3383.978535] c5      0 3e80  1910f000 ffffff9e 18d61d90 ffffff9e 1910e000 ffffff9e 192c1000 ffffff9e
+<4>[ 3383.978545] c5      0 
+<4>[ 3383.978551] c5      0 CPU: 5 PID: 0 Comm: swapper/5 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.978556] c5      0 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.978561] c5      0 Call trace:
+<4>[ 3383.978572] c5      0  dump_backtrace+0x0/0x1e4
+<4>[ 3383.978578] c5      0  show_stack+0x18/0x24
+<4>[ 3383.978586] c5      0  dump_stack+0xbc/0xf8
+<4>[ 3383.978593] c5      0  ipi_cpu_stop+0x78/0xa0
+<4>[ 3383.978597] c5      0  ipi_cpu_stop+0x0/0xa0
+<4>[ 3383.978604] c5      0  gic_handle_irq+0x134/0x1d4
+<4>[ 3383.978610] c5      0  el1_irq+0xc4/0x13c
+<4>[ 3383.978614] c5      0  lpm_cpuidle_enter+0x4a8/0x4f0
+<4>[ 3383.978620] c5      0  cpuidle_enter_state+0x1c4/0x340
+<4>[ 3383.978625] c5      0  cpuidle_enter+0x1c/0x28
+<4>[ 3383.978630] c5      0  do_idle+0x1a4/0x290
+<4>[ 3383.978634] c5      0  cpu_startup_entry+0x24/0x28
+<4>[ 3383.978639] c5      0  secondary_start_kernel+0x120/0x130
+<2>[ 3383.978645] c7      0 CPU7: stopping
+<4>[ 3383.978659] c7      0 CPU: 7 PID: 0 Comm: swapper/7 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.978664] c7      0 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.978671] c7      0 task: 000000006bf82151 task.stack: 00000000b968684b
+<4>[ 3383.978683] c7      0 pc : lpm_cpuidle_enter+0x4a8/0x4f0
+<4>[ 3383.978687] c7      0 lr : lpm_cpuidle_enter+0x46c/0x4f0
+<4>[ 3383.978690] c7      0 sp : ffffff800820be60 pstate : a0c00145
+<4>[ 3383.978694] c7      0 x29: ffffff800820bed0 x28: ffffffdf76704b00 
+<4>[ 3383.978700] c7      0 x27: ffffffdf7d7f1f88 x26: ffffff9e1910f718 
+<4>[ 3383.978704] c7      0 x25: 00000000000006c3 x24: 0000000000000000 
+<4>[ 3383.978708] c7      0 x23: ffffff9e19253000 x22: 0000000000000000 
+<4>[ 3383.978712] c7      0 x21: ffffffdf6866f080 x20: ffffffdf6866f780 
+<4>[ 3383.978716] c7      0 x19: 0000000000000000 x18: ffffffdf765ce830 
+<4>[ 3383.978720] c7      0 x17: 0000000000000000 x16: ffffffdf68e6e0fc 
+<4>[ 3383.978724] c7      0 x15: 0000000000000022 x14: 0000000000000006 
+<4>[ 3383.978728] c7      0 x13: 00000000001e3224 x12: 000000000000ea2c 
+<4>[ 3383.978732] c7      0 x11: 00000000341555ac x10: 002d1ef54527aeb7 
+<4>[ 3383.978736] c7      0 x9 : 0000000000000001 x8 : 0000000000000000 
+<4>[ 3383.978740] c7      0 x7 : 0000000000000000 x6 : 0000000000000000 
+<4>[ 3383.978744] c7      0 x5 : 0000000000000001 x4 : 00000313e4c27e7b 
+<4>[ 3383.978749] c7      0 x3 : 0000000000000001 x2 : 0000000000000001 
+<4>[ 3383.978752] c7      0 x1 : 00000000000001c0 x0 : fffffcec1b3d7ee0 
+<4>[ 3383.978758] c7      0 
+<4>[ 3383.978758] c7      0 PC: 0xffffff9e180597e8:
+<4>[ 3383.978762] c7      0 97e8  97d3ad84 f10fa01f 5400006b aa1403e0 97d3acd2 f9433aa8 b4000128 911c0100
+<4>[ 3383.978774] c7      0 9808  2a1f03e1 97d3ad7b f10fa01f 5400008b f9433aa8 911c0100 97d3acc8 d50342ff
+<4>[ 3383.978783] c7      0 9828  a9477bfd 2a1303e0 a9464ff4 a94557f6 a9445ff8 a94367fa a9426ffc f85f8e5e
+<4>[ 3383.978792] c7      0 9848  910203ff d65f03c0 9414288c 17ffff18 9414288a 397842e8 35fff8e8 17fffff0
+<4>[ 3383.978801] c7      0 
+<4>[ 3383.978801] c7      0 LR: 0xffffff9e180597ac:
+<4>[ 3383.978805] c7      0 97ac  aa1403e0 97d3ad92 f10fa01f 5400006b aa1403e0 97d3ace0 d538d088 b8b56908
+<4>[ 3383.978814] c7      0 97cc  f9400be9 2a1f03e1 f8687b48 f8696908 f940c115 911c02b4 aa1403e0 97d3ad84
+<4>[ 3383.978823] c7      0 97ec  f10fa01f 5400006b aa1403e0 97d3acd2 f9433aa8 b4000128 911c0100 2a1f03e1
+<4>[ 3383.978832] c7      0 980c  97d3ad7b f10fa01f 5400008b f9433aa8 911c0100 97d3acc8 d50342ff a9477bfd
+<4>[ 3383.978841] c7      0 
+<4>[ 3383.978841] c7      0 SP: 0xffffff800820be20:
+<4>[ 3383.978845] c7      0 be20  18059828 ffffff9e a0c00145 00000000 00000000 00000000 6866f080 ffffffdf
+<4>[ 3383.978853] c7      0 be40  ffffffff ffffffff 00000000 00000000 0820bed0 ffffff80 18059828 ffffff9e
+<4>[ 3383.978861] c7      0 be60  7d7ee940 ffffffdf 7d7f1d98 ffffffdf 18d61f80 ffffff9e 68e6e080 ffffffdf
+<4>[ 3383.978870] c7      0 be80  1910f000 ffffff9e 18d61d90 ffffff9e 1910e000 ffffff9e 192c1000 ffffff9e
+<4>[ 3383.978879] c7      0 
+<4>[ 3383.978884] c7      0 CPU: 7 PID: 0 Comm: swapper/7 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.978887] c7      0 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.978892] c7      0 Call trace:
+<4>[ 3383.978903] c7      0  dump_backtrace+0x0/0x1e4
+<4>[ 3383.978909] c7      0  show_stack+0x18/0x24
+<4>[ 3383.978917] c7      0  dump_stack+0xbc/0xf8
+<4>[ 3383.978922] c7      0  ipi_cpu_stop+0x78/0xa0
+<4>[ 3383.978926] c7      0  ipi_cpu_stop+0x0/0xa0
+<4>[ 3383.978931] c7      0  gic_handle_irq+0x134/0x1d4
+<4>[ 3383.978935] c7      0  el1_irq+0xc4/0x13c
+<4>[ 3383.978939] c7      0  lpm_cpuidle_enter+0x4a8/0x4f0
+<4>[ 3383.978945] c7      0  cpuidle_enter_state+0x1c4/0x340
+<4>[ 3383.978949] c7      0  cpuidle_enter+0x1c/0x28
+<4>[ 3383.978955] c7      0  do_idle+0x1a4/0x290
+<4>[ 3383.978958] c7      0  cpu_startup_entry+0x24/0x28
+<4>[ 3383.978963] c7      0  secondary_start_kernel+0x120/0x130
+<2>[ 3383.978970] c3      0 CPU3: stopping
+<4>[ 3383.978995] c3      0 CPU: 3 PID: 0 Comm: swapper/3 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.979002] c3      0 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.979012] c3      0 task: 000000009352666b task.stack: 00000000fa8e30f1
+<4>[ 3383.979028] c3      0 pc : lpm_cpuidle_enter+0x4a8/0x4f0
+<4>[ 3383.979035] c3      0 lr : lpm_cpuidle_enter+0x46c/0x4f0
+<4>[ 3383.979041] c3      0 sp : ffffff80080e3e60 pstate : a0c00145
+<4>[ 3383.979047] c3      0 x29: ffffff80080e3ed0 x28: ffffffdf76700f00 
+<4>[ 3383.979057] c3      0 x27: ffffffdf7d799f88 x26: ffffff9e1910f718 
+<4>[ 3383.979066] c3      0 x25: 000000000000150f x24: 0000000000000001 
+<4>[ 3383.979075] c3      0 x23: ffffff9e19253000 x22: 0000000000000001 
+<4>[ 3383.979084] c3      0 x21: ffffffdf6866f080 x20: ffffffdf6866f780 
+<4>[ 3383.979093] c3      0 x19: 0000000000000001 x18: ffffffdf765cd830 
+<4>[ 3383.979101] c3      0 x17: 0000000000000000 x16: 0000000000000000 
+<4>[ 3383.979109] c3      0 x15: 0000000000000022 x14: 0000000000000007 
+<4>[ 3383.979118] c3      0 x13: 00000000001e3224 x12: 000000000000fdb2 
+<4>[ 3383.979126] c3      0 x11: 00000000341555ac x10: 002d1ef54527aeb7 
+<4>[ 3383.979135] c3      0 x9 : 0000000000000001 x8 : 0000000000000000 
+<4>[ 3383.979143] c3      0 x7 : 0000000000000003 x6 : 0000000000300000 
+<4>[ 3383.979151] c3      0 x5 : 0000000000000001 x4 : 0000000000000000 
+<4>[ 3383.979159] c3      0 x3 : 00000000ffffffff x2 : 0000000000000000 
+<4>[ 3383.979168] c3      0 x1 : 00000000000001c0 x0 : fffffcec1b398608 
+<4>[ 3383.979179] c3      0 
+<4>[ 3383.979179] c3      0 PC: 0xffffff9e180597e8:
+<4>[ 3383.979188] c3      0 97e8  97d3ad84 f10fa01f 5400006b aa1403e0 97d3acd2 f9433aa8 b4000128 911c0100
+<4>[ 3383.979212] c3      0 9808  2a1f03e1 97d3ad7b f10fa01f 5400008b f9433aa8 911c0100 97d3acc8 d50342ff
+<4>[ 3383.979228] c3      0 9828  a9477bfd 2a1303e0 a9464ff4 a94557f6 a9445ff8 a94367fa a9426ffc f85f8e5e
+<4>[ 3383.979245] c3      0 9848  910203ff d65f03c0 9414288c 17ffff18 9414288a 397842e8 35fff8e8 17fffff0
+<4>[ 3383.979262] c3      0 
+<4>[ 3383.979262] c3      0 LR: 0xffffff9e180597ac:
+<4>[ 3383.979270] c3      0 97ac  aa1403e0 97d3ad92 f10fa01f 5400006b aa1403e0 97d3ace0 d538d088 b8b56908
+<4>[ 3383.979286] c3      0 97cc  f9400be9 2a1f03e1 f8687b48 f8696908 f940c115 911c02b4 aa1403e0 97d3ad84
+<4>[ 3383.979302] c3      0 97ec  f10fa01f 5400006b aa1403e0 97d3acd2 f9433aa8 b4000128 911c0100 2a1f03e1
+<4>[ 3383.979318] c3      0 980c  97d3ad7b f10fa01f 5400008b f9433aa8 911c0100 97d3acc8 d50342ff a9477bfd
+<4>[ 3383.979334] c3      0 
+<4>[ 3383.979334] c3      0 SP: 0xffffff80080e3e20:
+<4>[ 3383.979342] c3      0 3e20  18059828 ffffff9e a0c00145 00000000 00000001 00000000 6866f080 ffffffdf
+<4>[ 3383.979358] c3      0 3e40  ffffffff ffffffff 00000001 00000000 080e3ed0 ffffff80 18059828 ffffff9e
+<4>[ 3383.979374] c3      0 3e60  080e3f30 ffffff80 7d799d98 ffffffdf 18d61f80 ffffff9e 68e6dc80 ffffffdf
+<4>[ 3383.979389] c3      0 3e80  1910f000 ffffff9e 18d61d90 ffffff9e 1910e000 ffffff9e 192c1000 ffffff9e
+<4>[ 3383.979406] c3      0 
+<4>[ 3383.979415] c3      0 CPU: 3 PID: 0 Comm: swapper/3 Tainted: G S    D W  O    4.14.170_audio #48
+<4>[ 3383.979421] c3      0 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 3383.979429] c3      0 Call trace:
+<4>[ 3383.979448] c3      0  dump_backtrace+0x0/0x1e4
+<4>[ 3383.979456] c3      0  show_stack+0x18/0x24
+<4>[ 3383.979469] c3      0  dump_stack+0xbc/0xf8
+<4>[ 3383.979478] c3      0  ipi_cpu_stop+0x78/0xa0
+<4>[ 3383.979484] c3      0  ipi_cpu_stop+0x0/0xa0
+<4>[ 3383.979492] c3      0  gic_handle_irq+0x134/0x1d4
+<4>[ 3383.979500] c3      0  el1_irq+0xc4/0x13c
+<4>[ 3383.979507] c3      0  lpm_cpuidle_enter+0x4a8/0x4f0
+<4>[ 3383.979517] c3      0  cpuidle_enter_state+0x1c4/0x340
+<4>[ 3383.979525] c3      0  cpuidle_enter+0x1c/0x28
+<4>[ 3383.979536] c3      0  do_idle+0x1a4/0x290
+<4>[ 3383.979542] c3      0  cpu_startup_entry+0x24/0x28
+<4>[ 3383.979552] c3      0  secondary_start_kernel+0x120/0x130
+<6>[ 3384.779729] c0  13689 set_restart_msg: set restart msg = `KP: Binder:13449_6 PC:do_swap_page+0x6d4/0xacc LR:do_swap_page+0x5c4/0xacc'
+<3>[ 3384.779755] c0  13689 ipa ipa3_active_clients_panic_notifier:266 
+<3>[ 3384.779755] c0  13689 ---- Active Clients Table ----
+<3>[ 3384.779755] c0  13689 
+<3>[ 3384.779755] c0  13689 Total active clients count: 0
+<3>[ 3384.779755] c0  13689 
+<0>[ 3384.779776] c0  13689 Kernel Offset: 0x1e0f400000 from 0xffffff8008000000
+<0>[ 3384.779788] c0  13689 CPU features: 0x05002238
+<0>[ 3384.779795] c0  13689 Memory Limit: none
