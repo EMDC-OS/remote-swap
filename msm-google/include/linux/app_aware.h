@@ -8,8 +8,9 @@
 
 #define ZRAM_TYPE   0
 #define NBD_TYPE    1
-#define COLD_PAGE_THRESHOLD 3
-#define SYS_COLD_PAGE_THRESHOLD 6
+#define COLD_PAGE_THRESHOLD 2
+#define SYS_COLD_PAGE_THRESHOLD 4
+#define ZRAM_PAGES 524287
 #define NUM_STT_ENTRIES 40000
 
 /******************************

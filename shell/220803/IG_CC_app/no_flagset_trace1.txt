@@ -1,0 +1,71 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 60/60   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-200   [005] ....     0.544697: send_target_manager: 3[REMOTE send_target_manager] target manager started
+           <...>-200   [005] ....     0.544711: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [005] ....     0.544793: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [005] ....     0.544794: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-202   [000] ....     0.544857: sys_cold_manager: 3[REMOTE sys_cold_manager] sys_cold_manager wake up
+           <...>-5919  [007] ....    70.570020: app_switch_start_handler: ###########switch start! foreground 10127#############
+           <...>-5919  [007] ....    70.570025: app_switch_start_handler: foreground 10127 switch start , total_time = 1us
+           <...>-5919  [007] ....    71.537409: app_switch_after_1_handler: foreground 10127 switch after start
+           <...>-5919  [004] ....    81.546909: app_switch_after_2_handler: foreground 10127 switch after end
+           <...>-5919  [004] ....    81.546914: miss_page_handler: miss page handler start! target(id,table): 2,1
+           <...>-746   [001] ....    81.547027: miss_page_work: miss work: foreground 10127, maxidx -1, afteridx -1
+           <...>-200   [005] ....    81.547142: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [005] ....    81.547147: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-6724  [007] ....   136.639583: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-6724  [007] ....   136.639587: app_switch_start_handler: foreground 10128 switch start , total_time = 1us
+           <...>-6724  [006] ....   137.251136: app_switch_after_1_handler: foreground 10128 switch after start
+           <...>-6724  [006] ....   147.258727: app_switch_after_2_handler: foreground 10128 switch after end
+           <...>-6724  [006] ....   147.275011: miss_page_handler: miss page handler start! target(id,table): 4,1
+           <...>-746   [001] ....   147.275060: miss_page_work: miss work: foreground 10128, maxidx -1, afteridx -1
+           <...>-200   [004] ....   147.276907: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [004] ....   147.276913: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-200   [001] ....   163.466958: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [001] ....   163.466983: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7422  [007] ....   224.233567: app_switch_start_handler: ###########switch start! foreground 10127#############
+           <...>-7422  [007] ....   224.233574: app_switch_start_handler: foreground 10127 switch start , total_time = 1us
+           <...>-7422  [004] ....   224.386304: app_switch_after_1_handler: foreground 10127 switch after start
+           <...>-7422  [002] ....   234.396032: app_switch_after_2_handler: foreground 10127 switch after end
+           <...>-7422  [002] ....   234.396056: update_to_nbd_flag: appid 2: table 0 is latter, total target 0 max idx e, l -> -1 5524, after 0 774
+           <...>-7422  [002] ....   234.428068: miss_page_handler: miss page handler start! target(id,table): 2,1
+           <...>-746   [001] ....   234.428223: miss_page_work: miss work: foreground 10127, maxidx -1, afteridx -1
+           <...>-200   [003] ....   234.428257: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+           <...>-200   [003] d..2   234.428271: send_target_manager: send target manager - id, which_table : 2, 0
+           <...>-200   [003] ....   234.428374: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+  HeapTaskDaemon-5938  [005] d..4   246.627671: __free_cluster: [REMOTE __free_cluster] free cluster 1391
+              sh-7502  [007] ....   284.456181: swap_counter_dump_handler: pid 5925: counter 0 = 13641
+              sh-7502  [007] ....   284.456185: swap_counter_dump_handler: pid 5925: counter 1 = 0
+              sh-7502  [007] ....   284.456186: swap_counter_dump_handler: pid 5925: counter 2 = 0
+              sh-7502  [007] ....   284.456186: swap_counter_dump_handler: pid 5925: counter 3 = 0
+              sh-7502  [007] ....   284.456187: swap_counter_dump_handler: pid 5925: counter 4 = 0
+              sh-7502  [007] ....   284.456189: swap_counter_dump_handler: pid 5925: counter 5 = 0
+              sh-7502  [007] ....   284.456189: swap_counter_dump_handler: pid 5925: counter >5 = 0
+              sh-7502  [007] ....   284.456191: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-7502  [007] ....   284.456192: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-7502  [007] ....   284.456193: swap_counter_dump_handler: remote: total excepted page: 0
+              sh-7502  [007] ....   284.456194: swap_counter_dump_handler: remote: sent system page: 0
+              sh-7502  [007] ....   284.456195: swap_counter_dump_handler: remote: ZRAM remain: 2022140 KB / 2097148 KB
+              sh-7502  [007] ....   284.456197: swap_counter_dump_handler: remote: total direct page: 0
+              sh-7504  [007] ....   284.475998: swap_counter_dump_handler: pid 6730: counter 0 = 0
+              sh-7504  [007] ....   284.476002: swap_counter_dump_handler: pid 6730: counter 1 = 0
+              sh-7504  [007] ....   284.476003: swap_counter_dump_handler: pid 6730: counter 2 = 0
+              sh-7504  [007] ....   284.476003: swap_counter_dump_handler: pid 6730: counter 3 = 0
+              sh-7504  [007] ....   284.476004: swap_counter_dump_handler: pid 6730: counter 4 = 0
+              sh-7504  [007] ....   284.476005: swap_counter_dump_handler: pid 6730: counter 5 = 0
+              sh-7504  [007] ....   284.476006: swap_counter_dump_handler: pid 6730: counter >5 = 0
+              sh-7504  [007] ....   284.476006: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-7504  [007] ....   284.476007: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-7504  [007] ....   284.476008: swap_counter_dump_handler: remote: total excepted page: 0
+              sh-7504  [007] ....   284.476009: swap_counter_dump_handler: remote: sent system page: 0
+              sh-7504  [007] ....   284.476010: swap_counter_dump_handler: remote: ZRAM remain: 2022140 KB / 2097148 KB
+              sh-7504  [007] ....   284.476011: swap_counter_dump_handler: remote: total direct page: 0

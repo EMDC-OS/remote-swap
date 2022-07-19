@@ -105,7 +105,7 @@ elif [ "${app}" = "clashroyale" ]; then
 elif [ "${app}" = "angrybirds" ]; then
 	am start -n com.rovio.baba/com.unity3d.player.UnityPlayerActivity -W
 elif [ "${app}" = "chrome" ]; then
-	am start -n com.android.chrome/com.google.android.apps.chrome.Main -W
+	am start -n com.android.chrome/com.google.android.apps.chrome.Main -d http://www.naver.com  -W
 elif [ "${app}" = "facebook" ]; then
 	am start -n com.facebook.katana/.activity.FbMainTabActivity -W
 elif [ "${app}" = "camera" ]; then

@@ -1,8 +1,10 @@
 #!/bin/bash
 for i in {1..50}
 do 
-	adb shell input swipe 100 1750 800 1750 300; 
-	sleep 2; 
-	adb shell input swipe 100 500 100 1450 300; 
+	adb shell input swipe 800 1750 100 1750 200; 
+	sleep 1; 
+	adb shell input swipe 800 1000 100 1000 200; 
+	sleep 1; 
+	adb shell input swipe 100 1000 100 500 200; 
 	sleep 2; 
 done

@@ -3047,7 +3047,11 @@ int do_swap_page(struct vm_fault *vmf)
 				trace_printk("cold fault : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
 			else if(pte_to_swp_counter(vmf->orig_pte)==10) { //direct
-				trace_printk("Direct fault : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+				if(switch_start && id!=-1)
+					trace_printk("Direct fault id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
+				else
+					trace_printk("Direct fault not on switching: %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+
 				atomic_dec(&nbd_direct_page);
 			}
 			else if(switch_start && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
@@ -3058,7 +3062,7 @@ int do_swap_page(struct vm_fault *vmf)
 			}
 			else if(miss_handling && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){
 
-					trace_printk("direct prefetch miss id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
+					trace_printk("unprefetched prefetch miss id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
 
 			}
 			else{
@@ -3152,7 +3156,7 @@ int do_swap_page(struct vm_fault *vmf)
 
 #ifdef CONFIG_APP_AWARE
 
-	if(switch_start && foreground_uid && !excepted){
+	if(switch_start && foreground_uid && !excepted && id!=-1){
 		if(past[id]->which_table){
 			st_idx_ptr = &past[id]->st_index1;
 			swap_trace_table = past[id]->swap_trace_table1;
@@ -3163,6 +3167,8 @@ int do_swap_page(struct vm_fault *vmf)
 		}
 
 		idx = atomic_inc_return(st_idx_ptr);
+		if(idx<0)
+			panic(KERN_ERR "idx error! idx is %d\n",idx);
 		if(idx<NUM_STT_ENTRIES-1){
 //			printk(KERN_ERR "idx %d\n", idx);
 		swap_trace_table[idx].tgid = current->tgid;
@@ -3188,6 +3194,8 @@ int do_swap_page(struct vm_fault *vmf)
 			swap_trace_table = past[id]->swap_trace_table0;
 		}
 		idx = atomic_inc_return(st_idx_ptr);
+		if(idx<0)
+			panic(KERN_ERR "idx error! idx is %d\n",idx);
 		if(idx<NUM_STT_ENTRIES-1){
 //			printk(KERN_ERR "idx %d in after\n", idx);
 		swap_trace_table[idx].tgid = current->tgid;

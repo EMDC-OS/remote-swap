@@ -2093,7 +2093,7 @@ static int sys_cold_manager(void *arg)
 			if(is_system_uid(p->cred->uid.val)){
 				task_swap_counter_inc(p);
 				//if ZRAM full	
-				if(zram_full)
+				if(zram_remain() < ZRAM_PAGES*0.3)
 					sys_cold_page_sender_handler(p);
 			}
 		}

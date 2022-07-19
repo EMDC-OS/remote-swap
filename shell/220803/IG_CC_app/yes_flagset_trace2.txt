@@ -1,0 +1,89 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 78/78   #P:8
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+ send_target_man-200   [001] ....   313.653738: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [001] d..2   313.653757: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [001] ....   313.653865: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+           <...>-7807  [007] ....   359.897070: app_switch_start_handler: ###########switch start! foreground 10128#############
+           <...>-7807  [007] ....   359.897075: prefetch_handler: prefetch handler start! target(id,table): 4,0
+           <...>-7807  [007] ....   359.897086: app_switch_start_handler: foreground 10128 switch start , total_time = 11us
+     kworker/1:2-402   [001] ....   359.897105: prefetch_work: prefetch work: foreground 10128, maxidx -1, afteridx -1
+           <...>-7807  [004] ....   360.126462: app_switch_after_1_handler: foreground 10128 switch after start
+  HeapTaskDaemon-6414  [000] d..4   365.867675: __free_cluster: [REMOTE __free_cluster] free cluster 312
+  HeapTaskDaemon-6414  [000] d..4   365.892142: __free_cluster: [REMOTE __free_cluster] free cluster 568
+  HeapTaskDaemon-6414  [000] d..4   365.920723: __free_cluster: [REMOTE __free_cluster] free cluster 376
+  HeapTaskDaemon-6414  [001] d..3   366.006623: __free_cluster: [REMOTE __free_cluster] free cluster 56
+  HeapTaskDaemon-6414  [001] d..3   366.006642: __free_cluster: [REMOTE __free_cluster] free cluster 120
+  HeapTaskDaemon-6414  [001] d..3   366.006648: __free_cluster: [REMOTE __free_cluster] free cluster 184
+  HeapTaskDaemon-6414  [001] d..3   366.006660: __free_cluster: [REMOTE __free_cluster] free cluster 632
+           <...>-7807  [004] ....   370.136020: app_switch_after_2_handler: foreground 10128 switch after end
+           <...>-7807  [004] ....   370.136034: update_to_nbd_flag: appid 4: table 0 is latter, total target 0 max idx e, l -> -1 2908, after 0 3471
+           <...>-7807  [004] ....   370.147395: miss_page_handler: miss page handler start! target(id,table): 4,1
+     kworker/1:2-402   [001] ....   370.147421: miss_page_work: miss work: foreground 10128, maxidx -1, afteridx -1
+ send_target_man-200   [002] ....   370.147431: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [002] d..2   370.147440: send_target_manager: send target manager - id, which_table : 2, 0
+ send_target_man-200   [002] d..2   370.147501: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] ....   370.147551: send_target_manager: 3[REMOTE send_target_manager] target manager slept
+ Lacrima_startup-6449  [001] d..4   375.894718: __free_cluster: [REMOTE __free_cluster] free cluster 888
+ Lacrima_startup-6449  [001] d..4   375.894745: __free_cluster: [REMOTE __free_cluster] free cluster 952
+ Lacrima_startup-6449  [001] d..4   375.894882: __free_cluster: [REMOTE __free_cluster] free cluster 760
+ stagram.android-6401  [000] d..4   380.012280: __free_cluster: [REMOTE __free_cluster] free cluster 824
+              sh-7954  [007] ....   441.983325: app_switch_start_handler: ###########switch start! foreground 10127#############
+              sh-7954  [007] ....   441.983331: prefetch_handler: prefetch handler start! target(id,table): 2,0
+              sh-7954  [007] ....   441.983342: app_switch_start_handler: foreground 10127 switch start , total_time = 13us
+     kworker/1:2-402   [001] ....   441.983778: prefetch_work: prefetch work: foreground 10127, maxidx 6290, afteridx 7643
+              sh-7954  [007] ....   442.119123: app_switch_after_1_handler: foreground 10127 switch after start
+  HeapTaskDaemon-7038  [000] d..3   447.780408: __free_cluster: [REMOTE __free_cluster] free cluster 1914
+  HeapTaskDaemon-7038  [000] d..3   447.780422: __free_cluster: [REMOTE __free_cluster] free cluster 1978
+  HeapTaskDaemon-7038  [000] d..3   447.780435: __free_cluster: [REMOTE __free_cluster] free cluster 2042
+              sh-7954  [005] ....   452.126147: app_switch_after_2_handler: foreground 10127 switch after end
+              sh-7954  [005] ....   452.140440: update_to_nbd_flag: appid 2: table 1 is latter, total target 2904 max idx e, l -> 6290 6095, after 1353 2098
+              sh-7954  [005] ....   452.148128: miss_page_handler: miss page handler start! target(id,table): 2,0
+     kworker/1:2-402   [001] ....   452.148161: miss_page_work: miss work: foreground 10127, maxidx 6290, afteridx 7643
+ send_target_man-200   [002] ....   452.148168: send_target_manager: 3[REMOTE send_target_manager] target manager wake up
+ send_target_man-200   [002] d..2   452.148180: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2   452.149179: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2   462.346696: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2   462.347875: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2   472.373412: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2   472.374555: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [001] d..2   482.400376: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2   482.401899: send_target_manager: send target manager - id, which_table : 4, 0
+ send_target_man-200   [002] d..2   492.426728: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [002] d..2   492.428053: send_target_manager: send target manager - id, which_table : 4, 0
+              sh-8038  [007] ....   502.173262: swap_counter_dump_handler: pid 6401: counter 0 = 3619
+              sh-8038  [007] ....   502.173265: swap_counter_dump_handler: pid 6401: counter 1 = 10501
+              sh-8038  [007] ....   502.173266: swap_counter_dump_handler: pid 6401: counter 2 = 0
+              sh-8038  [007] ....   502.173267: swap_counter_dump_handler: pid 6401: counter 3 = 0
+              sh-8038  [007] ....   502.173268: swap_counter_dump_handler: pid 6401: counter 4 = 0
+              sh-8038  [007] ....   502.173269: swap_counter_dump_handler: pid 6401: counter 5 = 0
+              sh-8038  [007] ....   502.173269: swap_counter_dump_handler: pid 6401: counter >5 = 0
+              sh-8038  [007] ....   502.173270: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-8038  [007] ....   502.173272: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-8038  [007] ....   502.173272: swap_counter_dump_handler: remote: total excepted page: 0
+              sh-8038  [007] ....   502.173273: swap_counter_dump_handler: remote: sent system page: 0
+              sh-8038  [007] ....   502.173274: swap_counter_dump_handler: remote: ZRAM remain: 1939964 KB / 2097148 KB
+              sh-8038  [007] ....   502.173275: swap_counter_dump_handler: remote: total direct page: 0
+              sh-8040  [007] ....   502.193030: swap_counter_dump_handler: pid 7025: counter 0 = 0
+              sh-8040  [007] ....   502.193033: swap_counter_dump_handler: pid 7025: counter 1 = 18677
+              sh-8040  [007] ....   502.193035: swap_counter_dump_handler: pid 7025: counter 2 = 0
+              sh-8040  [007] ....   502.193035: swap_counter_dump_handler: pid 7025: counter 3 = 0
+              sh-8040  [007] ....   502.193036: swap_counter_dump_handler: pid 7025: counter 4 = 0
+              sh-8040  [007] ....   502.193037: swap_counter_dump_handler: pid 7025: counter 5 = 0
+              sh-8040  [007] ....   502.193038: swap_counter_dump_handler: pid 7025: counter >5 = 0
+              sh-8040  [007] ....   502.193039: swap_counter_dump_handler: remote: total sent cold page: 0
+              sh-8040  [007] ....   502.193040: swap_counter_dump_handler: remote: total faulted cold page: 0
+              sh-8040  [007] ....   502.193041: swap_counter_dump_handler: remote: total excepted page: 0
+              sh-8040  [007] ....   502.193043: swap_counter_dump_handler: remote: sent system page: 0
+              sh-8040  [007] ....   502.193044: swap_counter_dump_handler: remote: ZRAM remain: 1939964 KB / 2097148 KB
+              sh-8040  [007] ....   502.193046: swap_counter_dump_handler: remote: total direct page: 0
+ send_target_man-200   [003] d..2   502.453436: send_target_manager: send target manager - id, which_table : 2, 1
+ send_target_man-200   [003] d..2   502.454857: send_target_manager: send target manager - id, which_table : 4, 0

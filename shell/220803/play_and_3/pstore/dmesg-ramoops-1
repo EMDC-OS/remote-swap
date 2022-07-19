@@ -1,0 +1,698 @@
+Oops#2 Part1
+<6>[ 3633.958012] c7   1104 google_charger: MSC_THERM_FCC lvl=0 (0)
+<6>[ 3633.960484] c7  18676 google_charger: usbchg=USB typec=C usbv=4870 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3633.960592] c7  18676 sm8150_bms: MSC_PCS chg_state=1f4112b03010015 [0x15:3:1:4395:500] chg=u
+<6>[ 3633.960604] c7  18676 google_battery: MSC_DIN chg_state=1f4112b03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4395 icl=500
+<6>[ 3633.963797] c7  18676 google_battery: MSC_LAST vbatt=4389062 ibatt=-310625 fv_uv=4400000
+<6>[ 3633.963808] c7  18676 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3633.963813] c7  18676 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3633.963833] c7  18676 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<38>[ 3636.183273] c3    581 type=1400 audit(1658151899.478:2501): avc: denied { call } for comm="Thread-24" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+<38>[ 3636.184114] c3    581 type=1400 audit(1658151906.925:2502): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3636.184372] c3    581 type=1400 audit(1658151906.925:2502): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3636.185070] c3    581 type=1400 audit(1658151906.925:2503): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3636.185193] c3    581 type=1400 audit(1658151906.925:2503): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3636.185778] c3    581 type=1400 audit(1658151906.925:2504): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3640.356120] c3    581 type=1400 audit(1658151906.925:2504): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3640.356575] c3    581 type=1400 audit(1658151911.095:2505): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3640.356719] c3    581 type=1400 audit(1658151911.095:2505): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3640.358570] c3    581 type=1400 audit(1658151911.095:2506): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3640.358652] c3    581 type=1400 audit(1658151911.095:2506): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3640.358961] c3    581 type=1400 audit(1658151911.095:2507): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3647.989500] c3    581 type=1400 audit(1658151911.095:2507): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3647.990419] c3    581 type=1400 audit(1658151918.728:2508): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3647.990664] c3    581 type=1400 audit(1658151918.728:2508): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3647.991351] c3    581 type=1400 audit(1658151918.728:2509): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3649.067421] c3    581 type=1400 audit(1658151918.728:2509): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3649.068223] c3    581 type=1400 audit(1658151919.808:2510): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3649.068460] c3    581 type=1400 audit(1658151919.808:2510): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3649.069950] c3    581 type=1400 audit(1658151919.808:2511): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3651.196687] c3    581 type=1400 audit(1658151919.808:2511): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3651.197498] c3    581 type=1400 audit(1658151921.938:2512): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3651.197643] c3    581 type=1400 audit(1658151921.938:2512): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3651.199637] c3    581 type=1400 audit(1658151921.938:2513): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3652.870091] c3    581 type=1400 audit(1658151921.938:2513): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3652.870697] c3    581 type=1400 audit(1658151923.611:2514): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3652.872212] c3    581 type=1400 audit(1658151923.611:2514): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3652.872547] c3    581 type=1400 audit(1658151923.611:2515): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<6>[ 3658.348372] c2   3668 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 3658.351398] c2   3668 google_charger: usbchg=USB typec=C usbv=4878 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3658.351500] c2   3668 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 3658.351515] c2   3668 google_battery: MSC_DIN chg_state=1f4112f04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4399 icl=500
+<6>[ 3658.356808] c2   3668 google_battery: MSC_LAST vbatt=4388750 ibatt=-277500 fv_uv=4400000
+<6>[ 3658.356820] c2   3668 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3658.356827] c2   3668 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3658.356872] c2   3668 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3658.360525] c7    810 healthd: battery l=100 v=4388 t=33.2 h=2 st=5 c=-277 fc=2708000 cc=17 chg=u
+<6>[ 3661.105508] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f03010015 [0x15:3:1:4399:500] chg=u
+<6>[ 3661.107466] c3  22901 google_charger: usbchg=USB typec=C usbv=4879 usbc=489 usbMv=5000 usbMc=500
+<6>[ 3661.107628] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f03010015 [0x15:3:1:4399:500] chg=u
+<6>[ 3661.107638] c3  22901 google_battery: MSC_DIN chg_state=1f4112f03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4399 icl=500
+<6>[ 3661.112928] c3  22901 google_battery: MSC_DSG vbatt_idx:2->2 vbatt=4391093 ibatt=133125 fv_uv=4400000 cv_cnt=2 ov_cnt=0
+<6>[ 3661.112944] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3661.112962] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3661.112995] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3661.116484] c7    810 healthd: battery l=100 v=4391 t=33.2 h=2 st=5 c=-270 fc=2708000 cc=17 chg=u
+<38>[ 3664.482895] c3    581 type=1400 audit(1658151923.611:2515): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3664.483740] c3    581 type=1400 audit(1658151935.221:2516): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3664.483942] c3    581 type=1400 audit(1658151935.221:2516): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3664.484527] c3    581 type=1400 audit(1658151935.221:2517): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3664.484644] c3    581 type=1400 audit(1658151935.221:2517): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3664.485249] c3    581 type=1400 audit(1658151935.225:2518): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<12>[ 3665.207523] c7    810 healthd: battery l=100 v=4389 t=33.1 h=2 st=5 c=-263 fc=2708000 cc=17 chg=u
+<38>[ 3667.740357] c3    581 type=1400 audit(1658151935.225:2518): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3667.740930] c3    581 type=1400 audit(1658151938.481:2519): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3667.741186] c3    581 type=1400 audit(1658151938.481:2519): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3667.741524] c3    581 type=1400 audit(1658151938.481:2520): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3667.741631] c3    581 type=1400 audit(1658151938.481:2520): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3667.742016] c3    581 type=1400 audit(1658151938.481:2521): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<6>[ 3671.710122] c7    269 msm_vidc: info: Opening video instance: 0000000000000000, 1
+<6>[ 3671.714008] c7    269 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+<6>[ 3671.714011] c7    269 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+<6>[ 3671.714826] c7    269 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+<6>[ 3671.714829] c7    269 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+<6>[ 3671.714832] c7    269 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+<6>[ 3671.714833] c7    269 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+<6>[ 3671.714835] c7    269 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+<6>[ 3671.714837] c7    269 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+<6>[ 3671.714880] c6  28407 msm_vidc:  err: This control 980928 is not supported yet
+<6>[ 3671.737456] c2  28407 msm_vidc:  err: This control 980928 is not supported yet
+<6>[ 3671.737474] c2  28407 msm_vidc:  err: This control 980927 is not supported yet
+<6>[ 3672.301156] c3  28409 msm_vidc:  err: This control 980927 is not supported yet
+<6>[ 3672.431392] c2  28409 msm_vidc:  err: This control 980927 is not supported yet
+<6>[ 3672.475036] c6   8685 afe_tdm_port_start: top_id:10001ccc acdb_id:512 port_id:0x9021
+<6>[ 3672.507624] c6   8685 afe_tdm_port_start: top_id:10000ccc acdb_id:513 port_id:0x9020
+<38>[ 3672.743417] c3    581 type=1400 audit(1658151938.481:2521): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=707712 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3672.744183] c3    581 type=1400 audit(1658151943.485:2522): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3672.744345] c3    581 type=1400 audit(1658151943.485:2522): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3672.745566] c3    581 type=1400 audit(1658151943.485:2523): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3673.111244] c3    581 type=1400 audit(1658151943.485:2523): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3673.111662] c3    581 type=1400 audit(1658151943.851:2524): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3673.111885] c3    581 type=1400 audit(1658151943.851:2524): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3673.113013] c3    581 type=1400 audit(1658151943.851:2525): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3673.492816] c3    581 type=1400 audit(1658151943.851:2525): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3673.492844] c3    581 type=1400 audit(1658151944.235:2526): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3675.797039] c3    581 type=1400 audit(1658151944.235:2526): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3675.797679] c3    581 type=1400 audit(1658151946.538:2527): avc: denied { open } for comm="Binder:5067_4" path="/sys/devices/virtual/android_usb/android0/state" dev="sysfs" ino=79909 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs_android_usb:s0 tclass=file permissive=1 app=com.google.android.gms
+<38>[ 3687.462138] c3    581 type=1400 audit(1658151946.538:2527): avc: denied { open } for comm="Binder:5067_4" path="/sys/devices/virtual/android_usb/android0/state" dev="sysfs" ino=79909 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs_android_usb:s0 tclass=file permissive=1 app=com.google.android.gms
+<38>[ 3687.462692] c3    581 type=1400 audit(1658151958.201:2528): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3687.462894] c3    581 type=1400 audit(1658151958.201:2528): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3687.463283] c3    581 type=1400 audit(1658151958.201:2529): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3687.716576] c0    581 type=1400 audit(1658151958.201:2529): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3687.717107] c0    581 type=1400 audit(1658151958.455:2530): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3687.717345] c0    581 type=1400 audit(1658151958.455:2530): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3687.718864] c0    581 type=1400 audit(1658151958.455:2531): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<6>[ 3688.739385] c2  26554 max1720x_battery: max17x0x_reg_dump  8E:0056 8F:0057 B2:0181 B4:006C C4:0067 C5:007C CD:0095 CE:00CB D7:0153 DF:1023
+<12>[ 3688.746249] c7    810 healthd: battery l=100 v=4360 t=33.2 h=2 st=5 c=-63 fc=2708000 cc=17 chg=u
+<6>[ 3691.114732] c3  22901 google_charger: usbchg=USB typec=C usbv=4873 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3691.114854] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4110903010015 [0x15:3:1:4361:500] chg=u
+<6>[ 3691.114873] c3  22901 google_battery: MSC_DIN chg_state=1f4110903010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4361 icl=500
+<6>[ 3691.118682] c3  22901 google_battery: MSC_LAST vbatt=4380625 ibatt=-189375 fv_uv=4400000
+<6>[ 3691.118694] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3691.118701] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3691.118742] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<38>[ 3692.819977] c0    581 type=1400 audit(1658151958.455:2531): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3692.820776] c0    581 type=1400 audit(1658151963.561:2532): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3692.821005] c0    581 type=1400 audit(1658151963.561:2532): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3692.821585] c0    581 type=1400 audit(1658151963.561:2533): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3692.821701] c0    581 type=1400 audit(1658151963.561:2533): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3692.822308] c0    581 type=1400 audit(1658151963.561:2534): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<11>[ 3701.365371] c3    837 rmt_storage:INFO:rmt_storage_rw_iovec_cb: Write iovec request received for /boot/modem_fs2
+<11>[ 3701.365613] c7   1275 rmt_storage:INFO:rmt_storage_client_thread: Calling Write [offset=0, size=2097152]for /boot/modem_fs2!
+<11>[ 3701.387034] c1   1275 rmt_storage:INFO:rmt_storage_client_thread: Done Write (bytes = 2097152) for /boot/modem_fs2!
+<38>[ 3704.198215] c0    581 type=1400 audit(1658151963.561:2534): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3704.198728] c0    581 type=1400 audit(1658151974.938:2535): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3704.201033] c3    581 type=1400 audit(1658151974.938:2535): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3704.201361] c3    581 type=1400 audit(1658151974.938:2536): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3704.201474] c3    581 type=1400 audit(1658151974.938:2536): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3704.201776] c3    581 type=1400 audit(1658151974.938:2537): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3707.990215] c0    581 type=1400 audit(1658151974.938:2537): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3708.004891] c2    581 type=1400 audit(1658151978.728:2538): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3708.006212] c2    581 type=1400 audit(1658151978.728:2538): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3708.007680] c2    581 type=1400 audit(1658151978.731:2539): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3709.068314] c0    581 type=1400 audit(1658151978.731:2539): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3709.069345] c2    581 type=1400 audit(1658151979.808:2540): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3709.070792] c2    581 type=1400 audit(1658151979.808:2540): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3709.071657] c2    581 type=1400 audit(1658151979.808:2541): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<6>[ 3721.120962] c3  22901 google_charger: usbchg=USB typec=C usbv=4880 usbc=489 usbMv=5000 usbMc=500
+<6>[ 3721.121072] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112a03010015 [0x15:3:1:4394:500] chg=u
+<6>[ 3721.121084] c3  22901 google_battery: MSC_DIN chg_state=1f4112a03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4394 icl=500
+<6>[ 3721.124192] c3  22901 google_battery: MSC_LAST vbatt=4386562 ibatt=-266875 fv_uv=4400000
+<6>[ 3721.124202] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3721.124207] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3721.124237] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3725.207933] c7    810 healthd: battery l=100 v=4374 t=33.1 h=2 st=5 c=-73 fc=2708000 cc=17 chg=u
+<38>[ 3728.361440] c2    581 type=1400 audit(1658151979.808:2541): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3728.362235] c2    581 type=1400 audit(1658151999.101:2542): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3728.362441] c2    581 type=1400 audit(1658151999.101:2542): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3728.363740] c2    581 type=1400 audit(1658151999.101:2543): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3732.560800] c2    581 type=1400 audit(1658151999.101:2543): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3732.560836] c2    581 type=1400 audit(1658152003.301:2544): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3737.443119] c2    581 type=1400 audit(1658152003.301:2544): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3737.443162] c2    581 type=1400 audit(1658152008.181:2545): avc: denied { write } for comm="kworker/2:1H" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3737.456730] c1    581 type=1400 audit(1658152008.181:2545): avc: denied { write } for comm="kworker/2:1H" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3737.456752] c1    581 type=1400 audit(1658152008.198:2546): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3740.627128] c2    581 type=1400 audit(1658152008.198:2546): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3740.627517] c2    581 type=1400 audit(1658152011.368:2547): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3740.627663] c2    581 type=1400 audit(1658152011.368:2547): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3740.627972] c2    581 type=1400 audit(1658152011.368:2548): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3740.628400] c2    581 type=1400 audit(1658152011.368:2548): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3740.628677] c2    581 type=1400 audit(1658152011.368:2549): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3740.684853] c2    581 type=1400 audit(1658152011.368:2549): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3740.685550] c2    581 type=1400 audit(1658152011.425:2550): avc: denied { open } for comm=4173796E635461736B202331 path="/dev/__properties__/u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=27763 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=1 app=com.google.android.apps.turbo
+<38>[ 3740.685704] c2    581 type=1400 audit(1658152011.425:2550): avc: denied { open } for comm=4173796E635461736B202331 path="/dev/__properties__/u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=27763 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=1 app=com.google.android.apps.turbo
+<38>[ 3740.686726] c2    581 type=1400 audit(1658152011.425:2551): avc: denied { getattr } for comm=4173796E635461736B202331 path="/dev/__properties__/u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=27763 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=1 app=com.google.android.apps.turbo
+<38>[ 3740.686826] c2    581 type=1400 audit(1658152011.425:2551): avc: denied { getattr } for comm=4173796E635461736B202331 path="/dev/__properties__/u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=27763 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=1 app=com.google.android.apps.turbo
+<38>[ 3740.687408] c2    581 type=1400 audit(1658152011.425:2552): avc: denied { map } for comm=4173796E635461736B202331 path="/dev/__properties__/u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=27763 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=1 app=com.google.android.apps.turbo
+<38>[ 3741.563190] c3    581 type=1400 audit(1658152011.425:2552): avc: denied { map } for comm=4173796E635461736B202331 path="/dev/__properties__/u:object_r:vendor_default_prop:s0" dev="tmpfs" ino=27763 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:vendor_default_prop:s0 tclass=file permissive=1 app=com.google.android.apps.turbo
+<38>[ 3741.564018] c3    581 type=1400 audit(1658152012.305:2553): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3741.564245] c3    581 type=1400 audit(1658152012.305:2553): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3741.565384] c3    581 type=1400 audit(1658152012.305:2554): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3741.565496] c3    581 type=1400 audit(1658152012.305:2554): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3741.566135] c3    581 type=1400 audit(1658152012.305:2555): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3747.462149] c2    581 type=1400 audit(1658152012.305:2555): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3747.462609] c3    581 type=1400 audit(1658152018.201:2556): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3747.462937] c3    581 type=1400 audit(1658152018.201:2556): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3747.463940] c3    581 type=1400 audit(1658152018.201:2557): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3747.716152] c3    581 type=1400 audit(1658152018.201:2557): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3747.716676] c3    581 type=1400 audit(1658152018.455:2558): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3747.716893] c3    581 type=1400 audit(1658152018.455:2558): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3747.718484] c3    581 type=1400 audit(1658152018.458:2559): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<6>[ 3751.128642] c3  22901 google_charger: usbchg=USB typec=C usbv=4876 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3751.128754] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112903010005 [0x5:3:1:4393:500] chg=u
+<6>[ 3751.128769] c3  22901 google_battery: MSC_DIN chg_state=1f4112903010005 f=0x5 chg_s=Charging chg_t=Fast vchg=4393 icl=500
+<6>[ 3751.132486] c3  22901 google_battery: MSC_LAST vbatt=4382656 ibatt=-180000 fv_uv=4400000
+<6>[ 3751.132497] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3751.132501] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3751.132535] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<38>[ 3757.154498] c2    581 type=1400 audit(1658152018.458:2559): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3757.155310] c2    581 type=1400 audit(1658152027.895:2560): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3757.155560] c2    581 type=1400 audit(1658152027.895:2560): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3757.156955] c2    581 type=1400 audit(1658152027.895:2561): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3761.908562] c3    581 type=1400 audit(1658152027.895:2561): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3761.908598] c3    581 type=1400 audit(1658152032.648:2562): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3767.989739] c2    581 type=1400 audit(1658152032.648:2562): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 3768.004201] c2    581 type=1400 audit(1658152038.731:2563): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3768.004453] c2    581 type=1400 audit(1658152038.731:2563): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3768.005164] c2    581 type=1400 audit(1658152038.731:2564): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3769.068377] c3    581 type=1400 audit(1658152038.731:2564): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3769.069558] c3    581 type=1400 audit(1658152039.808:2565): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3769.069804] c3    581 type=1400 audit(1658152039.808:2565): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3769.071181] c3    581 type=1400 audit(1658152039.808:2566): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<6>[ 3781.134277] c3  22901 google_charger: usbchg=USB typec=C usbv=4877 usbc=433 usbMv=5000 usbMc=500
+<6>[ 3781.134403] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112d03010005 [0x5:3:1:4397:500] chg=u
+<6>[ 3781.134421] c3  22901 google_battery: MSC_DIN chg_state=1f4112d03010005 f=0x5 chg_s=Charging chg_t=Fast vchg=4397 icl=500
+<6>[ 3781.138544] c3  22901 google_battery: MSC_LAST vbatt=4384687 ibatt=-196875 fv_uv=4400000
+<6>[ 3781.138555] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3781.138561] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3781.138595] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3785.209766] c7    810 healthd: battery l=100 v=4374 t=32.9 h=2 st=5 c=-121 fc=2708000 cc=17 chg=u
+<38>[ 3807.462416] c3    581 type=1400 audit(1658152039.808:2566): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3807.463028] c3    581 type=1400 audit(1658152078.201:2567): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3807.463250] c3    581 type=1400 audit(1658152078.201:2567): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3807.464188] c3    581 type=1400 audit(1658152078.201:2568): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3807.716962] c3    581 type=1400 audit(1658152078.201:2568): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3807.717483] c3    581 type=1400 audit(1658152078.458:2569): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3807.717726] c3    581 type=1400 audit(1658152078.458:2569): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3807.718055] c3    581 type=1400 audit(1658152078.458:2570): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<6>[ 3811.141253] c3  22901 google_charger: usbchg=USB typec=C usbv=4874 usbc=484 usbMv=5000 usbMc=500
+<6>[ 3811.141366] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112e03010005 [0x5:3:1:4398:500] chg=u
+<6>[ 3811.141381] c3  22901 google_battery: MSC_DIN chg_state=1f4112e03010005 f=0x5 chg_s=Charging chg_t=Fast vchg=4398 icl=500
+<6>[ 3811.145863] c3  22901 google_battery: MSC_LAST vbatt=4389062 ibatt=-225312 fv_uv=4400000
+<6>[ 3811.145877] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3811.145882] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3811.145917] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<38>[ 3827.990154] c2    581 type=1400 audit(1658152078.458:2570): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3827.991045] c2    581 type=1400 audit(1658152098.731:2571): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3827.991296] c2    581 type=1400 audit(1658152098.731:2571): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3827.992839] c2    581 type=1400 audit(1658152098.731:2572): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3829.068211] c2    581 type=1400 audit(1658152098.731:2572): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3829.068997] c2    581 type=1400 audit(1658152099.808:2573): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3829.069225] c2    581 type=1400 audit(1658152099.808:2573): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3829.070561] c2    581 type=1400 audit(1658152099.808:2574): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<6>[ 3830.939168] c3  28409 msm_vidc:  err: This control 980927 is not supported yet
+<38>[ 3831.009708] c2    581 type=1400 audit(1658152099.808:2574): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3831.010429] c2    581 type=1400 audit(1658152101.751:2575): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3831.010561] c2    581 type=1400 audit(1658152101.751:2575): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3831.011922] c2    581 type=1400 audit(1658152101.751:2576): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3831.012153] c2    581 type=1400 audit(1658152101.751:2576): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3831.013540] c2    581 type=1400 audit(1658152101.751:2577): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3832.690932] c2    581 type=1400 audit(1658152101.751:2577): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3832.691477] c2    581 type=1400 audit(1658152103.431:2578): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3832.691725] c2    581 type=1400 audit(1658152103.431:2578): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3832.692078] c0    581 type=1400 audit(1658152103.431:2579): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3832.692202] c0    581 type=1400 audit(1658152103.431:2579): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3832.692566] c0    581 type=1400 audit(1658152103.431:2580): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3835.211236] c0    581 type=1400 audit(1658152103.431:2580): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3835.211909] c0    581 type=1400 audit(1658152105.951:2581): avc: denied { open } for comm="Binder:5067_3" path="/sys/devices/virtual/android_usb/android0/state" dev="sysfs" ino=79909 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs_android_usb:s0 tclass=file permissive=1 app=com.google.android.gms
+<38>[ 3837.709062] c1    581 type=1400 audit(1658152105.951:2581): avc: denied { open } for comm="Binder:5067_3" path="/sys/devices/virtual/android_usb/android0/state" dev="sysfs" ino=79909 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs_android_usb:s0 tclass=file permissive=1 app=com.google.android.gms
+<38>[ 3837.709098] c1    581 type=1400 audit(1658152108.448:2582): avc: denied { write } for comm="kworker/3:1H" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3837.723415] c2    581 type=1400 audit(1658152108.448:2582): avc: denied { write } for comm="kworker/3:1H" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3837.723438] c2    581 type=1400 audit(1658152108.465:2583): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<6>[ 3841.148813] c3  22901 google_charger: usbchg=USB typec=C usbv=4881 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3841.148924] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112003010005 [0x5:3:1:4384:500] chg=u
+<6>[ 3841.148940] c3  22901 google_battery: MSC_DIN chg_state=1f4112003010005 f=0x5 chg_s=Charging chg_t=Fast vchg=4384 icl=500
+<6>[ 3841.152552] c3  22901 google_battery: MSC_LAST vbatt=4363437 ibatt=-65625 fv_uv=4400000
+<6>[ 3841.152566] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3841.152571] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3841.152684] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3845.207979] c7    810 healthd: battery l=100 v=4376 t=32.8 h=2 st=5 c=-123 fc=2708000 cc=17 chg=u
+<38>[ 3848.647289] c2    581 type=1400 audit(1658152108.465:2583): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3848.648333] c2    581 type=1400 audit(1658152119.388:2584): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3848.648571] c2    581 type=1400 audit(1658152119.388:2584): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3848.650196] c2    581 type=1400 audit(1658152119.388:2585): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3860.540108] c2    581 type=1400 audit(1658152119.388:2585): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3860.540462] c2    581 type=1400 audit(1658152131.281:2586): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3860.540635] c2    581 type=1400 audit(1658152131.281:2586): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3860.541152] c2    581 type=1400 audit(1658152131.281:2587): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3860.541230] c2    581 type=1400 audit(1658152131.281:2587): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3860.541735] c2    581 type=1400 audit(1658152131.281:2588): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<4>[ 3861.319698] c1   6169 audit: audit_lost=989 audit_rate_limit=5 audit_backlog_limit=64
+<3>[ 3861.319706] c1   6169 audit: rate limit exceeded
+<38>[ 3861.319771] c2    581 type=1400 audit(1658152131.281:2588): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3861.320530] c3    581 type=1400 audit(1658152132.061:2589): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3861.320772] c3    581 type=1400 audit(1658152132.061:2589): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3861.321889] c4   8803 type=1400 audit(1658152132.061:2590): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<6>[ 3866.153458] c4   8803 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1009): QC_IMAGE_VERSION_STRING=VIDEO.IR.1.2-00024-PROD-1
+<6>[ 3866.153461] c4   8803 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+<6>[ 3866.153463] c4   8803 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> VenusHostDriver_SetSysProperty(1012): BUILD_TIME: Sep 12 2019 06:11:37
+<6>[ 3866.153465] c4   8803 msm_vidc:   fw: <VFW_E:HostDr:unkn:--------:-> 
+<38>[ 3867.117758] c2    581 type=1400 audit(1658152132.061:2590): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3867.118654] c2    581 type=1400 audit(1658152137.858:2592): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3867.118880] c2    581 type=1400 audit(1658152137.858:2592): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3867.120270] c2    581 type=1400 audit(1658152137.858:2593): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3867.462740] c3    581 type=1400 audit(1658152137.858:2593): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3867.463284] c2    581 type=1400 audit(1658152138.201:2594): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3867.463724] c2    581 type=1400 audit(1658152138.201:2594): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3867.464692] c2    581 type=1400 audit(1658152138.201:2595): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<4>[ 3867.716957] c1  14967 audit: audit_lost=990 audit_rate_limit=5 audit_backlog_limit=64
+<3>[ 3867.716966] c1  14967 audit: rate limit exceeded
+<38>[ 3867.717039] c3    581 type=1400 audit(1658152138.201:2595): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3867.717523] c3    581 type=1400 audit(1658152138.458:2596): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3870.355389] c3    581 type=1400 audit(1658152138.458:2596): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3870.356075] c3    581 type=1400 audit(1658152141.095:2598): avc: denied { open } for comm="Binder:5067_3" path="/sys/devices/virtual/android_usb/android0/state" dev="sysfs" ino=79909 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs_android_usb:s0 tclass=file permissive=1 app=com.google.android.gms
+<6>[ 3871.154364] c3  22901 google_charger: usbchg=USB typec=C usbv=4872 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3871.154471] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112003010005 [0x5:3:1:4384:500] chg=u
+<6>[ 3871.154485] c3  22901 google_battery: MSC_DIN chg_state=1f4112003010005 f=0x5 chg_s=Charging chg_t=Fast vchg=4384 icl=500
+<6>[ 3871.157927] c3  22901 google_battery: MSC_LAST vbatt=4386718 ibatt=-256562 fv_uv=4400000
+<6>[ 3871.157940] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3871.157946] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3871.157982] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<38>[ 3878.782665] c1    581 type=1400 audit(1658152141.095:2598): avc: denied { open } for comm="Binder:5067_3" path="/sys/devices/virtual/android_usb/android0/state" dev="sysfs" ino=79909 scontext=u:r:priv_app:s0:c512,c768 tcontext=u:object_r:sysfs_android_usb:s0 tclass=file permissive=1 app=com.google.android.gms
+<38>[ 3878.783633] c3    581 type=1400 audit(1658152149.521:2599): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3878.783866] c3    581 type=1400 audit(1658152149.521:2599): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3878.784771] c3    581 type=1400 audit(1658152149.521:2600): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3887.990406] c2    581 type=1400 audit(1658152149.521:2600): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3887.991284] c2    581 type=1400 audit(1658152158.731:2601): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3887.991542] c2    581 type=1400 audit(1658152158.731:2601): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3887.992874] c2    581 type=1400 audit(1658152158.731:2602): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3889.068410] c2    581 type=1400 audit(1658152158.731:2602): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3889.069158] c2    581 type=1400 audit(1658152159.808:2603): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3889.069450] c2    581 type=1400 audit(1658152159.808:2603): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3889.070088] c2    581 type=1400 audit(1658152159.808:2604): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<6>[ 3901.160122] c3  22901 google_charger: usbchg=USB typec=C usbv=4871 usbc=489 usbMv=5000 usbMc=500
+<6>[ 3901.160230] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112903010005 [0x5:3:1:4393:500] chg=u
+<6>[ 3901.160243] c3  22901 google_battery: MSC_DIN chg_state=1f4112903010005 f=0x5 chg_s=Charging chg_t=Fast vchg=4393 icl=500
+<6>[ 3901.163405] c3  22901 google_battery: MSC_LAST vbatt=4380625 ibatt=-125625 fv_uv=4400000
+<6>[ 3901.163415] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3901.163419] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3901.163451] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3905.207812] c7    810 healthd: battery l=100 v=4387 t=32.5 h=2 st=5 c=-196 fc=2708000 cc=17 chg=u
+<38>[ 3909.468541] c3    581 type=1400 audit(1658152159.808:2604): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3909.469098] c3    581 type=1400 audit(1658152180.208:2605): avc: denied { call } for comm="Thread-97" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+<38>[ 3909.781045] c3    581 type=1400 audit(1658152180.208:2605): avc: denied { call } for comm="Thread-97" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+<38>[ 3909.781538] c3    581 type=1400 audit(1658152180.521:2606): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3909.781708] c3    581 type=1400 audit(1658152180.521:2606): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3909.782277] c3    581 type=1400 audit(1658152180.521:2607): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3909.782397] c3    581 type=1400 audit(1658152180.521:2607): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3909.782889] c3    581 type=1400 audit(1658152180.521:2608): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3909.916438] c0    581 type=1400 audit(1658152180.521:2608): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3909.917233] c0    581 type=1400 audit(1658152180.658:2609): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3909.917443] c0    581 type=1400 audit(1658152180.658:2609): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3909.918063] c0    581 type=1400 audit(1658152180.658:2610): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3909.918165] c0    581 type=1400 audit(1658152180.658:2610): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3909.919121] c0    581 type=1400 audit(1658152180.658:2611): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<6>[ 3921.964977] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112c04010009 [0x9:4:1:4396:500] chg=u
+<6>[ 3921.968263] c3  22901 google_charger: usbchg=USB typec=C usbv=4887 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3921.968388] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112c04010009 [0x9:4:1:4396:500] chg=u
+<6>[ 3921.968401] c3  22901 google_battery: MSC_DIN chg_state=1f4112c04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4396 icl=500
+<6>[ 3921.973882] c3  22901 google_battery: MSC_LAST vbatt=4391875 ibatt=-186875 fv_uv=4400000
+<6>[ 3921.973890] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3921.973894] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3921.973919] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3921.977291] c7    810 healthd: battery l=100 v=4391 t=32.5 h=2 st=5 c=-186 fc=2708000 cc=17 chg=u
+<6>[ 3925.468188] c2   3668 sm8150_bms: MSC_PCS chg_state=1f4112f03010015 [0x15:3:1:4399:500] chg=u
+<6>[ 3925.473301] c2   3668 google_charger: usbchg=USB typec=C usbv=4874 usbc=487 usbMv=5000 usbMc=500
+<6>[ 3925.473440] c2   3668 sm8150_bms: MSC_PCS chg_state=1f4112f03010015 [0x15:3:1:4399:500] chg=u
+<6>[ 3925.473452] c2   3668 google_battery: MSC_DIN chg_state=1f4112f03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4399 icl=500
+<6>[ 3925.479834] c2   3668 google_battery: MSC_LAST vbatt=4378750 ibatt=-130937 fv_uv=4400000
+<6>[ 3925.479844] c2   3668 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3925.479848] c2   3668 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3925.479900] c2   3668 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3925.480828] c7    810 healthd: battery l=100 v=4378 t=32.5 h=2 st=5 c=-130 fc=2708000 cc=17 chg=u
+<38>[ 3927.462937] c2    581 type=1400 audit(1658152180.658:2611): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3927.463525] c2    581 type=1400 audit(1658152198.205:2612): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3927.463768] c2    581 type=1400 audit(1658152198.205:2612): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3927.464791] c2    581 type=1400 audit(1658152198.205:2613): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3927.717163] c3    581 type=1400 audit(1658152198.205:2613): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3927.717990] c3    581 type=1400 audit(1658152198.458:2614): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3927.718180] c3    581 type=1400 audit(1658152198.458:2614): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3927.719074] c3    581 type=1400 audit(1658152198.458:2615): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3928.805812] c2    581 type=1400 audit(1658152198.458:2615): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3928.806606] c2    581 type=1400 audit(1658152199.545:2616): avc: denied { call } for comm="Thread-28" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+<6>[ 3932.247656] c2   3668 sm8150_bms: MSC_PCS chg_state=1f4113004010009 [0x9:4:1:4400:500] chg=u
+<6>[ 3932.250421] c2   3668 google_charger: usbchg=USB typec=C usbv=4883 usbc=489 usbMv=5000 usbMc=500
+<6>[ 3932.250597] c2   3668 sm8150_bms: MSC_PCS chg_state=1f4113004010009 [0x9:4:1:4400:500] chg=u
+<6>[ 3932.250626] c2   3668 google_battery: MSC_DIN chg_state=1f4113004010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4400 icl=500
+<6>[ 3932.255904] c2   3668 google_battery: MSC_LAST vbatt=4391093 ibatt=-200937 fv_uv=4400000
+<6>[ 3932.255956] c2   3668 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3932.255961] c2   3668 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3932.255999] c2   3668 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3932.259837] c7    810 healthd: battery l=100 v=4391 t=32.5 h=2 st=5 c=-200 fc=2708000 cc=17 chg=u
+<38>[ 3947.990493] c3    581 type=1400 audit(1658152199.545:2616): avc: denied { call } for comm="Thread-28" scontext=u:r:priv_app:s0:c512,c768 tcontext=u:r:hal_memtrack_default:s0 tclass=binder permissive=1 app=com.google.android.gms
+<38>[ 3947.991397] c3    581 type=1400 audit(1658152218.731:2617): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3947.991610] c3    581 type=1400 audit(1658152218.731:2617): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3947.992834] c3    581 type=1400 audit(1658152218.731:2618): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3949.068577] c3    581 type=1400 audit(1658152218.731:2618): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 3949.069355] c3    581 type=1400 audit(1658152219.808:2619): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3949.069589] c3    581 type=1400 audit(1658152219.808:2619): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3949.070934] c3    581 type=1400 audit(1658152219.808:2620): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3951.461826] c3    581 type=1400 audit(1658152219.808:2620): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 3951.462516] c3    581 type=1400 audit(1658152222.201:2621): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3951.462745] c3    581 type=1400 audit(1658152222.201:2621): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3951.463952] c3    581 type=1400 audit(1658152222.201:2622): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<6>[ 3962.257750] c2   3668 google_charger: usbchg=USB typec=C usbv=4887 usbc=376 usbMv=5000 usbMc=500
+<6>[ 3962.257870] c2   3668 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 3962.257891] c2   3668 google_battery: MSC_DIN chg_state=1f4112f04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4399 icl=500
+<6>[ 3962.261630] c2   3668 google_battery: MSC_LAST vbatt=4389062 ibatt=-183750 fv_uv=4400000
+<6>[ 3962.261644] c2   3668 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3962.261649] c2   3668 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3962.261690] c2   3668 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3965.209562] c7    810 healthd: battery l=100 v=4389 t=32.4 h=2 st=5 c=-225 fc=2708000 cc=17 chg=u
+<38>[ 3968.607113] c3    581 type=1400 audit(1658152222.201:2622): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3968.607540] c3    581 type=1400 audit(1658152239.348:2623): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3968.607739] c3    581 type=1400 audit(1658152239.348:2623): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3968.608634] c3    581 type=1400 audit(1658152239.348:2624): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3968.692464] c3    581 type=1400 audit(1658152239.348:2624): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3968.693321] c3    581 type=1400 audit(1658152239.431:2625): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3968.693536] c3    581 type=1400 audit(1658152239.431:2625): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3968.694851] c3    581 type=1400 audit(1658152239.431:2626): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3968.694953] c3    581 type=1400 audit(1658152239.431:2626): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3968.695517] c3    581 type=1400 audit(1658152239.431:2627): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3982.533844] c3    581 type=1400 audit(1658152239.431:2627): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 3982.534427] c3    581 type=1400 audit(1658152253.275:2628): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3982.534650] c3    581 type=1400 audit(1658152253.275:2628): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3982.535705] c3    581 type=1400 audit(1658152253.275:2629): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3982.535819] c3    581 type=1400 audit(1658152253.275:2629): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3982.536290] c3    581 type=1400 audit(1658152253.275:2630): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3987.463064] c3    581 type=1400 audit(1658152253.275:2630): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 3987.463516] c3    581 type=1400 audit(1658152258.205:2631): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3987.463711] c3    581 type=1400 audit(1658152258.205:2631): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3987.464089] c0    581 type=1400 audit(1658152258.205:2632): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<6>[ 3987.545426] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112d03010015 [0x15:3:1:4397:500] chg=u
+<6>[ 3987.548225] c3  22901 google_charger: usbchg=USB typec=C usbv=4867 usbc=488 usbMv=5000 usbMc=500
+<6>[ 3987.548328] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112d03010015 [0x15:3:1:4397:500] chg=u
+<6>[ 3987.548342] c3  22901 google_battery: MSC_DIN chg_state=1f4112d03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4397 icl=500
+<6>[ 3987.554300] c3  22901 google_battery: MSC_LAST vbatt=4391718 ibatt=-189062 fv_uv=4400000
+<6>[ 3987.554309] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3987.554314] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3987.554351] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3987.557978] c7    810 healthd: battery l=100 v=4391 t=32.3 h=2 st=5 c=-189 fc=2708000 cc=17 chg=u
+<38>[ 3987.717662] c2    581 type=1400 audit(1658152258.205:2632): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 3987.718208] c3    581 type=1400 audit(1658152258.458:2633): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3987.718471] c3    581 type=1400 audit(1658152258.458:2633): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3987.719575] c3    581 type=1400 audit(1658152258.458:2634): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<6>[ 3989.240163] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 3989.242270] c3  22901 google_charger: usbchg=USB typec=C usbv=4882 usbc=476 usbMv=5000 usbMc=500
+<6>[ 3989.242372] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 3989.242385] c3  22901 google_battery: MSC_DIN chg_state=1f4112f04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4399 icl=500
+<6>[ 3989.254468] c3  22901 google_battery: MSC_LAST vbatt=4389531 ibatt=-187500 fv_uv=4400000
+<6>[ 3989.254482] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 3989.254486] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 3989.254534] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 3989.258444] c7    810 healthd: battery l=100 v=4389 t=32.3 h=2 st=5 c=-187 fc=2708000 cc=17 chg=u
+<38>[ 3998.137146] c2    581 type=1400 audit(1658152258.458:2634): avc: denied { getattr } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<38>[ 3998.137194] c2    581 type=1400 audit(1658152268.878:2635): avc: denied { write } for comm="kworker/3:1H" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3998.152030] c2    581 type=1400 audit(1658152268.878:2635): avc: denied { write } for comm="kworker/3:1H" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 3998.152068] c2    581 type=1400 audit(1658152268.891:2636): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 4007.991460] c3    581 type=1400 audit(1658152268.891:2636): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 4007.992364] c3    581 type=1400 audit(1658152278.731:2637): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 4007.992760] c3    581 type=1400 audit(1658152278.731:2637): avc: denied { open } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 4007.993979] c3    581 type=1400 audit(1658152278.731:2638): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 4009.068647] c3    581 type=1400 audit(1658152278.731:2638): avc: denied { getattr } for comm=".candycrushsaga" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c128,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.king.candycrushsaga
+<38>[ 4009.069402] c3    581 type=1400 audit(1658152279.808:2639): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 4009.069640] c3    581 type=1400 audit(1658152279.808:2639): avc: denied { open } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 4009.070793] c3    581 type=1400 audit(1658152279.808:2640): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<6>[ 4019.257350] c3  22901 google_charger: usbchg=USB typec=C usbv=4893 usbc=355 usbMv=5000 usbMc=500
+<6>[ 4019.257465] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 4019.257481] c3  22901 google_battery: MSC_DIN chg_state=1f4112f04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4399 icl=500
+<6>[ 4019.261196] c3  22901 google_battery: MSC_LAST vbatt=4392656 ibatt=-167500 fv_uv=4400000
+<6>[ 4019.261209] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4019.261214] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4019.261250] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<6>[ 4020.287760] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f03010015 [0x15:3:1:4399:500] chg=u
+<6>[ 4020.291638] c3  22901 google_charger: usbchg=USB typec=C usbv=4877 usbc=488 usbMv=5000 usbMc=500
+<6>[ 4020.291729] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f03010015 [0x15:3:1:4399:500] chg=u
+<6>[ 4020.291741] c3  22901 google_battery: MSC_DIN chg_state=1f4112f03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4399 icl=500
+<6>[ 4020.298599] c3  22901 google_battery: MSC_LAST vbatt=4371093 ibatt=-116562 fv_uv=4400000
+<6>[ 4020.298609] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4020.298613] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4020.298642] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 4020.300077] c7    810 healthd: battery l=100 v=4371 t=32.1 h=2 st=5 c=-116 fc=2708000 cc=17 chg=u
+<12>[ 4025.207182] c7    810 healthd: battery l=100 v=4383 t=32.1 h=2 st=5 c=-181 fc=2708000 cc=17 chg=u
+<6>[ 4026.679059] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 4026.681158] c3  22901 google_charger: usbchg=USB typec=C usbv=4873 usbc=479 usbMv=5000 usbMc=500
+<6>[ 4026.681258] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 4026.681270] c3  22901 google_battery: MSC_DIN chg_state=1f4112f04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4399 icl=500
+<6>[ 4026.687501] c3  22901 google_battery: MSC_LAST vbatt=4391406 ibatt=-194375 fv_uv=4400000
+<6>[ 4026.687513] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4026.687518] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4026.687566] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 4026.690675] c7    810 healthd: battery l=100 v=4391 t=32.1 h=2 st=5 c=-194 fc=2708000 cc=17 chg=u
+<6>[ 4056.689300] c3  22901 google_charger: usbchg=USB typec=C usbv=4892 usbc=394 usbMv=5000 usbMc=500
+<6>[ 4056.689417] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4113004010009 [0x9:4:1:4400:500] chg=u
+<6>[ 4056.689431] c3  22901 google_battery: MSC_DIN chg_state=1f4113004010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4400 icl=500
+<6>[ 4056.693343] c3  22901 google_battery: MSC_LAST vbatt=4391875 ibatt=-161562 fv_uv=4400000
+<6>[ 4056.693354] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4056.693360] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4056.693398] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<6>[ 4071.565215] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112803010015 [0x15:3:1:4392:500] chg=u
+<6>[ 4071.567119] c3  22901 google_charger: usbchg=USB typec=C usbv=4868 usbc=487 usbMv=5000 usbMc=500
+<6>[ 4071.567206] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112803010015 [0x15:3:1:4392:500] chg=u
+<6>[ 4071.567219] c3  22901 google_battery: MSC_DIN chg_state=1f4112803010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4392 icl=500
+<6>[ 4071.574123] c3  22901 google_battery: MSC_LAST vbatt=4390937 ibatt=-201250 fv_uv=4400000
+<6>[ 4071.574134] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4071.574139] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4071.574167] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 4071.578164] c7    810 healthd: battery l=100 v=4390 t=32.0 h=2 st=5 c=-201 fc=2708000 cc=17 chg=u
+<38>[ 4072.246777] c2    581 type=1400 audit(1658152279.808:2640): avc: denied { getattr } for comm="com.rovio.baba" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c122,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.rovio.baba
+<38>[ 4072.247632] c2    581 type=1400 audit(1658152342.988:2641): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4072.247842] c2    581 type=1400 audit(1658152342.988:2641): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4072.248962] c2    581 type=1400 audit(1658152342.988:2642): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4072.423383] c3    581 type=1400 audit(1658152342.988:2642): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4072.423760] c2    581 type=1400 audit(1658152343.165:2643): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4072.423922] c2    581 type=1400 audit(1658152343.165:2643): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4072.424793] c2    581 type=1400 audit(1658152343.165:2644): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4073.247351] c0    581 type=1400 audit(1658152343.165:2644): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4073.247384] c0    581 type=1400 audit(1658152343.988:2645): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<6>[ 4076.967461] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 4076.969695] c3  22901 google_charger: usbchg=USB typec=C usbv=4869 usbc=492 usbMv=5000 usbMc=500
+<6>[ 4076.969795] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 4076.969812] c3  22901 google_battery: MSC_DIN chg_state=1f4112f04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4399 icl=500
+<6>[ 4076.975986] c3  22901 google_battery: MSC_LAST vbatt=4392656 ibatt=-170625 fv_uv=4400000
+<6>[ 4076.976025] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4076.976029] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4076.976078] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 4076.979799] c7    810 healthd: battery l=100 v=4392 t=32.0 h=2 st=5 c=-170 fc=2708000 cc=17 chg=u
+<6>[ 4082.643986] c2   3668 sm8150_bms: MSC_PCS chg_state=1f4113003010015 [0x15:3:1:4400:500] chg=u
+<6>[ 4082.645985] c2   3668 google_charger: usbchg=USB typec=C usbv=4876 usbc=488 usbMv=5000 usbMc=500
+<6>[ 4082.646098] c2   3668 sm8150_bms: MSC_PCS chg_state=1f4113003010015 [0x15:3:1:4400:500] chg=u
+<6>[ 4082.646107] c2   3668 google_battery: MSC_DIN chg_state=1f4113003010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4400 icl=500
+<6>[ 4082.653803] c2   3668 google_battery: MSC_LAST vbatt=4390156 ibatt=-178125 fv_uv=4400000
+<6>[ 4082.653813] c2   3668 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4082.653817] c2   3668 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4082.653851] c2   3668 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 4082.655943] c5    810 healthd: battery l=100 v=4390 t=32.0 h=2 st=5 c=-178 fc=2708000 cc=17 chg=u
+<6>[ 4083.930776] c2   3668 sm8150_bms: MSC_PCS chg_state=1f410fd04010009 [0x9:4:1:4349:500] chg=u
+<6>[ 4083.933093] c2   3668 google_charger: usbchg=USB typec=C usbv=4890 usbc=441 usbMv=5000 usbMc=500
+<6>[ 4083.933195] c2   3668 sm8150_bms: MSC_PCS chg_state=1f410fd04010009 [0x9:4:1:4349:500] chg=u
+<6>[ 4083.933210] c2   3668 google_battery: MSC_DIN chg_state=1f410fd04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4349 icl=500
+<6>[ 4083.939151] c2   3668 google_battery: MSC_LAST vbatt=4390781 ibatt=-195000 fv_uv=4400000
+<6>[ 4083.939166] c2   3668 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4083.939188] c2   3668 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4083.939307] c2   3668 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 4083.942581] c7    810 healthd: battery l=100 v=4390 t=31.9 h=2 st=5 c=-195 fc=2708000 cc=17 chg=u
+<38>[ 4084.323656] c1    581 type=1400 audit(1658152343.988:2645): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 4084.324817] c1    581 type=1400 audit(1658152355.065:2646): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4084.325093] c1    581 type=1400 audit(1658152355.065:2646): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4084.325683] c1    581 type=1400 audit(1658152355.065:2647): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4084.325809] c1    581 type=1400 audit(1658152355.065:2647): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4084.326429] c1    581 type=1400 audit(1658152355.065:2648): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<12>[ 4085.208009] c7    810 healthd: battery l=100 v=4387 t=31.9 h=2 st=5 c=-177 fc=2708000 cc=17 chg=u
+<38>[ 4085.228229] c2    581 type=1400 audit(1658152355.065:2648): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4085.228271] c2    581 type=1400 audit(1658152355.968:2649): avc: denied { write } for comm="kworker/1:1H" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 4085.242486] c3    581 type=1400 audit(1658152355.968:2649): avc: denied { write } for comm="kworker/1:1H" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 4085.242508] c3    581 type=1400 audit(1658152355.981:2650): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<4>[ 4085.282765] c0  15345 audit: audit_lost=991 audit_rate_limit=5 audit_backlog_limit=64
+<3>[ 4085.282774] c0  15345 audit: rate limit exceeded
+<38>[ 4085.283484] c3    581 type=1400 audit(1658152355.981:2650): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 4085.283896] c3    581 type=1400 audit(1658152356.025:2651): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4085.284057] c3    581 type=1400 audit(1658152356.025:2651): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4085.284409] c3    581 type=1400 audit(1658152356.025:2652): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<6>[ 4085.329395] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f03010015 [0x15:3:1:4399:500] chg=u
+<6>[ 4085.331397] c3  22901 google_charger: usbchg=USB typec=C usbv=4880 usbc=488 usbMv=5000 usbMc=500
+<6>[ 4085.331496] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f03010015 [0x15:3:1:4399:500] chg=u
+<6>[ 4085.331511] c3  22901 google_battery: MSC_DIN chg_state=1f4112f03010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4399 icl=500
+<6>[ 4085.336814] c3  22901 google_battery: MSC_LAST vbatt=4387500 ibatt=-177500 fv_uv=4400000
+<6>[ 4085.336824] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4085.336828] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4085.336867] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 4085.340901] c7    810 healthd: battery l=100 v=4387 t=31.9 h=2 st=5 c=-177 fc=2708000 cc=17 chg=u
+<6>[ 4085.809470] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 4085.811573] c3  22901 google_charger: usbchg=USB typec=C usbv=4879 usbc=487 usbMv=5000 usbMc=500
+<6>[ 4085.811675] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4112f04010009 [0x9:4:1:4399:500] chg=u
+<6>[ 4085.811693] c3  22901 google_battery: MSC_DIN chg_state=1f4112f04010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4399 icl=500
+<6>[ 4085.817411] c3  22901 google_battery: MSC_LAST vbatt=4389062 ibatt=-224062 fv_uv=4400000
+<6>[ 4085.817424] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4085.817429] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4085.817474] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 4085.821488] c2    799 healthd: battery l=100 v=4389 t=31.9 h=2 st=5 c=-224 fc=2708000 cc=17 chg=u
+<6>[ 4086.139651] c2    799 msm_crus_store_imped: left impedance 7.64528114 ohms
+<6>[ 4086.141721] c2    799 msm_crus_store_imped: right impedance 6.77086060 ohms
+<6>[ 4086.253833] c6    799 afe_close: port_id = 0x9020
+<6>[ 4086.275579] c6    799 afe_close: port_id = 0x9021
+<38>[ 4089.540765] c3    581 type=1400 audit(1658152356.025:2652): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4089.541358] c3    581 type=1400 audit(1658152360.281:2654): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4089.541611] c3    581 type=1400 audit(1658152360.281:2654): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4089.542879] c3    581 type=1400 audit(1658152360.281:2655): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4089.660466] c3    581 type=1400 audit(1658152360.281:2655): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4089.661084] c3    581 type=1400 audit(1658152360.401:2656): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4089.661224] c3    581 type=1400 audit(1658152360.401:2656): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4089.662036] c3    581 type=1400 audit(1658152360.401:2657): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<6>[ 4092.834172] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4113003010015 [0x15:3:1:4400:500] chg=u
+<6>[ 4092.836328] c3  22901 google_charger: usbchg=USB typec=C usbv=4884 usbc=489 usbMv=5000 usbMc=500
+<6>[ 4092.836450] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4113003010015 [0x15:3:1:4400:500] chg=u
+<6>[ 4092.836474] c3  22901 google_battery: MSC_DIN chg_state=1f4113003010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4400 icl=500
+<6>[ 4092.843413] c3  22901 google_battery: MSC_LAST vbatt=4390625 ibatt=-175625 fv_uv=4400000
+<6>[ 4092.843422] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4092.843426] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4092.843449] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 4092.846523] c4    810 healthd: battery l=100 v=4390 t=31.9 h=2 st=5 c=-175 fc=2708000 cc=17 chg=u
+<38>[ 4094.024649] c3    581 type=1400 audit(1658152360.401:2657): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4094.024675] c3    581 type=1400 audit(1658152364.765:2658): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<6>[ 4094.345466] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4111804010009 [0x9:4:1:4376:500] chg=u
+<6>[ 4094.347615] c3  22901 google_charger: usbchg=USB typec=C usbv=4886 usbc=471 usbMv=5000 usbMc=500
+<6>[ 4094.347714] c3  22901 sm8150_bms: MSC_PCS chg_state=1f4111804010009 [0x9:4:1:4376:500] chg=u
+<6>[ 4094.347731] c3  22901 google_battery: MSC_DIN chg_state=1f4111804010009 f=0x9 chg_s=Charging chg_t=Taper vchg=4376 icl=500
+<6>[ 4094.353696] c3  22901 google_battery: MSC_LAST vbatt=4390625 ibatt=-238437 fv_uv=4400000
+<6>[ 4094.353707] c3  22901 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4094.353713] c3  22901 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4094.353748] c3  22901 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 4094.356927] c7    810 healthd: battery l=100 v=4390 t=31.9 h=2 st=5 c=-238 fc=2708000 cc=17 chg=u
+<38>[ 4094.446096] c3    581 type=1400 audit(1658152364.765:2658): avc: denied { associate } for comm="Binder:787_1" name="globalAlert" scontext=u:object_r:proc_net:s0 tcontext=u:object_r:proc:s0 tclass=filesystem permissive=1
+<38>[ 4094.446814] c3    581 type=1400 audit(1658152365.185:2659): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4094.446982] c3    581 type=1400 audit(1658152365.185:2659): avc: denied { read } for comm="AppInit1" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4094.447752] c3    581 type=1400 audit(1658152365.185:2660): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4094.447846] c3    581 type=1400 audit(1658152365.185:2660): avc: denied { open } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4094.448392] c3    581 type=1400 audit(1658152365.185:2661): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4095.923559] c2    581 type=1400 audit(1658152365.185:2661): avc: denied { getattr } for comm="AppInit1" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4095.924125] c2    581 type=1400 audit(1658152366.665:2662): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4095.924372] c2    581 type=1400 audit(1658152366.665:2662): avc: denied { read } for comm="Lacrima_startup" name="file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4095.925217] c2    581 type=1400 audit(1658152366.665:2663): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4095.925345] c2    581 type=1400 audit(1658152366.665:2663): avc: denied { open } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4095.925686] c2    581 type=1400 audit(1658152366.665:2664): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<6>[ 4103.157345] c1  12635 sm8150_bms: MSC_PCS chg_state=1f4112403010015 [0x15:3:1:4388:500] chg=u
+<6>[ 4103.159171] c1  12635 google_charger: usbchg=USB typec=C usbv=4888 usbc=486 usbMv=5000 usbMc=500
+<6>[ 4103.159303] c1  12635 sm8150_bms: MSC_PCS chg_state=1f4112403010015 [0x15:3:1:4388:500] chg=u
+<6>[ 4103.159314] c1  12635 google_battery: MSC_DIN chg_state=1f4112403010015 f=0x15 chg_s=Charging chg_t=Fast vchg=4388 icl=500
+<6>[ 4103.164399] c1  12635 google_battery: MSC_LAST vbatt=4390781 ibatt=-149375 fv_uv=4400000
+<6>[ 4103.164409] c1  12635 google_battery: MSC_LOGIC cv_cnt=2 ov_cnt=0 temp_idx:2->2, vbatt_idx:2->2, fv=4400000->4400000, cc_max=1400000
+<6>[ 4103.164413] c1  12635 google_battery: MSC_VOTE fv_uv=4400000 cc_max=1400000 update_interval=30000
+<6>[ 4103.164442] c1  12635 google_charger: MSC_CHG fv_uv=4400000, cc_max=1400000, rerun in 30000 ms (0)
+<12>[ 4103.168148] c2    810 healthd: battery l=100 v=4390 t=31.9 h=2 st=5 c=-149 fc=2708000 cc=17 chg=u
+<38>[ 4103.340418] c2    581 type=1400 audit(1658152366.665:2664): avc: denied { getattr } for comm="Lacrima_startup" path="/proc/sys/fs/file-nr" dev="proc" ino=739852 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4103.340820] c2    581 type=1400 audit(1658152374.081:2665): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4103.341017] c2    581 type=1400 audit(1658152374.081:2665): avc: denied { read } for comm="Lacrima_startup" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4103.341619] c2    581 type=1400 audit(1658152374.081:2666): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4103.970393] c2    581 type=1400 audit(1658152374.081:2666): avc: denied { open } for comm="Lacrima_startup" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c127,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.instagram.android
+<38>[ 4103.971100] c2    581 type=1400 audit(1658152374.711:2667): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4103.971309] c2    581 type=1400 audit(1658152374.711:2667): avc: denied { read } for comm="AppInit1" name="zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4103.972188] c2    581 type=1400 audit(1658152374.711:2668): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4107.241923] c3    581 type=1400 audit(1658152374.711:2668): avc: denied { open } for comm="AppInit1" path="/proc/zoneinfo" dev="proc" ino=4026531860 scontext=u:r:untrusted_app:s0:c137,c256,c512,c768 tcontext=u:object_r:proc_zoneinfo:s0 tclass=file permissive=1 app=com.facebook.katana
+<38>[ 4107.241958] c3    581 type=1400 audit(1658152377.981:2669): avc: denied { write } for comm="kworker/0:1H" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 4107.256650] c2    581 type=1400 audit(1658152377.981:2669): avc: denied { write } for comm="kworker/0:1H" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 4107.256673] c2    581 type=1400 audit(1658152377.998:2670): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 4107.463623] c2    581 type=1400 audit(1658152377.998:2670): avc: denied { read } for comm="kworker/u17:1" laddr=192.168.0.18 lport=39100 faddr=192.168.0.4 fport=10809 scontext=u:r:kernel:s0 tcontext=u:r:su:s0 tclass=tcp_socket permissive=1
+<38>[ 4107.464081] c2    581 type=1400 audit(1658152378.205:2671): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 4107.464289] c2    581 type=1400 audit(1658152378.205:2671): avc: denied { open } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 4107.464961] c2    581 type=1400 audit(1658152378.205:2672): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<4>[ 4107.717631] c0  14967 audit: audit_lost=992 audit_rate_limit=5 audit_backlog_limit=64
+<3>[ 4107.717641] c0  14967 audit: rate limit exceeded
+<38>[ 4107.717722] c2    581 type=1400 audit(1658152378.205:2672): avc: denied { getattr } for comm="ell.clashroyale" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c169,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.supercell.clashroyale
+<38>[ 4107.718203] c2    581 type=1400 audit(1658152378.458:2673): avc: denied { open } for comm="ogle.android.gm" path="/proc/vmstat" dev="proc" ino=4026531859 scontext=u:r:untrusted_app:s0:c136,c256,c512,c768 tcontext=u:object_r:proc_vmstat:s0 tclass=file permissive=1 app=com.google.android.gm
+<1>[ 4109.113541] c3    561 Unable to handle kernel paging request at virtual address 7fbde7b000
+<1>[ 4109.113594] c3    561 Mem abort info:
+<1>[ 4109.113601] c3    561   Exception class = DABT (current EL), IL = 32 bits
+<1>[ 4109.113606] c3    561   SET = 0, FnV = 0
+<1>[ 4109.113611] c3    561   EA = 0, S1PTW = 0
+<1>[ 4109.113616] c3    561   FSC = 7
+<1>[ 4109.113621] c3    561 Data abort info:
+<1>[ 4109.113626] c3    561   ISV = 0, ISS = 0x00000007
+<1>[ 4109.113631] c3    561   CM = 0, WnR = 0
+<1>[ 4109.113640] c3    561 user pgtable: 4k pages, 39-bit VAs, pgd = 00000000a2b5485a
+<1>[ 4109.113647] c3    561 [0000007fbde7b000] *pgd=00000001e6cdf003, *pud=00000001e6cdf003, *pmd=00000001f2762003, *pte=50000000077b3a04
+<0>[ 4109.113660] c3    561 Internal error: Oops: 96000007 [#2] PREEMPT SMP
+<4>[ 4109.113668] c3    561 Modules linked in: nbd ftm5(O) heatmap videobuf2_vmalloc videobuf2_memops lkdtm adsp_loader_dlkm stub_dlkm usf_dlkm native_dlkm machine_dlkm platform_dlkm wcd_cpe_dlkm wsa881x_dlkm wcd934x_dlkm wcd9360_dlkm mbhc_dlkm wcd9xxx_dlkm swr_ctrl_dlkm cs35l36_dlkm q6_dlkm swr_dlkm apr_dlkm q6_notifier_dlkm q6_pdr_dlkm wglink_dlkm wcd_spi_dlkm wcd_core_dlkm pinctrl_wcd_dlkm msm_11ad_proxy wlan(O)
+<0>[ 4109.113724] c3    561 Process hwservicemanage (pid: 561, stack limit = 0x00000000ee488f52)
+<4>[ 4109.113733] c3    561 CPU: 3 PID: 561 Comm: hwservicemanage Tainted: G S    D    O    4.14.170_audio #59
+<4>[ 4109.113739] c3    561 Hardware name: Qualcomm Technologies, Inc. SM8150 V2 PM8150 Google Inc. MSM sm8150 Flame (DT)
+<4>[ 4109.113745] c3    561 task: 000000008909c6a0 task.stack: 00000000ee488f52
+<4>[ 4109.113757] c3    561 pc : __pi_strlen+0x10/0x84
+<4>[ 4109.113765] c3    561 lr : vbin_printf+0x1f4/0x320
+<4>[ 4109.113770] c3    561 sp : ffffff8014c839b0 pstate : 40400145
+<4>[ 4109.113776] c3    561 x29: ffffff8014c83a10 x28: ffffff9caddc4e70 
+<4>[ 4109.113783] c3    561 x27: fffffffffffff000 x26: ffffff9cada5e668 
+<4>[ 4109.113790] c3    561 x25: ffffff9caddc50df x24: ffffff8014c83a70 
+<4>[ 4109.113798] c3    561 x23: ffffffdb7d79f324 x22: 0000007fbde7b000 
+<4>[ 4109.113805] c3    561 x21: ffffffdb7d79ef2c x20: ffffff8014c83a58 
+<4>[ 4109.113812] c3    561 x19: ffffffdb7d79ef24 x18: ffffffdb756c8840 
+<4>[ 4109.113820] c3    561 x17: 0000000000000031 x16: ffffff9cad95d75c 
+<4>[ 4109.113827] c3    561 x15: ffffff9caddc5021 x14: 000000000000004e 
+<4>[ 4109.113834] c3    561 x13: ffff0000ffffff00 x12: 0000000000000000 
+<4>[ 4109.113842] c3    561 x11: 0101010101010101 x10: ffffff9cad95e4ac 
+<4>[ 4109.113849] c3    561 x9 : ffffff9cadb77856 x8 : 0000007fbde7b000 
+<4>[ 4109.113856] c3    561 x7 : 0000000000000000 x6 : ffffffdb7d79ef5b 
+<4>[ 4109.113863] c3    561 x5 : 0000000000077b3a x4 : 0000007fbde7b000 
+<4>[ 4109.113870] c3    561 x3 : ffffff8014c83a58 x2 : ffffff9cada5e64e 
+<4>[ 4109.113877] c3    561 x1 : 0000007fbde7b000 x0 : 0000007fbde7b000 
+<4>[ 4109.113885] c3    561 
+<4>[ 4109.113885] c3    561 PC: 0xffffff9cad94ba90:
+<4>[ 4109.113892] c3    561 ba90  ca030045 aa0400a6 b4fffe26 dac00cc6 dac00c42 dac00c63 dac010cb 9acb2042
+<4>[ 4109.113909] c3    561 bab0  9acb2063 d378fc42 cb43e040 d65f03c0 b200c3eb 927cec01 f2400c07 54000261
+<4>[ 4109.113923] c3    561 bad0  a8c10c22 cb0b0047 b200d848 cb0b0069 b200d86a 8a2800e5 ea2a0126 fa4008a0
+<4>[ 4109.113937] c3    561 baf0  54ffff00 cb000020 b4000065 d1002000 aa0503e6 d1002000 dac00cc6 dac010cc
+<4>[ 4109.113952] c3    561 
+<4>[ 4109.113952] c3    561 LR: 0xffffff9cad95e4b0:
+<4>[ 4109.113959] c3    561 e4b0  36f800a8 11002109 7100013f b9000309 540007ad f9400288 91002109 f9000289
+<4>[ 4109.113973] c3    561 e4d0  f9400108 b00010c9 91215929 f140051f fa5b2102 9a888136 aa1603e0 97ffb575
+<4>[ 4109.113986] c3    561 e4f0  91000402 8b0202bb eb17037f 54000082 aa1503e0 aa1603e1 97ffb3de aa1b03f5
+<4>[ 4109.114001] c3    561 e510  b274cffb 14000018 b980030a 91000ea9 927ef529 36f800aa 1100214b 7100017f
+<4>[ 4109.114016] c3    561 
+<4>[ 4109.114016] c3    561 SP: 0xffffff8014c83970:
+<4>[ 4109.114023] c3    561 3970  ad94bad0 ffffff9c 40400145 00000000 ada5e668 ffffff9c 66c12a00 7e19ce71
+<4>[ 4109.114037] c3    561 3990  ffffffff 0000007f 7d79ef24 ffffffdb 14c83a10 ffffff80 ad94bad0 ffffff9c
+<4>[ 4109.114051] c3    561 39b0  ffffff04 ffff0a00 66c12a00 7e19ce71 14c83cb0 ffffff80 7d79ef24 ffffffdb
+<4>[ 4109.114068] c3    561 39d0  aca21c20 ffffff9c ae796000 ffffff9c 14c83b98 ffffff80 ada5e64e ffffff9c
+<4>[ 4109.114082] c3    561 
+<4>[ 4109.114087] c3    561 Call trace:
+<4>[ 4109.114094] c3    561  __pi_strlen+0x10/0x84
+<4>[ 4109.114102] c3    561  trace_vbprintk+0xc8/0x378
+<4>[ 4109.114109] c3    561  __trace_bprintk+0x84/0xb8
+<4>[ 4109.114118] c3    561  do_swap_page+0x3d4/0xb38
+<4>[ 4109.114124] c3    561  handle_mm_fault+0x40c/0xb60
+<4>[ 4109.114132] c3    561  do_page_fault+0x23c/0x3bc
+<4>[ 4109.114138] c3    561  do_translation_fault+0x48/0xa0
+<4>[ 4109.114145] c3    561  do_mem_abort+0x50/0xd8
+<4>[ 4109.114152] c3    561  el0_da+0x20/0x24
+<0>[ 4109.114160] c3    561 Code: b200c3eb 927cec01 f2400c07 54000261 (a8c10c22) 
+<4>[ 4109.114166] c3    561 ---[ end trace 765958087c9a99b8 ]---
