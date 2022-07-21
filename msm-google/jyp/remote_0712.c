@@ -68,12 +68,10 @@ bool zram_full;
 struct per_app_swap_trace *past[9];
 
 int backgrounded_uid;
-int nbd_client_pid;
 atomic_t sent_cold_page;
 atomic_t sent_sys_cold_page;
 atomic_t faulted_cold_page;
 atomic_t excepted_page;
-atomic_t nbd_direct_page;
 
 int prefetch_on;
 int target_percentage;
@@ -537,7 +535,7 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 	
 						//trace_printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,page_to_pfn(page));
 
-						new_entry = get_swap_page_of_id(9); // cold page
+							new_entry = get_swap_page_of_id(9); // cold page
 
 						new_pte = swp_entry_and_counter_to_pte(new_entry,9);
 						//if COLD, type==1 && counter(id)==9 (cold id)
@@ -740,7 +738,7 @@ retry:
 
 
 
-static int prefetch_target_page(int id, pid_t tgid, unsigned long va){
+static int prefetch_target_page(pid_t tgid, unsigned long va){
 
 
 	struct task_struct  *task = NULL;
@@ -809,7 +807,7 @@ static int prefetch_target_page(int id, pid_t tgid, unsigned long va){
 								swap_readpage(page, false);
 								SetPageReadahead(page);
 	
-								trace_printk("prefetch done id %d: %d %lx %lx\n", id, tgid, va, swp_offset(entry) );
+								trace_printk("prefetch done: %d %llx\n", tgid, va);
 							}
 							else
 								trace_printk("page not allocated\n");
@@ -873,9 +871,7 @@ static void prefetch_work(struct work_struct *work)
 		after_idx_e = atomic_read(&past[id]->after_index1);
 		after_idx_l = atomic_read(&past[id]->after_index0);
 	}
-
-
-	trace_printk("prefetch work: foreground %d, maxidx %d, afteridx %d\n",foreground_uid,max_idx_l,after_idx_l);
+	//printk(KERN_ERR "2 %d %d, %d %d!!\n",max_idx_e, after_idx_e, max_idx_l, after_idx_l);
 
 	blk_start_plug(&plug);
 	for( i = 0 ; i <= max_idx_l ; i++ ){
@@ -884,7 +880,7 @@ static void prefetch_work(struct work_struct *work)
 		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
 			tgid = swap_trace_table_l[i].tgid;
 			va = swap_trace_table_l[i].va;
-			prefetch_target_page(id,tgid,va);
+			prefetch_target_page(tgid,va);
 		}
 	}
 	blk_finish_plug(&plug);
@@ -893,13 +889,26 @@ static void prefetch_work(struct work_struct *work)
 
 	blk_start_plug(&plug_after);
 	for( i = max_idx_l + 1; i <= after_idx_l; i++ ){
+	//printk(KERN_ERR "5!!\n");
+		//trace_printk("prefetch table %d: %d %llx, %d %d\n",target_table,swap_trace_table_l[i].tgid,swap_trace_table_l[i].va,swap_trace_table_l[i].to_nbd,swap_trace_table_l[i].swapped);
 		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
 			tgid = swap_trace_table_l[i].tgid;
 			va = swap_trace_table_l[i].va;
-			prefetch_target_page(id,tgid,va);
+			prefetch_target_page(tgid,va);
 		}
 	}
 
+
+	//printk(KERN_ERR "6!!\n");
+	for( i = max_idx_e + 1 ; i <= after_idx_e ; i++ ){
+	//printk(KERN_ERR "7!!\n");
+		if(swap_trace_table_e[i].to_nbd && swap_trace_table_e[i].swapped){
+			tgid = swap_trace_table_e[i].tgid;
+			va = swap_trace_table_e[i].va;
+			prefetch_target_page(tgid,va);
+		}
+	}
+	//printk(KERN_ERR "8!!\n");
 	blk_finish_plug(&plug_after);
 	lru_add_drain();
 
@@ -942,7 +951,6 @@ static void miss_page_work(struct work_struct *work)
 		after_idx_l = atomic_read(&past[id]->after_index0);
 	}
 
-	trace_printk("miss work: foreground %d, maxidx %d, afteridx %d\n",foreground_uid,max_idx_l,after_idx_l);
 //	blk_start_plug(&plug);
 	for( i = 0 ; i <= after_idx_l ; i++ ){
 		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped ) // && swapped
@@ -953,6 +961,14 @@ static void miss_page_work(struct work_struct *work)
 		}
 	}
 
+	for( i = 0 ; i <= after_idx_e ; i++ ){
+		if(swap_trace_table_e[i].to_nbd && swap_trace_table_e[i].swapped) // && swapped
+		{
+			tgid = swap_trace_table_e[i].tgid;
+			va = swap_trace_table_e[i].va;
+			fault_target_page(tgid,va);
+		}
+	}
 
 //	blk_finish_plug(&plug);
 	lru_add_drain();
@@ -1466,6 +1482,7 @@ int update_to_nbd_flag(unsigned int id, int percentage){
 
 
 
+	/* AND version!*/
 	
 
 	while(idx_l <= max_idx_l){
@@ -1482,22 +1499,33 @@ int update_to_nbd_flag(unsigned int id, int percentage){
 		idx_l++;
 	}
 
-	/* AND version!*/
-	
-		
+	idx_e = max_idx_e + 1;
 	idx_l = max_idx_l + 1;
+	
+
+	while(idx_e <= after_idx_e){
+		swap_trace_table_e[idx_e].to_nbd = 1;
+		idx_e++;
+		cnt++;
+	}
 	while(idx_l <= after_idx_l){
-		idx_e = max_idx_e + 1;
-		while(idx_e <= after_idx_e){
+		swap_trace_table_l[idx_l].to_nbd = 1;
+		idx_l++;
+		cnt++;
+	}
+	idx_e = max_idx_e + 1;
+	while(idx_e <= after_idx_e){
+		idx_l = max_idx_l + 1;
+		while(idx_l <= after_idx_l){
 			if( swap_trace_table_e[idx_e].va == swap_trace_table_l[idx_l].va &&
 				swap_trace_table_e[idx_e].tgid == swap_trace_table_l[idx_l].tgid){
-				swap_trace_table_l[idx_l].to_nbd = 1;
-				cnt++;
+				swap_trace_table_e[idx_e].to_nbd = 0;
+				cnt--;
 				break;
 			}
-			idx_e++;
+			idx_l++;
 		}
-		idx_l++;
+		idx_e++;
 	}
 
 
@@ -1560,8 +1588,6 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 			rcu_read_lock();
 			for_each_process(p){
 				if(!p)
-					continue;
-				if(p->tgid == nbd_client_pid)
 					continue;
 				if(backgrounded_uid && p->cred->uid.val == backgrounded_uid){
 					printk("backgrounded_uid %d",backgrounded_uid);
@@ -1685,8 +1711,6 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 			for_each_process(p){
 				if(!p)
 					continue;
-				if(p->tgid == nbd_client_pid)
-					continue;
 				if(backgrounded_uid && p->cred->uid.val == backgrounded_uid){
 					printk("backgrounded_uid %d",backgrounded_uid);
 					if(task_swap_counter_inc(p))
@@ -1808,8 +1832,6 @@ int swap_counter_dump_handler(struct ctl_table *table, int write,
 	trace_printk("remote: total faulted cold page: %d\n", faulted_cold_page);
 	trace_printk("remote: total excepted page: %d\n", excepted_page);
 	trace_printk("remote: sent system page: %d\n", sent_sys_cold_page);
-	trace_printk("remote: ZRAM remain: %d KB / 2097148 KB\n", zram_remain()*4);
-	trace_printk("remote: total direct page: %d\n", nbd_direct_page);
 	}
 	return 0;
 }
@@ -2018,12 +2040,28 @@ static int send_target_manager(void *arg)
 					target_flag=1;
 					tgid = swap_trace_table_l[i].tgid;
 					va = swap_trace_table_l[i].va;
-					if(send_target_page(id/* ID */,tgid,va,i>max_idx_l)){
+					if(send_target_page(id/* ID */,tgid,va,i>=max_idx_l)){
 						swap_trace_table_l[i].swapped=1;
 					}
 				}
 			}
 
+			for (i = max_idx_e ; i < after_idx_e+1; i++){
+				if(switch_start){
+					target_flag = 0;
+					trace_printk(KERN_ERR "[REMOTE %s] switch started during sent\n", __func__);
+					goto sleep;
+				}
+				if(swap_trace_table_e[i].to_nbd && !swap_trace_table_e[i].swapped){
+						
+					target_flag=1;
+					tgid = swap_trace_table_e[i].tgid;
+					va = swap_trace_table_e[i].va;
+					if(send_target_page(id/* ID */,tgid,va,true)){
+						swap_trace_table_e[i].swapped=1;
+					}
+				}
+			}
 			/***for direct page***/
 
 			
@@ -2088,13 +2126,10 @@ static int sys_cold_manager(void *arg)
 		for_each_process(p){
 			if(!p)
 				continue;
-			if(p->tgid == nbd_client_pid)
-				continue;
 			if(is_system_uid(p->cred->uid.val)){
 				task_swap_counter_inc(p);
 				//if ZRAM full	
-				//if(zram_full)
-				if(zram_remain() < ZRAM_PAGES*0.3)
+				if(zram_full)
 					sys_cold_page_sender_handler(p);
 			}
 		}

@@ -1,0 +1,133 @@
+71d70
+< int nbd_client_pid;
+76d74
+< atomic_t nbd_direct_page;
+540c538
+< 						new_entry = get_swap_page_of_id(9); // cold page
+---
+> 							new_entry = get_swap_page_of_id(9); // cold page
+743c741
+< static int prefetch_target_page(int id, pid_t tgid, unsigned long va){
+---
+> static int prefetch_target_page(pid_t tgid, unsigned long va){
+812c810
+< 								trace_printk("prefetch done id %d: %d %lx %lx\n", id, tgid, va, swp_offset(entry) );
+---
+> 								trace_printk("prefetch done: %d %llx\n", tgid, va);
+876,878c874
+< 
+< 
+< 	trace_printk("prefetch work: foreground %d, maxidx %d, afteridx %d\n",foreground_uid,max_idx_l,after_idx_l);
+---
+> 	//printk(KERN_ERR "2 %d %d, %d %d!!\n",max_idx_e, after_idx_e, max_idx_l, after_idx_l);
+887c883
+< 			prefetch_target_page(id,tgid,va);
+---
+> 			prefetch_target_page(tgid,va);
+895a892,893
+> 	//printk(KERN_ERR "5!!\n");
+> 		//trace_printk("prefetch table %d: %d %llx, %d %d\n",target_table,swap_trace_table_l[i].tgid,swap_trace_table_l[i].va,swap_trace_table_l[i].to_nbd,swap_trace_table_l[i].swapped);
+899c897
+< 			prefetch_target_page(id,tgid,va);
+---
+> 			prefetch_target_page(tgid,va);
+902a901,911
+> 
+> 	//printk(KERN_ERR "6!!\n");
+> 	for( i = max_idx_e + 1 ; i <= after_idx_e ; i++ ){
+> 	//printk(KERN_ERR "7!!\n");
+> 		if(swap_trace_table_e[i].to_nbd && swap_trace_table_e[i].swapped){
+> 			tgid = swap_trace_table_e[i].tgid;
+> 			va = swap_trace_table_e[i].va;
+> 			prefetch_target_page(tgid,va);
+> 		}
+> 	}
+> 	//printk(KERN_ERR "8!!\n");
+945d953
+< 	trace_printk("miss work: foreground %d, maxidx %d, afteridx %d\n",foreground_uid,max_idx_l,after_idx_l);
+955a964,971
+> 	for( i = 0 ; i <= after_idx_e ; i++ ){
+> 		if(swap_trace_table_e[i].to_nbd && swap_trace_table_e[i].swapped) // && swapped
+> 		{
+> 			tgid = swap_trace_table_e[i].tgid;
+> 			va = swap_trace_table_e[i].va;
+> 			fault_target_page(tgid,va);
+> 		}
+> 	}
+1468a1485
+> 	/* AND version!*/
+1485,1487c1502
+< 	/* AND version!*/
+< 	
+< 		
+---
+> 	idx_e = max_idx_e + 1;
+1488a1504,1510
+> 	
+> 
+> 	while(idx_e <= after_idx_e){
+> 		swap_trace_table_e[idx_e].to_nbd = 1;
+> 		idx_e++;
+> 		cnt++;
+> 	}
+1490,1491c1512,1519
+< 		idx_e = max_idx_e + 1;
+< 		while(idx_e <= after_idx_e){
+---
+> 		swap_trace_table_l[idx_l].to_nbd = 1;
+> 		idx_l++;
+> 		cnt++;
+> 	}
+> 	idx_e = max_idx_e + 1;
+> 	while(idx_e <= after_idx_e){
+> 		idx_l = max_idx_l + 1;
+> 		while(idx_l <= after_idx_l){
+1494,1495c1522,1523
+< 				swap_trace_table_l[idx_l].to_nbd = 1;
+< 				cnt++;
+---
+> 				swap_trace_table_e[idx_e].to_nbd = 0;
+> 				cnt--;
+1498c1526
+< 			idx_e++;
+---
+> 			idx_l++;
+1500c1528
+< 		idx_l++;
+---
+> 		idx_e++;
+1564,1565d1591
+< 				if(p->tgid == nbd_client_pid)
+< 					continue;
+1688,1689d1713
+< 				if(p->tgid == nbd_client_pid)
+< 					continue;
+1811,1812d1834
+< 	trace_printk("remote: ZRAM remain: %d KB / 2097148 KB\n", zram_remain()*4);
+< 	trace_printk("remote: total direct page: %d\n", nbd_direct_page);
+2021c2043
+< 					if(send_target_page(id/* ID */,tgid,va,i>max_idx_l)){
+---
+> 					if(send_target_page(id/* ID */,tgid,va,i>=max_idx_l)){
+2026a2049,2064
+> 			for (i = max_idx_e ; i < after_idx_e+1; i++){
+> 				if(switch_start){
+> 					target_flag = 0;
+> 					trace_printk(KERN_ERR "[REMOTE %s] switch started during sent\n", __func__);
+> 					goto sleep;
+> 				}
+> 				if(swap_trace_table_e[i].to_nbd && !swap_trace_table_e[i].swapped){
+> 						
+> 					target_flag=1;
+> 					tgid = swap_trace_table_e[i].tgid;
+> 					va = swap_trace_table_e[i].va;
+> 					if(send_target_page(id/* ID */,tgid,va,true)){
+> 						swap_trace_table_e[i].swapped=1;
+> 					}
+> 				}
+> 			}
+2091,2092d2128
+< 			if(p->tgid == nbd_client_pid)
+< 				continue;
+2096d2131
+< 				//if(zram_remain() < ZRAM_PAGES*0.3)

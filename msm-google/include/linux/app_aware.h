@@ -11,7 +11,7 @@
 #define COLD_PAGE_THRESHOLD 2
 #define SYS_COLD_PAGE_THRESHOLD 4
 #define ZRAM_PAGES 524287
-#define NUM_STT_ENTRIES 40000
+#define NUM_STT_ENTRIES 30000
 
 /******************************
  * APPLICATION UID DEFINITION *
@@ -22,7 +22,7 @@
 #define TW_UID 10133
 #define CC_UID 10128
 #define AB_UID 10122
-#define CR_UID 10169
+#define CR_UID 10170
 #define MAIL_UID 10136
 #define CH_UID 10124 
 

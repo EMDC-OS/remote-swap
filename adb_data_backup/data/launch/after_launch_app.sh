@@ -48,7 +48,7 @@ elif [ "${app}" = "facebook" ]; then
 elif [ "${app}" = "pubg" ]; then
 	echo 10158 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "clashroyale" ]; then
-	echo 10169 > /proc/sys/kernel/foreground_uid
+	echo 10170 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "gmail" ]; then
 	echo 10136 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "chrome" ]; then
@@ -121,7 +121,7 @@ else
 fi
 
 echo 1 > /proc/sys/kernel/app_switch_after_1
-sleep 10
+sleep 3
 echo 1 > /proc/sys/kernel/app_switch_after_2
 #cat /proc/vmstat > /data/launch/result_${app}/${kernel}/${state}/vmstat_end
 #if [ "${kernel}" = "fastpf" ]; then
