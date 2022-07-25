@@ -302,7 +302,7 @@ int add_to_swap(struct page *page)
 		atomic_inc(&nbd_direct_page);
 	//	trace_printk("ZRAM full: nbd swapout offset %llx\n",swp_offset(entry));
 //		is_direct = true;
-	//	SetPageDirect(page);
+		SetPageDirect(page);
 	}
 #endif
 

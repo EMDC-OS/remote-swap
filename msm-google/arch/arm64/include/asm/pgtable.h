@@ -717,8 +717,12 @@ extern pgd_t tramp_pg_dir[PTRS_PER_PGD];
  *	bits 2-7:	swap type
  *	bits 8-57:	swap offset
  *	bit  58:	PTE_PROT_NONE (must be zero)
- *	bits 59-62: swap counter (ZRAM), swap id (NBD)
- *	bit  63: swap excepted (ZRAM swap only)
+ ************************************
+ *  bits 59-62: swap counter  (ZRAM)
+ *	bit  63:    swap excepted (ZRAM)
+ ************************************
+ *	bits 59-63: swap appid    (NBD)
+ ************************************
  */
 #define __SWP_TYPE_SHIFT	2
 #define __SWP_TYPE_BITS		6

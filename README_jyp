@@ -55,11 +55,14 @@ current implementation -> continue
 - System-wide cold page
 inc systemwide cold counter at every 10 minutes. and ((if ZRAM full))-->disable for now, swap out to NBD.
 
-- early table targeting
+- early table targeting -> DISCARD
 Should modify miss handler for that
 
 - swap trace table lock..?
 Any lock contention? and any bug because of lock?
+
+- Infrequently used apps
+How about check them in cold counter..?
 
 // Implementation idea
 

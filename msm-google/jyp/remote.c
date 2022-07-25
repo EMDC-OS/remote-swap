@@ -620,11 +620,12 @@ unlock:
 	atomic_add(cnt,&sent_cold_page);
 	atomic_add(cnt,&sent_sys_cold_page);
 
-	trace_printk("remote: total sent cold page: %d\n", sent_cold_page);
-	trace_printk("remote: total faulted cold page: %d\n", faulted_cold_page);
+	trace_printk("remote: tgid %d system cold page %d out\n",task->tgid,cnt);
+	//trace_printk("remote: total sent cold page: %d\n", sent_cold_page);
+	//trace_printk("remote: total faulted cold page: %d\n", faulted_cold_page);
 	kfree(tew);
 
-	preempted_cold_task = NULL;
+	//preempted_cold_task = NULL;
 
 }
 
@@ -1278,6 +1279,7 @@ int task_swap_counter_inc(struct task_struct *task)
     {
         return 0;
     }
+						
     
 	if(task->mm && task->mm->mmap)  // if target_proc is well mmaped
     {
@@ -1881,8 +1883,7 @@ static int send_target_page(unsigned int id, pid_t tgid, unsigned long va, bool 
                     }
                     else                    // page is swapped and swap entry.
                     {
-						if(swp_type(entry) == ZRAM_TYPE || 
-								(swp_type(entry) == NBD_TYPE && pte_to_swp_counter(*pte)==10))   
+						if(swp_type(entry) == ZRAM_TYPE )   
 						{
 							cache_page = find_get_page(swap_address_space(entry), swp_offset(entry)); 
 							if(!cache_page)       // can't find the page from cache
@@ -2080,8 +2081,11 @@ static int sys_cold_manager(void *arg)
 {
 		
 	struct task_struct *p;
+	//int remain;
+	//int thresh;
 	while (!kthread_should_stop()) {
 			
+		schedule_timeout_interruptible(SYSTEMWIDE_COLD_PERIOD);
 		trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager wake up\n", __func__);
 
 		rcu_read_lock();
@@ -2090,17 +2094,26 @@ static int sys_cold_manager(void *arg)
 				continue;
 			if(p->tgid == nbd_client_pid)
 				continue;
+		
 			if(is_system_uid(p->cred->uid.val)){
 				task_swap_counter_inc(p);
 				//if ZRAM full	
+				
+
+					
+				trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager tgid %d, %d < %d?\n", __func__, p->tgid,zram_remain(),ZRAM_PAGES*0.5);
+
 				//if(zram_full)
-				if(zram_remain() < ZRAM_PAGES*0.3)
+				if(zram_remain() < ZRAM_PAGES*0.5){
 					sys_cold_page_sender_handler(p);
+				}
+		
 			}
 		}
 		rcu_read_unlock();
 		zram_full=0;
 			
+		trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager slept\n", __func__);
 		schedule_timeout_interruptible(SYSTEMWIDE_COLD_PERIOD);
 	}
 
