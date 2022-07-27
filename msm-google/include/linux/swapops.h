@@ -5,6 +5,10 @@
 #include <linux/radix-tree.h>
 #include <linux/bug.h>
 
+#ifdef CONFIG_APP_AWARE
+#include <linux/app_aware.h>
+#endif
+
 /*
  * swapcache pages are stored in the swapper_space radix tree.  We want to
  * get good packing density in that tree, so the index should be dense in
@@ -394,18 +398,22 @@ static inline int non_swap_entry(swp_entry_t entry)
 
 #ifdef CONFIG_APP_AWARE
 
-static inline u64 pte_to_swp_counter(pte_t pte)
+static inline u64 pte_to_swp_counter_zram(pte_t pte)
 {
 	swp_entry_t arch_entry;
 	arch_entry = __pte_to_swp_entry(pte);
+	if(__swp_type(arch_entry)!=ZRAM_TYPE)
+		panic("[REMOTE %s] inappropriate swap type!\n", __func__);
 	return __swp_counter(arch_entry);
 }
 
-static inline pte_t swp_entry_and_counter_to_pte(swp_entry_t entry, u64 counter)
+static inline pte_t swp_entry_and_counter_zram_to_pte(swp_entry_t entry, u64 counter)
 {
 	swp_entry_t arch_entry;
 
 	arch_entry = __swp_entry_with_counter(swp_type(entry), swp_offset(entry), counter);
+	if(__swp_type(arch_entry)!=ZRAM_TYPE)
+		panic("[REMOTE %s] inappropriate swap type!\n", __func__);
 	return __swp_entry_to_pte(arch_entry);
 }
 
@@ -413,6 +421,8 @@ static inline bool pte_to_swp_excepted(pte_t pte)
 {
 	swp_entry_t arch_entry;
 	arch_entry = __pte_to_swp_entry(pte);
+	if(__swp_type(arch_entry)!=ZRAM_TYPE)
+		panic("[REMOTE %s] inappropriate swap type!\n", __func__);
 	return __swp_excepted(arch_entry);
 }
 
@@ -420,11 +430,33 @@ static inline pte_t swp_entry_with_excepted(swp_entry_t entry)
 {
 	swp_entry_t arch_entry;
 	arch_entry = __swp_entry_with_excepted(swp_type(entry), swp_offset(entry), 0UL, 1UL);
+	if(__swp_type(arch_entry)!=ZRAM_TYPE)
+		panic("[REMOTE %s] inappropriate swap type!\n", __func__);
 	return __swp_entry_to_pte(arch_entry);
 }
 
+static inline u64 pte_to_swp_appid_nbd(pte_t pte)
+{
+	swp_entry_t arch_entry;
+	arch_entry = __pte_to_swp_entry(pte);
+	
+	if(__swp_type(arch_entry)!=NBD_TYPE)
+		panic("[REMOTE %s] inappropriate swap type!\n", __func__);
+	
+	return __swp_appid(arch_entry);
+}
 
+static inline pte_t swp_entry_and_appid_nbd_to_pte(swp_entry_t entry, u64 appid)
+{
+	swp_entry_t arch_entry;
+	arch_entry = __swp_entry_with_appid(swp_type(entry), swp_offset(entry), appid);
 
+	if(__swp_type(arch_entry)!=NBD_TYPE)
+		panic("[REMOTE %s] inappropriate swap type!\n", __func__);
+	
+	
+	return __swp_entry_to_pte(arch_entry);
+}
 
 #endif
 

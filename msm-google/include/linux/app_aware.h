@@ -8,8 +8,8 @@
 
 #define ZRAM_TYPE   0
 #define NBD_TYPE    1
-#define COLD_PAGE_THRESHOLD 3 
-#define SYS_COLD_PAGE_THRESHOLD 5 
+#define COLD_PAGE_THRESHOLD 2 
+#define SYS_COLD_PAGE_THRESHOLD 2 
 #define ZRAM_PAGES 524287
 #define NUM_STT_ENTRIES 30000
 
@@ -22,9 +22,44 @@
 #define TW_UID 10133
 #define CC_UID 10128
 #define AB_UID 10122
-#define CR_UID 10170
+#define FB_UID 10137
+#define CR_UID 10171
 #define MAIL_UID 10136
 #define CH_UID 10124 
+#define	IV_UID 10173
+#define	CN_UID 10172
+#define	SP_UID 10174
+#define	MX_UID 10175
+#define	KT_UID 10134
+#define	PG_UID 10164
+#define	DB_UID 10144
+#define	TWCH_UID 10161
+
+
+enum appids {
+	MAPS_ID,
+	YT_ID,
+	IG_ID,
+	TW_ID,
+	CC_ID,
+	AB_ID,
+	FB_ID,
+	CR_ID,
+	MAIL_ID,
+	CH_ID,
+	IV_ID,
+	CN_ID,
+	SP_ID,
+	MX_ID,
+	KT_ID,
+	PG_ID,
+	DB_ID,
+	TWCH_ID,
+/************/
+	COLD_ID, // == __NR_APPIDS
+	DIRECT_ID,
+};
+#define __NR_APPIDS COLD_ID
 
 
 struct prefetch_work {
@@ -67,8 +102,8 @@ extern bool switch_start;
 extern bool switch_after;
 extern bool miss_handling;
 extern bool zram_full;
-extern struct perapp_cluster pac[19];
-extern struct per_app_swap_trace *past[9];
+extern struct perapp_cluster pac[2*__NR_APPIDS+1];
+extern struct per_app_swap_trace *past[__NR_APPIDS];
 
 extern atomic_t sent_cold_page;
 extern atomic_t sent_sys_cold_page;

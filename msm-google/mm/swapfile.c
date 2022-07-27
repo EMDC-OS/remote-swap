@@ -4010,7 +4010,7 @@ swp_entry_t get_swap_page_of_id(unsigned int id)
 	struct swap_info_struct *si;
 	pgoff_t offset;
 
-	if(id<0 || id>19){
+	if(id<0 || id >= 2*COLD_ID+1 ){
 		panic("[REMOTE %s] unregistered ID %d\n", __func__,id);
 	}
 			

@@ -53,7 +53,7 @@
 
 #define MANAGER_PERIOD (10*HZ)
 #define ALARM_PERIOD (150*HZ)
-#define SYSTEMWIDE_COLD_PERIOD (600*HZ)
+#define SYSTEMWIDE_COLD_PERIOD (200*HZ)
 
 #define TRUE 1
 #define FALSE 0
@@ -65,7 +65,7 @@ bool miss_handling;
 bool zram_full;
 
 
-struct per_app_swap_trace *past[9];
+struct per_app_swap_trace *past[__NR_APPIDS]; //__NR_APPIDS
 
 int backgrounded_uid;
 int nbd_client_pid;
@@ -80,7 +80,7 @@ int target_percentage;
 
 struct task_struct *preempted_cold_task;
 
-struct perapp_cluster pac[19];
+struct perapp_cluster pac[2*__NR_APPIDS+1]; // 2 * __NR_APPIDS + 1
 
 struct task_struct *send_target_manager_thread;
 struct task_struct *send_target_alarm_thread;
@@ -94,60 +94,58 @@ DEFINE_SPINLOCK(switch_start_lock);
 
 bool stm_wait_cond;
 
-
 unsigned int get_id_from_uid(int uid){
 
-	if(uid==MAPS_UID)
-		return 0;
-	if(uid==YT_UID)
-		return 1;
-	if(uid==IG_UID)
-		return 2;
-	if(uid==TW_UID)
-		return 3;
-	if(uid==CC_UID)
-		return 4;
-	if(uid==AB_UID)
-		return 5;
-	if(uid==CR_UID)
-		return 6;
-	if(uid==MAIL_UID)
-		return 7;
-	if(uid==CH_UID)
-		return 8;
-	else if (uid==-1) // cold page
-		return 9;
-	else{
-		panic("[REMOTE %s] unregistered UID\n", __func__);
-		return -1;
+	switch(uid){
+		case MAPS_UID: return MAPS_ID;
+		case YT_UID: return YT_ID;
+		case IG_UID: return IG_ID;
+		case TW_UID: return TW_ID;
+		case CC_UID: return CC_ID;
+		case AB_UID: return AB_ID;
+		case FB_UID: return FB_ID;
+		case CR_UID: return CR_ID;
+		case MAIL_UID: return MAIL_ID;
+		case CH_UID: return CH_ID;
+		case IV_UID: return IV_ID;
+		case CN_UID: return CN_ID;
+		case SP_UID: return SP_ID;
+		case MX_UID: return MX_ID;
+		case KT_UID: return KT_ID;
+		case PG_UID: return PG_ID;
+		case DB_UID: return DB_ID;
+		case TWCH_UID: return TWCH_ID;
+		case -1: return COLD_ID;
+		default:
+			panic("[REMOTE %s] unregistered UID %d\n", __func__,uid);
+			return -1;
 	}
 
 }
 
 bool is_system_uid(int uid){
-
-	if(uid==MAPS_UID)
-		return 0;
-	if(uid==YT_UID)
-		return 0;
-	if(uid==IG_UID)
-		return 0;
-	if(uid==TW_UID)
-		return 0;
-	if(uid==CC_UID)
-		return 0;
-	if(uid==AB_UID)
-		return 0;
-	if(uid==CR_UID)
-		return 0;
-	if(uid==MAIL_UID)
-		return 0;
-	if(uid==CH_UID)
-		return 0;
-	else{
-		return 1;
+	switch(uid){
+		case MAPS_UID: return 0;
+		case YT_UID: return 0;
+		case IG_UID: return 0;
+		case TW_UID: return 0;
+		case CC_UID: return 0;
+		case AB_UID: return 0;
+		case FB_UID: return 0;
+		case CR_UID: return 0;
+		case MAIL_UID: return 0;
+		case CH_UID: return 0;
+		case IV_UID: return 0;
+		case CN_UID: return 0;
+		case SP_UID: return 0;
+		case MX_UID: return 0;
+		case KT_UID: return 0;
+		case PG_UID: return 0;
+		case DB_UID: return 0;
+		case TWCH_UID: return 0;
+		default:
+			return 1;
 	}
-
 }
 
 void wake_up_send_target_manager(void)
@@ -196,9 +194,9 @@ static int _send_target_page(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned l
 					
 	//trace_printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,page_to_pfn(page));
 
-		new_entry = get_swap_page_of_id(id+10*is_after);
-	new_pte = swp_entry_and_counter_to_pte(new_entry,id);
-	//if Prefetch target, type==1 && counter(id)==id
+	new_entry = get_swap_page_of_id(id+(__NR_APPIDS+1)*is_after);
+	new_pte = swp_entry_and_appid_nbd_to_pte(new_entry,id);
+	//if Prefetch target, type==NBD_TYPE && counter(id)==id
 	lock_page(page);
 	__SetPageSwapBacked(page);
 	ClearPageUptodate(page);
@@ -240,7 +238,7 @@ static int _send_target_page(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned l
 	}
 	
 	set_pte(orig_pte, new_pte);
-	trace_printk("target sent id %d: cluster %d, %d %llx %llx\n",id,id+10*is_after,mm->owner->tgid, vpage, swp_offset(new_entry));
+	trace_printk("target sent id %d: cluster %d, %d %llx %llx\n",id,id+(__NR_APPIDS+1)*is_after,mm->owner->tgid, vpage, swp_offset(new_entry));
 	swap_free(entry);
 	ret=1;
 unlock:
@@ -318,13 +316,14 @@ static void cold_page_sender_work(struct work_struct *work)
 				if(is_swap_pte(*pte))       // if the pte is swapped (swp_entry)
 				{
 					swp_entry_t entry = pte_to_swp_entry(*pte);
-					counter = pte_to_swp_counter(*pte);
 					if(non_swap_entry(entry))
 					{
 						continue;
 					}
-					
-					if(swp_type(entry) == NBD_TYPE || swp_swapcount(entry) != 1 || counter <= COLD_PAGE_THRESHOLD) {
+					if(swp_type(entry) == NBD_TYPE)
+						continue;
+					counter = pte_to_swp_counter_zram(*pte);
+					if(__swp_swapcount(entry) != 1 || counter <= COLD_PAGE_THRESHOLD) {
 						continue;
 					}
 					else                    // page is swapped and swap entry.
@@ -351,10 +350,10 @@ static void cold_page_sender_work(struct work_struct *work)
 	
 						//trace_printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,page_to_pfn(page));
 
-							new_entry = get_swap_page_of_id(9); // cold page
+						new_entry = get_swap_page_of_id(COLD_ID); // cold page
 
-						new_pte = swp_entry_and_counter_to_pte(new_entry,9);
-						//if COLD, type==1 && counter(id)==9 (cold id)
+						new_pte = swp_entry_and_appid_nbd_to_pte(new_entry,COLD_ID);
+						//if COLD, type==NBD_TYPE && counter(id)==COLD_ID (cold id)
 
 
 						
@@ -504,19 +503,19 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 				if(is_swap_pte(*pte))       // if the pte is swapped (swp_entry)
 				{
 					swp_entry_t entry = pte_to_swp_entry(*pte);
-					counter = pte_to_swp_counter(*pte);
 					if(non_swap_entry(entry))
 					{
 						continue;
 					}
+					if(swp_type(entry) == NBD_TYPE)
+						continue;
 					
-					if(swp_type(entry) == NBD_TYPE || swp_swapcount(entry) != 1 || counter <= SYS_COLD_PAGE_THRESHOLD) {
+					counter = pte_to_swp_counter_zram(*pte);
+					if(__swp_swapcount(entry) != 1 || counter <= SYS_COLD_PAGE_THRESHOLD) {
 						continue;
 					}
 					else                    // page is swapped and swap entry.
 					{
-	
-
 						struct address_space *mapping;
 						swp_entry_t new_entry;
 						pte_t new_pte;
@@ -537,10 +536,10 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 	
 						//trace_printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,page_to_pfn(page));
 
-						new_entry = get_swap_page_of_id(9); // cold page
+						new_entry = get_swap_page_of_id(COLD_ID); // cold page
 
-						new_pte = swp_entry_and_counter_to_pte(new_entry,9);
-						//if COLD, type==1 && counter(id)==9 (cold id)
+						new_pte = swp_entry_and_appid_nbd_to_pte(new_entry,COLD_ID);
+						//if COLD, type==NBD_TYPE && counter(id)==COLD_ID (cold id)
 
 
 						
@@ -690,7 +689,7 @@ static int fault_target_page(pid_t tgid, unsigned long va){
                     {
                        return 0;
                     }
-                    if(swp_swapcount(entry) != 1) {
+                    if(__swp_swapcount(entry) != 1) {
                         return 0;
                     }
                     else                    // page is swapped and swap entry.
@@ -792,7 +791,7 @@ static int prefetch_target_page(int id, pid_t tgid, unsigned long va){
                     {
                        return 0;
                     }
-                    if(swp_swapcount(entry) != 1) {
+                    if(__swp_swapcount(entry) != 1) {
                         return 0;
                     }
                     else                    // page is swapped and swap entry.
@@ -1132,7 +1131,7 @@ int ksg_handler(struct ctl_table *table, int write,
                         {
                             continue;
                         }
-                        if(swp_swapcount(entry) != 1) {
+                        if(__swp_swapcount(entry) != 1) {
                             continue;
                         }
                         else                    // page is swapped and swap entry.
@@ -1321,7 +1320,7 @@ int task_swap_counter_inc(struct task_struct *task)
 						continue;
 					}
 					
-					if(swp_swapcount(entry) != 1) {
+					if(__swp_swapcount(entry) != 1) {
 						continue;
 					}
 					else                    // page is swapped and swap entry.
@@ -1329,12 +1328,12 @@ int task_swap_counter_inc(struct task_struct *task)
 						pte_t new_pte;
 						u64 counter;
 						orig_pte=pte_offset_map_lock(mm,pmd,vpage,&ptl);
-						counter=pte_to_swp_counter(*pte);
+						counter=pte_to_swp_counter_zram(*pte);
 					
 						if(counter<15)
 							counter++;
 
-						new_pte = swp_entry_and_counter_to_pte(entry,counter);
+						new_pte = swp_entry_and_counter_zram_to_pte(entry,counter);
 						set_pte(orig_pte, new_pte);
 						pte_unmap_unlock(orig_pte, ptl);
 
@@ -1779,13 +1778,13 @@ int swap_counter_dump_handler(struct ctl_table *table, int write,
 						continue;
 					}
 					
-					if(swp_swapcount(entry) != 1) {
+					if(__swp_swapcount(entry) != 1) {
 						continue;
 					}
 					else                    // page is swapped and swap entry.
 					{
 						u64 counter;
-						counter=pte_to_swp_counter(*pte);
+						counter=pte_to_swp_counter_zram(*pte);
 
 						if(counter<6){
 							num[counter]++;
@@ -1877,7 +1876,7 @@ static int send_target_page(unsigned int id, pid_t tgid, unsigned long va, bool 
                     {
                        return 0;
                     }
-                    if(swp_swapcount(entry) != 1) {
+                    if(__swp_swapcount(entry) != 1) {
 				
                         return 0;
                     }
@@ -1959,7 +1958,7 @@ static int send_target_manager(void *arg)
 		bool target_flag=0;
 		unsigned int id;
 
-		for(id = 0 ; id < 9 ; id++)
+		for(id = 0 ; id < __NR_APPIDS ; id++)
 		{
 			if(!past[id]->st_should_check)
 				continue;
@@ -2082,7 +2081,7 @@ static int sys_cold_manager(void *arg)
 		
 	struct task_struct *p;
 	//int remain;
-	//int thresh;
+	int thresh;
 	while (!kthread_should_stop()) {
 			
 		schedule_timeout_interruptible(SYSTEMWIDE_COLD_PERIOD);
@@ -2100,11 +2099,12 @@ static int sys_cold_manager(void *arg)
 				//if ZRAM full	
 				
 
-					
-				trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager tgid %d, %d < %d?\n", __func__, p->tgid,zram_remain(),ZRAM_PAGES*0.5);
+				
+				thresh = ZRAM_PAGES*0.5;
+				trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager tgid %d, %d < %d?\n", __func__, p->tgid,zram_remain(),thresh);
 
 				//if(zram_full)
-				if(zram_remain() < ZRAM_PAGES*0.5){
+				if(zram_remain() < thresh){
 					sys_cold_page_sender_handler(p);
 				}
 		
@@ -2166,17 +2166,18 @@ static int __init remote_swap_init(void)
 
 	int error;
 	int i;
-	printk(KERN_ERR "[REMOTE %s] INIT remote swap\n", __func__);
+	int __nr_appids = __NR_APPIDS;
+	printk(KERN_ERR "[REMOTE %s] INIT remote swap max %d apps\n", __func__,__nr_appids);
 			
 	target_percentage = 50;
 
 	//per_app structs init
-	for(i=0;i<19;i++){
+	for(i=0;i<__nr_appids*2 + 1;i++){
 		struct perapp_cluster *cluster;
 		cluster=&pac[i];
 		cluster_set_null_1(&cluster->index);
 	}
-	for(i=0;i<9;i++){
+	for(i=0;i<__nr_appids;i++){
 		past[i]=(struct per_app_swap_trace *)vmalloc(sizeof(struct per_app_swap_trace));
 		init_past(past[i]);
 	}
@@ -2197,12 +2198,13 @@ static int __init remote_swap_init(void)
 static void __exit remote_swap_exit(void){
 
 	int i;
-	for(i=0;i<19;i++){
+	int __nr_appids = __NR_APPIDS;
+	for(i=0;i<__nr_appids*2 + 1;i++){
 		struct perapp_cluster *cluster;
 		cluster=&pac[i];
 		cluster_set_null_1(&cluster->index);
 	}
-	for(i=0;i<9;i++){
+	for(i=0;i<__nr_appids;i++){
 		vfree(past[i]);
 	}
 	kthread_stop(send_target_manager_thread);

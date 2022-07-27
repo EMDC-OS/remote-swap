@@ -750,6 +750,11 @@ extern pgd_t tramp_pg_dir[PTRS_PER_PGD];
 #define __swp_excepted(x)    (((x).val >> __SWP_EXCEPTED_SHIFT) & __SWP_EXCEPTED_MASK)
 #define __swp_entry_with_excepted(type,offset,counter,excepted) ((swp_entry_t) { ((type) << __SWP_TYPE_SHIFT) | ((offset) << __SWP_OFFSET_SHIFT) |  ((counter) << __SWP_COUNTER_SHIFT)   |  ((excepted) << __SWP_EXCEPTED_SHIFT)  })
 
+#define __SWP_APPID_BITS 5
+#define __SWP_APPID_SHIFT	(__SWP_OFFSET_BITS + __SWP_OFFSET_SHIFT + 1)
+#define __SWP_APPID_MASK	((1UL << __SWP_APPID_BITS) - 1)
+#define __swp_appid(x)		(((x).val >> __SWP_APPID_SHIFT) & __SWP_APPID_MASK)
+#define __swp_entry_with_appid(type,offset,appid) ((swp_entry_t) { ((type) << __SWP_TYPE_SHIFT) | ((offset) << __SWP_OFFSET_SHIFT) |  ((appid) << __SWP_APPID_SHIFT)})
 
 /*
  * Ensure that there are not more swap files than can be encoded in the kernel

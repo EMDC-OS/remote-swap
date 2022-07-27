@@ -22,12 +22,57 @@ debugfs="/sys/kernel/debug"
 #cat /proc/stat > /data/launch/result_${app}/${kernel}/${state}/stat_start
 #cat /proc/diskstats > /data/launch/result_${app}/${kernel}/${state}/diskstats_start
 
-#echo 1 > $debugfs/tracing/tracing_on
+#echocom.spotify.music/.MainActivity 1 > $debugfs/tracing/tracing_on
 #echo 1 > /proc/sys/kernel/fastpf_analysis
 #if [ "${kernel}" = "fastpf" ]; then
 #	echo 1 > /proc/sys/kernel/fastpf
 #fi
 
+
+if [ "${app}" = "candycrush" ]; then
+	echo 10128 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "googlemaps" ]; then
+	echo 10135 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "youtube" ]; then
+	echo 10126 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "instagram" ]; then
+	echo 10127 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "twitter" ]; then
+	echo 10133 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "angrybirds" ]; then
+	echo 10122 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "facebook" ]; then
+	echo 10137 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "pubg" ]; then
+	echo 10158 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "clashroyale" ]; then
+	echo 10171 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "gmail" ]; then
+	echo 10136 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "chrome" ]; then
+	echo 10124 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "investing" ]; then
+	echo 10173 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "cnn" ]; then
+	echo 10172 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "spotify" ]; then
+	echo 10174 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "mxplayer" ]; then
+	echo 10175 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "kakaotalk" ]; then
+	echo 10134 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "pokemongo" ]; then
+	echo 10164 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "dropbox" ]; then
+	echo 10144 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "twitch" ]; then
+	echo 10161 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "home" ]; then
+	echo 0 > /proc/sys/kernel/foreground_uid
+else
+	echo "Please enter Appname Kernel_mode Launching_state"
+	exit 100
+fi
 
 
 if [ "${app}" = "candycrush" ]; then
@@ -42,8 +87,6 @@ elif [ "${app}" = "instagram" ]; then
 	am start -n com.instagram.android/com.instagram.android.activity.MainTabActivity -W
 elif [ "${app}" = "pinterest" ]; then
 	am start -n com.pinterest/.activity.PinterestActivity -W
-elif [ "${app}" = "twitch" ]; then
-	am start -n tv.twitch.android.app/.core.LandingActivity -W
 elif [ "${app}" = "discord" ]; then
 	am start -n com.discord/com.discord.app.AppActivity$Main -W
 elif [ "${app}" = "zoom" ]; then
@@ -73,15 +116,29 @@ elif [ "${app}" = "clashroyale" ]; then
 elif [ "${app}" = "angrybirds" ]; then
 	am start -n com.rovio.baba/com.unity3d.player.UnityPlayerActivity -W
 elif [ "${app}" = "chrome" ]; then
-	am start -n com.android.chrome/com.google.android.apps.chrome.Main -W
+	am start -n com.android.chrome/com.google.android.apps.chrome.Main -d http://www.naver.com  -W
 elif [ "${app}" = "facebook" ]; then
 	am start -n com.facebook.katana/.activity.FbMainTabActivity -W
 elif [ "${app}" = "camera" ]; then
 	am start -a android.media.action.IMAGE_CAPTURE -W
 elif [ "${app}" = "pubg" ]; then
 	am start -n com.pubg.krmobile/com.epicgames.ue4.GameActivity -W
+elif [ "${app}" = "investing" ]; then
+	am start -n com.fusionmedia.investing/.ui.activities.SplashSplitter -W
+elif [ "${app}" = "cnn" ]; then
+	am start -n com.cnn.mobile.android.phone/.features.splash.SplashActivity -W
+elif [ "${app}" = "spotify" ]; then
+	am start -n com.spotify.music/.MainActivity -W
+elif [ "${app}" = "mxplayer" ]; then
+	am start -n com.mxtech.videoplayer.ad/.ActivityWelcomeMX -W
+elif [ "${app}" = "kakaotalk" ]; then
+	am start -n com.kakao.talk/.activity.SplashActivity -W	
+elif [ "${app}" = "pokemongo" ]; then
+	am start -n com.nianticlabs.pokemongo/com.nianticproject.holoholo.libholoholo.unity.UnityMainActivity -W
 elif [ "${app}" = "dropbox" ]; then
 	am start -n com.dropbox.android/.activity.DropboxBrowser -W
+elif [ "${app}" = "twitch" ]; then
+	am start -n tv.twitch.android.app/.core.LandingActivity -W
 elif [ "${app}" = "home" ]; then
 	am start -a android.intent.action.MAIN -c android.intent.category.HOME
 else

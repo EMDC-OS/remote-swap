@@ -12,4 +12,11 @@
 	am force-stop  com.pubg.krmobile
 	am force-stop  com.supercell.clashroyale
 	am force-stop  com.dropbox.android
+	am force-stop  com.fusionmedia.investing
+	am force-stop  com.cnn.mobile.android.phone
+	am force-stop  com.spotify.music
+	am force-stop  com.mxtech.videoplayer.ad
+	am force-stop  com.kakao.talk
+	am force-stop  com.nianticlabs.pokemongo
+	am force-stop  tv.twitch.android.app
 

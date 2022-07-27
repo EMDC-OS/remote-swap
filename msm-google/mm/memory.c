@@ -1430,6 +1430,16 @@ again:
 #ifdef CONFIG_APP_AWARE
 		if(swapin_vma_tracking!=0 && mm && !non_swap_entry(entry) && swp_swapcount(entry)==0)
 			trace_printk("unmap va %lx %lx %d\n",addr,swp_offset(entry),swp_swapcount(entry));
+
+
+		if (swp_type(entry) == NBD_TYPE){
+			if(pte_to_swp_appid_nbd(ptent)==COLD_ID)
+				atomic_dec(&sent_cold_page);
+			else if(pte_to_swp_appid_nbd(ptent)==DIRECT_ID)
+				atomic_dec(&nbd_direct_page);
+		}
+
+
 #endif
 		}
 		pte_clear_not_present_full(mm, addr, pte, tlb->fullmm);
@@ -3040,13 +3050,13 @@ int do_swap_page(struct vm_fault *vmf)
 		 *
 		*/
 		if (swp_type(entry) == NBD_TYPE){
-			if(pte_to_swp_counter(vmf->orig_pte)==9) { //cold
+			if(pte_to_swp_appid_nbd(vmf->orig_pte)==COLD_ID) { //cold
 				atomic_inc(&faulted_cold_page);
 				atomic_dec(&sent_cold_page);
 				
 				trace_printk("cold fault : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
-			else if(pte_to_swp_counter(vmf->orig_pte)==10) { //direct
+			else if(pte_to_swp_appid_nbd(vmf->orig_pte)==DIRECT_ID) { //direct
 				if(switch_start && id!=-1)
 					trace_printk("Direct fault id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
 				else
@@ -3054,13 +3064,13 @@ int do_swap_page(struct vm_fault *vmf)
 
 				atomic_dec(&nbd_direct_page);
 			}
-			else if(switch_start && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
+			else if(switch_start && id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
 					trace_printk("prefetch fault id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
-			else if(switch_after && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
+			else if(switch_after && id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
 					trace_printk("after prefetch fault id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
-			else if(miss_handling && id!=-1 && pte_to_swp_counter(vmf->orig_pte) == id){
+			else if(miss_handling && id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) == id){
 
 					trace_printk("unprefetched prefetch miss id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
 
@@ -3074,7 +3084,7 @@ int do_swap_page(struct vm_fault *vmf)
 		}
 		else{ // ZRAM_TYPE
 			if(pte_to_swp_excepted(vmf->orig_pte)){
-				trace_printk("Exception touched after marked : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+		//		trace_printk("Exception touched after marked : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
 				SetPageExcepted(page);
 				excepted = 1;
 			}
@@ -3175,7 +3185,7 @@ int do_swap_page(struct vm_fault *vmf)
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
-		//trace_printk("id %d, table %d || %d: %d %llx\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
+		trace_printk("id %d, table %d || %d: %d %llx\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
 		}
 		else
 			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);
@@ -3202,7 +3212,7 @@ int do_swap_page(struct vm_fault *vmf)
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
-		//trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
+		trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
 		}
 		else
 			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);

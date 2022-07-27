@@ -88,8 +88,6 @@ elif [ "${app}" = "instagram" ]; then
 	am start -n com.instagram.android/com.instagram.android.activity.MainTabActivity -W
 elif [ "${app}" = "pinterest" ]; then
 	am start -n com.pinterest/.activity.PinterestActivity -W
-elif [ "${app}" = "twitch" ]; then
-	am start -n tv.twitch.android.app/.core.LandingActivity -W
 elif [ "${app}" = "discord" ]; then
 	am start -n com.discord/com.discord.app.AppActivity$Main -W
 elif [ "${app}" = "zoom" ]; then
@@ -126,10 +124,6 @@ elif [ "${app}" = "camera" ]; then
 	am start -a android.media.action.IMAGE_CAPTURE -W
 elif [ "${app}" = "pubg" ]; then
 	am start -n com.pubg.krmobile/com.epicgames.ue4.GameActivity -W
-elif [ "${app}" = "dropbox" ]; then
-	am start -n com.dropbox.android/.activity.DropboxBrowser -W
-elif [ "${app}" = "home" ]; then
-	am start -a android.intent.action.MAIN -c android.intent.category.HOME
 elif [ "${app}" = "investing" ]; then
 	am start -n com.fusionmedia.investing/.ui.activities.SplashSplitter -W
 elif [ "${app}" = "cnn" ]; then
@@ -138,6 +132,16 @@ elif [ "${app}" = "spotify" ]; then
 	am start -n com.spotify.music/.MainActivity -W
 elif [ "${app}" = "mxplayer" ]; then
 	am start -n com.mxtech.videoplayer.ad/.ActivityWelcomeMX -W
+elif [ "${app}" = "kakaotalk" ]; then
+	am start -n com.kakao.talk/.activity.SplashActivity -W	
+elif [ "${app}" = "pokemongo" ]; then
+	am start -n com.nianticlabs.pokemongo/com.nianticproject.holoholo.libholoholo.unity.UnityMainActivity -W
+elif [ "${app}" = "dropbox" ]; then
+	am start -n com.dropbox.android/.activity.DropboxBrowser -W
+elif [ "${app}" = "twitch" ]; then
+	am start -n tv.twitch.android.app/.core.LandingActivity -W
+elif [ "${app}" = "home" ]; then
+	am start -a android.intent.action.MAIN -c android.intent.category.HOME
 else
 	echo "Please enter Appname Kernel_mode Launching_state"
 fi
