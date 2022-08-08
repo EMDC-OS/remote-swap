@@ -43,7 +43,7 @@ Current             -> Force them faulted after switch ((and MADVISE them (MADV_
 It should not be sent again, because it might be faulted again. It is alrealy solved because once the swapped flag set, It will never be sent to remote again.
 
 - delete swap cache
-HOW about using try_to_free_swap(). similar maybe..?
+HOW about using try_to_free_swap(). similar maybe..? yes
 
 - ZRAM Pressure
 If ZRAM Pressure get higher, how about COLD_THRESHOLD dec, and target percentage inc
@@ -66,6 +66,15 @@ How about check them in cold counter..?
 
 - Preempted task in sys_cold_page_sender
 There are many works so hard to define which task is preemted
+
+- Cold fault when app switching?   DONE!
+Should give them a exception flag..? no 
+
+- Same target in 2 different table(id 7, id 17)?
+Current -> doesn't handle them but they might cause random read.
+
+- Dynimically vary prefetch_percentage
+If too many fault occurs --> plus prefetch_percentage!!
 
 // Implementation idea
 

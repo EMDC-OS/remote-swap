@@ -53,7 +53,7 @@
 
 #define MANAGER_PERIOD (10*HZ)
 #define ALARM_PERIOD (150*HZ)
-#define SYSTEMWIDE_COLD_PERIOD (200*HZ)
+#define SYSTEMWIDE_COLD_PERIOD (600*HZ)
 
 #define TRUE 1
 #define FALSE 0
@@ -72,11 +72,13 @@ int nbd_client_pid;
 atomic_t sent_cold_page;
 atomic_t sent_sys_cold_page;
 atomic_t faulted_cold_page;
+atomic_t faulted_sys_cold_page;
 atomic_t excepted_page;
 atomic_t nbd_direct_page;
 
 int prefetch_on;
 int target_percentage;
+int sys_cold_handler_off;
 
 struct task_struct *preempted_cold_task;
 
@@ -404,7 +406,7 @@ static void cold_page_sender_work(struct work_struct *work)
 							goto unlock;
 						}
 						
-						
+						trace_printk("cold page offset %llx\n",swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -538,7 +540,7 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 
 						new_entry = get_swap_page_of_id(COLD_ID); // cold page
 
-						new_pte = swp_entry_and_appid_nbd_to_pte(new_entry,COLD_ID);
+						new_pte = swp_entry_and_appid_nbd_to_pte(new_entry,SYS_COLD_ID);
 						//if COLD, type==NBD_TYPE && counter(id)==COLD_ID (cold id)
 
 
@@ -591,6 +593,7 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 						}
 						
 						
+						trace_printk("sys cold page offset %llx\n",swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -1716,6 +1719,34 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 }
 
 
+int app_trace_status;
+
+int app_trace_status_handler(struct ctl_table *table, int write,
+			   void __user *buffer, size_t *length, loff_t *ppos)
+{
+
+
+	int rc = proc_dointvec_minmax(table,write,buffer,length,ppos);
+	if(rc)
+		return rc;
+	if(write){
+
+		if(app_trace_status)
+			trace_printk("app_trace_status==%d\n",app_trace_status);
+
+
+	}
+	return 0;
+
+
+}
+
+
+
+
+
+
+
 
 int swap_counter_dump;
 int swap_counter_dump_handler(struct ctl_table *table, int write,
@@ -1809,6 +1840,7 @@ int swap_counter_dump_handler(struct ctl_table *table, int write,
 	trace_printk("remote: total faulted cold page: %d\n", faulted_cold_page);
 	trace_printk("remote: total excepted page: %d\n", excepted_page);
 	trace_printk("remote: sent system page: %d\n", sent_sys_cold_page);
+	trace_printk("remote: total faulted system page: %d\n", faulted_sys_cold_page);
 	trace_printk("remote: ZRAM remain: %d KB / 2097148 KB\n", zram_remain()*4);
 	trace_printk("remote: total direct page: %d\n", nbd_direct_page);
 	}
@@ -2083,8 +2115,15 @@ static int sys_cold_manager(void *arg)
 	//int remain;
 	int thresh;
 	while (!kthread_should_stop()) {
-			
+		
+		
 		schedule_timeout_interruptible(SYSTEMWIDE_COLD_PERIOD);
+	
+		
+		while (sys_cold_handler_off)	
+			schedule_timeout_interruptible(SYSTEMWIDE_COLD_PERIOD);
+		
+		
 		trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager wake up\n", __func__);
 
 		rcu_read_lock();
@@ -2114,11 +2153,100 @@ static int sys_cold_manager(void *arg)
 		zram_full=0;
 			
 		trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager slept\n", __func__);
-		schedule_timeout_interruptible(SYSTEMWIDE_COLD_PERIOD);
+	//	schedule_timeout_interruptible(SYSTEMWIDE_COLD_PERIOD);
 	}
 
 	return 0;
 }
+
+/*********ASAP***********/
+
+int anon_page_dump;
+int anon_page_dump_clear_af;
+
+static void _anon_page_dump(pid_t pid) {
+        struct task_struct *task = find_task_by_vpid(pid);
+        unsigned long vpage;
+        int accessed, idx, cnt=0;
+        struct vm_area_struct *vma;
+        if (!task) {
+                printk("task %d not found", pid);
+                return;
+        }
+        if (task->mm && task->mm->mmap) {
+                for (vma = task->mm->mmap; vma; vma = vma->vm_next) {
+                        for (vpage = vma->vm_start, idx = 0; vpage < vma->vm_end; vpage += PAGE_SIZE, idx++) {
+                                pgd_t *pgd;
+                                pud_t *pud;
+                                pmd_t *pmd;
+                                pte_t *pte;
+                                pte_t entry;
+                                struct mm_struct *mm = task->mm;
+
+                                // page table walk
+                                pgd = pgd_offset(mm, vpage);
+                                if (pgd_none(*pgd)) continue;
+
+                                pud = pud_offset(pgd, vpage);
+                                if (pud_none(*pud)) continue;
+
+                                pmd = pmd_offset(pud, vpage);
+                                if (pmd_none(*pmd)) continue;
+
+                                pte = pte_offset_kernel(pmd, vpage);
+                                if (!pte || pte_none(*pte)) continue;
+
+                                if (pte_present(*pte)) {
+                                        accessed = pte_young(*pte);
+                                        if (anon_page_dump_clear_af) {
+                                                entry = pte_mkold(*pte);
+                                        set_pte_at(mm, vpage, pte, entry);
+                                        }
+                                }
+                                else
+                                        accessed = 2; //swapped!
+                                if(vma->vm_file){
+                                        if(vma->vm_file->f_inode){
+                                        //trace_printk("FILE_PAGE_DUMP %s %lu %d %d\n",task->comm, vma->vm_file->f_inode->i_ino, idx, accessed);
+                                        }
+                                }else{
+                                        //trace_printk("ANON_PAGE_DUMP %s %lu %d %d\n",task->comm, vma->vm_start, idx, accessed);
+									if(accessed)
+										cnt++;
+                                }
+                        }
+                }
+				trace_printk("ANON_PAGE_DUMP %s %d %d\n",task->comm, task->tgid , cnt);
+        }
+}
+
+
+
+
+
+int anon_page_dump_sysctl_handler(struct ctl_table *table, int write,
+	void __user *buffer, size_t *length, loff_t *ppos) {
+
+        int rc;
+
+	rc = proc_dointvec_minmax(table, write, buffer, length, ppos);
+	if (rc)
+		return rc;
+
+	if (write) {
+                printk("anon_page_dump start for %d", anon_page_dump);
+                _anon_page_dump(anon_page_dump);
+                printk("anon_page_dump end for %d", anon_page_dump);
+        }
+
+	return 0;
+}
+
+
+
+
+
+
 
 
 static __init int sys_cold_counter_init(void)

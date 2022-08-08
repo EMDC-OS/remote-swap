@@ -280,7 +280,6 @@ int free_swap_slot(swp_entry_t entry)
 	struct swap_slots_cache *cache;
 
 
-
 	cache = raw_cpu_ptr(&swp_slots);
 	if (use_swap_slot_cache && cache->slots_ret) {
 		spin_lock_irq(&cache->free_lock);
@@ -289,6 +288,13 @@ int free_swap_slot(swp_entry_t entry)
 			spin_unlock_irq(&cache->free_lock);
 			goto direct_free;
 		}
+#ifdef CONFIG_APP_AWARE
+		if(swp_type(entry)==NBD_TYPE){
+	//		trace_printk("swapfree direct %lx\n",swp_offset(entry));
+			spin_unlock_irq(&cache->free_lock);
+			goto direct_free;
+		}
+#endif
 		if (cache->n_ret >= SWAP_SLOTS_CACHE_SIZE) {
 			/*
 			 * Return slots to global pool.

@@ -1134,10 +1134,12 @@ static unsigned char __swap_entry_free(struct swap_info_struct *p,
 	ci = lock_cluster_or_swap_info(p, offset);
 
 	count = p->swap_map[offset];
+	
 
 	has_cache = count & SWAP_HAS_CACHE;
 	count &= ~SWAP_HAS_CACHE;
-
+//	if(swp_type(entry)==NBD_TYPE)
+//		trace_printk("%llx: count before %d\n",swp_offset(entry),count);
 	if (usage == SWAP_HAS_CACHE) {
 		VM_BUG_ON(!has_cache);
 		has_cache = 0;
@@ -1162,6 +1164,8 @@ static unsigned char __swap_entry_free(struct swap_info_struct *p,
 
 	unlock_cluster_or_swap_info(p, ci);
 
+//		if(swp_type(entry)==NBD_TYPE)
+//			trace_printk("%llx: count after %d\n",swp_offset(entry),usage);
 	return usage;
 }
 
@@ -1651,6 +1655,8 @@ int free_swap_and_cache(swp_entry_t entry)
 	p = _swap_info_get(entry);
 	if (p) {
 		count = __swap_entry_free(p, entry, 1);
+		
+		
 		if (count == SWAP_HAS_CACHE &&
 		    !swap_page_trans_huge_swapped(p, entry)) {
 			page = find_get_page(swap_address_space(entry),

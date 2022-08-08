@@ -34,25 +34,21 @@ if [ "${app}" = "angrybirds" ]; then
 	/home/user/hdd/kernel_flame/private/shell/play/angrybirds_play.sh
 elif [ "${app}" = "googlemaps" ]; then
 	STR0=`adb shell ps -ef | grep android.apps.maps |awk 'NR == 1 { print $2; exit }'`
-	/home/user/swipe100times.sh
+	/home/user/hdd/kernel_flame/private/shell/play/swipe100times.sh
 elif [ "${app}" = "youtube" ]; then
 	/home/user/youtube_play10minutes.sh
 	STR0=`adb shell ps -ef | grep com.google.android.youtube |awk 'NR == 1 { print $2; exit }'`
 elif [ "${app}" = "instagram" ]; then
 	/home/user/swipe100times.sh
 	STR0=`adb shell ps -ef | grep com.instagram.android | grep -v mqtt |awk 'NR == 1 { print $2; exit }'`
-elif [ "${app}" = "twitter" ]; then
-	STR0=`adb shell ps -ef | grep com.twitter.android |awk 'NR == 1 { print $2; exit }'`
 elif [ "${app}" = "candycrush" ]; then
 	/home/user/hdd/kernel_flame/private/shell/play/candycrush_play.sh
 	STR0=`adb shell ps -ef | grep com.king.candycrushsaga |awk 'NR == 1 { print $2; exit }'`
-elif [ "${app}" = "gmail" ]; then
-	STR0=`adb shell ps -ef | grep com.google.android.gm | grep -v gms|awk 'NR == 1 { print $2; exit }'`
 elif [ "${app}" = "clashroyale" ]; then
 	/home/user/hdd/kernel_flame/private/shell/play/clash_play.sh
 	STR0=`adb shell ps -ef | grep com.supercell.clashroyale |awk 'NR == 1 { print $2; exit }'`
 elif [ "${app}" = "chrome" ]; then
-	/home/user/chrome_swipe100times.sh
+	/home/user/hdd/kernel_flame/private/shell/play/chrome_swipe100times.sh
 	STR0=`adb shell ps -ef | grep com.android.chrome |awk 'NR == 1 { print $2; exit }'`
 fi
 

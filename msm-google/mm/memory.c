@@ -1428,18 +1428,18 @@ again:
 			print_bad_pte(vma, addr, ptent, NULL);
 		else{
 #ifdef CONFIG_APP_AWARE
-		if(swapin_vma_tracking!=0 && mm && !non_swap_entry(entry) && swp_swapcount(entry)==0)
-			trace_printk("unmap va %lx %lx %d\n",addr,swp_offset(entry),swp_swapcount(entry));
-
-
-		if (swp_type(entry) == NBD_TYPE){
-			if(pte_to_swp_appid_nbd(ptent)==COLD_ID)
-				atomic_dec(&sent_cold_page);
-			else if(pte_to_swp_appid_nbd(ptent)==DIRECT_ID)
-				atomic_dec(&nbd_direct_page);
-		}
-
-
+			if(swapin_vma_tracking!=0 && mm && !non_swap_entry(entry) && swp_swapcount(entry)==0)
+				trace_printk("unmap va %lx %lx %d\n",addr,swp_offset(entry),swp_swapcount(entry));
+			
+			if (swp_type(entry) == NBD_TYPE){
+				if(pte_to_swp_appid_nbd(ptent)==COLD_ID) {
+					if(__swp_swapcount(entry)==0)
+						atomic_dec(&sent_cold_page);
+				}
+				else if(pte_to_swp_appid_nbd(ptent)==DIRECT_ID)
+					if(__swp_swapcount(entry)==0)
+						atomic_dec(&nbd_direct_page);
+			}
 #endif
 		}
 		pte_clear_not_present_full(mm, addr, pte, tlb->fullmm);
@@ -3052,9 +3052,22 @@ int do_swap_page(struct vm_fault *vmf)
 		if (swp_type(entry) == NBD_TYPE){
 			if(pte_to_swp_appid_nbd(vmf->orig_pte)==COLD_ID) { //cold
 				atomic_inc(&faulted_cold_page);
-				atomic_dec(&sent_cold_page);
-				
-				trace_printk("cold fault : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+
+				if(__swp_swapcount(entry)==1)
+					atomic_dec(&sent_cold_page);
+
+				trace_printk("cold fault count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry), current->tgid,current->comm,vmf->address,swp_offset(entry));
+			}
+			else if(pte_to_swp_appid_nbd(vmf->orig_pte)==SYS_COLD_ID) { //cold
+				atomic_inc(&faulted_sys_cold_page);
+				atomic_inc(&faulted_cold_page);
+
+				if(__swp_swapcount(entry)==1){
+					atomic_dec(&sent_cold_page);
+					atomic_dec(&sent_sys_cold_page);
+				}
+
+				trace_printk("sys cold fault count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry), current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
 			else if(pte_to_swp_appid_nbd(vmf->orig_pte)==DIRECT_ID) { //direct
 				if(switch_start && id!=-1)
@@ -3062,7 +3075,8 @@ int do_swap_page(struct vm_fault *vmf)
 				else
 					trace_printk("Direct fault not on switching: %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
 
-				atomic_dec(&nbd_direct_page);
+				if(__swp_swapcount(entry)==1)
+					atomic_dec(&nbd_direct_page);
 			}
 			else if(switch_start && id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
 					trace_printk("prefetch fault id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
@@ -3076,7 +3090,7 @@ int do_swap_page(struct vm_fault *vmf)
 
 			}
 			else{
-				trace_printk("Exception : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+				trace_printk("Exception original id %d: %d \"%s\" %lx %lx\n",pte_to_swp_appid_nbd(vmf->orig_pte),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				atomic_inc(&excepted_page);
 				SetPageExcepted(page);
 				excepted = 1;
@@ -3084,7 +3098,7 @@ int do_swap_page(struct vm_fault *vmf)
 		}
 		else{ // ZRAM_TYPE
 			if(pte_to_swp_excepted(vmf->orig_pte)){
-		//		trace_printk("Exception touched after marked : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+				//trace_printk("Exception touched after marked : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
 				SetPageExcepted(page);
 				excepted = 1;
 			}
@@ -3166,7 +3180,7 @@ int do_swap_page(struct vm_fault *vmf)
 
 #ifdef CONFIG_APP_AWARE
 
-	if(switch_start && foreground_uid && !excepted && id!=-1){
+	if(switch_start && foreground_uid && !PageExcepted(page) && id!=-1){
 		if(past[id]->which_table){
 			st_idx_ptr = &past[id]->st_index1;
 			swap_trace_table = past[id]->swap_trace_table1;
@@ -3191,7 +3205,7 @@ int do_swap_page(struct vm_fault *vmf)
 			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);
 	}
 	
-	if(switch_after && foreground_uid && !excepted){
+	if(switch_after && foreground_uid && !PageExcepted(page)){
 		
 		id = get_id_from_uid(foreground_uid);
 		

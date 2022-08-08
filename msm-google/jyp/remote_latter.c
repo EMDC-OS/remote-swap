@@ -65,20 +65,23 @@ bool miss_handling;
 bool zram_full;
 
 
-struct per_app_swap_trace *past[9];
+struct per_app_swap_trace *past[__NR_APPIDS]; //__NR_APPIDS
 
 int backgrounded_uid;
+int nbd_client_pid;
 atomic_t sent_cold_page;
 atomic_t sent_sys_cold_page;
 atomic_t faulted_cold_page;
+atomic_t faulted_sys_cold_page;
 atomic_t excepted_page;
+atomic_t nbd_direct_page;
 
 int prefetch_on;
 int target_percentage;
 
 struct task_struct *preempted_cold_task;
 
-struct perapp_cluster pac[19];
+struct perapp_cluster pac[2*__NR_APPIDS+1]; // 2 * __NR_APPIDS + 1
 
 struct task_struct *send_target_manager_thread;
 struct task_struct *send_target_alarm_thread;
@@ -92,60 +95,58 @@ DEFINE_SPINLOCK(switch_start_lock);
 
 bool stm_wait_cond;
 
-
 unsigned int get_id_from_uid(int uid){
 
-	if(uid==MAPS_UID)
-		return 0;
-	if(uid==YT_UID)
-		return 1;
-	if(uid==IG_UID)
-		return 2;
-	if(uid==TW_UID)
-		return 3;
-	if(uid==CC_UID)
-		return 4;
-	if(uid==AB_UID)
-		return 5;
-	if(uid==CR_UID)
-		return 6;
-	if(uid==MAIL_UID)
-		return 7;
-	if(uid==CH_UID)
-		return 8;
-	else if (uid==-1) // cold page
-		return 9;
-	else{
-		panic("[REMOTE %s] unregistered UID\n", __func__);
-		return -1;
+	switch(uid){
+		case MAPS_UID: return MAPS_ID;
+		case YT_UID: return YT_ID;
+		case IG_UID: return IG_ID;
+		case TW_UID: return TW_ID;
+		case CC_UID: return CC_ID;
+		case AB_UID: return AB_ID;
+		case FB_UID: return FB_ID;
+		case CR_UID: return CR_ID;
+		case MAIL_UID: return MAIL_ID;
+		case CH_UID: return CH_ID;
+		case IV_UID: return IV_ID;
+		case CN_UID: return CN_ID;
+		case SP_UID: return SP_ID;
+		case MX_UID: return MX_ID;
+		case KT_UID: return KT_ID;
+		case PG_UID: return PG_ID;
+		case DB_UID: return DB_ID;
+		case TWCH_UID: return TWCH_ID;
+		case -1: return COLD_ID;
+		default:
+			panic("[REMOTE %s] unregistered UID %d\n", __func__,uid);
+			return -1;
 	}
 
 }
 
 bool is_system_uid(int uid){
-
-	if(uid==MAPS_UID)
-		return 0;
-	if(uid==YT_UID)
-		return 0;
-	if(uid==IG_UID)
-		return 0;
-	if(uid==TW_UID)
-		return 0;
-	if(uid==CC_UID)
-		return 0;
-	if(uid==AB_UID)
-		return 0;
-	if(uid==CR_UID)
-		return 0;
-	if(uid==MAIL_UID)
-		return 0;
-	if(uid==CH_UID)
-		return 0;
-	else{
-		return 1;
+	switch(uid){
+		case MAPS_UID: return 0;
+		case YT_UID: return 0;
+		case IG_UID: return 0;
+		case TW_UID: return 0;
+		case CC_UID: return 0;
+		case AB_UID: return 0;
+		case FB_UID: return 0;
+		case CR_UID: return 0;
+		case MAIL_UID: return 0;
+		case CH_UID: return 0;
+		case IV_UID: return 0;
+		case CN_UID: return 0;
+		case SP_UID: return 0;
+		case MX_UID: return 0;
+		case KT_UID: return 0;
+		case PG_UID: return 0;
+		case DB_UID: return 0;
+		case TWCH_UID: return 0;
+		default:
+			return 1;
 	}
-
 }
 
 void wake_up_send_target_manager(void)
@@ -194,9 +195,9 @@ static int _send_target_page(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned l
 					
 	//trace_printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,page_to_pfn(page));
 
-		new_entry = get_swap_page_of_id(id+10*is_after);
-	new_pte = swp_entry_and_counter_to_pte(new_entry,id);
-	//if Prefetch target, type==1 && counter(id)==id
+	new_entry = get_swap_page_of_id(id+(__NR_APPIDS+1)*is_after);
+	new_pte = swp_entry_and_appid_nbd_to_pte(new_entry,id);
+	//if Prefetch target, type==NBD_TYPE && counter(id)==id
 	lock_page(page);
 	__SetPageSwapBacked(page);
 	ClearPageUptodate(page);
@@ -238,7 +239,7 @@ static int _send_target_page(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned l
 	}
 	
 	set_pte(orig_pte, new_pte);
-	trace_printk("target sent id %d: cluster %d, %d %llx %llx\n",id,id+10*is_after,mm->owner->tgid, vpage, swp_offset(new_entry));
+	trace_printk("target sent id %d: cluster %d, %d %llx %llx\n",id,id+(__NR_APPIDS+1)*is_after,mm->owner->tgid, vpage, swp_offset(new_entry));
 	swap_free(entry);
 	ret=1;
 unlock:
@@ -316,13 +317,14 @@ static void cold_page_sender_work(struct work_struct *work)
 				if(is_swap_pte(*pte))       // if the pte is swapped (swp_entry)
 				{
 					swp_entry_t entry = pte_to_swp_entry(*pte);
-					counter = pte_to_swp_counter(*pte);
 					if(non_swap_entry(entry))
 					{
 						continue;
 					}
-					
-					if(swp_type(entry) == NBD_TYPE || swp_swapcount(entry) != 1 || counter <= COLD_PAGE_THRESHOLD) {
+					if(swp_type(entry) == NBD_TYPE)
+						continue;
+					counter = pte_to_swp_counter_zram(*pte);
+					if(__swp_swapcount(entry) != 1 || counter <= COLD_PAGE_THRESHOLD) {
 						continue;
 					}
 					else                    // page is swapped and swap entry.
@@ -349,10 +351,10 @@ static void cold_page_sender_work(struct work_struct *work)
 	
 						//trace_printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,page_to_pfn(page));
 
-							new_entry = get_swap_page_of_id(9); // cold page
+						new_entry = get_swap_page_of_id(COLD_ID); // cold page
 
-						new_pte = swp_entry_and_counter_to_pte(new_entry,9);
-						//if COLD, type==1 && counter(id)==9 (cold id)
+						new_pte = swp_entry_and_appid_nbd_to_pte(new_entry,COLD_ID);
+						//if COLD, type==NBD_TYPE && counter(id)==COLD_ID (cold id)
 
 
 						
@@ -403,7 +405,7 @@ static void cold_page_sender_work(struct work_struct *work)
 							goto unlock;
 						}
 						
-						
+						trace_printk("cold page offset %llx\n",swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -502,19 +504,19 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 				if(is_swap_pte(*pte))       // if the pte is swapped (swp_entry)
 				{
 					swp_entry_t entry = pte_to_swp_entry(*pte);
-					counter = pte_to_swp_counter(*pte);
 					if(non_swap_entry(entry))
 					{
 						continue;
 					}
+					if(swp_type(entry) == NBD_TYPE)
+						continue;
 					
-					if(swp_type(entry) == NBD_TYPE || swp_swapcount(entry) != 1 || counter <= SYS_COLD_PAGE_THRESHOLD) {
+					counter = pte_to_swp_counter_zram(*pte);
+					if(__swp_swapcount(entry) != 1 || counter <= SYS_COLD_PAGE_THRESHOLD) {
 						continue;
 					}
 					else                    // page is swapped and swap entry.
 					{
-	
-
 						struct address_space *mapping;
 						swp_entry_t new_entry;
 						pte_t new_pte;
@@ -535,10 +537,10 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 	
 						//trace_printk(KERN_ERR "[REMOTE %s] alloc page %llx\n", __func__,page_to_pfn(page));
 
-							new_entry = get_swap_page_of_id(9); // cold page
+						new_entry = get_swap_page_of_id(COLD_ID); // cold page
 
-						new_pte = swp_entry_and_counter_to_pte(new_entry,9);
-						//if COLD, type==1 && counter(id)==9 (cold id)
+						new_pte = swp_entry_and_appid_nbd_to_pte(new_entry,SYS_COLD_ID);
+						//if COLD, type==NBD_TYPE && counter(id)==COLD_ID (cold id)
 
 
 						
@@ -590,6 +592,7 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 						}
 						
 						
+						trace_printk("sys cold page offset %llx\n",swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -618,11 +621,12 @@ unlock:
 	atomic_add(cnt,&sent_cold_page);
 	atomic_add(cnt,&sent_sys_cold_page);
 
-	trace_printk("remote: total sent cold page: %d\n", sent_cold_page);
-	trace_printk("remote: total faulted cold page: %d\n", faulted_cold_page);
+	trace_printk("remote: tgid %d system cold page %d out\n",task->tgid,cnt);
+	//trace_printk("remote: total sent cold page: %d\n", sent_cold_page);
+	//trace_printk("remote: total faulted cold page: %d\n", faulted_cold_page);
 	kfree(tew);
 
-	preempted_cold_task = NULL;
+	//preempted_cold_task = NULL;
 
 }
 
@@ -687,7 +691,7 @@ static int fault_target_page(pid_t tgid, unsigned long va){
                     {
                        return 0;
                     }
-                    if(swp_swapcount(entry) != 1) {
+                    if(__swp_swapcount(entry) != 1) {
                         return 0;
                     }
                     else                    // page is swapped and swap entry.
@@ -738,7 +742,7 @@ retry:
 
 
 
-static int prefetch_target_page(pid_t tgid, unsigned long va){
+static int prefetch_target_page(int id, pid_t tgid, unsigned long va){
 
 
 	struct task_struct  *task = NULL;
@@ -789,7 +793,7 @@ static int prefetch_target_page(pid_t tgid, unsigned long va){
                     {
                        return 0;
                     }
-                    if(swp_swapcount(entry) != 1) {
+                    if(__swp_swapcount(entry) != 1) {
                         return 0;
                     }
                     else                    // page is swapped and swap entry.
@@ -807,7 +811,7 @@ static int prefetch_target_page(pid_t tgid, unsigned long va){
 								swap_readpage(page, false);
 								SetPageReadahead(page);
 	
-								trace_printk("prefetch done: %d %llx\n", tgid, va);
+								trace_printk("prefetch done id %d: %d %lx %lx\n", id, tgid, va, swp_offset(entry) );
 							}
 							else
 								trace_printk("page not allocated\n");
@@ -871,7 +875,9 @@ static void prefetch_work(struct work_struct *work)
 		after_idx_e = atomic_read(&past[id]->after_index1);
 		after_idx_l = atomic_read(&past[id]->after_index0);
 	}
-	//printk(KERN_ERR "2 %d %d, %d %d!!\n",max_idx_e, after_idx_e, max_idx_l, after_idx_l);
+
+
+	trace_printk("prefetch work: foreground %d, maxidx %d, afteridx %d\n",foreground_uid,max_idx_l,after_idx_l);
 
 	blk_start_plug(&plug);
 	for( i = 0 ; i <= max_idx_l ; i++ ){
@@ -880,7 +886,7 @@ static void prefetch_work(struct work_struct *work)
 		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
 			tgid = swap_trace_table_l[i].tgid;
 			va = swap_trace_table_l[i].va;
-			prefetch_target_page(tgid,va);
+			prefetch_target_page(id,tgid,va);
 		}
 	}
 	blk_finish_plug(&plug);
@@ -889,26 +895,13 @@ static void prefetch_work(struct work_struct *work)
 
 	blk_start_plug(&plug_after);
 	for( i = max_idx_l + 1; i <= after_idx_l; i++ ){
-	//printk(KERN_ERR "5!!\n");
-		//trace_printk("prefetch table %d: %d %llx, %d %d\n",target_table,swap_trace_table_l[i].tgid,swap_trace_table_l[i].va,swap_trace_table_l[i].to_nbd,swap_trace_table_l[i].swapped);
 		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
 			tgid = swap_trace_table_l[i].tgid;
 			va = swap_trace_table_l[i].va;
-			prefetch_target_page(tgid,va);
+			prefetch_target_page(id,tgid,va);
 		}
 	}
 
-
-	//printk(KERN_ERR "6!!\n");
-	for( i = max_idx_e + 1 ; i <= after_idx_e ; i++ ){
-	//printk(KERN_ERR "7!!\n");
-		if(swap_trace_table_e[i].to_nbd && swap_trace_table_e[i].swapped){
-			tgid = swap_trace_table_e[i].tgid;
-			va = swap_trace_table_e[i].va;
-			prefetch_target_page(tgid,va);
-		}
-	}
-	//printk(KERN_ERR "8!!\n");
 	blk_finish_plug(&plug_after);
 	lru_add_drain();
 
@@ -951,6 +944,7 @@ static void miss_page_work(struct work_struct *work)
 		after_idx_l = atomic_read(&past[id]->after_index0);
 	}
 
+	trace_printk("miss work: foreground %d, maxidx %d, afteridx %d\n",foreground_uid,max_idx_l,after_idx_l);
 //	blk_start_plug(&plug);
 	for( i = 0 ; i <= after_idx_l ; i++ ){
 		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped ) // && swapped
@@ -961,14 +955,6 @@ static void miss_page_work(struct work_struct *work)
 		}
 	}
 
-	for( i = 0 ; i <= after_idx_e ; i++ ){
-		if(swap_trace_table_e[i].to_nbd && swap_trace_table_e[i].swapped) // && swapped
-		{
-			tgid = swap_trace_table_e[i].tgid;
-			va = swap_trace_table_e[i].va;
-			fault_target_page(tgid,va);
-		}
-	}
 
 //	blk_finish_plug(&plug);
 	lru_add_drain();
@@ -1147,7 +1133,7 @@ int ksg_handler(struct ctl_table *table, int write,
                         {
                             continue;
                         }
-                        if(swp_swapcount(entry) != 1) {
+                        if(__swp_swapcount(entry) != 1) {
                             continue;
                         }
                         else                    // page is swapped and swap entry.
@@ -1294,6 +1280,7 @@ int task_swap_counter_inc(struct task_struct *task)
     {
         return 0;
     }
+						
     
 	if(task->mm && task->mm->mmap)  // if target_proc is well mmaped
     {
@@ -1335,7 +1322,7 @@ int task_swap_counter_inc(struct task_struct *task)
 						continue;
 					}
 					
-					if(swp_swapcount(entry) != 1) {
+					if(__swp_swapcount(entry) != 1) {
 						continue;
 					}
 					else                    // page is swapped and swap entry.
@@ -1343,12 +1330,12 @@ int task_swap_counter_inc(struct task_struct *task)
 						pte_t new_pte;
 						u64 counter;
 						orig_pte=pte_offset_map_lock(mm,pmd,vpage,&ptl);
-						counter=pte_to_swp_counter(*pte);
+						counter=pte_to_swp_counter_zram(*pte);
 					
 						if(counter<15)
 							counter++;
 
-						new_pte = swp_entry_and_counter_to_pte(entry,counter);
+						new_pte = swp_entry_and_counter_zram_to_pte(entry,counter);
 						set_pte(orig_pte, new_pte);
 						pte_unmap_unlock(orig_pte, ptl);
 
@@ -1482,11 +1469,10 @@ int update_to_nbd_flag(unsigned int id, int percentage){
 
 
 
-	/* AND version!*/
 	
 
 	while(idx_l <= max_idx_l){
-		idx_e = max_idx_e * percentage/100;
+/*		idx_e = max_idx_e * percentage/100;
 		while(idx_e <= max_idx_e){
 			if( swap_trace_table_e[idx_e].va == swap_trace_table_l[idx_l].va &&
 				swap_trace_table_e[idx_e].tgid == swap_trace_table_l[idx_l].tgid){
@@ -1495,37 +1481,30 @@ int update_to_nbd_flag(unsigned int id, int percentage){
 				break;
 			}
 			idx_e++;
-		}
+		}*/
+				swap_trace_table_l[idx_l].to_nbd = 1;
+				cnt++;
 		idx_l++;
 	}
 
-	idx_e = max_idx_e + 1;
-	idx_l = max_idx_l + 1;
+	/* AND version!*/
 	
-
-	while(idx_e <= after_idx_e){
-		swap_trace_table_e[idx_e].to_nbd = 1;
-		idx_e++;
-		cnt++;
-	}
+		
+	idx_l = max_idx_l + 1;
 	while(idx_l <= after_idx_l){
-		swap_trace_table_l[idx_l].to_nbd = 1;
-		idx_l++;
-		cnt++;
-	}
-	idx_e = max_idx_e + 1;
-	while(idx_e <= after_idx_e){
-		idx_l = max_idx_l + 1;
-		while(idx_l <= after_idx_l){
+/*		idx_e = max_idx_e + 1;
+		while(idx_e <= after_idx_e){
 			if( swap_trace_table_e[idx_e].va == swap_trace_table_l[idx_l].va &&
 				swap_trace_table_e[idx_e].tgid == swap_trace_table_l[idx_l].tgid){
-				swap_trace_table_e[idx_e].to_nbd = 0;
-				cnt--;
+				swap_trace_table_l[idx_l].to_nbd = 1;
+				cnt++;
 				break;
 			}
-			idx_l++;
-		}
-		idx_e++;
+			idx_e++;
+		}*/
+				swap_trace_table_l[idx_l].to_nbd = 1;
+				cnt++;
+		idx_l++;
 	}
 
 
@@ -1588,6 +1567,8 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 			rcu_read_lock();
 			for_each_process(p){
 				if(!p)
+					continue;
+				if(p->tgid == nbd_client_pid)
 					continue;
 				if(backgrounded_uid && p->cred->uid.val == backgrounded_uid){
 					printk("backgrounded_uid %d",backgrounded_uid);
@@ -1711,6 +1692,8 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 			for_each_process(p){
 				if(!p)
 					continue;
+				if(p->tgid == nbd_client_pid)
+					continue;
 				if(backgrounded_uid && p->cred->uid.val == backgrounded_uid){
 					printk("backgrounded_uid %d",backgrounded_uid);
 					if(task_swap_counter_inc(p))
@@ -1801,13 +1784,13 @@ int swap_counter_dump_handler(struct ctl_table *table, int write,
 						continue;
 					}
 					
-					if(swp_swapcount(entry) != 1) {
+					if(__swp_swapcount(entry) != 1) {
 						continue;
 					}
 					else                    // page is swapped and swap entry.
 					{
 						u64 counter;
-						counter=pte_to_swp_counter(*pte);
+						counter=pte_to_swp_counter_zram(*pte);
 
 						if(counter<6){
 							num[counter]++;
@@ -1832,6 +1815,9 @@ int swap_counter_dump_handler(struct ctl_table *table, int write,
 	trace_printk("remote: total faulted cold page: %d\n", faulted_cold_page);
 	trace_printk("remote: total excepted page: %d\n", excepted_page);
 	trace_printk("remote: sent system page: %d\n", sent_sys_cold_page);
+	trace_printk("remote: total faulted system page: %d\n", faulted_sys_cold_page);
+	trace_printk("remote: ZRAM remain: %d KB / 2097148 KB\n", zram_remain()*4);
+	trace_printk("remote: total direct page: %d\n", nbd_direct_page);
 	}
 	return 0;
 }
@@ -1897,14 +1883,13 @@ static int send_target_page(unsigned int id, pid_t tgid, unsigned long va, bool 
                     {
                        return 0;
                     }
-                    if(swp_swapcount(entry) != 1) {
+                    if(__swp_swapcount(entry) != 1) {
 				
                         return 0;
                     }
                     else                    // page is swapped and swap entry.
                     {
-						if(swp_type(entry) == ZRAM_TYPE || 
-								(swp_type(entry) == NBD_TYPE && pte_to_swp_counter(*pte)==10))   
+						if(swp_type(entry) == ZRAM_TYPE )   
 						{
 							cache_page = find_get_page(swap_address_space(entry), swp_offset(entry)); 
 							if(!cache_page)       // can't find the page from cache
@@ -1980,7 +1965,7 @@ static int send_target_manager(void *arg)
 		bool target_flag=0;
 		unsigned int id;
 
-		for(id = 0 ; id < 9 ; id++)
+		for(id = 0 ; id < __NR_APPIDS ; id++)
 		{
 			if(!past[id]->st_should_check)
 				continue;
@@ -2040,28 +2025,12 @@ static int send_target_manager(void *arg)
 					target_flag=1;
 					tgid = swap_trace_table_l[i].tgid;
 					va = swap_trace_table_l[i].va;
-					if(send_target_page(id/* ID */,tgid,va,i>=max_idx_l)){
+					if(send_target_page(id/* ID */,tgid,va,i>max_idx_l)){
 						swap_trace_table_l[i].swapped=1;
 					}
 				}
 			}
 
-			for (i = max_idx_e ; i < after_idx_e+1; i++){
-				if(switch_start){
-					target_flag = 0;
-					trace_printk(KERN_ERR "[REMOTE %s] switch started during sent\n", __func__);
-					goto sleep;
-				}
-				if(swap_trace_table_e[i].to_nbd && !swap_trace_table_e[i].swapped){
-						
-					target_flag=1;
-					tgid = swap_trace_table_e[i].tgid;
-					va = swap_trace_table_e[i].va;
-					if(send_target_page(id/* ID */,tgid,va,true)){
-						swap_trace_table_e[i].swapped=1;
-					}
-				}
-			}
 			/***for direct page***/
 
 			
@@ -2118,24 +2087,40 @@ static int sys_cold_manager(void *arg)
 {
 		
 	struct task_struct *p;
+	//int remain;
+	int thresh;
 	while (!kthread_should_stop()) {
 			
+		schedule_timeout_interruptible(SYSTEMWIDE_COLD_PERIOD);
 		trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager wake up\n", __func__);
 
 		rcu_read_lock();
 		for_each_process(p){
 			if(!p)
 				continue;
+			if(p->tgid == nbd_client_pid)
+				continue;
+		
 			if(is_system_uid(p->cred->uid.val)){
 				task_swap_counter_inc(p);
 				//if ZRAM full	
-				if(zram_full)
+				
+
+				
+				thresh = ZRAM_PAGES*0.5;
+				trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager tgid %d, %d < %d?\n", __func__, p->tgid,zram_remain(),thresh);
+
+				//if(zram_full)
+				if(zram_remain() < thresh){
 					sys_cold_page_sender_handler(p);
+				}
+		
 			}
 		}
 		rcu_read_unlock();
 		zram_full=0;
 			
+		trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager slept\n", __func__);
 		schedule_timeout_interruptible(SYSTEMWIDE_COLD_PERIOD);
 	}
 
@@ -2188,17 +2173,18 @@ static int __init remote_swap_init(void)
 
 	int error;
 	int i;
-	printk(KERN_ERR "[REMOTE %s] INIT remote swap\n", __func__);
+	int __nr_appids = __NR_APPIDS;
+	printk(KERN_ERR "[REMOTE %s] INIT remote swap max %d apps\n", __func__,__nr_appids);
 			
 	target_percentage = 50;
 
 	//per_app structs init
-	for(i=0;i<19;i++){
+	for(i=0;i<__nr_appids*2 + 1;i++){
 		struct perapp_cluster *cluster;
 		cluster=&pac[i];
 		cluster_set_null_1(&cluster->index);
 	}
-	for(i=0;i<9;i++){
+	for(i=0;i<__nr_appids;i++){
 		past[i]=(struct per_app_swap_trace *)vmalloc(sizeof(struct per_app_swap_trace));
 		init_past(past[i]);
 	}
@@ -2219,12 +2205,13 @@ static int __init remote_swap_init(void)
 static void __exit remote_swap_exit(void){
 
 	int i;
-	for(i=0;i<19;i++){
+	int __nr_appids = __NR_APPIDS;
+	for(i=0;i<__nr_appids*2 + 1;i++){
 		struct perapp_cluster *cluster;
 		cluster=&pac[i];
 		cluster_set_null_1(&cluster->index);
 	}
-	for(i=0;i<9;i++){
+	for(i=0;i<__nr_appids;i++){
 		vfree(past[i]);
 	}
 	kthread_stop(send_target_manager_thread);

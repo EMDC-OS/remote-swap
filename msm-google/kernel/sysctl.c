@@ -457,6 +457,34 @@ static struct ctl_table kern_table[] = {
 		.mode			= 0644,
 		.proc_handler	= proc_dointvec,
 	},
+	{
+		.procname		= "app_trace_status",
+		.data			= &app_trace_status,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= app_trace_status_handler,
+	},
+	{
+		.procname		= "sys_cold_handler_off",
+		.data			= &sys_cold_handler_off,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= proc_dointvec,
+	},
+	{
+		.procname		= "anon_page_dump",
+		.data			= &anon_page_dump,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= anon_page_dump_sysctl_handler,
+	},
+	{
+		.procname		= "anon_page_dump_clear_af",
+		.data			= &anon_page_dump_clear_af,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= proc_dointvec,
+	},
 #endif
 #if defined(CONFIG_PREEMPT_TRACER) || defined(CONFIG_DEBUG_PREEMPT)
 	{
