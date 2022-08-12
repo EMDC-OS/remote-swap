@@ -19,4 +19,6 @@
 	am force-stop  com.kakao.talk
 	am force-stop  com.nianticlabs.pokemongo
 	am force-stop  tv.twitch.android.app
+	am force-stop  com.microsoft.office.excel
+	am force-stop  com.verizon.messaging.vzmsgs
 

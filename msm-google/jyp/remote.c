@@ -67,6 +67,9 @@ bool zram_full;
 
 struct per_app_swap_trace *past[__NR_APPIDS]; //__NR_APPIDS
 
+int cold_page_threshold;
+int stop_background_io;
+
 int backgrounded_uid;
 int nbd_client_pid;
 atomic_t sent_cold_page;
@@ -117,6 +120,8 @@ unsigned int get_id_from_uid(int uid){
 		case PG_UID: return PG_ID;
 		case DB_UID: return DB_ID;
 		case TWCH_UID: return TWCH_ID;
+		case EX_UID: return EX_ID;
+		case VM_UID: return VM_ID;
 		case -1: return COLD_ID;
 		default:
 			panic("[REMOTE %s] unregistered UID %d\n", __func__,uid);
@@ -145,6 +150,8 @@ bool is_system_uid(int uid){
 		case PG_UID: return 0;
 		case DB_UID: return 0;
 		case TWCH_UID: return 0;
+		case EX_UID: return 0;
+		case VM_UID: return 0;
 		default:
 			return 1;
 	}
@@ -325,7 +332,7 @@ static void cold_page_sender_work(struct work_struct *work)
 					if(swp_type(entry) == NBD_TYPE)
 						continue;
 					counter = pte_to_swp_counter_zram(*pte);
-					if(__swp_swapcount(entry) != 1 || counter <= COLD_PAGE_THRESHOLD) {
+					if(__swp_swapcount(entry) != 1 || counter <= cold_page_threshold) {
 						continue;
 					}
 					else                    // page is swapped and swap entry.
@@ -417,7 +424,7 @@ unlock:
 						page->mapping = NULL;
 						//free_page((unsigned long)(page_address(page)));
 						__free_page(page);
-						if(switch_start){
+						if(switch_start || stop_background_io){
 							trace_printk(KERN_ERR "[REMOTE %s] switch started during cold work. preempted! \n", __func__);
 							atomic_add(cnt, &sent_cold_page);
 							kfree(tew);
@@ -605,7 +612,7 @@ unlock:
 						//free_page((unsigned long)(page_address(page)));
 						__free_page(page);
 
-						if(switch_start){
+						if(switch_start || stop_background_io){
 							trace_printk(KERN_ERR "[REMOTE %s] switch started during system cold work. preempted! \n", __func__);
 							atomic_add(cnt, &sent_cold_page);
 							atomic_add(cnt, &sent_sys_cold_page);
@@ -1340,7 +1347,7 @@ int task_swap_counter_inc(struct task_struct *task)
 						set_pte(orig_pte, new_pte);
 						pte_unmap_unlock(orig_pte, ptl);
 
-						if(counter > COLD_PAGE_THRESHOLD)
+						if(counter > cold_page_threshold)
 							flag = 1;
 
 					}
@@ -2040,7 +2047,7 @@ static int send_target_manager(void *arg)
 			}
 	*/
 			for( i = 0 ; i < after_idx_l +1 ; i++ ){
-				if(switch_start){
+				if(switch_start || stop_background_io){
 					target_flag = 0;
 					trace_printk(KERN_ERR "[REMOTE %s] switch started during sent\n", __func__);
 					goto sleep;
@@ -2130,7 +2137,7 @@ static int sys_cold_manager(void *arg)
 		for_each_process(p){
 			if(!p)
 				continue;
-			if(p->tgid == nbd_client_pid)
+			if(p->tgid == nbd_client_pid || p->tgid == 1)
 				continue;
 		
 			if(is_system_uid(p->cred->uid.val)){
@@ -2167,7 +2174,7 @@ int anon_page_dump_clear_af;
 static void _anon_page_dump(pid_t pid) {
         struct task_struct *task = find_task_by_vpid(pid);
         unsigned long vpage;
-        int accessed, idx, cnt=0;
+        int accessed, idx, coldcnt=0, cnt=0;
         struct vm_area_struct *vma;
         if (!task) {
                 printk("task %d not found", pid);
@@ -2210,13 +2217,15 @@ static void _anon_page_dump(pid_t pid) {
                                         //trace_printk("FILE_PAGE_DUMP %s %lu %d %d\n",task->comm, vma->vm_file->f_inode->i_ino, idx, accessed);
                                         }
                                 }else{
-                                        //trace_printk("ANON_PAGE_DUMP %s %lu %d %d\n",task->comm, vma->vm_start, idx, accessed);
+                                    trace_printk("ANON_PAGE_DUMP %s %d %llx %d\n",task->comm, task->tgid, vpage, accessed);
 									if(accessed)
 										cnt++;
+									else
+										coldcnt++;
                                 }
                         }
                 }
-				trace_printk("ANON_PAGE_DUMP %s %d %d\n",task->comm, task->tgid , cnt);
+				trace_printk("total %s %d accessed: %d cold: %d\n",task->comm, task->tgid , cnt, coldcnt);
         }
 }
 
@@ -2298,6 +2307,7 @@ static int __init remote_swap_init(void)
 	printk(KERN_ERR "[REMOTE %s] INIT remote swap max %d apps\n", __func__,__nr_appids);
 			
 	target_percentage = 50;
+	cold_page_threshold = 2;
 
 	//per_app structs init
 	for(i=0;i<__nr_appids*2 + 1;i++){

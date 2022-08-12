@@ -3056,7 +3056,11 @@ int do_swap_page(struct vm_fault *vmf)
 				if(__swp_swapcount(entry)==1)
 					atomic_dec(&sent_cold_page);
 
-				trace_printk("cold fault count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry), current->tgid,current->comm,vmf->address,swp_offset(entry));
+				if((switch_start || switch_after) && id!=-1)
+					trace_printk("cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
+				else
+					trace_printk("cold fault not on switching count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
+			//	trace_printk("cold fault count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry), current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
 			else if(pte_to_swp_appid_nbd(vmf->orig_pte)==SYS_COLD_ID) { //cold
 				atomic_inc(&faulted_sys_cold_page);
@@ -3067,7 +3071,13 @@ int do_swap_page(struct vm_fault *vmf)
 					atomic_dec(&sent_sys_cold_page);
 				}
 
-				trace_printk("sys cold fault count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry), current->tgid,current->comm,vmf->address,swp_offset(entry));
+				if((switch_start || switch_after) && id!=-1)
+					trace_printk("sys cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
+				else
+					trace_printk("sys cold fault not on switching count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
+
+				
+				//	trace_printk("sys cold fault count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry), current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
 			else if(pte_to_swp_appid_nbd(vmf->orig_pte)==DIRECT_ID) { //direct
 				if(switch_start && id!=-1)
@@ -3199,7 +3209,7 @@ int do_swap_page(struct vm_fault *vmf)
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
-		trace_printk("id %d, table %d || %d: %d %llx\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
+	//	trace_printk("id %d, table %d || %d: %d %llx\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
 		}
 		else
 			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);
@@ -3226,7 +3236,7 @@ int do_swap_page(struct vm_fault *vmf)
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
-		trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
+	//	trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
 		}
 		else
 			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);

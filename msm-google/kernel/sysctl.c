@@ -485,6 +485,20 @@ static struct ctl_table kern_table[] = {
 		.mode			= 0644,
 		.proc_handler	= proc_dointvec,
 	},
+	{
+		.procname		= "cold_page_threshold",
+		.data			= &cold_page_threshold,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= proc_dointvec,
+	},
+	{
+		.procname		= "stop_background_io",
+		.data			= &stop_background_io,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= proc_dointvec,
+	},
 #endif
 #if defined(CONFIG_PREEMPT_TRACER) || defined(CONFIG_DEBUG_PREEMPT)
 	{

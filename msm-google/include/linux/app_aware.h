@@ -8,7 +8,6 @@
 
 #define ZRAM_TYPE   0
 #define NBD_TYPE    1
-#define COLD_PAGE_THRESHOLD 2 
 #define SYS_COLD_PAGE_THRESHOLD 4 
 #define ZRAM_PAGES 524287
 #define NUM_STT_ENTRIES 30000
@@ -16,24 +15,26 @@
 /******************************
  * APPLICATION UID DEFINITION *
  ******************************/
-#define MAPS_UID 10135
-#define YT_UID 10126
-#define IG_UID 10127
-#define TW_UID 10133
-#define CC_UID 10128
-#define AB_UID 10122
-#define FB_UID 10137
-#define CR_UID 10171
-#define MAIL_UID 10136
-#define CH_UID 10124 
-#define	IV_UID 10173
-#define	CN_UID 10172
-#define	SP_UID 10174
-#define	MX_UID 10175
-#define	KT_UID 10134
-#define	PG_UID 10164
-#define	DB_UID 10144
-#define	TWCH_UID 10161
+#define MAPS_UID 10141
+#define YT_UID 10140
+#define IG_UID 10122
+#define TW_UID 10127
+#define CC_UID 10123
+#define AB_UID 10121
+#define FB_UID 10130
+#define CR_UID 10126
+#define MAIL_UID 10142
+#define CH_UID 10138
+#define	IV_UID 10133
+#define	CN_UID 10128
+#define	SP_UID 10129
+#define	MX_UID 10124
+#define	KT_UID 10120
+#define	PG_UID 10132
+#define	DB_UID 10131
+#define	TWCH_UID 10125
+#define	EX_UID 10134
+#define	VM_UID 10136
 
 
 enum appids {
@@ -55,6 +56,8 @@ enum appids {
 	PG_ID,
 	DB_ID,
 	TWCH_ID,
+	EX_ID,
+	VM_ID,
 /************/
 	COLD_ID, // == __NR_APPIDS
 	DIRECT_ID,
@@ -183,7 +186,8 @@ extern int prefetch_on;
 extern int target_percentage;
 extern int nbd_client_pid;
 extern int sys_cold_handler_off;
-
+extern int stop_background_io;
+extern int cold_page_threshold;
 
 
 /***API FROM ASAP***/
