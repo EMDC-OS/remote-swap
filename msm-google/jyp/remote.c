@@ -413,7 +413,7 @@ static void cold_page_sender_work(struct work_struct *work)
 							goto unlock;
 						}
 						
-						trace_printk("cold page offset %llx\n",swp_offset(new_entry));	
+						trace_printk("cold page uid %d \"%s\" offset %llx\n",backgrounded_uid,task->comm,swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -600,7 +600,7 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 						}
 						
 						
-						trace_printk("sys cold page offset %llx\n",swp_offset(new_entry));	
+						trace_printk("sys cold page \"%s\" offset %llx\n", task->comm, swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
