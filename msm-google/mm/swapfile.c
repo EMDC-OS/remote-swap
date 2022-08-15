@@ -1315,10 +1315,6 @@ void swapcache_free_entries(swp_entry_t *entries, int n)
 	if (nr_swapfiles > 1)
 		sort(entries, n, sizeof(entries[0]), swp_entry_cmp, NULL);
 	for (i = 0; i < n; ++i) {
-#ifdef CONFIG_APP_AWARE
-		if(swapin_vma_tracking!=0)
-			trace_printk("swapfree direct %lx\n",swp_offset(entries[i]));
-#endif
 		p = swap_info_get_cont(entries[i], prev);
 		if (p)
 			swap_entry_free(p, entries[i]);
