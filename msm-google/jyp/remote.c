@@ -247,7 +247,8 @@ static int _send_target_page(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned l
 	}
 	
 	set_pte(orig_pte, new_pte);
-	trace_printk("target sent id %d: cluster %d, %d %llx %llx\n",id,id+(__NR_APPIDS+1)*is_after,mm->owner->tgid, vpage, swp_offset(new_entry));
+	if(mm && mm->owner)
+		trace_printk("target sent id %d: cluster %d, %d %llx %llx\n",id,id+(__NR_APPIDS+1)*is_after,mm->owner->tgid, vpage, swp_offset(new_entry));
 	swap_free(entry);
 	ret=1;
 unlock:
