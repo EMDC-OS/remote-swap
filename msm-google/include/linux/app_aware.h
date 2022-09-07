@@ -8,6 +8,7 @@
 
 #define ZRAM_TYPE   0
 #define NBD_TYPE    1
+#define FLASH_TYPE    2
 #define SYS_COLD_PAGE_THRESHOLD 4 
 #define ZRAM_PAGES 524287
 #define NUM_STT_ENTRIES 30000
@@ -35,6 +36,8 @@
 #define	TWCH_UID 10125
 #define	EX_UID 10134
 #define	VM_UID 10136
+#define	WV_UID 10109
+#define	GL_UID 10113
 
 
 enum appids {
@@ -56,8 +59,8 @@ enum appids {
 	PG_ID,
 	DB_ID,
 	TWCH_ID,
-	EX_ID,
-	VM_ID,
+	WV_ID,
+	GL_ID,
 /************/
 	COLD_ID, // == __NR_APPIDS
 	DIRECT_ID,
@@ -180,14 +183,43 @@ extern void init_past(struct per_app_swap_trace *past);
 
 extern int foreground_uid;
 extern int foreground_pid;
+extern int prefetch_on;
+extern int launchtime_before;
+extern int nbd_client_pid;
+extern int cold_page_threshold;
+
+/***FOR TEST***/
 extern int swapin_vma_tracking;
 extern int swapin_anon_tracking;
-extern int prefetch_on;
-extern int target_percentage;
-extern int nbd_client_pid;
 extern int sys_cold_handler_off;
 extern int stop_background_io;
-extern int cold_page_threshold;
+
+
+/***FOR CloudSwap***/
+extern int cloudswap_on;
+extern int target_tgid;
+extern int cloudswap_fault;
+extern unsigned long send_to_flash;
+extern int send_to_flash_handler(struct ctl_table *table, int write,
+			   void __user *buffer, size_t *length, loff_t *ppos);
+
+extern unsigned long send_to_nbd;
+extern int send_to_nbd_handler(struct ctl_table *table, int write,
+			   void __user *buffer, size_t *length, loff_t *ppos);
+
+extern unsigned long send_to_memory;
+extern int send_to_memory_handler(struct ctl_table *table, int write,
+			   void __user *buffer, size_t *length, loff_t *ppos);
+
+extern int fault_all_zram_page;
+extern int fault_all_zram_page_handler(struct ctl_table *table, int write,
+			   void __user *buffer, size_t *length, loff_t *ppos);
+
+struct cs_work {
+	struct work_struct work;
+	pid_t tgid;
+	unsigned long va;
+};
 
 
 /***API FROM ASAP***/

@@ -80,7 +80,7 @@ atomic_t excepted_page;
 atomic_t nbd_direct_page;
 
 int prefetch_on;
-int target_percentage;
+int launchtime_before;
 int sys_cold_handler_off;
 
 struct task_struct *preempted_cold_task;
@@ -120,8 +120,8 @@ unsigned int get_id_from_uid(int uid){
 		case PG_UID: return PG_ID;
 		case DB_UID: return DB_ID;
 		case TWCH_UID: return TWCH_ID;
-		case EX_UID: return EX_ID;
-		case VM_UID: return VM_ID;
+		case WV_UID: return WV_ID;
+		case GL_UID: return GL_ID;
 		case -1: return COLD_ID;
 		default:
 			panic("[REMOTE %s] unregistered UID %d\n", __func__,uid);
@@ -150,8 +150,8 @@ bool is_system_uid(int uid){
 		case PG_UID: return 0;
 		case DB_UID: return 0;
 		case TWCH_UID: return 0;
-		case EX_UID: return 0;
-		case VM_UID: return 0;
+		case WV_UID: return 0;
+		case GL_UID: return 0;
 		default:
 			return 1;
 	}
@@ -414,7 +414,7 @@ static void cold_page_sender_work(struct work_struct *work)
 							goto unlock;
 						}
 						
-						trace_printk("cold page uid %d \"%s\" offset %llx\n",backgrounded_uid,task->comm,swp_offset(new_entry));	
+						trace_printk("cold page uid %d tgid %d \"%s\" offset %llx\n",backgrounded_uid,task->tgid,task->comm,swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -601,7 +601,7 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 						}
 						
 						
-						trace_printk("sys cold page \"%s\" offset %llx\n", task->comm, swp_offset(new_entry));	
+						trace_printk("sys cold page tgid %d \"%s\" offset %llx\n", task->tgid, task->comm, swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -1432,7 +1432,7 @@ int app_switch_start_handler(struct ctl_table *table, int write,
 	return 0;
 }
 
-int update_to_nbd_flag(unsigned int id, int percentage){
+int update_to_nbd_flag(unsigned int id){
 
 
 	/*
@@ -1449,6 +1449,8 @@ int update_to_nbd_flag(unsigned int id, int percentage){
 	int cnt=0;
 	struct swap_trace_entry *swap_trace_table_e;
 	struct swap_trace_entry *swap_trace_table_l;
+	int percentage;
+	int target_percentage;
 
 	//define st_idx_ptr_e = which_table ? &st_index0 : &st_index1
 	//define stt_e = which_table ? swap_trace_table0 : swap_trace_table1
@@ -1471,6 +1473,10 @@ int update_to_nbd_flag(unsigned int id, int percentage){
 		after_idx_e = atomic_read(&past[id]->after_index1);	
 		after_idx_l = atomic_read(&past[id]->after_index0);
 	}
+
+	target_percentage = launchtime_before * 18 * 100 / (18 * launchtime_before + max_idx_l);
+	
+	percentage = 100 - target_percentage;
 
 
 	idx_e = max_idx_e * percentage/100;
@@ -1516,7 +1522,7 @@ int update_to_nbd_flag(unsigned int id, int percentage){
 	
 	// for dump
 
-	trace_printk("appid %d: table %d is latter, total target %d max idx e, l -> %d %d, after %d %d\n",id, past[id]->which_table,cnt,max_idx_e,max_idx_l,after_idx_e - max_idx_e, after_idx_l - max_idx_l);
+	trace_printk("appid %d: table %d is latter, percentage %d, total target %d max idx e, l -> %d %d, after %d %d\n",id, past[id]->which_table,target_percentage,cnt,max_idx_e,max_idx_l,after_idx_e - max_idx_e, after_idx_l - max_idx_l);
 /*
 	while(idx_l <= max_idx_l){
 		if( swap_trace_table_l[idx_l].to_nbd )
@@ -1555,12 +1561,16 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 		 * Update to_nbd flag of st
 		 */
 
+		if(!cloudswap_on){
+
+
+		
 		if(foreground_uid)
 			id = get_id_from_uid(foreground_uid);
 
 
 		if(foreground_uid && (atomic_read(&past[id]->st_index0)!=-1 || atomic_read(&past[id]->st_index1)!=-1)){
-			update_to_nbd_flag(id, 100-target_percentage); //<--app_number or uid
+			update_to_nbd_flag(id); //<--app_number or uid
 			past[id]->st_should_check = 1 ; // --> per app, and keep in list
 		}
 
@@ -1597,6 +1607,8 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 
 		backgrounded_uid = foreground_uid;
 
+
+		}
 	}
 	return 0;
 }
@@ -1684,7 +1696,8 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 
 
 		if(foreground_uid && (atomic_read(&past[id]->st_index0)!=-1 || atomic_read(&past[id]->st_index1)!=-1)){
-			update_to_nbd_flag(id, 100-target_percentage); //<--app_number or uid
+			
+			update_to_nbd_flag(id); //<--app_number or uid
 			past[id]->st_should_check = 1 ; // --> per app, and keep in list
 		}
 
@@ -2307,7 +2320,6 @@ static int __init remote_swap_init(void)
 	int __nr_appids = __NR_APPIDS;
 	printk(KERN_ERR "[REMOTE %s] INIT remote swap max %d apps\n", __func__,__nr_appids);
 			
-	target_percentage = 50;
 	cold_page_threshold = 2;
 
 	//per_app structs init

@@ -21,4 +21,6 @@
 	am force-stop  tv.twitch.android.app
 	am force-stop  com.microsoft.office.excel
 	am force-stop  com.verizon.messaging.vzmsgs
+	am force-stop  com.android.gallery3d
+	am force-stop  org.chromium.webview_shell
 

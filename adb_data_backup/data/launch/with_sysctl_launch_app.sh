@@ -71,6 +71,10 @@ elif [ "${app}" = "excel" ]; then
 	echo 10134 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "verizon" ]; then
 	echo 10136 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "webview" ]; then
+	echo 10109 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "gallery" ]; then
+	echo 10113 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "home" ]; then
 	echo 0 > /proc/sys/kernel/foreground_uid
 else
@@ -81,78 +85,86 @@ fi
 echo 1 > /proc/sys/kernel/app_switch_start
 
 if [ "${app}" = "candycrush" ]; then
-	am start -n com.king.candycrushsaga/.CandyCrushSagaActivity -W
+	am start -n com.king.candycrushsaga/.CandyCrushSagaActivity -W > /data/launch/temp
 elif [ "${app}" = "googlemaps" ]; then
-	am start -n com.google.android.apps.maps/com.google.android.maps.MapsActivity -W
+	am start -n com.google.android.apps.maps/com.google.android.maps.MapsActivity -W > /data/launch/temp
 elif [ "${app}" = "gmail" ]; then
-	am start -n com.google.android.gm/.ConversationListActivityGmail -W
+	am start -n com.google.android.gm/.ConversationListActivityGmail -W > /data/launch/temp
 elif [ "${app}" = "youtube" ]; then
-	am start -n com.google.android.youtube/com.google.android.apps.youtube.app.WatchWhileActivity -W
+	am start -n com.google.android.youtube/com.google.android.apps.youtube.app.WatchWhileActivity -W > /data/launch/temp
 elif [ "${app}" = "instagram" ]; then
-	am start -n com.instagram.android/com.instagram.android.activity.MainTabActivity -W
+	am start -n com.instagram.android/com.instagram.android.activity.MainTabActivity -W > /data/launch/temp
 elif [ "${app}" = "pinterest" ]; then
-	am start -n com.pinterest/.activity.PinterestActivity -W
+	am start -n com.pinterest/.activity.PinterestActivity -W > /data/launch/temp
 elif [ "${app}" = "discord" ]; then
-	am start -n com.discord/com.discord.app.AppActivity$Main -W
+	am start -n com.discord/com.discord.app.AppActivity$Main -W > /data/launch/temp
 elif [ "${app}" = "zoom" ]; then
-	am start -n us.zoom.videomeetings/com.zipow.videobox.LauncherActivity -W
+	am start -n us.zoom.videomeetings/com.zipow.videobox.LauncherActivity -W > /data/launch/temp
 elif [ "${app}" = "airbnb" ]; then
-	am start -n com.airbnb.android/com.airbnb.android.feat.homescreen.HomeActivity -W
+	am start -n com.airbnb.android/com.airbnb.android.feat.homescreen.HomeActivity -W > /data/launch/temp
 elif [ "${app}" = "agoda" ]; then
-	am start -n com.agoda.mobile.consumer/com.agoda.mobile.consumer.screens.home.HomeActivity -W
+	am start -n com.agoda.mobile.consumer/com.agoda.mobile.consumer.screens.home.HomeActivity -W > /data/launch/temp
 elif [ "${app}" = "uber" ]; then
-	am start -n com.ubercab/com.ubercab.presidio.app.core.root.RootActivity -W
+	am start -n com.ubercab/com.ubercab.presidio.app.core.root.RootActivity -W > /data/launch/temp
 elif [ "${app}" = "googledrive" ]; then
-	am start -n com.google.android.apps.docs/.drive.app.navigation.NavigationActivity -W
+	am start -n com.google.android.apps.docs/.drive.app.navigation.NavigationActivity -W > /data/launch/temp
 elif [ "${app}" = "coc" ]; then
-	am start -n com.supercell.clashofclans/com.supercell.titan.GameApp -W
+	am start -n com.supercell.clashofclans/com.supercell.titan.GameApp -W > /data/launch/temp
 elif [ "${app}" = "twitter" ]; then
-	am start -n com.twitter.android/com.twitter.app.main.MainActivity -W
+	am start -n com.twitter.android/com.twitter.app.main.MainActivity -W > /data/launch/temp
 elif [ "${app}" = "microword" ]; then
-	am start -n com.microsoft.office.word/com.microsoft.office.apphost.LaunchActivity -W
+	am start -n com.microsoft.office.word/com.microsoft.office.apphost.LaunchActivity -W > /data/launch/temp
 elif [ "${app}" = "adobe" ]; then
-	am start -n com.adobe.reader/.home.ARHomeActivity -W
+	am start -n com.adobe.reader/.home.ARHomeActivity -W > /data/launch/temp
 elif [ "${app}" = "minecraft" ]; then
-	am start -n com.mojang.minecrafttrialpe/com.mojang.minecraftpe.MainActivity -W
+	am start -n com.mojang.minecrafttrialpe/com.mojang.minecraftpe.MainActivity -W > /data/launch/temp
 elif [ "${app}" = "webview" ]; then
-	am start -a android.intent.action.VIEW -d http://www.naver.com -W
+	am start -a android.intent.action.VIEW -d http://www.naver.com -W > /data/launch/temp
 elif [ "${app}" = "clashroyale" ]; then
-	am start -n com.supercell.clashroyale/com.supercell.titan.GameApp -W
+	am start -n com.supercell.clashroyale/com.supercell.titan.GameApp -W > /data/launch/temp
 elif [ "${app}" = "angrybirds" ]; then
-	am start -n com.rovio.baba/com.unity3d.player.UnityPlayerActivity -W
+	am start -n com.rovio.baba/com.unity3d.player.UnityPlayerActivity -W > /data/launch/temp
 elif [ "${app}" = "chrome" ]; then
-	am start -n com.android.chrome/com.google.android.apps.chrome.Main -d http://www.naver.com  -W
+	am start -n com.android.chrome/com.google.android.apps.chrome.Main -d http://www.naver.com  -W > /data/launch/temp
 elif [ "${app}" = "facebook" ]; then
-	am start -n com.facebook.katana/.activity.FbMainTabActivity -W
+	am start -n com.facebook.katana/.activity.FbMainTabActivity -W > /data/launch/temp
 elif [ "${app}" = "camera" ]; then
-	am start -a android.media.action.IMAGE_CAPTURE -W
+	am start -a android.media.action.IMAGE_CAPTURE -W > /data/launch/temp
 elif [ "${app}" = "pubg" ]; then
-	am start -n com.pubg.krmobile/com.epicgames.ue4.GameActivity -W
+	am start -n com.pubg.krmobile/com.epicgames.ue4.GameActivity -W > /data/launch/temp
 elif [ "${app}" = "investing" ]; then
-	am start -n com.fusionmedia.investing/.ui.activities.SplashSplitter -W
+	am start -n com.fusionmedia.investing/.ui.activities.SplashSplitter -W > /data/launch/temp
 elif [ "${app}" = "cnn" ]; then
-	am start -n com.cnn.mobile.android.phone/.features.splash.SplashActivity -W
+	am start -n com.cnn.mobile.android.phone/.features.splash.SplashActivity -W > /data/launch/temp
 elif [ "${app}" = "spotify" ]; then
-	am start -n com.spotify.music/.MainActivity -W
+	am start -n com.spotify.music/.MainActivity -W > /data/launch/temp
 elif [ "${app}" = "mxplayer" ]; then
-	am start -n com.mxtech.videoplayer.ad/.ActivityWelcomeMX -W
+	am start -n com.mxtech.videoplayer.ad/.ActivityWelcomeMX -W > /data/launch/temp
 elif [ "${app}" = "kakaotalk" ]; then
-	am start -n com.kakao.talk/.activity.SplashActivity -W	
+	am start -n com.kakao.talk/.activity.SplashActivity -W > /data/launch/temp	
 elif [ "${app}" = "pokemongo" ]; then
-	am start -n com.nianticlabs.pokemongo/com.nianticproject.holoholo.libholoholo.unity.UnityMainActivity -W
+	am start -n com.nianticlabs.pokemongo/com.nianticproject.holoholo.libholoholo.unity.UnityMainActivity -W > /data/launch/temp
 elif [ "${app}" = "dropbox" ]; then
-	am start -n com.dropbox.android/.activity.DropboxBrowser -W
+	am start -n com.dropbox.android/.activity.DropboxBrowser -W > /data/launch/temp
 elif [ "${app}" = "twitch" ]; then
-	am start -n tv.twitch.android.app/.core.LandingActivity -W
+	am start -n tv.twitch.android.app/.core.LandingActivity -W > /data/launch/temp
 elif [ "${app}" = "excel" ]; then
-	am start -n com.microsoft.office.excel/com.microsoft.office.apphost.LaunchActivity -W
+	am start -n com.microsoft.office.excel/com.microsoft.office.apphost.LaunchActivity -W > /data/launch/temp
 elif [ "${app}" = "verizon" ]; then
-	am start -n com.verizon.messaging.vzmsgs/com.verizon.mms.ui.activity.Provisioning -W
+	am start -n com.verizon.messaging.vzmsgs/com.verizon.mms.ui.activity.Provisioning -W > /data/launch/temp
+elif [ "${app}" = "gallery" ]; then
+	am start -n com.android.gallery3d/.app.GalleryActivity -W > /data/launch/temp
 elif [ "${app}" = "home" ]; then
-	am start -a android.intent.action.MAIN -c android.intent.category.HOME
+	am start -a android.intent.action.MAIN -c android.intent.category.HOME > /data/launch/temp
 else
 	echo "Please enter Appname Kernel_mode Launching_state"
 fi
+
+cat /data/launch/temp
+
+time=`cat /data/launch/temp | awk '{if ($1=="WaitTime:") print $2}'`
+
+echo $time > /proc/sys/kernel/launchtime_before
 
 echo 1 > /proc/sys/kernel/app_switch_fin
 #cat /proc/vmstat > /data/launch/result_${app}/${kernel}/${state}/vmstat_end

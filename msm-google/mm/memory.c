@@ -2944,7 +2944,10 @@ int do_swap_page(struct vm_fault *vmf)
 		
 	if(nbd_client_pid!=0 && current->tgid == nbd_client_pid)
 		excepted = 1;
-		
+	
+
+	
+
 #endif
 
 	
@@ -3045,19 +3048,36 @@ int do_swap_page(struct vm_fault *vmf)
 			goto unlock;
 		}
 #ifdef CONFIG_APP_AWARE
+		
+		if(cloudswap_on && !cloudswap_fault){
+			if (swp_type(entry) == ZRAM_TYPE)
+					trace_printk("cloudswap fault zram  %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+			if (swp_type(entry) == NBD_TYPE)
+					trace_printk("cloudswap fault remote  %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+			if (swp_type(entry) == FLASH_TYPE)
+					trace_printk("cloudswap fault flash %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+		}
+
+		if(cloudswap_fault)
+				trace_printk("memory sent %d %llx %llx\n", current->tgid,vmf->address,swp_offset(entry));
+		
+		
+		
 		/*
 		 * For remote page dump
 		 *
 		*/
-		if (swp_type(entry) == NBD_TYPE){
+		if (swp_type(entry) == NBD_TYPE && !cloudswap_on){
 			if(pte_to_swp_appid_nbd(vmf->orig_pte)==COLD_ID) { //cold
 				atomic_inc(&faulted_cold_page);
 
 				if(__swp_swapcount(entry)==1)
 					atomic_dec(&sent_cold_page);
 
-				if((switch_start || switch_after) && id!=-1)
-					trace_printk("cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
+				if(switch_start && id!=-1)
+					trace_printk("switch cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
+				else if(switch_after && id!=-1)
+					trace_printk("after cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				else
 					trace_printk("cold fault not on switching count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
 			//	trace_printk("cold fault count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry), current->tgid,current->comm,vmf->address,swp_offset(entry));
@@ -3071,8 +3091,10 @@ int do_swap_page(struct vm_fault *vmf)
 					atomic_dec(&sent_sys_cold_page);
 				}
 
-				if((switch_start || switch_after) && id!=-1)
-					trace_printk("sys cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
+				if(switch_start && id!=-1)
+					trace_printk("switch sys cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
+				else if(switch_after && id!=-1)
+					trace_printk("after sys cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				else
 					trace_printk("sys cold fault not on switching count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
 
@@ -3106,7 +3128,8 @@ int do_swap_page(struct vm_fault *vmf)
 				excepted = 1;
 			}
 		}
-		else{ // ZRAM_TYPE
+		else if(swp_type(entry) == ZRAM_TYPE && !cloudswap_on)
+		{ // ZRAM_TYPE
 			if(pte_to_swp_excepted(vmf->orig_pte)){
 				//trace_printk("Exception touched after marked : %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
 				SetPageExcepted(page);
@@ -3190,7 +3213,7 @@ int do_swap_page(struct vm_fault *vmf)
 
 #ifdef CONFIG_APP_AWARE
 
-	if(switch_start && foreground_uid && !PageExcepted(page) && id!=-1){
+	if(switch_start && foreground_uid && !PageExcepted(page) && id!=-1 && !cloudswap_on){
 		if(past[id]->which_table){
 			st_idx_ptr = &past[id]->st_index1;
 			swap_trace_table = past[id]->swap_trace_table1;
@@ -3215,7 +3238,7 @@ int do_swap_page(struct vm_fault *vmf)
 			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);
 	}
 	
-	if(switch_after && foreground_uid && !PageExcepted(page)){
+	if(switch_after && foreground_uid && !PageExcepted(page) && !cloudswap_on){
 		
 		id = get_id_from_uid(foreground_uid);
 		
