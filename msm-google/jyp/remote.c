@@ -1484,10 +1484,10 @@ int update_to_nbd_flag(unsigned int id){
 
 
 
-	
+	//newscheme (all&&percentage)
 
 	while(idx_l <= max_idx_l){
-		idx_e = max_idx_e * percentage/100;
+		idx_e = 0;
 		while(idx_e <= max_idx_e){
 			if( swap_trace_table_e[idx_e].va == swap_trace_table_l[idx_l].va &&
 				swap_trace_table_e[idx_e].tgid == swap_trace_table_l[idx_l].tgid){
