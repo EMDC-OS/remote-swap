@@ -414,7 +414,7 @@ static void cold_page_sender_work(struct work_struct *work)
 							goto unlock;
 						}
 						
-						trace_printk("cold page uid %d tgid %d \"%s\" offset %llx\n",backgrounded_uid,task->tgid,task->comm,swp_offset(new_entry));	
+						trace_printk("cold page uid %d tgid %d \"%s\" offset %llx\n",task->cred->uid.val,task->tgid,task->comm,swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -601,7 +601,7 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 						}
 						
 						
-						trace_printk("sys cold page tgid %d \"%s\" offset %llx\n", task->tgid, task->comm, swp_offset(new_entry));	
+						trace_printk("sys cold page uid %d tgid %d \"%s\" offset %llx\n",task->cred->uid.val, task->tgid, task->comm, swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -1484,8 +1484,6 @@ int update_to_nbd_flag(unsigned int id){
 
 
 
-	//newscheme (all&&percentage)
-
 	while(idx_l <= max_idx_l){
 		idx_e = 0;
 		while(idx_e <= max_idx_e){
@@ -1712,8 +1710,27 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 					continue;
 				if(p->tgid == nbd_client_pid)
 					continue;
+
+				/*
+				 * Temporary for app group
+				 */
+				if(backgrounded_uid==CC_UID && p->cred->uid.val >= 99000){
+					trace_printk("backgrounded_uid %d\n",p->cred->uid.val);
+					if(task_swap_counter_inc(p))
+						cold_page_sender_handler(p);
+				}
+
+				if(backgrounded_uid==CH_UID && p->cred->uid.val == 90000){
+					trace_printk("backgrounded_uid %d\n",p->cred->uid.val);
+					if(task_swap_counter_inc(p))
+						cold_page_sender_handler(p);
+				}
+
+				/*********
+				 *********/
+
 				if(backgrounded_uid && p->cred->uid.val == backgrounded_uid){
-					printk("backgrounded_uid %d",backgrounded_uid);
+					trace_printk("backgrounded_uid %d\n",backgrounded_uid);
 					if(task_swap_counter_inc(p))
 						cold_page_sender_handler(p);
 					/* for preempted task */
@@ -2153,7 +2170,12 @@ static int sys_cold_manager(void *arg)
 				continue;
 			if(p->tgid == nbd_client_pid || p->tgid == 1)
 				continue;
-		
+
+
+			//for app group
+			if(p->cred->uid.val>=99000 || p->cred->uid.val==90000)
+				continue;
+
 			if(is_system_uid(p->cred->uid.val)){
 				task_swap_counter_inc(p);
 				//if ZRAM full	
@@ -2232,7 +2254,7 @@ static void _anon_page_dump(pid_t pid) {
                                         }
                                 }else{
                                     trace_printk("ANON_PAGE_DUMP %s %d %llx %d\n",task->comm, task->tgid, vpage, accessed);
-									if(accessed)
+									if(accessed==1)
 										cnt++;
 									else
 										coldcnt++;

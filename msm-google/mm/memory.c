@@ -3122,7 +3122,14 @@ int do_swap_page(struct vm_fault *vmf)
 
 			}
 			else{
-				trace_printk("Exception original id %d: %d \"%s\" %lx %lx\n",pte_to_swp_appid_nbd(vmf->orig_pte),current->tgid,current->comm,vmf->address,swp_offset(entry));
+				if(switch_start && id!=-1)
+					trace_printk("switch id %d Exception original id %d: %d \"%s\" %lx %lx\n",id,pte_to_swp_appid_nbd(vmf->orig_pte),current->tgid,current->comm,vmf->address,swp_offset(entry));
+				else if(switch_after && id!=-1)
+					trace_printk("after id %d Exception original id %d: %d \"%s\" %lx %lx\n",id,pte_to_swp_appid_nbd(vmf->orig_pte),current->tgid,current->comm,vmf->address,swp_offset(entry));
+				else
+					trace_printk("playing Exception original id %d: %d \"%s\" %lx %lx\n",pte_to_swp_appid_nbd(vmf->orig_pte),current->tgid,current->comm,vmf->address,swp_offset(entry));
+				
+				
 				atomic_inc(&excepted_page);
 				SetPageExcepted(page);
 				excepted = 1;
