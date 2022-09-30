@@ -501,6 +501,8 @@ struct page *lookup_swap_cache(swp_entry_t entry, struct vm_area_struct *vma,
 				atomic_inc(&swapin_readahead_hits);
 		}
 	}
+
+
 	return page;
 }
 

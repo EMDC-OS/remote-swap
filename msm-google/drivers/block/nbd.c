@@ -431,6 +431,7 @@ static int sock_xmit(struct nbd_device *nbd, int index, int send,
 			*sent += result;
 	} while (msg_data_left(&msg));
 
+
 	memalloc_noreclaim_restore(noreclaim_flag);
 
 	return result;
@@ -480,6 +481,7 @@ static int nbd_send_cmd(struct nbd_device *nbd, struct nbd_cmd *cmd, int index)
 	default:
 		return -EIO;
 	}
+			
 
 	if (rq_data_dir(req) == WRITE &&
 	    (config->flags & NBD_FLAG_READ_ONLY)) {

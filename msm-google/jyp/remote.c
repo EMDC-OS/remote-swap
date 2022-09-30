@@ -307,6 +307,8 @@ static void cold_page_sender_work(struct work_struct *work)
 				u64 counter;
 				struct mm_struct *mm = task->mm;
 				struct page *cache_page;
+				if(!mm)
+					return ;
 				pgd = pgd_offset(mm, vpage);
 				if(pgd_none(*pgd))
 					continue;
@@ -414,7 +416,7 @@ static void cold_page_sender_work(struct work_struct *work)
 							goto unlock;
 						}
 						
-						trace_printk("cold page uid %d tgid %d \"%s\" offset %llx\n",task->cred->uid.val,task->tgid,task->comm,swp_offset(new_entry));	
+						trace_printk("cold page uid %d tgid %d \"%s\" %lx offset %llx\n",task->cred->uid.val,task->tgid,task->comm,vpage,swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -601,7 +603,7 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 						}
 						
 						
-						trace_printk("sys cold page uid %d tgid %d \"%s\" offset %llx\n",task->cred->uid.val, task->tgid, task->comm, swp_offset(new_entry));	
+						trace_printk("sys cold page uid %d tgid %d \"%s\" %lx offset %llx\n",task->cred->uid.val, task->tgid, task->comm, vpage, swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -899,6 +901,7 @@ static void prefetch_work(struct work_struct *work)
 		}
 	}
 	blk_finish_plug(&plug);
+
 
 	//printk(KERN_ERR "4!!\n");
 
@@ -1720,7 +1723,7 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 						cold_page_sender_handler(p);
 				}
 
-				if(backgrounded_uid==CH_UID && p->cred->uid.val == 90000){
+				if(backgrounded_uid==CH_UID && p->cred->uid.val >=90000 && p->cred->uid.val<99000){
 					trace_printk("backgrounded_uid %d\n",p->cred->uid.val);
 					if(task_swap_counter_inc(p))
 						cold_page_sender_handler(p);

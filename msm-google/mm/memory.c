@@ -86,6 +86,7 @@
 #ifdef CONFIG_APP_AWARE
 #include <linux/kernel.h>
 #include <linux/app_aware.h>
+#include <linux/time.h>
 #endif
 
 #if defined(LAST_CPUPID_NOT_IN_PAGE_FLAGS) && !defined(CONFIG_COMPILE_TEST)
@@ -2917,6 +2918,18 @@ EXPORT_SYMBOL(unmap_mapping_range);
  */
 
 
+#ifdef CONFIG_APP_AWARE
+static inline long myclock()
+{
+        struct timeval my_time;
+        do_gettimeofday(&my_time);
+
+        return my_time.tv_usec;
+
+}
+#endif
+
+
 int do_swap_page(struct vm_fault *vmf)
 {
 	struct vm_area_struct *vma = vmf->vma;
@@ -2932,7 +2945,7 @@ int do_swap_page(struct vm_fault *vmf)
 
 
 #ifdef CONFIG_APP_AWARE
-
+	unsigned long long st, et;
 	int idx;
 	int id = -1;
 	atomic_t *st_idx_ptr;
@@ -2980,7 +2993,6 @@ int do_swap_page(struct vm_fault *vmf)
 			put_page(page);
 		goto out;
 	}
-
 
 
 //	printk(KERN_ERR "1!!\n");
@@ -3052,8 +3064,13 @@ int do_swap_page(struct vm_fault *vmf)
 		if(cloudswap_on && !cloudswap_fault){
 			if (swp_type(entry) == ZRAM_TYPE)
 					trace_printk("cloudswap fault zram  %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
-			if (swp_type(entry) == NBD_TYPE)
-					trace_printk("cloudswap fault remote  %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+			if (swp_type(entry) == NBD_TYPE){
+				if(switch_start)
+					trace_printk("cloudswap fault remote switch %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+				else
+					trace_printk("cloudswap fault remote after %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
+
+			}
 			if (swp_type(entry) == FLASH_TYPE)
 					trace_printk("cloudswap fault flash %d \"%s\" %lx %lx\n",current->tgid,current->comm,vmf->address,swp_offset(entry));
 		}
@@ -3164,7 +3181,18 @@ int do_swap_page(struct vm_fault *vmf)
 
 //	printk(KERN_ERR "3!!\n");
 	swapcache = page;
+
+		
+	st = ktime_get_real_ns();
+	trace_printk("lock wait time before %lld ns : %d \"%s\" %lx %lx\n",st,current->tgid,current->comm,vmf->address,swp_offset(entry));
+
+
 	locked = lock_page_or_retry(page, vma->vm_mm, vmf->flags);
+	
+	
+	et = ktime_get_real_ns();
+	trace_printk("lock wait time after %lld ns : %d \"%s\" %lx %lx\n",et,current->tgid,current->comm,vmf->address,swp_offset(entry));
+
 
 	delayacct_clear_flag(DELAYACCT_PF_SWAPIN);
 	if (!locked) {
