@@ -753,7 +753,7 @@ retry:
 
 
 
-static int prefetch_target_page(int id, pid_t tgid, unsigned long va){
+static struct page *prefetch_target_page(int id, pid_t tgid, unsigned long va){
 
 
 	struct task_struct  *task = NULL;
@@ -842,7 +842,7 @@ static int prefetch_target_page(int id, pid_t tgid, unsigned long va){
 	}
 
 
-	return 0;
+	return page;
 }
 
 
@@ -862,14 +862,15 @@ static void prefetch_work(struct work_struct *work)
 	struct blk_plug plug;
 	struct blk_plug plug_after;
 	int i;
+	int cnt=0;
 	unsigned int id;
 	int target_table;
+	struct page* last_page;
 	tew = container_of(work, struct prefetch_work, work);
 	target_table = tew->target_table;
 	id = tew->id;
-	
 
-	//printk(KERN_ERR "1!!\n");
+//	trace_printk("1!!\n");
 	if(target_table){
 		max_idx_e = atomic_read(&past[id]->st_index0);
 		swap_trace_table_e = past[id]->swap_trace_table0;
@@ -890,9 +891,89 @@ static void prefetch_work(struct work_struct *work)
 
 	trace_printk("prefetch work: foreground %d, maxidx %d, afteridx %d\n",foreground_uid,max_idx_l,after_idx_l);
 
+	cnt=0;
+	last_page=0;
 	blk_start_plug(&plug);
+				
+	trace_printk("blk start\n");
 	for( i = 0 ; i <= max_idx_l ; i++ ){
-	//printk(KERN_ERR "3!!\n");
+		
+		
+		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
+			trace_printk("prefetch table %d %d %d\n",target_table, i, cnt);
+			tgid = swap_trace_table_l[i].tgid;
+			va = swap_trace_table_l[i].va;
+			last_page=prefetch_target_page(id,tgid,va);
+			if(last_page)
+				cnt++;
+			
+		}
+		
+		if(cnt == 32 || i == max_idx_l){
+			blk_finish_plug(&plug);
+			
+			trace_printk("blk finish\n");
+
+			if(trylock_page(last_page))
+				unlock_page(last_page);
+			else{
+		//		get_page(last_page);
+				wait_on_page_locked(last_page);
+		//		put_page(last_page);
+				trace_printk("wake up i = %d\n",i);
+			}
+
+			if(cnt==32){
+			
+				trace_printk("blk start\n");
+				cnt=0;
+				blk_start_plug(&plug);
+			}
+		}
+	}
+	if(max_idx_l==-1)
+		blk_finish_plug(&plug);
+/*
+	i=0;
+	while(i<=max_idx_l){
+		cnt=0;
+	
+		blk_start_plug(&plug);
+		while(1){
+			if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
+				trace_printk("prefetch table %d %d\n",target_table, i);
+				tgid = swap_trace_table_l[i].tgid;
+				va = swap_trace_table_l[i].va;
+				last_page=prefetch_target_page(id,tgid,va);
+				if(last_page)
+					cnt++;
+				i++;
+			}
+			if(i>max_idx_l || cnt == 32)
+				break;
+		}
+		blk_finish_plug(&plug);
+
+		if(trylock_page(last_page))
+			unlock_page(last_page);
+		else{
+			wait_on_page_locked(last_page);
+			trace_printk("wake up i = %d\n",i);
+		}
+
+	}
+
+*/
+
+
+
+/*
+
+	cnt=0;
+	last_page=0;
+	blk_start_plug(&plug);
+
+	for( i = 0 ; i <= max_idx_l ; i++ ){
 		//trace_printk("prefetch table %d: %d %llx, %d %d\n",target_table,swap_trace_table_l[i].tgid,swap_trace_table_l[i].va,swap_trace_table_l[i].to_nbd,swap_trace_table_l[i].swapped);
 		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
 			tgid = swap_trace_table_l[i].tgid;
@@ -901,7 +982,7 @@ static void prefetch_work(struct work_struct *work)
 		}
 	}
 	blk_finish_plug(&plug);
-
+*/
 
 	//printk(KERN_ERR "4!!\n");
 
