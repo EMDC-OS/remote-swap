@@ -1591,7 +1591,7 @@ int update_to_nbd_flag(unsigned int id){
 		after_idx_l = atomic_read(&past[id]->after_index0);
 	}
 
-	target_percentage = launchtime_before * 16 * 100 / (16 * launchtime_before + max_idx_l);
+	target_percentage = launchtime_before * 18 * 100 / (18 * launchtime_before + max_idx_l);
 	
 //	target_percentage=60;
 	
