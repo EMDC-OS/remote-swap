@@ -187,6 +187,7 @@ extern int prefetch_on;
 extern int launchtime_before;
 extern int nbd_client_pid;
 extern int cold_page_threshold;
+extern int prefetch_batch_size;
 
 /***FOR TEST***/
 extern int swapin_vma_tracking;

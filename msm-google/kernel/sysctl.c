@@ -541,6 +541,13 @@ static struct ctl_table kern_table[] = {
 		.mode			= 0644,
 		.proc_handler	= fault_all_zram_page_handler,
 	},
+	{
+		.procname		= "prefetch_batch_size",
+		.data			= &prefetch_batch_size,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= proc_dointvec,
+	},
 #endif
 #if defined(CONFIG_PREEMPT_TRACER) || defined(CONFIG_DEBUG_PREEMPT)
 	{

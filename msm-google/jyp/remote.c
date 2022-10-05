@@ -69,6 +69,7 @@ struct per_app_swap_trace *past[__NR_APPIDS]; //__NR_APPIDS
 
 int cold_page_threshold;
 int stop_background_io;
+int prefetch_batch_size;
 
 int backgrounded_uid;
 int nbd_client_pid;
@@ -845,7 +846,7 @@ static struct page *prefetch_target_page(int id, pid_t tgid, unsigned long va){
 	return page;
 }
 
-
+struct blk_plug plugs[500];
 
 static void prefetch_work(struct work_struct *work)
 {
@@ -859,13 +860,15 @@ static void prefetch_work(struct work_struct *work)
 	struct swap_trace_entry *swap_trace_table_e;
 	pid_t tgid;
 	unsigned long va;
-	struct blk_plug plug;
+//	struct blk_plug plug;
+	int plug_id=0;
 	struct blk_plug plug_after;
 	int i;
 	int cnt=0;
 	unsigned int id;
 	int target_table;
 	struct page* last_page;
+	struct page* wait_page;
 	tew = container_of(work, struct prefetch_work, work);
 	target_table = tew->target_table;
 	id = tew->id;
@@ -893,51 +896,71 @@ static void prefetch_work(struct work_struct *work)
 
 	cnt=0;
 	last_page=0;
-	blk_start_plug(&plug);
-				
-	trace_printk("blk start\n");
+	wait_page=0;
+	
+	
+	blk_start_plug(&plugs[plug_id]);
+//	printk(KERN_ERR"blk start %d\n",plug_id);
+	trace_printk("blk start %d\n",plug_id);
 	for( i = 0 ; i <= max_idx_l ; i++ ){
 		
 		
 		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
-			trace_printk("prefetch table %d %d %d\n",target_table, i, cnt);
+//			trace_printk("prefetch table %d %d %d\n",target_table, i, cnt);
 			tgid = swap_trace_table_l[i].tgid;
 			va = swap_trace_table_l[i].va;
 			last_page=prefetch_target_page(id,tgid,va);
-			if(last_page)
+			if(last_page){
+				wait_page=last_page;
 				cnt++;
-			
-		}
-		
-		if(cnt == 32 || i == max_idx_l){
-			blk_finish_plug(&plug);
-			
-			trace_printk("blk finish\n");
-
-			if(trylock_page(last_page))
-				unlock_page(last_page);
-			else{
-		//		get_page(last_page);
-				wait_on_page_locked(last_page);
-		//		put_page(last_page);
-				trace_printk("wake up i = %d\n",i);
 			}
-
-			if(cnt==32){
+		}
 			
-				trace_printk("blk start\n");
+	//	printk(KERN_ERR"i, cnt: %d / %d, %d\n",i,max_idx_l,cnt);
+		
+		if(( cnt == prefetch_batch_size || i == max_idx_l ) && wait_page){
+	
+	//		printk(KERN_ERR"blk finish %d\n",plug_id);
+			blk_finish_plug(&plugs[plug_id]);
+			
+	//		trace_printk("blk finish %d\n",plug_id);
+			//printk(KERN_ERR"refcount %d",wait_page->_refcount);
+				
+			get_page(wait_page);
+			trace_printk("wait start %d\n",plug_id);
+			wait_on_page_locked(wait_page);
+			trace_printk("wait finished %d\n",plug_id);
+			put_page(wait_page);
+			
+			if(cnt==prefetch_batch_size){
+				plug_id++;
+	//			printk(KERN_ERR"blk start %d\n",plug_id);
+				trace_printk("blk start %d\n",plug_id);
 				cnt=0;
-				blk_start_plug(&plug);
+				blk_start_plug(&plugs[plug_id]);
+				wait_page=0;
 			}
 		}
 	}
-	if(max_idx_l==-1)
-		blk_finish_plug(&plug);
+	if(max_idx_l==-1 || wait_page==0){
+			
+	//	printk(KERN_ERR"blk finish %d\n",plug_id);
+		blk_finish_plug(&plugs[plug_id]);
+//		trace_printk("blk finish %d\n",plug_id);
+	}
+		
+//	blk_finish_plug(&plug);
+	
+
 /*
 	i=0;
+	cnt=0;
+	last_page=0;
+	wait_page=0;
 	while(i<=max_idx_l){
 		cnt=0;
 	
+		printk(KERN_ERR"blk start\n");
 		blk_start_plug(&plug);
 		while(1){
 			if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
@@ -945,32 +968,42 @@ static void prefetch_work(struct work_struct *work)
 				tgid = swap_trace_table_l[i].tgid;
 				va = swap_trace_table_l[i].va;
 				last_page=prefetch_target_page(id,tgid,va);
-				if(last_page)
+				if(last_page){
+					wait_page=last_page;
 					cnt++;
+				}
 				i++;
 			}
 			if(i>max_idx_l || cnt == 32)
 				break;
 		}
-		blk_finish_plug(&plug);
-
-		if(trylock_page(last_page))
-			unlock_page(last_page);
-		else{
-			wait_on_page_locked(last_page);
-			trace_printk("wake up i = %d\n",i);
+		
+		if(wait_page){
+			printk(KERN_ERR"blk finish\n");
+			blk_finish_plug(&plug);
+	
+			if(trylock_page(wait_page))
+				unlock_page(wait_page);
+			else{
+				wait_on_page_locked(wait_page);
+				trace_printk("wake up i = %d\n",i);
+				printk(KERN_ERR"wake up i = %d\n",i);
+				wait_page=0;
+			}
 		}
-
 	}
+
 
 */
 
 
 
 /*
-
+	i=0;
 	cnt=0;
 	last_page=0;
+	wait_page=0;
+	plug_id=0;
 	blk_start_plug(&plug);
 
 	for( i = 0 ; i <= max_idx_l ; i++ ){
@@ -1558,7 +1591,9 @@ int update_to_nbd_flag(unsigned int id){
 		after_idx_l = atomic_read(&past[id]->after_index0);
 	}
 
-	target_percentage = launchtime_before * 18 * 100 / (18 * launchtime_before + max_idx_l);
+	target_percentage = launchtime_before * 16 * 100 / (16 * launchtime_before + max_idx_l);
+	
+//	target_percentage=60;
 	
 	percentage = 100 - target_percentage;
 

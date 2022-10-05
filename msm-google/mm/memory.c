@@ -3305,6 +3305,8 @@ int do_swap_page(struct vm_fault *vmf)
 
 #endif
 
+
+
 //	printk(KERN_ERR "4!!\n");
 
 	inc_mm_counter_fast(vma->vm_mm, MM_ANONPAGES);
