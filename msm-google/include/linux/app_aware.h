@@ -112,13 +112,30 @@ extern bool zram_full;
 extern struct perapp_cluster pac[2*__NR_APPIDS+1];
 extern struct per_app_swap_trace *past[__NR_APPIDS];
 
+
+
+//for debugging
 extern atomic_t sent_cold_page;
 extern atomic_t sent_sys_cold_page;
 extern atomic_t faulted_cold_page;
 extern atomic_t faulted_sys_cold_page;
-
 extern atomic_t excepted_page;
 extern atomic_t nbd_direct_page;
+
+//for debugging (every launch)
+extern atomic_t switch_app_cold_page;
+extern atomic_t after_app_cold_page;
+extern atomic_t switch_sys_cold_page;
+extern atomic_t after_sys_cold_page;
+extern atomic_t switch_prefetch_hit;
+extern atomic_t switch_prefetch_fault;
+extern atomic_t after_prefetch_hit;
+extern atomic_t after_prefetch_fault;
+extern atomic_t prefetch_miss;
+extern atomic_t unprefetched_prefetch_miss;
+extern atomic_t direct_fault;
+extern atomic_t switch_exception_fault;
+extern atomic_t after_exception_fault;
 
 
 extern int swapcache_flush;

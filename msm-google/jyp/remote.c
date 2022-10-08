@@ -73,12 +73,31 @@ int prefetch_batch_size;
 
 int backgrounded_uid;
 int nbd_client_pid;
+
+//for debugging
 atomic_t sent_cold_page;
 atomic_t sent_sys_cold_page;
 atomic_t faulted_cold_page;
 atomic_t faulted_sys_cold_page;
 atomic_t excepted_page;
 atomic_t nbd_direct_page;
+
+
+//for debugging (at every launch)
+atomic_t switch_app_cold_page;
+atomic_t after_app_cold_page;
+atomic_t switch_sys_cold_page;
+atomic_t after_sys_cold_page;
+atomic_t switch_prefetch_hit;
+atomic_t switch_prefetch_fault;
+atomic_t after_prefetch_hit;
+atomic_t after_prefetch_fault;
+atomic_t prefetch_miss;
+atomic_t unprefetched_prefetch_miss;
+atomic_t direct_fault;
+atomic_t switch_exception_fault;
+atomic_t after_exception_fault;
+
 
 int prefetch_on;
 int launchtime_before;
@@ -417,7 +436,7 @@ static void cold_page_sender_work(struct work_struct *work)
 							goto unlock;
 						}
 						
-						trace_printk("cold page uid %d tgid %d \"%s\" %lx offset %llx\n",task->cred->uid.val,task->tgid,task->comm,vpage,swp_offset(new_entry));	
+						//trace_printk("cold page uid %d tgid %d \"%s\" %lx offset %llx\n",task->cred->uid.val,task->tgid,task->comm,vpage,swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -604,7 +623,7 @@ static void sys_cold_page_sender_work(struct work_struct *work)
 						}
 						
 						
-						trace_printk("sys cold page uid %d tgid %d \"%s\" %lx offset %llx\n",task->cred->uid.val, task->tgid, task->comm, vpage, swp_offset(new_entry));	
+						//trace_printk("sys cold page uid %d tgid %d \"%s\" %lx offset %llx\n",task->cred->uid.val, task->tgid, task->comm, vpage, swp_offset(new_entry));	
 						set_pte(orig_pte, new_pte);
 						swap_free(entry);
 						cnt++;
@@ -823,7 +842,7 @@ static struct page *prefetch_target_page(int id, pid_t tgid, unsigned long va){
 								swap_readpage(page, false);
 								SetPageReadahead(page);
 	
-								trace_printk("prefetch done id %d: %d %lx %lx\n", id, tgid, va, swp_offset(entry) );
+								//trace_printk("prefetch done id %d: %d %lx %lx\n", id, tgid, va, swp_offset(entry) );
 							}
 							else
 								trace_printk("page not allocated\n");
@@ -846,7 +865,7 @@ static struct page *prefetch_target_page(int id, pid_t tgid, unsigned long va){
 	return page;
 }
 
-struct blk_plug plugs[500];
+struct blk_plug plugs[150];
 
 static void prefetch_work(struct work_struct *work)
 {
@@ -862,7 +881,7 @@ static void prefetch_work(struct work_struct *work)
 	unsigned long va;
 //	struct blk_plug plug;
 	int plug_id=0;
-	struct blk_plug plug_after;
+//	struct blk_plug plug_after;
 	int i;
 	int cnt=0;
 	unsigned int id;
@@ -901,7 +920,7 @@ static void prefetch_work(struct work_struct *work)
 	
 	blk_start_plug(&plugs[plug_id]);
 //	printk(KERN_ERR"blk start %d\n",plug_id);
-	trace_printk("blk start %d\n",plug_id);
+	//trace_printk("blk start %d\n",plug_id);
 	for( i = 0 ; i <= max_idx_l ; i++ ){
 		
 		
@@ -927,15 +946,15 @@ static void prefetch_work(struct work_struct *work)
 			//printk(KERN_ERR"refcount %d",wait_page->_refcount);
 				
 			get_page(wait_page);
-			trace_printk("wait start %d\n",plug_id);
+			//trace_printk("wait start %d\n",plug_id);
 			wait_on_page_locked(wait_page);
-			trace_printk("wait finished %d\n",plug_id);
+			//trace_printk("wait finished %d\n",plug_id);
 			put_page(wait_page);
 			
 			if(cnt==prefetch_batch_size){
 				plug_id++;
 	//			printk(KERN_ERR"blk start %d\n",plug_id);
-				trace_printk("blk start %d\n",plug_id);
+			//	trace_printk("blk start %d\n",plug_id);
 				cnt=0;
 				blk_start_plug(&plugs[plug_id]);
 				wait_page=0;
@@ -948,54 +967,63 @@ static void prefetch_work(struct work_struct *work)
 		blk_finish_plug(&plugs[plug_id]);
 //		trace_printk("blk finish %d\n",plug_id);
 	}
-		
-//	blk_finish_plug(&plug);
-	
 
-/*
-	i=0;
+
+//after
+
+
 	cnt=0;
 	last_page=0;
 	wait_page=0;
-	while(i<=max_idx_l){
-		cnt=0;
 	
-		printk(KERN_ERR"blk start\n");
-		blk_start_plug(&plug);
-		while(1){
-			if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
-				trace_printk("prefetch table %d %d\n",target_table, i);
-				tgid = swap_trace_table_l[i].tgid;
-				va = swap_trace_table_l[i].va;
-				last_page=prefetch_target_page(id,tgid,va);
-				if(last_page){
-					wait_page=last_page;
-					cnt++;
-				}
-				i++;
+	
+	blk_start_plug(&plugs[plug_id]);
+	//trace_printk("blk start %d\n",plug_id);
+	for( i = max_idx_l + 1 ; i <= after_idx_l ; i++ ){
+		
+		
+		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
+			tgid = swap_trace_table_l[i].tgid;
+			va = swap_trace_table_l[i].va;
+			last_page=prefetch_target_page(id,tgid,va);
+			if(last_page){
+				wait_page=last_page;
+				cnt++;
 			}
-			if(i>max_idx_l || cnt == 32)
-				break;
 		}
 		
-		if(wait_page){
-			printk(KERN_ERR"blk finish\n");
-			blk_finish_plug(&plug);
+		if(( cnt == prefetch_batch_size || i == after_idx_l ) && wait_page){
 	
-			if(trylock_page(wait_page))
-				unlock_page(wait_page);
-			else{
-				wait_on_page_locked(wait_page);
-				trace_printk("wake up i = %d\n",i);
-				printk(KERN_ERR"wake up i = %d\n",i);
+			blk_finish_plug(&plugs[plug_id]);
+			
+			get_page(wait_page);
+			//trace_printk("wait start %d\n",plug_id);
+			wait_on_page_locked(wait_page);
+			//trace_printk("wait finished %d\n",plug_id);
+			put_page(wait_page);
+			
+			if(cnt==prefetch_batch_size){
+				plug_id++;
+				//trace_printk("blk start %d\n",plug_id);
+				cnt=0;
+				blk_start_plug(&plugs[plug_id]);
 				wait_page=0;
 			}
 		}
 	}
+	if(after_idx_l<=max_idx_l || wait_page==0){
+			
+		blk_finish_plug(&plugs[plug_id]);
+	}
 
 
-*/
 
+
+
+
+
+//	blk_finish_plug(&plug);
+	
 
 
 /*
@@ -1018,7 +1046,7 @@ static void prefetch_work(struct work_struct *work)
 */
 
 	//printk(KERN_ERR "4!!\n");
-
+/*
 	blk_start_plug(&plug_after);
 	for( i = max_idx_l + 1; i <= after_idx_l; i++ ){
 		if(swap_trace_table_l[i].to_nbd && swap_trace_table_l[i].swapped){
@@ -1029,10 +1057,31 @@ static void prefetch_work(struct work_struct *work)
 	}
 
 	blk_finish_plug(&plug_after);
+*/
+	
 	lru_add_drain();
 
 	kfree(tew);
 }
+
+void print_debug_vars(int id){
+
+	trace_printk("switch app cold fault id %d: %d\n", id, atomic_read(&switch_app_cold_page));
+	trace_printk("after app cold fault id %d: %d\n", id, atomic_read(&after_app_cold_page));
+	trace_printk("switch sys cold fault id %d: %d\n", id, atomic_read(&switch_sys_cold_page));
+	trace_printk("after sys cold fault id %d: %d\n", id, atomic_read(&after_sys_cold_page));
+	trace_printk("switch prefetch hit id %d: %d\n", id, atomic_read(&switch_prefetch_hit));
+	trace_printk("switch prefetch fault id %d: %d\n", id, atomic_read(&switch_prefetch_fault));
+	trace_printk("after prefetch hit id %d: %d\n", id, atomic_read(&after_prefetch_hit));
+	trace_printk("after prefetch fault id %d: %d\n", id, atomic_read(&after_prefetch_fault));
+	trace_printk("prefetch miss id %d: %d\n", id, atomic_read(&prefetch_miss));
+	trace_printk("unprefetched prefetch miss id %d: %d\n", id, atomic_read(&unprefetched_prefetch_miss));
+	trace_printk("direct fault id %d: %d\n", id, atomic_read(&direct_fault));
+	trace_printk("switch Exception fault id %d: %d\n", id, atomic_read(&switch_exception_fault));
+	trace_printk("after Exception fault id %d: %d\n", id, atomic_read(&after_exception_fault));
+
+}
+
 
 static void miss_page_work(struct work_struct *work)
 {
@@ -1084,6 +1133,8 @@ static void miss_page_work(struct work_struct *work)
 
 //	blk_finish_plug(&plug);
 	lru_add_drain();
+
+	print_debug_vars(id);
 
 	miss_handling = 0;
 	kfree(tew);
@@ -1488,6 +1539,25 @@ static inline long myclock()
 
 }
 
+void init_debug_vars(void){
+
+	atomic_set(&switch_app_cold_page, 0);
+	atomic_set(&after_app_cold_page, 0);
+	atomic_set(&switch_sys_cold_page, 0);
+	atomic_set(&after_sys_cold_page, 0);
+	atomic_set(&switch_prefetch_hit, 0);
+	atomic_set(&switch_prefetch_fault, 0);
+	atomic_set(&after_prefetch_hit, 0);
+	atomic_set(&after_prefetch_fault, 0);
+	atomic_set(&prefetch_miss, 0);
+	atomic_set(&unprefetched_prefetch_miss, 0);
+	atomic_set(&direct_fault, 0);
+	atomic_set(&switch_exception_fault, 0);
+	atomic_set(&after_exception_fault, 0);
+
+}
+
+
 int app_switch_start_handler(struct ctl_table *table, int write,
 			   void __user *buffer, size_t *length, loff_t *ppos)
 {
@@ -1505,6 +1575,8 @@ int app_switch_start_handler(struct ctl_table *table, int write,
 		trace_printk("###########switch start! foreground %d#############\n",foreground_uid);
 
 		st = myclock();
+
+		init_debug_vars();
 
 		if(!foreground_uid)
 			return 0;
@@ -1593,7 +1665,7 @@ int update_to_nbd_flag(unsigned int id){
 
 	target_percentage = launchtime_before * 18 * 100 / (18 * launchtime_before + max_idx_l);
 	
-//	target_percentage=60;
+//	target_percentage=40;
 	
 	percentage = 100 - target_percentage;
 
@@ -2140,7 +2212,7 @@ static int send_target_manager(void *arg)
 	
 
 		
-	trace_printk(KERN_ERR "[REMOTE %s] target manager started\n", __func__);
+	//trace_printk(KERN_ERR "[REMOTE %s] target manager started\n", __func__);
 	while (!kthread_should_stop()) {
 		
 		
@@ -2160,7 +2232,7 @@ static int send_target_manager(void *arg)
 				}
 		
 				target_table = past[id]->which_table;
-				trace_printk("send target manager - id, which_table : %d, %d\n",id,past[id]->which_table);
+				//trace_printk("send target manager - id, which_table : %d, %d\n",id,past[id]->which_table);
 				spin_unlock_irqrestore(&which_table_lock,flags2);
 	
 			}
@@ -2199,7 +2271,7 @@ static int send_target_manager(void *arg)
 			for( i = 0 ; i < after_idx_l +1 ; i++ ){
 				if(switch_start || stop_background_io){
 					target_flag = 0;
-					trace_printk(KERN_ERR "[REMOTE %s] switch started during sent\n", __func__);
+					//trace_printk(KERN_ERR "[REMOTE %s] switch started during sent\n", __func__);
 					goto sleep;
 				}
 				if(swap_trace_table_l[i].to_nbd && !swap_trace_table_l[i].swapped){
@@ -2222,7 +2294,7 @@ static int send_target_manager(void *arg)
 sleep:
 		if(target_flag==0) /*Nothing to be sent*/
 		{
-			trace_printk(KERN_ERR "[REMOTE %s] target manager slept\n", __func__);
+			//trace_printk(KERN_ERR "[REMOTE %s] target manager slept\n", __func__);
 			spin_lock_irqsave(&stm_wait_cond_lock,flags);
 			stm_wait_cond = FALSE;
 			spin_unlock_irqrestore(&stm_wait_cond_lock,flags);
@@ -2235,7 +2307,7 @@ sleep:
 			wait_event_freezable(send_target_manager_wait,
 				target_manager_should_run() || kthread_should_stop());
 		
-			trace_printk(KERN_ERR "[REMOTE %s] target manager wake up\n", __func__);
+			//trace_printk(KERN_ERR "[REMOTE %s] target manager wake up\n", __func__);
 		
 		}
 		
@@ -2281,7 +2353,7 @@ static int sys_cold_manager(void *arg)
 			schedule_timeout_interruptible(SYSTEMWIDE_COLD_PERIOD);
 		
 		
-		trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager wake up\n", __func__);
+		//trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager wake up\n", __func__);
 
 		rcu_read_lock();
 		for_each_process(p){
@@ -2302,7 +2374,7 @@ static int sys_cold_manager(void *arg)
 
 				
 				thresh = ZRAM_PAGES*0.5;
-				trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager tgid %d, %d < %d?\n", __func__, p->tgid,zram_remain(),thresh);
+				//trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager tgid %d, %d < %d?\n", __func__, p->tgid,zram_remain(),thresh);
 
 				//if(zram_full)
 				if(zram_remain() < thresh){
@@ -2314,7 +2386,7 @@ static int sys_cold_manager(void *arg)
 		rcu_read_unlock();
 		zram_full=0;
 			
-		trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager slept\n", __func__);
+		//trace_printk(KERN_ERR "[REMOTE %s] sys_cold_manager slept\n", __func__);
 	//	schedule_timeout_interruptible(SYSTEMWIDE_COLD_PERIOD);
 	}
 

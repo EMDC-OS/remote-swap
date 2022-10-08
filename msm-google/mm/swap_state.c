@@ -484,13 +484,18 @@ struct page *lookup_swap_cache(swp_entry_t entry, struct vm_area_struct *vma,
 
 #ifdef CONFIG_APP_AWARE
 			if (swp_type(entry) == NBD_TYPE && foreground_uid){
-				if(switch_start)
-					trace_printk("prefetch hit id %d: %d \"%s\" %lx %lx\n",get_id_from_uid(foreground_uid),current->tgid,current->comm,addr,swp_offset(entry));
-				else if(switch_after)
-					trace_printk("after prefetch hit id %d: %d \"%s\" %lx %lx\n",get_id_from_uid(foreground_uid),current->tgid,current->comm,addr,swp_offset(entry));
+				if(switch_start){
+					atomic_inc(&switch_prefetch_hit);
+					//trace_printk("prefetch hit id %d: %d \"%s\" %lx %lx\n",get_id_from_uid(foreground_uid),current->tgid,current->comm,addr,swp_offset(entry));
+				}
+				else if(switch_after){
+					atomic_inc(&after_prefetch_hit);
+					//trace_printk("after prefetch hit id %d: %d \"%s\" %lx %lx\n",get_id_from_uid(foreground_uid),current->tgid,current->comm,addr,swp_offset(entry));
+				}
 				else
 				{
-					trace_printk("prefetch miss id %d: %d \"%s\" %lx %lx\n",get_id_from_uid(foreground_uid),current->tgid,current->comm,addr,swp_offset(entry));
+					atomic_inc(&prefetch_miss);
+					//trace_printk("prefetch miss id %d: %d \"%s\" %lx %lx\n",get_id_from_uid(foreground_uid),current->tgid,current->comm,addr,swp_offset(entry));
 
 
 				}
@@ -614,10 +619,10 @@ struct page *read_swap_cache_async(swp_entry_t entry, gfp_t gfp_mask,
 
 	if (page_was_allocated){
 		swap_readpage(retpage, do_poll);
-#ifdef CONFIG_APP_AWARE
+/*#ifdef CONFIG_APP_AWARE
 		if (swp_type(entry) == NBD_TYPE)
 			trace_printk("remote readpage %d \"%s\" %lx %lx\n",current->tgid,current->comm,addr,swp_offset(entry));
-#endif
+#endif*/
 	
 	}
 
