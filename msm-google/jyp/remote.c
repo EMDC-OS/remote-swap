@@ -1665,7 +1665,7 @@ int update_to_nbd_flag(unsigned int id){
 
 	target_percentage = launchtime_before * 18 * 100 / (18 * launchtime_before + max_idx_l);
 	
-//	target_percentage=40;
+	//target_percentage=40;
 	
 	percentage = 100 - target_percentage;
 

@@ -2945,7 +2945,7 @@ int do_swap_page(struct vm_fault *vmf)
 
 
 #ifdef CONFIG_APP_AWARE
-	//unsigned long long st, et;
+//	unsigned long long st, et;
 	int idx;
 	int id = -1;
 	atomic_t *st_idx_ptr;
@@ -3151,11 +3151,11 @@ int do_swap_page(struct vm_fault *vmf)
 
 			}
 			else{
-				if(switch_start && id!=-1){
+				if(switch_start && id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) != id){
 					atomic_inc(&switch_exception_fault);
 					//trace_printk("switch id %d Exception original id %d: %d \"%s\" %lx %lx\n",id,pte_to_swp_appid_nbd(vmf->orig_pte),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				}
-				else if(switch_after && id!=-1){
+				else if(switch_after && id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) != id){
 					atomic_inc(&after_exception_fault);
 					//trace_printk("after id %d Exception original id %d: %d \"%s\" %lx %lx\n",id,pte_to_swp_appid_nbd(vmf->orig_pte),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				}
@@ -3199,15 +3199,18 @@ int do_swap_page(struct vm_fault *vmf)
 
 		
 //	st = ktime_get_real_ns();
-//	trace_printk("lock wait time before %lld ns : %d \"%s\" %lx %lx\n",st,current->tgid,current->comm,vmf->address,swp_offset(entry));
 
 
 	locked = lock_page_or_retry(page, vma->vm_mm, vmf->flags);
 	
 	
 //	et = ktime_get_real_ns();
-//	trace_printk("lock wait time after %lld ns : %d \"%s\" %lx %lx\n",et,current->tgid,current->comm,vmf->address,swp_offset(entry));
-
+			
+//	if (swp_type(entry) == NBD_TYPE){
+	
+//		trace_printk("lock wait time %lld ns : %d \"%s\" %lx %lx\n",et-st,current->tgid,current->comm,vmf->address,swp_offset(entry));
+		
+//	}
 
 	delayacct_clear_flag(DELAYACCT_PF_SWAPIN);
 	if (!locked) {
