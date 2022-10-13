@@ -548,6 +548,13 @@ static struct ctl_table kern_table[] = {
 		.mode			= 0644,
 		.proc_handler	= proc_dointvec,
 	},
+	{
+		.procname		= "prefetch_percentage",
+		.data			= &prefetch_percentage,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= proc_dointvec,
+	},
 #endif
 #if defined(CONFIG_PREEMPT_TRACER) || defined(CONFIG_DEBUG_PREEMPT)
 	{

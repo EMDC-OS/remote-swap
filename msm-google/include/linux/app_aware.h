@@ -53,14 +53,14 @@ enum appids {
 	CH_ID,
 	IV_ID,
 	CN_ID,
-	SP_ID,
-	MX_ID,
-	KT_ID,
-	PG_ID,
-	DB_ID,
-	TWCH_ID,
-	WV_ID,
-	GL_ID,
+//	SP_ID,
+//	MX_ID,
+//	KT_ID,
+//	PG_ID,
+//	DB_ID,
+//	TWCH_ID,
+//	WV_ID,
+//	GL_ID,
 /************/
 	COLD_ID, // == __NR_APPIDS
 	DIRECT_ID,
@@ -211,6 +211,7 @@ extern int swapin_vma_tracking;
 extern int swapin_anon_tracking;
 extern int sys_cold_handler_off;
 extern int stop_background_io;
+extern int prefetch_percentage;
 
 
 /***FOR CloudSwap***/

@@ -70,6 +70,7 @@ struct per_app_swap_trace *past[__NR_APPIDS]; //__NR_APPIDS
 int cold_page_threshold;
 int stop_background_io;
 int prefetch_batch_size;
+int prefetch_percentage;
 
 int backgrounded_uid;
 int nbd_client_pid;
@@ -106,7 +107,6 @@ int sys_cold_handler_off;
 struct task_struct *preempted_cold_task;
 
 struct perapp_cluster pac[2*__NR_APPIDS+1]; // 2 * __NR_APPIDS + 1
-
 struct task_struct *send_target_manager_thread;
 struct task_struct *send_target_alarm_thread;
 struct task_struct *sys_cold_counter_thread;
@@ -134,14 +134,14 @@ unsigned int get_id_from_uid(int uid){
 		case CH_UID: return CH_ID;
 		case IV_UID: return IV_ID;
 		case CN_UID: return CN_ID;
-		case SP_UID: return SP_ID;
-		case MX_UID: return MX_ID;
-		case KT_UID: return KT_ID;
-		case PG_UID: return PG_ID;
-		case DB_UID: return DB_ID;
-		case TWCH_UID: return TWCH_ID;
-		case WV_UID: return WV_ID;
-		case GL_UID: return GL_ID;
+//		case SP_UID: return SP_ID;
+//		case MX_UID: return MX_ID;
+//		case KT_UID: return KT_ID;
+//		case PG_UID: return PG_ID;
+//		case DB_UID: return DB_ID;
+//		case TWCH_UID: return TWCH_ID;
+//		case WV_UID: return WV_ID;
+//		case GL_UID: return GL_ID;
 		case -1: return COLD_ID;
 		default:
 			panic("[REMOTE %s] unregistered UID %d\n", __func__,uid);
@@ -164,14 +164,14 @@ bool is_system_uid(int uid){
 		case CH_UID: return 0;
 		case IV_UID: return 0;
 		case CN_UID: return 0;
-		case SP_UID: return 0;
-		case MX_UID: return 0;
-		case KT_UID: return 0;
-		case PG_UID: return 0;
-		case DB_UID: return 0;
-		case TWCH_UID: return 0;
-		case WV_UID: return 0;
-		case GL_UID: return 0;
+//		case SP_UID: return 0;
+//		case MX_UID: return 0;
+//		case KT_UID: return 0;
+//		case PG_UID: return 0;
+//		case DB_UID: return 0;
+//		case TWCH_UID: return 0;
+//		case WV_UID: return 0;
+//		case GL_UID: return 0;
 		default:
 			return 1;
 	}
@@ -1659,13 +1659,14 @@ int update_to_nbd_flag(unsigned int id){
 		swap_trace_table_e = past[id]->swap_trace_table1;
 		max_idx_l = atomic_read(&past[id]->st_index0);
 		swap_trace_table_l = past[id]->swap_trace_table0;
-		after_idx_e = atomic_read(&past[id]->after_index1);	
+		after_idx_e = atomic_read(&past[id]->after_index1);
 		after_idx_l = atomic_read(&past[id]->after_index0);
 	}
 
 	target_percentage = launchtime_before * 18 * 100 / (18 * launchtime_before + max_idx_l);
-	
-	//target_percentage=40;
+
+	if(prefetch_percentage)
+		target_percentage=prefetch_percentage;
 	
 	percentage = 100 - target_percentage;
 
@@ -1676,7 +1677,7 @@ int update_to_nbd_flag(unsigned int id){
 
 
 	while(idx_l <= max_idx_l){
-		idx_e = 0;
+		idx_e = max_idx_e * percentage/100;
 		while(idx_e <= max_idx_e){
 			if( swap_trace_table_e[idx_e].va == swap_trace_table_l[idx_l].va &&
 				swap_trace_table_e[idx_e].tgid == swap_trace_table_l[idx_l].tgid){
@@ -1754,13 +1755,16 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 
 
 		
-		if(foreground_uid)
+
+
+		if(foreground_uid) 
+		{
 			id = get_id_from_uid(foreground_uid);
-
-
-		if(foreground_uid && (atomic_read(&past[id]->st_index0)!=-1 || atomic_read(&past[id]->st_index1)!=-1)){
-			update_to_nbd_flag(id); //<--app_number or uid
-			past[id]->st_should_check = 1 ; // --> per app, and keep in list
+			if(atomic_read(&past[id]->st_index0)!=-1 || atomic_read(&past[id]->st_index1)!=-1)
+			{
+				update_to_nbd_flag(id); //<--app_number or uid
+				past[id]->st_should_check = 1 ; // --> per app, and keep in list
+			}
 		}
 
 		/*
@@ -1789,6 +1793,7 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 		}
 
 		if(foreground_uid){
+			id = get_id_from_uid(foreground_uid);
 			miss_handling = 1;
 			miss_page_handler(id,!past[id]->which_table); //--> forcing pagefault and ((madvise))
 		}
@@ -1880,15 +1885,16 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 		 * Update to_nbd flag of st
 		 */
 
-		if(foreground_uid)
+		if(foreground_uid) 
+		{
 			id = get_id_from_uid(foreground_uid);
-
-
-		if(foreground_uid && (atomic_read(&past[id]->st_index0)!=-1 || atomic_read(&past[id]->st_index1)!=-1)){
-			
-			update_to_nbd_flag(id); //<--app_number or uid
-			past[id]->st_should_check = 1 ; // --> per app, and keep in list
+			if(atomic_read(&past[id]->st_index0)!=-1 || atomic_read(&past[id]->st_index1)!=-1)
+			{
+				update_to_nbd_flag(id); //<--app_number or uid
+				past[id]->st_should_check = 1 ; // --> per app, and keep in list
+			}
 		}
+
 
 		/*
 		 * Cold page handling
@@ -1935,9 +1941,12 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 		}
 
 		if(foreground_uid){
+			id = get_id_from_uid(foreground_uid);
 			miss_handling = 1;
 			miss_page_handler(id,!past[id]->which_table); //--> forcing pagefault and ((madvise))
 		}
+
+
 		wake_up_send_target_manager();
 
 		backgrounded_uid = foreground_uid;
@@ -2545,6 +2554,8 @@ static int __init remote_swap_init(void)
 		past[i]=(struct per_app_swap_trace *)vmalloc(sizeof(struct per_app_swap_trace));
 		init_past(past[i]);
 	}
+
+	prefetch_percentage = 0;
 
 	preempted_cold_task = NULL;
 
