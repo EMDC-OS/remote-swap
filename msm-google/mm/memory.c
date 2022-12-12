@@ -2945,13 +2945,15 @@ int do_swap_page(struct vm_fault *vmf)
 
 
 #ifdef CONFIG_APP_AWARE
-//	unsigned long long st, et;
+	unsigned long long st=0, et=0;
 	int idx;
 	int id = -1;
 	atomic_t *st_idx_ptr;
 	struct swap_trace_entry *swap_trace_table;
 	bool excepted = 0;
-	if((switch_start || miss_handling || switch_after) && foreground_uid)
+//	if((switch_start || miss_handling || switch_after) && foreground_uid)
+//		id = get_id_from_uid(foreground_uid);
+	if(foreground_uid)
 		id = get_id_from_uid(foreground_uid);
 
 		
@@ -2984,7 +2986,7 @@ int do_swap_page(struct vm_fault *vmf)
 */
 
 		
-//	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx\n",current->tgid,current->pid,current->comm,vmf->address);
+//	trace_printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx %lx\n",current->tgid,current->pid,current->comm,vmf->address,swp_offset(entry));
 
 	if (vma_readahead)
 		page = swap_readahead_detect(vmf, &swap_ra);
@@ -3023,7 +3025,7 @@ int do_swap_page(struct vm_fault *vmf)
 	if (!page)
 		page = lookup_swap_cache(entry, vma_readahead ? vma : NULL,
 					 vmf->address);
-/*	#ifdef CONFIG_APP_AWARE
+	#ifdef CONFIG_APP_AWARE
 	if(swapin_vma_tracking!=0){
 			if (!non_swap_entry(entry)) 
 				trace_printk("swapin tgid %d %d \"%s\" %lx %lx %d %d\n",current->tgid,current->pid,current->comm,vmf->address,swp_offset(entry),!!page,swp_swapcount(entry));
@@ -3031,7 +3033,7 @@ int do_swap_page(struct vm_fault *vmf)
 	// tgid pid name va offset has_swapcache? count
 
 #endif
-*/	
+	
 
 //	printk(KERN_CRIT"swapin tgid %d pid %d name \"%s\" va %lx 2\n",current->tgid,current->pid,current->comm,vmf->address);
 	
@@ -3092,14 +3094,23 @@ int do_swap_page(struct vm_fault *vmf)
 
 				if(switch_start && id!=-1){
 					atomic_inc(&switch_app_cold_page);
+
+					trace_printk("%d switch app cold offset %lx %d\n",current->cred->uid.val,swp_offset(entry),id);
 				//	trace_printk("switch cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				}
 				else if(switch_after && id!=-1){
 					atomic_inc(&after_app_cold_page);
+					trace_printk("%d after app cold offset %lx %d\n",current->cred->uid.val,swp_offset(entry),id);
 				//	trace_printk("after cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				}
-			//	else
+				else if(id!=-1)
+				{
+					trace_printk("%d playing app cold offset %lx %d\n",current->cred->uid.val,swp_offset(entry),id);
+
 			//		trace_printk("cold fault not on switching count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
+			
+					
+				}
 			//	trace_printk("cold fault count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry), current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
 			else if(pte_to_swp_appid_nbd(vmf->orig_pte)==SYS_COLD_ID) { //cold
@@ -3113,15 +3124,20 @@ int do_swap_page(struct vm_fault *vmf)
 
 				if(switch_start && id!=-1){
 					atomic_inc(&switch_sys_cold_page);
+					trace_printk("%d switch sys cold offset %lx %d\n",current->cred->uid.val,swp_offset(entry),id);
 				//	trace_printk("switch sys cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				}
 				else if(switch_after && id!=-1){
 					atomic_inc(&after_sys_cold_page);
+					trace_printk("%d after sys cold offset %lx %d\n",current->cred->uid.val,swp_offset(entry),id);
 				//	trace_printk("after sys cold fault id %d count %d: %d \"%s\" %lx %lx\n",id,__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				}
-		//		else
-		//			trace_printk("sys cold fault not on switching count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
+				else if(id!=-1)
+				{
+					trace_printk("%d playing sys cold offset %lx %d\n",current->cred->uid.val,swp_offset(entry),id);
+//					trace_printk("sys cold fault not on switching count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry),current->tgid,current->comm,vmf->address,swp_offset(entry));
 
+				}
 				
 				//	trace_printk("sys cold fault count %d: %d \"%s\" %lx %lx\n",__swp_swapcount(entry), current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
@@ -3138,10 +3154,12 @@ int do_swap_page(struct vm_fault *vmf)
 			}
 			else if(switch_start && id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
 				atomic_inc(&switch_prefetch_fault);
+				trace_printk("%d switch fault offset %lx %d\n",current->cred->uid.val,swp_offset(entry), id);
 				//	trace_printk("prefetch fault id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
 			else if(switch_after && id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) == id){  // fault page: switch start, and sent page get fault
 				atomic_inc(&after_prefetch_fault);
+				trace_printk("%d after fault offset %lx %d\n",current->cred->uid.val,swp_offset(entry), id);
 				//	trace_printk("after prefetch fault id %d: %d \"%s\" %lx %lx\n",id,current->tgid,current->comm,vmf->address,swp_offset(entry));
 			}
 			else if(miss_handling && id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) == id){
@@ -3153,13 +3171,18 @@ int do_swap_page(struct vm_fault *vmf)
 			else{
 				if(switch_start && id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) != id){
 					atomic_inc(&switch_exception_fault);
+					trace_printk("%d switch exception offset %lx %d\n",current->cred->uid.val,swp_offset(entry), id);
 					//trace_printk("switch id %d Exception original id %d: %d \"%s\" %lx %lx\n",id,pte_to_swp_appid_nbd(vmf->orig_pte),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				}
 				else if(switch_after && id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) != id){
 					atomic_inc(&after_exception_fault);
+					trace_printk("%d after exception offset %lx %d\n",current->cred->uid.val,swp_offset(entry), id);
 					//trace_printk("after id %d Exception original id %d: %d \"%s\" %lx %lx\n",id,pte_to_swp_appid_nbd(vmf->orig_pte),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				}
-				//else
+				else if(id!=-1 && pte_to_swp_appid_nbd(vmf->orig_pte) != id){
+					trace_printk("%d playing exception offset %lx %d\n",current->cred->uid.val,swp_offset(entry), id);
+
+				}
 				//	trace_printk("playing Exception original id %d: %d \"%s\" %lx %lx\n",pte_to_swp_appid_nbd(vmf->orig_pte),current->tgid,current->comm,vmf->address,swp_offset(entry));
 				
 				atomic_inc(&excepted_page);
@@ -3198,19 +3221,19 @@ int do_swap_page(struct vm_fault *vmf)
 	swapcache = page;
 
 		
-//	st = ktime_get_real_ns();
+	st = ktime_get_real_ns();
 
 
 	locked = lock_page_or_retry(page, vma->vm_mm, vmf->flags);
 	
 	
-//	et = ktime_get_real_ns();
+	et = ktime_get_real_ns();
 			
-//	if (swp_type(entry) == NBD_TYPE){
+	if (swp_type(entry) == NBD_TYPE){
 	
-//		trace_printk("lock wait time %lld ns : %d \"%s\" %lx %lx\n",et-st,current->tgid,current->comm,vmf->address,swp_offset(entry));
+		trace_printk("lock wait time %lld ns : %d \"%s\" %lx %lx\n",et-st,current->tgid,current->comm,vmf->address,swp_offset(entry));
 		
-//	}
+	}
 
 	delayacct_clear_flag(DELAYACCT_PF_SWAPIN);
 	if (!locked) {
@@ -3312,7 +3335,7 @@ int do_swap_page(struct vm_fault *vmf)
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
-	//	trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
+		//trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
 		}
 		else
 			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);

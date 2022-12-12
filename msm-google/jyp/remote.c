@@ -71,6 +71,7 @@ int cold_page_threshold;
 int stop_background_io;
 int prefetch_batch_size;
 int prefetch_percentage;
+int current_app_state;
 
 int backgrounded_uid;
 int nbd_client_pid;
@@ -174,6 +175,7 @@ bool is_system_uid(int uid){
 //		case GL_UID: return 0;
 		default:
 			return 1;
+		
 	}
 }
 
@@ -1663,7 +1665,10 @@ int update_to_nbd_flag(unsigned int id){
 		after_idx_l = atomic_read(&past[id]->after_index0);
 	}
 
-	target_percentage = launchtime_before * 18 * 100 / (18 * launchtime_before + max_idx_l);
+	target_percentage = (launchtime_before * 18 * 100 / (18 * launchtime_before + max_idx_l));
+
+	if(target_percentage>100)
+		target_percentage=100;
 
 	if(prefetch_percentage)
 		target_percentage=prefetch_percentage;
@@ -1874,7 +1879,7 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 		/*
 		 * Switch finished
 		 */
-			
+
 		trace_printk("foreground %d switch after end\n",foreground_uid);
 		spin_lock_irqsave(&switch_start_lock,flags);
 		switch_after = 0;
@@ -1884,6 +1889,9 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 		/*
 		 * Update to_nbd flag of st
 		 */
+
+		if(!cloudswap_on){
+
 
 		if(foreground_uid) 
 		{
@@ -1951,6 +1959,8 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 
 		backgrounded_uid = foreground_uid;
 
+
+		}
 	}
 	return 0;
 

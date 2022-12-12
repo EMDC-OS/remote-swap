@@ -618,6 +618,7 @@ struct page *read_swap_cache_async(swp_entry_t entry, gfp_t gfp_mask,
 			vma, addr, &page_was_allocated);
 
 	if (page_was_allocated){
+	
 		swap_readpage(retpage, do_poll);
 /*#ifdef CONFIG_APP_AWARE
 		if (swp_type(entry) == NBD_TYPE)
@@ -824,9 +825,10 @@ struct page *swap_readahead_detect(struct vm_fault *vmf,
 
 	max_win = 1 << min_t(unsigned int, READ_ONCE(page_cluster),
 			     SWAP_RA_ORDER_CEILING);
-#ifdef CONFIG_NO_READAHEAD
-	max_win=1;
-#endif
+//	trace_printk("max_win %d\n",max_win);	
+//#ifdef CONFIG_NO_READAHEAD
+//	max_win=1;
+//#endif
 	if (max_win == 1) {
 		swap_ra->win = 1;
 		return NULL;

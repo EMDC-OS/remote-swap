@@ -16,28 +16,28 @@
 /******************************
  * APPLICATION UID DEFINITION *
  ******************************/
-#define MAPS_UID 10141
+#define MAPS_UID 10139
 #define YT_UID 10140
-#define IG_UID 10122
-#define TW_UID 10127
-#define CC_UID 10123
-#define AB_UID 10121
-#define FB_UID 10130
-#define CR_UID 10126
-#define MAIL_UID 10142
-#define CH_UID 10138
-#define	IV_UID 10133
-#define	CN_UID 10128
-#define	SP_UID 10129
-#define	MX_UID 10124
-#define	KT_UID 10120
-#define	PG_UID 10132
-#define	DB_UID 10131
-#define	TWCH_UID 10125
-#define	EX_UID 10134
-#define	VM_UID 10136
+#define IG_UID 10120
+#define TW_UID 10125
+#define CC_UID 10122
+#define AB_UID 10124
+#define FB_UID 10123
+#define CR_UID 10127
+#define MAIL_UID 10138
+#define CH_UID 10141
+#define	IV_UID 10129
+#define	CN_UID 10121
+#define	SP_UID 10130
+#define	MX_UID 10132
+#define	KT_UID 10119
+#define	PG_UID 10134
+#define	DB_UID 10144
+#define	TWCH_UID 10133
+#define	EX_UID 10126
+#define	VM_UID 10137
 #define	WV_UID 10109
-#define	GL_UID 10113
+#define	GL_UID 10114
 
 
 enum appids {
@@ -205,6 +205,7 @@ extern int launchtime_before;
 extern int nbd_client_pid;
 extern int cold_page_threshold;
 extern int prefetch_batch_size;
+extern int current_app_state;
 
 /***FOR TEST***/
 extern int swapin_vma_tracking;

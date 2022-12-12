@@ -718,8 +718,8 @@ extern pgd_t tramp_pg_dir[PTRS_PER_PGD];
  *	bits 8-57:	swap offset
  *	bit  58:	PTE_PROT_NONE (must be zero)
  ************************************
- *  bits 59-62: swap counter  (ZRAM)
- *	bit  63:    swap excepted (ZRAM)
+ *  bits 59-62: cold counter  (ZRAM)
+ *	bit  63:    excepted (ZRAM)
  ************************************
  *	bits 59-63: swap appid    (NBD)
  ************************************

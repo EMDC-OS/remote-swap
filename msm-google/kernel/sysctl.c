@@ -468,7 +468,7 @@ static struct ctl_table kern_table[] = {
 		.procname		= "sys_cold_handler_off",
 		.data			= &sys_cold_handler_off,
 		.maxlen			= sizeof(unsigned int),
-		.mode			= 0644,
+		.mode			= 0666,
 		.proc_handler	= proc_dointvec,
 	},
 	{
@@ -551,6 +551,13 @@ static struct ctl_table kern_table[] = {
 	{
 		.procname		= "prefetch_percentage",
 		.data			= &prefetch_percentage,
+		.maxlen			= sizeof(unsigned int),
+		.mode			= 0644,
+		.proc_handler	= proc_dointvec,
+	},
+	{
+		.procname		= "current_app_state",
+		.data			= &current_app_state,
 		.maxlen			= sizeof(unsigned int),
 		.mode			= 0644,
 		.proc_handler	= proc_dointvec,

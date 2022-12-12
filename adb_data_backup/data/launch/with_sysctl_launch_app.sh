@@ -30,57 +30,57 @@ debugfs="/sys/kernel/debug"
 
 
 if [ "${app}" = "candycrush" ]; then
-	echo 10123 > /proc/sys/kernel/foreground_uid
+	echo 10122 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "googlemaps" ]; then
-	echo 10141 > /proc/sys/kernel/foreground_uid
+	echo 10139 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "youtube" ]; then
 	echo 10140 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "instagram" ]; then
-	echo 10122 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "twitter" ]; then
-	echo 10127 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "angrybirds" ]; then
-	echo 10121 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "facebook" ]; then
-	echo 10130 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "pubg" ]; then
-	echo 10100 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "clashroyale" ]; then
-	echo 10126 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "gmail" ]; then
-	echo 10142 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "chrome" ]; then
-	echo 10138 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "investing" ]; then
-	echo 10133 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "cnn" ]; then
-	echo 10128 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "spotify" ]; then
-	echo 10129 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "mxplayer" ]; then
-	echo 10124 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "kakaotalk" ]; then
 	echo 10120 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "pokemongo" ]; then
-	echo 10132 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "dropbox" ]; then
-	echo 10131 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "twitch" ]; then
+elif [ "${app}" = "twitter" ]; then
 	echo 10125 > /proc/sys/kernel/foreground_uid
-elif [ "${app}" = "excel" ]; then
+elif [ "${app}" = "angrybirds" ]; then
+	echo 10124 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "facebook" ]; then
+	echo 10123 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "clashroyale" ]; then
+	echo 10127 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "gmail" ]; then
+	echo 10138 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "chrome" ]; then
+	echo 10141 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "investing" ]; then
+	echo 10129 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "cnn" ]; then
+	echo 10121 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "spotify" ]; then
+	echo 10130 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "mxplayer" ]; then
+	echo 10132 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "kakaotalk" ]; then
+	echo 10119 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "pokemongo" ]; then
 	echo 10134 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "dropbox" ]; then
+	echo 10144 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "twitch" ]; then
+	echo 10133 > /proc/sys/kernel/foreground_uid
+elif [ "${app}" = "excel" ]; then
+	echo 10126 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "verizon" ]; then
-	echo 10136 > /proc/sys/kernel/foreground_uid
+	echo 10137 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "webview" ]; then
 	echo 10109 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "gallery" ]; then
-	echo 10113 > /proc/sys/kernel/foreground_uid
+	echo 10114 > /proc/sys/kernel/foreground_uid
 elif [ "${app}" = "home" ]; then
 	echo 0 > /proc/sys/kernel/foreground_uid
 else
 	echo "Please enter Appname Kernel_mode Launching_state"
 	exit 100
 fi
+
+
 
 echo 1 > /proc/sys/kernel/app_switch_start
 
@@ -125,13 +125,11 @@ elif [ "${app}" = "clashroyale" ]; then
 elif [ "${app}" = "angrybirds" ]; then
 	am start -n com.rovio.baba/com.unity3d.player.UnityPlayerActivity -W > /data/launch/temp
 elif [ "${app}" = "chrome" ]; then
-	am start -n com.android.chrome/com.google.android.apps.chrome.Main -d http://www.naver.com  -W > /data/launch/temp
+	am start -n com.android.chrome/com.google.android.apps.chrome.Main -W > /data/launch/temp
 elif [ "${app}" = "facebook" ]; then
 	am start -n com.facebook.katana/.activity.FbMainTabActivity -W > /data/launch/temp
 elif [ "${app}" = "camera" ]; then
 	am start -a android.media.action.IMAGE_CAPTURE -W > /data/launch/temp
-elif [ "${app}" = "pubg" ]; then
-	am start -n com.pubg.krmobile/com.epicgames.ue4.GameActivity -W > /data/launch/temp
 elif [ "${app}" = "investing" ]; then
 	am start -n com.fusionmedia.investing/.ui.activities.SplashSplitter -W > /data/launch/temp
 elif [ "${app}" = "cnn" ]; then
