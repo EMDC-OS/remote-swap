@@ -2950,11 +2950,15 @@ int do_swap_page(struct vm_fault *vmf)
 	int id = -1;
 	atomic_t *st_idx_ptr;
 	struct swap_trace_entry *swap_trace_table;
+	struct per_app_swap_table *past;
 	bool excepted = 0;
 //	if((switch_start || miss_handling || switch_after) && foreground_uid)
 //		id = get_id_from_uid(foreground_uid);
-	if(foreground_uid)
+	if(foreground_uid){
 		id = get_id_from_uid(foreground_uid);
+		past = app_sbp[id]->past[app_sbp[id]->last_state];
+//		trace_printk("page fault app %d state %d\n",id,app_sbp[id]->last_state);
+	}
 
 		
 	if(nbd_client_pid!=0 && current->tgid == nbd_client_pid)
@@ -3290,13 +3294,13 @@ int do_swap_page(struct vm_fault *vmf)
 #ifdef CONFIG_APP_AWARE
 
 	if(switch_start && foreground_uid && !PageExcepted(page) && id!=-1 && !cloudswap_on){
-		if(past[id]->which_table){
-			st_idx_ptr = &past[id]->st_index1;
-			swap_trace_table = past[id]->swap_trace_table1;
+		if(past->which_table){
+			st_idx_ptr = &past->st_index1;
+			swap_trace_table = past->swap_trace_table1;
 		}
 		else{
-			st_idx_ptr = &past[id]->st_index0;
-			swap_trace_table = past[id]->swap_trace_table0;
+			st_idx_ptr = &past->st_index0;
+			swap_trace_table = past->swap_trace_table0;
 		}
 
 		idx = atomic_inc_return(st_idx_ptr);
@@ -3308,7 +3312,7 @@ int do_swap_page(struct vm_fault *vmf)
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
-	//	trace_printk("id %d, table %d || %d: %d %llx\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
+		//trace_printk("id %d, table %d || %d: %d %llx\n",id,past->which_table, idx, current->tgid, vmf->address);
 		}
 		else
 			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);
@@ -3318,13 +3322,13 @@ int do_swap_page(struct vm_fault *vmf)
 		
 		id = get_id_from_uid(foreground_uid);
 		
-		if(past[id]->which_table){
-			st_idx_ptr = &past[id]->after_index1;
-			swap_trace_table = past[id]->swap_trace_table1;
+		if(past->which_table){
+			st_idx_ptr = &past->after_index1;
+			swap_trace_table = past->swap_trace_table1;
 		}
 		else{
-			st_idx_ptr = &past[id]->after_index0;
-			swap_trace_table = past[id]->swap_trace_table0;
+			st_idx_ptr = &past->after_index0;
+			swap_trace_table = past->swap_trace_table0;
 		}
 		idx = atomic_inc_return(st_idx_ptr);
 		if(idx<0)
@@ -3335,7 +3339,7 @@ int do_swap_page(struct vm_fault *vmf)
 		swap_trace_table[idx].va = vmf->address;
 		swap_trace_table[idx].to_nbd = 0;
 		swap_trace_table[idx].swapped = 0;
-		//trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past[id]->which_table, idx, current->tgid, vmf->address);
+		//trace_printk("id %d, table %d || %d: %d %llx (after!!)\n",id,past->which_table, idx, current->tgid, vmf->address);
 		}
 		else
 			atomic_set(st_idx_ptr,NUM_STT_ENTRIES-1);

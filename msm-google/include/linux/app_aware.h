@@ -68,6 +68,7 @@ enum appids {
 };
 #define __NR_APPIDS COLD_ID
 
+#define NR_STATE 2
 
 struct prefetch_work {
 	struct work_struct work;
@@ -94,7 +95,9 @@ struct swap_trace_entry {
 		bool swapped;
 };
 // --> per app
-struct per_app_swap_trace {
+
+
+struct per_app_swap_table {
 	atomic_t st_index0;
 	atomic_t st_index1;
 	atomic_t after_index0;
@@ -105,12 +108,18 @@ struct per_app_swap_trace {
 	bool which_table; // --> per app
 };
 
+struct app_SBP {
+	int last_state;
+	struct per_app_swap_table *past[NR_STATE];
+
+};
+
 extern bool switch_start;
 extern bool switch_after;
 extern bool miss_handling;
 extern bool zram_full;
 extern struct perapp_cluster pac[2*__NR_APPIDS+1];
-extern struct per_app_swap_trace *past[__NR_APPIDS];
+extern struct app_SBP *app_sbp[__NR_APPIDS];
 
 
 
@@ -196,7 +205,7 @@ extern int app_trace_status_handler(struct ctl_table *table, int write,
 
 
 extern unsigned int get_id_from_uid(int uid);
-extern void init_past(struct per_app_swap_trace *past);
+extern void init_sbp(struct app_SBP *app_sbp);
 
 extern int foreground_uid;
 extern int foreground_pid;

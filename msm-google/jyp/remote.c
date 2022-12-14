@@ -65,7 +65,7 @@ bool miss_handling;
 bool zram_full;
 
 
-struct per_app_swap_trace *past[__NR_APPIDS]; //__NR_APPIDS
+struct app_SBP *app_sbp[__NR_APPIDS];
 
 int cold_page_threshold;
 int stop_background_io;
@@ -890,30 +890,35 @@ static void prefetch_work(struct work_struct *work)
 	int target_table;
 	struct page* last_page;
 	struct page* wait_page;
+	struct per_app_swap_table *past;
+	
 	tew = container_of(work, struct prefetch_work, work);
 	target_table = tew->target_table;
 	id = tew->id;
+	past = app_sbp[id]->past[app_sbp[id]->last_state];
+	
+
 
 //	trace_printk("1!!\n");
 	if(target_table){
-		max_idx_e = atomic_read(&past[id]->st_index0);
-		swap_trace_table_e = past[id]->swap_trace_table0;
-		max_idx_l = atomic_read(&past[id]->st_index1);
-		swap_trace_table_l = past[id]->swap_trace_table1;
-		after_idx_e = atomic_read(&past[id]->after_index0);
-		after_idx_l = atomic_read(&past[id]->after_index1);
+		max_idx_e = atomic_read(&past->st_index0);
+		swap_trace_table_e = past->swap_trace_table0;
+		max_idx_l = atomic_read(&past->st_index1);
+		swap_trace_table_l = past->swap_trace_table1;
+		after_idx_e = atomic_read(&past->after_index0);
+		after_idx_l = atomic_read(&past->after_index1);
 	}
 	else{
-		max_idx_e = atomic_read(&past[id]->st_index1);
-		swap_trace_table_e = past[id]->swap_trace_table1;
-		max_idx_l = atomic_read(&past[id]->st_index0);
-		swap_trace_table_l = past[id]->swap_trace_table0;
-		after_idx_e = atomic_read(&past[id]->after_index1);
-		after_idx_l = atomic_read(&past[id]->after_index0);
+		max_idx_e = atomic_read(&past->st_index1);
+		swap_trace_table_e = past->swap_trace_table1;
+		max_idx_l = atomic_read(&past->st_index0);
+		swap_trace_table_l = past->swap_trace_table0;
+		after_idx_e = atomic_read(&past->after_index1);
+		after_idx_l = atomic_read(&past->after_index0);
 	}
 
 
-	trace_printk("prefetch work: foreground %d, maxidx %d, afteridx %d\n",foreground_uid,max_idx_l,after_idx_l);
+	trace_printk("prefetch work: appid %d, laststate %d, foreground %d, maxidx %d, afteridx %d\n",id,app_sbp[id]->last_state,foreground_uid,max_idx_l,after_idx_l);
 
 	cnt=0;
 	last_page=0;
@@ -1100,25 +1105,28 @@ static void miss_page_work(struct work_struct *work)
 	int i;
 	unsigned int id;
 	int target_table;
+	struct per_app_swap_table *past;
 	tew = container_of(work, struct miss_page_work, work);
 	target_table = tew->target_table;
 	id = tew->id;
 	
+	past = app_sbp[id]->past[app_sbp[id]->last_state];
+	
 	if(target_table){
-		max_idx_e = atomic_read(&past[id]->st_index0);
-		swap_trace_table_e = past[id]->swap_trace_table0;
-		max_idx_l = atomic_read(&past[id]->st_index1);
-		swap_trace_table_l = past[id]->swap_trace_table1;
-		after_idx_e = atomic_read(&past[id]->after_index0);
-		after_idx_l = atomic_read(&past[id]->after_index1);
+		max_idx_e = atomic_read(&past->st_index0);
+		swap_trace_table_e = past->swap_trace_table0;
+		max_idx_l = atomic_read(&past->st_index1);
+		swap_trace_table_l = past->swap_trace_table1;
+		after_idx_e = atomic_read(&past->after_index0);
+		after_idx_l = atomic_read(&past->after_index1);
 	}
 	else{
-		max_idx_e = atomic_read(&past[id]->st_index1);
-		swap_trace_table_e = past[id]->swap_trace_table1;
-		max_idx_l = atomic_read(&past[id]->st_index0);
-		swap_trace_table_l = past[id]->swap_trace_table0;
-		after_idx_e = atomic_read(&past[id]->after_index1);
-		after_idx_l = atomic_read(&past[id]->after_index0);
+		max_idx_e = atomic_read(&past->st_index1);
+		swap_trace_table_e = past->swap_trace_table1;
+		max_idx_l = atomic_read(&past->st_index0);
+		swap_trace_table_l = past->swap_trace_table0;
+		after_idx_e = atomic_read(&past->after_index1);
+		after_idx_l = atomic_read(&past->after_index0);
 	}
 
 	trace_printk("miss work: foreground %d, maxidx %d, afteridx %d\n",foreground_uid,max_idx_l,after_idx_l);
@@ -1567,8 +1575,8 @@ int app_switch_start_handler(struct ctl_table *table, int write,
 	unsigned int id;
 	unsigned long flags;
 	int target_table;
-
 	long st, et;
+	struct per_app_swap_table *past;
 
 	if(rc)
 		return rc;
@@ -1584,9 +1592,10 @@ int app_switch_start_handler(struct ctl_table *table, int write,
 			return 0;
 
 		id = get_id_from_uid(foreground_uid);
+		past = app_sbp[id]->past[app_sbp[id]->last_state];
 		
 		spin_lock_irqsave(&which_table_lock,flags);
-		target_table = past[id]->which_table;
+		target_table = past->which_table;
 		spin_unlock_irqrestore(&which_table_lock,flags);
 		
 		if(foreground_uid && prefetch_on)
@@ -1595,18 +1604,18 @@ int app_switch_start_handler(struct ctl_table *table, int write,
 		
 		spin_lock_irqsave(&which_table_lock,flags);
 
-		if(!past[id]->which_table && atomic_read(&past[id]->st_index0)==-1)
-			past[id]->which_table=0;
-		else if(past[id]->which_table && atomic_read(&past[id]->st_index1)==-1)
-			past[id]->which_table=1;
+		if(!past->which_table && atomic_read(&past->st_index0)==-1)
+			past->which_table=0;
+		else if(past->which_table && atomic_read(&past->st_index1)==-1)
+			past->which_table=1;
 		else
-			past[id]->which_table=!past[id]->which_table;
+			past->which_table=!past->which_table;
 		spin_unlock_irqrestore(&which_table_lock,flags);
 		
-		if(past[id]->which_table)
-			atomic_set(&past[id]->st_index1,-1);
+		if(past->which_table)
+			atomic_set(&past->st_index1,-1);
 		else
-			atomic_set(&past[id]->st_index0,-1);
+			atomic_set(&past->st_index0,-1);
 
 
 		spin_lock_irqsave(&switch_start_lock,flags);
@@ -1642,27 +1651,28 @@ int update_to_nbd_flag(unsigned int id){
 	struct swap_trace_entry *swap_trace_table_l;
 	int percentage;
 	int target_percentage;
+	struct per_app_swap_table *past= app_sbp[id]->past[app_sbp[id]->last_state];
 
 	//define st_idx_ptr_e = which_table ? &st_index0 : &st_index1
 	//define stt_e = which_table ? swap_trace_table0 : swap_trace_table1
 	//define st_idx_ptr_l = which_table ? &st_index1 : &st_index0
 	//define stt_l = which_table ? swap_trace_table1 : swap_trace_table0
 	
-	if(past[id]->which_table){
-		max_idx_e = atomic_read(&past[id]->st_index0);
-		swap_trace_table_e = past[id]->swap_trace_table0;
-		max_idx_l = atomic_read(&past[id]->st_index1);
-		swap_trace_table_l = past[id]->swap_trace_table1;
-		after_idx_e = atomic_read(&past[id]->after_index0);
-		after_idx_l = atomic_read(&past[id]->after_index1);
+	if(past->which_table){
+		max_idx_e = atomic_read(&past->st_index0);
+		swap_trace_table_e = past->swap_trace_table0;
+		max_idx_l = atomic_read(&past->st_index1);
+		swap_trace_table_l = past->swap_trace_table1;
+		after_idx_e = atomic_read(&past->after_index0);
+		after_idx_l = atomic_read(&past->after_index1);
 	}
 	else{
-		max_idx_e = atomic_read(&past[id]->st_index1);
-		swap_trace_table_e = past[id]->swap_trace_table1;
-		max_idx_l = atomic_read(&past[id]->st_index0);
-		swap_trace_table_l = past[id]->swap_trace_table0;
-		after_idx_e = atomic_read(&past[id]->after_index1);
-		after_idx_l = atomic_read(&past[id]->after_index0);
+		max_idx_e = atomic_read(&past->st_index1);
+		swap_trace_table_e = past->swap_trace_table1;
+		max_idx_l = atomic_read(&past->st_index0);
+		swap_trace_table_l = past->swap_trace_table0;
+		after_idx_e = atomic_read(&past->after_index1);
+		after_idx_l = atomic_read(&past->after_index0);
 	}
 
 	target_percentage = (launchtime_before * 18 * 100 / (18 * launchtime_before + max_idx_l));
@@ -1717,7 +1727,7 @@ int update_to_nbd_flag(unsigned int id){
 	
 	// for dump
 
-	trace_printk("appid %d: table %d is latter, percentage %d, total target %d max idx e, l -> %d %d, after %d %d\n",id, past[id]->which_table,target_percentage,cnt,max_idx_e,max_idx_l,after_idx_e - max_idx_e, after_idx_l - max_idx_l);
+	trace_printk("appid %d: table %d is latter, percentage %d, total target %d max idx e, l -> %d %d, after %d %d\n",id, past->which_table,target_percentage,cnt,max_idx_e,max_idx_l,after_idx_e - max_idx_e, after_idx_l - max_idx_l);
 /*
 	while(idx_l <= max_idx_l){
 		if( swap_trace_table_l[idx_l].to_nbd )
@@ -1740,6 +1750,7 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 	int rc = proc_dointvec_minmax(table,write,buffer,length,ppos);
 	unsigned long flags;
 	unsigned int id;
+	struct per_app_swap_table *past;
 	if(rc)
 		return rc;
 	if(write){
@@ -1765,10 +1776,11 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 		if(foreground_uid) 
 		{
 			id = get_id_from_uid(foreground_uid);
-			if(atomic_read(&past[id]->st_index0)!=-1 || atomic_read(&past[id]->st_index1)!=-1)
+			past = app_sbp[id]->past[app_sbp[id]->last_state];
+			if(atomic_read(&past->st_index0)!=-1 || atomic_read(&past->st_index1)!=-1)
 			{
 				update_to_nbd_flag(id); //<--app_number or uid
-				past[id]->st_should_check = 1 ; // --> per app, and keep in list
+				past->st_should_check = 1 ; // --> per app, and keep in list
 			}
 		}
 
@@ -1777,6 +1789,13 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 		 */
 	
 		if(backgrounded_uid){
+
+			// state update //
+			id = get_id_from_uid(backgrounded_uid);
+			app_sbp[id]->last_state = current_app_state;
+			//////////////////
+
+
 			rcu_read_lock();
 			for_each_process(p){
 				if(!p)
@@ -1799,8 +1818,9 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 
 		if(foreground_uid){
 			id = get_id_from_uid(foreground_uid);
+			past = app_sbp[id]->past[app_sbp[id]->last_state];
 			miss_handling = 1;
-			miss_page_handler(id,!past[id]->which_table); //--> forcing pagefault and ((madvise))
+			miss_page_handler(id,!past->which_table); //--> forcing pagefault and ((madvise))
 		}
 		wake_up_send_target_manager();
 
@@ -1822,6 +1842,7 @@ int app_switch_after_1_handler(struct ctl_table *table, int write,
 	int rc = proc_dointvec_minmax(table,write,buffer,length,ppos);
 	unsigned long flags;
 	unsigned int id;
+	struct per_app_swap_table *past;
 	if(rc)
 		return rc;
 	if(write){
@@ -1840,11 +1861,13 @@ int app_switch_after_1_handler(struct ctl_table *table, int write,
 		if(foreground_uid){
 			id = get_id_from_uid(foreground_uid);
 			trace_printk("foreground %d switch after start\n",foreground_uid);
+		
+			past = app_sbp[id]->past[app_sbp[id]->last_state];
 
-			if(past[id]->which_table)
-				atomic_set(&past[id]->after_index1,atomic_read(&past[id]->st_index1));
+			if(past->which_table)
+				atomic_set(&past->after_index1,atomic_read(&past->st_index1));
 			else
-				atomic_set(&past[id]->after_index0,atomic_read(&past[id]->st_index0));
+				atomic_set(&past->after_index0,atomic_read(&past->st_index0));
 			
 			spin_lock_irqsave(&switch_start_lock,flags);
 			switch_after = 1;
@@ -1871,6 +1894,7 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 	int rc = proc_dointvec_minmax(table,write,buffer,length,ppos);
 	unsigned long flags;
 	unsigned int id;
+	struct per_app_swap_table *past;
 	if(rc)
 		return rc;
 	if(write){
@@ -1896,10 +1920,11 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 		if(foreground_uid) 
 		{
 			id = get_id_from_uid(foreground_uid);
-			if(atomic_read(&past[id]->st_index0)!=-1 || atomic_read(&past[id]->st_index1)!=-1)
+			past = app_sbp[id]->past[app_sbp[id]->last_state];
+			if(atomic_read(&past->st_index0)!=-1 || atomic_read(&past->st_index1)!=-1)
 			{
 				update_to_nbd_flag(id); //<--app_number or uid
-				past[id]->st_should_check = 1 ; // --> per app, and keep in list
+				past->st_should_check = 1 ; // --> per app, and keep in list
 			}
 		}
 
@@ -1909,6 +1934,14 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 		 */
 	
 		if(backgrounded_uid){
+
+
+			// state update //
+			id = get_id_from_uid(backgrounded_uid);
+			app_sbp[id]->last_state = current_app_state;
+			//////////////////
+
+
 			rcu_read_lock();
 			for_each_process(p){
 				if(!p)
@@ -1950,8 +1983,9 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 
 		if(foreground_uid){
 			id = get_id_from_uid(foreground_uid);
+			past = app_sbp[id]->past[app_sbp[id]->last_state];
 			miss_handling = 1;
-			miss_page_handler(id,!past[id]->which_table); //--> forcing pagefault and ((madvise))
+			miss_page_handler(id,!past->which_table); //--> forcing pagefault and ((madvise))
 		}
 
 
@@ -2240,7 +2274,9 @@ static int send_target_manager(void *arg)
 
 		for(id = 0 ; id < __NR_APPIDS ; id++)
 		{
-			if(!past[id]->st_should_check)
+		
+			struct per_app_swap_table *past= app_sbp[id]->past[app_sbp[id]->last_state];
+			if(!past->st_should_check)
 				continue;
 
 			spin_lock_irqsave(&switch_start_lock,flags);
@@ -2250,7 +2286,7 @@ static int send_target_manager(void *arg)
 					goto sleep;
 				}
 		
-				target_table = past[id]->which_table;
+				target_table = past->which_table;
 				//trace_printk("send target manager - id, which_table : %d, %d\n",id,past[id]->which_table);
 				spin_unlock_irqrestore(&which_table_lock,flags2);
 	
@@ -2262,20 +2298,20 @@ static int send_target_manager(void *arg)
 			spin_unlock_irqrestore(&switch_start_lock,flags);
 	
 	if(target_table){
-		max_idx_e = atomic_read(&past[id]->st_index0);
-		swap_trace_table_e = past[id]->swap_trace_table0;
-		max_idx_l = atomic_read(&past[id]->st_index1);
-		swap_trace_table_l = past[id]->swap_trace_table1;
-		after_idx_e = atomic_read(&past[id]->after_index0);
-		after_idx_l = atomic_read(&past[id]->after_index1);
+		max_idx_e = atomic_read(&past->st_index0);
+		swap_trace_table_e = past->swap_trace_table0;
+		max_idx_l = atomic_read(&past->st_index1);
+		swap_trace_table_l = past->swap_trace_table1;
+		after_idx_e = atomic_read(&past->after_index0);
+		after_idx_l = atomic_read(&past->after_index1);
 	}
 	else{
-		max_idx_e = atomic_read(&past[id]->st_index1);
-		swap_trace_table_e = past[id]->swap_trace_table1;
-		max_idx_l = atomic_read(&past[id]->st_index0);
-		swap_trace_table_l = past[id]->swap_trace_table0;
-		after_idx_e = atomic_read(&past[id]->after_index1);
-		after_idx_l = atomic_read(&past[id]->after_index0);
+		max_idx_e = atomic_read(&past->st_index1);
+		swap_trace_table_e = past->swap_trace_table1;
+		max_idx_l = atomic_read(&past->st_index0);
+		swap_trace_table_l = past->swap_trace_table0;
+		after_idx_e = atomic_read(&past->after_index1);
+		after_idx_l = atomic_read(&past->after_index0);
 	}
 	/*
 			if(target_table){
@@ -2522,25 +2558,34 @@ static void cluster_set_null_1(struct swap_cluster_info *info)
 	info->data = 0;
 }
 
-void init_past(struct per_app_swap_trace *past){
+void init_sbp(struct app_SBP *app_sbp){
 
+
+	int state;
 	int i;
+	struct per_app_swap_table *past;	
+	app_sbp->last_state=0;
+	for (state=0;state<NR_STATE;state++)
+	{
+	past = app_sbp->past[state];
 	atomic_set(&past->st_index0,-1);
 	atomic_set(&past->st_index1,-1);
 	atomic_set(&past->after_index0,-1);
 	atomic_set(&past->after_index1,-1);
 	past->st_should_check = 0;
 	past->which_table = 0;
-	for(i=0;i<NUM_STT_ENTRIES;i++){
-		past->swap_trace_table0[i].tgid=0;
-		past->swap_trace_table0[i].va=0;
-		past->swap_trace_table0[i].to_nbd=0;
-		past->swap_trace_table0[i].swapped=0;
+		for(i=0;i<NUM_STT_ENTRIES;i++){
+			past->swap_trace_table0[i].tgid=0;
+			past->swap_trace_table0[i].va=0;
+			past->swap_trace_table0[i].to_nbd=0;
+			past->swap_trace_table0[i].swapped=0;
 
-		past->swap_trace_table1[i].tgid=0;
-		past->swap_trace_table1[i].va=0;
-		past->swap_trace_table1[i].to_nbd=0;
-		past->swap_trace_table1[i].swapped=0;
+			past->swap_trace_table1[i].tgid=0;
+			past->swap_trace_table1[i].va=0;
+			past->swap_trace_table1[i].to_nbd=0;
+			past->swap_trace_table1[i].swapped=0;
+		}
+
 	}
 }
 
@@ -2549,6 +2594,7 @@ static int __init remote_swap_init(void)
 
 	int error;
 	int i;
+	int j;
 	int __nr_appids = __NR_APPIDS;
 	printk(KERN_ERR "[REMOTE %s] INIT remote swap max %d apps\n", __func__,__nr_appids);
 			
@@ -2561,8 +2607,11 @@ static int __init remote_swap_init(void)
 		cluster_set_null_1(&cluster->index);
 	}
 	for(i=0;i<__nr_appids;i++){
-		past[i]=(struct per_app_swap_trace *)vmalloc(sizeof(struct per_app_swap_trace));
-		init_past(past[i]);
+		app_sbp[i]=(struct app_SBP *)vmalloc(sizeof(struct app_SBP));
+		for(j=0;j<NR_STATE;j++){
+			app_sbp[i]->past[j]=(struct per_app_swap_table *)vmalloc(sizeof(struct per_app_swap_table));
+		}
+		init_sbp(app_sbp[i]);
 	}
 
 	prefetch_percentage = 0;
@@ -2583,6 +2632,7 @@ static int __init remote_swap_init(void)
 static void __exit remote_swap_exit(void){
 
 	int i;
+	int j;
 	int __nr_appids = __NR_APPIDS;
 	for(i=0;i<__nr_appids*2 + 1;i++){
 		struct perapp_cluster *cluster;
@@ -2590,7 +2640,10 @@ static void __exit remote_swap_exit(void){
 		cluster_set_null_1(&cluster->index);
 	}
 	for(i=0;i<__nr_appids;i++){
-		vfree(past[i]);
+		for(j=0;j<NR_STATE;j++){
+			vfree(app_sbp[i]->past[j]);
+		}
+		vfree(app_sbp[i]);
 	}
 	kthread_stop(send_target_manager_thread);
 	return ;
