@@ -270,7 +270,7 @@ static int _send_target_page(unsigned int id, pte_t *pte, pmd_t *pmd, unsigned l
 	
 	set_pte(orig_pte, new_pte);
 	if(mm && mm->owner)
-		trace_printk("target sent id %d: cluster %d, %d %llx %llx\n",id,id+(__NR_APPIDS+1)*is_after,mm->owner->tgid, vpage, swp_offset(new_entry));
+		trace_printk("target sent id %d state %d: cluster %d, %d %llx %llx\n",id,app_sbp[id]->last_state,id+(__NR_APPIDS+1)*is_after,mm->owner->tgid, vpage, swp_offset(new_entry));
 	swap_free(entry);
 	ret=1;
 unlock:
@@ -1675,7 +1675,7 @@ int update_to_nbd_flag(unsigned int id){
 		after_idx_l = atomic_read(&past->after_index0);
 	}
 
-	target_percentage = (launchtime_before * 18 * 100 / (18 * launchtime_before + max_idx_l));
+	target_percentage = (launchtime_before * 90 * 100 / (90 * launchtime_before + max_idx_l));
 
 	if(target_percentage>100)
 		target_percentage=100;
@@ -1770,20 +1770,6 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 		if(!cloudswap_on){
 
 
-		
-
-
-		if(foreground_uid) 
-		{
-			id = get_id_from_uid(foreground_uid);
-			past = app_sbp[id]->past[app_sbp[id]->last_state];
-			if(atomic_read(&past->st_index0)!=-1 || atomic_read(&past->st_index1)!=-1)
-			{
-				update_to_nbd_flag(id); //<--app_number or uid
-				past->st_should_check = 1 ; // --> per app, and keep in list
-			}
-		}
-
 		/*
 		 * Cold page handling
 		 */
@@ -1794,6 +1780,11 @@ int app_switch_fin_handler(struct ctl_table *table, int write,
 			id = get_id_from_uid(backgrounded_uid);
 			app_sbp[id]->last_state = current_app_state;
 			//////////////////
+			past = app_sbp[id]->past[app_sbp[id]->last_state];
+			if(atomic_read(&past->st_index0)!=-1 || atomic_read(&past->st_index1)!=-1)
+			{
+				update_to_nbd_flag(id); //<--app_number or uid
+			}
 
 
 			rcu_read_lock();
@@ -1924,7 +1915,6 @@ int app_switch_after_2_handler(struct ctl_table *table, int write,
 			if(atomic_read(&past->st_index0)!=-1 || atomic_read(&past->st_index1)!=-1)
 			{
 				update_to_nbd_flag(id); //<--app_number or uid
-				past->st_should_check = 1 ; // --> per app, and keep in list
 			}
 		}
 
@@ -2276,8 +2266,6 @@ static int send_target_manager(void *arg)
 		{
 		
 			struct per_app_swap_table *past= app_sbp[id]->past[app_sbp[id]->last_state];
-			if(!past->st_should_check)
-				continue;
 
 			spin_lock_irqsave(&switch_start_lock,flags);
 			if(!switch_start){
@@ -2572,7 +2560,6 @@ void init_sbp(struct app_SBP *app_sbp){
 	atomic_set(&past->st_index1,-1);
 	atomic_set(&past->after_index0,-1);
 	atomic_set(&past->after_index1,-1);
-	past->st_should_check = 0;
 	past->which_table = 0;
 		for(i=0;i<NUM_STT_ENTRIES;i++){
 			past->swap_trace_table0[i].tgid=0;

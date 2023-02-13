@@ -131,7 +131,7 @@ elif [ "${app}" = "facebook" ]; then
 elif [ "${app}" = "camera" ]; then
 	am start -a android.media.action.IMAGE_CAPTURE -W > /data/launch/temp
 elif [ "${app}" = "investing" ]; then
-	am start -n com.fusionmedia.investing/.ui.activities.SplashSplitter -W > /data/launch/temp
+	am start -n com.fusionmedia.investing/.ui.activities.LiveActivity -W > /data/launch/temp
 elif [ "${app}" = "cnn" ]; then
 	am start -n com.cnn.mobile.android.phone/.features.splash.SplashActivity -W > /data/launch/temp
 elif [ "${app}" = "spotify" ]; then
